@@ -17,7 +17,7 @@ const CONFIG = {
     // Exemplo: https://undercity-rp.github.io/icons
     // 
     // IMPORTANTE: NÃO coloque barra (/) no final!
-    BASE_URL: "https://seu-usuario.github.io/seu-repo",
+    BASE_URL: "https://jampas335.github.io/underp-itens",
 
     // ===========================================
     // PASTA DOS ÍCONES (relativa à raiz do repo)
