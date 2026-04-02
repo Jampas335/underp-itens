@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UnderCity - Catálogo de Ícones de Itens para FiveM. Acesse ícones diretamente via URL para seu inventário.">
+    <title>UnderCity | Catálogo de Ícones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+        <div class="ambient-orb orb-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect x="2" y="2" width="28" height="28" rx="6" stroke="url(#logoGrad)" stroke-width="2.5"/>
+                        <path d="M10 16L14 20L22 12" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="logoGrad" x1="2" y1="2" x2="30" y2="30">
+                                <stop stop-color="#a855f7"/>
+                                <stop offset="1" stop-color="#6366f1"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">UnderCity</span>
+                    <span class="logo-subtitle">Icon Catalog</span>
+                </div>
+            </div>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <span class="stat-value" id="totalIcons">0</span>
+                    <span class="stat-label">Ícones</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="totalCategories">0</span>
+                    <span class="stat-label">Categorias</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / URL Info -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Catálogo de Ícones</h1>
+            <p class="hero-description">Ícones de itens para inventário FiveM. Use o link direto no seu script — sem necessidade de download.</p>
+            <div class="url-structure">
+                <div class="url-label">Estrutura do Link:</div>
+                <div class="url-box">
+                    <code id="urlStructure">https://seu-usuario.github.io/repo/icons/<span class="url-highlight">nome-do-item</span>.png</code>
+                    <button class="url-copy-btn" onclick="copyUrlStructure()" title="Copiar estrutura">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <rect x="5" y="5" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M11 5V3.5A1.5 1.5 0 009.5 2h-6A1.5 1.5 0 002 3.5v6A1.5 1.5 0 003.5 11H5" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="url-hint">⚙️ Configure sua URL base no arquivo <code>config.js</code></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search & Filter Bar -->
+    <section class="toolbar">
+        <div class="toolbar-content">
+            <div class="search-container">
+                <svg class="search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M12 12L16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <input type="text" id="searchInput" class="search-input" placeholder="Buscar ícone por nome..." autocomplete="off">
+                <button class="search-clear" id="searchClear" onclick="clearSearch()">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M3 3L11 11M11 3L3 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="category-filter" id="categoryFilter">
+                <!-- Categories will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Icon Grid -->
+    <main class="catalog">
+        <div class="catalog-grid" id="catalogGrid">
+            <!-- Icons will be injected by JS -->
+        </div>
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <circle cx="28" cy="28" r="18" stroke="currentColor" stroke-width="2.5" opacity="0.3"/>
+                <path d="M42 42L56 56" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.3"/>
+                <path d="M22 28H34M28 22V34" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.2"/>
+            </svg>
+            <h3>Nenhum ícone encontrado</h3>
+            <p>Tente outro termo de busca ou categoria</p>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 8L7 11L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span id="toastText">Link copiado!</span>
+    </div>
+
+    <!-- Modal for icon detail -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+        <div class="modal" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="modal-preview">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <div class="modal-info">
+                <h2 id="modalName"></h2>
+                <span class="modal-category" id="modalCategory"></span>
+                <div class="modal-links">
+                    <div class="modal-link-group">
+                        <label>Link direto do ícone:</label>
+                        <div class="modal-link-box">
+                            <code id="modalLink"></code>
+                            <button onclick="copyModalLink()" class="modal-copy-btn">Copiar</button>
+                        </div>
+                    </div>
+                    <div class="modal-link-group">
+                        <label>Uso no Lua (FiveM):</label>
+                        <div class="modal-link-box code-block">
+                            <code id="modalLuaCode"></code>
+                            <button onclick="copyModalLua()" class="modal-copy-btn">Copiar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="icons.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
