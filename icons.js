@@ -2,7 +2,7 @@
  * ============================================================
  *  REGISTRO DE ÍCONES - UnderCity Icon Catalog
  * ============================================================
- *  Total: 442 ícones organizados por categoria
+ *  Total: 382 ícones organizados por categoria
  * ============================================================
  */
 
@@ -73,20 +73,15 @@ const ICONS = {
     // ===== MUNIÇÃO & ACESSÓRIOS DE ARMA =====
     "Munição & Attachments": [
         "ammo-container",
-        "armor-piercing-round",
         "box-magazine",
-        "bullet-press",
         "compensator",
         "drum-clip",
         "extended-clip",
         "flashlight-attatchment",
         "grip",
-        "incendiary-round",
-        "metal-jacket-round",
         "muzzle-brake",
         "scope",
         "suppressor",
-        "tracer-round",
     ],
 
     // ===== EXPLOSIVOS =====
@@ -173,9 +168,7 @@ const ICONS = {
         "pearls_giantoctopus",
         "pearls_largechips",
         "pearls_lobster",
-        "pearls_mobydick",
         "pearls_mudcrab",
-        "pearls_pinotgris",
         "pearls_piratepunch",
         "pearls_sauvignonblanc",
         "pearls_scallops",
@@ -184,13 +177,6 @@ const ICONS = {
 
     // ===== COMIDA - JAPONESA =====
     "Comida Japonesa": [
-        "bento-1",
-        "bento-2",
-        "bento-3",
-        "bento-4",
-        "bento-5",
-        "bento-6",
-        "bento-box",
         "miso-ramen",
         "mochi-icecream",
         "sushimi",
@@ -202,7 +188,6 @@ const ICONS = {
     "Comida": [
         "banana",
         "burger-n-shake",
-        "bwok-bwok",
         "chicken-salad",
         "chocolate-brownie",
         "churros",
@@ -249,37 +234,17 @@ const ICONS = {
         "cherry-pop",
         "coke-can",
         "earl-grey-tea",
-        "moonberry-juice",
         "orange-juice",
         "peach-iced-tea",
         "smoothie",
-        "spring-water",
         "strawberry-milkshake",
         "water",
     ],
 
-    // ===== BEBIDAS - ALCOÓLICAS =====
-    "Bebidas Alcoólicas": [
-        "asahi",
-        "blue-label",
-        "corona",
-        "gin",
-        "great-northern",
-        "heineken",
-        "spided-rum",
-        "tequila",
-        "vb",
-        "vodka",
-    ],
-
     // ===== BEBIDAS - BAHAMA =====
     "Bahama Drinks": [
-        "bahama-cruiser",
-        "bahama-ga",
-        "bahama-glowstick",
         "bahama-hennesey",
         "bahama-malibu",
-        "bahama-vip",
         "bahamas-angel-tit",
         "bahamas-goonbag",
     ],
@@ -539,14 +504,6 @@ const ICONS = {
         "gentlecat",
     ],
 
-    // ===== PAC-MAN =====
-    "Pac-Man": [
-        "pac-blue",
-        "pac-man",
-        "pac-pink",
-        "pac-red",
-    ],
-
     // ===== TRUCKING =====
     "Trucking": [
         "sorbent-pads",
@@ -567,36 +524,12 @@ const ICONS = {
         "ball",
         "box",
         "car-fisher",
-        "cherry-popper",
-        "crotch-rocket",
-        "dot-with-colour",
-        "dudes",
-        "edgy-violence",
-        "good-boi-dog",
         "gruppe6-intel",
-        "intimate-banana",
-        "larevolution-pin",
-        "loot-crate",
         "ls-beach",
-        "mario",
         "mirror",
-        "naughty-text",
-        "penetrator",
-        "pepe-hands",
-        "pet rock",
-        "place-holder",
         "power-site-keycard",
-        "rainbow-road",
-        "rocket-grab",
         "rose",
-        "shoryukun",
-        "simple-eggplant",
-        "square",
-        "squidward",
         "sturdy-rod",
-        "tripping-racoon",
-        "violence",
-        "vroom",
         "fishing-rod",
     ],
 };
