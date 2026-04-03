@@ -2,7 +2,7 @@
  * ============================================================
  *  REGISTRO DE ÍCONES - UnderCity Icon Catalog
  * ============================================================
- *  Total: 331 ícones organizados por categoria
+ *  Total: 318 ícones organizados por categoria
  * ============================================================
  */
 
@@ -269,25 +269,12 @@ const ICONS = {
 
     // ===== DROGAS =====
     "Drogas": [
-        "2kg-cocaine",
         "4kg-cocaine",
-        "6kg-cocaine",
-        "acid",
-        "benzo",
-        "benzo-damaged",
         "bump",
         "coca-leaves",
         "coca-leaves-damaged",
         "joint",
-        "lysergic-acid",
-        "magic-mushroom",
-        "mdma",
-        "mdma-2kg",
-        "mdma-5kg",
-        "mdma-6kg",
-        "mdma-10kg",
         "mdma-pouch",
-        "molly",
         "paper-tabs",
         "weed-2kg",
         "weed-4kg",
