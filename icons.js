@@ -2,7 +2,7 @@
  * ============================================================
  *  REGISTRO DE ÍCONES - UnderCity Icon Catalog
  * ============================================================
- *  Total: 338 ícones organizados por categoria
+ *  Total: 331 ícones organizados por categoria
  * ============================================================
  */
 
@@ -349,9 +349,6 @@ const ICONS = {
         "electrical-cable",
         "phone",
         "radio",
-        "satelite-scanner",
-        "tresure-scanner",
-        "trucking-gps",
     ],
 
     // ===== POLICIAL =====
@@ -446,14 +443,6 @@ const ICONS = {
         "cat-tradie",
         "cat-wizard",
         "gentlecat",
-    ],
-
-    // ===== TRUCKING =====
-    "Trucking": [
-        "sorbent-pads",
-        "transport-bag",
-        "truck-spawner",
-        "portable-laundry",
     ],
 
     // ===== PROTEÇÃO =====
