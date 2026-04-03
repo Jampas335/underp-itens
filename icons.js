@@ -2,7 +2,7 @@
  * ============================================================
  *  REGISTRO DE ÍCONES - UnderCity Icon Catalog
  * ============================================================
- *  Total: 475 ícones organizados por categoria
+ *  Total: 442 ícones organizados por categoria
  * ============================================================
  */
 
@@ -435,12 +435,9 @@ const ICONS = {
 
     // ===== ELETRÔNICA =====
     "Eletrônica": [
-        "advanced-yellow-laptop",
-        "blue-laptop",
         "communication-jammer",
         "electronics",
         "electrical-cable",
-        "nokia",
         "phone",
         "radio",
         "satelite-scanner",
@@ -477,15 +474,11 @@ const ICONS = {
     "Jóias & Valores": [
         "cash",
         "diamond",
-        "diamond-box",
         "diamond-necklace",
         "diamond-ring",
         "dirty-money",
         "dragons-eye-bracelet",
-        "eagle-statue",
         "gold-rolex",
-        "gucci-brooch",
-        "pearl-lady",
         "ring-1",
         "ring-2",
         "ring-3",
@@ -502,18 +495,6 @@ const ICONS = {
         "rock",
     ],
 
-    // ===== CASSINO & JOGOS =====
-    "Cassino & Jogos": [
-        "arcade-token",
-        "blackjack-card",
-        "flipping-coin",
-        "legacy-dice",
-        "legacy-ultra-dice",
-        "scratchy-ticket",
-        "super-scratchy-ticket",
-        "ultra-dice",
-    ],
-
     // ===== MERGULHO =====
     "Mergulho": [
         "heavy-diving",
@@ -523,32 +504,11 @@ const ICONS = {
         "parachute",
     ],
 
-    // ===== ARTE & PINTURAS =====
-    "Arte": [
-        "abstract-girl",
-        "dimitris-creation-of-seb",
-        "mona-lisa",
-        "renaissance-twerk",
-        "the-last-supper",
-    ],
-
     // ===== FUMANTES =====
     "Fumantes": [
         "cigar",
         "cigarette",
         "lighter",
-    ],
-
-    // ===== CANECAS =====
-    "Canecas": [
-        "bean-mug-box",
-        "mug-booty",
-        "mug-burger",
-        "mug-emoji",
-        "mug-grenade",
-        "mug-mrpotato",
-        "mug-poop",
-        "mug-shark",
     ],
 
     // ===== PELÚCIAS =====
@@ -585,15 +545,6 @@ const ICONS = {
         "pac-man",
         "pac-pink",
         "pac-red",
-    ],
-
-    // ===== POTIONS =====
-    "Poções": [
-        "boss-fairy-dust",
-        "mana-blue",
-        "mana-red",
-        "molten-shield",
-        "tidepod",
     ],
 
     // ===== TRUCKING =====
