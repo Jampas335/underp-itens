@@ -205,6 +205,20 @@ code, pre {
     text-transform: uppercase;
 }
 
+.brand-title,
+.eyebrow,
+.hero-copy h1,
+.hero-copy h1 code,
+.sync-card strong,
+.stat-value,
+.builder-header h2,
+.export-header h3,
+.builder-item-copy strong,
+.checklist strong,
+.site-footer .footer-brand {
+    text-transform: uppercase;
+}
+
 .topbar-actions {
     display: flex;
     align-items: center;
