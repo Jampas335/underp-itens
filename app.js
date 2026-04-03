@@ -1,4 +1,4 @@
-const STORAGE_KEY = "undercity-item-workbench-v1";
+const STORAGE_KEY = "underrp-item-workbench-v1";
 const DEFAULT_VIEW = "pending";
 const RARITY_ORDER = ["common", "uncommon", "rare", "epic", "legendary"];
 const TYPE_ORDER = ["all", "item", "weapon"];
@@ -49,10 +49,12 @@ const state = {
 let toastTimeout = null;
 
 document.addEventListener("DOMContentLoaded", () => {
+    initTheme();
     bootstrapData();
     loadWorkspaceState();
     bindEvents();
     renderAll();
+    initFadeInObserver();
 });
 
 function bootstrapData() {
@@ -62,11 +64,8 @@ function bootstrapData() {
 }
 
 function applyBranding() {
-    const title = CONFIG.SITE_TITLE || "UnderCity";
-    const subtitle =
-        CONFIG.SITE_SUBTITLE && CONFIG.SITE_SUBTITLE !== "Icon Catalog"
-            ? CONFIG.SITE_SUBTITLE
-            : "Item Workbench";
+    const title = CONFIG.SITE_TITLE || "underRP";
+    const subtitle = CONFIG.SITE_SUBTITLE || "Item Workbench";
 
     document.title = `${title} | ${subtitle}`;
     setText("siteTitle", title);
@@ -188,6 +187,11 @@ function bindEvents() {
     document.getElementById("copyIconNameBtn").addEventListener("click", copySelectedIconName);
     document.getElementById("exportWorkspaceBtn").addEventListener("click", exportLocalWorkspace);
     document.getElementById("resetWorkspaceBtn").addEventListener("click", resetLocalWorkspace);
+
+    const themeBtn = document.getElementById("themeToggleBtn");
+    if (themeBtn) {
+        themeBtn.addEventListener("click", toggleTheme);
+    }
 
     const form = document.getElementById("itemForm");
     form.addEventListener("input", syncBuilderFormFromInputs);
@@ -736,7 +740,7 @@ function exportLocalWorkspace() {
 
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = "undercity-item-workbench-locais.json";
+    link.download = "underrp-item-workbench-locais.json";
     link.click();
     URL.revokeObjectURL(link.href);
 
@@ -1137,11 +1141,17 @@ function createPlaceholderDataUri(label) {
         .map((part) => part.charAt(0).toUpperCase())
         .join("") || "?";
 
+    const isDayTheme = document.documentElement.getAttribute("data-theme") === "day";
+    const bgOuter = isDayTheme ? "#1a1408" : "#0e0f16";
+    const bgInner = isDayTheme ? "#241c0e" : "#14161e";
+    const stroke = isDayTheme ? "#3d3018" : "#22243a";
+    const textColor = isDayTheme ? "#f59e0b" : "#8b5cf6";
+
     const svg = `
         <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
-            <rect width="96" height="96" rx="20" fill="#121925"/>
-            <rect x="10" y="10" width="76" height="76" rx="16" fill="#1a2432" stroke="#2a3649"/>
-            <text x="48" y="54" text-anchor="middle" fill="#9ab1c8" font-size="24" font-family="Arial, sans-serif">${text}</text>
+            <rect width="96" height="96" rx="20" fill="${bgOuter}"/>
+            <rect x="10" y="10" width="76" height="76" rx="16" fill="${bgInner}" stroke="${stroke}"/>
+            <text x="48" y="54" text-anchor="middle" fill="${textColor}" font-size="24" font-family="Arial, sans-serif" opacity="0.6">${text}</text>
         </svg>
     `.trim();
 
@@ -1216,4 +1226,59 @@ function setText(id, value) {
     if (element) {
         element.textContent = value;
     }
+}
+
+// ============================================================
+//  THEME TOGGLE (Day/Night)
+// ============================================================
+
+function initTheme() {
+    const saved = localStorage.getItem("underrp-theme");
+    const theme = saved || "night";
+    applyTheme(theme);
+}
+
+function applyTheme(theme) {
+    if (theme === "day") {
+        document.documentElement.setAttribute("data-theme", "day");
+    } else {
+        document.documentElement.removeAttribute("data-theme");
+    }
+
+    const icon = document.querySelector(".theme-toggle .toggle-icon");
+    const label = document.querySelector(".theme-toggle .toggle-label");
+
+    if (icon) icon.textContent = theme === "day" ? "☀️" : "🌙";
+    if (label) label.textContent = theme === "day" ? "Day" : "Night";
+}
+
+function toggleTheme() {
+    const current = document.documentElement.getAttribute("data-theme");
+    const next = current === "day" ? "night" : "day";
+    applyTheme(next);
+    localStorage.setItem("underrp-theme", next);
+    showToast(`Modo ${next === "day" ? "Day ☀️" : "Night 🌙"} ativado.`);
+}
+
+// ============================================================
+//  INTERSECTION OBSERVER (fade-in)
+// ============================================================
+
+function initFadeInObserver() {
+    const targets = document.querySelectorAll(".fade-in");
+    if (!targets.length) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.1 }
+    );
+
+    targets.forEach((target) => observer.observe(target));
 }

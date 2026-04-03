@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="UnderCity Item Workbench. Organize icones pendentes, visualize itens implementados do prea-inventory e gere exports Lua prontos para o servidor.">
-    <title>UnderCity | Item Workbench</title>
+    <meta name="description" content="underRP Item Workbench — Organize ícones pendentes, visualize itens implementados do prea-inventory e gere exports Lua prontos para o servidor.">
+    <title>underRP | Item Workbench</title>
+    <link rel="icon" href="icon neutro.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,28 +18,33 @@
 
     <header class="topbar">
         <div class="brand">
-            <div class="brand-mark">UC</div>
+            <img src="icon neutro.png" alt="underRP Logo" class="brand-logo" id="brandLogo">
             <div class="brand-copy">
-                <span class="brand-title" id="siteTitle">UnderCity</span>
+                <span class="brand-title" id="siteTitle">underRP</span>
                 <span class="brand-subtitle" id="siteSubtitle">Item Workbench</span>
             </div>
         </div>
 
         <div class="topbar-actions">
+            <button class="theme-toggle" id="themeToggleBtn" type="button" title="Alternar entre modo Night e Day">
+                <span class="toggle-icon">🌙</span>
+                <span class="toggle-label">Night</span>
+            </button>
             <button class="ghost-btn" id="exportWorkspaceBtn" type="button">Exportar locais</button>
             <button class="ghost-btn ghost-danger" id="resetWorkspaceBtn" type="button">Limpar locais</button>
         </div>
     </header>
 
     <main class="shell">
-        <section class="hero-panel panel">
+        <!-- HERO -->
+        <section class="hero-panel panel fade-in">
             <div class="hero-copy">
-                <span class="eyebrow">Ferramenta de implementacao</span>
-                <h1>Do icone pendente ao item pronto para colar no <code>prea-inventory</code>.</h1>
+                <span class="eyebrow">Ferramenta de implementação</span>
+                <h1>Do ícone pendente ao item pronto para o <code>prea-inventory</code>.</h1>
                 <p>
-                    Os itens atuais do site ficam em <strong>Icones/itens para implementar</strong>.
-                    Os itens do servidor entram em <strong>Icones/itens implementados</strong>.
-                    O fluxo agora e escolher um pendente, preencher os parametros reais do inventario e copiar o export Lua.
+                    Os ícones disponíveis ficam em <strong>Ícones pendentes</strong>.
+                    Os itens já registrados no servidor entram em <strong>Itens implementados</strong>.
+                    Escolha um pendente, preencha os parâmetros reais do inventário e copie o export Lua pronto para colar em <code>shared/items.lua</code>.
                 </p>
             </div>
 
@@ -52,55 +58,58 @@
                 <div class="workflow-steps">
                     <div class="workflow-step">
                         <span>1</span>
-                        <p>Selecione um item pendente.</p>
+                        <p>Selecione um ícone em <strong>Pendentes</strong>.</p>
                     </div>
                     <div class="workflow-step">
                         <span>2</span>
-                        <p>Aplique um template ou preencha os parametros.</p>
+                        <p>Aplique um template ou preencha os campos manualmente.</p>
                     </div>
                     <div class="workflow-step">
                         <span>3</span>
-                        <p>Copie o export e marque como implementado.</p>
+                        <p>Copie o export Lua e marque como implementado.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="stats-grid">
+        <!-- STATS -->
+        <section class="stats-grid fade-in">
             <article class="stat-card panel">
                 <span class="stat-label">Para implementar</span>
                 <strong class="stat-value" id="pendingCount">0</strong>
-                <span class="stat-foot">icones pendentes visiveis no site</span>
+                <span class="stat-foot">ícones pendentes disponíveis no catálogo</span>
             </article>
             <article class="stat-card panel">
                 <span class="stat-label">Implementados no servidor</span>
                 <strong class="stat-value" id="serverImplementedCount">0</strong>
-                <span class="stat-foot">snapshot atual do prea-inventory</span>
+                <span class="stat-foot">itens do snapshot atual do prea-inventory</span>
             </article>
             <article class="stat-card panel">
                 <span class="stat-label">Implementados localmente</span>
                 <strong class="stat-value" id="localImplementedCount">0</strong>
-                <span class="stat-foot">persistidos no navegador desta maquina</span>
+                <span class="stat-foot">salvos no navegador desta máquina</span>
             </article>
         </section>
 
+        <!-- WORKSPACE -->
         <section class="workspace-grid">
-            <div class="workspace-main panel">
+            <div class="workspace-main panel fade-in">
                 <div class="workspace-header">
-                    <div class="workspace-tabs" role="tablist" aria-label="Catalogos">
-                        <button class="tab-btn active" id="viewPendingBtn" data-view="pending" type="button">Icones/itens para implementar</button>
-                        <button class="tab-btn" id="viewImplementedBtn" data-view="implemented" type="button">Icones/itens implementados</button>
+                    <div class="workspace-tabs" role="tablist" aria-label="Catálogos">
+                        <button class="tab-btn active" id="viewPendingBtn" data-view="pending" type="button">Ícones pendentes</button>
+                        <button class="tab-btn" id="viewImplementedBtn" data-view="implemented" type="button">Itens implementados</button>
                     </div>
                     <div class="workspace-note">
-                        O estado local do builder fica salvo no navegador.
+                        O estado local fica salvo no seu navegador.
                     </div>
                 </div>
 
+                <!-- PENDING VIEW -->
                 <section class="catalog-view" id="pendingView">
                     <div class="filter-bar">
                         <label class="search-field">
-                            <span>Buscar pendente</span>
-                            <input type="search" id="pendingSearchInput" placeholder="Nome do icone ou categoria">
+                            <span>Buscar pendente <i class="info-tip" data-tip="Digite o nome do ícone ou categoria para filtrar. A busca é instantânea.">i</i></span>
+                            <input type="search" id="pendingSearchInput" placeholder="Nome do ícone ou categoria...">
                         </label>
                         <div class="chip-group" id="pendingCategoryFilter"></div>
                     </div>
@@ -109,23 +118,24 @@
 
                     <div class="empty-state hidden" id="pendingEmptyState">
                         <strong>Nenhum item pendente encontrado.</strong>
-                        <p>Tente outro termo ou outra categoria.</p>
+                        <p>Tente outro termo ou mude a categoria.</p>
                     </div>
                 </section>
 
+                <!-- IMPLEMENTED VIEW -->
                 <section class="catalog-view hidden" id="implementedView">
                     <div class="filter-bar">
                         <label class="search-field">
-                            <span>Buscar implementado</span>
-                            <input type="search" id="implementedSearchInput" placeholder="Nome, label, descricao ou imagem">
+                            <span>Buscar implementado <i class="info-tip" data-tip="Busca por nome, label, descrição, tipo de imagem ou raridade.">i</i></span>
+                            <input type="search" id="implementedSearchInput" placeholder="Nome, label, descrição ou imagem...">
                         </label>
                         <div class="filter-stack">
                             <div class="filter-block">
-                                <span class="filter-title">Tipo</span>
+                                <span class="filter-title">Tipo <i class="info-tip" data-tip="Filtre entre 'item' (objetos, consumíveis, materiais) e 'weapon' (armas que vão na mão).">i</i></span>
                                 <div class="chip-group" id="implementedTypeFilter"></div>
                             </div>
                             <div class="filter-block">
-                                <span class="filter-title">Raridade</span>
+                                <span class="filter-title">Raridade <i class="info-tip" data-tip="Filtre pela raridade. Cada raridade define a cor da borda do item no inventário do jogador.">i</i></span>
                                 <div class="chip-group" id="implementedRarityFilter"></div>
                             </div>
                         </div>
@@ -140,20 +150,21 @@
                 </section>
             </div>
 
-            <aside class="builder-panel panel">
+            <!-- BUILDER -->
+            <aside class="builder-panel panel fade-in">
                 <div class="builder-header">
                     <div>
                         <span class="eyebrow">Criador de item</span>
-                        <h2>Exportador para <code>shared/items.lua</code></h2>
+                        <h2>Export para <code>shared/items.lua</code></h2>
                     </div>
-                    <span class="builder-badge" id="builderModeBadge">Aguardando selecao</span>
+                    <span class="builder-badge" id="builderModeBadge">Aguardando seleção</span>
                 </div>
 
                 <div class="builder-empty" id="builderIdle">
-                    <strong>Selecione um item em "para implementar".</strong>
+                    <strong>Selecione um ícone em "Pendentes"</strong>
                     <p>
-                        O icone fica travado no item criado. Voce pode usar um item implementado como template para copiar raridade,
-                        peso, comportamento e campos avancados.
+                        O ícone fica vinculado ao item criado. Você pode usar um item já implementado como template
+                        para copiar raridade, peso, tipo e campos avançados.
                     </p>
                 </div>
 
@@ -167,44 +178,44 @@
                                 <span class="mini-badge" id="builderSourceBadge">Pendente</span>
                                 <span class="mini-badge muted" id="builderTemplateChip">Sem template</span>
                             </div>
-                            <strong id="builderIconName">icone</strong>
+                            <strong id="builderIconName">ícone</strong>
                             <span id="builderIconCategory">categoria</span>
                             <code id="builderImageValue">icone.png</code>
                         </div>
                     </div>
 
                     <div class="builder-helper-actions">
-                        <button class="ghost-btn" id="copyIconNameBtn" type="button">Copiar nome do icone</button>
+                        <button class="ghost-btn" id="copyIconNameBtn" type="button">Copiar nome do ícone</button>
                         <button class="ghost-btn" id="clearTemplateBtn" type="button">Limpar template</button>
                     </div>
 
                     <form class="builder-form" id="itemForm">
                         <div class="field-grid two-cols">
                             <label class="field">
-                                <span>Nome do item</span>
+                                <span>Nome do item <i class="info-tip" data-tip="Identificador único do item no servidor. Use apenas letras minúsculas, números, underline (_) ou hífen (-). Ex: lockpick_master. Esse nome é a chave que vai dentro de shared/items.lua.">i</i></span>
                                 <input type="text" id="itemNameInput" placeholder="ex: lockpick_master">
                             </label>
                             <label class="field">
-                                <span>Label</span>
+                                <span>Label <i class="info-tip" data-tip="Nome que aparece para o jogador no inventário. Pode ter espaços e letras maiúsculas. Ex: Lockpick Master">i</i></span>
                                 <input type="text" id="itemLabelInput" placeholder="ex: Lockpick Master">
                             </label>
                         </div>
 
                         <label class="field">
-                            <span>Descricao</span>
-                            <textarea id="itemDescriptionInput" rows="3" placeholder="Descricao mostrada no inventario."></textarea>
+                            <span>Descrição <i class="info-tip" data-tip="Texto descritivo que aparece quando o jogador passa o mouse no item dentro do inventário.">i</i></span>
+                            <textarea id="itemDescriptionInput" rows="3" placeholder="Descrição mostrada no inventário do jogador."></textarea>
                         </label>
 
                         <div class="field-grid four-cols">
                             <label class="field">
-                                <span>Tipo</span>
+                                <span>Tipo <i class="info-tip" data-tip="'item' = objeto normal (comida, ferramenta, material). 'weapon' = arma que vai na mão do jogador e tem durabilidade/munição.">i</i></span>
                                 <select id="itemTypeSelect">
                                     <option value="item">item</option>
                                     <option value="weapon">weapon</option>
                                 </select>
                             </label>
                             <label class="field">
-                                <span>Raridade</span>
+                                <span>Raridade <i class="info-tip" data-tip="Define a cor da borda do item no inventário. Common (cinza), Uncommon (verde), Rare (azul), Epic (roxo), Legendary (dourado).">i</i></span>
                                 <select id="itemRaritySelect">
                                     <option value="common">common</option>
                                     <option value="uncommon">uncommon</option>
@@ -214,56 +225,56 @@
                                 </select>
                             </label>
                             <label class="field">
-                                <span>Peso</span>
+                                <span>Peso <i class="info-tip" data-tip="Peso do item em gramas. O inventário do jogador tem capacidade máxima de 120kg (120000g). Ex: uma pistola pesa ~1100g.">i</i></span>
                                 <input type="number" id="itemWeightInput" min="0" step="1" placeholder="0">
                             </label>
                             <label class="field">
-                                <span>Imagem</span>
+                                <span>Imagem <i class="info-tip" data-tip="Nome do arquivo da imagem (auto-gerado a partir do ícone). A imagem deve existir em prea-inventory/html/images/. Formato: nome.png">i</i></span>
                                 <input type="text" id="itemImageInput" readonly>
                             </label>
                         </div>
 
                         <div class="toggle-grid">
-                            <label class="toggle">
+                            <label class="toggle" title="Se marcado, o jogador só pode ter 1 unidade desse item no inventário.">
                                 <input type="checkbox" id="itemUniqueInput">
-                                <span>unique</span>
+                                <span>unique <i class="info-tip" data-tip="Quando ativado, o jogador só pode carregar 1 unidade deste item. Útil para armas, celulares, mochilas etc.">i</i></span>
                             </label>
-                            <label class="toggle">
+                            <label class="toggle" title="Se marcado, o jogador pode usar/consumir esse item.">
                                 <input type="checkbox" id="itemUseableInput">
-                                <span>useable</span>
+                                <span>useable <i class="info-tip" data-tip="Quando ativado, o item pode ser 'usado' (clique duplo). Necessário pra comidas, bebidas, kits de reparo, lockpicks etc.">i</i></span>
                             </label>
-                            <label class="toggle">
+                            <label class="toggle" title="Se marcado, o inventário fecha quando o item é usado.">
                                 <input type="checkbox" id="itemShouldCloseInput" checked>
-                                <span>shouldClose</span>
+                                <span>shouldClose <i class="info-tip" data-tip="Quando ativado, o inventário fecha automaticamente ao usar o item. Desative para itens que podem ser usados várias vezes sem fechar.">i</i></span>
                             </label>
                         </div>
 
                         <div class="field-grid three-cols">
                             <label class="field">
-                                <span>Decay</span>
+                                <span>Decay <i class="info-tip" data-tip="Taxa de degradação do item (qualidade por dia). Ex: 0.1 = perde 10% de qualidade por dia real. Quando chega em 0, o item quebra. Armas usam valores entre 0.03 (lenta) e 0.5 (rápida).">i</i></span>
                                 <input type="number" id="itemDecayInput" min="0" step="0.01" placeholder="ex: 0.1">
                             </label>
                             <label class="field">
-                                <span>Ammotype</span>
+                                <span>Ammotype <i class="info-tip" data-tip="Tipo de munição usada pela arma. Só preencha se o item for uma arma de fogo. Valores comuns: ammo-9, ammo-45, ammo-rifle, ammo-shotgun, ammo-sniper, ammo-heavysniper.">i</i></span>
                                 <input type="text" id="itemAmmoTypeInput" placeholder="ex: ammo-9">
                             </label>
                             <label class="field">
-                                <span>Consume</span>
+                                <span>Consume <i class="info-tip" data-tip="Quantidade consumida ao usar (0 a 1). Ex: 0.5 significa que cada uso consome metade. Deixe vazio para não consumir.">i</i></span>
                                 <input type="number" id="itemConsumeInput" step="0.01" placeholder="vazio para omitir">
                             </label>
                         </div>
 
                         <div class="field-grid two-cols">
                             <label class="field">
-                                <span>allowArmed</span>
+                                <span>allowArmed <i class="info-tip" data-tip="Se true, o jogador pode usar o item enquanto está armado. Se false, precisa guardar a arma antes. Deixe 'Não definir' para usar o comportamento padrão.">i</i></span>
                                 <select id="itemAllowArmedSelect">
-                                    <option value="">Nao definir</option>
+                                    <option value="">Não definir</option>
                                     <option value="true">true</option>
                                     <option value="false">false</option>
                                 </select>
                             </label>
                             <div class="field hint-field">
-                                <span>Template atual</span>
+                                <span>Template atual <i class="info-tip" data-tip="Mostra qual item implementado você está usando como base. Os campos copiados incluem: tipo, raridade, peso, unique, useable, shouldClose, decay, ammotype e extras.">i</i></span>
                                 <div class="hint-card" id="templateSummary">
                                     Nenhum template aplicado.
                                 </div>
@@ -271,8 +282,8 @@
                         </div>
 
                         <label class="field">
-                            <span>Extras avancados em Lua</span>
-                            <textarea id="itemExtraLuaInput" rows="6" placeholder="Exemplo:
+                            <span>Extras avançados em Lua <i class="info-tip" data-tip="Campos Lua adicionais que serão adicionados ao export. Útil para campos customizados como ['prop'], ['carryInHand'], ['allowInBackpack'], etc. Exemplo: ['prop'] = 'prop_tv_flat_01',">i</i></span>
+                            <textarea id="itemExtraLuaInput" rows="5" placeholder="Exemplo:
 ['prop'] = 'prop_tv_flat_01',
 ['carryInHand'] = true,
 ['allowInBackpack'] = false,"></textarea>
@@ -292,15 +303,15 @@
 
                         <div class="builder-footer-actions">
                             <button class="primary-btn" id="saveImplementedBtn" type="button">Salvar como implementado</button>
-                            <button class="ghost-btn" id="resetBuilderBtn" type="button">Resetar formulario</button>
+                            <button class="ghost-btn" id="resetBuilderBtn" type="button">Resetar formulário</button>
                         </div>
 
                         <div class="checklist">
-                            <strong>Checklist rapido</strong>
+                            <strong>Checklist rápido</strong>
                             <ul>
-                                <li>1. Copie o export para <code>shared/items.lua</code>.</li>
-                                <li>2. Garanta que a imagem exista em <code>prea-inventory/html/images</code>.</li>
-                                <li>3. Reinicie o resource ou atualize o snapshot quando sincronizar o servidor.</li>
+                                <li>1. Copie o export e cole em <code>shared/items.lua</code> dentro do prea-inventory.</li>
+                                <li>2. Garanta que a imagem exista em <code>prea-inventory/html/images/</code>.</li>
+                                <li>3. Reinicie o resource com <code>ensure prea-inventory</code> ou atualize o snapshot.</li>
                             </ul>
                         </div>
                     </section>
@@ -308,6 +319,10 @@
             </aside>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <span class="footer-brand">underRP</span> · Item Workbench · Ferramenta interna de implementação
+    </footer>
 
     <div class="toast" id="toast">
         <span id="toastText">Copiado.</span>
