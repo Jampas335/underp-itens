@@ -1,10 +1,10 @@
 /**
  * ============================================================
- *  CONFIGURAÇÃO DO SITE - UnderCity Icon Catalog
+ *  CONFIGURACAO DO SITE - UnderCity Item Workbench
  * ============================================================
  * 
- *  Altere as configurações abaixo conforme seu repositório.
- *  Após fazer deploy no GitHub Pages, atualize a BASE_URL.
+ *  Altere as configuracoes abaixo conforme seu repositorio.
+ *  Apos fazer deploy no GitHub Pages, atualize a BASE_URL.
  * 
  * ============================================================
  */
@@ -16,25 +16,25 @@ const CONFIG = {
     // Formato: https://<seu-usuario>.github.io/<nome-do-repo>
     // Exemplo: https://undercity-rp.github.io/icons
     // 
-    // IMPORTANTE: NÃO coloque barra (/) no final!
+    // IMPORTANTE: NAO coloque barra (/) no final!
     BASE_URL: "https://jampas335.github.io/underp-itens",
 
     // ===========================================
-    // PASTA DOS ÍCONES (relativa à raiz do repo)
+    // PASTA DOS ICONES PENDENTES (relativa a raiz do repo)
     // ===========================================
-    // Os ícones devem ficar dentro desta pasta.
+    // Os icones pendentes devem ficar dentro desta pasta.
     // Exemplo: se ICONS_FOLDER = "icons", os ícones ficam em /icons/nome.png
     ICONS_FOLDER: "icons",
 
     // ===========================================
-    // EXTENSÃO PADRÃO DOS ÍCONES
+    // EXTENSAO PADRAO DOS ICONES
     // ===========================================
-    // A extensão usada nos seus ícones (png, webp, jpg)
+    // A extensao usada nos seus icones (png, webp, jpg)
     ICON_EXTENSION: "png",
 
     // ===========================================
-    // TÍTULO DO SITE
+    // TITULO DO SITE
     // ===========================================
     SITE_TITLE: "UnderCity",
-    SITE_SUBTITLE: "Icon Catalog",
+    SITE_SUBTITLE: "Item Workbench",
 };

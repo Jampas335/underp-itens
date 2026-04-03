@@ -3,158 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="UnderCity - Catálogo de Ícones de Itens para FiveM. Acesse ícones diretamente via URL para seu inventário.">
-    <title>UnderCity | Catálogo de Ícones</title>
+    <meta name="description" content="UnderCity Item Workbench. Organize icones pendentes, visualize itens implementados do prea-inventory e gere exports Lua prontos para o servidor.">
+    <title>UnderCity | Item Workbench</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Ambient Background -->
-    <div class="ambient-bg">
-        <div class="ambient-orb orb-1"></div>
-        <div class="ambient-orb orb-2"></div>
-        <div class="ambient-orb orb-3"></div>
-    </div>
+    <div class="page-noise"></div>
+    <div class="page-glow glow-a"></div>
+    <div class="page-glow glow-b"></div>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">
-                <div class="logo-icon">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <rect x="2" y="2" width="28" height="28" rx="6" stroke="url(#logoGrad)" stroke-width="2.5"/>
-                        <path d="M10 16L14 20L22 12" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <defs>
-                            <linearGradient id="logoGrad" x1="2" y1="2" x2="30" y2="30">
-                                <stop stop-color="#a855f7"/>
-                                <stop offset="1" stop-color="#6366f1"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-                <div class="logo-text">
-                    <span class="logo-title">UnderCity</span>
-                    <span class="logo-subtitle">Icon Catalog</span>
-                </div>
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-mark">UC</div>
+            <div class="brand-copy">
+                <span class="brand-title" id="siteTitle">UnderCity</span>
+                <span class="brand-subtitle" id="siteSubtitle">Item Workbench</span>
             </div>
-            <div class="header-stats">
-                <div class="stat-item">
-                    <span class="stat-value" id="totalIcons">0</span>
-                    <span class="stat-label">Ícones</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value" id="totalCategories">0</span>
-                    <span class="stat-label">Categorias</span>
-                </div>
-            </div>
+        </div>
+
+        <div class="topbar-actions">
+            <button class="ghost-btn" id="exportWorkspaceBtn" type="button">Exportar locais</button>
+            <button class="ghost-btn ghost-danger" id="resetWorkspaceBtn" type="button">Limpar locais</button>
         </div>
     </header>
 
-    <!-- Hero / URL Info -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Catálogo de Ícones</h1>
-            <p class="hero-description">Ícones de itens para inventário FiveM. Use o link direto no seu script — sem necessidade de download.</p>
-            <div class="url-structure">
-                <div class="url-label">Estrutura do Link:</div>
-                <div class="url-box">
-                    <code id="urlStructure">https://seu-usuario.github.io/repo/icons/<span class="url-highlight">nome-do-item</span>.png</code>
-                    <button class="url-copy-btn" onclick="copyUrlStructure()" title="Copiar estrutura">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <rect x="5" y="5" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
-                            <path d="M11 5V3.5A1.5 1.5 0 009.5 2h-6A1.5 1.5 0 002 3.5v6A1.5 1.5 0 003.5 11H5" stroke="currentColor" stroke-width="1.5"/>
-                        </svg>
-                    </button>
+    <main class="shell">
+        <section class="hero-panel panel">
+            <div class="hero-copy">
+                <span class="eyebrow">Ferramenta de implementacao</span>
+                <h1>Do icone pendente ao item pronto para colar no <code>prea-inventory</code>.</h1>
+                <p>
+                    Os itens atuais do site ficam em <strong>Icones/itens para implementar</strong>.
+                    Os itens do servidor entram em <strong>Icones/itens implementados</strong>.
+                    O fluxo agora e escolher um pendente, preencher os parametros reais do inventario e copiar o export Lua.
+                </p>
+            </div>
+
+            <div class="hero-side">
+                <div class="sync-card">
+                    <span class="sync-label">Snapshot do servidor</span>
+                    <strong id="syncTimestamp">Carregando...</strong>
+                    <span id="syncSummary">Lendo itens implementados...</span>
                 </div>
-                <p class="url-hint">⚙️ Configure sua URL base no arquivo <code>config.js</code></p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Search & Filter Bar -->
-    <section class="toolbar">
-        <div class="toolbar-content">
-            <div class="search-container">
-                <svg class="search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
-                    <path d="M12 12L16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-                <input type="text" id="searchInput" class="search-input" placeholder="Buscar ícone por nome..." autocomplete="off">
-                <button class="search-clear" id="searchClear" onclick="clearSearch()">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <path d="M3 3L11 11M11 3L3 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                </button>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <span>1</span>
+                        <p>Selecione um item pendente.</p>
+                    </div>
+                    <div class="workflow-step">
+                        <span>2</span>
+                        <p>Aplique um template ou preencha os parametros.</p>
+                    </div>
+                    <div class="workflow-step">
+                        <span>3</span>
+                        <p>Copie o export e marque como implementado.</p>
+                    </div>
+                </div>
             </div>
-            <div class="category-filter" id="categoryFilter">
-                <!-- Categories will be injected by JS -->
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Icon Grid -->
-    <main class="catalog">
-        <div class="catalog-grid" id="catalogGrid">
-            <!-- Icons will be injected by JS -->
-        </div>
-        <div class="empty-state" id="emptyState" style="display: none;">
-            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                <circle cx="28" cy="28" r="18" stroke="currentColor" stroke-width="2.5" opacity="0.3"/>
-                <path d="M42 42L56 56" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.3"/>
-                <path d="M22 28H34M28 22V34" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.2"/>
-            </svg>
-            <h3>Nenhum ícone encontrado</h3>
-            <p>Tente outro termo de busca ou categoria</p>
-        </div>
+        <section class="stats-grid">
+            <article class="stat-card panel">
+                <span class="stat-label">Para implementar</span>
+                <strong class="stat-value" id="pendingCount">0</strong>
+                <span class="stat-foot">icones pendentes visiveis no site</span>
+            </article>
+            <article class="stat-card panel">
+                <span class="stat-label">Implementados no servidor</span>
+                <strong class="stat-value" id="serverImplementedCount">0</strong>
+                <span class="stat-foot">snapshot atual do prea-inventory</span>
+            </article>
+            <article class="stat-card panel">
+                <span class="stat-label">Implementados localmente</span>
+                <strong class="stat-value" id="localImplementedCount">0</strong>
+                <span class="stat-foot">persistidos no navegador desta maquina</span>
+            </article>
+        </section>
+
+        <section class="workspace-grid">
+            <div class="workspace-main panel">
+                <div class="workspace-header">
+                    <div class="workspace-tabs" role="tablist" aria-label="Catalogos">
+                        <button class="tab-btn active" id="viewPendingBtn" data-view="pending" type="button">Icones/itens para implementar</button>
+                        <button class="tab-btn" id="viewImplementedBtn" data-view="implemented" type="button">Icones/itens implementados</button>
+                    </div>
+                    <div class="workspace-note">
+                        O estado local do builder fica salvo no navegador.
+                    </div>
+                </div>
+
+                <section class="catalog-view" id="pendingView">
+                    <div class="filter-bar">
+                        <label class="search-field">
+                            <span>Buscar pendente</span>
+                            <input type="search" id="pendingSearchInput" placeholder="Nome do icone ou categoria">
+                        </label>
+                        <div class="chip-group" id="pendingCategoryFilter"></div>
+                    </div>
+
+                    <div class="catalog-grid" id="pendingGrid"></div>
+
+                    <div class="empty-state hidden" id="pendingEmptyState">
+                        <strong>Nenhum item pendente encontrado.</strong>
+                        <p>Tente outro termo ou outra categoria.</p>
+                    </div>
+                </section>
+
+                <section class="catalog-view hidden" id="implementedView">
+                    <div class="filter-bar">
+                        <label class="search-field">
+                            <span>Buscar implementado</span>
+                            <input type="search" id="implementedSearchInput" placeholder="Nome, label, descricao ou imagem">
+                        </label>
+                        <div class="filter-stack">
+                            <div class="filter-block">
+                                <span class="filter-title">Tipo</span>
+                                <div class="chip-group" id="implementedTypeFilter"></div>
+                            </div>
+                            <div class="filter-block">
+                                <span class="filter-title">Raridade</span>
+                                <div class="chip-group" id="implementedRarityFilter"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-grid" id="implementedGrid"></div>
+
+                    <div class="empty-state hidden" id="implementedEmptyState">
+                        <strong>Nenhum item implementado encontrado.</strong>
+                        <p>Ajuste os filtros ou limpe a busca.</p>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="builder-panel panel">
+                <div class="builder-header">
+                    <div>
+                        <span class="eyebrow">Criador de item</span>
+                        <h2>Exportador para <code>shared/items.lua</code></h2>
+                    </div>
+                    <span class="builder-badge" id="builderModeBadge">Aguardando selecao</span>
+                </div>
+
+                <div class="builder-empty" id="builderIdle">
+                    <strong>Selecione um item em "para implementar".</strong>
+                    <p>
+                        O icone fica travado no item criado. Voce pode usar um item implementado como template para copiar raridade,
+                        peso, comportamento e campos avancados.
+                    </p>
+                </div>
+
+                <div class="builder-content hidden" id="builderContent">
+                    <div class="builder-item-card">
+                        <div class="builder-item-preview">
+                            <img id="builderIconImage" alt="">
+                        </div>
+                        <div class="builder-item-copy">
+                            <div class="inline-badges">
+                                <span class="mini-badge" id="builderSourceBadge">Pendente</span>
+                                <span class="mini-badge muted" id="builderTemplateChip">Sem template</span>
+                            </div>
+                            <strong id="builderIconName">icone</strong>
+                            <span id="builderIconCategory">categoria</span>
+                            <code id="builderImageValue">icone.png</code>
+                        </div>
+                    </div>
+
+                    <div class="builder-helper-actions">
+                        <button class="ghost-btn" id="copyIconNameBtn" type="button">Copiar nome do icone</button>
+                        <button class="ghost-btn" id="clearTemplateBtn" type="button">Limpar template</button>
+                    </div>
+
+                    <form class="builder-form" id="itemForm">
+                        <div class="field-grid two-cols">
+                            <label class="field">
+                                <span>Nome do item</span>
+                                <input type="text" id="itemNameInput" placeholder="ex: lockpick_master">
+                            </label>
+                            <label class="field">
+                                <span>Label</span>
+                                <input type="text" id="itemLabelInput" placeholder="ex: Lockpick Master">
+                            </label>
+                        </div>
+
+                        <label class="field">
+                            <span>Descricao</span>
+                            <textarea id="itemDescriptionInput" rows="3" placeholder="Descricao mostrada no inventario."></textarea>
+                        </label>
+
+                        <div class="field-grid four-cols">
+                            <label class="field">
+                                <span>Tipo</span>
+                                <select id="itemTypeSelect">
+                                    <option value="item">item</option>
+                                    <option value="weapon">weapon</option>
+                                </select>
+                            </label>
+                            <label class="field">
+                                <span>Raridade</span>
+                                <select id="itemRaritySelect">
+                                    <option value="common">common</option>
+                                    <option value="uncommon">uncommon</option>
+                                    <option value="rare">rare</option>
+                                    <option value="epic">epic</option>
+                                    <option value="legendary">legendary</option>
+                                </select>
+                            </label>
+                            <label class="field">
+                                <span>Peso</span>
+                                <input type="number" id="itemWeightInput" min="0" step="1" placeholder="0">
+                            </label>
+                            <label class="field">
+                                <span>Imagem</span>
+                                <input type="text" id="itemImageInput" readonly>
+                            </label>
+                        </div>
+
+                        <div class="toggle-grid">
+                            <label class="toggle">
+                                <input type="checkbox" id="itemUniqueInput">
+                                <span>unique</span>
+                            </label>
+                            <label class="toggle">
+                                <input type="checkbox" id="itemUseableInput">
+                                <span>useable</span>
+                            </label>
+                            <label class="toggle">
+                                <input type="checkbox" id="itemShouldCloseInput" checked>
+                                <span>shouldClose</span>
+                            </label>
+                        </div>
+
+                        <div class="field-grid three-cols">
+                            <label class="field">
+                                <span>Decay</span>
+                                <input type="number" id="itemDecayInput" min="0" step="0.01" placeholder="ex: 0.1">
+                            </label>
+                            <label class="field">
+                                <span>Ammotype</span>
+                                <input type="text" id="itemAmmoTypeInput" placeholder="ex: ammo-9">
+                            </label>
+                            <label class="field">
+                                <span>Consume</span>
+                                <input type="number" id="itemConsumeInput" step="0.01" placeholder="vazio para omitir">
+                            </label>
+                        </div>
+
+                        <div class="field-grid two-cols">
+                            <label class="field">
+                                <span>allowArmed</span>
+                                <select id="itemAllowArmedSelect">
+                                    <option value="">Nao definir</option>
+                                    <option value="true">true</option>
+                                    <option value="false">false</option>
+                                </select>
+                            </label>
+                            <div class="field hint-field">
+                                <span>Template atual</span>
+                                <div class="hint-card" id="templateSummary">
+                                    Nenhum template aplicado.
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="field">
+                            <span>Extras avancados em Lua</span>
+                            <textarea id="itemExtraLuaInput" rows="6" placeholder="Exemplo:
+['prop'] = 'prop_tv_flat_01',
+['carryInHand'] = true,
+['allowInBackpack'] = false,"></textarea>
+                        </label>
+                    </form>
+
+                    <section class="export-panel">
+                        <div class="export-header">
+                            <div>
+                                <span class="eyebrow">Preview</span>
+                                <h3>Export pronto para colar</h3>
+                            </div>
+                            <button class="ghost-btn" id="copyExportBtn" type="button">Copiar export</button>
+                        </div>
+
+                        <pre class="code-preview"><code id="luaExportPreview"></code></pre>
+
+                        <div class="builder-footer-actions">
+                            <button class="primary-btn" id="saveImplementedBtn" type="button">Salvar como implementado</button>
+                            <button class="ghost-btn" id="resetBuilderBtn" type="button">Resetar formulario</button>
+                        </div>
+
+                        <div class="checklist">
+                            <strong>Checklist rapido</strong>
+                            <ul>
+                                <li>1. Copie o export para <code>shared/items.lua</code>.</li>
+                                <li>2. Garanta que a imagem exista em <code>prea-inventory/html/images</code>.</li>
+                                <li>3. Reinicie o resource ou atualize o snapshot quando sincronizar o servidor.</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </aside>
+        </section>
     </main>
 
-    <!-- Toast Notification -->
     <div class="toast" id="toast">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M4 8L7 11L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span id="toastText">Link copiado!</span>
+        <span id="toastText">Copiado.</span>
     </div>
 
-    <!-- Modal for icon detail -->
-    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
-        <div class="modal" onclick="event.stopPropagation()">
-            <button class="modal-close" onclick="closeModal()">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </button>
-            <div class="modal-preview">
-                <img id="modalImage" src="" alt="">
-            </div>
-            <div class="modal-info">
-                <h2 id="modalName"></h2>
-                <span class="modal-category" id="modalCategory"></span>
-                <div class="modal-links">
-                    <div class="modal-link-group">
-                        <label>Link direto do ícone:</label>
-                        <div class="modal-link-box">
-                            <code id="modalLink"></code>
-                            <button onclick="copyModalLink()" class="modal-copy-btn">Copiar</button>
-                        </div>
-                    </div>
-                    <div class="modal-link-group">
-                        <label>Uso no Lua (FiveM):</label>
-                        <div class="modal-link-box code-block">
-                            <code id="modalLuaCode"></code>
-                            <button onclick="copyModalLua()" class="modal-copy-btn">Copiar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
     <script src="config.js"></script>
     <script src="icons.js"></script>
+    <script src="implemented-items.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

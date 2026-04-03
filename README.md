@@ -1,111 +1,99 @@
-# 🎮 UnderCity - Catálogo de Ícones
+# UnderCity Item Workbench
 
-Site estático para GitHub Pages que serve como catálogo de ícones de itens para inventário FiveM.
+Ferramenta estatica para GitHub Pages usada para organizar icones pendentes, visualizar os itens ja existentes do `prea-inventory` e gerar exports Lua prontos para colar no servidor.
 
-## 🚀 Como Funciona
+## O que o site faz
 
-Os ícones ficam hospedados no GitHub Pages e podem ser acessados diretamente via URL no seu script FiveM — **sem precisar baixar os ícones para o script**.
+- `Icones/itens para implementar`: usa os icones registrados em `icons.js` e os PNGs da pasta `icons/`.
+- `Icones/itens implementados`: usa um snapshot gerado a partir do `prea-inventory`.
+- `Criador de item`: permite pegar um item pendente, travar a imagem dele e montar a estrutura completa do item.
+- `Copiar export`: gera a entrada Lua no formato usado em `shared/items.lua`.
+- `Salvar como implementado`: move o item do fluxo pendente para o fluxo implementado localmente no navegador.
 
-### Estrutura do Link
-```
-https://seu-usuario.github.io/seu-repo/icons/nome-do-item.png
-```
+## Estrutura do prea-inventory
 
-Basta trocar `nome-do-item` pelo nome do ícone!
+O servidor atual usa `ItemList` no arquivo:
 
----
+`C:\Users\noobg\Desktop\UnderCity\txData\Qbox_A4EC90.base\resources\[essenciais]\prea-inventory\shared\items.lua`
 
-## 📦 Como Adicionar Ícones
+Os itens seguem este formato base:
 
-### 1. Coloque o arquivo `.png` na pasta `/icons/`
-```
-/icons/weapon_pistol.png
-/icons/bread.png
-/icons/lockpick.png
-```
-
-### 2. Registre o ícone no arquivo `icons.js`
-```javascript
-const ICONS = {
-    "Armas": [
-        "weapon_pistol",  // ← nome do arquivo SEM a extensão
-        "weapon_smg",
-    ],
-    "Comida": [
-        "bread",
-        "water",
-    ],
-    // Adicione mais categorias...
-};
+```lua
+['nome_do_item'] = {
+    ['name'] = 'nome_do_item',
+    ['label'] = 'Nome visivel',
+    ['weight'] = 100,
+    ['type'] = 'item',
+    ['image'] = 'nome_do_item.png',
+    ['unique'] = false,
+    ['useable'] = false,
+    ['shouldClose'] = true,
+    ['description'] = 'Descricao opcional',
+    ['rarity'] = 'common',
+},
 ```
 
-### 3. Commit e Push
+Campos extras usados no recurso tambem aparecem no builder, por exemplo:
+
+- `ammotype`
+- `decay`
+- `consume`
+- `allowArmed`
+- blocos extras em Lua como `prop`, `object`, `carryInHand`, `carryAttachment`, `carryAnim`, `allowInBackpack`
+
+## Arquivos principais
+
+- `icons.js`: catalogo dos itens pendentes
+- `icons/`: imagens pendentes
+- `implemented-items.js`: snapshot gerado dos itens do servidor
+- `server-icons/`: imagens copiadas do `prea-inventory` quando existirem
+- `sync-implemented-items.js`: script que le o recurso do servidor e gera o snapshot do site
+- `app.js`: interface, filtros, builder, export e estado local
+
+## Como atualizar os itens implementados do servidor
+
+Sempre que o `prea-inventory` mudar, gere um novo snapshot:
+
+```bash
+node sync-implemented-items.js
+```
+
+Esse comando:
+
+1. Le `shared/items.lua`
+2. Mescla `shared/v_compat_items.lua`
+3. Le `shared/generated_qbx_items.lua`
+4. Aplica `shared/z_runtime_overrides.lua`
+5. Gera `implemented-items.js`
+6. Copia para `server-icons/` as imagens encontradas no inventario
+
+Depois disso, publique normalmente:
+
 ```bash
 git add .
-git commit -m "Adicionando novos ícones"
+git commit -m "feat: update item workbench snapshot"
 git push
 ```
 
-Pronto! O ícone já estará disponível via URL.
+## Fluxo de uso
 
----
+1. Abra um item em `Icones/itens para implementar`.
+2. Use um item ja implementado como template, se quiser reaproveitar parametros.
+3. Ajuste nome, label, peso, raridade e campos avancados.
+4. Copie o export Lua.
+5. Cole no `shared/items.lua` do `prea-inventory`.
+6. Garanta que a imagem exista em `prea-inventory/html/images`.
+7. Salve como implementado no site para tirar o item da fila pendente local.
 
-## ⚙️ Configuração Inicial
+## Estado local
 
-### 1. Edite o arquivo `config.js`
+- Os itens marcados como implementados no site ficam salvos em `localStorage`.
+- Isso organiza seu fluxo nesta maquina e neste navegador.
+- Para refletir no servidor de verdade, ainda e preciso colar o export no `prea-inventory`.
+- Para refletir no catalogo publicado para todos, gere novo snapshot e publique no GitHub Pages.
 
-```javascript
-const CONFIG = {
-    BASE_URL: "https://seu-usuario.github.io/seu-repo",  // ← Sua URL do GitHub Pages
-    ICONS_FOLDER: "icons",                                  // ← Pasta dos ícones
-    ICON_EXTENSION: "png",                                  // ← Extensão (png, webp, jpg)
-};
-```
+## Observacoes
 
-### 2. Ative o GitHub Pages
-1. Vá em **Settings** → **Pages** no repositório
-2. Em **Source**, selecione a branch `main`
-3. Em **Folder**, selecione `/ (root)`
-4. Clique em **Save**
-
-### 3. Aguarde o deploy (1-2 minutos)
-
----
-
-## 🎮 Uso no FiveM (ox_inventory)
-
-No seu script, use a URL direta do ícone:
-
-```lua
--- Exemplo de uso no ox_inventory / qb-inventory
-local iconUrl = "https://seu-usuario.github.io/seu-repo/icons/weapon_pistol.png"
-```
-
-Cada ícone segue a mesma estrutura de URL. Só muda o nome no final!
-
----
-
-## 📁 Estrutura do Projeto
-
-```
-Site/
-├── index.html          # Página principal
-├── style.css           # Estilos
-├── config.js           # ⚙️ Configuração (URL base, etc)
-├── icons.js            # 📋 Registro dos ícones + categorias
-├── app.js              # Lógica do catálogo
-├── icons/              # 🖼️ Pasta com os ícones PNG
-│   ├── weapon_pistol.png
-│   ├── bread.png
-│   └── ...
-└── README.md
-```
-
----
-
-## 💡 Dicas
-
-- **Nomes dos ícones**: Use nomes em minúsculo, sem espaço, com `_` (underscore). Ex: `weapon_pistol`, `energy_drink`
-- **Tamanho recomendado**: 128x128 ou 256x256 pixels, PNG com fundo transparente
-- **Categorias**: Crie quantas categorias quiser no `icons.js`
-- **Performance**: Use `.webp` ao invés de `.png` para ícones menores e mais rápidos
+- A imagem do item criado fica presa ao icone pendente escolhido.
+- O builder permite alterar todos os parametros, exceto a foto.
+- Nem todo item do servidor tem imagem sincronizada para o site. Quando a imagem nao existir, a interface usa fallback visual.
