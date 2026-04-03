@@ -2,7 +2,7 @@
  * ============================================================
  *  REGISTRO DE ÍCONES - UnderCity Icon Catalog
  * ============================================================
- *  Total: 382 ícones organizados por categoria
+ *  Total: 360 ícones organizados por categoria
  * ============================================================
  */
 
@@ -325,32 +325,6 @@ const ICONS = {
         "organ-replacement-kit",
         "scalple",
         "vicodin",
-    ],
-
-    // ===== ÓRGÃOS HUMANOS =====
-    "Órgãos Humanos": [
-        "humanarm",
-        "humanbone",
-        "humanbones",
-        "humanbrain",
-        "humanear",
-        "humaneye",
-        "humanhand",
-        "humanhead",
-        "humanheart",
-        "humanintestines",
-        "humanleg",
-        "humanliver",
-        "humanlungs",
-        "humannail",
-        "humanpancreas",
-        "humanskull",
-        "humantongue",
-        "humantooth",
-        "humantorso",
-        "kidney",
-        "severed-finger",
-        "finger",
     ],
 
     // ===== FERRAMENTAS =====
