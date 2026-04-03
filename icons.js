@@ -2,7 +2,7 @@
  * ============================================================
  *  REGISTRO DE ÍCONES - UnderCity Icon Catalog
  * ============================================================
- *  Total: 360 ícones organizados por categoria
+ *  Total: 338 ícones organizados por categoria
  * ============================================================
  */
 
@@ -296,21 +296,6 @@ const ICONS = {
         "weed-plant",
     ],
 
-    // ===== DROGAS - MATERIAIS =====
-    "Materiais de Droga": [
-        "damaged-drying-agent",
-        "damaged-filters",
-        "damaged-solvent",
-        "drying-agent",
-        "filters",
-        "hydrazine",
-        "methanol",
-        "methanol-damaged",
-        "palladium",
-        "palladium-damaged",
-        "solvent",
-    ],
-
     // ===== MÉDICO =====
     "Médico": [
         "bandages",
@@ -322,30 +307,21 @@ const ICONS = {
         "firstaid-kit",
         "gauze",
         "med-kit",
-        "organ-replacement-kit",
         "scalple",
-        "vicodin",
     ],
 
     // ===== FERRAMENTAS =====
     "Ferramentas": [
         "advanced-repair",
         "basic-repair",
-        "bobcat-welder",
         "diamond-drill",
         "fire-extinguisher",
         "jerry-can",
-        "landscaping-toolbox",
         "lockpick",
         "mechanic-toolbox",
         "pliers",
         "rope",
         "scissors",
-        "scissors-damaged",
-        "torch",
-        "tresure-toolbox",
-        "underwater-blowtorch",
-        "wrench",
     ],
 
     // ===== PEÇAS DE VEÍCULO =====
@@ -364,12 +340,6 @@ const ICONS = {
         "transmission",
         "wheels",
         "wipers",
-    ],
-
-    // ===== COMBUSTÍVEL =====
-    "Combustível": [
-        "diluted-gasoline",
-        "premium-gasoline",
     ],
 
     // ===== ELETRÔNICA =====
