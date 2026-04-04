@@ -1756,9 +1756,16 @@ function toggleTheme() {
 function initFadeInObserver() {
     const targets = document.querySelectorAll(".fade-in");
     if (!targets.length) return;
+    if (typeof IntersectionObserver !== "function") {
+        targets.forEach((target) => target.classList.add("visible"));
+        return;
+    }
     const observer = new IntersectionObserver(
         (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("visible"); observer.unobserve(e.target); } }),
         { threshold: 0.1 }
     );
     targets.forEach((t) => observer.observe(t));
+    setTimeout(() => {
+        targets.forEach((target) => target.classList.add("visible"));
+    }, 800);
 }
