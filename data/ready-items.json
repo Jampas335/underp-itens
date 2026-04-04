@@ -19,6 +19,25 @@
     "status": "ready"
   },
   {
+    "name": "ammo_rifle",
+    "label": "Caixa Munição de Rifle",
+    "description": "",
+    "weight": 8,
+    "type": "item",
+    "image": "ammo_rifle.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-04T06:34:44.552Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_g17",
     "label": "G17",
     "description": "",
