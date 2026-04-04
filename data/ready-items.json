@@ -1,5 +1,24 @@
 [
   {
+    "name": "ammo_lsmg",
+    "label": "Caixa Munição de LSMG",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "ammo_lsmg.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-04T06:38:15.089Z",
+    "status": "ready"
+  },
+  {
     "name": "ammo_pistol",
     "label": "Caixa Munição de Pistola",
     "description": "",
