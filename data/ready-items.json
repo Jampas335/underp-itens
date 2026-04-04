@@ -134,5 +134,24 @@
     "iconSource": "upload",
     "createdAt": "2026-04-04T07:23:49.001Z",
     "status": "ready"
+  },
+  {
+    "name": "toaster",
+    "label": "Torradeira",
+    "description": "",
+    "weight": 775,
+    "type": "item",
+    "image": "toaster.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "['prop'] = 'prop_toaster_02',\n        ['object'] = 'prop_toaster_02',\n        ['carryInHand'] = true,\n        ['carryAttachment'] = {\n            bone = 57005,\n            pos = { x = 0.12, y = -0.025, z = -0.16 },\n            rot = { x = -91.5, y = 71.5, z = 0.0 },\n        },\n        ['carryAnim'] = {\n            dict = 'anim@heists@box_carry@',\n            clip = 'idle',\n            flag = 49,\n        },\n        ['allowInBackpack'] = true,",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-04T07:28:06.344Z",
+    "status": "ready"
   }
 ]
