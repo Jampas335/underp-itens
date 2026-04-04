@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadWorkspaceState();
     ensureAllowInBackpackField();
     ensureLuaImportPanel();
+    ensureReadyBatchExportButton();
     bindEvents();
     renderAll();
     initFadeInObserver();
@@ -152,6 +153,20 @@ function ensureLuaImportPanel() {
         </div>
     `;
     actions.insertAdjacentElement("afterend", panel);
+}
+
+function ensureReadyBatchExportButton() {
+    if (document.getElementById("copyAllReadyExportsBtn")) return;
+    const refreshBtn = document.getElementById("refreshReadyBtn");
+    if (!refreshBtn || !refreshBtn.parentElement) return;
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.id = "copyAllReadyExportsBtn";
+    button.className = "ghost-btn ready-refresh-btn";
+    button.title = "Copiar todos os itens prontos em um bloco Lua";
+    button.textContent = "Copiar todos";
+    refreshBtn.insertAdjacentElement("afterend", button);
 }
 
 function flattenPendingItems() {
@@ -521,6 +536,7 @@ function bindEvents() {
         state.readyLoaded = false;
         loadReadyItems();
     });
+    document.getElementById("copyAllReadyExportsBtn").addEventListener("click", copyAllReadyExports);
 
     // Debounced search
     document.getElementById("pendingSearchInput").addEventListener("input",
@@ -1422,6 +1438,25 @@ function copyBuilderExport() {
     copyToClipboard(buildLuaEntry(buildBuilderItemPreview()), "Export copiado.");
 }
 
+async function copyAllReadyExports() {
+    try {
+        if (state.readyLoading) {
+            showToast("Aguarde o carregamento dos itens prontos.");
+            return;
+        }
+        if (!state.readyLoaded) {
+            await loadReadyItems({ bustCache: true, preserveSearch: true, statusPrefix: "" });
+        }
+        if (state.readyItems.length === 0) {
+            showToast("Nao ha itens prontos para exportar.");
+            return;
+        }
+        copyToClipboard(buildCompactLuaEntries(state.readyItems), "Todos os itens prontos foram copiados.");
+    } catch (err) {
+        showToast(`Falha ao exportar prontos: ${err.message}`);
+    }
+}
+
 function saveBuilderItem() {
     const pending = getBuilderPendingItem();
     const hasRealPending = pending && !pending.isManual;
@@ -1801,6 +1836,36 @@ function buildLuaEntry(item) {
     return lines.join("\n");
 }
 
+function buildCompactLuaEntries(items) {
+    return items.map((item) => buildCompactLuaEntry(item)).join("\n");
+}
+
+function buildCompactLuaEntry(item) {
+    const parts = [];
+    for (const key of ITEM_EXPORT_ORDER) {
+        if (!(key in item)) continue;
+        const value = item[key];
+        if (value === undefined || value === null || value === "") continue;
+        parts.push(`['${key}'] = ${serializeLuaValueCompact(value)}`);
+    }
+
+    if (item.extraLua && item.extraLua.trim()) {
+        parts.push(compactLuaRawBlock(item.extraLua));
+    } else {
+        const extraFields = {};
+        for (const [key, value] of Object.entries(item)) {
+            if (ITEM_EXPORT_ORDER.includes(key) || ITEM_META_KEYS.has(key)) continue;
+            if (value === undefined || value === null || value === "") continue;
+            extraFields[key] = value;
+        }
+        for (const [key, value] of Object.entries(extraFields)) {
+            parts.push(`['${key}'] = ${serializeLuaValueCompact(value)}`);
+        }
+    }
+
+    return `['${item.name}'] = { ${parts.join(", ")} },`;
+}
+
 function serializeLuaValue(value, depth = 0) {
     if (typeof value === "string") return `'${escapeLuaString(value)}'`;
     if (typeof value === "number") return String(value);
@@ -1819,6 +1884,29 @@ function serializeLuaValue(value, depth = 0) {
         return `{\n${entries.map(([k, v]) => `${indent}['${k}'] = ${serializeLuaValue(v, depth + 1)},`).join("\n")}\n${closeIndent}}`;
     }
     return "nil";
+}
+
+function serializeLuaValueCompact(value) {
+    if (typeof value === "string") return `'${escapeLuaString(value)}'`;
+    if (typeof value === "number") return String(value);
+    if (typeof value === "boolean") return value ? "true" : "false";
+    if (Array.isArray(value)) {
+        return `{ ${value.map((entry) => serializeLuaValueCompact(entry)).join(", ")} }`;
+    }
+    if (value && typeof value === "object") {
+        const entries = Object.entries(value).map(([key, entry]) => `['${key}'] = ${serializeLuaValueCompact(entry)}`);
+        return `{ ${entries.join(", ")} }`;
+    }
+    return "nil";
+}
+
+function compactLuaRawBlock(raw) {
+    return raw
+        .trim()
+        .split("\n")
+        .map((line) => line.trim())
+        .filter(Boolean)
+        .join(" ");
 }
 
 function escapeLuaString(value) {
