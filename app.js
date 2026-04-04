@@ -212,6 +212,9 @@ async function parseGitHubApiError(resp) {
     let message = body.message || `GitHub API ${resp.status}`;
     if (acceptedPermissions) message += ` | Permissoes exigidas: ${acceptedPermissions}`;
     if (oauthScopes) message += ` | Escopos/token atual: ${oauthScopes}`;
+    if (/Resource not accessible by personal access token/i.test(message)) {
+        message += ` | Revise o PAT: Resource owner = ${CONFIG.GITHUB_OWNER}, acesso ao repositorio ${CONFIG.GITHUB_REPO} e permissao Contents: Read and write.`;
+    }
     return message;
 }
 
@@ -1297,7 +1300,12 @@ async function handlePublishAsReady() {
         renderAll();
         showToast(`Item ${previewItem.name} publicado como Pronto.`);
     } catch (err) {
-        showToast(`Erro ao publicar: ${err.message}`);
+        const message = err.message || "Falha ao publicar no GitHub.";
+        showToast(`Erro ao publicar: ${message}`);
+        if (/Resource not accessible by personal access token/i.test(message)) {
+            openGithubModal();
+            showModalStatus(message, "error");
+        }
     } finally {
         btn.disabled = false;
         btn.innerHTML = `<span>✓</span> Publicar como Pronto`;
