@@ -2,10 +2,10 @@
  * ============================================================
  *  CONFIGURAÇÃO DO SITE — underRP Item Workbench
  * ============================================================
- * 
+ *
  *  Altere as configurações abaixo conforme seu repositório.
  *  Após fazer deploy no GitHub Pages, atualize a BASE_URL.
- * 
+ *
  * ============================================================
  */
 
@@ -13,22 +13,16 @@ const CONFIG = {
     // ===========================================
     // URL BASE DO SEU GITHUB PAGES
     // ===========================================
-    // Formato: https://<seu-usuario>.github.io/<nome-do-repo>
-    // 
-    // IMPORTANTE: NÃO coloque barra (/) no final!
     BASE_URL: "https://jampas335.github.io/underp-itens",
 
     // ===========================================
-    // PASTA DOS ÍCONES PENDENTES (relativa à raiz do repo)
+    // PASTA DOS ÍCONES PENDENTES
     // ===========================================
-    // Os ícones pendentes devem ficar dentro desta pasta.
-    // Exemplo: se ICONS_FOLDER = "icons", os ícones ficam em /icons/nome.png
     ICONS_FOLDER: "icons",
 
     // ===========================================
     // EXTENSÃO PADRÃO DOS ÍCONES
     // ===========================================
-    // A extensão usada nos seus ícones (png, webp, jpg)
     ICON_EXTENSION: "png",
 
     // ===========================================
@@ -36,4 +30,18 @@ const CONFIG = {
     // ===========================================
     SITE_TITLE: "underRP",
     SITE_SUBTITLE: "Item Workbench",
+
+    // ===========================================
+    // GITHUB API — Persistência de Itens Prontos
+    // ===========================================
+    // Usado para salvar/carregar itens prontos via GitHub API.
+    // Todos que entrarem no site verão os itens publicados.
+    GITHUB_OWNER: "Jampas335",
+    GITHUB_REPO: "underp-itens",
+
+    // Caminho do JSON de itens prontos no repositório
+    READY_ITEMS_PATH: "data/ready-items.json",
+
+    // Pasta dos ícones uploadados para itens prontos
+    READY_ICONS_FOLDER: "ready-items/icons",
 };

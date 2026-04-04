@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="underRP Item Workbench — Organize ícones pendentes, visualize itens implementados do prea-inventory e gere exports Lua prontos para o servidor.">
+    <meta name="description" content="underRP Item Workbench — Organize ícones, implemente e publique itens prontos para o prea-inventory.">
     <title>underRP | Item Workbench</title>
     <link rel="icon" href="icon neutro.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +16,7 @@
     <div class="page-glow glow-a"></div>
     <div class="page-glow glow-b"></div>
 
+    <!-- ===== HEADER ===== -->
     <header class="topbar">
         <div class="brand">
             <img src="icon neutro.png" alt="underRP Logo" class="brand-logo" id="brandLogo">
@@ -26,6 +27,10 @@
         </div>
 
         <div class="topbar-actions">
+            <button class="github-token-btn" id="githubTokenBtn" type="button" title="Configurar token do GitHub para publicar itens prontos">
+                <span class="token-dot" id="tokenDot"></span>
+                <span>GitHub</span>
+            </button>
             <button class="theme-toggle" id="themeToggleBtn" type="button" title="Alternar entre modo Night e Day">
                 <span class="toggle-icon">🌙</span>
                 <span class="toggle-label">Night</span>
@@ -36,15 +41,16 @@
     </header>
 
     <main class="shell">
-        <!-- HERO -->
+        <!-- ===== HERO ===== -->
         <section class="hero-panel panel fade-in">
             <div class="hero-copy">
                 <span class="eyebrow">Ferramenta de implementação</span>
-                <h1>Do ícone pendente ao item pronto para o <code>prea-inventory</code>.</h1>
+                <h1>Do ícone pendente ao item <code>pronto</code> no servidor.</h1>
                 <p>
-                    Os ícones disponíveis ficam em <strong>Ícones pendentes</strong>.
-                    Os itens já registrados no servidor entram em <strong>Itens implementados</strong>.
-                    Escolha um pendente, preencha os parâmetros reais do inventário e copie o export Lua pronto para colar em <code>shared/items.lua</code>.
+                    Ícones aguardando implementação ficam em <strong>Pendentes</strong>.
+                    Itens já registrados no servidor estão em <strong>Implementados</strong>.
+                    Itens 100% finalizados e aprovados são publicados em <strong>Prontos</strong> —
+                    visíveis para toda a equipe via GitHub.
                 </p>
             </div>
 
@@ -58,49 +64,55 @@
                 <div class="workflow-steps">
                     <div class="workflow-step">
                         <span>1</span>
-                        <p>Selecione um ícone em <strong>Pendentes</strong>.</p>
+                        <p>Selecione um ícone em <strong>Pendentes</strong> e preencha os campos no builder.</p>
                     </div>
                     <div class="workflow-step">
                         <span>2</span>
-                        <p>Aplique um template ou preencha os campos manualmente.</p>
+                        <p>Aplique um template, defina as configs e copie o export Lua.</p>
                     </div>
                     <div class="workflow-step">
                         <span>3</span>
-                        <p>Copie o export Lua e marque como implementado.</p>
+                        <p>Publique como <strong>Pronto</strong> — fica salvo no GitHub para toda a equipe ver.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- STATS -->
+        <!-- ===== STATS ===== -->
         <section class="stats-grid fade-in">
             <article class="stat-card panel">
                 <span class="stat-label">Para implementar</span>
                 <strong class="stat-value" id="pendingCount">0</strong>
-                <span class="stat-foot">ícones pendentes disponíveis no catálogo</span>
+                <span class="stat-foot">ícones pendentes no catálogo</span>
             </article>
             <article class="stat-card panel">
-                <span class="stat-label">Implementados no servidor</span>
+                <span class="stat-label">No servidor</span>
                 <strong class="stat-value" id="serverImplementedCount">0</strong>
                 <span class="stat-foot">itens do snapshot atual do prea-inventory</span>
             </article>
-            <article class="stat-card panel">
-                <span class="stat-label">Implementados localmente</span>
-                <strong class="stat-value" id="localImplementedCount">0</strong>
-                <span class="stat-foot">salvos no navegador desta máquina</span>
+            <article class="stat-card panel stat-card-ready">
+                <span class="stat-label">Prontos</span>
+                <strong class="stat-value stat-value-ready" id="readyCount">—</strong>
+                <span class="stat-foot">itens finalizados e publicados no GitHub</span>
             </article>
         </section>
 
-        <!-- WORKSPACE -->
+        <!-- ===== WORKSPACE ===== -->
         <section class="workspace-grid">
+
+            <!-- LEFT: CATALOGS -->
             <div class="workspace-main panel fade-in">
                 <div class="workspace-header">
                     <div class="workspace-tabs" role="tablist" aria-label="Catálogos">
-                        <button class="tab-btn active" id="viewPendingBtn" data-view="pending" type="button">Ícones pendentes</button>
-                        <button class="tab-btn" id="viewImplementedBtn" data-view="implemented" type="button">Itens implementados</button>
+                        <button class="tab-btn active" id="viewPendingBtn" data-view="pending" type="button">Pendentes</button>
+                        <button class="tab-btn" id="viewImplementedBtn" data-view="implemented" type="button">Implementados</button>
+                        <button class="tab-btn tab-ready" id="viewReadyBtn" data-view="ready" type="button">
+                            <span class="tab-ready-dot"></span>
+                            Prontos
+                        </button>
                     </div>
-                    <div class="workspace-note">
-                        O estado local fica salvo no seu navegador.
+                    <div class="workspace-note" id="workspaceNote">
+                        Estado local salvo no navegador.
                     </div>
                 </div>
 
@@ -108,14 +120,12 @@
                 <section class="catalog-view" id="pendingView">
                     <div class="filter-bar">
                         <label class="search-field">
-                            <span>Buscar pendente <i class="info-tip" data-tip="Digite o nome do ícone ou categoria para filtrar. A busca é instantânea.">i</i></span>
+                            <span>Buscar pendente <i class="info-tip" data-tip="Nome do ícone ou categoria. A busca é instantânea.">i</i></span>
                             <input type="search" id="pendingSearchInput" placeholder="Nome do ícone ou categoria...">
                         </label>
                         <div class="chip-group" id="pendingCategoryFilter"></div>
                     </div>
-
                     <div class="catalog-grid" id="pendingGrid"></div>
-
                     <div class="empty-state hidden" id="pendingEmptyState">
                         <strong>Nenhum item pendente encontrado.</strong>
                         <p>Tente outro termo ou mude a categoria.</p>
@@ -126,31 +136,58 @@
                 <section class="catalog-view hidden" id="implementedView">
                     <div class="filter-bar">
                         <label class="search-field">
-                            <span>Buscar implementado <i class="info-tip" data-tip="Busca por nome, label, descrição, tipo de imagem ou raridade.">i</i></span>
-                            <input type="search" id="implementedSearchInput" placeholder="Nome, label, descrição ou imagem...">
+                            <span>Buscar implementado <i class="info-tip" data-tip="Busca por nome, label, descrição, tipo ou raridade.">i</i></span>
+                            <input type="search" id="implementedSearchInput" placeholder="Nome, label, descrição...">
                         </label>
                         <div class="filter-stack">
                             <div class="filter-block">
-                                <span class="filter-title">Tipo <i class="info-tip" data-tip="Filtre entre 'item' (objetos, consumíveis, materiais) e 'weapon' (armas que vão na mão).">i</i></span>
+                                <span class="filter-title">Tipo</span>
                                 <div class="chip-group" id="implementedTypeFilter"></div>
                             </div>
                             <div class="filter-block">
-                                <span class="filter-title">Raridade <i class="info-tip" data-tip="Filtre pela raridade. Cada raridade define a cor da borda do item no inventário do jogador.">i</i></span>
+                                <span class="filter-title">Raridade</span>
                                 <div class="chip-group" id="implementedRarityFilter"></div>
                             </div>
                         </div>
                     </div>
-
                     <div class="catalog-grid" id="implementedGrid"></div>
-
                     <div class="empty-state hidden" id="implementedEmptyState">
                         <strong>Nenhum item implementado encontrado.</strong>
                         <p>Ajuste os filtros ou limpe a busca.</p>
                     </div>
                 </section>
+
+                <!-- READY VIEW (Itens Prontos) -->
+                <section class="catalog-view hidden" id="readyView">
+                    <div class="filter-bar">
+                        <div class="ready-search-row">
+                            <label class="search-field" style="flex:1">
+                                <span>Buscar prontos <i class="info-tip" data-tip="Itens 100% finalizados e publicados no GitHub para toda a equipe.">i</i></span>
+                                <input type="search" id="readySearchInput" placeholder="Nome, label...">
+                            </label>
+                            <button class="ghost-btn ready-refresh-btn" id="refreshReadyBtn" type="button" title="Recarregar do GitHub">↻ Atualizar</button>
+                        </div>
+                        <div class="filter-stack">
+                            <div class="filter-block">
+                                <span class="filter-title">Tipo</span>
+                                <div class="chip-group" id="readyTypeFilter"></div>
+                            </div>
+                            <div class="filter-block">
+                                <span class="filter-title">Raridade</span>
+                                <div class="chip-group" id="readyRarityFilter"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ready-load-status" id="readyLoadStatus"></div>
+                    <div class="catalog-grid" id="readyGrid"></div>
+                    <div class="empty-state hidden" id="readyEmptyState">
+                        <strong>Nenhum item pronto ainda.</strong>
+                        <p>Configure o token do GitHub e use o builder para publicar itens como prontos.</p>
+                    </div>
+                </section>
             </div>
 
-            <!-- BUILDER -->
+            <!-- RIGHT: BUILDER -->
             <aside class="builder-panel panel fade-in">
                 <div class="builder-header">
                     <div>
@@ -163,12 +200,14 @@
                 <div class="builder-empty" id="builderIdle">
                     <strong>Selecione um ícone em "Pendentes"</strong>
                     <p>
-                        O ícone fica vinculado ao item criado. Você pode usar um item já implementado como template
-                        para copiar raridade, peso, tipo e campos avançados.
+                        O ícone fica vinculado ao item. Você pode usar um item implementado como
+                        template para copiar raridade, peso, tipo e campos avançados.
+                        Ao finalizar, publique como <strong>Pronto</strong> para compartilhar com a equipe.
                     </p>
                 </div>
 
                 <div class="builder-content hidden" id="builderContent">
+                    <!-- ICON CARD -->
                     <div class="builder-item-card">
                         <div class="builder-item-preview">
                             <img id="builderIconImage" alt="">
@@ -184,38 +223,70 @@
                         </div>
                     </div>
 
+                    <!-- ICON SOURCE (para Prontos) -->
+                    <div class="icon-source-section">
+                        <span class="filter-title">Ícone para o item pronto</span>
+                        <div class="icon-source-options">
+                            <label class="icon-source-opt">
+                                <input type="radio" name="iconSource" id="iconSourcePending" value="pending" checked>
+                                <span>Usar ícone pendente</span>
+                            </label>
+                            <label class="icon-source-opt">
+                                <input type="radio" name="iconSource" id="iconSourceUpload" value="upload">
+                                <span>Fazer upload (250×250 PNG)</span>
+                            </label>
+                        </div>
+                        <div id="iconUploadArea" class="icon-upload-area hidden">
+                            <label class="upload-dropzone" id="uploadDropzone">
+                                <input type="file" id="iconFileInput" accept="image/png,image/webp,image/jpeg" style="display:none">
+                                <span class="upload-icon">⬆</span>
+                                <span class="upload-label">Clique ou arraste um PNG 250×250</span>
+                                <span class="upload-hint">O ícone será publicado no GitHub junto com o item</span>
+                            </label>
+                            <div id="iconUploadPreview" class="icon-upload-preview hidden">
+                                <img id="iconUploadPreviewImg" alt="Preview do ícone">
+                                <div class="icon-upload-info">
+                                    <span id="iconUploadFileName">—</span>
+                                    <span id="iconUploadDims" class="upload-hint">—</span>
+                                </div>
+                                <button class="ghost-btn ghost-danger" id="clearUploadBtn" type="button">Remover</button>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="builder-helper-actions">
                         <button class="ghost-btn" id="copyIconNameBtn" type="button">Copiar nome do ícone</button>
                         <button class="ghost-btn" id="clearTemplateBtn" type="button">Limpar template</button>
                     </div>
 
+                    <!-- FORM -->
                     <form class="builder-form" id="itemForm">
                         <div class="field-grid two-cols">
                             <label class="field">
-                                <span>Nome do item <i class="info-tip" data-tip="Identificador único do item no servidor. Use apenas letras minúsculas, números, underline (_) ou hífen (-). Ex: lockpick_master. Esse nome é a chave que vai dentro de shared/items.lua.">i</i></span>
+                                <span>Nome do item <i class="info-tip" data-tip="Identificador único. Use apenas letras minúsculas, números, underline (_) ou hífen (-). Ex: lockpick_master">i</i></span>
                                 <input type="text" id="itemNameInput" placeholder="ex: lockpick_master">
                             </label>
                             <label class="field">
-                                <span>Label <i class="info-tip" data-tip="Nome que aparece para o jogador no inventário. Pode ter espaços e letras maiúsculas. Ex: Lockpick Master">i</i></span>
+                                <span>Label <i class="info-tip" data-tip="Nome que aparece para o jogador no inventário. Ex: Lockpick Master">i</i></span>
                                 <input type="text" id="itemLabelInput" placeholder="ex: Lockpick Master">
                             </label>
                         </div>
 
                         <label class="field">
-                            <span>Descrição <i class="info-tip" data-tip="Texto descritivo que aparece quando o jogador passa o mouse no item dentro do inventário.">i</i></span>
-                            <textarea id="itemDescriptionInput" rows="3" placeholder="Descrição mostrada no inventário do jogador."></textarea>
+                            <span>Descrição <i class="info-tip" data-tip="Texto mostrado quando o jogador passa o mouse no item.">i</i></span>
+                            <textarea id="itemDescriptionInput" rows="2" placeholder="Descrição mostrada no inventário do jogador."></textarea>
                         </label>
 
                         <div class="field-grid four-cols">
                             <label class="field">
-                                <span>Tipo <i class="info-tip" data-tip="'item' = objeto normal (comida, ferramenta, material). 'weapon' = arma que vai na mão do jogador e tem durabilidade/munição.">i</i></span>
+                                <span>Tipo <i class="info-tip" data-tip="'item' = objeto normal. 'weapon' = arma que vai na mão.">i</i></span>
                                 <select id="itemTypeSelect">
                                     <option value="item">item</option>
                                     <option value="weapon">weapon</option>
                                 </select>
                             </label>
                             <label class="field">
-                                <span>Raridade <i class="info-tip" data-tip="Define a cor da borda do item no inventário. Common (cinza), Uncommon (verde), Rare (azul), Epic (roxo), Legendary (dourado).">i</i></span>
+                                <span>Raridade <i class="info-tip" data-tip="Define a cor da borda no inventário.">i</i></span>
                                 <select id="itemRaritySelect">
                                     <option value="common">common</option>
                                     <option value="uncommon">uncommon</option>
@@ -225,48 +296,48 @@
                                 </select>
                             </label>
                             <label class="field">
-                                <span>Peso <i class="info-tip" data-tip="Peso do item em gramas. O inventário do jogador tem capacidade máxima de 120kg (120000g). Ex: uma pistola pesa ~1100g.">i</i></span>
+                                <span>Peso <i class="info-tip" data-tip="Peso em gramas. Inventário máximo: 120000g.">i</i></span>
                                 <input type="number" id="itemWeightInput" min="0" step="1" placeholder="0">
                             </label>
                             <label class="field">
-                                <span>Imagem <i class="info-tip" data-tip="Nome do arquivo da imagem (auto-gerado a partir do ícone). A imagem deve existir em prea-inventory/html/images/. Formato: nome.png">i</i></span>
+                                <span>Imagem <i class="info-tip" data-tip="Auto-gerado pelo ícone selecionado.">i</i></span>
                                 <input type="text" id="itemImageInput" readonly>
                             </label>
                         </div>
 
                         <div class="toggle-grid">
-                            <label class="toggle" title="Se marcado, o jogador só pode ter 1 unidade desse item no inventário.">
+                            <label class="toggle" title="Só pode ter 1 unidade no inventário">
                                 <input type="checkbox" id="itemUniqueInput">
-                                <span>unique <i class="info-tip" data-tip="Quando ativado, o jogador só pode carregar 1 unidade deste item. Útil para armas, celulares, mochilas etc.">i</i></span>
+                                <span>unique <i class="info-tip" data-tip="Jogador só pode carregar 1 unidade deste item.">i</i></span>
                             </label>
-                            <label class="toggle" title="Se marcado, o jogador pode usar/consumir esse item.">
+                            <label class="toggle" title="Pode usar/consumir o item">
                                 <input type="checkbox" id="itemUseableInput">
-                                <span>useable <i class="info-tip" data-tip="Quando ativado, o item pode ser 'usado' (clique duplo). Necessário pra comidas, bebidas, kits de reparo, lockpicks etc.">i</i></span>
+                                <span>useable <i class="info-tip" data-tip="O item pode ser 'usado' (clique duplo). Necessário para comidas, kits, lockpicks etc.">i</i></span>
                             </label>
-                            <label class="toggle" title="Se marcado, o inventário fecha quando o item é usado.">
+                            <label class="toggle" title="Inventário fecha ao usar">
                                 <input type="checkbox" id="itemShouldCloseInput" checked>
-                                <span>shouldClose <i class="info-tip" data-tip="Quando ativado, o inventário fecha automaticamente ao usar o item. Desative para itens que podem ser usados várias vezes sem fechar.">i</i></span>
+                                <span>shouldClose <i class="info-tip" data-tip="Inventário fecha ao usar. Desative para itens usados várias vezes seguidas.">i</i></span>
                             </label>
                         </div>
 
                         <div class="field-grid three-cols">
                             <label class="field">
-                                <span>Decay <i class="info-tip" data-tip="Taxa de degradação do item (qualidade por dia). Ex: 0.1 = perde 10% de qualidade por dia real. Quando chega em 0, o item quebra. Armas usam valores entre 0.03 (lenta) e 0.5 (rápida).">i</i></span>
+                                <span>Decay <i class="info-tip" data-tip="Taxa de degradação por dia. Ex: 0.1 = perde 10%/dia.">i</i></span>
                                 <input type="number" id="itemDecayInput" min="0" step="0.01" placeholder="ex: 0.1">
                             </label>
                             <label class="field">
-                                <span>Ammotype <i class="info-tip" data-tip="Tipo de munição usada pela arma. Só preencha se o item for uma arma de fogo. Valores comuns: ammo-9, ammo-45, ammo-rifle, ammo-shotgun, ammo-sniper, ammo-heavysniper.">i</i></span>
+                                <span>Ammotype <i class="info-tip" data-tip="Tipo de munição. Só para armas de fogo. Ex: ammo-9, ammo-rifle.">i</i></span>
                                 <input type="text" id="itemAmmoTypeInput" placeholder="ex: ammo-9">
                             </label>
                             <label class="field">
-                                <span>Consume <i class="info-tip" data-tip="Quantidade consumida ao usar (0 a 1). Ex: 0.5 significa que cada uso consome metade. Deixe vazio para não consumir.">i</i></span>
-                                <input type="number" id="itemConsumeInput" step="0.01" placeholder="vazio para omitir">
+                                <span>Consume <i class="info-tip" data-tip="Quantidade consumida por uso (0 a 1).">i</i></span>
+                                <input type="number" id="itemConsumeInput" step="0.01" placeholder="vazio p/ omitir">
                             </label>
                         </div>
 
                         <div class="field-grid two-cols">
                             <label class="field">
-                                <span>allowArmed <i class="info-tip" data-tip="Se true, o jogador pode usar o item enquanto está armado. Se false, precisa guardar a arma antes. Deixe 'Não definir' para usar o comportamento padrão.">i</i></span>
+                                <span>allowArmed <i class="info-tip" data-tip="Se o jogador pode usar o item estando armado.">i</i></span>
                                 <select id="itemAllowArmedSelect">
                                     <option value="">Não definir</option>
                                     <option value="true">true</option>
@@ -274,22 +345,19 @@
                                 </select>
                             </label>
                             <div class="field hint-field">
-                                <span>Template atual <i class="info-tip" data-tip="Mostra qual item implementado você está usando como base. Os campos copiados incluem: tipo, raridade, peso, unique, useable, shouldClose, decay, ammotype e extras.">i</i></span>
-                                <div class="hint-card" id="templateSummary">
-                                    Nenhum template aplicado.
-                                </div>
+                                <span>Template atual <i class="info-tip" data-tip="Item implementado sendo usado como base para os campos.">i</i></span>
+                                <div class="hint-card" id="templateSummary">Nenhum template aplicado.</div>
                             </div>
                         </div>
 
                         <label class="field">
-                            <span>Extras avançados em Lua <i class="info-tip" data-tip="Campos Lua adicionais que serão adicionados ao export. Útil para campos customizados como ['prop'], ['carryInHand'], ['allowInBackpack'], etc. Exemplo: ['prop'] = 'prop_tv_flat_01',">i</i></span>
-                            <textarea id="itemExtraLuaInput" rows="5" placeholder="Exemplo:
-['prop'] = 'prop_tv_flat_01',
-['carryInHand'] = true,
-['allowInBackpack'] = false,"></textarea>
+                            <span>Extras avançados em Lua <i class="info-tip" data-tip="Campos Lua extras. Ex: ['prop'] = 'prop_tv_flat_01',">i</i></span>
+                            <textarea id="itemExtraLuaInput" rows="4" placeholder="['prop'] = 'prop_tv_flat_01',
+['carryInHand'] = true,"></textarea>
                         </label>
                     </form>
 
+                    <!-- EXPORT -->
                     <section class="export-panel">
                         <div class="export-header">
                             <div>
@@ -302,16 +370,20 @@
                         <pre class="code-preview"><code id="luaExportPreview"></code></pre>
 
                         <div class="builder-footer-actions">
-                            <button class="primary-btn" id="saveImplementedBtn" type="button">Salvar como implementado</button>
-                            <button class="ghost-btn" id="resetBuilderBtn" type="button">Resetar formulário</button>
+                            <button class="primary-btn" id="saveImplementedBtn" type="button">Salvar rascunho local</button>
+                            <button class="success-btn" id="publishReadyBtn" type="button">
+                                <span>✓</span> Publicar como Pronto
+                            </button>
+                            <button class="ghost-btn" id="resetBuilderBtn" type="button">Resetar</button>
                         </div>
 
                         <div class="checklist">
                             <strong>Checklist rápido</strong>
                             <ul>
-                                <li>1. Copie o export e cole em <code>shared/items.lua</code> dentro do prea-inventory.</li>
+                                <li>1. Copie o export e cole em <code>shared/items.lua</code> no prea-inventory.</li>
                                 <li>2. Garanta que a imagem exista em <code>prea-inventory/html/images/</code>.</li>
-                                <li>3. Reinicie o resource com <code>ensure prea-inventory</code> ou atualize o snapshot.</li>
+                                <li>3. Reinicie com <code>ensure prea-inventory</code> ou atualize o snapshot.</li>
+                                <li>4. Clique em <strong>Publicar como Pronto</strong> para registrar na equipe.</li>
                             </ul>
                         </div>
                     </section>
@@ -324,8 +396,45 @@
         <span class="footer-brand">underRP</span> · Item Workbench · Ferramenta interna de implementação
     </footer>
 
+    <!-- ===== TOAST ===== -->
     <div class="toast" id="toast">
         <span id="toastText">Copiado.</span>
+    </div>
+
+    <!-- ===== GITHUB TOKEN MODAL ===== -->
+    <div class="modal-overlay hidden" id="githubModal">
+        <div class="modal-panel panel">
+            <div class="modal-header">
+                <div>
+                    <span class="eyebrow">Configuração</span>
+                    <h3>Token do GitHub</h3>
+                </div>
+                <button class="modal-close-btn" id="closeGithubModal" type="button">✕</button>
+            </div>
+            <div class="modal-body">
+                <p>Para <strong>publicar, editar ou deletar</strong> itens prontos, você precisa de um <strong>Personal Access Token</strong> do GitHub com permissão de escrita no repositório.</p>
+                <div class="modal-info-box">
+                    <span class="modal-info-label">Repositório</span>
+                    <code id="modalRepoName">Jampas335/underp-itens</code>
+                </div>
+                <p class="modal-hint">
+                    Para criar: GitHub → <strong>Settings → Developer settings → Personal access tokens → Fine-grained tokens</strong><br>
+                    Permissão necessária: <strong>Contents → Read and write</strong> no repositório acima.
+                </p>
+                <label class="field">
+                    <span>Token</span>
+                    <div class="token-input-row">
+                        <input type="password" id="githubTokenInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off">
+                        <button class="ghost-btn" id="toggleTokenVisibility" type="button">Ver</button>
+                    </div>
+                </label>
+                <div class="modal-status" id="modalTokenStatus"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="success-btn" id="saveGithubToken" type="button">Salvar token</button>
+                <button class="ghost-btn ghost-danger" id="clearGithubToken" type="button">Remover token</button>
+            </div>
+        </div>
     </div>
 
     <script src="config.js"></script>
