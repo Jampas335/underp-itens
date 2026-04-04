@@ -98,6 +98,25 @@
     "status": "ready"
   },
   {
+    "name": "microondas",
+    "label": "Micro-ondas",
+    "description": "",
+    "weight": 7000,
+    "type": "item",
+    "image": "microondas.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "['prop'] = 'prop_microwave_1',\n        ['object'] = 'prop_microwave_1',\n        ['carryInHand'] = true,\n        ['carryAttachment'] = {\n            bone = 60309,\n            pos = { x = 0.14, y = -0.005, z = 0.26 },\n            rot = { x = -132.0, y = 111.0, z = 0.0 },\n        },\n        ['carryAnim'] = {\n            dict = 'anim@heists@box_carry@',\n            clip = 'idle',\n            flag = 49,\n        },\n        ['allowInBackpack'] = false,",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-04T07:31:27.581Z",
+    "status": "ready"
+  },
+  {
     "name": "tv",
     "label": "Televisão",
     "description": "",
