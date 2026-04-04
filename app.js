@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bootstrapData();
     loadWorkspaceState();
     ensureAllowInBackpackField();
+    ensureLuaImportPanel();
     bindEvents();
     renderAll();
     initFadeInObserver();
@@ -110,12 +111,47 @@ function ensureAllowInBackpackField() {
     wrapper.innerHTML = `
         <span>allowInBackpack <i class="info-tip" data-tip="Se o item pode ser guardado dentro de mochila.">i</i></span>
         <select id="itemAllowInBackpackSelect">
-            <option value="">NÃ£o definir</option>
+            <option value="">Nao definir</option>
             <option value="true">true</option>
             <option value="false">false</option>
         </select>
     `;
     grid.insertBefore(wrapper, templateField);
+}
+
+function ensureLuaImportPanel() {
+    if (document.getElementById("pasteLuaBtn")) return;
+
+    const actions = document.querySelector(".builder-helper-actions");
+    if (!actions) return;
+
+    const toggleBtn = document.createElement("button");
+    toggleBtn.type = "button";
+    toggleBtn.id = "pasteLuaBtn";
+    toggleBtn.className = "ghost-btn";
+    toggleBtn.textContent = "Colar Lua";
+    actions.appendChild(toggleBtn);
+
+    const panel = document.createElement("section");
+    panel.id = "luaImportPanel";
+    panel.className = "lua-import-panel hidden";
+    panel.innerHTML = `
+        <label class="field">
+            <span>Importar bloco Lua <i class="info-tip" data-tip="Cole um item do shared/items.lua para aplicar os parametros no builder atual.">i</i></span>
+            <textarea id="luaImportTextarea" rows="10" placeholder="['item_exemplo'] = {
+    ['name'] = 'item_exemplo',
+    ['label'] = 'Item Exemplo',
+    ['weight'] = 1000,
+    ['type'] = 'item',
+    ['carryInHand'] = true,
+},"></textarea>
+        </label>
+        <div class="lua-import-actions">
+            <button class="ghost-btn" id="applyLuaImportBtn" type="button">Aplicar no builder</button>
+            <button class="ghost-btn ghost-danger" id="clearLuaImportBtn" type="button">Limpar texto</button>
+        </div>
+    `;
+    actions.insertAdjacentElement("afterend", panel);
 }
 
 function flattenPendingItems() {
@@ -516,6 +552,9 @@ function bindEvents() {
     document.getElementById("resetBuilderBtn").addEventListener("click", resetBuilder);
     document.getElementById("clearTemplateBtn").addEventListener("click", clearBuilderTemplate);
     document.getElementById("copyIconNameBtn").addEventListener("click", copySelectedIconName);
+    document.getElementById("pasteLuaBtn").addEventListener("click", toggleLuaImportPanel);
+    document.getElementById("applyLuaImportBtn").addEventListener("click", applyLuaImportFromTextarea);
+    document.getElementById("clearLuaImportBtn").addEventListener("click", clearLuaImportTextarea);
     document.getElementById("newManualItemBtn").addEventListener("click", openBuilderManual);
 
     // Workspace actions
@@ -1327,6 +1366,47 @@ function clearBuilderTemplate() {
 
 function resetBuilder() { clearBuilderTemplate(); }
 
+function toggleLuaImportPanel(forceOpen = null) {
+    const panel = document.getElementById("luaImportPanel");
+    if (!panel) return;
+    const shouldOpen = forceOpen === null ? panel.classList.contains("hidden") : Boolean(forceOpen);
+    panel.classList.toggle("hidden", !shouldOpen);
+    if (shouldOpen) {
+        document.getElementById("luaImportTextarea")?.focus();
+    }
+}
+
+function clearLuaImportTextarea() {
+    const textarea = document.getElementById("luaImportTextarea");
+    if (!textarea) return;
+    textarea.value = "";
+    textarea.focus();
+}
+
+function applyLuaImportFromTextarea() {
+    if (!state.builder.form) {
+        showToast("Abra o builder antes de importar um bloco Lua.");
+        return;
+    }
+
+    const textarea = document.getElementById("luaImportTextarea");
+    const raw = textarea?.value.trim() || "";
+    if (!raw) {
+        showToast("Cole um bloco Lua antes de aplicar.");
+        return;
+    }
+
+    try {
+        const importedItem = parseLuaItemBlock(raw);
+        applyImportedItemToBuilder(importedItem);
+        textarea.value = "";
+        toggleLuaImportPanel(false);
+        showToast("Bloco Lua aplicado no builder.");
+    } catch (err) {
+        showToast(`Falha ao importar Lua: ${err.message}`);
+    }
+}
+
 function copySelectedIconName() {
     const pending = getBuilderPendingItem();
     if (!pending) { showToast("Nenhum item selecionado."); return; }
@@ -1743,6 +1823,326 @@ function serializeLuaValue(value, depth = 0) {
 
 function escapeLuaString(value) {
     return String(value).replace(/\\/g, "\\\\").replace(/'/g, "\\'").replace(/\r/g, "").replace(/\n/g, "\\n");
+}
+
+function parseLuaItemBlock(input) {
+    const parser = createLuaTableParser(input);
+    const parsed = parser.parseTopLevelItem();
+    const item = unwrapImportedLuaItem(parsed);
+    if (!item || Array.isArray(item) || typeof item !== "object") {
+        throw new Error("O bloco colado nao parece um item Lua valido.");
+    }
+    return item;
+}
+
+function unwrapImportedLuaItem(value) {
+    if (!value || Array.isArray(value) || typeof value !== "object") return value;
+    const itemKeys = ["name", "label", "weight", "type", "image", "description", "rarity"];
+    if (itemKeys.some((key) => key in value)) return value;
+
+    const entries = Object.entries(value);
+    if (entries.length === 1 && entries[0][1] && typeof entries[0][1] === "object" && !Array.isArray(entries[0][1])) {
+        const [outerKey, innerValue] = entries[0];
+        if (!("name" in innerValue) && typeof outerKey === "string") {
+            innerValue.name = outerKey;
+        }
+        return innerValue;
+    }
+    return value;
+}
+
+function applyImportedItemToBuilder(importedItem) {
+    const current = state.builder.form;
+    const keepIdentity = Boolean(state.builder.activePendingName || state.builder.editingLocalName || state.builder.editingReadyName);
+    const importedName = normalizeImportedItemName(importedItem.name);
+    const importedImage = typeof importedItem.image === "string" ? importedItem.image.trim() : "";
+    const currentImageIsDefault = !current.image || current.image === "novo-item.png";
+
+    state.builder.templateName = null;
+    state.builder.templateSource = null;
+    state.builder.form = {
+        ...current,
+        name: keepIdentity ? current.name : (importedName || current.name),
+        label: readImportedString(importedItem.label, current.label),
+        description: readImportedString(importedItem.description, current.description),
+        weight: readImportedNumberString(importedItem.weight, current.weight),
+        type: readImportedEnum(importedItem.type, ["item", "weapon"], current.type),
+        rarity: readImportedEnum(importedItem.rarity, RARITY_ORDER, current.rarity),
+        unique: readImportedBoolean(importedItem.unique, current.unique),
+        useable: readImportedBoolean(importedItem.useable, current.useable),
+        shouldClose: readImportedBoolean(importedItem.shouldClose, current.shouldClose),
+        decay: readImportedOptionalNumberString(importedItem.decay, current.decay),
+        ammotype: readImportedOptionalString(importedItem.ammotype, current.ammotype),
+        consume: readImportedOptionalNumberString(importedItem.consume, current.consume),
+        allowArmed: normalizeBooleanSelectValue(importedItem.allowArmed, current.allowArmed),
+        allowInBackpack: normalizeBooleanSelectValue(importedItem.allowInBackpack, current.allowInBackpack),
+        extraLua: buildExtraLuaFromItem(importedItem),
+        image: keepIdentity || !currentImageIsDefault ? current.image : (importedImage || current.image),
+    };
+    renderBuilder();
+}
+
+function normalizeImportedItemName(value) {
+    return String(value || "").trim().toLowerCase().replace(/\s+/g, "-");
+}
+
+function readImportedString(value, fallback) {
+    return typeof value === "string" ? value : fallback;
+}
+
+function readImportedOptionalString(value, fallback) {
+    return typeof value === "string" ? value : (value === null ? "" : fallback);
+}
+
+function readImportedNumberString(value, fallback) {
+    return typeof value === "number" && Number.isFinite(value) ? String(value) : fallback;
+}
+
+function readImportedOptionalNumberString(value, fallback) {
+    if (value === null) return "";
+    return readImportedNumberString(value, fallback);
+}
+
+function readImportedBoolean(value, fallback) {
+    return typeof value === "boolean" ? value : fallback;
+}
+
+function readImportedEnum(value, allowed, fallback) {
+    return typeof value === "string" && allowed.includes(value) ? value : fallback;
+}
+
+function normalizeBooleanSelectValue(value, fallback) {
+    if (value === true) return "true";
+    if (value === false) return "false";
+    if (value === null) return "";
+    return fallback;
+}
+
+function createLuaTableParser(input) {
+    const tokens = tokenizeLuaTable(input);
+    let index = 0;
+
+    function peek(offset = 0) {
+        return tokens[index + offset] || null;
+    }
+
+    function next() {
+        return tokens[index++] || null;
+    }
+
+    function expectValueToken(expected) {
+        const token = next();
+        if (!token || token.value !== expected) {
+            throw new Error(`Esperado "${expected}" perto de ${describeLuaToken(token)}.`);
+        }
+        return token;
+    }
+
+    function parseTopLevelItem() {
+        if (peek()?.type === "identifier" && peek()?.value === "return") {
+            next();
+        }
+
+        const first = peek();
+        if (!first) throw new Error("Bloco Lua vazio.");
+        if (first.value === "{") {
+            next();
+            const table = parseTable();
+            skipTrailingComma();
+            ensureAtEnd();
+            return table;
+        }
+
+        const savedIndex = index;
+        const key = tryParseKey();
+        if (key !== null && peek()?.value === "=") {
+            next();
+            const value = parseValue();
+            skipTrailingComma();
+            ensureAtEnd();
+            if (value && typeof value === "object" && !Array.isArray(value) && value.name === undefined && typeof key === "string") {
+                value.name = key;
+            }
+            return value;
+        }
+        index = savedIndex;
+        const value = parseValue();
+        skipTrailingComma();
+        ensureAtEnd();
+        return value;
+    }
+
+    function parseValue() {
+        const token = next();
+        if (!token) throw new Error("Fim inesperado do bloco Lua.");
+        if (token.type === "string" || token.type === "number") return token.value;
+        if (token.type === "identifier") {
+            if (token.value === "true") return true;
+            if (token.value === "false") return false;
+            if (token.value === "nil") return null;
+            return token.value;
+        }
+        if (token.value === "{") return parseTable();
+        throw new Error(`Valor Lua nao suportado perto de ${describeLuaToken(token)}.`);
+    }
+
+    function parseTable() {
+        const objectResult = {};
+        const arrayResult = [];
+        let hasNamedEntries = false;
+        let hasIndexedEntries = false;
+
+        while (true) {
+            const token = peek();
+            if (!token) throw new Error("Tabela Lua nao foi fechada com }.");
+            if (token.value === "}") {
+                next();
+                break;
+            }
+            if (token.value === ",") {
+                next();
+                continue;
+            }
+
+            const savedIndex = index;
+            const key = tryParseKey();
+            if (key !== null && peek()?.value === "=") {
+                hasNamedEntries = true;
+                next();
+                objectResult[String(key)] = parseValue();
+            } else {
+                index = savedIndex;
+                hasIndexedEntries = true;
+                arrayResult.push(parseValue());
+            }
+
+            if (peek()?.value === ",") next();
+        }
+
+        if (hasNamedEntries && !hasIndexedEntries) return objectResult;
+        if (!hasNamedEntries) return arrayResult;
+
+        arrayResult.forEach((value, idx) => {
+            objectResult[String(idx + 1)] = value;
+        });
+        return objectResult;
+    }
+
+    function tryParseKey() {
+        const token = peek();
+        if (!token) return null;
+        if (token.value === "[") {
+            next();
+            const keyToken = next();
+            if (!keyToken || !["string", "number", "identifier"].includes(keyToken.type)) {
+                throw new Error(`Chave Lua invalida perto de ${describeLuaToken(keyToken)}.`);
+            }
+            expectValueToken("]");
+            return keyToken.value;
+        }
+        if (token.type === "identifier") {
+            next();
+            return token.value;
+        }
+        return null;
+    }
+
+    function skipTrailingComma() {
+        while (peek()?.value === ",") next();
+    }
+
+    function ensureAtEnd() {
+        if (peek()) {
+            throw new Error("Cole apenas um item Lua por vez.");
+        }
+    }
+
+    return { parseTopLevelItem };
+}
+
+function tokenizeLuaTable(input) {
+    const tokens = [];
+    let index = 0;
+
+    while (index < input.length) {
+        const char = input[index];
+
+        if (/\s/.test(char)) {
+            index++;
+            continue;
+        }
+
+        if (char === "-" && input[index + 1] === "-") {
+            index += 2;
+            while (index < input.length && input[index] !== "\n") index++;
+            continue;
+        }
+
+        if ("{}[]=,".includes(char)) {
+            tokens.push({ type: "punct", value: char });
+            index++;
+            continue;
+        }
+
+        if (char === "'" || char === "\"") {
+            const quote = char;
+            index++;
+            let value = "";
+            while (index < input.length) {
+                const current = input[index];
+                if (current === "\\") {
+                    const nextChar = input[index + 1];
+                    if (nextChar === undefined) break;
+                    value += nextChar;
+                    index += 2;
+                    continue;
+                }
+                if (current === quote) {
+                    index++;
+                    break;
+                }
+                value += current;
+                index++;
+            }
+            tokens.push({ type: "string", value });
+            continue;
+        }
+
+        if ((char === "-" && /[0-9]/.test(input[index + 1])) || /[0-9]/.test(char)) {
+            let raw = char;
+            index++;
+            while (index < input.length && /[0-9.]/.test(input[index])) {
+                raw += input[index];
+                index++;
+            }
+            const parsed = Number(raw);
+            if (Number.isNaN(parsed)) {
+                throw new Error(`Numero Lua invalido: ${raw}`);
+            }
+            tokens.push({ type: "number", value: parsed });
+            continue;
+        }
+
+        if (/[A-Za-z_]/.test(char)) {
+            let ident = char;
+            index++;
+            while (index < input.length && /[A-Za-z0-9_]/.test(input[index])) {
+                ident += input[index];
+                index++;
+            }
+            tokens.push({ type: "identifier", value: ident });
+            continue;
+        }
+
+        throw new Error(`Token Lua nao suportado: ${char}`);
+    }
+
+    return tokens;
+}
+
+function describeLuaToken(token) {
+    if (!token) return "fim do texto";
+    return `"${token.value}"`;
 }
 
 // ============================================================
