@@ -49,6 +49,7 @@ const state = {
         editingLocalName: null,
         editingReadyName: null,
         templateName: null,
+        templateSource: null,
         form: null,
         iconSource: "pending",
         uploadedIconBase64: null,
@@ -429,6 +430,7 @@ function bindEvents() {
     document.getElementById("resetBuilderBtn").addEventListener("click", resetBuilder);
     document.getElementById("clearTemplateBtn").addEventListener("click", clearBuilderTemplate);
     document.getElementById("copyIconNameBtn").addEventListener("click", copySelectedIconName);
+    document.getElementById("newManualItemBtn").addEventListener("click", openBuilderManual);
 
     // Workspace actions
     document.getElementById("exportWorkspaceBtn").addEventListener("click", exportLocalWorkspace);
@@ -567,10 +569,12 @@ function handleReadyGridClick(e) {
     if (!btn) return;
     const { action, name } = btn.dataset;
     const item = state.readyItems.find((r) => r.name === name);
-    if (!item && action !== "delete") return;
+    if (!item && action !== "delete-ready") return;
 
     if (action === "copy-export") {
         copyToClipboard(buildLuaEntry(item), "Export copiado.");
+    } else if (action === "use-template") {
+        applyTemplate(item, "ready");
     } else if (action === "edit-ready") {
         openBuilderForReady(name);
     } else if (action === "delete-ready") {
@@ -880,6 +884,7 @@ function renderReadyGrid() {
                 </div>
                 <div class="card-actions">
                     <button class="card-action primary" data-action="copy-export" data-name="${escapeHtmlAttribute(item.name)}" type="button">Copiar export</button>
+                    <button class="card-action" data-action="use-template" data-name="${escapeHtmlAttribute(item.name)}" type="button">Usar template</button>
                     <button class="card-action" data-action="edit-ready" data-name="${escapeHtmlAttribute(item.name)}" type="button">Editar</button>
                     <button class="card-action ghost-danger" data-action="delete-ready" data-name="${escapeHtmlAttribute(item.name)}" type="button">Deletar</button>
                 </div>
@@ -912,6 +917,7 @@ function renderBuilder() {
     let badgeText = "Novo implementado";
     if (state.builder.editingLocalName) badgeText = "Editando rascunho";
     if (state.builder.editingReadyName) badgeText = "Editando item pronto";
+    if (pendingItem.isManual && !state.builder.editingLocalName && !state.builder.editingReadyName) badgeText = "Novo item manual";
     badge.textContent = badgeText;
 
     setText("builderIconName", pendingItem.name);
@@ -921,11 +927,10 @@ function renderBuilder() {
     let sourceBadge = "Pendente";
     if (state.builder.editingLocalName) sourceBadge = "Local";
     if (state.builder.editingReadyName) sourceBadge = "Pronto";
+    if (pendingItem.isManual && !state.builder.editingLocalName && !state.builder.editingReadyName) sourceBadge = "Manual";
     setText("builderSourceBadge", sourceBadge);
 
-    const templateItem = state.builder.templateName
-        ? getImplementedItemByName(state.builder.templateName)
-        : null;
+    const templateItem = getTemplateItem();
     setText("builderTemplateChip", templateItem ? `Template: ${templateItem.label || templateItem.name}` : "Sem template");
     setText("templateSummary", templateItem
         ? `${templateItem.label || templateItem.name} · ${templateItem.type} · ${templateItem.rarity}`
@@ -943,7 +948,12 @@ function renderBuilder() {
     setText("luaExportPreview", buildLuaEntry(buildBuilderItemPreview()));
 
     // Sync icon source radio
-    document.getElementById("iconSourcePending").checked = state.builder.iconSource === "pending";
+    const canUsePendingIcon = !pendingItem.isManual;
+    if (!canUsePendingIcon && state.builder.iconSource === "pending") {
+        state.builder.iconSource = "upload";
+    }
+    document.getElementById("iconSourcePending").disabled = !canUsePendingIcon;
+    document.getElementById("iconSourcePending").checked = canUsePendingIcon && state.builder.iconSource === "pending";
     document.getElementById("iconSourceUpload").checked = state.builder.iconSource === "upload";
     toggleIconUploadArea(state.builder.iconSource === "upload");
 }
@@ -965,14 +975,24 @@ function syncBuilderInputs() {
     document.getElementById("itemConsumeInput").value = form.consume;
     document.getElementById("itemAllowArmedSelect").value = form.allowArmed;
     document.getElementById("itemExtraLuaInput").value = form.extraLua;
-    document.getElementById("itemImageInput").value = form.image;
+    const imageInput = document.getElementById("itemImageInput");
+    imageInput.value = form.image;
+    imageInput.readOnly = Boolean(state.builder.activePendingName);
 }
 
 function syncBuilderFormFromInputs() {
     if (!state.builder.form) return;
+    const currentForm = state.builder.form;
     const normalizedName = document.getElementById("itemNameInput").value.trim().toLowerCase().replace(/\s+/g, "-");
+    let imageValue = document.getElementById("itemImageInput").value.trim();
+    const isManualBuilder = !state.builder.activePendingName;
+    const previousAutoImage = `${currentForm.name || "novo-item"}.png`;
+    if (isManualBuilder && (!imageValue || imageValue === previousAutoImage)) {
+        imageValue = `${normalizedName || "novo-item"}.png`;
+        document.getElementById("itemImageInput").value = imageValue;
+    }
     state.builder.form = {
-        ...state.builder.form,
+        ...currentForm,
         name: normalizedName,
         label: document.getElementById("itemLabelInput").value.trim(),
         description: document.getElementById("itemDescriptionInput").value.trim(),
@@ -987,7 +1007,7 @@ function syncBuilderFormFromInputs() {
         consume: document.getElementById("itemConsumeInput").value.trim(),
         allowArmed: document.getElementById("itemAllowArmedSelect").value,
         extraLua: document.getElementById("itemExtraLuaInput").value,
-        image: document.getElementById("itemImageInput").value.trim(),
+        image: imageValue,
     };
     document.getElementById("itemNameInput").value = normalizedName;
     setText("builderImageValue", state.builder.form.image);
@@ -1005,6 +1025,7 @@ function openBuilderFromPending(name) {
     state.builder.editingLocalName = null;
     state.builder.editingReadyName = null;
     state.builder.templateName = null;
+    state.builder.templateSource = null;
     state.builder.form = createDefaultFormFromPending(item);
     state.builder.iconSource = "pending";
     state.builder.uploadedIconBase64 = null;
@@ -1017,12 +1038,13 @@ function openBuilderFromPending(name) {
 function openBuilderForLocal(name) {
     const item = state.customImplemented[name];
     if (!item) return;
-    state.builder.activePendingName = item.pendingIconName;
+    state.builder.activePendingName = item.pendingIconName || null;
     state.builder.editingLocalName = name;
     state.builder.editingReadyName = null;
     state.builder.templateName = null;
+    state.builder.templateSource = null;
     state.builder.form = createFormFromImplementedItem(item, item.pendingIconName);
-    state.builder.iconSource = "pending";
+    state.builder.iconSource = item.iconSource || (item.pendingIconName ? "pending" : "upload");
     state.builder.uploadedIconBase64 = null;
     renderBuilder();
     scrollToBuilder();
@@ -1033,10 +1055,11 @@ function openBuilderForReady(name) {
     const item = state.readyItems.find((r) => r.name === name);
     if (!item) return;
     const pendingIconName = item.pendingIconName || stripExtension(item.image || name);
-    state.builder.activePendingName = pendingIconName;
+    state.builder.activePendingName = item.pendingIconName || null;
     state.builder.editingLocalName = null;
     state.builder.editingReadyName = name;
     state.builder.templateName = null;
+    state.builder.templateSource = null;
     state.builder.form = createFormFromImplementedItem(item, pendingIconName);
     state.builder.iconSource = item.iconSource === "upload" ? "upload" : "pending";
     state.builder.uploadedIconBase64 = null;
@@ -1045,23 +1068,71 @@ function openBuilderForReady(name) {
     showToast(`Editando item pronto ${name}.`);
 }
 
+function openBuilderManual() {
+    state.builder.activePendingName = null;
+    state.builder.editingLocalName = null;
+    state.builder.editingReadyName = null;
+    state.builder.templateName = null;
+    state.builder.templateSource = null;
+    state.builder.form = createDefaultFormFromScratch();
+    state.builder.iconSource = "upload";
+    state.builder.uploadedIconBase64 = null;
+    state.builder.uploadedIconFileName = null;
+    renderBuilder();
+    scrollToBuilder();
+    showToast("Builder manual aberto.");
+}
+
 function scrollToBuilder() {
     const builder = document.querySelector(".builder-panel");
     if (builder) builder.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function createDefaultFormFromScratch() {
+    return {
+        name: "",
+        label: "",
+        description: "",
+        weight: "0",
+        type: "item",
+        rarity: "common",
+        unique: false,
+        useable: false,
+        shouldClose: true,
+        decay: "",
+        ammotype: "",
+        consume: "",
+        allowArmed: "",
+        extraLua: "",
+        image: "novo-item.png",
+    };
+}
+
+function getTemplateItem() {
+    if (!state.builder.templateName) return null;
+    if (state.builder.templateSource === "ready") {
+        return state.readyItems.find((item) => item.name === state.builder.templateName) || null;
+    }
+    return getImplementedItemByName(state.builder.templateName);
 }
 
 // ============================================================
 //  BUILDER ACTIONS
 // ============================================================
 
-function applyTemplate(item) {
-    if (!state.builder.form || !getBuilderPendingItem()) {
-        showToast("Selecione um item pendente primeiro.");
+function applyTemplate(item, source = "implemented") {
+    if (!state.builder.form) {
+        showToast("Abra o builder antes de aplicar um template.");
         return;
     }
     const current = state.builder.form;
-    const template = createFormFromImplementedItem(item, getBuilderPendingItem().name);
+    const builderItem = getBuilderPendingItem();
+    const currentIconName = builderItem?.isManual
+        ? stripExtension(current.image || current.name || "novo-item")
+        : builderItem?.name;
+    const template = createFormFromImplementedItem(item, currentIconName);
     state.builder.templateName = item.name;
+    state.builder.templateSource = source;
     state.builder.form = {
         ...current,
         type: template.type, rarity: template.rarity, weight: template.weight,
@@ -1077,6 +1148,7 @@ function applyTemplate(item) {
 function clearBuilderTemplate() {
     if (state.builder.editingReadyName) { openBuilderForReady(state.builder.editingReadyName); return; }
     if (state.builder.editingLocalName) { openBuilderForLocal(state.builder.editingLocalName); return; }
+    if (state.builder.form && !state.builder.activePendingName) { openBuilderManual(); return; }
     if (!state.builder.activePendingName) { showToast("Nenhum builder ativo."); return; }
     openBuilderFromPending(state.builder.activePendingName);
 }
@@ -1086,11 +1158,12 @@ function resetBuilder() { clearBuilderTemplate(); }
 function copySelectedIconName() {
     const pending = getBuilderPendingItem();
     if (!pending) { showToast("Nenhum item selecionado."); return; }
+    if (pending.isManual) { showToast("Este builder manual nao tem icone pendente."); return; }
     copyToClipboard(pending.name, "Nome do ícone copiado.");
 }
 
 function copyBuilderExport() {
-    if (!state.builder.form || !getBuilderPendingItem()) {
+    if (!state.builder.form) {
         showToast("Selecione um item para gerar o export.");
         return;
     }
@@ -1099,9 +1172,10 @@ function copyBuilderExport() {
 
 function saveBuilderItem() {
     const pending = getBuilderPendingItem();
+    const hasRealPending = pending && !pending.isManual;
     const validation = validateBuilder();
-    if (!pending || !validation.ok) {
-        showToast(validation.message || "Selecione um item pendente.");
+    if (!validation.ok) {
+        showToast(validation.message || "Revise os dados do item.");
         return;
     }
 
@@ -1114,11 +1188,14 @@ function saveBuilderItem() {
 
     state.customImplemented[previewItem.name] = normalizeLocalItem({
         ...previewItem, source: "local",
-        pendingIconName: pending.name, pendingCategory: pending.category,
-        imageSource: "pending", savedAt: new Date().toISOString(),
+        pendingIconName: hasRealPending ? pending.name : "",
+        pendingCategory: hasRealPending ? pending.category : "Manual",
+        imageSource: hasRealPending ? "pending" : "manual",
+        iconSource: state.builder.iconSource,
+        savedAt: new Date().toISOString(),
     });
 
-    if (!state.archivedPending.includes(pending.name)) {
+    if (hasRealPending && !state.archivedPending.includes(pending.name)) {
         state.archivedPending.push(pending.name);
     }
 
@@ -1131,9 +1208,10 @@ function saveBuilderItem() {
 
 async function handlePublishAsReady() {
     const pending = getBuilderPendingItem();
+    const hasRealPending = pending && !pending.isManual;
     const validation = validateBuilder();
-    if (!pending || !validation.ok) {
-        showToast(validation.message || "Selecione um item pendente.");
+    if (!validation.ok) {
+        showToast(validation.message || "Revise os dados do item.");
         return;
     }
 
@@ -1148,8 +1226,8 @@ async function handlePublishAsReady() {
     const readyItem = {
         ...previewItem,
         source: "ready",
-        pendingIconName: pending.name,
-        pendingCategory: pending.category,
+        pendingIconName: hasRealPending ? pending.name : "",
+        pendingCategory: hasRealPending ? pending.category : "Manual",
         iconSource: state.builder.iconSource,
         createdAt: new Date().toISOString(),
         status: "ready",
@@ -1164,7 +1242,7 @@ async function handlePublishAsReady() {
         await publishReadyItem(readyItem, iconBase64);
 
         // Archive pending locally too
-        if (!state.archivedPending.includes(pending.name)) {
+        if (hasRealPending && !state.archivedPending.includes(pending.name)) {
             state.archivedPending.push(pending.name);
         }
         saveWorkspaceState();
@@ -1184,8 +1262,13 @@ function restorePendingFromLocal(name) {
     const item = state.customImplemented[name];
     if (!item) return;
     delete state.customImplemented[name];
-    state.archivedPending = state.archivedPending.filter((e) => e !== item.pendingIconName);
-    if (state.builder.editingLocalName === name) openBuilderFromPending(item.pendingIconName);
+    if (item.pendingIconName) {
+        state.archivedPending = state.archivedPending.filter((e) => e !== item.pendingIconName);
+    }
+    if (state.builder.editingLocalName === name) {
+        if (item.pendingIconName) openBuilderFromPending(item.pendingIconName);
+        else openBuilderManual();
+    }
     saveWorkspaceState();
     renderAll();
     showToast(`Item ${name} voltou para pendentes.`);
@@ -1213,7 +1296,7 @@ function resetLocalWorkspace() {
     state.archivedPending = [];
     state.builder = {
         activePendingName: null, editingLocalName: null, editingReadyName: null,
-        templateName: null, form: null, iconSource: "pending",
+        templateName: null, templateSource: null, form: null, iconSource: "pending",
         uploadedIconBase64: null, uploadedIconFileName: null,
     };
     localStorage.removeItem(STORAGE_KEY);
@@ -1344,6 +1427,7 @@ function validateBuilder() {
 
 function buildBuilderItemPreview() {
     const pending = getBuilderPendingItem();
+    const hasRealPending = pending && !pending.isManual;
     const form = state.builder.form;
     const item = {
         name: form.name,
@@ -1356,8 +1440,8 @@ function buildBuilderItemPreview() {
         useable: Boolean(form.useable),
         shouldClose: Boolean(form.shouldClose),
         rarity: form.rarity,
-        pendingIconName: pending ? pending.name : stripExtension(form.image || form.name),
-        pendingCategory: pending ? pending.category : "Local",
+        pendingIconName: hasRealPending ? pending.name : "",
+        pendingCategory: hasRealPending ? pending.category : "Manual",
         extraLua: form.extraLua.trim(),
     };
     if (form.decay !== "") item.decay = Number(form.decay);
@@ -1379,6 +1463,10 @@ function createDefaultFormFromPending(item) {
 }
 
 function createFormFromImplementedItem(item, pendingIconName) {
+    const lockedPendingImage = pendingIconName || item.pendingIconName;
+    const resolvedImage = lockedPendingImage
+        ? `${lockedPendingImage}.${CONFIG.ICON_EXTENSION}`
+        : (item.image || `${item.name}.png`);
     return {
         name: item.name || pendingIconName,
         label: item.label || toDisplayLabel(pendingIconName || item.name),
@@ -1394,7 +1482,7 @@ function createFormFromImplementedItem(item, pendingIconName) {
         consume: item.consume !== undefined && item.consume !== null ? String(item.consume) : "",
         allowArmed: item.allowArmed === true ? "true" : item.allowArmed === false ? "false" : "",
         extraLua: item.extraLua || buildExtraLuaFromItem(item),
-        image: `${pendingIconName || item.pendingIconName || stripExtension(item.image || item.name)}.${CONFIG.ICON_EXTENSION}`,
+        image: resolvedImage,
     };
 }
 
@@ -1531,21 +1619,35 @@ function getImplementedItemByName(name) {
 }
 
 function getBuilderPendingItem() {
-    if (!state.builder.activePendingName) return null;
-    const fromBase = getPendingItemByName(state.builder.activePendingName);
-    if (fromBase) return fromBase;
+    if (state.builder.activePendingName) {
+        const fromBase = getPendingItemByName(state.builder.activePendingName);
+        if (fromBase) return fromBase;
+    }
+
     const editingItem = state.builder.editingLocalName
         ? state.customImplemented[state.builder.editingLocalName]
         : state.builder.editingReadyName
             ? state.readyItems.find((r) => r.name === state.builder.editingReadyName)
             : null;
-    if (!editingItem) return null;
-    const pendingName = editingItem.pendingIconName || stripExtension(editingItem.image || editingItem.name);
+
+    if (editingItem && editingItem.pendingIconName) {
+        const pendingName = editingItem.pendingIconName;
+        return {
+            name: pendingName,
+            category: editingItem.pendingCategory || "Local",
+            image: `${pendingName}.${CONFIG.ICON_EXTENSION}`,
+            displayPath: `${CONFIG.ICONS_FOLDER}/${pendingName}.${CONFIG.ICON_EXTENSION}`,
+        };
+    }
+
+    if (!state.builder.form) return null;
+
     return {
-        name: pendingName,
-        category: editingItem.pendingCategory || "Local",
-        image: `${pendingName}.${CONFIG.ICON_EXTENSION}`,
-        displayPath: `${CONFIG.ICONS_FOLDER}/${pendingName}.${CONFIG.ICON_EXTENSION}`,
+        name: stripExtension(state.builder.form.image || state.builder.form.name || "manual"),
+        category: "Manual",
+        image: state.builder.form.image || "icon neutro.png",
+        displayPath: "icon neutro.png",
+        isManual: true,
     };
 }
 

@@ -481,6 +481,14 @@ code, pre {
     margin-bottom: 20px;
 }
 
+.workspace-header-side {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
 .workspace-note {
     color: var(--text-muted);
     font-size: 13px;
