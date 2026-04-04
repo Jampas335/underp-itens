@@ -242,12 +242,14 @@ async function validateGitHubToken(token) {
     };
 }
 
-async function githubGetFile(path) {
-    const url = `https://api.github.com/repos/${CONFIG.GITHUB_OWNER}/${CONFIG.GITHUB_REPO}/contents/${path}`;
+async function githubGetFile(path, options = {}) {
+    const bustCache = options.bustCache === true;
+    const cacheParam = bustCache ? `${path.includes("?") ? "&" : "?"}t=${Date.now()}` : "";
+    const url = `https://api.github.com/repos/${CONFIG.GITHUB_OWNER}/${CONFIG.GITHUB_REPO}/contents/${path}${cacheParam}`;
     const token = getGitHubToken();
-    let resp = await fetch(url, { headers: getGitHubHeaders(token) });
+    let resp = await fetch(url, { headers: getGitHubHeaders(token), cache: "no-store" });
     if ((resp.status === 401 || resp.status === 403) && token) {
-        resp = await fetch(url, { headers: getGitHubHeaders("") });
+        resp = await fetch(url, { headers: getGitHubHeaders(""), cache: "no-store" });
     }
     if (resp.status === 404) return null;
     if (!resp.ok) {
@@ -296,13 +298,20 @@ async function githubDeleteFile(path, sha, message) {
 //  READY ITEMS — LOAD / SAVE / DELETE
 // ============================================================
 
-async function loadReadyItems() {
+async function loadReadyItems(options = {}) {
+    const {
+        bustCache = true,
+        silent = false,
+        preserveSearch = true,
+        revealName = "",
+        statusPrefix = "",
+    } = options;
     if (state.readyLoading) return;
     state.readyLoading = true;
-    renderReadyStatusBar("Carregando do GitHub...", "loading");
+    if (!silent) renderReadyStatusBar("Carregando do GitHub...", "loading");
 
     try {
-        const file = await githubGetFile(CONFIG.READY_ITEMS_PATH);
+        const file = await githubGetFile(CONFIG.READY_ITEMS_PATH, { bustCache });
         if (!file) {
             state.readyItems = [];
             state.readyItemsSha = null;
@@ -311,7 +320,10 @@ async function loadReadyItems() {
             state.readyItemsSha = file.sha;
         }
         state.readyLoaded = true;
-        renderReadyStatusBar(`${state.readyItems.length} item(s) prontos carregados.`, "ok");
+        if (revealName) {
+            revealReadyItem(revealName, { preserveSearch });
+        }
+        renderReadyStatusBar(`${statusPrefix}${state.readyItems.length} item(s) prontos carregados.`, "ok");
     } catch (err) {
         console.error("Erro ao carregar prontos:", err);
         showToast(`Erro: ${err.message}`);
@@ -375,6 +387,8 @@ async function publishReadyItem(item, iconBase64) {
         };
     });
     state.readyItemsSha = result.content.sha;
+    state.readyLoaded = true;
+    state.readyLoading = false;
 }
 
 async function deleteReadyItemFromGitHub(name) {
@@ -875,6 +889,21 @@ function renderReadySection() {
     renderReadyGrid();
 }
 
+function revealReadyItem(name, options = {}) {
+    const preserveSearch = options.preserveSearch === true;
+    state.activeView = "ready";
+    state.readyType = "all";
+    state.readyRarity = "all";
+    if (!preserveSearch) {
+        state.readySearch = String(name || "").toLowerCase().trim();
+    }
+
+    const searchInput = document.getElementById("readySearchInput");
+    if (searchInput && !preserveSearch) {
+        searchInput.value = name || "";
+    }
+}
+
 function renderReadyStatusBar(message, type) {
     const el = document.getElementById("readyLoadStatus");
     if (!el) return;
@@ -1365,8 +1394,16 @@ async function handlePublishAsReady() {
         }
         saveWorkspaceState();
 
-        state.activeView = "ready";
+        revealReadyItem(previewItem.name);
         renderAll();
+        renderReadyStatusBar(`Item ${previewItem.name} publicado. Revalidando com GitHub...`, "loading");
+        loadReadyItems({
+            bustCache: true,
+            silent: true,
+            preserveSearch: false,
+            revealName: previewItem.name,
+            statusPrefix: `Atualizado agora. `,
+        });
         showToast(`Item ${previewItem.name} publicado como Pronto.`);
     } catch (err) {
         const message = err.message || "Falha ao publicar no GitHub.";
