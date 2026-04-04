@@ -1,21 +1,21 @@
 [
   {
     "name": "ammo_pistol",
-    "label": "Caixa Munição de Pistolas",
+    "label": "Caixa Munição de Pistola",
     "description": "",
     "weight": 7,
     "type": "item",
     "image": "ammo_pistol.png",
     "unique": false,
     "useable": true,
-    "shouldClose": false,
+    "shouldClose": true,
     "rarity": "uncommon",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-04-04T06:31:02.553Z",
+    "createdAt": "2026-04-04T06:32:33.867Z",
     "status": "ready"
   },
   {
