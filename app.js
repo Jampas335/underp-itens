@@ -14,7 +14,7 @@ const IMPLEMENTED_PAGE_SIZE = 48;
 const ITEM_EXPORT_ORDER = [
     "name", "label", "weight", "type", "image",
     "unique", "useable", "shouldClose", "description",
-    "rarity", "decay", "ammotype", "consume", "allowArmed",
+    "rarity", "decay", "ammotype", "consume", "allowArmed", "allowInBackpack",
 ];
 
 const ITEM_META_KEYS = new Set([
@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initTheme();
     bootstrapData();
     loadWorkspaceState();
+    ensureAllowInBackpackField();
     bindEvents();
     renderAll();
     initFadeInObserver();
@@ -91,6 +92,30 @@ function applyBranding() {
     setText("siteSubtitle", subtitle);
     const repoEl = document.getElementById("modalRepoName");
     if (repoEl) repoEl.textContent = `${CONFIG.GITHUB_OWNER}/${CONFIG.GITHUB_REPO}`;
+}
+
+function ensureAllowInBackpackField() {
+    if (document.getElementById("itemAllowInBackpackSelect")) return;
+
+    const allowArmedSelect = document.getElementById("itemAllowArmedSelect");
+    const templateField = document.getElementById("templateSummary")?.closest(".field");
+    const grid = allowArmedSelect?.closest(".field-grid");
+    if (!allowArmedSelect || !templateField || !grid) return;
+
+    grid.classList.remove("two-cols");
+    grid.classList.add("three-cols");
+
+    const wrapper = document.createElement("label");
+    wrapper.className = "field";
+    wrapper.innerHTML = `
+        <span>allowInBackpack <i class="info-tip" data-tip="Se o item pode ser guardado dentro de mochila.">i</i></span>
+        <select id="itemAllowInBackpackSelect">
+            <option value="">NÃ£o definir</option>
+            <option value="true">true</option>
+            <option value="false">false</option>
+        </select>
+    `;
+    grid.insertBefore(wrapper, templateField);
 }
 
 function flattenPendingItems() {
@@ -1112,6 +1137,7 @@ function syncBuilderInputs() {
     document.getElementById("itemAmmoTypeInput").value = form.ammotype;
     document.getElementById("itemConsumeInput").value = form.consume;
     document.getElementById("itemAllowArmedSelect").value = form.allowArmed;
+    document.getElementById("itemAllowInBackpackSelect").value = form.allowInBackpack;
     document.getElementById("itemExtraLuaInput").value = form.extraLua;
     const imageInput = document.getElementById("itemImageInput");
     imageInput.value = form.image;
@@ -1144,6 +1170,7 @@ function syncBuilderFormFromInputs() {
         ammotype: document.getElementById("itemAmmoTypeInput").value.trim(),
         consume: document.getElementById("itemConsumeInput").value.trim(),
         allowArmed: document.getElementById("itemAllowArmedSelect").value,
+        allowInBackpack: document.getElementById("itemAllowInBackpackSelect").value,
         extraLua: document.getElementById("itemExtraLuaInput").value,
         image: imageValue,
     };
@@ -1247,6 +1274,7 @@ function createDefaultFormFromScratch() {
         ammotype: "",
         consume: "",
         allowArmed: "",
+        allowInBackpack: "",
         extraLua: "",
         image: "novo-item.png",
     };
@@ -1282,7 +1310,7 @@ function applyTemplate(item, source = "implemented") {
         type: template.type, rarity: template.rarity, weight: template.weight,
         unique: template.unique, useable: template.useable, shouldClose: template.shouldClose,
         decay: template.decay, ammotype: template.ammotype, consume: template.consume,
-        allowArmed: template.allowArmed, extraLua: template.extraLua,
+        allowArmed: template.allowArmed, allowInBackpack: template.allowInBackpack, extraLua: template.extraLua,
         description: current.description || template.description,
     };
     renderBuilder();
@@ -1615,6 +1643,8 @@ function buildBuilderItemPreview() {
     if (form.consume !== "") item.consume = Number(form.consume);
     if (form.allowArmed === "true") item.allowArmed = true;
     else if (form.allowArmed === "false") item.allowArmed = false;
+    if (form.allowInBackpack === "true") item.allowInBackpack = true;
+    else if (form.allowInBackpack === "false") item.allowInBackpack = false;
     return item;
 }
 
@@ -1623,7 +1653,7 @@ function createDefaultFormFromPending(item) {
         name: item.name, label: toDisplayLabel(item.name), description: "",
         weight: "0", type: "item", rarity: "common",
         unique: false, useable: false, shouldClose: true,
-        decay: "", ammotype: "", consume: "", allowArmed: "", extraLua: "",
+        decay: "", ammotype: "", consume: "", allowArmed: "", allowInBackpack: "", extraLua: "",
         image: item.image,
     };
 }
@@ -1647,6 +1677,7 @@ function createFormFromImplementedItem(item, pendingIconName) {
         ammotype: item.ammotype || "",
         consume: item.consume !== undefined && item.consume !== null ? String(item.consume) : "",
         allowArmed: item.allowArmed === true ? "true" : item.allowArmed === false ? "false" : "",
+        allowInBackpack: item.allowInBackpack === true ? "true" : item.allowInBackpack === false ? "false" : "",
         extraLua: item.extraLua || buildExtraLuaFromItem(item),
         image: resolvedImage,
     };
