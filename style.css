@@ -462,7 +462,7 @@ code, pre {
 /* === WORKSPACE GRID === */
 .workspace-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.65fr) minmax(380px, 0.95fr);
+    grid-template-columns: 1fr;
     gap: 18px;
     margin-top: 18px;
     align-items: start;
@@ -471,6 +471,10 @@ code, pre {
 .workspace-main,
 .builder-panel {
     padding: 24px;
+}
+
+.workspace-main {
+    grid-row: 2;
 }
 
 .workspace-header {
@@ -821,8 +825,8 @@ code, pre {
 
 /* === BUILDER PANEL === */
 .builder-panel {
-    position: sticky;
-    top: 20px;
+    grid-row: 1;
+    position: static;
 }
 
 .builder-header {
@@ -852,16 +856,35 @@ code, pre {
 .builder-empty {
     display: grid;
     gap: 10px;
+    min-height: 220px;
     padding: 24px;
     border-radius: 18px;
     border: 1px dashed rgba(var(--accent-1-rgb), 0.18);
     background: rgba(var(--accent-1-rgb), 0.03);
+    align-content: center;
     text-align: center;
 }
 
 .builder-content {
     display: grid;
-    gap: 16px;
+    grid-template-columns: minmax(300px, 360px) minmax(0, 1fr);
+    gap: 20px 24px;
+    align-items: start;
+}
+
+.builder-item-card,
+.icon-source-section,
+.builder-helper-actions {
+    grid-column: 1;
+}
+
+.builder-form {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+}
+
+.export-panel {
+    grid-column: 1 / -1;
 }
 
 .builder-item-card {
@@ -1646,6 +1669,19 @@ code, pre {
     .hero-panel,
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+
+    .builder-content {
+        grid-template-columns: 1fr;
+    }
+
+    .builder-item-card,
+    .icon-source-section,
+    .builder-helper-actions,
+    .builder-form,
+    .export-panel {
+        grid-column: auto;
+        grid-row: auto;
     }
 
     .field-grid.two-cols,
