@@ -20,7 +20,8 @@ const ITEM_EXPORT_ORDER = [
 const ITEM_META_KEYS = new Set([
     "source", "pendingIconName", "pendingCategory",
     "savedAt", "extraLua", "imageSource", "iconSource",
-    "createdAt", "status",
+    "createdAt", "status", "uploadedIconBase64",
+    "uploadedIconMime", "uploadedIconFileName",
 ]);
 
 // ============================================================
@@ -55,6 +56,7 @@ const state = {
         form: null,
         iconSource: "pending",
         uploadedIconBase64: null,
+        uploadedIconMime: "image/png",
         uploadedIconFileName: null,
     },
 };
@@ -136,6 +138,10 @@ function normalizeLocalItem(item) {
         extraLua: item.extraLua || "",
         savedAt: item.savedAt || new Date().toISOString(),
         imageSource: item.imageSource || "pending",
+        iconSource: item.iconSource || (item.pendingIconName ? "pending" : "upload"),
+        uploadedIconBase64: item.uploadedIconBase64 || null,
+        uploadedIconMime: item.uploadedIconMime || "image/png",
+        uploadedIconFileName: item.uploadedIconFileName || "",
     };
 }
 
@@ -359,7 +365,15 @@ async function publishReadyItem(item, iconBase64) {
         `feat: ${existingIdx >= 0 ? "update" : "add"} ready item ${item.name}`
     );
 
-    state.readyItems = currentItems;
+    state.readyItems = currentItems.map((entry) => {
+        if (entry.name !== item.name || !iconBase64) return entry;
+        return {
+            ...entry,
+            uploadedIconBase64: iconBase64,
+            uploadedIconMime: state.builder.uploadedIconMime || "image/png",
+            uploadedIconFileName: state.builder.uploadedIconFileName || `${item.name}.png`,
+        };
+    });
     state.readyItemsSha = result.content.sha;
 }
 
@@ -480,11 +494,11 @@ function bindEvents() {
     // Icon source toggle
     document.getElementById("iconSourcePending").addEventListener("change", () => {
         state.builder.iconSource = "pending";
-        toggleIconUploadArea(false);
+        renderBuilder();
     });
     document.getElementById("iconSourceUpload").addEventListener("change", () => {
         state.builder.iconSource = "upload";
-        toggleIconUploadArea(true);
+        renderBuilder();
     });
 
     // Icon upload
@@ -988,11 +1002,7 @@ function renderBuilder() {
     syncBuilderInputs();
 
     const builderImage = document.getElementById("builderIconImage");
-    if (state.builder.iconSource === "upload" && state.builder.uploadedIconBase64) {
-        builderImage.src = `data:image/png;base64,${state.builder.uploadedIconBase64}`;
-    } else {
-        applyImageCandidates(builderImage, getPendingImageCandidates(pendingItem), pendingItem.name);
-    }
+    applyImageCandidates(builderImage, getBuilderImageCandidates(), pendingItem.name);
 
     setText("luaExportPreview", buildLuaEntry(buildBuilderItemPreview()));
 
@@ -1005,6 +1015,56 @@ function renderBuilder() {
     document.getElementById("iconSourcePending").checked = canUsePendingIcon && state.builder.iconSource === "pending";
     document.getElementById("iconSourceUpload").checked = state.builder.iconSource === "upload";
     toggleIconUploadArea(state.builder.iconSource === "upload");
+    syncUploadPreviewState();
+}
+
+function getBuilderImageCandidates() {
+    const pendingItem = getBuilderPendingItem();
+    const candidates = [];
+    const editingLocalItem = state.builder.editingLocalName
+        ? state.customImplemented[state.builder.editingLocalName]
+        : null;
+    const editingReadyItem = state.builder.editingReadyName
+        ? state.readyItems.find((item) => item.name === state.builder.editingReadyName)
+        : null;
+
+    if (state.builder.iconSource === "pending" && pendingItem) {
+        candidates.push(...getPendingImageCandidates(pendingItem));
+    }
+    if (state.builder.iconSource === "upload" && state.builder.uploadedIconBase64) {
+        candidates.push(buildUploadedImageSrc(state.builder.uploadedIconBase64, state.builder.uploadedIconMime));
+    }
+    if (editingLocalItem) {
+        candidates.push(...getImplementedImageCandidates(editingLocalItem));
+    }
+    if (editingReadyItem) {
+        candidates.push(...getReadyImageCandidates(editingReadyItem));
+    }
+    if (state.builder.iconSource !== "pending" && pendingItem) {
+        candidates.push(...getPendingImageCandidates(pendingItem));
+    }
+    return Array.from(new Set(candidates.filter(Boolean)));
+}
+
+function syncUploadPreviewState() {
+    const preview = document.getElementById("iconUploadPreview");
+    const dropzone = document.getElementById("uploadDropzone");
+    if (!preview || !dropzone) return;
+
+    if (state.builder.uploadedIconBase64) {
+        document.getElementById("iconUploadPreviewImg").src = buildUploadedImageSrc(
+            state.builder.uploadedIconBase64,
+            state.builder.uploadedIconMime
+        );
+        document.getElementById("iconUploadFileName").textContent = state.builder.uploadedIconFileName || "icone-uploadado.png";
+        setText("iconUploadDims", "Imagem pronta para publicar.");
+        preview.classList.remove("hidden");
+        dropzone.classList.add("hidden");
+        return;
+    }
+
+    preview.classList.add("hidden");
+    dropzone.classList.remove("hidden");
 }
 
 function syncBuilderInputs() {
@@ -1078,6 +1138,7 @@ function openBuilderFromPending(name) {
     state.builder.form = createDefaultFormFromPending(item);
     state.builder.iconSource = "pending";
     state.builder.uploadedIconBase64 = null;
+    state.builder.uploadedIconMime = "image/png";
     state.builder.uploadedIconFileName = null;
     renderBuilder();
     scrollToBuilder();
@@ -1094,7 +1155,9 @@ function openBuilderForLocal(name) {
     state.builder.templateSource = null;
     state.builder.form = createFormFromImplementedItem(item, item.pendingIconName);
     state.builder.iconSource = item.iconSource || (item.pendingIconName ? "pending" : "upload");
-    state.builder.uploadedIconBase64 = null;
+    state.builder.uploadedIconBase64 = item.uploadedIconBase64 || null;
+    state.builder.uploadedIconMime = item.uploadedIconMime || "image/png";
+    state.builder.uploadedIconFileName = item.uploadedIconFileName || null;
     renderBuilder();
     scrollToBuilder();
     showToast(`Editando rascunho ${item.name}.`);
@@ -1111,7 +1174,9 @@ function openBuilderForReady(name) {
     state.builder.templateSource = null;
     state.builder.form = createFormFromImplementedItem(item, pendingIconName);
     state.builder.iconSource = item.iconSource === "upload" ? "upload" : "pending";
-    state.builder.uploadedIconBase64 = null;
+    state.builder.uploadedIconBase64 = item.uploadedIconBase64 || null;
+    state.builder.uploadedIconMime = item.uploadedIconMime || "image/png";
+    state.builder.uploadedIconFileName = item.uploadedIconFileName || null;
     renderBuilder();
     scrollToBuilder();
     showToast(`Editando item pronto ${name}.`);
@@ -1126,6 +1191,7 @@ function openBuilderManual() {
     state.builder.form = createDefaultFormFromScratch();
     state.builder.iconSource = "upload";
     state.builder.uploadedIconBase64 = null;
+    state.builder.uploadedIconMime = "image/png";
     state.builder.uploadedIconFileName = null;
     renderBuilder();
     scrollToBuilder();
@@ -1239,8 +1305,11 @@ function saveBuilderItem() {
         ...previewItem, source: "local",
         pendingIconName: hasRealPending ? pending.name : "",
         pendingCategory: hasRealPending ? pending.category : "Manual",
-        imageSource: hasRealPending ? "pending" : "manual",
+        imageSource: state.builder.iconSource === "upload" ? "upload" : (hasRealPending ? "pending" : "manual"),
         iconSource: state.builder.iconSource,
+        uploadedIconBase64: state.builder.iconSource === "upload" ? state.builder.uploadedIconBase64 : null,
+        uploadedIconMime: state.builder.iconSource === "upload" ? state.builder.uploadedIconMime : "",
+        uploadedIconFileName: state.builder.iconSource === "upload" ? state.builder.uploadedIconFileName : "",
         savedAt: new Date().toISOString(),
     });
 
@@ -1351,7 +1420,7 @@ function resetLocalWorkspace() {
     state.builder = {
         activePendingName: null, editingLocalName: null, editingReadyName: null,
         templateName: null, templateSource: null, form: null, iconSource: "pending",
-        uploadedIconBase64: null, uploadedIconFileName: null,
+        uploadedIconBase64: null, uploadedIconMime: "image/png", uploadedIconFileName: null,
     };
     localStorage.removeItem(STORAGE_KEY);
     renderAll();
@@ -1392,6 +1461,7 @@ function processIconFile(file) {
                 : " ✓ Dimensões corretas";
 
             state.builder.uploadedIconBase64 = base64;
+            state.builder.uploadedIconMime = file.type || "image/png";
             state.builder.uploadedIconFileName = file.name;
 
             // Show preview
@@ -1412,6 +1482,7 @@ function processIconFile(file) {
 
 function clearIconUpload() {
     state.builder.uploadedIconBase64 = null;
+    state.builder.uploadedIconMime = "image/png";
     state.builder.uploadedIconFileName = null;
     document.getElementById("iconUploadPreview").classList.add("hidden");
     document.getElementById("uploadDropzone").classList.remove("hidden");
@@ -1419,10 +1490,8 @@ function clearIconUpload() {
 
     // Revert builder preview to pending icon
     const pending = getBuilderPendingItem();
-    if (pending) {
-        const builderImg = document.getElementById("builderIconImage");
-        if (builderImg) applyImageCandidates(builderImg, getPendingImageCandidates(pending), pending.name);
-    }
+    const builderImg = document.getElementById("builderIconImage");
+    if (builderImg && pending) applyImageCandidates(builderImg, getBuilderImageCandidates(), pending.name);
 }
 
 // ============================================================
@@ -1719,8 +1788,16 @@ function getPendingImageCandidates(item) {
     return [item.displayPath];
 }
 
+function buildUploadedImageSrc(base64, mime = "image/png") {
+    if (!base64) return "";
+    return `data:${mime || "image/png"};base64,${base64}`;
+}
+
 function getImplementedImageCandidates(item) {
     const candidates = [];
+    if (item.iconSource === "upload" && item.uploadedIconBase64) {
+        candidates.push(buildUploadedImageSrc(item.uploadedIconBase64, item.uploadedIconMime));
+    }
     if (item.source === "local" && item.pendingIconName) {
         candidates.push(`${CONFIG.ICONS_FOLDER}/${item.pendingIconName}.${CONFIG.ICON_EXTENSION}`);
     }
@@ -1737,6 +1814,9 @@ function getImplementedImageCandidates(item) {
 
 function getReadyImageCandidates(item) {
     const candidates = [];
+    if (item.iconSource === "upload" && item.uploadedIconBase64) {
+        candidates.push(buildUploadedImageSrc(item.uploadedIconBase64, item.uploadedIconMime));
+    }
     if (item.iconSource === "upload") {
         candidates.push(`${CONFIG.READY_ICONS_FOLDER}/${item.name}.png`);
     }
