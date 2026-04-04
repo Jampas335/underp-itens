@@ -4,6 +4,8 @@
 
 const STORAGE_KEY = "underrp-item-workbench-v1";
 const GITHUB_TOKEN_KEY = "underrp-github-token";
+const GITHUB_TOKEN_MASK = "••••••••••••••••••••";
+const GITHUB_API_VERSION = "2022-11-28";
 const DEFAULT_VIEW = "pending";
 const RARITY_ORDER = ["common", "uncommon", "rare", "epic", "legendary"];
 const TYPE_ORDER = ["all", "item", "weapon"];
@@ -192,17 +194,55 @@ function updateTokenIndicator() {
     dot.title = hasToken ? "Token configurado" : "Token não configurado";
 }
 
+function getGitHubHeaders(tokenOverride = null, includeJson = false) {
+    const headers = {
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": GITHUB_API_VERSION,
+    };
+    const token = tokenOverride ?? getGitHubToken();
+    if (token) headers["Authorization"] = `Bearer ${token}`;
+    if (includeJson) headers["Content-Type"] = "application/json";
+    return headers;
+}
+
+async function parseGitHubApiError(resp) {
+    const body = await resp.json().catch(() => ({}));
+    const acceptedPermissions = resp.headers.get("x-accepted-github-permissions");
+    const oauthScopes = resp.headers.get("x-oauth-scopes");
+    let message = body.message || `GitHub API ${resp.status}`;
+    if (acceptedPermissions) message += ` | Permissoes exigidas: ${acceptedPermissions}`;
+    if (oauthScopes) message += ` | Escopos/token atual: ${oauthScopes}`;
+    return message;
+}
+
+function isMaskedGitHubTokenValue(value) {
+    return value === GITHUB_TOKEN_MASK;
+}
+
+async function validateGitHubToken(token) {
+    const url = `https://api.github.com/repos/${CONFIG.GITHUB_OWNER}/${CONFIG.GITHUB_REPO}`;
+    const resp = await fetch(url, { headers: getGitHubHeaders(token) });
+    if (!resp.ok) {
+        throw new Error(await parseGitHubApiError(resp));
+    }
+    const data = await resp.json();
+    const hasPushPermission = data.permissions ? data.permissions.push !== false : null;
+    return {
+        fullName: data.full_name || `${CONFIG.GITHUB_OWNER}/${CONFIG.GITHUB_REPO}`,
+        hasPushPermission,
+    };
+}
+
 async function githubGetFile(path) {
     const url = `https://api.github.com/repos/${CONFIG.GITHUB_OWNER}/${CONFIG.GITHUB_REPO}/contents/${path}`;
-    const headers = { "Accept": "application/vnd.github.v3+json" };
     const token = getGitHubToken();
-    if (token) headers["Authorization"] = `token ${token}`;
-
-    const resp = await fetch(url, { headers });
+    let resp = await fetch(url, { headers: getGitHubHeaders(token) });
+    if ((resp.status === 401 || resp.status === 403) && token) {
+        resp = await fetch(url, { headers: getGitHubHeaders("") });
+    }
     if (resp.status === 404) return null;
     if (!resp.ok) {
-        const body = await resp.json().catch(() => ({}));
-        throw new Error(body.message || `GitHub API ${resp.status}`);
+        throw new Error(await parseGitHubApiError(resp));
     }
     return resp.json();
 }
@@ -217,17 +257,12 @@ async function githubPutFile(path, base64Content, sha, message) {
 
     const resp = await fetch(url, {
         method: "PUT",
-        headers: {
-            "Authorization": `token ${token}`,
-            "Accept": "application/vnd.github.v3+json",
-            "Content-Type": "application/json",
-        },
+        headers: getGitHubHeaders(token, true),
         body: JSON.stringify(body),
     });
 
     if (!resp.ok) {
-        const err = await resp.json().catch(() => ({}));
-        throw new Error(err.message || `GitHub API ${resp.status}`);
+        throw new Error(await parseGitHubApiError(resp));
     }
     return resp.json();
 }
@@ -239,16 +274,11 @@ async function githubDeleteFile(path, sha, message) {
     const url = `https://api.github.com/repos/${CONFIG.GITHUB_OWNER}/${CONFIG.GITHUB_REPO}/contents/${path}`;
     const resp = await fetch(url, {
         method: "DELETE",
-        headers: {
-            "Authorization": `token ${token}`,
-            "Accept": "application/vnd.github.v3+json",
-            "Content-Type": "application/json",
-        },
+        headers: getGitHubHeaders(token, true),
         body: JSON.stringify({ message, sha }),
     });
     if (!resp.ok) {
-        const err = await resp.json().catch(() => ({}));
-        throw new Error(err.message || `GitHub API ${resp.status}`);
+        throw new Error(await parseGitHubApiError(resp));
     }
     return resp.json();
 }
@@ -478,12 +508,28 @@ function bindEvents() {
     document.getElementById("githubModal").addEventListener("click", (e) => {
         if (e.target === document.getElementById("githubModal")) closeGithubModal();
     });
-    document.getElementById("saveGithubToken").addEventListener("click", () => {
+    document.getElementById("saveGithubToken").addEventListener("click", async () => {
         const val = document.getElementById("githubTokenInput").value.trim();
         if (!val) { showToast("Digite um token antes de salvar."); return; }
-        setGitHubToken(val);
-        showModalStatus("Token salvo com sucesso.", "ok");
-        showToast("Token do GitHub salvo.");
+        if (isMaskedGitHubTokenValue(val) && getGitHubToken()) {
+            showModalStatus("Token ja salvo nesta maquina. Cole outro token apenas se quiser substituir.", "warn");
+            return;
+        }
+
+        showModalStatus("Validando token e acesso ao repositorio...", "warn");
+        try {
+            const result = await validateGitHubToken(val);
+            if (result.hasPushPermission === false) {
+                showModalStatus(`Token valido para ${result.fullName}, mas sem permissao de escrita no repositorio. Verifique Contents: Read and write.`, "error");
+                return;
+            }
+            setGitHubToken(val);
+            showModalStatus(`Token valido para ${result.fullName}. Escrita no repositorio liberada.`, "ok");
+            showToast("Token do GitHub salvo.");
+        } catch (err) {
+            showModalStatus(`Falha ao validar token: ${err.message}`, "error");
+            showToast(`Falha ao validar token: ${err.message}`);
+        }
     });
     document.getElementById("clearGithubToken").addEventListener("click", () => {
         setGitHubToken("");
@@ -1378,10 +1424,16 @@ function clearIconUpload() {
 function openGithubModal() {
     const modal = document.getElementById("githubModal");
     const input = document.getElementById("githubTokenInput");
-    input.value = getGitHubToken() ? "••••••••••••••••••••" : "";
+    const hasToken = Boolean(getGitHubToken());
+    input.value = hasToken ? GITHUB_TOKEN_MASK : "";
     input.type = "password";
     document.getElementById("toggleTokenVisibility").textContent = "Ver";
-    showModalStatus("", "");
+    showModalStatus(
+        hasToken
+            ? "Token ja salvo nesta maquina. So cole outro token se quiser substituir o atual."
+            : "Cole um token Fine-grained com acesso ao repositorio e Contents: Read and write.",
+        hasToken ? "warn" : "ok"
+    );
     modal.classList.remove("hidden");
     document.body.style.overflow = "hidden";
 }
