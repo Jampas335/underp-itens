@@ -57,6 +57,25 @@
     "status": "ready"
   },
   {
+    "name": "ammo_smg",
+    "label": "Caixa Munição de SMG",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "ammo_smg.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-04T06:40:03.743Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_g17",
     "label": "G17",
     "description": "",
