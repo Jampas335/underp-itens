@@ -22,7 +22,7 @@
     "name": "ammo_rifle",
     "label": "Caixa Munição de Rifle",
     "description": "",
-    "weight": 8,
+    "weight": 250,
     "type": "item",
     "image": "ammo_rifle.png",
     "unique": false,
@@ -34,7 +34,7 @@
     "extraLua": "",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-04-04T06:34:44.552Z",
+    "createdAt": "2026-04-04T06:37:09.471Z",
     "status": "ready"
   },
   {
