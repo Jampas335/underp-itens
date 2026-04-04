@@ -96,5 +96,24 @@
     "iconSource": "upload",
     "createdAt": "2026-04-04T06:20:53.199Z",
     "status": "ready"
+  },
+  {
+    "name": "tv",
+    "label": "Televisão",
+    "description": "",
+    "weight": 6500,
+    "type": "item",
+    "image": "tv.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "['prop'] = 'prop_tv_flat_01',\n['object'] = 'prop_tv_flat_01',\n['carryInHand'] = true,\n['carryAttachment'] = {\n        ['bone'] = 60309,\n        ['pos'] = {\n            ['x'] = -0.015,\n            ['y'] = 0.21,\n            ['z'] = 0.325,\n        },\n        ['rot'] = {\n            ['x'] = -126,\n            ['y'] = 107,\n            ['z'] = 6,\n        },\n    },\n['carryAnim'] = {\n        ['dict'] = 'anim@heists@box_carry@',\n        ['clip'] = 'idle',\n        ['flag'] = 49,\n    },\n['allowInBackpack'] = false,",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-04T07:20:10.470Z",
+    "status": "ready"
   }
 ]
