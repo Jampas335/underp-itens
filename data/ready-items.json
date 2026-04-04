@@ -1,0 +1,24 @@
+[
+  {
+    "name": "weapon_g17",
+    "label": "G17",
+    "description": "",
+    "weight": 1400,
+    "type": "weapon",
+    "image": "weapon_g17.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "weapon_g17",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "decay": 0.1,
+    "ammotype": "ammo-9",
+    "consume": 0,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-04T06:20:53.199Z",
+    "status": "ready"
+  }
+]
