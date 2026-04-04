@@ -1579,10 +1579,10 @@ function validateBuilder() {
     const weight = Number(form.weight);
     if (!Number.isFinite(weight) || weight < 0) return { ok: false, message: "Informe um peso válido." };
 
-    const existing = getImplementedItemByName(form.name);
+    const existingLocalDraft = state.customImplemented[form.name];
     const isEditingSameLocal = state.builder.editingLocalName && state.builder.editingLocalName === form.name;
-    if (existing && !isEditingSameLocal) {
-        return { ok: false, message: "Já existe um item implementado com esse nome." };
+    if (existingLocalDraft && !isEditingSameLocal) {
+        return { ok: false, message: "Já existe um rascunho local com esse nome." };
     }
     return { ok: true };
 }
