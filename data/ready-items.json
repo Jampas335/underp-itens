@@ -278,6 +278,27 @@
     "status": "ready"
   },
   {
+    "name": "weapon_machinepistol",
+    "label": "TEC-9",
+    "description": "",
+    "weight": 1400,
+    "type": "weapon",
+    "image": "machine-pistol.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "machine-pistol",
+    "pendingCategory": "Pistolas",
+    "extraLua": "",
+    "decay": 0.05,
+    "ammotype": "ammo-9",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-06T18:50:37.634Z",
+    "status": "ready"
+  },
+  {
     "name": "tv",
     "label": "Televisão",
     "description": "",
