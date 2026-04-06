@@ -237,6 +237,25 @@
     "status": "ready"
   },
   {
+    "name": "sandwich",
+    "label": "Sanduíche",
+    "description": "",
+    "weight": 125,
+    "type": "item",
+    "image": "sandwich.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "sandwich",
+    "pendingCategory": "Comida",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-06T19:05:48.523Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_switchblade",
     "label": "Switchblade",
     "description": "",
