@@ -185,7 +185,7 @@
     "unique": true,
     "useable": false,
     "shouldClose": true,
-    "rarity": "rare",
+    "rarity": "common",
     "pendingIconName": "pistol",
     "pendingCategory": "Pistolas",
     "extraLua": "",
@@ -193,7 +193,7 @@
     "ammotype": "ammo-9",
     "source": "ready",
     "iconSource": "pending",
-    "createdAt": "2026-04-06T18:49:58.108Z",
+    "createdAt": "2026-04-06T18:53:36.072Z",
     "status": "ready"
   },
   {
