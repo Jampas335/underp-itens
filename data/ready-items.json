@@ -194,6 +194,25 @@
     "status": "ready"
   },
   {
+    "name": "lockpick",
+    "label": "Lockpick",
+    "description": "",
+    "weight": 160,
+    "type": "item",
+    "image": "lockpick.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T02:17:10.005Z",
+    "status": "ready"
+  },
+  {
     "name": "lockpick_improvisada",
     "label": "Lockpick Improvisada",
     "description": "Uma lockpick montada de forma improvisada. Funciona, mas exige cuidado.",
