@@ -1264,7 +1264,7 @@
   },
   {
     "name": "treasure_shovel",
-    "label": "Pa de tesouro",
+    "label": "Pá de tesouro",
     "description": "",
     "weight": 1000,
     "type": "item",
@@ -1279,7 +1279,7 @@
     "siteCategory": "Pesca",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-04-07T06:01:50.884Z",
+    "createdAt": "2026-04-07T07:11:09.213Z",
     "status": "ready"
   },
   {
