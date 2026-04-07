@@ -773,6 +773,26 @@
     "status": "ready"
   },
   {
+    "name": "crab_cage",
+    "label": "Gaiola de Carangueijo",
+    "description": "",
+    "weight": 2000,
+    "type": "item",
+    "image": "crab_cage.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:59:19.555Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_petrolcan",
     "label": "Gasolina",
     "description": "",
