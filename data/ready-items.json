@@ -325,6 +325,26 @@
     "status": "ready"
   },
   {
+    "name": "mechanic-toolbox",
+    "label": "Caixa de Ferramentas",
+    "description": "",
+    "weight": 8000,
+    "type": "item",
+    "image": "mechanic-toolbox.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "mechanic-toolbox",
+    "pendingCategory": "Ferramentas",
+    "extraLua": "",
+    "siteCategory": "Ferramentas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T07:07:48.572Z",
+    "status": "ready"
+  },
+  {
     "name": "ammo_lsmg",
     "label": "Caixa Munição de LSMG",
     "description": "",
