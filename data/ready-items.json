@@ -1398,6 +1398,26 @@
     "status": "ready"
   },
   {
+    "name": "scissors",
+    "label": "Tesoura",
+    "description": "",
+    "weight": 90,
+    "type": "item",
+    "image": "scissors.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "scissors",
+    "pendingCategory": "Ferramentas",
+    "extraLua": "",
+    "siteCategory": "Ferramentas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T05:43:17.554Z",
+    "status": "ready"
+  },
+  {
     "name": "bs-tomato",
     "label": "Tomate",
     "description": "",
