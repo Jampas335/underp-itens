@@ -669,6 +669,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_metaldetector",
+    "label": "Detector de metais",
+    "description": "",
+    "weight": 1500,
+    "type": "weapon",
+    "image": "weapon_metaldetector.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T08:26:35.504Z",
+    "status": "ready"
+  },
+  {
     "name": "dynamite",
     "label": "Dinamite",
     "description": "",
