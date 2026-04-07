@@ -2248,9 +2248,10 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "['prop'] = 'prop_tv_flat_01',\n['object'] = 'prop_tv_flat_01',\n['carryInHand'] = true,\n['carryAttachment'] = {\n        ['bone'] = 60309,\n        ['pos'] = {\n            ['x'] = -0.015,\n            ['y'] = 0.21,\n            ['z'] = 0.325,\n        },\n        ['rot'] = {\n            ['x'] = -126,\n            ['y'] = 107,\n            ['z'] = 6,\n        },\n    },\n['carryAnim'] = {\n        ['dict'] = 'anim@heists@box_carry@',\n        ['clip'] = 'idle',\n        ['flag'] = 49,\n    },\n['allowInBackpack'] = false,",
+    "siteCategory": "Roubo casa",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-04T07:21:52.124Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-07T09:08:50.751Z",
     "status": "ready"
   },
   {
