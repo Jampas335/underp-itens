@@ -211,6 +211,25 @@
     "status": "ready"
   },
   {
+    "name": "churros",
+    "label": "Churros",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "churros.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "churros",
+    "pendingCategory": "Comida",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T03:21:48.448Z",
+    "status": "ready"
+  },
+  {
     "name": "dynamite",
     "label": "Dinamite",
     "description": "",
