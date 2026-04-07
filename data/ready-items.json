@@ -418,9 +418,11 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
+    "siteCategory": "Munição",
+    "ammotype": "ammo_pistol",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-04T06:35:58.281Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-07T09:00:31.661Z",
     "status": "ready"
   },
   {
