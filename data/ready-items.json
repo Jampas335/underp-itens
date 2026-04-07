@@ -1135,26 +1135,6 @@
     "status": "ready"
   },
   {
-    "name": "bs-milkshake",
-    "label": "Milkshake BS",
-    "description": "",
-    "weight": 400,
-    "type": "item",
-    "image": "bs-milkshake.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": true,
-    "rarity": "common",
-    "pendingIconName": "bs-milkshake",
-    "pendingCategory": "Burger Shot",
-    "extraLua": "",
-    "siteCategory": "Burger Shot",
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-07T04:26:12.077Z",
-    "status": "ready"
-  },
-  {
     "name": "strawberry_milkshake",
     "label": "Milkshake de Morango",
     "description": "",
