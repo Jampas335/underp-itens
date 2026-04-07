@@ -552,6 +552,26 @@
     "status": "ready"
   },
   {
+    "name": "black_mamba",
+    "label": "Isca Black Mamba",
+    "description": "",
+    "weight": 30,
+    "type": "item",
+    "image": "black_mamba.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T05:40:46.864Z",
+    "status": "ready"
+  },
+  {
     "name": "shrimp_bait",
     "label": "Isca de camarão",
     "description": "",
