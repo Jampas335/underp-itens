@@ -2217,10 +2217,10 @@
     "extraLua": "",
     "siteCategory": "Rifles & SMGs",
     "decay": 0.05,
-    "ammotype": "ammo-9",
+    "ammotype": "ammo-smg",
     "source": "ready",
     "iconSource": "ready",
-    "createdAt": "2026-04-07T08:54:13.595Z",
+    "createdAt": "2026-04-07T08:54:47.338Z",
     "status": "ready"
   },
   {
