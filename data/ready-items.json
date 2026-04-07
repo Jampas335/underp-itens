@@ -654,6 +654,28 @@
     "status": "ready"
   },
   {
+    "name": "weapon_bullpuprifle",
+    "label": "QBZ",
+    "description": "",
+    "weight": 3400,
+    "type": "weapon",
+    "image": "bullpop.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "bullpop",
+    "pendingCategory": "Rifles & SMGs",
+    "extraLua": "",
+    "siteCategory": "Rifles & SMGs",
+    "decay": 0.1,
+    "ammotype": "ammo_rifle",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T04:39:21.874Z",
+    "status": "ready"
+  },
+  {
     "name": "bs_soda",
     "label": "Refrigerante BS",
     "description": "",
