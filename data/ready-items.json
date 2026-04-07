@@ -223,6 +223,26 @@
     "status": "ready"
   },
   {
+    "name": "ems-bandage",
+    "label": "Bandagem",
+    "description": "",
+    "weight": 80,
+    "type": "item",
+    "image": "ems-bandage.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "ems-bandage",
+    "pendingCategory": "Médico",
+    "extraLua": "",
+    "siteCategory": "Médico",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T23:30:28.343Z",
+    "status": "ready"
+  },
+  {
     "name": "barracuda",
     "label": "Barracuda",
     "description": "",
