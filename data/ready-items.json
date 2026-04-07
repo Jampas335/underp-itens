@@ -397,9 +397,11 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
+    "siteCategory": "Munição",
+    "ammotype": "ammo_lsmg",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-04T06:38:15.089Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-07T09:00:03.823Z",
     "status": "ready"
   },
   {
