@@ -1002,6 +1002,26 @@
     "status": "ready"
   },
   {
+    "name": "water_meter",
+    "label": "medidor de profundidade",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "water_meter.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:44:59.338Z",
+    "status": "ready"
+  },
+  {
     "name": "microondas",
     "label": "Micro-ondas",
     "description": "",
