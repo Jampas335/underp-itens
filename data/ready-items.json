@@ -507,6 +507,28 @@
     "status": "ready"
   },
   {
+    "name": "weapon_assaultsmg",
+    "label": "P90",
+    "description": "",
+    "weight": 2900,
+    "type": "weapon",
+    "image": "assult-smg.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "assult-smg",
+    "pendingCategory": "Rifles & SMGs",
+    "extraLua": "",
+    "siteCategory": "Rifles & SMGs",
+    "decay": 0.05,
+    "ammotype": "ammo_lsmg",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T04:21:05.074Z",
+    "status": "ready"
+  },
+  {
     "name": "fair-popsicle",
     "label": "Picolé",
     "description": "",
