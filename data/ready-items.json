@@ -457,6 +457,28 @@
     "status": "ready"
   },
   {
+    "name": "police_armour",
+    "label": "Colete Tático",
+    "description": "",
+    "weight": 2200,
+    "type": "item",
+    "image": "police_armour.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Proteção",
+    "decay": 0.1,
+    "allowInBackpack": false,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T05:52:08.050Z",
+    "status": "ready"
+  },
+  {
     "name": "algemas_rope",
     "label": "Corda de Algemar",
     "description": "",
