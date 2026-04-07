@@ -444,7 +444,7 @@
     "unique": true,
     "useable": true,
     "shouldClose": true,
-    "rarity": "uncommon",
+    "rarity": "epic",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
@@ -453,7 +453,7 @@
     "allowInBackpack": false,
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-04-07T05:46:48.780Z",
+    "createdAt": "2026-04-07T05:52:40.523Z",
     "status": "ready"
   },
   {
