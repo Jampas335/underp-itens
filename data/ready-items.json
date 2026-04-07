@@ -839,6 +839,26 @@
     "status": "ready"
   },
   {
+    "name": "briefcase_with_money",
+    "label": "Maleta com Dinheiro",
+    "description": "",
+    "weight": 5000,
+    "type": "item",
+    "image": "briefcase_with_money.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:00:07.591Z",
+    "status": "ready"
+  },
+  {
     "name": "microondas",
     "label": "Micro-ondas",
     "description": "",
