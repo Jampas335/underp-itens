@@ -669,6 +669,26 @@
     "status": "ready"
   },
   {
+    "name": "fish6",
+    "label": "Danio",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "fish6.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T08:37:38.921Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_metaldetector",
     "label": "Detector de metais",
     "description": "",
