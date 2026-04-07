@@ -10,15 +10,22 @@ const DEFAULT_VIEW = "pending";
 const RARITY_ORDER = ["common", "uncommon", "rare", "epic", "legendary"];
 const TYPE_ORDER = ["all", "item", "weapon"];
 const IMPLEMENTED_PAGE_SIZE = 48;
+const DEFAULT_CATEGORY_HINTS = [];
 
 // Categorias extraídas do ICONS (prea-inventory) para organização no site
 function buildCategoryList() {
     const cats = new Set();
     if (typeof ICONS !== "undefined") {
-        for (const cat of Object.keys(ICONS)) cats.add(cat);
+        for (const cat of Object.keys(ICONS)) addCategoryToSet(cats, cat);
     }
     // Categorias extras comuns
     ["Armas", "Ferramentas", "Comida", "Bebidas", "Drogas", "Médico", "Mecânica", "Documentos", "Eletrônica", "Policial", "Munição", "Attachments", "Skins", "Outros"].forEach(c => cats.add(c));
+    DEFAULT_CATEGORY_HINTS.forEach((category) => addCategoryToSet(cats, category));
+    (state.customCategories || []).forEach((category) => addCategoryToSet(cats, category));
+    collectItemCategories(state.baseImplementedItems, cats);
+    collectItemCategories(Object.values(state.customImplemented || {}), cats);
+    collectItemCategories(state.readyItems, cats);
+    addCategoryToSet(cats, state.builder?.form?.siteCategory);
     return Array.from(cats).sort((a, b) => a.localeCompare(b, "pt-BR"));
 }
 let CATEGORY_LIST = [];
@@ -57,6 +64,7 @@ const state = {
     basePendingItems: [],
     baseImplementedItems: [],
     customImplemented: {},
+    customCategories: [],
     archivedPending: [],
     readyItems: [],
     readyItemsSha: null,
@@ -77,6 +85,77 @@ const state = {
 };
 
 let toastTimeout = null;
+
+function normalizeCategoryName(value) {
+    return String(value || "").trim();
+}
+
+function addCategoryToSet(targetSet, value) {
+    const normalized = normalizeCategoryName(value);
+    if (normalized) targetSet.add(normalized);
+}
+
+function collectItemCategories(items, targetSet) {
+    for (const item of items || []) {
+        addCategoryToSet(targetSet, item?.siteCategory);
+        addCategoryToSet(targetSet, item?.pendingCategory);
+        addCategoryToSet(targetSet, item?.category);
+    }
+}
+
+function hasRegisteredCategory(value) {
+    const normalized = normalizeCategoryName(value).toLowerCase();
+    if (!normalized) return false;
+    return (state.customCategories || []).some((category) => category.toLowerCase() === normalized);
+}
+
+function registerCategory(value) {
+    const normalized = normalizeCategoryName(value);
+    if (!normalized || hasRegisteredCategory(normalized)) return false;
+    state.customCategories.push(normalized);
+    state.customCategories.sort((a, b) => a.localeCompare(b, "pt-BR"));
+    refreshCategoryRegistry();
+    return true;
+}
+
+function refreshCategoryRegistry() {
+    CATEGORY_LIST = buildCategoryList();
+    syncCategorySelectOptions();
+}
+
+function syncCategorySelectOptions() {
+    const select = document.getElementById("itemCategorySelect");
+    if (!select) return;
+
+    const customInput = document.getElementById("itemCategoryCustomInput");
+    const currentSelectValue = select.value;
+    const currentCustomValue = customInput ? customInput.value : "";
+    const activeCategory = currentSelectValue === "__custom__"
+        ? currentCustomValue
+        : (state.builder.form?.siteCategory || currentSelectValue || "");
+
+    select.innerHTML = `
+        <option value="">Sem categoria</option>
+        ${CATEGORY_LIST.map((category) => `<option value="${escapeHtmlAttribute(category)}">${escapeHtml(category)}</option>`).join("")}
+        <option value="__custom__">+ Categoria personalizada...</option>
+    `;
+
+    const hasOption = CATEGORY_LIST.some((category) => category === activeCategory);
+    if (activeCategory && !hasOption) {
+        select.value = "__custom__";
+        if (customInput) {
+            customInput.classList.remove("hidden");
+            customInput.value = activeCategory;
+        }
+        return;
+    }
+
+    select.value = activeCategory || "";
+    if (customInput) {
+        customInput.classList.add("hidden");
+        customInput.value = "";
+    }
+}
 
 // ============================================================
 //  INIT
@@ -101,9 +180,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function bootstrapData() {
     applyBranding();
-    CATEGORY_LIST = buildCategoryList();
     state.basePendingItems = flattenPendingItems();
     state.baseImplementedItems = (IMPLEMENTED_ITEMS || []).map(normalizeImplementedItem);
+    refreshCategoryRegistry();
 }
 
 function applyBranding() {
@@ -197,6 +276,8 @@ function ensureCategoryField() {
             customInput.value = "";
         }
     });
+
+    syncCategorySelectOptions();
 }
 
 function ensureImplementedCategoryFilter() {
@@ -359,9 +440,14 @@ function loadWorkspaceState() {
                 name, normalizeLocalItem(item),
             ])
         );
+        state.customCategories = Array.isArray(parsed.customCategories)
+            ? Array.from(new Set(parsed.customCategories.map(normalizeCategoryName).filter(Boolean)))
+                .sort((a, b) => a.localeCompare(b, "pt-BR"))
+            : [];
         state.archivedPending = Array.isArray(parsed.archivedPending)
             ? parsed.archivedPending.filter(Boolean)
             : [];
+        refreshCategoryRegistry();
     } catch (err) {
         console.error("Falha ao carregar estado local:", err);
     }
@@ -370,6 +456,7 @@ function loadWorkspaceState() {
 function saveWorkspaceState() {
     const payload = {
         customImplemented: state.customImplemented,
+        customCategories: state.customCategories,
         archivedPending: Array.from(new Set(state.archivedPending)).sort(),
     };
     localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
@@ -523,6 +610,7 @@ async function loadReadyItems(options = {}) {
         if (revealName) {
             revealReadyItem(revealName, { preserveSearch });
         }
+        refreshCategoryRegistry();
         renderReadyStatusBar(`${statusPrefix}${state.readyItems.length} item(s) prontos carregados.`, "ok");
     } catch (err) {
         console.error("Erro ao carregar prontos:", err);
@@ -1713,6 +1801,7 @@ function saveBuilderItem() {
 
     const previewItem = buildBuilderItemPreview();
     const previousName = state.builder.editingLocalName;
+    registerCategory(previewItem.siteCategory);
 
     if (previousName && previousName !== previewItem.name) {
         delete state.customImplemented[previousName];
@@ -1758,6 +1847,7 @@ async function handlePublishAsReady() {
     }
 
     const previewItem = buildBuilderItemPreview();
+    registerCategory(previewItem.siteCategory);
     const readyItem = {
         ...previewItem,
         source: "ready",
@@ -1847,7 +1937,8 @@ function resetLocalWorkspace() {
         templateName: null, templateSource: null, form: null, iconSource: "pending",
         uploadedIconBase64: null, uploadedIconMime: "image/png", uploadedIconFileName: null,
     };
-    localStorage.removeItem(STORAGE_KEY);
+    refreshCategoryRegistry();
+    saveWorkspaceState();
     renderAll();
     showToast("Workspace local limpo.");
 }
