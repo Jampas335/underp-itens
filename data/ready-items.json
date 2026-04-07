@@ -572,6 +572,28 @@
     "status": "ready"
   },
   {
+    "name": "weapon_musket",
+    "label": "Mosquete",
+    "description": "",
+    "weight": 4500,
+    "type": "weapon",
+    "image": "musket.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "musket",
+    "pendingCategory": "Rifles & SMGs",
+    "extraLua": "",
+    "siteCategory": "Rifles & SMGs",
+    "decay": 0.1,
+    "ammotype": "ammo_mosquet",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T04:55:16.561Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_combatpistol",
     "label": "P250",
     "description": "",
