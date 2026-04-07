@@ -983,12 +983,13 @@
     "pendingIconName": "weapon_g17",
     "pendingCategory": "Manual",
     "extraLua": "",
+    "siteCategory": "Pistolas",
     "decay": 0.1,
-    "ammotype": "ammo-9",
+    "ammotype": "ammo-pistol",
     "consume": 0,
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-04T06:20:53.199Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-07T08:55:50.888Z",
     "status": "ready"
   },
   {
