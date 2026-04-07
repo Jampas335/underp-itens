@@ -163,6 +163,26 @@
     "status": "ready"
   },
   {
+    "name": "catfish",
+    "label": "Bagre",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "catfish.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T08:40:30.140Z",
+    "status": "ready"
+  },
+  {
     "name": "banana",
     "label": "Banana",
     "description": "",
