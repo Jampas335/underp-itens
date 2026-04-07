@@ -613,6 +613,28 @@
     "status": "ready"
   },
   {
+    "name": "weapon_smg",
+    "label": "MP5",
+    "description": "",
+    "weight": 2540,
+    "type": "weapon",
+    "image": "smg.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "smg",
+    "pendingCategory": "Rifles & SMGs",
+    "extraLua": "",
+    "siteCategory": "Rifles & SMGs",
+    "decay": 0.1,
+    "ammotype": "ammo_smg",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T05:00:04.021Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_combatpistol",
     "label": "P250",
     "description": "",
