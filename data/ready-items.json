@@ -1,5 +1,27 @@
 [
   {
+    "name": "ziptie",
+    "label": "Abraçadeira",
+    "description": "",
+    "weight": 2,
+    "type": "item",
+    "image": "ziptie.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "ziptie",
+    "pendingCategory": "Policial",
+    "extraLua": "",
+    "siteCategory": "",
+    "decay": 0.1,
+    "consume": 1,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:07:37.502Z",
+    "status": "ready"
+  },
+  {
     "name": "assult_rifle",
     "label": "AK-47",
     "description": "",
