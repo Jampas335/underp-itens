@@ -662,6 +662,7 @@ code, pre {
     gap: 6px;
     align-items: flex-start;
     min-height: 26px;
+    flex-wrap: wrap;
 }
 
 .status-pill,
@@ -706,6 +707,47 @@ code, pre {
 .rarity-rare { color: #60a5fa; text-shadow: 0 0 8px rgba(96, 165, 250, 0.2); }
 .rarity-epic { color: #c084fc; text-shadow: 0 0 8px rgba(192, 132, 252, 0.2); }
 .rarity-legendary { color: #fbbf24; text-shadow: 0 0 10px rgba(251, 191, 36, 0.25); }
+
+/* === CATEGORY PILL === */
+.category-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 9px;
+    border-radius: 999px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background: rgba(45, 212, 191, 0.10);
+    color: #5eead4;
+    border: 1px solid rgba(45, 212, 191, 0.18);
+    text-shadow: 0 0 8px rgba(45, 212, 191, 0.15);
+}
+
+[data-theme="day"] .category-pill {
+    background: rgba(13, 148, 136, 0.10);
+    color: #0d9488;
+    border-color: rgba(13, 148, 136, 0.20);
+    text-shadow: none;
+}
+
+/* === CATEGORY INPUT ROW (Builder) === */
+.category-input-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.category-input-row select {
+    flex: 1;
+    min-width: 0;
+}
+
+.category-input-row input {
+    flex: 1;
+    min-width: 0;
+}
 
 /* === ITEM PREVIEW === */
 .item-preview {

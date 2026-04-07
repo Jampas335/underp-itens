@@ -11,6 +11,18 @@ const RARITY_ORDER = ["common", "uncommon", "rare", "epic", "legendary"];
 const TYPE_ORDER = ["all", "item", "weapon"];
 const IMPLEMENTED_PAGE_SIZE = 48;
 
+// Categorias extraídas do ICONS (prea-inventory) para organização no site
+function buildCategoryList() {
+    const cats = new Set();
+    if (typeof ICONS !== "undefined") {
+        for (const cat of Object.keys(ICONS)) cats.add(cat);
+    }
+    // Categorias extras comuns
+    ["Armas", "Ferramentas", "Comida", "Bebidas", "Drogas", "Médico", "Mecânica", "Documentos", "Eletrônica", "Policial", "Munição", "Attachments", "Skins", "Outros"].forEach(c => cats.add(c));
+    return Array.from(cats).sort((a, b) => a.localeCompare(b, "pt-BR"));
+}
+let CATEGORY_LIST = [];
+
 const ITEM_EXPORT_ORDER = [
     "name", "label", "weight", "type", "image",
     "unique", "useable", "shouldClose", "description",
@@ -22,6 +34,7 @@ const ITEM_META_KEYS = new Set([
     "savedAt", "extraLua", "imageSource", "iconSource",
     "createdAt", "status", "uploadedIconBase64",
     "uploadedIconMime", "uploadedIconFileName",
+    "siteCategory",
 ]);
 
 // ============================================================
@@ -36,8 +49,10 @@ const state = {
     pendingCategory: "all",
     implementedType: "all",
     implementedRarity: "all",
+    implementedCategory: "all",
     readyType: "all",
     readyRarity: "all",
+    readyCategory: "all",
     implementedPage: 0,
     basePendingItems: [],
     baseImplementedItems: [],
@@ -72,8 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
     bootstrapData();
     loadWorkspaceState();
     ensureAllowInBackpackField();
+    ensureCategoryField();
     ensureLuaImportPanel();
     ensureReadyBatchExportButton();
+    ensureImplementedCategoryFilter();
+    ensureReadyCategoryFilter();
     bindEvents();
     renderAll();
     initFadeInObserver();
@@ -82,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function bootstrapData() {
     applyBranding();
+    CATEGORY_LIST = buildCategoryList();
     state.basePendingItems = flattenPendingItems();
     state.baseImplementedItems = (IMPLEMENTED_ITEMS || []).map(normalizeImplementedItem);
 }
@@ -118,6 +137,67 @@ function ensureAllowInBackpackField() {
         </select>
     `;
     grid.insertBefore(wrapper, templateField);
+}
+
+function ensureCategoryField() {
+    if (document.getElementById("itemCategorySelect")) return;
+
+    const descField = document.getElementById("itemDescriptionInput")?.closest(".field");
+    if (!descField) return;
+
+    const wrapper = document.createElement("label");
+    wrapper.className = "field";
+    wrapper.innerHTML = `
+        <span>Categoria <i class="info-tip" data-tip="Categoria para organização no site. Não afeta nada no servidor — é puramente visual para filtrar e agrupar itens.">i</i></span>
+        <div class="category-input-row">
+            <select id="itemCategorySelect">
+                <option value="">Sem categoria</option>
+                ${CATEGORY_LIST.map(c => `<option value="${escapeHtmlAttribute(c)}">${escapeHtml(c)}</option>`).join("")}
+                <option value="__custom__">+ Categoria personalizada...</option>
+            </select>
+            <input type="text" id="itemCategoryCustomInput" class="hidden" placeholder="Nome da categoria...">
+        </div>
+    `;
+    descField.insertAdjacentElement("afterend", wrapper);
+
+    // Handle custom category toggle
+    const select = wrapper.querySelector("#itemCategorySelect");
+    const customInput = wrapper.querySelector("#itemCategoryCustomInput");
+    select.addEventListener("change", () => {
+        if (select.value === "__custom__") {
+            customInput.classList.remove("hidden");
+            customInput.focus();
+        } else {
+            customInput.classList.add("hidden");
+            customInput.value = "";
+        }
+    });
+}
+
+function ensureImplementedCategoryFilter() {
+    const filterStack = document.querySelector("#implementedView .filter-stack");
+    if (!filterStack || document.getElementById("implementedCategoryFilter")) return;
+
+    const block = document.createElement("div");
+    block.className = "filter-block";
+    block.innerHTML = `
+        <span class="filter-title">Categoria</span>
+        <div class="chip-group" id="implementedCategoryFilter"></div>
+    `;
+    filterStack.appendChild(block);
+}
+
+function ensureReadyCategoryFilter() {
+    const filterStack = document.querySelector("#readyView .filter-stack");
+    if (!filterStack || document.getElementById("readyCategoryFilter")) return;
+
+    const block = document.createElement("div");
+    block.className = "filter-block";
+    block.innerHTML = `
+        <span class="filter-title">Categoria</span>
+        <div class="chip-group" id="readyCategoryFilter"></div>
+    `;
+    filterStack.appendChild(block);
 }
 
 function ensureLuaImportPanel() {
@@ -553,8 +633,12 @@ function bindEvents() {
     document.getElementById("pendingCategoryFilter").addEventListener("click", handlePendingChipClick);
     document.getElementById("implementedTypeFilter").addEventListener("click", handleImplementedTypeClick);
     document.getElementById("implementedRarityFilter").addEventListener("click", handleImplementedRarityClick);
+    const implCatFilter = document.getElementById("implementedCategoryFilter");
+    if (implCatFilter) implCatFilter.addEventListener("click", handleImplementedCategoryClick);
     document.getElementById("readyTypeFilter").addEventListener("click", handleReadyTypeClick);
     document.getElementById("readyRarityFilter").addEventListener("click", handleReadyRarityClick);
+    const readyCatFilter = document.getElementById("readyCategoryFilter");
+    if (readyCatFilter) readyCatFilter.addEventListener("click", handleReadyCategoryClick);
 
     // Grids
     document.getElementById("pendingGrid").addEventListener("click", handlePendingGridClick);
@@ -694,6 +778,21 @@ function handleReadyRarityClick(e) {
     const btn = e.target.closest("[data-rarity]");
     if (!btn) return;
     state.readyRarity = btn.dataset.rarity;
+    renderReadySection();
+}
+
+function handleImplementedCategoryClick(e) {
+    const btn = e.target.closest("[data-category]");
+    if (!btn) return;
+    state.implementedCategory = btn.dataset.category;
+    state.implementedPage = 0;
+    renderImplementedSection();
+}
+
+function handleReadyCategoryClick(e) {
+    const btn = e.target.closest("[data-category]");
+    if (!btn) return;
+    state.readyCategory = btn.dataset.category;
     renderReadySection();
 }
 
@@ -877,6 +976,7 @@ function renderImplementedSection() {
 function renderImplementedFilters() {
     const typeContainer = document.getElementById("implementedTypeFilter");
     const rarityContainer = document.getElementById("implementedRarityFilter");
+    const categoryContainer = document.getElementById("implementedCategoryFilter");
     const items = getAllImplementedItems();
 
     const typeCounts = new Map([["all", items.length]]);
@@ -895,6 +995,31 @@ function renderImplementedFilters() {
     rarityContainer.innerHTML = ["all", ...RARITY_ORDER].map((r) =>
         `<button class="chip-btn ${state.implementedRarity === r ? "active" : ""}" data-rarity="${r}" type="button">${escapeHtml(r === "all" ? "Todas" : r)} (${rarityCounts.get(r) || 0})</button>`
     ).join("");
+
+    // Category filter
+    if (categoryContainer) {
+        const catCounts = new Map();
+        let withCat = 0;
+        for (const item of items) {
+            const cat = item.siteCategory || "";
+            if (cat) {
+                withCat++;
+                catCounts.set(cat, (catCounts.get(cat) || 0) + 1);
+            }
+        }
+        const sortedCats = Array.from(catCounts.entries()).sort((a, b) => a[0].localeCompare(b[0], "pt-BR"));
+        const noCatCount = items.length - withCat;
+        const chips = [
+            `<button class="chip-btn ${state.implementedCategory === "all" ? "active" : ""}" data-category="all" type="button">Todas (${items.length})</button>`,
+            ...sortedCats.map(([cat, count]) =>
+                `<button class="chip-btn ${state.implementedCategory === cat ? "active" : ""}" data-category="${escapeHtmlAttribute(cat)}" type="button">${escapeHtml(cat)} (${count})</button>`
+            ),
+        ];
+        if (noCatCount > 0 && sortedCats.length > 0) {
+            chips.push(`<button class="chip-btn ${state.implementedCategory === "__none__" ? "active" : ""}" data-category="__none__" type="button">Sem categoria (${noCatCount})</button>`);
+        }
+        categoryContainer.innerHTML = chips.join("");
+    }
 }
 
 function renderImplementedGrid() {
@@ -934,6 +1059,9 @@ function renderImplementedCard(item) {
     const metaParts = [item.type, `${item.weight}g`, item.image || "sem-imagem"];
 
     const candidates = buildCandidateString(getImplementedImageCandidates(item));
+    const catBadge = item.siteCategory
+        ? `<span class="category-pill">${escapeHtml(item.siteCategory)}</span>`
+        : "";
 
     const actionButtons = item.source === "local"
         ? `<button class="card-action primary" data-action="copy-export" data-name="${escapeHtmlAttribute(item.name)}" type="button">Copiar export</button>
@@ -947,6 +1075,7 @@ function renderImplementedCard(item) {
             <div class="item-status-row">
                 <span class="source-pill">${escapeHtml(sourceLabel)}</span>
                 <span class="rarity-pill rarity-${escapeHtmlAttribute(item.rarity)}">${escapeHtml(item.rarity)}</span>
+                ${catBadge}
             </div>
             <div class="item-preview">
                 <img data-candidates="${escapeHtmlAttribute(candidates)}" data-label="${escapeHtmlAttribute(item.label || item.name)}" alt="${escapeHtmlAttribute(item.label || item.name)}">
@@ -995,6 +1124,7 @@ function renderReadyStatusBar(message, type) {
 function renderReadyFilters() {
     const typeContainer = document.getElementById("readyTypeFilter");
     const rarityContainer = document.getElementById("readyRarityFilter");
+    const categoryContainer = document.getElementById("readyCategoryFilter");
     const items = state.readyItems;
 
     const typeCounts = new Map([["all", items.length]]);
@@ -1010,6 +1140,31 @@ function renderReadyFilters() {
     rarityContainer.innerHTML = ["all", ...RARITY_ORDER].map((r) =>
         `<button class="chip-btn ${state.readyRarity === r ? "active" : ""}" data-rarity="${r}" type="button">${escapeHtml(r === "all" ? "Todas" : r)} (${rarityCounts.get(r) || 0})</button>`
     ).join("");
+
+    // Category filter
+    if (categoryContainer) {
+        const catCounts = new Map();
+        let withCat = 0;
+        for (const item of items) {
+            const cat = item.siteCategory || "";
+            if (cat) {
+                withCat++;
+                catCounts.set(cat, (catCounts.get(cat) || 0) + 1);
+            }
+        }
+        const sortedCats = Array.from(catCounts.entries()).sort((a, b) => a[0].localeCompare(b[0], "pt-BR"));
+        const noCatCount = items.length - withCat;
+        const chips = [
+            `<button class="chip-btn ${state.readyCategory === "all" ? "active" : ""}" data-category="all" type="button">Todas (${items.length})</button>`,
+            ...sortedCats.map(([cat, count]) =>
+                `<button class="chip-btn ${state.readyCategory === cat ? "active" : ""}" data-category="${escapeHtmlAttribute(cat)}" type="button">${escapeHtml(cat)} (${count})</button>`
+            ),
+        ];
+        if (noCatCount > 0 && sortedCats.length > 0) {
+            chips.push(`<button class="chip-btn ${state.readyCategory === "__none__" ? "active" : ""}" data-category="__none__" type="button">Sem categoria (${noCatCount})</button>`);
+        }
+        categoryContainer.innerHTML = chips.join("");
+    }
 }
 
 function renderReadyGrid() {
@@ -1040,11 +1195,15 @@ function renderReadyGrid() {
     grid.innerHTML = items.map((item) => {
         const candidates = buildCandidateString(getReadyImageCandidates(item));
         const metaParts = [item.type, `${item.weight}g`];
+        const catBadge = item.siteCategory
+            ? `<span class="category-pill">${escapeHtml(item.siteCategory)}</span>`
+            : "";
         return `
             <article class="item-card ready-card">
                 <div class="item-status-row">
                     <span class="status-pill ready-pill">Pronto</span>
                     <span class="rarity-pill rarity-${escapeHtmlAttribute(item.rarity)}">${escapeHtml(item.rarity)}</span>
+                    ${catBadge}
                 </div>
                 <div class="item-preview">
                     <img data-candidates="${escapeHtmlAttribute(candidates)}" data-label="${escapeHtmlAttribute(item.label || item.name)}" alt="${escapeHtmlAttribute(item.label || item.name)}">
@@ -1197,6 +1356,23 @@ function syncBuilderInputs() {
     const imageInput = document.getElementById("itemImageInput");
     imageInput.value = form.image;
     imageInput.readOnly = Boolean(state.builder.activePendingName);
+
+    // Category sync
+    const catSelect = document.getElementById("itemCategorySelect");
+    const catCustom = document.getElementById("itemCategoryCustomInput");
+    if (catSelect) {
+        const cat = form.siteCategory || "";
+        // Check if value exists in select options
+        const optionExists = Array.from(catSelect.options).some(o => o.value === cat);
+        if (cat && !optionExists && cat !== "__custom__") {
+            // Custom value — show custom input
+            catSelect.value = "__custom__";
+            if (catCustom) { catCustom.classList.remove("hidden"); catCustom.value = cat; }
+        } else {
+            catSelect.value = cat;
+            if (catCustom) { catCustom.classList.add("hidden"); catCustom.value = ""; }
+        }
+    }
 }
 
 function syncBuilderFormFromInputs() {
@@ -1228,6 +1404,7 @@ function syncBuilderFormFromInputs() {
         allowInBackpack: document.getElementById("itemAllowInBackpackSelect").value,
         extraLua: document.getElementById("itemExtraLuaInput").value,
         image: imageValue,
+        siteCategory: readCategoryFromInputs(),
     };
     document.getElementById("itemNameInput").value = normalizedName;
     setText("builderImageValue", state.builder.form.image);
@@ -1332,7 +1509,18 @@ function createDefaultFormFromScratch() {
         allowInBackpack: "",
         extraLua: "",
         image: "novo-item.png",
+        siteCategory: "",
     };
+}
+
+function readCategoryFromInputs() {
+    const catSelect = document.getElementById("itemCategorySelect");
+    const catCustom = document.getElementById("itemCategoryCustomInput");
+    if (!catSelect) return "";
+    if (catSelect.value === "__custom__") {
+        return catCustom ? catCustom.value.trim() : "";
+    }
+    return catSelect.value || "";
 }
 
 function getTemplateItem() {
@@ -1752,6 +1940,7 @@ function buildBuilderItemPreview() {
         pendingIconName: hasRealPending ? pending.name : "",
         pendingCategory: hasRealPending ? pending.category : "Manual",
         extraLua: form.extraLua.trim(),
+        siteCategory: form.siteCategory || "",
     };
     if (form.decay !== "") item.decay = Number(form.decay);
     if (form.ammotype) item.ammotype = form.ammotype;
@@ -1770,6 +1959,7 @@ function createDefaultFormFromPending(item) {
         unique: false, useable: false, shouldClose: true,
         decay: "", ammotype: "", consume: "", allowArmed: "", allowInBackpack: "", extraLua: "",
         image: item.image,
+        siteCategory: item.category || "",
     };
 }
 
@@ -1795,6 +1985,7 @@ function createFormFromImplementedItem(item, pendingIconName) {
         allowInBackpack: item.allowInBackpack === true ? "true" : item.allowInBackpack === false ? "false" : "",
         extraLua: item.extraLua || buildExtraLuaFromItem(item),
         image: resolvedImage,
+        siteCategory: item.siteCategory || item.pendingCategory || "",
     };
 }
 
@@ -2276,10 +2467,12 @@ function getFilteredImplementedItems() {
     return getAllImplementedItems().filter((item) => {
         const typeMatch = state.implementedType === "all" || item.type === state.implementedType;
         const rarityMatch = state.implementedRarity === "all" || item.rarity === state.implementedRarity;
-        const haystack = [item.name, item.label, item.description, item.image, item.type, item.rarity]
+        const catMatch = state.implementedCategory === "all" ||
+            (state.implementedCategory === "__none__" ? !item.siteCategory : item.siteCategory === state.implementedCategory);
+        const haystack = [item.name, item.label, item.description, item.image, item.type, item.rarity, item.siteCategory]
             .filter(Boolean).join(" ").toLowerCase();
         const searchMatch = !state.implementedSearch || haystack.includes(state.implementedSearch);
-        return typeMatch && rarityMatch && searchMatch;
+        return typeMatch && rarityMatch && catMatch && searchMatch;
     });
 }
 
@@ -2287,10 +2480,12 @@ function getFilteredReadyItems() {
     return state.readyItems.filter((item) => {
         const typeMatch = state.readyType === "all" || item.type === state.readyType;
         const rarityMatch = state.readyRarity === "all" || item.rarity === state.readyRarity;
-        const haystack = [item.name, item.label, item.description, item.type, item.rarity]
+        const catMatch = state.readyCategory === "all" ||
+            (state.readyCategory === "__none__" ? !item.siteCategory : item.siteCategory === state.readyCategory);
+        const haystack = [item.name, item.label, item.description, item.type, item.rarity, item.siteCategory]
             .filter(Boolean).join(" ").toLowerCase();
         const searchMatch = !state.readySearch || haystack.includes(state.readySearch);
-        return typeMatch && rarityMatch && searchMatch;
+        return typeMatch && rarityMatch && catMatch && searchMatch;
     });
 }
 
