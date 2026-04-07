@@ -1227,16 +1227,16 @@
     "type": "item",
     "image": "fishing_rod_normal.png",
     "unique": true,
-    "useable": false,
+    "useable": true,
     "shouldClose": true,
     "rarity": "common",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "Pesca",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-04-07T04:57:20.479Z",
+    "createdAt": "2026-04-07T05:03:33.965Z",
     "status": "ready"
   }
 ]
