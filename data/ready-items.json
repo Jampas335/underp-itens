@@ -460,6 +460,26 @@
     "status": "ready"
   },
   {
+    "name": "carp",
+    "label": "Carpa",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "carp.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T08:39:00.049Z",
+    "status": "ready"
+  },
+  {
     "name": "lucky_hat",
     "label": "Chapeu da sorte",
     "description": "",
