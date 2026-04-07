@@ -854,25 +854,6 @@
     "status": "ready"
   },
   {
-    "name": "bs-weiner",
-    "label": "Hotdog-bs",
-    "description": "",
-    "weight": 350,
-    "type": "item",
-    "image": "bs-weiner.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": true,
-    "rarity": "common",
-    "pendingIconName": "bs-weiner",
-    "pendingCategory": "Burger Shot",
-    "extraLua": "",
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-07T03:50:01.747Z",
-    "status": "ready"
-  },
-  {
     "name": "black_mamba",
     "label": "Isca Black Mamba",
     "description": "",
