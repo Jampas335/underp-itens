@@ -415,6 +415,28 @@
     "status": "ready"
   },
   {
+    "name": "heavy_armour",
+    "label": "Colete Pesado",
+    "description": "",
+    "weight": 3200,
+    "type": "item",
+    "image": "heavy_armour.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "decay": 0.1,
+    "allowInBackpack": false,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T05:45:37.382Z",
+    "status": "ready"
+  },
+  {
     "name": "algemas_rope",
     "label": "Corda de Algemar",
     "description": "",
