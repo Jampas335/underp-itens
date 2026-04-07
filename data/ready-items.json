@@ -521,6 +521,26 @@
     "status": "ready"
   },
   {
+    "name": "diving_tube",
+    "label": "Cilindro de oxigênio",
+    "description": "",
+    "weight": 2000,
+    "type": "item",
+    "image": "diving_tube.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T08:24:55.312Z",
+    "status": "ready"
+  },
+  {
     "name": "light_armour",
     "label": "Colete Leve",
     "description": "",
