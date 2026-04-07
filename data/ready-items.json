@@ -1094,6 +1094,26 @@
     "status": "ready"
   },
   {
+    "name": "wipers",
+    "label": "Limpadores de Parabrisa",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "wipers.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "wipers",
+    "pendingCategory": "Peças de Veículo",
+    "extraLua": "",
+    "siteCategory": "Peças de Veículo",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T07:42:53.049Z",
+    "status": "ready"
+  },
+  {
     "name": "lockpick",
     "label": "Lockpick",
     "description": "",
