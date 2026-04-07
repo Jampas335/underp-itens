@@ -325,6 +325,26 @@
     "status": "ready"
   },
   {
+    "name": "bomba_caseira",
+    "label": "Bomba Caseira",
+    "description": "",
+    "weight": 1520,
+    "type": "item",
+    "image": "bomba_caseira.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T21:19:19.947Z",
+    "status": "ready"
+  },
+  {
     "name": "chocolate_brownie",
     "label": "Brownie",
     "description": "",
