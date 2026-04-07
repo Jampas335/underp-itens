@@ -452,6 +452,25 @@
     "status": "ready"
   },
   {
+    "name": "orange-juice",
+    "label": "Suco de Laranja",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "orange-juice.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "orange-juice",
+    "pendingCategory": "Bebidas",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T02:44:33.598Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_switchblade",
     "label": "Switchblade",
     "description": "",
