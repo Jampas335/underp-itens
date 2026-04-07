@@ -1179,6 +1179,26 @@
     "status": "ready"
   },
   {
+    "name": "fishing_rod_sport",
+    "label": "Vara de Pesca Esportiva",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "fishing_rod_sport.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T05:01:00.036Z",
+    "status": "ready"
+  },
+  {
     "name": "fishing_rod_normal",
     "label": "Vara de Pesca Normal",
     "description": "",
