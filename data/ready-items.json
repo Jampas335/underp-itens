@@ -214,6 +214,26 @@
     "status": "ready"
   },
   {
+    "name": "miso_ramen",
+    "label": "Lámen",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "miso-ramen.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "miso-ramen",
+    "pendingCategory": "Comida Japonesa",
+    "extraLua": "",
+    "decay": 0.1,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T02:56:36.900Z",
+    "status": "ready"
+  },
+  {
     "name": "lockpick",
     "label": "Lockpick",
     "description": "",
