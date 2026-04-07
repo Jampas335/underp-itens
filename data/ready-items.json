@@ -1005,6 +1005,26 @@
     "status": "ready"
   },
   {
+    "name": "treasure_shovel",
+    "label": "Pa de tesouro",
+    "description": "",
+    "weight": 1000,
+    "type": "item",
+    "image": "treasure_shovel.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:01:50.884Z",
+    "status": "ready"
+  },
+  {
     "name": "fair-popsicle",
     "label": "Picolé",
     "description": "",
