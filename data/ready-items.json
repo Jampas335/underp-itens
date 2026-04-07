@@ -1219,6 +1219,26 @@
     "status": "ready"
   },
   {
+    "name": "fishing_rod_advanced",
+    "label": "Vara de Pesca Avançada",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "fishing_rod_advanced.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T05:05:53.262Z",
+    "status": "ready"
+  },
+  {
     "name": "fishing_rod_sport",
     "label": "Vara de Pesca Esportiva",
     "description": "",
