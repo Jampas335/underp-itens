@@ -421,26 +421,6 @@
     "status": "ready"
   },
   {
-    "name": "bs-patty",
-    "label": "Carne de Hamburguer",
-    "description": "",
-    "weight": 100,
-    "type": "item",
-    "image": "bs-patty.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": true,
-    "rarity": "common",
-    "pendingIconName": "bs-patty",
-    "pendingCategory": "Burger Shot",
-    "extraLua": "",
-    "siteCategory": "Burger Shot",
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-07T05:19:02.161Z",
-    "status": "ready"
-  },
-  {
     "name": "patty",
     "label": "Carne de Hamburguer",
     "description": "",
