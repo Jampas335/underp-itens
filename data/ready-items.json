@@ -602,6 +602,26 @@
     "status": "ready"
   },
   {
+    "name": "dry_station",
+    "label": "Estacao de secagem",
+    "description": "",
+    "weight": 5000,
+    "type": "item",
+    "image": "dry_station.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:22:40.555Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_g17",
     "label": "G17",
     "description": "",
