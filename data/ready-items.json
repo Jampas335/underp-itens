@@ -203,6 +203,26 @@
     "status": "ready"
   },
   {
+    "name": "bs_fries",
+    "label": "Batata Frita",
+    "description": "",
+    "weight": 210,
+    "type": "item",
+    "image": "bs-fries.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "bs-fries",
+    "pendingCategory": "Burger Shot",
+    "extraLua": "",
+    "siteCategory": "Burger Shot",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:50:07.315Z",
+    "status": "ready"
+  },
+  {
     "name": "bs-fries",
     "label": "Batata Frita-bs",
     "description": "",
