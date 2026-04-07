@@ -1564,6 +1564,26 @@
     "status": "ready"
   },
   {
+    "name": "wheels",
+    "label": "Rodas",
+    "description": "",
+    "weight": 30000,
+    "type": "item",
+    "image": "wheels.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "wheels",
+    "pendingCategory": "Peças de Veículo",
+    "extraLua": "",
+    "siteCategory": "Peças de Veículo",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T07:28:22.512Z",
+    "status": "ready"
+  },
+  {
     "name": "bs-donut",
     "label": "Rosquinha-bs",
     "description": "",
