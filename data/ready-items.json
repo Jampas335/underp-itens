@@ -407,8 +407,8 @@
     "weight": 250,
     "type": "item",
     "image": "bs-raw-patty.png",
-    "unique": true,
-    "useable": true,
+    "unique": false,
+    "useable": false,
     "shouldClose": true,
     "rarity": "common",
     "pendingIconName": "bs-raw-patty",
@@ -417,7 +417,7 @@
     "siteCategory": "Comida",
     "source": "ready",
     "iconSource": "pending",
-    "createdAt": "2026-04-07T06:55:05.602Z",
+    "createdAt": "2026-04-07T06:56:52.566Z",
     "status": "ready"
   },
   {
