@@ -1842,6 +1842,26 @@
     "status": "ready"
   },
   {
+    "name": "suspension",
+    "label": "Suspensão",
+    "description": "",
+    "weight": 2000,
+    "type": "item",
+    "image": "suspension.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "suspension",
+    "pendingCategory": "Peças de Veículo",
+    "extraLua": "",
+    "siteCategory": "Peças de Veículo",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T07:35:45.908Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_switchblade",
     "label": "Switchblade",
     "description": "",
