@@ -831,6 +831,27 @@
     "status": "ready"
   },
   {
+    "name": "corndog",
+    "label": "Hotdog no Palito",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "fair-corndog.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "fair-corndog",
+    "pendingCategory": "Comida",
+    "extraLua": "",
+    "siteCategory": "Comida",
+    "decay": 0.8,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:59:15.992Z",
+    "status": "ready"
+  },
+  {
     "name": "bs-weiner",
     "label": "Hotdog-bs",
     "description": "",
