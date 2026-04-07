@@ -428,12 +428,12 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "Proteção",
     "decay": 0.1,
     "allowInBackpack": false,
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-04-07T05:45:37.382Z",
+    "createdAt": "2026-04-07T05:46:48.780Z",
     "status": "ready"
   },
   {
