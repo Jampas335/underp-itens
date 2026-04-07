@@ -38,6 +38,25 @@
     "status": "ready"
   },
   {
+    "name": "banana",
+    "label": "Banana",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "banana.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "banana",
+    "pendingCategory": "Comida",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T03:14:02.458Z",
+    "status": "ready"
+  },
+  {
     "name": "bandages",
     "label": "Bandage",
     "description": "",
