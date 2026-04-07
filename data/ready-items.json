@@ -709,6 +709,25 @@
     "status": "ready"
   },
   {
+    "name": "bag",
+    "label": "Saco",
+    "description": "",
+    "weight": 10,
+    "type": "item",
+    "image": "bs-bag.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "bs-bag",
+    "pendingCategory": "Burger Shot",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T04:34:06.627Z",
+    "status": "ready"
+  },
+  {
     "name": "sandwich",
     "label": "Sanduíche",
     "description": "",
