@@ -412,6 +412,26 @@
     "status": "ready"
   },
   {
+    "name": "katsu_sandwich",
+    "label": "Sanduíche Katsu",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "katsu-sandwich.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "katsu-sandwich",
+    "pendingCategory": "Comida Japonesa",
+    "extraLua": "",
+    "decay": 0.1,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T02:38:14.966Z",
+    "status": "ready"
+  },
+  {
     "name": "bs_icecream",
     "label": "Sorvete BS",
     "description": "",
