@@ -812,6 +812,27 @@
     "status": "ready"
   },
   {
+    "name": "weiner",
+    "label": "Hotdog",
+    "description": "",
+    "weight": 350,
+    "type": "item",
+    "image": "bs-weiner.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "bs-weiner",
+    "pendingCategory": "Burger Shot",
+    "extraLua": "",
+    "siteCategory": "Comida",
+    "decay": 0.8,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T07:02:06.093Z",
+    "status": "ready"
+  },
+  {
     "name": "corndog",
     "label": "Hotdog no Palito",
     "description": "",
