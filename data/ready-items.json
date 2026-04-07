@@ -1426,6 +1426,27 @@
     "status": "ready"
   },
   {
+    "name": "spike_strips",
+    "label": "Spikes",
+    "description": "",
+    "weight": 3000,
+    "type": "item",
+    "image": "spike-strips.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "spike-strips",
+    "pendingCategory": "Policial",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "decay": 0.1,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:20:18.705Z",
+    "status": "ready"
+  },
+  {
     "name": "orange-juice",
     "label": "Suco de Laranja",
     "description": "",
