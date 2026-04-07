@@ -813,6 +813,26 @@
     "status": "ready"
   },
   {
+    "name": "jerry-can",
+    "label": "Galão de Gasolina",
+    "description": "",
+    "weight": 10000,
+    "type": "item",
+    "image": "jerry-can.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "jerry-can",
+    "pendingCategory": "Ferramentas",
+    "extraLua": "",
+    "siteCategory": "Ferramentas",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T07:16:01.473Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_petrolcan",
     "label": "Gasolina",
     "description": "",
