@@ -820,7 +820,7 @@
     "name": "dynamite",
     "label": "Dinamite",
     "description": "",
-    "weight": 500,
+    "weight": 1250,
     "type": "item",
     "image": "dynamite.png",
     "unique": false,
@@ -833,7 +833,7 @@
     "siteCategory": "Explosivos",
     "source": "ready",
     "iconSource": "ready",
-    "createdAt": "2026-04-07T09:06:54.408Z",
+    "createdAt": "2026-04-07T21:21:51.112Z",
     "status": "ready"
   },
   {
