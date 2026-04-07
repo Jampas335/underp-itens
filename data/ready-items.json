@@ -2215,11 +2215,12 @@
     "pendingIconName": "machine-pistol",
     "pendingCategory": "Pistolas",
     "extraLua": "",
+    "siteCategory": "Rifles & SMGs",
     "decay": 0.05,
     "ammotype": "ammo-9",
     "source": "ready",
-    "iconSource": "pending",
-    "createdAt": "2026-04-06T18:50:37.634Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-07T08:54:13.595Z",
     "status": "ready"
   },
   {
