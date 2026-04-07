@@ -1114,6 +1114,27 @@
     "status": "ready"
   },
   {
+    "name": "milkshake",
+    "label": "Milkshake",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "bs-milkshake.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "bs-milkshake",
+    "pendingCategory": "Burger Shot",
+    "extraLua": "",
+    "siteCategory": "Bebidas",
+    "decay": 0.8,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T07:05:21.099Z",
+    "status": "ready"
+  },
+  {
     "name": "bs-milkshake",
     "label": "Milkshake BS",
     "description": "",
