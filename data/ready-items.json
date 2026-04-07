@@ -655,6 +655,26 @@
     "status": "ready"
   },
   {
+    "name": "golden_fish_bait",
+    "label": "Isca de peixe dourado",
+    "description": "",
+    "weight": 30,
+    "type": "item",
+    "image": "golden_fish_bait.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T05:45:09.405Z",
+    "status": "ready"
+  },
+  {
     "name": "dot_bait",
     "label": "Isca Dot Dot",
     "description": "",
