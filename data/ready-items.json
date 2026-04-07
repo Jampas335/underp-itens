@@ -1271,6 +1271,26 @@
     "status": "ready"
   },
   {
+    "name": "fishing_net",
+    "label": "Rede de pesca",
+    "description": "",
+    "weight": 3500,
+    "type": "item",
+    "image": "fishing_net.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:34:13.874Z",
+    "status": "ready"
+  },
+  {
     "name": "redline_bait",
     "label": "Redline",
     "description": "",
