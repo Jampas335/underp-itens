@@ -940,6 +940,26 @@
     "status": "ready"
   },
   {
+    "name": "redline_bait",
+    "label": "Redline",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "redline_bait.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T05:32:55.536Z",
+    "status": "ready"
+  },
+  {
     "name": "bs-murder-meal",
     "label": "Refeição da Morte",
     "description": "",
