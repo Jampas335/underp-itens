@@ -331,6 +331,28 @@
     "status": "ready"
   },
   {
+    "name": "weapon_compactrifle",
+    "label": "Draco",
+    "description": "",
+    "weight": 2500,
+    "type": "weapon",
+    "image": "combat-rifle.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "combat-rifle",
+    "pendingCategory": "Rifles & SMGs",
+    "extraLua": "",
+    "siteCategory": "Rifles & SMGs",
+    "decay": 0.1,
+    "ammotype": "ammo_rifle",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T04:35:00.801Z",
+    "status": "ready"
+  },
+  {
     "name": "angle_grinder",
     "label": "Esmerilhadeira",
     "description": "",
