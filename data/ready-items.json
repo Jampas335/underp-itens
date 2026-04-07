@@ -1114,5 +1114,25 @@
     "iconSource": "pending",
     "createdAt": "2026-04-07T04:51:51.102Z",
     "status": "ready"
+  },
+  {
+    "name": "fishing_rod_normal",
+    "label": "Vara de Pesca Normal",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "fishing_rod_normal.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T04:57:20.479Z",
+    "status": "ready"
   }
 ]
