@@ -104,6 +104,27 @@
     "status": "ready"
   },
   {
+    "name": "alternator",
+    "label": "Alternador",
+    "description": "",
+    "weight": 4200,
+    "type": "item",
+    "image": "alternator.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Veículo",
+    "allowInBackpack": false,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:29:20.556Z",
+    "status": "ready"
+  },
+  {
     "name": "anchor",
     "label": "Ancora",
     "description": "",
