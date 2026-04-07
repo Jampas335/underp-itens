@@ -571,6 +571,26 @@
     "status": "ready"
   },
   {
+    "name": "dot_bait",
+    "label": "Isca Dot Dot",
+    "description": "",
+    "weight": 30,
+    "type": "item",
+    "image": "dot_bait.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T05:29:38.421Z",
+    "status": "ready"
+  },
+  {
     "name": "miso_ramen",
     "label": "Lámen",
     "description": "",
