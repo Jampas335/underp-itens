@@ -2142,5 +2142,25 @@
     "iconSource": "upload",
     "createdAt": "2026-04-07T05:10:06.899Z",
     "status": "ready"
+  },
+  {
+    "name": "steering-wheel",
+    "label": "Volante",
+    "description": "",
+    "weight": 7000,
+    "type": "item",
+    "image": "steering-wheel.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "steering-wheel",
+    "pendingCategory": "Peças de Veículo",
+    "extraLua": "",
+    "siteCategory": "Peças de Veículo",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T07:34:03.572Z",
+    "status": "ready"
   }
 ]
