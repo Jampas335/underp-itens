@@ -676,6 +676,25 @@
     "status": "ready"
   },
   {
+    "name": "bs-murder-meal",
+    "label": "Refeição da Morte",
+    "description": "",
+    "weight": 1000,
+    "type": "item",
+    "image": "bs-murder-meal.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "bs-murder-meal",
+    "pendingCategory": "Burger Shot",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T04:44:43.634Z",
+    "status": "ready"
+  },
+  {
     "name": "bs_soda",
     "label": "Refrigerante BS",
     "description": "",
