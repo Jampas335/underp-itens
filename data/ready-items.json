@@ -222,6 +222,26 @@
     "status": "ready"
   },
   {
+    "name": "barracuda",
+    "label": "Barracuda",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "barracuda.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T08:42:57.100Z",
+    "status": "ready"
+  },
+  {
     "name": "bs_fries",
     "label": "Batata Frita",
     "description": "",
