@@ -2003,6 +2003,26 @@
     "status": "ready"
   },
   {
+    "name": "transmission",
+    "label": "Transmissão",
+    "description": "",
+    "weight": 100000,
+    "type": "item",
+    "image": "transmission.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "transmission",
+    "pendingCategory": "Peças de Veículo",
+    "extraLua": "",
+    "siteCategory": "Peças de Veículo",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T07:30:35.857Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_microsmg",
     "label": "UZI",
     "description": "",
