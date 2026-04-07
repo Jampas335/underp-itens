@@ -1216,6 +1216,26 @@
     "status": "ready"
   },
   {
+    "name": "bs-tomato",
+    "label": "Tomate",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "bs-tomato.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "bs-tomato",
+    "pendingCategory": "Ingredientes",
+    "extraLua": "",
+    "siteCategory": "Ingredientes",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T05:21:28.888Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_gusenberg",
     "label": "Tommy Gun",
     "description": "",
