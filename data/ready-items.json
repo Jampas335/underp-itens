@@ -989,11 +989,11 @@
     "extraLua": "",
     "siteCategory": "Pistolas",
     "decay": 0.1,
-    "ammotype": "ammo-pistol",
+    "ammotype": "ammo_pistol",
     "consume": 0,
     "source": "ready",
     "iconSource": "ready",
-    "createdAt": "2026-04-07T08:55:50.888Z",
+    "createdAt": "2026-04-07T09:04:31.408Z",
     "status": "ready"
   },
   {
