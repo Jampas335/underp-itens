@@ -1101,6 +1101,26 @@
     "status": "ready"
   },
   {
+    "name": "gauze",
+    "label": "Gaze",
+    "description": "",
+    "weight": 2,
+    "type": "item",
+    "image": "gauze.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "gauze",
+    "pendingCategory": "Médico",
+    "extraLua": "",
+    "siteCategory": "Médico",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T23:29:16.855Z",
+    "status": "ready"
+  },
+  {
     "name": "weiner",
     "label": "Hotdog",
     "description": "",
