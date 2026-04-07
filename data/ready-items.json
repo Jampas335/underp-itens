@@ -472,6 +472,26 @@
     "status": "ready"
   },
   {
+    "name": "mochi_icecream",
+    "label": "Sorvete de Mochi",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "mochi-icecream.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "mochi-icecream",
+    "pendingCategory": "Comida Japonesa",
+    "extraLua": "",
+    "decay": 0.1,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T03:10:11.903Z",
+    "status": "ready"
+  },
+  {
     "name": "orange-juice",
     "label": "Suco de Laranja",
     "description": "",
