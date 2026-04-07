@@ -192,6 +192,25 @@
     "status": "ready"
   },
   {
+    "name": "dynamite",
+    "label": "Dinamite",
+    "description": "",
+    "weight": 500,
+    "type": "item",
+    "image": "dynamite.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "dynamite",
+    "pendingCategory": "Explosivos",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T03:13:39.749Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_g17",
     "label": "G17",
     "description": "",
