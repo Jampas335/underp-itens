@@ -2162,6 +2162,26 @@
     "status": "ready"
   },
   {
+    "name": "tarpon",
+    "label": "Tarpon",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "tarpon.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T08:41:43.153Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_machinepistol",
     "label": "TEC-9",
     "description": "",
