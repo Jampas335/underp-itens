@@ -690,6 +690,26 @@
     "status": "ready"
   },
   {
+    "name": "diving_gear",
+    "label": "Equipamento de mergulho",
+    "description": "",
+    "weight": 6000,
+    "type": "item",
+    "image": "diving_gear.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T08:23:12.661Z",
+    "status": "ready"
+  },
+  {
     "name": "angle_grinder",
     "label": "Esmerilhadeira",
     "description": "",
