@@ -34,7 +34,7 @@ const ITEM_META_KEYS = new Set([
     "savedAt", "extraLua", "imageSource", "iconSource",
     "createdAt", "status", "uploadedIconBase64",
     "uploadedIconMime", "uploadedIconFileName",
-    "siteCategory",
+    "siteCategory", "stack",
 ]);
 
 // ============================================================
@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bootstrapData();
     loadWorkspaceState();
     ensureAllowInBackpackField();
+    ensureStackableField();
     ensureCategoryField();
     ensureLuaImportPanel();
     ensureReadyBatchExportButton();
@@ -137,6 +138,30 @@ function ensureAllowInBackpackField() {
         </select>
     `;
     grid.insertBefore(wrapper, templateField);
+}
+
+function ensureStackableField() {
+    if (document.getElementById("itemStackableInput")) return;
+
+    const uniqueToggle = document.getElementById("itemUniqueInput")?.closest(".toggle");
+    const useableToggle = document.getElementById("itemUseableInput")?.closest(".toggle");
+    const toggleGrid = uniqueToggle?.parentElement;
+    if (!uniqueToggle || !useableToggle || !toggleGrid) return;
+
+    uniqueToggle.title = "No prea-inventory, unique = true faz o item nao empilhar.";
+    const uniqueLabel = uniqueToggle.querySelector("span");
+    if (uniqueLabel) {
+        uniqueLabel.innerHTML = `unique <i class="info-tip" data-tip="No prea-inventory, unique = true faz o item nao empilhar e ocupar um slot proprio.">i</i>`;
+    }
+
+    const wrapper = document.createElement("label");
+    wrapper.className = "toggle";
+    wrapper.title = "No prea-inventory, item empilhavel significa unique = false";
+    wrapper.innerHTML = `
+        <input type="checkbox" id="itemStackableInput" checked>
+        <span>stackable <i class="info-tip" data-tip="Controle visual de empilhamento. Quando marcado, o export sai com unique = false.">i</i></span>
+    `;
+    toggleGrid.insertBefore(wrapper, uniqueToggle);
 }
 
 function ensureCategoryField() {
@@ -277,7 +302,7 @@ function normalizeImplementedItem(item) {
         weight: Number(item.weight || 0),
         type: item.type || "item",
         image: item.image || `${item.name}.png`,
-        unique: Boolean(item.unique),
+        unique: readItemUniqueValue(item),
         useable: Boolean(item.useable),
         shouldClose: item.shouldClose !== false,
         rarity: item.rarity || "common",
@@ -299,6 +324,25 @@ function normalizeLocalItem(item) {
         uploadedIconMime: item.uploadedIconMime || "image/png",
         uploadedIconFileName: item.uploadedIconFileName || "",
     };
+}
+
+function readItemUniqueValue(item, fallback = false) {
+    if (item && typeof item.unique === "boolean") return item.unique;
+    if (item && typeof item.stack === "boolean") return !item.stack;
+    return fallback;
+}
+
+function syncStackingControls(source = "unique") {
+    const uniqueInput = document.getElementById("itemUniqueInput");
+    const stackableInput = document.getElementById("itemStackableInput");
+    if (!uniqueInput || !stackableInput) return;
+
+    if (source === "stackable") {
+        uniqueInput.checked = !stackableInput.checked;
+        return;
+    }
+
+    stackableInput.checked = !uniqueInput.checked;
 }
 
 // ============================================================
@@ -666,6 +710,14 @@ function bindEvents() {
 
     // Form live update
     const form = document.getElementById("itemForm");
+    ["input", "change"].forEach((eventName) => {
+        document.getElementById("itemUniqueInput").addEventListener(eventName, () => {
+            syncStackingControls("unique");
+        });
+        document.getElementById("itemStackableInput")?.addEventListener(eventName, () => {
+            syncStackingControls("stackable");
+        });
+    });
     form.addEventListener("input", syncBuilderFormFromInputs);
     form.addEventListener("change", syncBuilderFormFromInputs);
 
@@ -1345,6 +1397,7 @@ function syncBuilderInputs() {
     document.getElementById("itemTypeSelect").value = form.type;
     document.getElementById("itemRaritySelect").value = form.rarity;
     document.getElementById("itemUniqueInput").checked = form.unique;
+    syncStackingControls("unique");
     document.getElementById("itemUseableInput").checked = form.useable;
     document.getElementById("itemShouldCloseInput").checked = form.shouldClose;
     document.getElementById("itemDecayInput").value = form.decay;
@@ -1378,6 +1431,10 @@ function syncBuilderInputs() {
 function syncBuilderFormFromInputs() {
     if (!state.builder.form) return;
     const currentForm = state.builder.form;
+    const stackableInput = document.getElementById("itemStackableInput");
+    const uniqueValue = stackableInput
+        ? !stackableInput.checked
+        : document.getElementById("itemUniqueInput").checked;
     const normalizedName = document.getElementById("itemNameInput").value.trim().toLowerCase().replace(/\s+/g, "-");
     let imageValue = document.getElementById("itemImageInput").value.trim();
     const isManualBuilder = !state.builder.activePendingName;
@@ -1394,7 +1451,7 @@ function syncBuilderFormFromInputs() {
         weight: document.getElementById("itemWeightInput").value.trim(),
         type: document.getElementById("itemTypeSelect").value,
         rarity: document.getElementById("itemRaritySelect").value,
-        unique: document.getElementById("itemUniqueInput").checked,
+        unique: uniqueValue,
         useable: document.getElementById("itemUseableInput").checked,
         shouldClose: document.getElementById("itemShouldCloseInput").checked,
         decay: document.getElementById("itemDecayInput").value.trim(),
@@ -1975,7 +2032,7 @@ function createFormFromImplementedItem(item, pendingIconName) {
         weight: String(item.weight ?? 0),
         type: item.type || "item",
         rarity: item.rarity || "common",
-        unique: Boolean(item.unique),
+        unique: readItemUniqueValue(item),
         useable: Boolean(item.useable),
         shouldClose: item.shouldClose !== false,
         decay: item.decay !== undefined && item.decay !== null ? String(item.decay) : "",
@@ -2147,7 +2204,7 @@ function applyImportedItemToBuilder(importedItem) {
         weight: readImportedNumberString(importedItem.weight, current.weight),
         type: readImportedEnum(importedItem.type, ["item", "weapon"], current.type),
         rarity: readImportedEnum(importedItem.rarity, RARITY_ORDER, current.rarity),
-        unique: readImportedBoolean(importedItem.unique, current.unique),
+        unique: readImportedUniqueValue(importedItem, current.unique),
         useable: readImportedBoolean(importedItem.useable, current.useable),
         shouldClose: readImportedBoolean(importedItem.shouldClose, current.shouldClose),
         decay: readImportedOptionalNumberString(importedItem.decay, current.decay),
@@ -2184,6 +2241,12 @@ function readImportedOptionalNumberString(value, fallback) {
 
 function readImportedBoolean(value, fallback) {
     return typeof value === "boolean" ? value : fallback;
+}
+
+function readImportedUniqueValue(importedItem, fallback) {
+    if (typeof importedItem?.unique === "boolean") return importedItem.unique;
+    if (typeof importedItem?.stack === "boolean") return !importedItem.stack;
+    return fallback;
 }
 
 function readImportedEnum(value, allowed, fallback) {
