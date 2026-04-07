@@ -663,6 +663,26 @@
     "status": "ready"
   },
   {
+    "name": "fire-extinguisher",
+    "label": "Extintor",
+    "description": "",
+    "weight": 10000,
+    "type": "item",
+    "image": "fire-extinguisher.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "fire-extinguisher",
+    "pendingCategory": "Ferramentas",
+    "extraLua": "",
+    "siteCategory": "Ferramentas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:32:50.117Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_g17",
     "label": "G17",
     "description": "",
