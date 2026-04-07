@@ -1218,6 +1218,26 @@
     "status": "ready"
   },
   {
+    "name": "engine",
+    "label": "Motor",
+    "description": "",
+    "weight": 100000,
+    "type": "item",
+    "image": "engine.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "engine",
+    "pendingCategory": "Peças de Veículo",
+    "extraLua": "",
+    "siteCategory": "Peças de Veículo",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T07:29:34.129Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_smg",
     "label": "MP5",
     "description": "",
