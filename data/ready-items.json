@@ -1070,5 +1070,27 @@
     "iconSource": "upload",
     "createdAt": "2026-04-04T07:28:06.344Z",
     "status": "ready"
+  },
+  {
+    "name": "weapon_microsmg",
+    "label": "UZI",
+    "description": "",
+    "weight": 1500,
+    "type": "weapon",
+    "image": "micro-smg.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "micro-smg",
+    "pendingCategory": "Rifles & SMGs",
+    "extraLua": "",
+    "siteCategory": "Rifles & SMGs",
+    "decay": 0.1,
+    "ammotype": "ammo_smg",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T04:51:51.102Z",
+    "status": "ready"
   }
 ]
