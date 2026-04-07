@@ -230,6 +230,26 @@
     "status": "ready"
   },
   {
+    "name": "algemas_keys",
+    "label": "Chaves de Algema",
+    "description": "",
+    "weight": 15,
+    "type": "item",
+    "image": "algemas_keys.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T03:47:23.074Z",
+    "status": "ready"
+  },
+  {
     "name": "churros",
     "label": "Churros",
     "description": "",
