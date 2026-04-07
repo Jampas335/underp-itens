@@ -76,6 +76,26 @@
     "status": "ready"
   },
   {
+    "name": "strawberry_shortcake",
+    "label": "Bolo de Morango",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "strawberry-shortcake.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "strawberry-shortcake",
+    "pendingCategory": "Comida",
+    "extraLua": "",
+    "decay": 0.1,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T02:31:05.882Z",
+    "status": "ready"
+  },
+  {
     "name": "bubble_tea",
     "label": "Bubble Tea",
     "description": "",
