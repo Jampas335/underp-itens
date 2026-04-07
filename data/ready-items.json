@@ -492,6 +492,26 @@
     "status": "ready"
   },
   {
+    "name": "crab_bait",
+    "label": "Isca de carangueijo",
+    "description": "",
+    "weight": 60,
+    "type": "item",
+    "image": "crab_bait.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T05:17:05.175Z",
+    "status": "ready"
+  },
+  {
     "name": "corn_bait",
     "label": "Isca de milho",
     "description": "",
