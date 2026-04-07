@@ -708,6 +708,26 @@
     "status": "ready"
   },
   {
+    "name": "fish2",
+    "label": "Dorada",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "fish2.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T08:32:16.334Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_compactrifle",
     "label": "Draco",
     "description": "",
