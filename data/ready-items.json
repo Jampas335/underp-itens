@@ -76,6 +76,26 @@
     "status": "ready"
   },
   {
+    "name": "bubble_tea",
+    "label": "Bubble Tea",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "bubble-tea.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "bubble-tea",
+    "pendingCategory": "Bebidas",
+    "extraLua": "",
+    "decay": 0.1,
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T02:02:31.186Z",
+    "status": "ready"
+  },
+  {
     "name": "ammo_lsmg",
     "label": "Caixa Munição de LSMG",
     "description": "",
