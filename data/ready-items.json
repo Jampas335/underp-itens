@@ -374,6 +374,26 @@
     "status": "ready"
   },
   {
+    "name": "lucky_hat",
+    "label": "Chapeu da sorte",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "lucky_hat.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:16:01.501Z",
+    "status": "ready"
+  },
+  {
     "name": "algemas_keys",
     "label": "Chaves de Algema",
     "description": "",
