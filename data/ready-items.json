@@ -221,6 +221,26 @@
     "status": "ready"
   },
   {
+    "name": "battery",
+    "label": "Bateria",
+    "description": "",
+    "weight": 6000,
+    "type": "item",
+    "image": "battery.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "battery",
+    "pendingCategory": "Peças de Veículo",
+    "extraLua": "",
+    "siteCategory": "Peças de Veículo",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:41:32.506Z",
+    "status": "ready"
+  },
+  {
     "name": "ball",
     "label": "Bola",
     "description": "",
