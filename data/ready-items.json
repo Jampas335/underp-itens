@@ -547,6 +547,25 @@
     "status": "ready"
   },
   {
+    "name": "bs-soda",
+    "label": "Refrigerante-bs",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "bs-soda.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "bs-soda",
+    "pendingCategory": "Burger Shot",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T03:57:33.097Z",
+    "status": "ready"
+  },
+  {
     "name": "relogio_ouro",
     "label": "Relógio de Ouro",
     "description": "",
