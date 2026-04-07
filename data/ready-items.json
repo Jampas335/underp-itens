@@ -177,6 +177,26 @@
     "status": "ready"
   },
   {
+    "name": "chocolate-brownie",
+    "label": "Brownie",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "chocolate-brownie.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "chocolate-brownie",
+    "pendingCategory": "Comida",
+    "extraLua": "",
+    "siteCategory": "Comida",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T05:26:44.484Z",
+    "status": "ready"
+  },
+  {
     "name": "bubble_tea",
     "label": "Bubble Tea",
     "description": "",
