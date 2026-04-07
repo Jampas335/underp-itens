@@ -62,6 +62,26 @@
     "status": "ready"
   },
   {
+    "name": "pliers",
+    "label": "Alicate",
+    "description": "",
+    "weight": 400,
+    "type": "item",
+    "image": "pliers.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "pliers",
+    "pendingCategory": "Ferramentas",
+    "extraLua": "",
+    "siteCategory": "Ferramentas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T05:49:53.754Z",
+    "status": "ready"
+  },
+  {
     "name": "diamond-ring",
     "label": "Anel de Diamante",
     "description": "",
