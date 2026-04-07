@@ -13,12 +13,12 @@
     "pendingIconName": "ziptie",
     "pendingCategory": "Policial",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "Policial",
     "decay": 0.1,
     "consume": 1,
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-04-07T06:07:37.502Z",
+    "createdAt": "2026-04-07T06:08:13.899Z",
     "status": "ready"
   },
   {
