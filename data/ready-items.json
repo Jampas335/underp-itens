@@ -57,6 +57,25 @@
     "status": "ready"
   },
   {
+    "name": "ball",
+    "label": "Bola",
+    "description": "",
+    "weight": 149,
+    "type": "weapon",
+    "image": "ball.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "ball",
+    "pendingCategory": "Outros",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T00:55:26.991Z",
+    "status": "ready"
+  },
+  {
     "name": "ammo_lsmg",
     "label": "Caixa Munição de LSMG",
     "description": "",
