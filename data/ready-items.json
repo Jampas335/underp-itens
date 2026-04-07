@@ -1541,10 +1541,10 @@
     "extraLua": "",
     "siteCategory": "Pistolas",
     "decay": 0.2,
-    "ammotype": "ammo-pistol",
+    "ammotype": "ammo_pistol",
     "source": "ready",
     "iconSource": "ready",
-    "createdAt": "2026-04-07T08:56:31.088Z",
+    "createdAt": "2026-04-07T09:04:43.257Z",
     "status": "ready"
   },
   {
