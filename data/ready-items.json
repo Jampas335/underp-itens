@@ -291,6 +291,26 @@
     "status": "ready"
   },
   {
+    "name": "algemas_rope",
+    "label": "Corda de Algemar",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "algemas_rope.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T04:31:05.442Z",
+    "status": "ready"
+  },
+  {
     "name": "dynamite",
     "label": "Dinamite",
     "description": "",
