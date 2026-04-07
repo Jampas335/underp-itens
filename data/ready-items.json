@@ -310,6 +310,26 @@
     "status": "ready"
   },
   {
+    "name": "angle_grinder",
+    "label": "Esmerilhadeira",
+    "description": "",
+    "weight": 2000,
+    "type": "item",
+    "image": "angle_grinder.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T04:27:11.450Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_g17",
     "label": "G17",
     "description": "",
