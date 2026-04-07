@@ -750,6 +750,26 @@
     "status": "ready"
   },
   {
+    "name": "headlight",
+    "label": "Farol",
+    "description": "",
+    "weight": 1200,
+    "type": "item",
+    "image": "headlight.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "headlight",
+    "pendingCategory": "Peças de Veículo",
+    "extraLua": "",
+    "siteCategory": "Peças de Veículo",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T07:33:04.211Z",
+    "status": "ready"
+  },
+  {
     "name": "brakes",
     "label": "Freios",
     "description": "",
