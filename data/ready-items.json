@@ -1254,6 +1254,26 @@
     "status": "ready"
   },
   {
+    "name": "fish4",
+    "label": "Maingano",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "fish4.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T08:34:45.861Z",
+    "status": "ready"
+  },
+  {
     "name": "briefcase_with_money",
     "label": "Maleta com Dinheiro",
     "description": "",
