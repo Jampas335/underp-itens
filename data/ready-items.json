@@ -371,6 +371,27 @@
     "status": "ready"
   },
   {
+    "name": "light_armour",
+    "label": "Colete Leve",
+    "description": "",
+    "weight": 800,
+    "type": "item",
+    "image": "body-armour.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "body-armour",
+    "pendingCategory": "Proteção",
+    "extraLua": "",
+    "siteCategory": "Proteção",
+    "decay": 0.1,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T05:39:35.846Z",
+    "status": "ready"
+  },
+  {
     "name": "algemas_rope",
     "label": "Corda de Algemar",
     "description": "",
