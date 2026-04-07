@@ -770,6 +770,26 @@
     "status": "ready"
   },
   {
+    "name": "fog-light",
+    "label": "Farol de Neblina",
+    "description": "",
+    "weight": 400,
+    "type": "item",
+    "image": "fog-light.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "fog-light",
+    "pendingCategory": "Peças de Veículo",
+    "extraLua": "",
+    "siteCategory": "Peças de Veículo",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T07:36:38.174Z",
+    "status": "ready"
+  },
+  {
     "name": "brakes",
     "label": "Freios",
     "description": "",
