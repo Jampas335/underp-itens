@@ -84,6 +84,26 @@
     "status": "ready"
   },
   {
+    "name": "cotton_candy",
+    "label": "Algodão Doce",
+    "description": "",
+    "weight": 30,
+    "type": "item",
+    "image": "fair-cotton-candy.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "fair-cotton-candy",
+    "pendingCategory": "Comida",
+    "extraLua": "",
+    "siteCategory": "Comida",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T06:48:13.576Z",
+    "status": "ready"
+  },
+  {
     "name": "pliers",
     "label": "Alicate",
     "description": "",
