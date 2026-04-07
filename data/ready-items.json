@@ -253,6 +253,25 @@
     "status": "ready"
   },
   {
+    "name": "bs-raw-patty",
+    "label": "Carne Crua",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "bs-raw-patty.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "bs-raw-patty",
+    "pendingCategory": "Burger Shot",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T04:58:10.538Z",
+    "status": "ready"
+  },
+  {
     "name": "algemas_keys",
     "label": "Chaves de Algema",
     "description": "",
