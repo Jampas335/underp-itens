@@ -582,6 +582,26 @@
     "status": "ready"
   },
   {
+    "name": "rope",
+    "label": "Corda",
+    "description": "",
+    "weight": 10000,
+    "type": "item",
+    "image": "rope.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "rope",
+    "pendingCategory": "Ferramentas",
+    "extraLua": "",
+    "siteCategory": "Ferramentas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:46:54.366Z",
+    "status": "ready"
+  },
+  {
     "name": "algemas_rope",
     "label": "Corda de Algemar",
     "description": "",
