@@ -104,6 +104,26 @@
     "status": "ready"
   },
   {
+    "name": "anchor",
+    "label": "Ancora",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "anchor.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T06:29:09.262Z",
+    "status": "ready"
+  },
+  {
     "name": "diamond-ring",
     "label": "Anel de Diamante",
     "description": "",
