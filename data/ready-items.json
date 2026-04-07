@@ -531,6 +531,26 @@
     "status": "ready"
   },
   {
+    "name": "shrimp_bait",
+    "label": "Isca de camarão",
+    "description": "",
+    "weight": 10,
+    "type": "item",
+    "image": "shrimp_bait.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T05:36:22.542Z",
+    "status": "ready"
+  },
+  {
     "name": "crab_bait",
     "label": "Isca de carangueijo",
     "description": "",
