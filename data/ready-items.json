@@ -392,6 +392,28 @@
     "status": "ready"
   },
   {
+    "name": "medium_armour",
+    "label": "Colete Médio",
+    "description": "",
+    "weight": 1400,
+    "type": "item",
+    "image": "medium_armour.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "decay": 0.1,
+    "allowInBackpack": false,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T05:41:58.957Z",
+    "status": "ready"
+  },
+  {
     "name": "algemas_rope",
     "label": "Corda de Algemar",
     "description": "",
