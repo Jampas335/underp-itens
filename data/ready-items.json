@@ -1426,6 +1426,26 @@
     "status": "ready"
   },
   {
+    "name": "radiator",
+    "label": "Radiador",
+    "description": "",
+    "weight": 4000,
+    "type": "item",
+    "image": "radiator.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "radiator",
+    "pendingCategory": "Peças de Veículo",
+    "extraLua": "",
+    "siteCategory": "Peças de Veículo",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T07:26:47.735Z",
+    "status": "ready"
+  },
+  {
     "name": "fishing_net",
     "label": "Rede de pesca",
     "description": "",
