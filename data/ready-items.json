@@ -893,6 +893,28 @@
     "status": "ready"
   },
   {
+    "name": "weapon_minismg",
+    "label": "Scorpion",
+    "description": "",
+    "weight": 1330,
+    "type": "weapon",
+    "image": "scorpion.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "scorpion",
+    "pendingCategory": "Rifles & SMGs",
+    "extraLua": "",
+    "siteCategory": "Rifles & SMGs",
+    "decay": 0.1,
+    "ammotype": "ammo_smg",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T04:58:07.082Z",
+    "status": "ready"
+  },
+  {
     "name": "bs_icecream",
     "label": "Sorvete BS",
     "description": "",
