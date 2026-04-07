@@ -420,6 +420,26 @@
     "status": "ready"
   },
   {
+    "name": "raw_patty",
+    "label": "Carne Crua",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "bs-raw-patty.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "bs-raw-patty",
+    "pendingCategory": "Burger Shot",
+    "extraLua": "",
+    "siteCategory": "Comida",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T06:55:05.602Z",
+    "status": "ready"
+  },
+  {
     "name": "bs-patty",
     "label": "Carne de Hamburguer",
     "description": "",
