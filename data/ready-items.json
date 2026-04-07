@@ -836,6 +836,26 @@
     "status": "ready"
   },
   {
+    "name": "lollipop",
+    "label": "Pirulito",
+    "description": "",
+    "weight": 20,
+    "type": "item",
+    "image": "lollipop.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "lollipop",
+    "pendingCategory": "Comida",
+    "extraLua": "",
+    "siteCategory": "Comida",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T05:32:32.702Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_pistol",
     "label": "Pistola",
     "description": "",
