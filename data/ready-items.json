@@ -2202,6 +2202,26 @@
     "status": "ready"
   },
   {
+    "name": "fish1",
+    "label": "Truta",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "fish1.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T08:30:26.748Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_microsmg",
     "label": "UZI",
     "description": "",
