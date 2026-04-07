@@ -233,6 +233,25 @@
     "status": "ready"
   },
   {
+    "name": "weapon_petrolcan",
+    "label": "Gasolina",
+    "description": "",
+    "weight": 3000,
+    "type": "weapon",
+    "image": "jerry-can.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "jerry-can",
+    "pendingCategory": "Ferramentas",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T03:13:24.089Z",
+    "status": "ready"
+  },
+  {
     "name": "miso_ramen",
     "label": "Lámen",
     "description": "",
