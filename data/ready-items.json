@@ -1045,7 +1045,7 @@
     "name": "water_meter",
     "label": "medidor de profundidade",
     "description": "",
-    "weight": 0,
+    "weight": 400,
     "type": "item",
     "image": "water_meter.png",
     "unique": true,
@@ -1058,7 +1058,7 @@
     "siteCategory": "Pesca",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-04-07T06:46:17.228Z",
+    "createdAt": "2026-04-07T06:48:37.787Z",
     "status": "ready"
   },
   {
