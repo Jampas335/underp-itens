@@ -1882,6 +1882,26 @@
     "status": "ready"
   },
   {
+    "name": "fuel-tank",
+    "label": "Tanque de Gasolina",
+    "description": "",
+    "weight": 40000,
+    "type": "item",
+    "image": "fuel-tank.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "fuel-tank",
+    "pendingCategory": "Peças de Veículo",
+    "extraLua": "",
+    "siteCategory": "Peças de Veículo",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T07:35:01.556Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_machinepistol",
     "label": "TEC-9",
     "description": "",
