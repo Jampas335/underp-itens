@@ -933,6 +933,26 @@
     "status": "ready"
   },
   {
+    "name": "fuel-injector",
+    "label": "Injetor de Combustível",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "fuel-injector.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "fuel-injector",
+    "pendingCategory": "Peças de Veículo",
+    "extraLua": "",
+    "siteCategory": "Peças de Veículo",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T07:37:52.174Z",
+    "status": "ready"
+  },
+  {
     "name": "black_mamba",
     "label": "Isca Black Mamba",
     "description": "",
