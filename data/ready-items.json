@@ -878,6 +878,26 @@
     "status": "ready"
   },
   {
+    "name": "fair-pretzel",
+    "label": "Pretzel",
+    "description": "",
+    "weight": 80,
+    "type": "item",
+    "image": "fair-pretzel.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "fair-pretzel",
+    "pendingCategory": "Comida",
+    "extraLua": "",
+    "siteCategory": "Comida",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-07T05:30:58.262Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_bullpuprifle",
     "label": "QBZ",
     "description": "",
