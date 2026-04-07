@@ -1277,5 +1277,25 @@
     "iconSource": "upload",
     "createdAt": "2026-04-07T05:03:33.965Z",
     "status": "ready"
+  },
+  {
+    "name": "fishing_rod_super",
+    "label": "Vara de Pesca Super",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "fishing_rod_super.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T05:09:00.880Z",
+    "status": "ready"
   }
 ]
