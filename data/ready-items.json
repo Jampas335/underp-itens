@@ -406,6 +406,25 @@
     "status": "ready"
   },
   {
+    "name": "bs-milkshake",
+    "label": "Milkshake-bs",
+    "description": "",
+    "weight": 400,
+    "type": "item",
+    "image": "bs-milkshake.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "bs-milkshake",
+    "pendingCategory": "Burger Shot",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T03:37:21.203Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_combatpistol",
     "label": "P250",
     "description": "",
