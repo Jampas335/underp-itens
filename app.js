@@ -165,6 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initTheme();
     bootstrapData();
     loadWorkspaceState();
+    ensureCurrentReadyIconOption();
     ensureAllowInBackpackField();
     ensureStackableField();
     ensureCategoryField();
@@ -217,6 +218,23 @@ function ensureAllowInBackpackField() {
         </select>
     `;
     grid.insertBefore(wrapper, templateField);
+}
+
+function ensureCurrentReadyIconOption() {
+    if (document.getElementById("iconSourceReady")) return;
+
+    const pendingOption = document.getElementById("iconSourcePending")?.closest(".icon-source-opt");
+    const options = pendingOption?.parentElement;
+    if (!pendingOption || !options) return;
+
+    const wrapper = document.createElement("label");
+    wrapper.className = "icon-source-opt hidden";
+    wrapper.id = "iconSourceReadyWrap";
+    wrapper.innerHTML = `
+        <input type="radio" name="iconSource" id="iconSourceReady" value="ready">
+        <span>Usar icone atual do pronto</span>
+    `;
+    options.insertBefore(wrapper, pendingOption);
 }
 
 function ensureStackableField() {
@@ -812,6 +830,10 @@ function bindEvents() {
     // Icon source toggle
     document.getElementById("iconSourcePending").addEventListener("change", () => {
         state.builder.iconSource = "pending";
+        renderBuilder();
+    });
+    document.getElementById("iconSourceReady")?.addEventListener("change", () => {
+        state.builder.iconSource = "ready";
         renderBuilder();
     });
     document.getElementById("iconSourceUpload").addEventListener("change", () => {
@@ -1413,11 +1435,23 @@ function renderBuilder() {
     applyImageCandidates(builderImage, getBuilderImageCandidates(), pendingItem.name);
 
     setText("luaExportPreview", buildLuaEntry(buildBuilderItemPreview()));
+    syncPublishReadyButtonState();
 
     // Sync icon source radio
+    const canUseReadyIcon = Boolean(state.builder.editingReadyName);
     const canUsePendingIcon = !pendingItem.isManual;
+    if (!canUseReadyIcon && state.builder.iconSource === "ready") {
+        state.builder.iconSource = canUsePendingIcon ? "pending" : "upload";
+    }
     if (!canUsePendingIcon && state.builder.iconSource === "pending") {
         state.builder.iconSource = "upload";
+    }
+    const readyRadioWrap = document.getElementById("iconSourceReadyWrap");
+    const readyRadio = document.getElementById("iconSourceReady");
+    if (readyRadioWrap) readyRadioWrap.classList.toggle("hidden", !canUseReadyIcon);
+    if (readyRadio) {
+        readyRadio.disabled = !canUseReadyIcon;
+        readyRadio.checked = canUseReadyIcon && state.builder.iconSource === "ready";
     }
     document.getElementById("iconSourcePending").disabled = !canUsePendingIcon;
     document.getElementById("iconSourcePending").checked = canUsePendingIcon && state.builder.iconSource === "pending";
@@ -1436,22 +1470,35 @@ function getBuilderImageCandidates() {
         ? state.readyItems.find((item) => item.name === state.builder.editingReadyName)
         : null;
 
-    if (state.builder.iconSource === "pending" && pendingItem) {
+    if (state.builder.iconSource === "ready" && editingReadyItem) {
+        candidates.push(...getStoredReadyImageCandidates(editingReadyItem));
+    } else if (state.builder.iconSource === "pending" && pendingItem) {
         candidates.push(...getPendingImageCandidates(pendingItem));
-    }
-    if (state.builder.iconSource === "upload" && state.builder.uploadedIconBase64) {
+    } else if (state.builder.iconSource === "upload" && state.builder.uploadedIconBase64) {
         candidates.push(buildUploadedImageSrc(state.builder.uploadedIconBase64, state.builder.uploadedIconMime));
     }
     if (editingLocalItem) {
         candidates.push(...getImplementedImageCandidates(editingLocalItem));
     }
-    if (editingReadyItem) {
-        candidates.push(...getReadyImageCandidates(editingReadyItem));
+    if (editingReadyItem && state.builder.iconSource !== "ready") {
+        candidates.push(
+            ...(state.builder.iconSource === "upload"
+                ? getStoredReadyImageCandidates(editingReadyItem)
+                : getReadyImageCandidates(editingReadyItem))
+        );
     }
     if (state.builder.iconSource !== "pending" && pendingItem) {
         candidates.push(...getPendingImageCandidates(pendingItem));
     }
     return Array.from(new Set(candidates.filter(Boolean)));
+}
+
+function syncPublishReadyButtonState() {
+    const btn = document.getElementById("publishReadyBtn");
+    if (!btn) return;
+    btn.innerHTML = state.builder.editingReadyName
+        ? `<span>↻</span> Atualizar item pronto`
+        : `<span>✓</span> Publicar como Pronto`;
 }
 
 function syncUploadPreviewState() {
@@ -1605,8 +1652,8 @@ function openBuilderForReady(name) {
     state.builder.editingReadyName = name;
     state.builder.templateName = null;
     state.builder.templateSource = null;
-    state.builder.form = createFormFromImplementedItem(item, pendingIconName);
-    state.builder.iconSource = item.iconSource === "upload" ? "upload" : "pending";
+    state.builder.form = createFormFromReadyItem(item, pendingIconName);
+    state.builder.iconSource = "ready";
     state.builder.uploadedIconBase64 = item.uploadedIconBase64 || null;
     state.builder.uploadedIconMime = item.uploadedIconMime || "image/png";
     state.builder.uploadedIconFileName = item.uploadedIconFileName || null;
@@ -1811,7 +1858,11 @@ function saveBuilderItem() {
         ...previewItem, source: "local",
         pendingIconName: hasRealPending ? pending.name : "",
         pendingCategory: hasRealPending ? pending.category : "Manual",
-        imageSource: state.builder.iconSource === "upload" ? "upload" : (hasRealPending ? "pending" : "manual"),
+        imageSource: state.builder.iconSource === "upload"
+            ? "upload"
+            : state.builder.iconSource === "ready"
+                ? "ready"
+                : (hasRealPending ? "pending" : "manual"),
         iconSource: state.builder.iconSource,
         uploadedIconBase64: state.builder.iconSource === "upload" ? state.builder.uploadedIconBase64 : null,
         uploadedIconMime: state.builder.iconSource === "upload" ? state.builder.uploadedIconMime : "",
@@ -1833,6 +1884,7 @@ function saveBuilderItem() {
 async function handlePublishAsReady() {
     const pending = getBuilderPendingItem();
     const hasRealPending = pending && !pending.isManual;
+    const isUpdatingReady = Boolean(state.builder.editingReadyName);
     const validation = validateBuilder();
     if (!validation.ok) {
         showToast(validation.message || "Revise os dados do item.");
@@ -1860,7 +1912,7 @@ async function handlePublishAsReady() {
 
     const btn = document.getElementById("publishReadyBtn");
     btn.disabled = true;
-    btn.textContent = "Publicando...";
+    btn.textContent = isUpdatingReady ? "Atualizando..." : "Publicando...";
 
     try {
         const iconBase64 = state.builder.iconSource === "upload" ? state.builder.uploadedIconBase64 : null;
@@ -1874,7 +1926,12 @@ async function handlePublishAsReady() {
 
         revealReadyItem(previewItem.name);
         renderAll();
-        renderReadyStatusBar(`Item ${previewItem.name} publicado. Revalidando com GitHub...`, "loading");
+        renderReadyStatusBar(
+            isUpdatingReady
+                ? `Item ${previewItem.name} atualizado. Revalidando com GitHub...`
+                : `Item ${previewItem.name} publicado. Revalidando com GitHub...`,
+            "loading"
+        );
         loadReadyItems({
             bustCache: true,
             silent: true,
@@ -1882,7 +1939,11 @@ async function handlePublishAsReady() {
             revealName: previewItem.name,
             statusPrefix: `Atualizado agora. `,
         });
-        showToast(`Item ${previewItem.name} publicado como Pronto.`);
+        showToast(
+            isUpdatingReady
+                ? `Item ${previewItem.name} atualizado nos Prontos.`
+                : `Item ${previewItem.name} publicado como Pronto.`
+        );
     } catch (err) {
         const message = err.message || "Falha ao publicar no GitHub.";
         showToast(`Erro ao publicar: ${message}`);
@@ -1894,6 +1955,7 @@ async function handlePublishAsReady() {
         btn.disabled = false;
         btn.innerHTML = `<span>✓</span> Publicar como Pronto`;
     }
+    syncPublishReadyButtonState();
 }
 
 function restorePendingFromLocal(name) {
@@ -2134,6 +2196,13 @@ function createFormFromImplementedItem(item, pendingIconName) {
         extraLua: item.extraLua || buildExtraLuaFromItem(item),
         image: resolvedImage,
         siteCategory: item.siteCategory || item.pendingCategory || "",
+    };
+}
+
+function createFormFromReadyItem(item, pendingIconName) {
+    return {
+        ...createFormFromImplementedItem(item, pendingIconName),
+        image: item.image || `${item.name}.png`,
     };
 }
 
@@ -2703,6 +2772,9 @@ function getImplementedImageCandidates(item) {
     if (item.iconSource === "upload" && item.uploadedIconBase64) {
         candidates.push(buildUploadedImageSrc(item.uploadedIconBase64, item.uploadedIconMime));
     }
+    if (item.iconSource === "ready") {
+        candidates.push(`${CONFIG.READY_ICONS_FOLDER}/${item.name}.png`);
+    }
     if (item.source === "local" && item.pendingIconName) {
         candidates.push(`${CONFIG.ICONS_FOLDER}/${item.pendingIconName}.${CONFIG.ICON_EXTENSION}`);
     }
@@ -2717,19 +2789,38 @@ function getImplementedImageCandidates(item) {
     return Array.from(new Set(candidates.filter(Boolean)));
 }
 
+function getStoredReadyImageCandidates(item) {
+    const candidates = [];
+    if (item.uploadedIconBase64) {
+        candidates.push(buildUploadedImageSrc(item.uploadedIconBase64, item.uploadedIconMime));
+    }
+    candidates.push(`${CONFIG.READY_ICONS_FOLDER}/${item.name}.png`);
+    if (item.image) {
+        candidates.push(`server-icons/${item.image}`);
+        candidates.push(`${CONFIG.ICONS_FOLDER}/${stripExtension(item.image)}.${CONFIG.ICON_EXTENSION}`);
+    }
+    if (item.pendingIconName) {
+        candidates.push(`${CONFIG.ICONS_FOLDER}/${item.pendingIconName}.${CONFIG.ICON_EXTENSION}`);
+    }
+    candidates.push(`${CONFIG.ICONS_FOLDER}/${item.name}.${CONFIG.ICON_EXTENSION}`);
+    return Array.from(new Set(candidates.filter(Boolean)));
+}
+
 function getReadyImageCandidates(item) {
+    if (item.iconSource === "ready" || item.iconSource === "upload") {
+        return getStoredReadyImageCandidates(item);
+    }
+
     const candidates = [];
     if (item.iconSource === "upload" && item.uploadedIconBase64) {
         candidates.push(buildUploadedImageSrc(item.uploadedIconBase64, item.uploadedIconMime));
-    }
-    if (item.iconSource === "upload") {
-        candidates.push(`${CONFIG.READY_ICONS_FOLDER}/${item.name}.png`);
     }
     if (item.pendingIconName) {
         candidates.push(`${CONFIG.ICONS_FOLDER}/${item.pendingIconName}.${CONFIG.ICON_EXTENSION}`);
     }
     if (item.image) {
         candidates.push(`server-icons/${item.image}`);
+        candidates.push(`${CONFIG.ICONS_FOLDER}/${stripExtension(item.image)}.${CONFIG.ICON_EXTENSION}`);
     }
     candidates.push(`${CONFIG.ICONS_FOLDER}/${item.name}.${CONFIG.ICON_EXTENSION}`);
     return Array.from(new Set(candidates.filter(Boolean)));
