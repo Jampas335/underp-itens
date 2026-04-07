@@ -328,7 +328,7 @@
     "name": "bomba_caseira",
     "label": "Bomba Caseira",
     "description": "",
-    "weight": 1520,
+    "weight": 825,
     "type": "item",
     "image": "bomba_caseira.png",
     "unique": false,
@@ -340,8 +340,8 @@
     "extraLua": "",
     "siteCategory": "Explosivos",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-07T21:19:51.430Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-07T21:22:04.962Z",
     "status": "ready"
   },
   {
