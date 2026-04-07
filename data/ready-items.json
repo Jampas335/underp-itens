@@ -386,9 +386,10 @@
     "extraLua": "",
     "siteCategory": "Proteção",
     "decay": 0.1,
+    "allowInBackpack": false,
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-04-07T05:39:35.846Z",
+    "createdAt": "2026-04-07T05:43:04.085Z",
     "status": "ready"
   },
   {
