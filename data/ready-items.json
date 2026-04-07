@@ -485,6 +485,25 @@
     "status": "ready"
   },
   {
+    "name": "fair-popsicle",
+    "label": "Picolé",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "fair-popsicle.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "fair-popsicle",
+    "pendingCategory": "Comida",
+    "extraLua": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T04:07:41.328Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_pistol",
     "label": "Pistola",
     "description": "",
