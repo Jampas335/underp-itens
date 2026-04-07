@@ -1763,6 +1763,26 @@
     "status": "ready"
   },
   {
+    "name": "fish5",
+    "label": "Rocio Octofasciata",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "fish5.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-07T08:36:20.288Z",
+    "status": "ready"
+  },
+  {
     "name": "wheels",
     "label": "Rodas",
     "description": "",
