@@ -1219,6 +1219,26 @@
     "status": "ready"
   },
   {
+    "name": "epinephrine",
+    "label": "Epinefrina",
+    "description": "",
+    "weight": 30,
+    "type": "item",
+    "image": "epinephrine.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T21:19:49.419Z",
+    "status": "ready"
+  },
+  {
     "name": "diving_gear",
     "label": "Equipamento de mergulho",
     "description": "",
