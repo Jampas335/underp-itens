@@ -871,7 +871,7 @@
   {
     "name": "quick_clot",
     "label": "Coagulante Rapido",
-    "description": "",
+    "description": "Acelera a coagulação e estanca o sangramento mais rápido em lesões de tiro e lacerações.",
     "weight": 50,
     "type": "item",
     "image": "quick_clot.png",
@@ -884,8 +884,8 @@
     "extraLua": "",
     "siteCategory": "EMS",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-08T14:41:16.647Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-08T15:02:38.891Z",
     "status": "ready"
   },
   {
