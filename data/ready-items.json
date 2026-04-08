@@ -2301,6 +2301,26 @@
     "status": "ready"
   },
   {
+    "name": "propofol",
+    "label": "Propofol",
+    "description": "",
+    "weight": 30,
+    "type": "item",
+    "image": "propofol.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T14:50:09.328Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_bullpuprifle",
     "label": "QBZ",
     "description": "",
