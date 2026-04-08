@@ -2096,6 +2096,26 @@
     "status": "ready"
   },
   {
+    "name": "pager",
+    "label": "Pager",
+    "description": "",
+    "weight": 60,
+    "type": "item",
+    "image": "pager.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T21:17:57.989Z",
+    "status": "ready"
+  },
+  {
     "name": "snapper",
     "label": "Pargo",
     "description": "",
