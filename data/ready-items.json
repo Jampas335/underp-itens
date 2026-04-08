@@ -303,6 +303,26 @@
     "status": "ready"
   },
   {
+    "name": "bocachico_fish",
+    "label": "Bocachico",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "bocachico_fish.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T03:06:05.369Z",
+    "status": "ready"
+  },
+  {
     "name": "ball",
     "label": "Bola",
     "description": "",
