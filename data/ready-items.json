@@ -2036,6 +2036,26 @@
     "status": "ready"
   },
   {
+    "name": "flying_fish",
+    "label": "Peixe Voador",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "flying_fish.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T14:23:23.503Z",
+    "status": "ready"
+  },
+  {
     "name": "fair-popsicle",
     "label": "Picolé",
     "description": "",
