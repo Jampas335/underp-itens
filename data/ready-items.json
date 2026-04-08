@@ -425,6 +425,26 @@
     "status": "ready"
   },
   {
+    "name": "shoe_shit",
+    "label": "Bota velha",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "shoe_shit.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T14:26:07.941Z",
+    "status": "ready"
+  },
+  {
     "name": "chocolate_brownie",
     "label": "Brownie",
     "description": "",
