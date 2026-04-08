@@ -588,6 +588,26 @@
     "status": "ready"
   },
   {
+    "name": "ore_coal",
+    "label": "Carvão",
+    "description": "",
+    "weight": 2000,
+    "type": "item",
+    "image": "ore_coal.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "ore_coal",
+    "pendingCategory": "Mineração",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T00:10:50.293Z",
+    "status": "ready"
+  },
+  {
     "name": "lucky_hat",
     "label": "Chapeu da sorte",
     "description": "",
