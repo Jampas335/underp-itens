@@ -2878,6 +2878,26 @@
     "status": "ready"
   },
   {
+    "name": "tourniquet",
+    "label": "Torniquete",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "tourniquet.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T14:29:36.454Z",
+    "status": "ready"
+  },
+  {
     "name": "toaster",
     "label": "Torradeira",
     "description": "",
