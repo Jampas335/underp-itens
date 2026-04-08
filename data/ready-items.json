@@ -1039,7 +1039,7 @@
   {
     "name": "field_dressing",
     "label": "Curativo de Campo",
-    "description": "",
+    "description": "Bom para feridas rotineiras (contusões, pequenos cortes, abrasões), mas ineficiente no caso de lacerações profundas ou ferimentos graves de tiro.",
     "weight": 100,
     "type": "item",
     "image": "field_dressing.png",
@@ -1053,7 +1053,7 @@
     "siteCategory": "EMS",
     "source": "ready",
     "iconSource": "ready",
-    "createdAt": "2026-04-08T14:39:15.027Z",
+    "createdAt": "2026-04-08T14:56:18.279Z",
     "status": "ready"
   },
   {
