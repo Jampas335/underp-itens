@@ -1000,7 +1000,7 @@
     "name": "field_dressing",
     "label": "Curativo de Campo",
     "description": "",
-    "weight": 0,
+    "weight": 100,
     "type": "item",
     "image": "field_dressing.png",
     "unique": false,
@@ -1012,8 +1012,8 @@
     "extraLua": "",
     "siteCategory": "EMS",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-08T14:37:45.732Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-08T14:39:15.027Z",
     "status": "ready"
   },
   {
