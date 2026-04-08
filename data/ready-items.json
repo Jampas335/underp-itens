@@ -1996,6 +1996,26 @@
     "status": "ready"
   },
   {
+    "name": "koi_fish",
+    "label": "Peixe Koi",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "koi_fish.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T03:12:43.260Z",
+    "status": "ready"
+  },
+  {
     "name": "fair-popsicle",
     "label": "Picolé",
     "description": "",
