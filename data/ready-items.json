@@ -977,6 +977,26 @@
     "status": "ready"
   },
   {
+    "name": "field_dressing",
+    "label": "Curativo de Campo",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "field_dressing.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T14:37:45.732Z",
+    "status": "ready"
+  },
+  {
     "name": "fish6",
     "label": "Danio",
     "description": "",
