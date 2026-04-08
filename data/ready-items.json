@@ -285,7 +285,7 @@
   {
     "name": "elastic_bandage",
     "label": "Bandagem Elastica",
-    "description": "",
+    "description": "Muito boa para contusões e excelente para queimaduras.",
     "weight": 20,
     "type": "item",
     "image": "elastic_bandage.png",
@@ -298,8 +298,8 @@
     "extraLua": "",
     "siteCategory": "EMS",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-08T14:38:50.276Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-08T14:56:46.642Z",
     "status": "ready"
   },
   {
