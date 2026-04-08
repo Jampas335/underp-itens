@@ -324,6 +324,26 @@
     "status": "ready"
   },
   {
+    "name": "snowball",
+    "label": "Bola de neve",
+    "description": "",
+    "weight": 20,
+    "type": "item",
+    "image": "snowball.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "snowball",
+    "pendingCategory": "Proteção",
+    "extraLua": "",
+    "siteCategory": "Proteção",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T00:32:02.156Z",
+    "status": "ready"
+  },
+  {
     "name": "strawberry_shortcake",
     "label": "Bolo de Morango",
     "description": "",
