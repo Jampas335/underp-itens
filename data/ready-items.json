@@ -1703,6 +1703,26 @@
     "status": "ready"
   },
   {
+    "name": "revivekit",
+    "label": "Kit de Reanimação de Emergencia",
+    "description": "",
+    "weight": 2000,
+    "type": "item",
+    "image": "revivekit.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T21:21:41.735Z",
+    "status": "ready"
+  },
+  {
     "name": "sewing_kit",
     "label": "Kit de Sutura",
     "description": "Uso estrito por médicos. Serve para fechar cirurgicamente as feridas rasgadas (lacerações) que necessitam de pontos e não saram apenas com curativos.",
