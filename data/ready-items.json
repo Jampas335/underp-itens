@@ -1948,6 +1948,26 @@
     "status": "ready"
   },
   {
+    "name": "morphine",
+    "label": "Morfina",
+    "description": "",
+    "weight": 30,
+    "type": "item",
+    "image": "morphine.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T14:52:07.817Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_musket",
     "label": "Mosquete",
     "description": "",
