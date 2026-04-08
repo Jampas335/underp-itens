@@ -849,6 +849,26 @@
     "status": "ready"
   },
   {
+    "name": "quick_clot",
+    "label": "Coagulante Rapido",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "quick_clot.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T14:41:16.647Z",
+    "status": "ready"
+  },
+  {
     "name": "body-armour",
     "label": "Colete",
     "description": "",
