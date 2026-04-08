@@ -1685,7 +1685,7 @@
   {
     "name": "sewing_kit",
     "label": "Kit de Sutura",
-    "description": "",
+    "description": "Uso estrito por médicos. Serve para fechar cirurgicamente as feridas rasgadas (lacerações) que necessitam de pontos e não saram apenas com curativos.",
     "weight": 100,
     "type": "item",
     "image": "sewing_kit.png",
@@ -1698,8 +1698,8 @@
     "extraLua": "",
     "siteCategory": "EMS",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-08T14:49:06.756Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-08T14:58:32.257Z",
     "status": "ready"
   },
   {
