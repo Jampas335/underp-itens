@@ -2898,6 +2898,26 @@
     "status": "ready"
   },
   {
+    "name": "temporary_tourniquet",
+    "label": "Torniquete Temporario",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "temporary_tourniquet.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T14:35:35.189Z",
+    "status": "ready"
+  },
+  {
     "name": "toaster",
     "label": "Torradeira",
     "description": "",
