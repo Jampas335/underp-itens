@@ -263,6 +263,26 @@
     "status": "ready"
   },
   {
+    "name": "packing_bandage",
+    "label": "Bandagem Compressiva",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "packing_bandage.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T14:42:47.873Z",
+    "status": "ready"
+  },
+  {
     "name": "elastic_bandage",
     "label": "Bandagem Elastica",
     "description": "",
