@@ -2396,6 +2396,26 @@
     "status": "ready"
   },
   {
+    "name": "brick",
+    "label": "Tijolo",
+    "description": "",
+    "weight": 2000,
+    "type": "item",
+    "image": "brick.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "brick",
+    "pendingCategory": "Mineração",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T00:01:36.277Z",
+    "status": "ready"
+  },
+  {
     "name": "bs-tomato",
     "label": "Tomate",
     "description": "",
