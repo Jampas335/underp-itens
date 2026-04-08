@@ -447,6 +447,26 @@
     "status": "ready"
   },
   {
+    "name": "pizza-box",
+    "label": "Caixa de Pizza",
+    "description": "",
+    "weight": 180,
+    "type": "item",
+    "image": "pizza-box.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "pizza-box",
+    "pendingCategory": "Pizza",
+    "extraLua": "",
+    "siteCategory": "Pizza",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T00:47:41.353Z",
+    "status": "ready"
+  },
+  {
     "name": "ammo_lsmg",
     "label": "Caixa Munição de LSMG",
     "description": "",
