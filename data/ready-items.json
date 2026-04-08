@@ -1017,6 +1017,26 @@
     "status": "ready"
   },
   {
+    "name": "discus",
+    "label": "Discus",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "discus.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T03:01:53.580Z",
+    "status": "ready"
+  },
+  {
     "name": "fish2",
     "label": "Dorada",
     "description": "",
