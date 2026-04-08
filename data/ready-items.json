@@ -2323,7 +2323,7 @@
   {
     "name": "propofol",
     "label": "Propofol",
-    "description": "",
+    "description": "Anestésico fortíssimo. Serve para apagar o paciente antes de uma intervenção.",
     "weight": 30,
     "type": "item",
     "image": "propofol.png",
@@ -2336,8 +2336,8 @@
     "extraLua": "",
     "siteCategory": "EMS",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-08T14:50:09.328Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-08T15:00:56.248Z",
     "status": "ready"
   },
   {
