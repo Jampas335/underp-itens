@@ -263,6 +263,26 @@
     "status": "ready"
   },
   {
+    "name": "elastic_bandage",
+    "label": "Bandagem Elastica",
+    "description": "",
+    "weight": 20,
+    "type": "item",
+    "image": "elastic_bandage.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T14:38:50.276Z",
+    "status": "ready"
+  },
+  {
     "name": "barracuda",
     "label": "Barracuda",
     "description": "",
