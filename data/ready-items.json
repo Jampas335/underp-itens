@@ -1956,6 +1956,26 @@
     "status": "ready"
   },
   {
+    "name": "disco_fish",
+    "label": "Peixe Disco",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "disco_fish.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T03:07:31.691Z",
+    "status": "ready"
+  },
+  {
     "name": "fair-popsicle",
     "label": "Picolé",
     "description": "",
