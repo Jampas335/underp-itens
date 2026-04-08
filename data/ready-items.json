@@ -1748,6 +1748,26 @@
     "status": "ready"
   },
   {
+    "name": "mojarra_fish",
+    "label": "Mojarra",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "mojarra_fish.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T03:05:20.536Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_musket",
     "label": "Mosquete",
     "description": "",
