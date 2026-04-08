@@ -1683,6 +1683,26 @@
     "status": "ready"
   },
   {
+    "name": "sewing_kit",
+    "label": "Kit de Sutura",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "sewing_kit.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T14:45:28.711Z",
+    "status": "ready"
+  },
+  {
     "name": "miso_ramen",
     "label": "Lámen",
     "description": "",
