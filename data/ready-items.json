@@ -265,7 +265,7 @@
   {
     "name": "packing_bandage",
     "label": "Bandagem Compressiva",
-    "description": "",
+    "description": "Ideal para preencher as feridas abertas. Excelente para combater hemorragias persistentes, furos e lesões constusas.",
     "weight": 50,
     "type": "item",
     "image": "packing_bandage.png",
@@ -278,8 +278,8 @@
     "extraLua": "",
     "siteCategory": "EMS",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-08T14:42:47.873Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-08T14:57:48.410Z",
     "status": "ready"
   },
   {
