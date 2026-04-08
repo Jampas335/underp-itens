@@ -1956,6 +1956,26 @@
     "status": "ready"
   },
   {
+    "name": "angelfishemperror",
+    "label": "Peixe Anjo Imperador",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "angelfishemperror.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T03:08:33.637Z",
+    "status": "ready"
+  },
+  {
     "name": "disco_fish",
     "label": "Peixe Disco",
     "description": "",
