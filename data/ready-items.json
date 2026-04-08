@@ -957,6 +957,26 @@
     "status": "ready"
   },
   {
+    "name": "cash",
+    "label": "Dinheiro",
+    "description": "",
+    "weight": 1,
+    "type": "item",
+    "image": "cash.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "cash",
+    "pendingCategory": "Jóias & Valores",
+    "extraLua": "",
+    "siteCategory": "Jóias & Valores",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-08T01:25:45.588Z",
+    "status": "ready"
+  },
+  {
     "name": "fish2",
     "label": "Dorada",
     "description": "",
