@@ -857,6 +857,26 @@
     "status": "ready"
   },
   {
+    "name": "ore_diamond",
+    "label": "Diamante",
+    "description": "",
+    "weight": 2,
+    "type": "item",
+    "image": "ore_diamond.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "ore_diamond",
+    "pendingCategory": "Mineração",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-08T00:14:07.431Z",
+    "status": "ready"
+  },
+  {
     "name": "dynamite",
     "label": "Dinamite",
     "description": "",
