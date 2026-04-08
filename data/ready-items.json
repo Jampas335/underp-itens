@@ -568,6 +568,26 @@
     "status": "ready"
   },
   {
+    "name": "crab",
+    "label": "Caranguejo",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "crab.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T03:00:09.685Z",
+    "status": "ready"
+  },
+  {
     "name": "raw_patty",
     "label": "Carne Crua",
     "description": "",
