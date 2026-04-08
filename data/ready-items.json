@@ -2190,6 +2190,26 @@
     "status": "ready"
   },
   {
+    "name": "flare",
+    "label": "Sinalizador",
+    "description": "",
+    "weight": 20,
+    "type": "item",
+    "image": "flare.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "flare",
+    "pendingCategory": "Proteção",
+    "extraLua": "",
+    "siteCategory": "Proteção",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-08T00:24:30.846Z",
+    "status": "ready"
+  },
+  {
     "name": "bs_icecream",
     "label": "Sorvete BS",
     "description": "",
