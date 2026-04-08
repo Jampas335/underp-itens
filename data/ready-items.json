@@ -224,25 +224,6 @@
     "status": "ready"
   },
   {
-    "name": "bandages",
-    "label": "Bandage",
-    "description": "",
-    "weight": 115,
-    "type": "item",
-    "image": "bandages.png",
-    "unique": false,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "uncommon",
-    "pendingIconName": "bandages",
-    "pendingCategory": "Médico",
-    "extraLua": "",
-    "source": "ready",
-    "iconSource": "pending",
-    "createdAt": "2026-04-06T18:21:40.803Z",
-    "status": "ready"
-  },
-  {
     "name": "bandage",
     "label": "Bandage",
     "description": "",
