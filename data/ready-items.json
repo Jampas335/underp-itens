@@ -184,6 +184,26 @@
     "status": "ready"
   },
   {
+    "name": "crystal_catfish",
+    "label": "Bagre de Cristal",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "crystal_catfish.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T14:22:32.126Z",
+    "status": "ready"
+  },
+  {
     "name": "banana",
     "label": "Banana",
     "description": "",
