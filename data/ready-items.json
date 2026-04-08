@@ -1856,6 +1856,26 @@
     "status": "ready"
   },
   {
+    "name": "snapper",
+    "label": "Pargo",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "snapper.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pesca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-08T03:02:49.509Z",
+    "status": "ready"
+  },
+  {
     "name": "rock",
     "label": "Pedra",
     "description": "",
