@@ -3020,7 +3020,7 @@
   {
     "name": "tourniquet",
     "label": "Torniquete",
-    "description": "",
+    "description": "Usado para estancar hemorragias severas quase que de forma imediata. Pode causar dor significativa ao paciente na hora da aplicação.",
     "weight": 100,
     "type": "item",
     "image": "tourniquet.png",
@@ -3033,8 +3033,8 @@
     "extraLua": "",
     "siteCategory": "EMS",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-08T14:29:36.454Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-08T14:55:18.227Z",
     "status": "ready"
   },
   {
