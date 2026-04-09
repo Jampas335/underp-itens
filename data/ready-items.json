@@ -2754,7 +2754,7 @@
     "name": "saline250ml",
     "label": "Soro 250ml",
     "description": "Também ajuda recuperar o volume sanguíneo, porém em caso de grandes perdas, recomenda-se a transfusão uma bolsa de sangue puro. É vital quando os paramédicos estão ficando sem sangue no estoque.",
-    "weight": 525,
+    "weight": 265,
     "type": "item",
     "image": "saline250ml.png",
     "unique": true,
@@ -2766,8 +2766,8 @@
     "extraLua": "",
     "siteCategory": "EMS",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-09T03:17:08.062Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-09T03:18:56.058Z",
     "status": "ready"
   },
   {
