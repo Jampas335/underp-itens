@@ -2771,6 +2771,26 @@
     "status": "ready"
   },
   {
+    "name": "saline500ml",
+    "label": "Soro 500ml",
+    "description": "Também ajuda recuperar o volume sanguíneo, porém em caso de grandes perdas, recomenda-se a transfusão uma bolsa de sangue puro. É vital quando os paramédicos estão ficando sem sangue no estoque.",
+    "weight": 600,
+    "type": "item",
+    "image": "saline500ml.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-09T03:18:24.655Z",
+    "status": "ready"
+  },
+  {
     "name": "bs_icecream",
     "label": "Sorvete BS",
     "description": "",
