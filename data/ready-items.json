@@ -449,7 +449,7 @@
     "name": "blood250ml",
     "label": "Bolsa de Sangue 250ml",
     "description": "Ajuda recupera rapidamente o nível do fluxo de sangue perdido.",
-    "weight": 525,
+    "weight": 265,
     "type": "item",
     "image": "blood250ml.png",
     "unique": true,
@@ -462,7 +462,7 @@
     "siteCategory": "EMS",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-04-09T03:25:11.596Z",
+    "createdAt": "2026-04-09T03:26:33.021Z",
     "status": "ready"
   },
   {
