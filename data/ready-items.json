@@ -2747,6 +2747,26 @@
     "status": "ready"
   },
   {
+    "name": "bodybag",
+    "label": "Saco Mortuario",
+    "description": "",
+    "weight": 500,
+    "type": "item",
+    "image": "bodybag.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-09T03:39:18.923Z",
+    "status": "ready"
+  },
+  {
     "name": "sandwich",
     "label": "Sanduíche",
     "description": "",
