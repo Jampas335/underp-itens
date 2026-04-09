@@ -1766,7 +1766,7 @@
   {
     "name": "revivekit",
     "label": "Kit de Reanimação de Emergencia",
-    "description": "",
+    "description": "Utilizado estritamente para tentar fazer o coração retornar os batimentos cardíacos.",
     "weight": 2000,
     "type": "item",
     "image": "revivekit.png",
@@ -1779,8 +1779,8 @@
     "extraLua": "",
     "siteCategory": "EMS",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-08T21:21:54.982Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-09T03:47:09.554Z",
     "status": "ready"
   },
   {
