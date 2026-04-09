@@ -3055,6 +3055,26 @@
     "status": "ready"
   },
   {
+    "name": "armsplint",
+    "label": "Tala de Braço",
+    "description": "Ajuda a imobilizar o braço paciente para se recuperar de pequenas lesões.",
+    "weight": 300,
+    "type": "item",
+    "image": "armsplint.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-09T15:21:02.058Z",
+    "status": "ready"
+  },
+  {
     "name": "legsplint",
     "label": "Tala de Perna",
     "description": "Suporte fixador provisórios para a perna. Ajuda o paciente que pode ficar mancando.",
