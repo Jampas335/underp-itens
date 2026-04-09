@@ -3035,6 +3035,26 @@
     "status": "ready"
   },
   {
+    "name": "legsplint",
+    "label": "Tala de Perna",
+    "description": "Suporte fixador provisórios para a perna. Ajuda o paciente que pode ficar mancando.",
+    "weight": 400,
+    "type": "item",
+    "image": "legsplint.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-09T03:42:58.502Z",
+    "status": "ready"
+  },
+  {
     "name": "fuel-tank",
     "label": "Tanque de Gasolina",
     "description": "",
