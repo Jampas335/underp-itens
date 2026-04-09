@@ -548,6 +548,26 @@
     "status": "ready"
   },
   {
+    "name": "wheelchair",
+    "label": "Cadeira de Rodas",
+    "description": "Entegue ao paciente no pós-alta para que possam realizar o repouso.",
+    "weight": 7000,
+    "type": "item",
+    "image": "wheelchair.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-09T03:31:47.224Z",
+    "status": "ready"
+  },
+  {
     "name": "mechanic-toolbox",
     "label": "Caixa de Ferramentas",
     "description": "",
