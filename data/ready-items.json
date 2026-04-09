@@ -1262,7 +1262,7 @@
   {
     "name": "epinephrine",
     "label": "Epinefrina",
-    "description": "",
+    "description": "Usado para dar um choque no coração. Aumenta muito os batimentos cardíacos (útil para combater quem está entrando em choque). Também diminui um pouco as dores. Causa Overdose no caso de altas aplicações em pouco espaço de tempo.",
     "weight": 30,
     "type": "item",
     "image": "epinephrine.png",
@@ -1275,8 +1275,8 @@
     "extraLua": "",
     "siteCategory": "EMS",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-08T21:19:49.419Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-09T03:46:23.214Z",
     "status": "ready"
   },
   {
