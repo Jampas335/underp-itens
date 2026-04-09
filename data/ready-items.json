@@ -1544,7 +1544,7 @@
   {
     "name": "legcast",
     "label": "Gesso de Perna",
-    "description": "Suporte fixador provisórios para a perna. Ajuda o paciente que pode ficar mancando devido a acidentes graves envolvendo a região da perna.",
+    "description": "Ajuda o paciente a se recuperar de uma fratura na perna, ajudando o osso a colar no lugar certo.",
     "weight": 200,
     "type": "item",
     "image": "legcast.png",
@@ -1557,8 +1557,8 @@
     "extraLua": "",
     "siteCategory": "EMS",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-09T03:44:23.539Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-09T15:18:36.152Z",
     "status": "ready"
   },
   {
