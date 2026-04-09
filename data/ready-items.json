@@ -1542,6 +1542,26 @@
     "status": "ready"
   },
   {
+    "name": "legcast",
+    "label": "Gesso de Perna",
+    "description": "Suporte fixador provisórios para a perna. Ajuda o paciente que pode ficar mancando devido a acidentes graves envolvendo a região da perna.",
+    "weight": 200,
+    "type": "item",
+    "image": "legcast.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-09T03:44:23.539Z",
+    "status": "ready"
+  },
+  {
     "name": "pinkdolpin",
     "label": "Golfinho Rosa",
     "description": "",
