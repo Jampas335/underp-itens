@@ -2239,7 +2239,7 @@
   {
     "name": "pager",
     "label": "Pager",
-    "description": "",
+    "description": "Usado para informar o hospital sobre possível entrada de paciente e o seu estado físico.",
     "weight": 60,
     "type": "item",
     "image": "pager.png",
@@ -2252,8 +2252,8 @@
     "extraLua": "",
     "siteCategory": "EMS",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-08T21:18:19.471Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-09T03:48:29.691Z",
     "status": "ready"
   },
   {
