@@ -1867,6 +1867,26 @@
     "status": "ready"
   },
   {
+    "name": "stretcher",
+    "label": "Maca",
+    "description": "Maca com rodas pra locomoção e transporte na ambulância e helicóptero.",
+    "weight": 12000,
+    "type": "item",
+    "image": "stretcher.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-09T03:30:13.125Z",
+    "status": "ready"
+  },
+  {
     "name": "fish4",
     "label": "Maingano",
     "description": "",
