@@ -2003,8 +2003,8 @@
     "extraLua": "['prop'] = 'prop_microwave_1',\n        ['object'] = 'prop_microwave_1',\n        ['carryInHand'] = true,\n        ['carryAttachment'] = {\n            bone = 60309,\n            pos = { x = 0.14, y = -0.005, z = 0.26 },\n            rot = { x = -132.0, y = 111.0, z = 0.0 },\n        },\n        ['carryAnim'] = {\n            dict = 'anim@heists@box_carry@',\n            clip = 'idle',\n            flag = 49,\n        },\n        ['allowInBackpack'] = false,",
     "siteCategory": "Roubo casa",
     "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-04-07T09:09:12.988Z",
+    "iconSource": "upload",
+    "createdAt": "2026-04-10T22:44:16.542Z",
     "status": "ready"
   },
   {
