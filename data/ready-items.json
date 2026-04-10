@@ -347,7 +347,7 @@
     "name": "battery",
     "label": "Bateria",
     "description": "",
-    "weight": 14000,
+    "weight": 1400,
     "type": "item",
     "image": "battery.png",
     "unique": false,
@@ -359,8 +359,8 @@
     "extraLua": "",
     "siteCategory": "Peças de Veículo",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-07T07:25:12.056Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-10T08:49:06.437Z",
     "status": "ready"
   },
   {
