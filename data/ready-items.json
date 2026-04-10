@@ -2904,10 +2904,10 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "EMS",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-09T03:18:24.655Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-10T08:50:21.346Z",
     "status": "ready"
   },
   {
