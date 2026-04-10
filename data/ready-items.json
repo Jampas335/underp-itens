@@ -1516,9 +1516,10 @@
     "pendingIconName": "jerry-can",
     "pendingCategory": "Ferramentas",
     "extraLua": "",
+    "siteCategory": "Ferramentas",
     "source": "ready",
-    "iconSource": "pending",
-    "createdAt": "2026-04-07T03:13:24.089Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-10T08:51:31.282Z",
     "status": "ready"
   },
   {
