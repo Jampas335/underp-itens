@@ -1580,6 +1580,26 @@
     "status": "ready"
   },
   {
+    "name": "coca_leaf",
+    "label": "Folha de Coca",
+    "description": "",
+    "weight": 5,
+    "type": "item",
+    "image": "coca_leaf.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T07:08:28.258Z",
+    "status": "ready"
+  },
+  {
     "name": "brakes",
     "label": "Freios",
     "description": "",
