@@ -2912,6 +2912,26 @@
     "status": "ready"
   },
   {
+    "name": "castsaw",
+    "label": "Serra de Gesso",
+    "description": "Usado para remover Gessos.",
+    "weight": 1000,
+    "type": "item",
+    "image": "castsaw.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:17:24.940Z",
+    "status": "ready"
+  },
+  {
     "name": "flare",
     "label": "Sinalizador",
     "description": "",
