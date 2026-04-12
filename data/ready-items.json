@@ -3278,6 +3278,27 @@
     "status": "ready"
   },
   {
+    "name": "weapon_stungun",
+    "label": "Taser",
+    "description": "",
+    "weight": 300,
+    "type": "weapon",
+    "image": "weapon_stungun.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "ammotype": "ammo_taser",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:27:48.808Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_machinepistol",
     "label": "TEC-9",
     "description": "",
