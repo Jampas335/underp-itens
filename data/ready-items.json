@@ -1643,6 +1643,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_grenade_smoke",
+    "label": "Granada de Fumaça",
+    "description": "",
+    "weight": 200,
+    "type": "weapon",
+    "image": "weapon_grenade_smoke.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:40:04.144Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_grenade_teargas",
     "label": "Granada de Gás",
     "description": "",
