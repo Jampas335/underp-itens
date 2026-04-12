@@ -1460,6 +1460,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_fertilizer_blackmarket",
+    "label": "Fertilizante blackmarket",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "kq_weed_fertilizer_blackmarket.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T07:00:22.457Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_fertilizer_resistance",
     "label": "Fertilizante resistance",
     "description": "",
