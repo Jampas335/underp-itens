@@ -1663,6 +1663,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_grenade_stun",
+    "label": "Granada Flashbang",
+    "description": "",
+    "weight": 300,
+    "type": "weapon",
+    "image": "weapon_grenade_stun.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:38:40.580Z",
+    "status": "ready"
+  },
+  {
     "name": "weiner",
     "label": "Hotdog",
     "description": "",
