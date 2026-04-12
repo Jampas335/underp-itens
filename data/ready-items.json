@@ -1469,14 +1469,14 @@
     "unique": false,
     "useable": true,
     "shouldClose": true,
-    "rarity": "common",
+    "rarity": "rare",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Drogas",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-12T06:56:31.643Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-12T06:58:27.651Z",
     "status": "ready"
   },
   {
