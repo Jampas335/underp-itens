@@ -3665,6 +3665,27 @@
     "status": "ready"
   },
   {
+    "name": "weapon_specialcarbine",
+    "label": "Vector",
+    "description": "",
+    "weight": 2700,
+    "type": "weapon",
+    "image": "weapon_specialcarbine.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "ammotype": "ammo_smg",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:29:32.223Z",
+    "status": "ready"
+  },
+  {
     "name": "steering-wheel",
     "label": "Volante",
     "description": "",
