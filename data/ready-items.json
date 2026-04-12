@@ -3285,7 +3285,7 @@
     "type": "weapon",
     "image": "weapon_stungun.png",
     "unique": true,
-    "useable": true,
+    "useable": false,
     "shouldClose": true,
     "rarity": "rare",
     "pendingIconName": "",
@@ -3294,8 +3294,8 @@
     "siteCategory": "Policial",
     "ammotype": "ammo_taser",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-12T06:27:48.808Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-12T06:30:50.859Z",
     "status": "ready"
   },
   {
