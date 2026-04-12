@@ -1480,6 +1480,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_fertilizer_yield",
+    "label": "Fertilizante yield",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "kq_weed_fertilizer_yield.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:58:08.934Z",
+    "status": "ready"
+  },
+  {
     "name": "brakes",
     "label": "Freios",
     "description": "",
