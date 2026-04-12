@@ -2618,6 +2618,26 @@
     "status": "ready"
   },
   {
+    "name": "coca_paste",
+    "label": "Pasta Base",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "coca_paste.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T07:09:22.060Z",
+    "status": "ready"
+  },
+  {
     "name": "rock",
     "label": "Pedra",
     "description": "",
