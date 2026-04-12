@@ -22,6 +22,26 @@
     "status": "ready"
   },
   {
+    "name": "hydrochloric_acid",
+    "label": "Ácido  Clorídrico",
+    "description": "",
+    "weight": 5000,
+    "type": "item",
+    "image": "hydrochloric_acid.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T07:06:10.194Z",
+    "status": "ready"
+  },
+  {
     "name": "assult_rifle",
     "label": "AK-47",
     "description": "",
