@@ -3132,6 +3132,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_watering_system",
+    "label": "Sistema de Irrigação",
+    "description": "",
+    "weight": 30,
+    "type": "item",
+    "image": "kq_weed_watering_system.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:50:10.077Z",
+    "status": "ready"
+  },
+  {
     "name": "saline250ml",
     "label": "Soro 250ml",
     "description": "Também ajuda recuperar o volume sanguíneo, porém em caso de grandes perdas, recomenda-se a transfusão uma bolsa de sangue puro. É vital quando os paramédicos estão ficando sem sangue no estoque.",
