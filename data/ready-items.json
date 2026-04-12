@@ -2068,6 +2068,26 @@
     "status": "ready"
   },
   {
+    "name": "r_megaphone",
+    "label": "Megafone",
+    "description": "",
+    "weight": 600,
+    "type": "item",
+    "image": "r_megaphone.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:23:58.626Z",
+    "status": "ready"
+  },
+  {
     "name": "microondas",
     "label": "Micro-ondas",
     "description": "",
