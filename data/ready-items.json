@@ -910,6 +910,26 @@
     "status": "ready"
   },
   {
+    "name": "cement",
+    "label": "Cimento",
+    "description": "",
+    "weight": 15000,
+    "type": "item",
+    "image": "cement.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T07:04:25.518Z",
+    "status": "ready"
+  },
+  {
     "name": "quick_clot",
     "label": "Coagulante Rapido",
     "description": "Acelera a coagulação e estanca o sangramento mais rápido em lesões de tiro e lacerações.",
