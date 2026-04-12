@@ -1886,6 +1886,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_flashlight",
+    "label": "Lanterna",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "weapon_flashlight.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:20:34.513Z",
+    "status": "ready"
+  },
+  {
     "name": "wipers",
     "label": "Limpadores de Parabrisa",
     "description": "",
