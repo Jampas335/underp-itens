@@ -3864,5 +3864,25 @@
     "iconSource": "pending",
     "createdAt": "2026-04-07T07:34:03.572Z",
     "status": "ready"
+  },
+  {
+    "name": "kq_weed_bag_empty",
+    "label": "Ziplock",
+    "description": "",
+    "weight": 5,
+    "type": "item",
+    "image": "kq_weed_bag_empty.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:51:04.011Z",
+    "status": "ready"
   }
 ]
