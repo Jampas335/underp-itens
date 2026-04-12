@@ -1543,6 +1543,26 @@
     "status": "ready"
   },
   {
+    "name": "armcast",
+    "label": "Gesso de Braço",
+    "description": "Usado para ajudar na curar permanentemente de fraturas sofridas no braço.",
+    "weight": 800,
+    "type": "item",
+    "image": "armcast.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:08:21.741Z",
+    "status": "ready"
+  },
+  {
     "name": "legcast",
     "label": "Gesso de Perna",
     "description": "Ajuda o paciente a se recuperar de uma fratura na perna, ajudando o osso a colar no lugar certo.",
