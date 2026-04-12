@@ -3092,6 +3092,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_paper",
+    "label": "Seda",
+    "description": "",
+    "weight": 20,
+    "type": "item",
+    "image": "kq_weed_paper.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:53:58.710Z",
+    "status": "ready"
+  },
+  {
     "name": "castsaw",
     "label": "Serra de Gesso",
     "description": "Usado para remover Gessos.",
