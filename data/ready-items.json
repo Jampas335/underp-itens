@@ -1360,6 +1360,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_tent",
+    "label": "Estufa",
+    "description": "",
+    "weight": 400,
+    "type": "item",
+    "image": "kq_weed_tent.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:49:02.578Z",
+    "status": "ready"
+  },
+  {
     "name": "sturgeon",
     "label": "Esturjao",
     "description": "",
