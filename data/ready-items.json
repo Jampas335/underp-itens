@@ -943,10 +943,10 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "EMS",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-12T06:12:23.983Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-12T06:15:08.372Z",
     "status": "ready"
   },
   {
