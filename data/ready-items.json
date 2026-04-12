@@ -2148,6 +2148,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_table",
+    "label": "Mesa de Empacotamento",
+    "description": "",
+    "weight": 5000,
+    "type": "item",
+    "image": "kq_weed_table.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:43:28.808Z",
+    "status": "ready"
+  },
+  {
     "name": "microondas",
     "label": "Micro-ondas",
     "description": "",
