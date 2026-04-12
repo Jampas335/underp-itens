@@ -2578,6 +2578,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_pesticide_spray",
+    "label": "Pesticida",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "kq_weed_pesticide_spray.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:55:36.716Z",
+    "status": "ready"
+  },
+  {
     "name": "fair-popsicle",
     "label": "Picolé",
     "description": "",
