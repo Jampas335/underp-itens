@@ -1460,6 +1460,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_fertilizer_speed",
+    "label": "Fertilizante speed",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "kq_weed_fertilizer_speed.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:56:31.643Z",
+    "status": "ready"
+  },
+  {
     "name": "brakes",
     "label": "Freios",
     "description": "",
