@@ -2643,6 +2643,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_press",
+    "label": "Prensa",
+    "description": "",
+    "weight": 10000,
+    "type": "item",
+    "image": "kq_weed_press.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:44:44.183Z",
+    "status": "ready"
+  },
+  {
     "name": "fair-pretzel",
     "label": "Pretzel",
     "description": "",
