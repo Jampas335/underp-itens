@@ -1703,6 +1703,26 @@
     "status": "ready"
   },
   {
+    "name": "gasoline",
+    "label": "Gasolina",
+    "description": "",
+    "weight": 5000,
+    "type": "item",
+    "image": "gasoline.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T07:10:21.828Z",
+    "status": "ready"
+  },
+  {
     "name": "gauze",
     "label": "Gaze",
     "description": "",
