@@ -1643,6 +1643,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_grenade_teargas",
+    "label": "Granada de Gás",
+    "description": "",
+    "weight": 150,
+    "type": "weapon",
+    "image": "weapon_grenade_teargas.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:37:20.627Z",
+    "status": "ready"
+  },
+  {
     "name": "weiner",
     "label": "Hotdog",
     "description": "",
