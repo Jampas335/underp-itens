@@ -2605,6 +2605,26 @@
     "status": "ready"
   },
   {
+    "name": "radio",
+    "label": "Rádio",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "radio.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-12T06:19:13.813Z",
+    "status": "ready"
+  },
+  {
     "name": "fishing_net",
     "label": "Rede de pesca",
     "description": "",
