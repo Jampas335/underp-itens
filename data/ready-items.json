@@ -2026,6 +2026,26 @@
     "status": "ready"
   },
   {
+    "name": "ifak",
+    "label": "IFAK",
+    "description": "",
+    "weight": 1000,
+    "type": "item",
+    "image": "ifak.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-14T22:06:14.263Z",
+    "status": "ready"
+  },
+  {
     "name": "fuel-injector",
     "label": "Injetor de Combustível",
     "description": "",
