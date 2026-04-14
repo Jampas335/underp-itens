@@ -910,6 +910,26 @@
     "status": "ready"
   },
   {
+    "name": "cigarro",
+    "label": "Cigarro",
+    "description": "",
+    "weight": 25,
+    "type": "item",
+    "image": "cigarro.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-14T05:40:24.929Z",
+    "status": "ready"
+  },
+  {
     "name": "diving_tube",
     "label": "Cilindro de oxigênio",
     "description": "",
