@@ -7,6 +7,7 @@ const DEFAULT_INVENTORY_PATH =
 const PROJECT_ROOT = __dirname;
 const OUTPUT_FILE = path.join(PROJECT_ROOT, 'implemented-items.js');
 const OUTPUT_ICON_DIR = path.join(PROJECT_ROOT, 'server-icons');
+const REMOVED_ITEMS_FILE = path.join(PROJECT_ROOT, 'data', 'implemented-removed.json');
 
 function readText(filePath) {
     return fs.readFileSync(filePath, 'utf8');
@@ -14,6 +15,24 @@ function readText(filePath) {
 
 function ensureDir(dirPath) {
     fs.mkdirSync(dirPath, { recursive: true });
+}
+
+function readRemovedImplementedItems() {
+    if (!fs.existsSync(REMOVED_ITEMS_FILE)) {
+        return new Set();
+    }
+
+    try {
+        const parsed = JSON.parse(readText(REMOVED_ITEMS_FILE));
+        const names = Array.isArray(parsed)
+            ? parsed
+            : Array.isArray(parsed?.items)
+                ? parsed.items
+                : [];
+        return new Set(names.map((name) => String(name || '').trim().toLowerCase()).filter(Boolean));
+    } catch (err) {
+        throw new Error(`Falha ao ler ${path.basename(REMOVED_ITEMS_FILE)}: ${err.message}`);
+    }
 }
 
 function extractBraceBlock(source, anchorPattern) {
@@ -495,6 +514,7 @@ function buildOutput(items, meta) {
 
 function main() {
     const inventoryPath = process.argv[2] || DEFAULT_INVENTORY_PATH;
+    const removedNames = readRemovedImplementedItems();
 
     const sharedItems = parseSharedItems(inventoryPath);
     const compatItems = parseCompatItems(inventoryPath);
@@ -522,9 +542,15 @@ function main() {
 
     const implementedItems = Object.values(mergedItems)
         .map(item => normalizeItemRecord(item.name, item, item.source))
+        .filter(item => !removedNames.has(String(item.name || '').toLowerCase()))
         .sort((a, b) => a.label.localeCompare(b.label, 'pt-BR'));
 
     const copiedImages = syncImages(inventoryPath, implementedItems);
+    const sourceCounts = implementedItems.reduce((acc, item) => {
+        const key = item.source || 'shared';
+        acc[key] = (acc[key] || 0) + 1;
+        return acc;
+    }, {});
 
     buildOutput(implementedItems, {
         generatedAt: new Date().toISOString(),
@@ -532,9 +558,9 @@ function main() {
         totalItems: implementedItems.length,
         copiedImages,
         sources: {
-            shared: Object.keys(sharedItems).length,
-            compat: Object.keys(compatItems).length,
-            generated: Object.keys(generatedItems).length,
+            shared: sourceCounts.shared || 0,
+            compat: sourceCounts.compat || 0,
+            generated: sourceCounts.generated || 0,
         },
     });
 

@@ -44,4 +44,8 @@ const CONFIG = {
 
     // Pasta dos ícones uploadados para itens prontos
     READY_ICONS_FOLDER: "ready-items/icons",
+
+    IMPLEMENTED_ITEMS_PATH: "implemented-items.js",
+    IMPLEMENTED_ICONS_FOLDER: "server-icons",
+    IMPLEMENTED_REMOVALS_PATH: "data/implemented-removed.json",
 };

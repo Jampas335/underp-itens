@@ -63,6 +63,7 @@ const state = {
     implementedPage: 0,
     basePendingItems: [],
     baseImplementedItems: [],
+    implementedMeta: null,
     customImplemented: {},
     customCategories: [],
     archivedPending: [],
@@ -183,6 +184,7 @@ function bootstrapData() {
     applyBranding();
     state.basePendingItems = flattenPendingItems();
     state.baseImplementedItems = (IMPLEMENTED_ITEMS || []).map(normalizeImplementedItem);
+    state.implementedMeta = IMPLEMENTED_ITEMS_META ? { ...IMPLEMENTED_ITEMS_META } : null;
     refreshCategoryRegistry();
 }
 
@@ -738,6 +740,161 @@ async function deleteReadyItemFromGitHub(name) {
     state.readyItemsSha = result.content.sha;
 }
 
+function parseImplementedSnapshotSource(source) {
+    const factory = new Function(
+        `${source}\nreturn { meta: typeof IMPLEMENTED_ITEMS_META !== "undefined" ? IMPLEMENTED_ITEMS_META : null, items: typeof IMPLEMENTED_ITEMS !== "undefined" ? IMPLEMENTED_ITEMS : [] };`
+    );
+    const parsed = factory();
+    return {
+        meta: parsed?.meta && typeof parsed.meta === "object" ? parsed.meta : {},
+        items: Array.isArray(parsed?.items) ? parsed.items : [],
+    };
+}
+
+function buildImplementedSourceCounts(items) {
+    return (items || []).reduce((acc, item) => {
+        const key = item?.source || "shared";
+        acc[key] = (acc[key] || 0) + 1;
+        return acc;
+    }, { shared: 0, compat: 0, generated: 0 });
+}
+
+function buildImplementedSnapshotSource(meta, items) {
+    return (
+        "/**\n" +
+        " * Snapshot dos itens implementados no prea-inventory.\n" +
+        " * Gerado automaticamente por sync-implemented-items.js.\n" +
+        " */\n\n" +
+        `const IMPLEMENTED_ITEMS_META = ${JSON.stringify(meta, null, 4)};\n\n` +
+        `const IMPLEMENTED_ITEMS = ${JSON.stringify(items, null, 4)};\n`
+    );
+}
+
+async function loadImplementedRemovedItems() {
+    const file = await githubGetFile(CONFIG.IMPLEMENTED_REMOVALS_PATH, { bustCache: true });
+    if (!file) {
+        return { names: [], sha: null };
+    }
+
+    const parsed = JSON.parse(base64Decode(file.content));
+    const names = Array.isArray(parsed)
+        ? parsed
+        : Array.isArray(parsed?.items)
+            ? parsed.items
+            : [];
+
+    return {
+        names: Array.from(new Set(names.map((name) => String(name || "").trim().toLowerCase()).filter(Boolean))).sort(),
+        sha: file.sha,
+    };
+}
+
+function resetBuilderAfterImplementedDelete(name) {
+    const isEditingDeletedLocal = state.builder.editingLocalName === name;
+    const isTemplateDeleted = state.builder.templateName === name && state.builder.templateSource !== "ready";
+    if (!isEditingDeletedLocal && !isTemplateDeleted) return;
+
+    if (isEditingDeletedLocal) {
+        state.builder.activePendingName = null;
+        state.builder.editingLocalName = null;
+        state.builder.editingReadyName = null;
+        state.builder.templateName = null;
+        state.builder.templateSource = null;
+        state.builder.form = null;
+        state.builder.iconSource = "pending";
+        state.builder.uploadedIconBase64 = null;
+        state.builder.uploadedIconMime = "image/png";
+        state.builder.uploadedIconFileName = null;
+        return;
+    }
+
+    state.builder.templateName = null;
+    state.builder.templateSource = null;
+}
+
+function deleteLocalImplementedItem(name) {
+    const item = state.customImplemented[name];
+    if (!item) return;
+
+    delete state.customImplemented[name];
+    resetBuilderAfterImplementedDelete(name);
+    saveWorkspaceState();
+    refreshCategoryRegistry();
+    state.implementedPage = 0;
+    renderAll();
+}
+
+async function deleteImplementedItemFromGitHub(name) {
+    const latestFile = await githubGetFile(CONFIG.IMPLEMENTED_ITEMS_PATH, { bustCache: true });
+    if (!latestFile) {
+        throw new Error("Snapshot dos implementados nao encontrado no GitHub.");
+    }
+
+    const parsed = parseImplementedSnapshotSource(base64Decode(latestFile.content));
+    const existingItem = parsed.items.find((item) => item.name === name);
+    if (!existingItem) {
+        throw new Error(`Item implementado ${name} nao encontrado no snapshot atual.`);
+    }
+
+    const removedState = await loadImplementedRemovedItems();
+    const nextRemoved = Array.from(new Set([...removedState.names, String(name).toLowerCase()])).sort();
+    await githubPutFile(
+        CONFIG.IMPLEMENTED_REMOVALS_PATH,
+        base64Encode(JSON.stringify(nextRemoved, null, 2)),
+        removedState.sha,
+        `feat: mark implemented item ${name} as removed`
+    );
+
+    const remainingItems = parsed.items.filter((item) => item.name !== name);
+
+    let removedIcon = false;
+    const imageName = String(existingItem.image || "").trim();
+    const isImageStillUsed = imageName
+        ? remainingItems.some((item) => String(item.image || "").trim().toLowerCase() === imageName.toLowerCase())
+        : false;
+
+    if (imageName && !isImageStillUsed) {
+        try {
+            const iconPath = `${CONFIG.IMPLEMENTED_ICONS_FOLDER}/${imageName}`;
+            const iconFile = await githubGetFile(iconPath, { bustCache: true });
+            if (iconFile) {
+                await githubDeleteFile(iconPath, iconFile.sha, `feat: remove implemented icon ${name}`);
+                removedIcon = true;
+            }
+        } catch (err) {
+            console.warn("Falha ao deletar icone de implementado:", err);
+        }
+    }
+
+    const nextMeta = {
+        ...(parsed.meta || {}),
+        generatedAt: new Date().toISOString(),
+        totalItems: remainingItems.length,
+        copiedImages: typeof parsed.meta?.copiedImages === "number"
+            ? Math.max(0, parsed.meta.copiedImages - (removedIcon ? 1 : 0))
+            : parsed.meta?.copiedImages,
+        sources: buildImplementedSourceCounts(remainingItems),
+    };
+
+    await githubPutFile(
+        CONFIG.IMPLEMENTED_ITEMS_PATH,
+        base64Encode(buildImplementedSnapshotSource(nextMeta, remainingItems)),
+        latestFile.sha,
+        `feat: remove implemented item ${name}`
+    );
+
+    state.baseImplementedItems = remainingItems.map(normalizeImplementedItem);
+    state.implementedMeta = nextMeta;
+    if (typeof IMPLEMENTED_ITEMS_META === "object" && IMPLEMENTED_ITEMS_META) {
+        Object.keys(IMPLEMENTED_ITEMS_META).forEach((key) => delete IMPLEMENTED_ITEMS_META[key]);
+        Object.assign(IMPLEMENTED_ITEMS_META, nextMeta);
+    }
+    resetBuilderAfterImplementedDelete(name);
+    refreshCategoryRegistry();
+    state.implementedPage = 0;
+    renderAll();
+}
+
 // ============================================================
 //  EVENT BINDING
 // ============================================================
@@ -979,7 +1136,27 @@ function handleImplementedGridClick(e) {
     if (action === "copy-export") { copyToClipboard(buildLuaEntry(item), "Export copiado."); return; }
     if (action === "use-template") { applyTemplate(item); return; }
     if (action === "edit-local") { openBuilderForLocal(name); return; }
-    if (action === "restore-pending") restorePendingFromLocal(name);
+    if (action === "restore-pending") { restorePendingFromLocal(name); return; }
+    if (action === "delete-implemented") {
+        const confirmMessage = item.source === "local"
+            ? `Remover o implementado local "${name}" desta maquina? Isso apaga o rascunho da aba Implementados.`
+            : `Remover o implementado "${name}" do snapshot publicado, do GitHub e da lista de exclusoes?`;
+        if (!window.confirm(confirmMessage)) return;
+
+        const task = item.source === "local"
+            ? Promise.resolve().then(() => deleteLocalImplementedItem(name))
+            : deleteImplementedItemFromGitHub(name);
+
+        task
+            .then(() => {
+                showToast(
+                    item.source === "local"
+                        ? `Implementado local ${name} removido.`
+                        : `Implementado ${name} removido do snapshot publicado.`
+                );
+            })
+            .catch((err) => showToast(`Erro ao remover implementado: ${err.message}`));
+    }
 }
 
 function handleReadyGridClick(e) {
@@ -1018,13 +1195,14 @@ function renderAll() {
 }
 
 function renderHeroMeta() {
-    const generatedAt = IMPLEMENTED_ITEMS_META && IMPLEMENTED_ITEMS_META.generatedAt
-        ? new Date(IMPLEMENTED_ITEMS_META.generatedAt)
+    const meta = state.implementedMeta || IMPLEMENTED_ITEMS_META;
+    const generatedAt = meta && meta.generatedAt
+        ? new Date(meta.generatedAt)
         : null;
     setText("syncTimestamp", generatedAt
         ? generatedAt.toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" })
         : "Snapshot indisponível");
-    const summary = IMPLEMENTED_ITEMS_META
+    const summary = meta
         ? `${IMPLEMENTED_ITEMS_META.totalItems} itens · ${IMPLEMENTED_ITEMS_META.copiedImages} imagens sincronizadas`
         : "Sem metadados do snapshot";
     setText("syncSummary", summary);
@@ -1228,9 +1406,11 @@ function renderImplementedCard(item) {
     const actionButtons = item.source === "local"
         ? `<button class="card-action primary" data-action="copy-export" data-name="${escapeHtmlAttribute(item.name)}" type="button">Copiar export</button>
            <button class="card-action" data-action="edit-local" data-name="${escapeHtmlAttribute(item.name)}" type="button">Editar</button>
-           <button class="card-action" data-action="restore-pending" data-name="${escapeHtmlAttribute(item.name)}" type="button">Reabrir</button>`
+           <button class="card-action" data-action="restore-pending" data-name="${escapeHtmlAttribute(item.name)}" type="button">Reabrir</button>
+           <button class="card-action ghost-danger" data-action="delete-implemented" data-name="${escapeHtmlAttribute(item.name)}" type="button">Deletar</button>`
         : `<button class="card-action primary" data-action="copy-export" data-name="${escapeHtmlAttribute(item.name)}" type="button">Copiar export</button>
-           <button class="card-action" data-action="use-template" data-name="${escapeHtmlAttribute(item.name)}" type="button">Usar template</button>`;
+           <button class="card-action" data-action="use-template" data-name="${escapeHtmlAttribute(item.name)}" type="button">Usar template</button>
+           <button class="card-action ghost-danger" data-action="delete-implemented" data-name="${escapeHtmlAttribute(item.name)}" type="button">Deletar</button>`;
 
     return `
         <article class="item-card implemented-card ${item.source === "local" ? "local-item" : ""}">
