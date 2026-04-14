@@ -4,13 +4,13 @@
  */
 
 const IMPLEMENTED_ITEMS_META = {
-    "generatedAt": "2026-04-14T05:37:15.100Z",
+    "generatedAt": "2026-04-14T05:40:56.759Z",
     "inventoryResource": "resources/[essenciais]/prea-inventory",
-    "totalItems": 549,
-    "copiedImages": 60,
+    "totalItems": 548,
+    "copiedImages": 59,
     "sources": {
         "shared": 454,
-        "compat": 95,
+        "compat": 94,
         "generated": 0
     }
 };
@@ -965,19 +965,6 @@ const IMPLEMENTED_ITEMS = [
         "decay": 0.2,
         "rarity": "rare",
         "source": "shared"
-    },
-    {
-        "name": "cigarette",
-        "label": "Cigarro",
-        "weight": 25,
-        "type": "item",
-        "image": "Cigarette.png",
-        "unique": false,
-        "useable": true,
-        "shouldClose": true,
-        "rarity": "common",
-        "description": "Um cigarro.",
-        "source": "compat"
     },
     {
         "name": "cleaningkit",
