@@ -405,6 +405,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_bud_blue_dream",
+    "label": "Blue Dream",
+    "description": "",
+    "weight": 5,
+    "type": "item",
+    "image": "kq_weed_bud_blue_dream.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-14T21:51:01.996Z",
+    "status": "ready"
+  },
+  {
     "name": "bocachico_fish",
     "label": "Bocachico",
     "description": "",
