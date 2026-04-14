@@ -1381,6 +1381,26 @@
     "status": "ready"
   },
   {
+    "name": "ecg",
+    "label": "ECG",
+    "description": "",
+    "weight": 1500,
+    "type": "item",
+    "image": "ecg.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-14T22:04:44.642Z",
+    "status": "ready"
+  },
+  {
     "name": "epinephrine",
     "label": "Epinefrina",
     "description": "Usado para dar um choque no coração. Aumenta muito os batimentos cardíacos (útil para combater quem está entrando em choque). Também diminui um pouco as dores. Causa Overdose no caso de altas aplicações em pouco espaço de tempo.",
