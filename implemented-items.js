@@ -4,13 +4,13 @@
  */
 
 const IMPLEMENTED_ITEMS_META = {
-    "generatedAt": "2026-04-14T06:32:35.612Z",
+    "generatedAt": "2026-04-14T07:13:48.079Z",
     "inventoryResource": "resources/[essenciais]/prea-inventory",
-    "totalItems": 545,
-    "copiedImages": 58,
+    "totalItems": 542,
+    "copiedImages": 57,
     "sources": {
-        "shared": 452,
-        "compat": 93,
+        "shared": 450,
+        "compat": 92,
         "generated": 0
     }
 };
@@ -2595,31 +2595,6 @@ const IMPLEMENTED_ITEMS = [
         "source": "shared"
     },
     {
-        "name": "ammo-rocket",
-        "label": "Foguete RPG",
-        "weight": 500,
-        "type": "item",
-        "image": "ammo-rocket.png",
-        "unique": false,
-        "useable": true,
-        "description": "Um foguete para RPG. Cada unidade equivale a uma municao completa.",
-        "rarity": "uncommon",
-        "source": "shared"
-    },
-    {
-        "name": "rpg_ammo",
-        "label": "Foguete RPG",
-        "weight": 500,
-        "type": "item",
-        "image": "ammo-rocket.png",
-        "unique": false,
-        "useable": true,
-        "shouldClose": true,
-        "rarity": "common",
-        "description": "Um foguete para RPG. Cada unidade equivale a uma carga completa.",
-        "source": "compat"
-    },
-    {
         "name": "water_bottle",
         "label": "Garrafa de Ãgua",
         "weight": 500,
@@ -4927,19 +4902,6 @@ const IMPLEMENTED_ITEMS = [
         "shouldClose": true,
         "description": "Uma rota de transporte blindado rara. Guardas mais bem armados, mas loot mais valioso.",
         "rarity": "epic",
-        "source": "shared"
-    },
-    {
-        "name": "weapon_rpg",
-        "label": "RPG",
-        "weight": 5000,
-        "type": "weapon",
-        "image": "rpg.png",
-        "unique": true,
-        "useable": false,
-        "ammotype": "ammo-rocket",
-        "decay": 0.3,
-        "rarity": "legendary",
         "source": "shared"
     },
     {
