@@ -4,12 +4,12 @@
  */
 
 const IMPLEMENTED_ITEMS_META = {
-    "generatedAt": "2026-04-14T05:28:18.298Z",
+    "generatedAt": "2026-04-14T05:37:15.100Z",
     "inventoryResource": "resources/[essenciais]/prea-inventory",
-    "totalItems": 558,
-    "copiedImages": 62,
+    "totalItems": 549,
+    "copiedImages": 60,
     "sources": {
-        "shared": 463,
+        "shared": 454,
         "compat": 95,
         "generated": 0
     }
@@ -75,17 +75,6 @@ const IMPLEMENTED_ITEMS = [
         "source": "shared"
     },
     {
-        "name": "weed_ak47_seed",
-        "label": "AK47 Seed",
-        "weight": 1,
-        "type": "item",
-        "image": "weed_ak47_seed.png",
-        "unique": false,
-        "useable": false,
-        "rarity": "uncommon",
-        "source": "shared"
-    },
-    {
         "name": "aluminum",
         "label": "Aluminium",
         "weight": 100,
@@ -94,52 +83,6 @@ const IMPLEMENTED_ITEMS = [
         "unique": false,
         "useable": false,
         "rarity": "common",
-        "source": "shared"
-    },
-    {
-        "name": "weed_amnesia",
-        "label": "Amnesia 2g",
-        "weight": 200,
-        "type": "item",
-        "image": "weed_amnesia.png",
-        "unique": false,
-        "useable": false,
-        "rarity": "uncommon",
-        "source": "shared"
-    },
-    {
-        "name": "weed_amnesia_seed",
-        "label": "Amnesia Seed",
-        "weight": 1,
-        "type": "item",
-        "image": "weed_amnesia_seed.png",
-        "unique": false,
-        "useable": false,
-        "rarity": "uncommon",
-        "source": "shared"
-    },
-    {
-        "name": "antipatharia_coral",
-        "label": "Antipatharia",
-        "weight": 1000,
-        "type": "item",
-        "image": "antipatharia_coral.png",
-        "unique": false,
-        "useable": false,
-        "rarity": "common",
-        "source": "shared"
-    },
-    {
-        "name": "weapon_appistol",
-        "label": "AP Pistol",
-        "weight": 1400,
-        "type": "weapon",
-        "image": "ap-pistol.png",
-        "unique": true,
-        "useable": false,
-        "ammotype": "ammo-9",
-        "decay": 0.1,
-        "rarity": "rare",
         "source": "shared"
     },
     {
@@ -220,19 +163,6 @@ const IMPLEMENTED_ITEMS = [
         "source": "shared"
     },
     {
-        "name": "weapon_assaultsmg",
-        "label": "Assault SMG",
-        "weight": 2900,
-        "type": "weapon",
-        "image": "WEAPON_ASSAULTSMG.png",
-        "unique": true,
-        "useable": false,
-        "ammotype": "ammo-rifle",
-        "decay": 0.05,
-        "rarity": "epic",
-        "source": "shared"
-    },
-    {
         "name": "cokebaggy",
         "label": "Bag of Coke",
         "weight": 100,
@@ -252,39 +182,6 @@ const IMPLEMENTED_ITEMS = [
         "unique": false,
         "useable": true,
         "rarity": "common",
-        "source": "shared"
-    },
-    {
-        "name": "weapon_ball",
-        "label": "Ball",
-        "weight": 149,
-        "type": "weapon",
-        "image": "ball.png",
-        "unique": true,
-        "useable": false,
-        "rarity": "common",
-        "source": "shared"
-    },
-    {
-        "name": "at_skin_ballas",
-        "label": "Ballas Weapon Kit",
-        "weight": 50,
-        "type": "item",
-        "image": "at_skin_ballas.png",
-        "unique": false,
-        "useable": true,
-        "rarity": "uncommon",
-        "source": "shared"
-    },
-    {
-        "name": "bandage",
-        "label": "Bandage",
-        "weight": 115,
-        "type": "item",
-        "image": "bandage.png",
-        "unique": false,
-        "useable": true,
-        "rarity": "uncommon",
         "source": "shared"
     },
     {
