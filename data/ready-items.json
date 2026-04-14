@@ -1501,6 +1501,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_fireextinguisher",
+    "label": "Extintor",
+    "description": "",
+    "weight": 10000,
+    "type": "item",
+    "image": "fire-extinguisher.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "fire-extinguisher",
+    "pendingCategory": "Ferramentas",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "ready",
+    "createdAt": "2026-04-14T21:40:30.278Z",
+    "status": "ready"
+  },
+  {
     "name": "headlight",
     "label": "Farol",
     "description": "",
