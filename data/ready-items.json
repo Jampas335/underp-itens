@@ -4250,6 +4250,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_bud_white_widow",
+    "label": "White Widow",
+    "description": "",
+    "weight": 5,
+    "type": "item",
+    "image": "kq_weed_bud_white_widow.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-14T21:49:26.320Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_bag_empty",
     "label": "Ziplock",
     "description": "",
