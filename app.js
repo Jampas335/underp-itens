@@ -1238,6 +1238,11 @@ function handleImplementedGridClick(e) {
     const { action, name } = btn.dataset;
     const item = getImplementedItemByName(name);
     if (!item) return;
+    if (action === "toggle-select-implemented") {
+        toggleImplementedSelection(name);
+        renderImplementedSection();
+        return;
+    }
     if (action === "copy-export") { copyToClipboard(buildLuaEntry(item), "Export copiado."); return; }
     if (action === "use-template") { applyTemplate(item); return; }
     if (action === "edit-local") { openBuilderForLocal(name); return; }
@@ -1445,7 +1450,7 @@ function renderImplementedBulkBar() {
         ? `${selectedItems.length} implementado(s) selecionado(s).`
         : "Nenhum implementado selecionado.";
     hint.textContent = visibleItems.length > 0
-        ? `${visibleItems.length} item(ns) exibido(s) nesta página acumulada.`
+        ? `Clique em "Selecionar" nos cards ou use "Selecionar exibidos". ${visibleItems.length} item(ns) exibido(s) nesta página acumulada.`
         : "Ajuste os filtros para encontrar itens.";
 
     selectBtn.textContent = allVisibleSelected ? "Desmarcar exibidos" : "Selecionar exibidos";
@@ -1618,12 +1623,16 @@ function renderImplementedCard(item) {
         </label>
     `;
 
+    const selectButton = `<button class="card-action select-toggle ${isSelected ? "active" : ""}" data-action="toggle-select-implemented" data-name="${escapeHtmlAttribute(item.name)}" type="button">${isSelected ? "Selecionado" : "Selecionar"}</button>`;
+
     const actionButtons = item.source === "local"
-        ? `<button class="card-action primary" data-action="copy-export" data-name="${escapeHtmlAttribute(item.name)}" type="button">Copiar export</button>
+        ? `${selectButton}
+           <button class="card-action primary" data-action="copy-export" data-name="${escapeHtmlAttribute(item.name)}" type="button">Copiar export</button>
            <button class="card-action" data-action="edit-local" data-name="${escapeHtmlAttribute(item.name)}" type="button">Editar</button>
            <button class="card-action" data-action="restore-pending" data-name="${escapeHtmlAttribute(item.name)}" type="button">Reabrir</button>
            <button class="card-action ghost-danger" data-action="delete-implemented" data-name="${escapeHtmlAttribute(item.name)}" type="button">Deletar</button>`
-        : `<button class="card-action primary" data-action="copy-export" data-name="${escapeHtmlAttribute(item.name)}" type="button">Copiar export</button>
+        : `${selectButton}
+           <button class="card-action primary" data-action="copy-export" data-name="${escapeHtmlAttribute(item.name)}" type="button">Copiar export</button>
            <button class="card-action" data-action="use-template" data-name="${escapeHtmlAttribute(item.name)}" type="button">Usar template</button>
            <button class="card-action ghost-danger" data-action="delete-implemented" data-name="${escapeHtmlAttribute(item.name)}" type="button">Deletar</button>`;
 

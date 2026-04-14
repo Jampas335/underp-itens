@@ -917,6 +917,16 @@ code, pre {
     box-shadow: 0 12px 36px rgba(var(--accent-1-rgb), 0.30);
 }
 
+.card-action.select-toggle {
+    border-color: rgba(248, 113, 113, 0.18);
+}
+
+.card-action.select-toggle.active {
+    background: rgba(248, 113, 113, 0.12);
+    border-color: rgba(248, 113, 113, 0.30);
+    color: #fecaca;
+}
+
 .ghost-danger {
     color: #fca5a5;
 }
