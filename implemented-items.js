@@ -4,12 +4,12 @@
  */
 
 const IMPLEMENTED_ITEMS_META = {
-    "generatedAt": "2026-04-14T05:58:52.084Z",
+    "generatedAt": "2026-04-14T06:32:35.612Z",
     "inventoryResource": "resources/[essenciais]/prea-inventory",
-    "totalItems": 547,
-    "copiedImages": 59,
+    "totalItems": 545,
+    "copiedImages": 58,
     "sources": {
-        "shared": 454,
+        "shared": 452,
         "compat": 93,
         "generated": 0
     }
@@ -195,18 +195,6 @@ const IMPLEMENTED_ITEMS = [
         "shouldClose": true,
         "description": "Uma barra de ouro roubada. Vale muito no mercado negro.",
         "rarity": "legendary",
-        "source": "shared"
-    },
-    {
-        "name": "weapon_bat",
-        "label": "Bat",
-        "weight": 1134,
-        "type": "weapon",
-        "image": "WEAPON_BAT.png",
-        "unique": true,
-        "useable": false,
-        "decay": 0.1,
-        "rarity": "common",
         "source": "shared"
     },
     {
@@ -1081,19 +1069,6 @@ const IMPLEMENTED_ITEMS = [
         "ammotype": "ammo-9",
         "decay": 0.1,
         "rarity": "common",
-        "source": "shared"
-    },
-    {
-        "name": "weapon_combatpistol",
-        "label": "Combat Pistol",
-        "weight": 785,
-        "type": "weapon",
-        "image": "combat-pistol.png",
-        "unique": true,
-        "useable": false,
-        "ammotype": "ammo-9",
-        "decay": 0.2,
-        "rarity": "rare",
         "source": "shared"
     },
     {
