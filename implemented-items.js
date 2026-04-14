@@ -4,12 +4,12 @@
  */
 
 const IMPLEMENTED_ITEMS_META = {
-    "generatedAt": "2026-04-14T05:13:27.731Z",
+    "generatedAt": "2026-04-14T05:20:08.926Z",
     "inventoryResource": "resources/[essenciais]/prea-inventory",
-    "totalItems": 561,
-    "copiedImages": 64,
+    "totalItems": 560,
+    "copiedImages": 63,
     "sources": {
-        "shared": 466,
+        "shared": 465,
         "compat": 95,
         "generated": 0
     }
@@ -6228,18 +6228,6 @@ const IMPLEMENTED_ITEMS = [
         "ammotype": "ammo-shotgun",
         "decay": 0.05,
         "rarity": "rare",
-        "source": "shared"
-    },
-    {
-        "name": "weapon_switchblade",
-        "label": "Switchblade",
-        "weight": 300,
-        "type": "weapon",
-        "image": "switchblade.png",
-        "unique": true,
-        "useable": false,
-        "decay": 0.1,
-        "rarity": "common",
         "source": "shared"
     },
     {
