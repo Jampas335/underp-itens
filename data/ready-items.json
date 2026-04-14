@@ -2268,6 +2268,26 @@
     "status": "ready"
   },
   {
+    "name": "maco_cigarro",
+    "label": "Maço de Cigarro",
+    "description": "Um maÃ§o de cigarros.",
+    "weight": 125,
+    "type": "item",
+    "image": "maco_cigarro.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-14T05:58:35.569Z",
+    "status": "ready"
+  },
+  {
     "name": "fish4",
     "label": "Maingano",
     "description": "",
