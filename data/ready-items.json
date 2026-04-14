@@ -370,7 +370,7 @@
     "weight": 1400,
     "type": "item",
     "image": "battery.png",
-    "unique": false,
+    "unique": true,
     "useable": false,
     "shouldClose": true,
     "rarity": "common",
@@ -379,8 +379,8 @@
     "extraLua": "",
     "siteCategory": "Peças de Veículo",
     "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-04-10T08:49:06.437Z",
+    "iconSource": "upload",
+    "createdAt": "2026-04-14T04:55:28.147Z",
     "status": "ready"
   },
   {
