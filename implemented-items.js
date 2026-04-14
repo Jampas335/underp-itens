@@ -4,12 +4,12 @@
  */
 
 const IMPLEMENTED_ITEMS_META = {
-    "generatedAt": "2026-04-14T05:20:08.926Z",
+    "generatedAt": "2026-04-14T05:20:18.988Z",
     "inventoryResource": "resources/[essenciais]/prea-inventory",
-    "totalItems": 560,
+    "totalItems": 559,
     "copiedImages": 63,
     "sources": {
-        "shared": 465,
+        "shared": 464,
         "compat": 95,
         "generated": 0
     }
@@ -72,17 +72,6 @@ const IMPLEMENTED_ITEMS = [
         "unique": false,
         "useable": true,
         "rarity": "rare",
-        "source": "shared"
-    },
-    {
-        "name": "weed_ak47",
-        "label": "AK47 2g",
-        "weight": 200,
-        "type": "item",
-        "image": "weed_ak47.png",
-        "unique": false,
-        "useable": false,
-        "rarity": "uncommon",
         "source": "shared"
     },
     {
