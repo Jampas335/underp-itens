@@ -4,12 +4,12 @@
  */
 
 const IMPLEMENTED_ITEMS_META = {
-    "generatedAt": "2026-04-14T05:20:18.988Z",
+    "generatedAt": "2026-04-14T05:28:18.298Z",
     "inventoryResource": "resources/[essenciais]/prea-inventory",
-    "totalItems": 559,
-    "copiedImages": 63,
+    "totalItems": 558,
+    "copiedImages": 62,
     "sources": {
-        "shared": 464,
+        "shared": 463,
         "compat": 95,
         "generated": 0
     }
@@ -116,19 +116,6 @@ const IMPLEMENTED_ITEMS = [
         "unique": false,
         "useable": false,
         "rarity": "uncommon",
-        "source": "shared"
-    },
-    {
-        "name": "diamond_ring",
-        "label": "Anel de Diamante",
-        "weight": 10,
-        "type": "item",
-        "image": "diamond-ring.png",
-        "unique": false,
-        "useable": false,
-        "shouldClose": true,
-        "description": "Um anel com diamante incrustado. Itens de joalheria roubados.",
-        "rarity": "epic",
         "source": "shared"
     },
     {
