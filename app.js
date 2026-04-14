@@ -60,6 +60,7 @@ const state = {
     readyType: "all",
     readyRarity: "all",
     readyCategory: "all",
+    selectedImplementedNames: [],
     implementedPage: 0,
     basePendingItems: [],
     baseImplementedItems: [],
@@ -166,6 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initTheme();
     bootstrapData();
     loadWorkspaceState();
+    ensureImplementedBulkBar();
     ensureCurrentReadyIconOption();
     ensureAllowInBackpackField();
     ensureStackableField();
@@ -311,6 +313,30 @@ function ensureImplementedCategoryFilter() {
         <div class="chip-group" id="implementedCategoryFilter"></div>
     `;
     filterStack.appendChild(block);
+}
+
+function ensureImplementedBulkBar() {
+    if (document.getElementById("implementedBulkBar")) return;
+
+    const view = document.getElementById("implementedView");
+    const filterBar = view?.querySelector(".filter-bar");
+    if (!view || !filterBar) return;
+
+    const bar = document.createElement("div");
+    bar.id = "implementedBulkBar";
+    bar.className = "implemented-bulk-bar";
+    bar.innerHTML = `
+        <div class="implemented-bulk-copy">
+            <strong id="implementedSelectionStatus">Nenhum item selecionado.</strong>
+            <span id="implementedSelectionHint">Marque os cards que quiser remover.</span>
+        </div>
+        <div class="implemented-bulk-actions">
+            <button class="ghost-btn" id="selectVisibleImplementedBtn" type="button">Selecionar exibidos</button>
+            <button class="ghost-btn" id="clearImplementedSelectionBtn" type="button">Limpar selecao</button>
+            <button class="ghost-btn ghost-danger" id="deleteSelectedImplementedBtn" type="button">Deletar selecionados</button>
+        </div>
+    `;
+    filterBar.insertAdjacentElement("afterend", bar);
 }
 
 function ensureReadyCategoryFilter() {
@@ -467,6 +493,7 @@ function loadWorkspaceState() {
         state.archivedPending = Array.isArray(parsed.archivedPending)
             ? parsed.archivedPending.filter(Boolean)
             : [];
+        state.selectedImplementedNames = [];
         refreshCategoryRegistry();
     } catch (err) {
         console.error("Falha ao carregar estado local:", err);
@@ -770,6 +797,54 @@ function buildImplementedSnapshotSource(meta, items) {
     );
 }
 
+function getImplementedSelectionSet() {
+    return new Set(state.selectedImplementedNames);
+}
+
+function syncImplementedSelection() {
+    const validNames = new Set(getAllImplementedItems().map((item) => item.name));
+    state.selectedImplementedNames = Array.from(new Set(state.selectedImplementedNames))
+        .filter((name) => validNames.has(name))
+        .sort((a, b) => a.localeCompare(b, "pt-BR"));
+}
+
+function setImplementedSelection(names) {
+    state.selectedImplementedNames = Array.from(new Set((names || []).filter(Boolean)))
+        .sort((a, b) => a.localeCompare(b, "pt-BR"));
+    syncImplementedSelection();
+}
+
+function toggleImplementedSelection(name, forceValue = null) {
+    const selected = getImplementedSelectionSet();
+    const shouldSelect = forceValue === null ? !selected.has(name) : Boolean(forceValue);
+    if (shouldSelect) selected.add(name);
+    else selected.delete(name);
+    setImplementedSelection(Array.from(selected));
+}
+
+function clearImplementedSelection(render = true) {
+    state.selectedImplementedNames = [];
+    if (render) renderImplementedSection();
+}
+
+function removeImplementedSelection(names) {
+    const blocked = new Set((names || []).filter(Boolean));
+    if (blocked.size === 0) return;
+    state.selectedImplementedNames = state.selectedImplementedNames.filter((name) => !blocked.has(name));
+}
+
+function getVisibleImplementedItems() {
+    const items = getFilteredImplementedItems();
+    const pageEnd = (state.implementedPage + 1) * IMPLEMENTED_PAGE_SIZE;
+    return items.slice(0, pageEnd);
+}
+
+function getSelectedImplementedItems() {
+    syncImplementedSelection();
+    const selected = getImplementedSelectionSet();
+    return getAllImplementedItems().filter((item) => selected.has(item.name));
+}
+
 async function loadImplementedRemovedItems() {
     const file = await githubGetFile(CONFIG.IMPLEMENTED_REMOVALS_PATH, { bustCache: true });
     if (!file) {
@@ -813,53 +888,76 @@ function resetBuilderAfterImplementedDelete(name) {
 }
 
 function deleteLocalImplementedItem(name) {
-    const item = state.customImplemented[name];
-    if (!item) return;
+    return deleteLocalImplementedItems([name]);
+}
 
-    delete state.customImplemented[name];
-    resetBuilderAfterImplementedDelete(name);
+function deleteLocalImplementedItems(names) {
+    const targets = Array.from(new Set((names || []).filter(Boolean)));
+    let removedCount = 0;
+
+    for (const name of targets) {
+        if (!state.customImplemented[name]) continue;
+        delete state.customImplemented[name];
+        resetBuilderAfterImplementedDelete(name);
+        removedCount += 1;
+    }
+
+    if (removedCount === 0) return 0;
+
+    removeImplementedSelection(targets);
     saveWorkspaceState();
     refreshCategoryRegistry();
     state.implementedPage = 0;
     renderAll();
+    return removedCount;
 }
 
 async function deleteImplementedItemFromGitHub(name) {
+    return deleteImplementedItemsFromGitHub([name]);
+}
+
+async function deleteImplementedItemsFromGitHub(names) {
+    const targetNames = Array.from(new Set((names || []).map((name) => String(name || "").trim().toLowerCase()).filter(Boolean)));
+    if (targetNames.length === 0) return 0;
+
     const latestFile = await githubGetFile(CONFIG.IMPLEMENTED_ITEMS_PATH, { bustCache: true });
     if (!latestFile) {
         throw new Error("Snapshot dos implementados nao encontrado no GitHub.");
     }
 
     const parsed = parseImplementedSnapshotSource(base64Decode(latestFile.content));
-    const existingItem = parsed.items.find((item) => item.name === name);
-    if (!existingItem) {
-        throw new Error(`Item implementado ${name} nao encontrado no snapshot atual.`);
+    const targetSet = new Set(targetNames);
+    const existingItems = parsed.items.filter((item) => targetSet.has(String(item.name || "").toLowerCase()));
+    if (existingItems.length === 0) {
+        throw new Error("Nenhum implementado selecionado foi encontrado no snapshot atual.");
     }
 
     const removedState = await loadImplementedRemovedItems();
-    const nextRemoved = Array.from(new Set([...removedState.names, String(name).toLowerCase()])).sort();
+    const nextRemoved = Array.from(new Set([...removedState.names, ...targetNames])).sort();
     await githubPutFile(
         CONFIG.IMPLEMENTED_REMOVALS_PATH,
         base64Encode(JSON.stringify(nextRemoved, null, 2)),
         removedState.sha,
-        `feat: mark implemented item ${name} as removed`
+        `feat: mark ${existingItems.length} implemented item(s) as removed`
     );
 
-    const remainingItems = parsed.items.filter((item) => item.name !== name);
+    const remainingItems = parsed.items.filter((item) => !targetSet.has(String(item.name || "").toLowerCase()));
 
-    let removedIcon = false;
-    const imageName = String(existingItem.image || "").trim();
-    const isImageStillUsed = imageName
-        ? remainingItems.some((item) => String(item.image || "").trim().toLowerCase() === imageName.toLowerCase())
-        : false;
+    const imagesToDelete = Array.from(new Set(
+        existingItems
+            .map((item) => String(item.image || "").trim())
+            .filter(Boolean)
+            .filter((imageName) => !remainingItems.some((item) => String(item.image || "").trim().toLowerCase() === imageName.toLowerCase()))
+    ));
 
-    if (imageName && !isImageStillUsed) {
+    let removedIconCount = 0;
+    for (const imageName of imagesToDelete) {
         try {
             const iconPath = `${CONFIG.IMPLEMENTED_ICONS_FOLDER}/${imageName}`;
             const iconFile = await githubGetFile(iconPath, { bustCache: true });
             if (iconFile) {
-                await githubDeleteFile(iconPath, iconFile.sha, `feat: remove implemented icon ${name}`);
-                removedIcon = true;
+                await githubDeleteFile(iconPath, iconFile.sha, `feat: remove implemented icon ${imageName}`);
+                removedIconCount += 1;
             }
         } catch (err) {
             console.warn("Falha ao deletar icone de implementado:", err);
@@ -871,7 +969,7 @@ async function deleteImplementedItemFromGitHub(name) {
         generatedAt: new Date().toISOString(),
         totalItems: remainingItems.length,
         copiedImages: typeof parsed.meta?.copiedImages === "number"
-            ? Math.max(0, parsed.meta.copiedImages - (removedIcon ? 1 : 0))
+            ? Math.max(0, parsed.meta.copiedImages - removedIconCount)
             : parsed.meta?.copiedImages,
         sources: buildImplementedSourceCounts(remainingItems),
     };
@@ -880,7 +978,7 @@ async function deleteImplementedItemFromGitHub(name) {
         CONFIG.IMPLEMENTED_ITEMS_PATH,
         base64Encode(buildImplementedSnapshotSource(nextMeta, remainingItems)),
         latestFile.sha,
-        `feat: remove implemented item ${name}`
+        `feat: remove ${existingItems.length} implemented item(s)`
     );
 
     state.baseImplementedItems = remainingItems.map(normalizeImplementedItem);
@@ -889,10 +987,12 @@ async function deleteImplementedItemFromGitHub(name) {
         Object.keys(IMPLEMENTED_ITEMS_META).forEach((key) => delete IMPLEMENTED_ITEMS_META[key]);
         Object.assign(IMPLEMENTED_ITEMS_META, nextMeta);
     }
-    resetBuilderAfterImplementedDelete(name);
+    existingItems.forEach((item) => resetBuilderAfterImplementedDelete(item.name));
+    removeImplementedSelection(existingItems.map((item) => item.name));
     refreshCategoryRegistry();
     state.implementedPage = 0;
     renderAll();
+    return existingItems.length;
 }
 
 // ============================================================
@@ -950,7 +1050,12 @@ function bindEvents() {
     // Grids
     document.getElementById("pendingGrid").addEventListener("click", handlePendingGridClick);
     document.getElementById("implementedGrid").addEventListener("click", handleImplementedGridClick);
+    document.getElementById("implementedGrid").addEventListener("change", handleImplementedGridChange);
     document.getElementById("readyGrid").addEventListener("click", handleReadyGridClick);
+
+    document.getElementById("selectVisibleImplementedBtn")?.addEventListener("click", toggleSelectVisibleImplemented);
+    document.getElementById("clearImplementedSelectionBtn")?.addEventListener("click", () => clearImplementedSelection());
+    document.getElementById("deleteSelectedImplementedBtn")?.addEventListener("click", deleteSelectedImplementedItems);
 
     // Builder actions
     document.getElementById("copyExportBtn").addEventListener("click", copyBuilderExport);
@@ -1159,6 +1264,13 @@ function handleImplementedGridClick(e) {
     }
 }
 
+function handleImplementedGridChange(e) {
+    const checkbox = e.target.closest("[data-select-implemented]");
+    if (!checkbox) return;
+    toggleImplementedSelection(checkbox.dataset.name, checkbox.checked);
+    renderImplementedSection();
+}
+
 function handleReadyGridClick(e) {
     const btn = e.target.closest("[data-action]");
     if (!btn) return;
@@ -1309,8 +1421,104 @@ function renderPendingGrid() {
 // ============================================================
 
 function renderImplementedSection() {
+    syncImplementedSelection();
     renderImplementedFilters();
+    renderImplementedBulkBar();
     renderImplementedGrid();
+}
+
+function renderImplementedBulkBar() {
+    const status = document.getElementById("implementedSelectionStatus");
+    const hint = document.getElementById("implementedSelectionHint");
+    const selectBtn = document.getElementById("selectVisibleImplementedBtn");
+    const clearBtn = document.getElementById("clearImplementedSelectionBtn");
+    const deleteBtn = document.getElementById("deleteSelectedImplementedBtn");
+    if (!status || !hint || !selectBtn || !clearBtn || !deleteBtn) return;
+
+    const selectedItems = getSelectedImplementedItems();
+    const visibleItems = getVisibleImplementedItems();
+    const visibleNames = visibleItems.map((item) => item.name);
+    const selected = getImplementedSelectionSet();
+    const allVisibleSelected = visibleNames.length > 0 && visibleNames.every((name) => selected.has(name));
+
+    status.textContent = selectedItems.length > 0
+        ? `${selectedItems.length} implementado(s) selecionado(s).`
+        : "Nenhum implementado selecionado.";
+    hint.textContent = visibleItems.length > 0
+        ? `${visibleItems.length} item(ns) exibido(s) nesta página acumulada.`
+        : "Ajuste os filtros para encontrar itens.";
+
+    selectBtn.textContent = allVisibleSelected ? "Desmarcar exibidos" : "Selecionar exibidos";
+    selectBtn.disabled = visibleItems.length === 0;
+    clearBtn.disabled = selectedItems.length === 0;
+    deleteBtn.disabled = selectedItems.length === 0;
+    deleteBtn.textContent = selectedItems.length > 0
+        ? `Deletar selecionados (${selectedItems.length})`
+        : "Deletar selecionados";
+}
+
+function toggleSelectVisibleImplemented() {
+    const visibleNames = getVisibleImplementedItems().map((item) => item.name);
+    if (visibleNames.length === 0) return;
+
+    const selected = getImplementedSelectionSet();
+    const allVisibleSelected = visibleNames.every((name) => selected.has(name));
+    if (allVisibleSelected) {
+        visibleNames.forEach((name) => selected.delete(name));
+    } else {
+        visibleNames.forEach((name) => selected.add(name));
+    }
+
+    setImplementedSelection(Array.from(selected));
+    renderImplementedSection();
+}
+
+async function deleteSelectedImplementedItems() {
+    syncImplementedSelection();
+    const selectedItems = getSelectedImplementedItems();
+    if (selectedItems.length === 0) {
+        showToast("Selecione pelo menos um implementado.");
+        return;
+    }
+
+    const localNames = selectedItems.filter((item) => item.source === "local").map((item) => item.name);
+    const serverNames = selectedItems.filter((item) => item.source !== "local").map((item) => item.name);
+
+    if (serverNames.length > 0 && !getGitHubToken()) {
+        showToast("Configure o token do GitHub para deletar implementados do snapshot publicado.");
+        openGithubModal();
+        return;
+    }
+
+    const parts = [];
+    if (serverNames.length > 0) parts.push(`${serverNames.length} publicado(s)`);
+    if (localNames.length > 0) parts.push(`${localNames.length} local(is)`);
+    if (!window.confirm(`Deletar ${selectedItems.length} implementado(s): ${parts.join(" e ")}?`)) return;
+
+    const deleteBtn = document.getElementById("deleteSelectedImplementedBtn");
+    if (deleteBtn) {
+        deleteBtn.disabled = true;
+        deleteBtn.textContent = "Removendo...";
+    }
+
+    try {
+        let removedLocal = 0;
+        let removedServer = 0;
+
+        if (localNames.length > 0) {
+            removedLocal = deleteLocalImplementedItems(localNames);
+        }
+        if (serverNames.length > 0) {
+            removedServer = await deleteImplementedItemsFromGitHub(serverNames);
+        }
+
+        clearImplementedSelection(false);
+        renderImplementedSection();
+        showToast(`Removidos ${removedLocal + removedServer} implementado(s).`);
+    } catch (err) {
+        showToast(`Erro ao remover selecionados: ${err.message}`);
+        renderImplementedSection();
+    }
 }
 
 function renderImplementedFilters() {
@@ -1397,11 +1605,18 @@ function renderImplementedGrid() {
 function renderImplementedCard(item) {
     const sourceLabel = item.source === "local" ? "Local" : "Servidor";
     const metaParts = [item.type, `${item.weight}g`, item.image || "sem-imagem"];
+    const isSelected = getImplementedSelectionSet().has(item.name);
 
     const candidates = buildCandidateString(getImplementedImageCandidates(item));
     const catBadge = item.siteCategory
         ? `<span class="category-pill">${escapeHtml(item.siteCategory)}</span>`
         : "";
+    const selectionToggle = `
+        <label class="implemented-select-toggle">
+            <input type="checkbox" data-select-implemented data-name="${escapeHtmlAttribute(item.name)}" ${isSelected ? "checked" : ""}>
+            <span>Selecionar</span>
+        </label>
+    `;
 
     const actionButtons = item.source === "local"
         ? `<button class="card-action primary" data-action="copy-export" data-name="${escapeHtmlAttribute(item.name)}" type="button">Copiar export</button>
@@ -1413,8 +1628,9 @@ function renderImplementedCard(item) {
            <button class="card-action ghost-danger" data-action="delete-implemented" data-name="${escapeHtmlAttribute(item.name)}" type="button">Deletar</button>`;
 
     return `
-        <article class="item-card implemented-card ${item.source === "local" ? "local-item" : ""}">
+        <article class="item-card implemented-card ${item.source === "local" ? "local-item" : ""} ${isSelected ? "selected-card" : ""}">
             <div class="item-status-row">
+                ${selectionToggle}
                 <span class="source-pill">${escapeHtml(sourceLabel)}</span>
                 <span class="rarity-pill rarity-${escapeHtmlAttribute(item.rarity)}">${escapeHtml(item.rarity)}</span>
                 ${catBadge}
