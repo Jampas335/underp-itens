@@ -4,13 +4,13 @@
  */
 
 const IMPLEMENTED_ITEMS_META = {
-    "generatedAt": "2026-04-14T05:40:56.759Z",
+    "generatedAt": "2026-04-14T05:58:52.084Z",
     "inventoryResource": "resources/[essenciais]/prea-inventory",
-    "totalItems": 548,
+    "totalItems": 547,
     "copiedImages": 59,
     "sources": {
         "shared": 454,
-        "compat": 94,
+        "compat": 93,
         "generated": 0
     }
 };
@@ -3438,19 +3438,6 @@ const IMPLEMENTED_ITEMS = [
         "useable": true,
         "rarity": "uncommon",
         "source": "shared"
-    },
-    {
-        "name": "cigarettebox",
-        "label": "MaÃ§o de Cigarro",
-        "weight": 125,
-        "type": "item",
-        "image": "cigarettes_redwood.png",
-        "unique": false,
-        "useable": true,
-        "shouldClose": true,
-        "rarity": "common",
-        "description": "Um maÃ§o de cigarros.",
-        "source": "compat"
     },
     {
         "name": "blowtorch",
