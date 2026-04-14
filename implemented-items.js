@@ -4,12 +4,12 @@
  */
 
 const IMPLEMENTED_ITEMS_META = {
-    "generatedAt": "2026-04-03T19:01:09.039Z",
+    "generatedAt": "2026-04-14T05:13:27.731Z",
     "inventoryResource": "resources/[essenciais]/prea-inventory",
-    "totalItems": 562,
+    "totalItems": 561,
     "copiedImages": 64,
     "sources": {
-        "shared": 467,
+        "shared": 466,
         "compat": 95,
         "generated": 0
     }
@@ -26,18 +26,6 @@ const IMPLEMENTED_ITEMS = [
         "useable": false,
         "rarity": "common",
         "source": "shared"
-    },
-    {
-        "name": "radiocell",
-        "label": "AAA Cells",
-        "weight": 1000,
-        "type": "item",
-        "image": "radiocell.png",
-        "unique": false,
-        "useable": false,
-        "rarity": "rare",
-        "source": "shared",
-        "shouldClose": true
     },
     {
         "name": "advancedlockpick",
