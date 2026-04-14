@@ -42,6 +42,27 @@
     "status": "ready"
   },
   {
+    "name": "water",
+    "label": "Água",
+    "description": "",
+    "weight": 500,
+    "type": "item",
+    "image": "water.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "water",
+    "pendingCategory": "Bebidas",
+    "extraLua": "",
+    "siteCategory": "Bebidas",
+    "decay": 0.8,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-14T07:01:46.602Z",
+    "status": "ready"
+  },
+  {
     "name": "assult_rifle",
     "label": "AK-47",
     "description": "",
