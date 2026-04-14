@@ -2615,6 +2615,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_bud_og_kush",
+    "label": "OG Kush",
+    "description": "",
+    "weight": 5,
+    "type": "item",
+    "image": "kq_weed_bud_og_kush.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-14T21:44:48.310Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_combatpistol",
     "label": "P250",
     "description": "",
