@@ -3577,6 +3577,27 @@
     "status": "ready"
   },
   {
+    "name": "weapon_bat",
+    "label": "Taco de Baseball",
+    "description": "",
+    "weight": 1134,
+    "type": "weapon",
+    "image": "baseball-bat.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "baseball-bat",
+    "pendingCategory": "Corpo a Corpo",
+    "extraLua": "",
+    "siteCategory": "Corpo a Corpo",
+    "decay": 0.1,
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-14T06:31:50.747Z",
+    "status": "ready"
+  },
+  {
     "name": "taiyaki",
     "label": "Taiyaki",
     "description": "",
