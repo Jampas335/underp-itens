@@ -165,6 +165,26 @@
     "status": "ready"
   },
   {
+    "name": "painkillers",
+    "label": "Analgésicos",
+    "description": "",
+    "weight": 5,
+    "type": "item",
+    "image": "painkillers.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "EMS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-15T23:12:53.082Z",
+    "status": "ready"
+  },
+  {
     "name": "anchor",
     "label": "Ancora",
     "description": "",
