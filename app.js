@@ -2427,7 +2427,7 @@ function renderBuilder() {
     let badgeText = "Novo implementado";
     if (state.builder.editingLocalName) badgeText = "Editando rascunho";
     if (state.builder.editingReadyName) badgeText = "Editando item pronto";
-    if (pendingItem.isManual && !state.builder.editingLocalName && !state.builder.editingReadyName) badgeText = "Novo item manual";
+    if (pendingItem.isManual && !state.builder.editingLocalName && !state.builder.editingReadyName) badgeText = "Novo item do zero";
     badge.textContent = badgeText;
 
     setText("builderIconName", pendingItem.name);
@@ -2437,7 +2437,7 @@ function renderBuilder() {
     let sourceBadge = "Pendente";
     if (state.builder.editingLocalName) sourceBadge = "Local";
     if (state.builder.editingReadyName) sourceBadge = "Pronto";
-    if (pendingItem.isManual && !state.builder.editingLocalName && !state.builder.editingReadyName) sourceBadge = "Manual";
+    if (pendingItem.isManual && !state.builder.editingLocalName && !state.builder.editingReadyName) sourceBadge = "Do zero";
     setText("builderSourceBadge", sourceBadge);
 
     const templateItem = getTemplateItem();
@@ -2859,12 +2859,12 @@ function openBuilderManual() {
     state.builder.uploadedIconBase64 = null;
     state.builder.uploadedIconMime = "image/png";
     state.builder.uploadedIconFileName = null;
-    state.builder.experienceMode = "manual";
-    state.builder.showAdvanced = true;
+    state.builder.experienceMode = "guided";
+    state.builder.showAdvanced = false;
     state.builder.presetKey = "";
     renderBuilder();
     scrollToBuilder();
-    showToast("Builder manual aberto.");
+    showToast("Builder do zero aberto.");
 }
 
 function scrollToBuilder() {
@@ -2976,7 +2976,7 @@ function applyLuaImportFromTextarea() {
 function copySelectedIconName() {
     const pending = getBuilderPendingItem();
     if (!pending) { showToast("Nenhum item selecionado."); return; }
-    if (pending.isManual) { showToast("Este builder manual nao tem icone pendente."); return; }
+    if (pending.isManual) { showToast("Este builder do zero nao tem icone pendente."); return; }
     copyToClipboard(pending.name, "Nome do ícone copiado.");
 }
 
