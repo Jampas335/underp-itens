@@ -2979,6 +2979,26 @@
     "status": "ready"
   },
   {
+    "name": "pele_bisao",
+    "label": "Pele de Bisão",
+    "description": "",
+    "weight": 450,
+    "type": "item",
+    "image": "pele_bisao.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Caça",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-17T09:13:27.616Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_pesticide_spray",
     "label": "Pesticida",
     "description": "",
