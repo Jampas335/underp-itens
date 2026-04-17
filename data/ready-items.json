@@ -225,6 +225,26 @@
     "status": "ready"
   },
   {
+    "name": "hd_aresosadmin",
+    "label": "AresOS Admin HD",
+    "description": "",
+    "weight": 500,
+    "type": "item",
+    "image": "hd_aresosadmin.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Eletrônica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-17T07:37:41.557Z",
+    "status": "ready"
+  },
+  {
     "name": "hd_aresos",
     "label": "AresOS HD",
     "description": "",
