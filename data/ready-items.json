@@ -1462,6 +1462,27 @@
     "status": "ready"
   },
   {
+    "name": "energetico",
+    "label": "Energético",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "energetico.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Bebidas",
+    "decay": 0.1,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-17T10:02:24.168Z",
+    "status": "ready"
+  },
+  {
     "name": "epinephrine",
     "label": "Epinefrina",
     "description": "Usado para dar um choque no coração. Aumenta muito os batimentos cardíacos (útil para combater quem está entrando em choque). Também diminui um pouco as dores. Causa Overdose no caso de altas aplicações em pouco espaço de tempo.",
