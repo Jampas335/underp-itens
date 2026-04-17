@@ -4350,6 +4350,26 @@
     "status": "ready"
   },
   {
+    "name": "hd_zeusos",
+    "label": "ZeusOS HD",
+    "description": "",
+    "weight": 255,
+    "type": "item",
+    "image": "hd_zeusos.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-17T07:33:32.035Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_bag_empty",
     "label": "Ziplock",
     "description": "",
