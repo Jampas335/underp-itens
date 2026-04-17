@@ -930,6 +930,26 @@
     "status": "ready"
   },
   {
+    "name": "phone",
+    "label": "Celular",
+    "description": "",
+    "weight": 512,
+    "type": "item",
+    "image": "phone.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-17T10:12:56.159Z",
+    "status": "ready"
+  },
+  {
     "name": "fish3",
     "label": "Certa",
     "description": "",
