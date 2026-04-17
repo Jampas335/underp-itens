@@ -1111,26 +1111,6 @@
     "status": "ready"
   },
   {
-    "name": "body-armour",
-    "label": "Colete",
-    "description": "",
-    "weight": 10000,
-    "type": "item",
-    "image": "body-armour.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": true,
-    "rarity": "common",
-    "pendingIconName": "body-armour",
-    "pendingCategory": "Proteção",
-    "extraLua": "",
-    "siteCategory": "Proteção",
-    "source": "ready",
-    "iconSource": "pending",
-    "createdAt": "2026-04-08T00:21:06.325Z",
-    "status": "ready"
-  },
-  {
     "name": "light_armour",
     "label": "Colete Leve",
     "description": "",
