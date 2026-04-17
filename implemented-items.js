@@ -4,12 +4,12 @@
  */
 
 const IMPLEMENTED_ITEMS_META = {
-    "generatedAt": "2026-04-14T07:13:48.079Z",
+    "generatedAt": "2026-04-17T07:40:58.732Z",
     "inventoryResource": "resources/[essenciais]/prea-inventory",
-    "totalItems": 542,
+    "totalItems": 536,
     "copiedImages": 57,
     "sources": {
-        "shared": 450,
+        "shared": 444,
         "compat": 92,
         "generated": 0
     }
@@ -86,32 +86,6 @@ const IMPLEMENTED_ITEMS = [
         "source": "shared"
     },
     {
-        "name": "areshdd",
-        "label": "Ares HDD",
-        "weight": 800,
-        "type": "item",
-        "image": "areshdd.png",
-        "unique": false,
-        "useable": false,
-        "shouldClose": true,
-        "description": "Um disco rÃƒÆ’Ã‚Â­gido de computador. Talvez deva dar para fazer algo.",
-        "rarity": "legendary",
-        "source": "shared"
-    },
-    {
-        "name": "areshddadm",
-        "label": "Ares HDD Admin",
-        "weight": 800,
-        "type": "item",
-        "image": "areshddadm.png",
-        "unique": false,
-        "useable": false,
-        "shouldClose": true,
-        "description": "VocÃƒÆ’Ã‚Âª tem uma responsabilidade a fazer.",
-        "rarity": "legendary",
-        "source": "shared"
-    },
-    {
         "name": "army_weapontint",
         "label": "Army Tint",
         "weight": 50,
@@ -163,28 +137,6 @@ const IMPLEMENTED_ITEMS = [
         "source": "shared"
     },
     {
-        "name": "cokebaggy",
-        "label": "Bag of Coke",
-        "weight": 100,
-        "type": "item",
-        "image": "cokebaggy.png",
-        "unique": false,
-        "useable": true,
-        "rarity": "rare",
-        "source": "shared"
-    },
-    {
-        "name": "xtcbaggy",
-        "label": "Bag of Ecstasy",
-        "weight": 100,
-        "type": "item",
-        "image": "xtcbaggy.png",
-        "unique": false,
-        "useable": true,
-        "rarity": "common",
-        "source": "shared"
-    },
-    {
         "name": "goldbar",
         "label": "Barra de Ouro",
         "weight": 100,
@@ -231,17 +183,6 @@ const IMPLEMENTED_ITEMS = [
         "unique": false,
         "useable": true,
         "rarity": "common",
-        "source": "shared"
-    },
-    {
-        "name": "at_muzzle_bell",
-        "label": "Bell Muzzle",
-        "weight": 80,
-        "type": "item",
-        "image": "at_muzzle_bell.png",
-        "unique": false,
-        "useable": true,
-        "rarity": "uncommon",
         "source": "shared"
     },
     {
@@ -441,19 +382,6 @@ const IMPLEMENTED_ITEMS = [
         "shouldClose": true,
         "description": "Uma bolsa que vocÃƒÆ’Ã‚Âª roubou de um carro.",
         "rarity": "common",
-        "source": "shared"
-    },
-    {
-        "name": "bomba_caseira",
-        "label": "Bomba Caseira",
-        "weight": 5000,
-        "type": "item",
-        "image": "bomba_caseira.png",
-        "unique": false,
-        "useable": false,
-        "shouldClose": true,
-        "description": "Um explosivo improvisado feito com materiais comuns. InstÃƒÆ’Ã‚Â¡vel e perigoso.",
-        "rarity": "rare",
         "source": "shared"
     },
     {
