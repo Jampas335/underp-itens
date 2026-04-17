@@ -1621,26 +1621,6 @@
     "status": "ready"
   },
   {
-    "name": "kq_weed_fertilizer_blackmarket",
-    "label": "Fertilizante blackmarket",
-    "description": "",
-    "weight": 100,
-    "type": "item",
-    "image": "kq_weed_fertilizer_blackmarket.png",
-    "unique": false,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "rare",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Drogas",
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-12T07:01:08.953Z",
-    "status": "ready"
-  },
-  {
     "name": "kq_weed_fertilizer_resistance",
     "label": "Fertilizante Resistance",
     "description": "",
@@ -1678,6 +1658,26 @@
     "source": "ready",
     "iconSource": "ready",
     "createdAt": "2026-04-12T06:58:27.651Z",
+    "status": "ready"
+  },
+  {
+    "name": "kq_weed_fertilizer_blackmarket",
+    "label": "Fertilizante Suspeito",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "kq_weed_fertilizer_blackmarket.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "ready",
+    "createdAt": "2026-04-17T09:40:28.786Z",
     "status": "ready"
   },
   {
