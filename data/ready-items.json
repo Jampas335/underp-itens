@@ -225,6 +225,26 @@
     "status": "ready"
   },
   {
+    "name": "hd_aresos",
+    "label": "AresOS HD",
+    "description": "",
+    "weight": 325,
+    "type": "item",
+    "image": "hd_aresos.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Eletrônica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-17T07:36:19.101Z",
+    "status": "ready"
+  },
+  {
     "name": "catfish",
     "label": "Bagre",
     "description": "",
