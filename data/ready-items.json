@@ -1784,26 +1784,6 @@
     "status": "ready"
   },
   {
-    "name": "weapon_petrolcan",
-    "label": "Gasolina",
-    "description": "",
-    "weight": 3000,
-    "type": "weapon",
-    "image": "jerry-can.png",
-    "unique": true,
-    "useable": false,
-    "shouldClose": true,
-    "rarity": "common",
-    "pendingIconName": "jerry-can",
-    "pendingCategory": "Ferramentas",
-    "extraLua": "",
-    "siteCategory": "Ferramentas",
-    "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-04-10T08:51:31.282Z",
-    "status": "ready"
-  },
-  {
     "name": "gasoline",
     "label": "Gasolina",
     "description": "",
