@@ -254,14 +254,14 @@
     "unique": true,
     "useable": false,
     "shouldClose": true,
-    "rarity": "legendary",
+    "rarity": "epic",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Eletrônica",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-17T07:36:19.101Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-17T10:19:14.206Z",
     "status": "ready"
   },
   {
