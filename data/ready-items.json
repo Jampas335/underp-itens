@@ -1682,7 +1682,7 @@
   },
   {
     "name": "kq_weed_fertilizer_yield",
-    "label": "Fertilizante yield",
+    "label": "Fertilizante Yield",
     "description": "",
     "weight": 100,
     "type": "item",
@@ -1696,8 +1696,8 @@
     "extraLua": "",
     "siteCategory": "Drogas",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-12T06:58:08.934Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-17T09:41:07.946Z",
     "status": "ready"
   },
   {
