@@ -3019,6 +3019,26 @@
     "status": "ready"
   },
   {
+    "name": "pele_tubarao",
+    "label": "Pele de Tubarão",
+    "description": "",
+    "weight": 980,
+    "type": "item",
+    "image": "pele_tubarao.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-17T09:20:06.103Z",
+    "status": "ready"
+  },
+  {
     "name": "pele_martelo",
     "label": "Pele de Tubarão Martelo",
     "description": "",
