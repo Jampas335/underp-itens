@@ -3019,6 +3019,26 @@
     "status": "ready"
   },
   {
+    "name": "pele_martelo",
+    "label": "Pele de Tubarão Martelo",
+    "description": "",
+    "weight": 1200,
+    "type": "item",
+    "image": "pele_martelo.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-17T09:15:09.092Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_pesticide_spray",
     "label": "Pesticida",
     "description": "",
