@@ -3032,10 +3032,10 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "Caça",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-17T09:21:05.885Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-17T09:21:27.360Z",
     "status": "ready"
   },
   {
