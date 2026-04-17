@@ -2241,11 +2241,11 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "Eletrônica",
     "decay": 0.1,
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-17T10:27:32.036Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-17T10:27:57.472Z",
     "status": "ready"
   },
   {
