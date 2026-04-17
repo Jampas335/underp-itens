@@ -69,6 +69,7 @@ const state = {
     customCategories: [],
     archivedPending: [],
     readyItems: [],
+    readyIconOverrides: {},
     readyItemsSha: null,
     readyLoaded: false,
     readyLoading: false,
@@ -692,6 +693,12 @@ async function publishReadyItem(item, iconBase64) {
             existingIcon ? existingIcon.sha : null,
             `feat: add icon for ready item ${item.name}`
         );
+        state.readyIconOverrides[item.name] = {
+            src: buildUploadedImageSrc(iconBase64, state.builder.uploadedIconMime || "image/png"),
+            version: item.createdAt || String(Date.now()),
+        };
+    } else {
+        delete state.readyIconOverrides[item.name];
     }
 
     // Update items array
@@ -729,6 +736,7 @@ async function publishReadyItem(item, iconBase64) {
 async function deleteReadyItemFromGitHub(name) {
     const item = state.readyItems.find((r) => r.name === name);
     if (!item) return;
+    delete state.readyIconOverrides[name];
 
     // Try to delete uploaded icon
     if (item.iconSource === "upload") {
@@ -2433,30 +2441,41 @@ function processIconFile(file) {
     const reader = new FileReader();
     reader.onload = (e) => {
         const dataUrl = e.target.result;
-        const base64 = dataUrl.split(",")[1];
 
         // Check dimensions
         const img = new Image();
         img.onload = () => {
+            const canvas = document.createElement("canvas");
+            canvas.width = img.naturalWidth || img.width;
+            canvas.height = img.naturalHeight || img.height;
+            const ctx = canvas.getContext("2d");
+            if (!ctx) {
+                showToast("Nao foi possivel processar o icone.");
+                return;
+            }
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            const pngDataUrl = canvas.toDataURL("image/png");
+            const base64 = pngDataUrl.split(",")[1];
+            const normalizedFileName = `${stripExtension(file.name || "icone") || "icone"}.png`;
             const dims = `${img.width}×${img.height}px`;
             const warn = (img.width !== 250 || img.height !== 250)
                 ? " ⚠ Recomendado: 250×250px"
                 : " ✓ Dimensões corretas";
 
             state.builder.uploadedIconBase64 = base64;
-            state.builder.uploadedIconMime = file.type || "image/png";
-            state.builder.uploadedIconFileName = file.name;
+            state.builder.uploadedIconMime = "image/png";
+            state.builder.uploadedIconFileName = normalizedFileName;
 
             // Show preview
-            document.getElementById("iconUploadPreviewImg").src = dataUrl;
-            document.getElementById("iconUploadFileName").textContent = file.name;
+            document.getElementById("iconUploadPreviewImg").src = pngDataUrl;
+            document.getElementById("iconUploadFileName").textContent = normalizedFileName;
             setText("iconUploadDims", dims + warn);
             document.getElementById("iconUploadPreview").classList.remove("hidden");
             document.getElementById("uploadDropzone").classList.add("hidden");
 
             // Update builder preview
             const builderImg = document.getElementById("builderIconImage");
-            if (builderImg) builderImg.src = dataUrl;
+            if (builderImg) builderImg.src = pngDataUrl;
         };
         img.src = dataUrl;
     };
@@ -3172,13 +3191,33 @@ function buildUploadedImageSrc(base64, mime = "image/png") {
     return `data:${mime || "image/png"};base64,${base64}`;
 }
 
+function appendCacheVersion(path, version) {
+    const token = String(version || "").trim();
+    if (!path || !token) return path;
+    return `${path}${path.includes("?") ? "&" : "?"}v=${encodeURIComponent(token)}`;
+}
+
+function getReadyIconVersion(item) {
+    if (!item || !item.name) return "";
+    const override = state.readyIconOverrides[item.name];
+    if (override?.version) return override.version;
+    return item.iconVersion || item.updatedAt || item.createdAt || item.savedAt || "";
+}
+
+function pushReadyIconCandidates(candidates, item) {
+    if (!item || !item.name) return;
+    const override = state.readyIconOverrides[item.name];
+    if (override?.src) candidates.push(override.src);
+    candidates.push(appendCacheVersion(`${CONFIG.READY_ICONS_FOLDER}/${item.name}.png`, getReadyIconVersion(item)));
+}
+
 function getImplementedImageCandidates(item) {
     const candidates = [];
     if (item.iconSource === "upload" && item.uploadedIconBase64) {
         candidates.push(buildUploadedImageSrc(item.uploadedIconBase64, item.uploadedIconMime));
     }
     if (item.iconSource === "ready") {
-        candidates.push(`${CONFIG.READY_ICONS_FOLDER}/${item.name}.png`);
+        pushReadyIconCandidates(candidates, item);
     }
     if (item.source === "local" && item.pendingIconName) {
         candidates.push(`${CONFIG.ICONS_FOLDER}/${item.pendingIconName}.${CONFIG.ICON_EXTENSION}`);
@@ -3199,7 +3238,7 @@ function getStoredReadyImageCandidates(item) {
     if (item.uploadedIconBase64) {
         candidates.push(buildUploadedImageSrc(item.uploadedIconBase64, item.uploadedIconMime));
     }
-    candidates.push(`${CONFIG.READY_ICONS_FOLDER}/${item.name}.png`);
+    pushReadyIconCandidates(candidates, item);
     if (item.image) {
         candidates.push(`server-icons/${item.image}`);
         candidates.push(`${CONFIG.ICONS_FOLDER}/${stripExtension(item.image)}.${CONFIG.ICON_EXTENSION}`);
