@@ -275,6 +275,141 @@
                             </label>
                         </div>
 
+                        <section class="builder-subsection">
+                            <div class="builder-subsection-header">
+                                <strong>Compatibilidade e comportamento</strong>
+                                <span>Alias, restricoes e uso especial lidos pelo prea-inventory.</span>
+                            </div>
+                            <div class="field-grid three-cols">
+                                <label class="field">
+                                    <span>weapon <i class="info-tip" data-tip="Alias da arma real usada por este item weapon.">i</i></span>
+                                    <input type="text" id="itemWeaponAliasInput" placeholder="ex: weapon_appistol">
+                                </label>
+                                <label class="field">
+                                    <span>compatibilityAliasFor <i class="info-tip" data-tip="Item principal apontado por este item de compatibilidade.">i</i></span>
+                                    <input type="text" id="itemCompatibilityAliasInput" placeholder="ex: weapon_g17">
+                                </label>
+                                <label class="field">
+                                    <span>job <i class="info-tip" data-tip="Cargos permitidos, separados por virgula.">i</i></span>
+                                    <input type="text" id="itemJobListInput" placeholder="ex: police, ambulance">
+                                </label>
+                            </div>
+                            <div class="toggle-grid">
+                                <label class="toggle" title="Oculta um item usado apenas para compatibilidade">
+                                    <input type="checkbox" id="itemHiddenCompatInput">
+                                    <span>hiddenCompat <i class="info-tip" data-tip="Oculta o item em fluxos que ignoram aliases de compatibilidade.">i</i></span>
+                                </label>
+                                <label class="toggle" title="Remove o item automaticamente ao usar via callback client">
+                                    <input type="checkbox" id="itemClientRemoveAfterUseInput">
+                                    <span>client.removeAfterUse <i class="info-tip" data-tip="Forca remocao automatica ao usar o item por callback client.">i</i></span>
+                                </label>
+                            </div>
+                        </section>
+
+                        <section class="builder-subsection">
+                            <div class="builder-subsection-header">
+                                <strong>Objeto e carry</strong>
+                                <span>Drop visual, objeto nas maos e animacao de carregamento.</span>
+                            </div>
+                            <div class="field-grid two-cols">
+                                <label class="field">
+                                    <span>prop <i class="info-tip" data-tip="Model usado em drop/carry.">i</i></span>
+                                    <input type="text" id="itemPropInput" placeholder="ex: prop_tv_flat_01">
+                                </label>
+                                <label class="field">
+                                    <span>object <i class="info-tip" data-tip="Model usado em alguns fluxos de drop.">i</i></span>
+                                    <input type="text" id="itemObjectInput" placeholder="ex: prop_tv_flat_01">
+                                </label>
+                            </div>
+                            <div class="toggle-grid">
+                                <label class="toggle" title="Faz o player carregar o item nas maos">
+                                    <input type="checkbox" id="itemCarryInHandInput">
+                                    <span>carryInHand <i class="info-tip" data-tip="Enquanto no inventario principal, o personagem carrega este item nas maos.">i</i></span>
+                                </label>
+                            </div>
+                            <div class="field-grid four-cols">
+                                <label class="field">
+                                    <span>carryAttachment.bone</span>
+                                    <input type="number" id="itemCarryBoneInput" step="1" placeholder="60309">
+                                </label>
+                                <label class="field">
+                                    <span>carryAnim.dict</span>
+                                    <input type="text" id="itemCarryAnimDictInput" placeholder="anim@heists@box_carry@">
+                                </label>
+                                <label class="field">
+                                    <span>carryAnim.clip</span>
+                                    <input type="text" id="itemCarryAnimClipInput" placeholder="idle">
+                                </label>
+                                <label class="field">
+                                    <span>carryAnim.flag</span>
+                                    <input type="number" id="itemCarryAnimFlagInput" step="1" placeholder="49">
+                                </label>
+                            </div>
+                            <div class="field-grid three-cols">
+                                <label class="field">
+                                    <span>carryAttachment.pos.x</span>
+                                    <input type="number" id="itemCarryPosXInput" step="0.001" placeholder="0.0">
+                                </label>
+                                <label class="field">
+                                    <span>carryAttachment.pos.y</span>
+                                    <input type="number" id="itemCarryPosYInput" step="0.001" placeholder="0.0">
+                                </label>
+                                <label class="field">
+                                    <span>carryAttachment.pos.z</span>
+                                    <input type="number" id="itemCarryPosZInput" step="0.001" placeholder="0.0">
+                                </label>
+                            </div>
+                            <div class="field-grid three-cols">
+                                <label class="field">
+                                    <span>carryAttachment.rot.x</span>
+                                    <input type="number" id="itemCarryRotXInput" step="0.001" placeholder="0.0">
+                                </label>
+                                <label class="field">
+                                    <span>carryAttachment.rot.y</span>
+                                    <input type="number" id="itemCarryRotYInput" step="0.001" placeholder="0.0">
+                                </label>
+                                <label class="field">
+                                    <span>carryAttachment.rot.z</span>
+                                    <input type="number" id="itemCarryRotZInput" step="0.001" placeholder="0.0">
+                                </label>
+                            </div>
+                        </section>
+
+                        <section class="builder-subsection">
+                            <div class="builder-subsection-header">
+                                <strong>Combinacao</strong>
+                                <span>Estrutura do combinable usada em combine item e progress de combinacao.</span>
+                            </div>
+                            <div class="field-grid two-cols">
+                                <label class="field">
+                                    <span>combinable.reward</span>
+                                    <input type="text" id="itemCombineRewardInput" placeholder="ex: lockpick">
+                                </label>
+                                <label class="field">
+                                    <span>combinable.accept</span>
+                                    <input type="text" id="itemCombineAcceptInput" placeholder="ex: metalscrap, plastic">
+                                </label>
+                            </div>
+                            <div class="field-grid four-cols">
+                                <label class="field">
+                                    <span>combinable.anim.dict</span>
+                                    <input type="text" id="itemCombineAnimDictInput" placeholder="anim dict">
+                                </label>
+                                <label class="field">
+                                    <span>combinable.anim.lib</span>
+                                    <input type="text" id="itemCombineAnimLibInput" placeholder="clip/lib">
+                                </label>
+                                <label class="field">
+                                    <span>combinable.anim.text</span>
+                                    <input type="text" id="itemCombineAnimTextInput" placeholder="Texto da progress bar">
+                                </label>
+                                <label class="field">
+                                    <span>combinable.anim.timeOut</span>
+                                    <input type="number" id="itemCombineAnimTimeoutInput" step="1" placeholder="5000">
+                                </label>
+                            </div>
+                        </section>
+
                         <label class="field">
                             <span>Descrição <i class="info-tip" data-tip="Texto mostrado quando o jogador passa o mouse no item.">i</i></span>
                             <textarea id="itemDescriptionInput" rows="2" placeholder="Descrição mostrada no inventário do jogador."></textarea>

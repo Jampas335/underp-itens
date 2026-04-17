@@ -314,6 +314,42 @@ function deepClone(value) {
     return JSON.parse(JSON.stringify(value));
 }
 
+function normalizeLuaValue(value) {
+    if (Array.isArray(value)) {
+        return value.map((entry) => normalizeLuaValue(entry));
+    }
+
+    if (value && typeof value === 'object') {
+        if (value.__call && Array.isArray(value.args)) {
+            const callName = String(value.__call).toLowerCase();
+            const args = value.args.map((entry) => normalizeLuaValue(entry));
+            if ((callName === 'v3' || callName === 'vec3' || callName === 'vector3') && args.length >= 3) {
+                return {
+                    x: Number(args[0]) || 0,
+                    y: Number(args[1]) || 0,
+                    z: Number(args[2]) || 0,
+                };
+            }
+            return {
+                __luaCall: value.__call,
+                args,
+            };
+        }
+
+        if (value.__identifier) {
+            return value.__identifier;
+        }
+
+        const normalized = {};
+        for (const [key, entry] of Object.entries(value)) {
+            normalized[key] = normalizeLuaValue(entry);
+        }
+        return normalized;
+    }
+
+    return value;
+}
+
 function mergeInto(target, source) {
     if (!source || typeof source !== 'object' || Array.isArray(source)) {
         return target;
@@ -358,7 +394,7 @@ function extractTable(source, pattern) {
 }
 
 function normalizeItemRecord(name, item, source) {
-    const normalized = deepClone(item);
+    const normalized = normalizeLuaValue(deepClone(item));
     normalized.name = normalized.name || name;
     normalized.label = normalized.label || normalized.name;
     normalized.weight = Number(normalized.weight || 0);

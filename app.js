@@ -11,6 +11,112 @@ const RARITY_ORDER = ["common", "uncommon", "rare", "epic", "legendary"];
 const TYPE_ORDER = ["all", "item", "weapon"];
 const IMPLEMENTED_PAGE_SIZE = 48;
 const DEFAULT_CATEGORY_HINTS = [];
+const DEFAULT_JOB_SUGGESTIONS = ["police", "ambulance", "mechanic", "taxi", "realestate", "burgershot", "beanmachine", "cardealer", "judge"];
+const WEAPON_TYPE_SUGGESTIONS = ["Pistol", "Submachine Gun", "Light Machine Gun", "Assault Rifle", "Sniper Rifle", "Shotgun", "Heavy Weapons", "Melee", "Weapon"];
+const BUILDER_PRESETS = Object.freeze({
+    basic_item: {
+        label: "Item comum",
+        revealAdvanced: false,
+        form: {
+            type: "item",
+            rarity: "common",
+            unique: false,
+            useable: false,
+            shouldClose: true,
+            decay: "",
+            ammotype: "",
+            consume: "",
+            weaponAlias: "",
+            weapontype: "",
+            compatibilityAliasFor: "",
+            hiddenCompat: false,
+            allowArmed: "",
+            allowInBackpack: "",
+            jobList: "",
+            clientRemoveAfterUse: false,
+            prop: "",
+            object: "",
+            carryInHand: false,
+            carryAttachmentBone: "",
+            carryPosX: "",
+            carryPosY: "",
+            carryPosZ: "",
+            carryRotX: "",
+            carryRotY: "",
+            carryRotZ: "",
+            carryAnimDict: "",
+            carryAnimClip: "",
+            carryAnimFlag: "",
+            combineReward: "",
+            combineAccept: "",
+            combineAnimDict: "",
+            combineAnimLib: "",
+            combineAnimText: "",
+            combineAnimTimeout: "",
+            extraLua: "",
+        },
+    },
+    usable_item: {
+        label: "Item usavel",
+        revealAdvanced: false,
+        form: {
+            type: "item",
+            rarity: "common",
+            unique: false,
+            useable: true,
+            shouldClose: true,
+            consume: "",
+        },
+    },
+    weapon_item: {
+        label: "Arma",
+        revealAdvanced: true,
+        form: {
+            type: "weapon",
+            rarity: "rare",
+            unique: true,
+            useable: false,
+            shouldClose: true,
+            consume: "0",
+            weapontype: "Weapon",
+        },
+    },
+    carry_item: {
+        label: "Item de mao",
+        revealAdvanced: true,
+        form: {
+            type: "item",
+            unique: true,
+            useable: false,
+            shouldClose: true,
+            prop: "",
+            object: "",
+            carryInHand: true,
+            allowInBackpack: "false",
+        },
+    },
+    combinable_item: {
+        label: "Item combinavel",
+        revealAdvanced: true,
+        form: {
+            type: "item",
+            unique: false,
+            useable: false,
+            shouldClose: true,
+        },
+    },
+    compatibility_item: {
+        label: "Alias de compat",
+        revealAdvanced: true,
+        form: {
+            type: "weapon",
+            unique: true,
+            useable: false,
+            shouldClose: true,
+            hiddenCompat: true,
+        },
+    },
+});
 
 // Categorias extraídas do ICONS (prea-inventory) para organização no site
 function buildCategoryList() {
@@ -33,7 +139,11 @@ let CATEGORY_LIST = [];
 const ITEM_EXPORT_ORDER = [
     "name", "label", "weight", "type", "image",
     "unique", "useable", "shouldClose", "description",
-    "rarity", "decay", "ammotype", "consume", "allowArmed", "allowInBackpack",
+    "rarity", "decay", "ammotype", "consume", "weapon", "weapontype",
+    "allowArmed", "allowInBackpack", "job",
+    "hiddenCompat", "compatibilityAliasFor",
+    "prop", "object", "carryInHand", "carryAttachment", "carryAnim",
+    "combinable", "client",
 ];
 
 const ITEM_META_KEYS = new Set([
@@ -43,6 +153,67 @@ const ITEM_META_KEYS = new Set([
     "uploadedIconMime", "uploadedIconFileName",
     "siteCategory", "stack",
 ]);
+
+const DEFAULT_BUILDER_FORM = Object.freeze({
+    name: "",
+    label: "",
+    description: "",
+    weight: "0",
+    type: "item",
+    rarity: "common",
+    unique: false,
+    useable: false,
+    shouldClose: true,
+    decay: "",
+    ammotype: "",
+    consume: "",
+    weaponAlias: "",
+    weapontype: "",
+    compatibilityAliasFor: "",
+    hiddenCompat: false,
+    allowArmed: "",
+    allowInBackpack: "",
+    jobList: "",
+    clientRemoveAfterUse: false,
+    prop: "",
+    object: "",
+    carryInHand: false,
+    carryAttachmentBone: "",
+    carryPosX: "",
+    carryPosY: "",
+    carryPosZ: "",
+    carryRotX: "",
+    carryRotY: "",
+    carryRotZ: "",
+    carryAnimDict: "",
+    carryAnimClip: "",
+    carryAnimFlag: "",
+    combineReward: "",
+    combineAccept: "",
+    combineAnimDict: "",
+    combineAnimLib: "",
+    combineAnimText: "",
+    combineAnimTimeout: "",
+    extraLua: "",
+    image: "novo-item.png",
+    siteCategory: "",
+});
+
+const BUILDER_TEMPLATE_COPY_KEYS = [
+    "type", "rarity", "weight",
+    "unique", "useable", "shouldClose",
+    "decay", "ammotype", "consume", "weapontype",
+    "weaponAlias", "compatibilityAliasFor", "hiddenCompat",
+    "allowArmed", "allowInBackpack", "jobList",
+    "clientRemoveAfterUse",
+    "prop", "object", "carryInHand",
+    "carryAttachmentBone", "carryPosX", "carryPosY", "carryPosZ",
+    "carryRotX", "carryRotY", "carryRotZ",
+    "carryAnimDict", "carryAnimClip", "carryAnimFlag",
+    "combineReward", "combineAccept",
+    "combineAnimDict", "combineAnimLib", "combineAnimText", "combineAnimTimeout",
+    "extraLua",
+];
 
 // ============================================================
 //  STATE
@@ -84,6 +255,9 @@ const state = {
         uploadedIconBase64: null,
         uploadedIconMime: "image/png",
         uploadedIconFileName: null,
+        experienceMode: "guided",
+        showAdvanced: false,
+        presetKey: "",
     },
 };
 
@@ -91,6 +265,181 @@ let toastTimeout = null;
 
 function normalizeCategoryName(value) {
     return String(value || "").trim();
+}
+
+function cloneDefaultBuilderForm(overrides = {}) {
+    return { ...DEFAULT_BUILDER_FORM, ...overrides };
+}
+
+function readTrimmedInputValue(id) {
+    const element = document.getElementById(id);
+    return element ? element.value.trim() : "";
+}
+
+function readCheckboxValue(id) {
+    return Boolean(document.getElementById(id)?.checked);
+}
+
+function setInputValue(id, value) {
+    const element = document.getElementById(id);
+    if (element) element.value = value ?? "";
+}
+
+function setCheckboxValue(id, value) {
+    const element = document.getElementById(id);
+    if (element) element.checked = Boolean(value);
+}
+
+function getLuaCallInfo(value) {
+    if (!value || Array.isArray(value) || typeof value !== "object") return null;
+    const name = value.__luaCall || value.__call;
+    const args = Array.isArray(value.args) ? value.args : [];
+    if (!name) return null;
+    return { name: String(name), args };
+}
+
+function isLuaVectorCall(value) {
+    const call = getLuaCallInfo(value);
+    if (!call) return false;
+    return ["v3", "vec3", "vector3"].includes(call.name.toLowerCase());
+}
+
+function normalizeLuaStructuredValue(value) {
+    if (Array.isArray(value)) {
+        return value.map((entry) => normalizeLuaStructuredValue(entry));
+    }
+
+    const call = getLuaCallInfo(value);
+    if (call) {
+        const normalizedArgs = call.args.map((entry) => normalizeLuaStructuredValue(entry));
+        if (isLuaVectorCall(value)) {
+            const [x, y, z] = normalizedArgs;
+            return {
+                x: typeof x === "number" ? x : Number(x) || 0,
+                y: typeof y === "number" ? y : Number(y) || 0,
+                z: typeof z === "number" ? z : Number(z) || 0,
+            };
+        }
+        return { __luaCall: call.name, args: normalizedArgs };
+    }
+
+    if (!value || typeof value !== "object") return value;
+
+    const normalized = {};
+    for (const [key, entry] of Object.entries(value)) {
+        normalized[key] = normalizeLuaStructuredValue(entry);
+    }
+    return normalized;
+}
+
+function toOptionalNumber(value) {
+    const raw = String(value ?? "").trim();
+    if (!raw) return null;
+    const parsed = Number(raw);
+    return Number.isFinite(parsed) ? parsed : null;
+}
+
+function buildVectorObject(x, y, z) {
+    const nextX = toOptionalNumber(x);
+    const nextY = toOptionalNumber(y);
+    const nextZ = toOptionalNumber(z);
+    if (nextX === null && nextY === null && nextZ === null) return null;
+    return {
+        x: nextX ?? 0,
+        y: nextY ?? 0,
+        z: nextZ ?? 0,
+    };
+}
+
+function readVectorParts(value) {
+    const normalized = normalizeLuaStructuredValue(value);
+    if (!normalized || Array.isArray(normalized) || typeof normalized !== "object") {
+        return { x: "", y: "", z: "" };
+    }
+
+    return {
+        x: typeof normalized.x === "number" && Number.isFinite(normalized.x) ? String(normalized.x) : "",
+        y: typeof normalized.y === "number" && Number.isFinite(normalized.y) ? String(normalized.y) : "",
+        z: typeof normalized.z === "number" && Number.isFinite(normalized.z) ? String(normalized.z) : "",
+    };
+}
+
+function readListFromValue(value) {
+    if (Array.isArray(value)) {
+        return value.map((entry) => String(entry ?? "").trim()).filter(Boolean).join(", ");
+    }
+
+    if (value && typeof value === "object") {
+        const numericEntries = Object.entries(value)
+            .filter(([key]) => /^\d+$/.test(key))
+            .sort((a, b) => Number(a[0]) - Number(b[0]))
+            .map(([, entry]) => String(entry ?? "").trim())
+            .filter(Boolean);
+        if (numericEntries.length) return numericEntries.join(", ");
+    }
+
+    return typeof value === "string" ? value : "";
+}
+
+function parseCommaSeparatedList(value) {
+    return String(value || "")
+        .split(",")
+        .map((entry) => entry.trim())
+        .filter(Boolean);
+}
+
+function buildCarryAttachmentFromForm(form) {
+    const bone = toOptionalNumber(form.carryAttachmentBone);
+    const pos = buildVectorObject(form.carryPosX, form.carryPosY, form.carryPosZ);
+    const rot = buildVectorObject(form.carryRotX, form.carryRotY, form.carryRotZ);
+    if (bone === null && !pos && !rot) return null;
+
+    const attachment = {};
+    if (bone !== null) attachment.bone = bone;
+    if (pos) attachment.pos = pos;
+    if (rot) attachment.rot = rot;
+    return attachment;
+}
+
+function buildCarryAnimFromForm(form) {
+    const dict = String(form.carryAnimDict || "").trim();
+    const clip = String(form.carryAnimClip || "").trim();
+    const flag = toOptionalNumber(form.carryAnimFlag);
+    if (!dict && !clip && flag === null) return null;
+
+    const anim = {};
+    if (dict) anim.dict = dict;
+    if (clip) anim.clip = clip;
+    if (flag !== null) anim.flag = flag;
+    return anim;
+}
+
+function buildCombinableFromForm(form) {
+    const reward = String(form.combineReward || "").trim();
+    const accept = parseCommaSeparatedList(form.combineAccept);
+    const dict = String(form.combineAnimDict || "").trim();
+    const lib = String(form.combineAnimLib || "").trim();
+    const text = String(form.combineAnimText || "").trim();
+    const timeOut = toOptionalNumber(form.combineAnimTimeout);
+    const hasAnim = Boolean(dict || lib || text || timeOut !== null);
+    if (!reward && accept.length === 0 && !hasAnim) return null;
+
+    const combinable = {};
+    if (reward) combinable.reward = reward;
+    if (accept.length) combinable.accept = accept;
+    if (hasAnim) {
+        combinable.anim = {};
+        if (dict) combinable.anim.dict = dict;
+        if (lib) combinable.anim.lib = lib;
+        if (text) combinable.anim.text = text;
+        if (timeOut !== null) combinable.anim.timeOut = timeOut;
+    }
+    return combinable;
+}
+
+function buildClientConfigFromForm(form) {
+    if (!form.clientRemoveAfterUse) return null;
+    return { removeAfterUse: true };
 }
 
 function addCategoryToSet(targetSet, value) {
@@ -171,8 +520,12 @@ document.addEventListener("DOMContentLoaded", () => {
     ensureImplementedBulkBar();
     ensureCurrentReadyIconOption();
     ensureAllowInBackpackField();
+    ensureWeaponTypeField();
     ensureStackableField();
     ensureCategoryField();
+    ensureBuilderModeControls();
+    ensureBuilderSuggestionLists();
+    enhanceBuilderFormExperience();
     ensureLuaImportPanel();
     ensureReadyBatchExportButton();
     ensureImplementedCategoryFilter();
@@ -303,6 +656,216 @@ function ensureCategoryField() {
     syncCategorySelectOptions();
 }
 
+function ensureWeaponTypeField() {
+    if (document.getElementById("itemWeaponTypeInput")) return;
+
+    const ammoInput = document.getElementById("itemAmmoTypeInput");
+    const grid = ammoInput?.closest(".field-grid");
+    if (!ammoInput || !grid) return;
+
+    grid.classList.remove("three-cols");
+    grid.classList.add("four-cols");
+
+    const wrapper = document.createElement("label");
+    wrapper.className = "field";
+    wrapper.innerHTML = `
+        <span>weapontype <i class="info-tip" data-tip="Classe da arma usada em reparo e na WeaponList. So precisa preencher para armas custom sem classe externa.">i</i></span>
+        <input type="text" id="itemWeaponTypeInput" placeholder="ex: Pistol">
+    `;
+    grid.appendChild(wrapper);
+}
+
+function ensureBuilderModeControls() {
+    if (document.getElementById("builderExperienceModeSelect")) return;
+
+    const form = document.getElementById("itemForm");
+    if (!form) return;
+
+    const wrapper = document.createElement("section");
+    wrapper.className = "builder-setup-panel";
+    wrapper.id = "builderSetupPanel";
+    wrapper.innerHTML = `
+        <div class="builder-setup-grid">
+            <label class="field">
+                <span>Modo do builder <i class="info-tip" data-tip="Guiado deixa o formulario mais limpo. Manual mostra tudo e nao depende de preset.">i</i></span>
+                <select id="builderExperienceModeSelect">
+                    <option value="guided">Guiado</option>
+                    <option value="manual">Manual</option>
+                </select>
+            </label>
+            <label class="field">
+                <span>Preset rapido <i class="info-tip" data-tip="Aplica um ponto de partida para o item. E opcional: voce pode deixar sem preset e montar tudo manualmente.">i</i></span>
+                <select id="builderPresetSelect">
+                    <option value="">Sem preset</option>
+                    ${Object.entries(BUILDER_PRESETS).map(([key, preset]) => `<option value="${escapeHtmlAttribute(key)}">${escapeHtml(preset.label)}</option>`).join("")}
+                </select>
+            </label>
+            <div class="field builder-preset-actions">
+                <span>Aplicacao <i class="info-tip" data-tip="Aplica o preset selecionado ao formulario atual sem mexer no nome, label, imagem ou categoria.">i</i></span>
+                <button class="ghost-btn" id="applyBuilderPresetBtn" type="button">Aplicar preset</button>
+            </div>
+        </div>
+        <label class="toggle builder-advanced-toggle" title="Mostrar ou esconder os campos tecnicos do prea-inventory">
+            <input type="checkbox" id="builderAdvancedToggle">
+            <span>Opcoes avancadas <i class="info-tip" data-tip="Mostra alias, ammo, carry, combinacao, configuracoes tecnicas e o bloco Lua extra.">i</i></span>
+        </label>
+        <div class="builder-setup-note" id="builderExperienceHint"></div>
+        <div class="builder-setup-note hidden" id="builderAdvancedCollapsedNote">Campos tecnicos escondidos. Marque <strong>Opcoes avancadas</strong> para ver carry, combinacao, ammo, alias e extras de Lua.</div>
+    `;
+
+    form.insertAdjacentElement("beforebegin", wrapper);
+}
+
+function ensureBuilderSuggestionLists() {
+    const form = document.getElementById("itemForm");
+    if (!form) return;
+
+    createBuilderDatalist("builderWeaponNameSuggestions", form);
+    createBuilderDatalist("builderItemNameSuggestions", form);
+    createBuilderDatalist("builderAmmoTypeSuggestions", form);
+    createBuilderDatalist("builderJobSuggestions", form);
+    createBuilderDatalist("builderWeaponTypeSuggestions", form);
+
+    const weaponInput = document.getElementById("itemWeaponAliasInput");
+    const aliasInput = document.getElementById("itemCompatibilityAliasInput");
+    const ammoInput = document.getElementById("itemAmmoTypeInput");
+    const jobInput = document.getElementById("itemJobListInput");
+    const weaponTypeInput = document.getElementById("itemWeaponTypeInput");
+
+    if (weaponInput) weaponInput.setAttribute("list", "builderWeaponNameSuggestions");
+    if (aliasInput) aliasInput.setAttribute("list", "builderItemNameSuggestions");
+    if (ammoInput) ammoInput.setAttribute("list", "builderAmmoTypeSuggestions");
+    if (jobInput) jobInput.setAttribute("list", "builderJobSuggestions");
+    if (weaponTypeInput) weaponTypeInput.setAttribute("list", "builderWeaponTypeSuggestions");
+
+    syncBuilderSuggestionLists();
+}
+
+function createBuilderDatalist(id, parent) {
+    if (document.getElementById(id)) return;
+    const datalist = document.createElement("datalist");
+    datalist.id = id;
+    parent.appendChild(datalist);
+}
+
+function syncBuilderSuggestionLists() {
+    syncBuilderDatalist("builderWeaponNameSuggestions", getBuilderWeaponNameSuggestions());
+    syncBuilderDatalist("builderItemNameSuggestions", getBuilderItemNameSuggestions());
+    syncBuilderDatalist("builderAmmoTypeSuggestions", getBuilderAmmoTypeSuggestions());
+    syncBuilderDatalist("builderJobSuggestions", DEFAULT_JOB_SUGGESTIONS);
+    syncBuilderDatalist("builderWeaponTypeSuggestions", WEAPON_TYPE_SUGGESTIONS);
+}
+
+function syncBuilderDatalist(id, values) {
+    const datalist = document.getElementById(id);
+    if (!datalist) return;
+    datalist.innerHTML = Array.from(new Set((values || []).map((value) => String(value || "").trim()).filter(Boolean)))
+        .sort((a, b) => a.localeCompare(b, "pt-BR"))
+        .map((value) => `<option value="${escapeHtmlAttribute(value)}"></option>`)
+        .join("");
+}
+
+function getBuilderSuggestionSourceItems() {
+    return [
+        ...(state.baseImplementedItems || []),
+        ...Object.values(state.customImplemented || {}),
+        ...(state.readyItems || []),
+    ];
+}
+
+function getBuilderWeaponNameSuggestions() {
+    return getBuilderSuggestionSourceItems()
+        .filter((item) => item?.type === "weapon" || String(item?.name || "").toLowerCase().startsWith("weapon_"))
+        .map((item) => item.weapon || item.name);
+}
+
+function getBuilderItemNameSuggestions() {
+    return getBuilderSuggestionSourceItems().map((item) => item?.name);
+}
+
+function getBuilderAmmoTypeSuggestions() {
+    const values = getBuilderSuggestionSourceItems()
+        .map((item) => item?.ammotype)
+        .filter(Boolean);
+    return values.concat(["AMMO_PISTOL", "ammo-9", "ammo-rifle", "ammo-rifle2", "ammo-shotgun", "ammo-sniper", "ammo-grenade", "ammo-rocket"]);
+}
+
+function enhanceBuilderFormExperience() {
+    reorderBuilderAdvancedSections();
+    applyBuilderFieldHelp();
+}
+
+function reorderBuilderAdvancedSections() {
+    const form = document.getElementById("itemForm");
+    const extraLuaField = document.getElementById("itemExtraLuaInput")?.closest(".field");
+    if (!form || !extraLuaField) return;
+
+    const orderedSections = [
+        document.getElementById("itemWeaponAliasInput")?.closest(".builder-subsection"),
+        document.getElementById("itemPropInput")?.closest(".builder-subsection"),
+        document.getElementById("itemCombineRewardInput")?.closest(".builder-subsection"),
+    ].filter(Boolean);
+
+    for (const section of orderedSections) {
+        form.insertBefore(section, extraLuaField);
+    }
+}
+
+function applyBuilderFieldHelp() {
+    setBuilderSectionCopy("itemWeaponAliasInput", "Compatibilidade e comportamento", "Alias, restricoes e opcoes especiais que o prea-inventory interpreta no uso do item.");
+    setBuilderSectionCopy("itemPropInput", "Objeto e carry", "Controla o objeto visual do item no chao, na mao e a animacao usada para carregar.");
+    setBuilderSectionCopy("itemCombineRewardInput", "Combinacao", "Receita de combine e configuracao visual do progresso quando um item gera outro.");
+
+    setBuilderFieldHelp("itemWeaponAliasInput", "weapon", "Nome real da arma usado por itens do tipo weapon. Preencha quando o item representa uma arma especifica.");
+    setBuilderFieldHelp("itemWeaponTypeInput", "weapontype", "Classe da arma usada em reparo e na WeaponList. So precisa preencher para armas custom sem classe externa.");
+    setBuilderFieldHelp("itemCompatibilityAliasInput", "compatibilityAliasFor", "Faz este item funcionar como alias de outro item principal. Bom para nomes antigos ou compatibilidade com scripts legados.");
+    setBuilderFieldHelp("itemJobListInput", "job", "Lista de empregos autorizados a usar o item, separados por virgula. Exemplo: police, ambulance.");
+    setBuilderFieldHelp("itemHiddenCompatInput", "hiddenCompat", "Esconde o item em fluxos de compatibilidade. Use em itens tecnicos que nao devem aparecer como item principal.");
+    setBuilderFieldHelp("itemClientRemoveAfterUseInput", "client.removeAfterUse", "Remove uma unidade automaticamente quando o item for usado por callback client.");
+    setBuilderFieldHelp("itemAllowArmedSelect", "allowArmed", "Define se o jogador pode usar o item enquanto estiver armado. Deixe vazio para nao forcar regra.");
+    setBuilderFieldHelp("itemAllowInBackpackSelect", "allowInBackpack", "Define se o item pode ser guardado dentro de mochila. Deixe vazio para nao forcar regra.");
+
+    setBuilderFieldHelp("itemPropInput", "prop", "Modelo do objeto usado para drop visual e para itens carregados na mao.");
+    setBuilderFieldHelp("itemObjectInput", "object", "Modelo alternativo usado por alguns fluxos de drop e entrega. Se tiver duvida, repita o mesmo valor do prop.");
+    setBuilderFieldHelp("itemCarryInHandInput", "carryInHand", "Quando ligado, o personagem carrega o item nas maos enquanto ele estiver no inventario principal.");
+    setBuilderFieldHelp("itemCarryBoneInput", "carryAttachment.bone", "Bone do ped onde o objeto sera anexado. Exemplo comum: 60309 para a mao direita.");
+    setBuilderFieldHelp("itemCarryAnimDictInput", "carryAnim.dict", "Dicionario da animacao usada enquanto o item esta sendo carregado.");
+    setBuilderFieldHelp("itemCarryAnimClipInput", "carryAnim.clip", "Nome do clip dentro do dicionario de animacao.");
+    setBuilderFieldHelp("itemCarryAnimFlagInput", "carryAnim.flag", "Flag numerica da animacao. Use 49 quando quiser manter a pose padrao de carry.");
+    setBuilderFieldHelp("itemCarryPosXInput", "carryAttachment.pos.x", "Ajuste fino da posicao no eixo X do objeto preso na mao.");
+    setBuilderFieldHelp("itemCarryPosYInput", "carryAttachment.pos.y", "Ajuste fino da posicao no eixo Y do objeto preso na mao.");
+    setBuilderFieldHelp("itemCarryPosZInput", "carryAttachment.pos.z", "Ajuste fino da posicao no eixo Z do objeto preso na mao.");
+    setBuilderFieldHelp("itemCarryRotXInput", "carryAttachment.rot.x", "Rotacao do objeto no eixo X depois de anexado ao bone.");
+    setBuilderFieldHelp("itemCarryRotYInput", "carryAttachment.rot.y", "Rotacao do objeto no eixo Y depois de anexado ao bone.");
+    setBuilderFieldHelp("itemCarryRotZInput", "carryAttachment.rot.z", "Rotacao do objeto no eixo Z depois de anexado ao bone.");
+
+    setBuilderFieldHelp("itemCombineRewardInput", "combinable.reward", "Item resultado da combinacao. Exemplo: lockpick.");
+    setBuilderFieldHelp("itemCombineAcceptInput", "combinable.accept", "Itens aceitos como ingredientes, separados por virgula. Exemplo: metalscrap, plastic.");
+    setBuilderFieldHelp("itemCombineAnimDictInput", "combinable.anim.dict", "Dicionario de animacao usado durante a combinacao.");
+    setBuilderFieldHelp("itemCombineAnimLibInput", "combinable.anim.lib", "Clip ou nome interno da animacao usada na progress bar da combinacao.");
+    setBuilderFieldHelp("itemCombineAnimTextInput", "combinable.anim.text", "Texto mostrado para o jogador durante a combinacao.");
+    setBuilderFieldHelp("itemCombineAnimTimeoutInput", "combinable.anim.timeOut", "Duracao da combinacao em milissegundos. Exemplo: 5000 = 5 segundos.");
+
+    setBuilderFieldHelp("itemExtraLuaInput", "Extras avancados em Lua", "Use apenas para campos raros que ainda nao existem no formulario. O conteudo abaixo entra direto no export Lua.");
+}
+
+function setBuilderSectionCopy(inputId, titleText, descriptionText) {
+    const section = document.getElementById(inputId)?.closest(".builder-subsection");
+    const title = section?.querySelector(".builder-subsection-header strong");
+    const description = section?.querySelector(".builder-subsection-header span");
+    if (title) title.textContent = titleText;
+    if (description) description.textContent = descriptionText;
+}
+
+function setBuilderFieldHelp(inputId, labelText, tipText) {
+    const input = document.getElementById(inputId);
+    const label = input?.closest("label");
+    const span = label?.querySelector("span");
+    if (!span) return;
+
+    span.innerHTML = `${escapeHtml(labelText)} <i class="info-tip" data-tip="${escapeHtmlAttribute(tipText)}">i</i>`;
+}
+
 function ensureImplementedCategoryFilter() {
     const filterStack = document.querySelector("#implementedView .filter-stack");
     if (!filterStack || document.getElementById("implementedCategoryFilter")) return;
@@ -422,19 +985,20 @@ function flattenPendingItems() {
 }
 
 function normalizeImplementedItem(item) {
+    const normalizedItem = normalizeLuaStructuredValue(item);
     return {
-        ...item,
-        name: item.name || "",
-        label: item.label || item.name || "",
-        description: item.description || "",
-        weight: Number(item.weight || 0),
-        type: item.type || "item",
-        image: item.image || `${item.name}.png`,
-        unique: readItemUniqueValue(item),
-        useable: Boolean(item.useable),
-        shouldClose: item.shouldClose !== false,
-        rarity: item.rarity || "common",
-        source: item.source || "shared",
+        ...normalizedItem,
+        name: normalizedItem.name || "",
+        label: normalizedItem.label || normalizedItem.name || "",
+        description: normalizedItem.description || "",
+        weight: Number(normalizedItem.weight || 0),
+        type: normalizedItem.type || "item",
+        image: normalizedItem.image || `${normalizedItem.name}.png`,
+        unique: readItemUniqueValue(normalizedItem),
+        useable: Boolean(normalizedItem.useable),
+        shouldClose: normalizedItem.shouldClose !== false,
+        rarity: normalizedItem.rarity || "common",
+        source: normalizedItem.source || "shared",
     };
 }
 
@@ -659,6 +1223,7 @@ async function loadReadyItems(options = {}) {
             revealReadyItem(revealName, { preserveSearch });
         }
         refreshCategoryRegistry();
+        syncBuilderSuggestionLists();
         renderReadyStatusBar(`${statusPrefix}${state.readyItems.length} item(s) prontos carregados.`, "ok");
     } catch (err) {
         console.error("Erro ao carregar prontos:", err);
@@ -731,6 +1296,7 @@ async function publishReadyItem(item, iconBase64) {
     state.readyItemsSha = result.content.sha;
     state.readyLoaded = true;
     state.readyLoading = false;
+    syncBuilderSuggestionLists();
 }
 
 async function deleteReadyItemFromGitHub(name) {
@@ -773,6 +1339,7 @@ async function deleteReadyItemFromGitHub(name) {
 
     state.readyItems = currentItems;
     state.readyItemsSha = result.content.sha;
+    syncBuilderSuggestionLists();
 }
 
 function parseImplementedSnapshotSource(source) {
@@ -1076,6 +1643,12 @@ function bindEvents() {
     document.getElementById("applyLuaImportBtn").addEventListener("click", applyLuaImportFromTextarea);
     document.getElementById("clearLuaImportBtn").addEventListener("click", clearLuaImportTextarea);
     document.getElementById("newManualItemBtn").addEventListener("click", openBuilderManual);
+    document.getElementById("builderExperienceModeSelect")?.addEventListener("change", handleBuilderExperienceModeChange);
+    document.getElementById("builderAdvancedToggle")?.addEventListener("change", handleBuilderAdvancedToggleChange);
+    document.getElementById("builderPresetSelect")?.addEventListener("change", (event) => {
+        state.builder.presetKey = event.target.value || "";
+    });
+    document.getElementById("applyBuilderPresetBtn")?.addEventListener("click", applySelectedBuilderPreset);
 
     // Workspace actions
     document.getElementById("exportWorkspaceBtn").addEventListener("click", exportLocalWorkspace);
@@ -1842,7 +2415,10 @@ function renderBuilder() {
         ? `${templateItem.label || templateItem.name} · ${templateItem.type} · ${templateItem.rarity}`
         : "Nenhum template aplicado.");
 
+    syncBuilderSuggestionLists();
     syncBuilderInputs();
+    syncBuilderExperienceControls();
+    syncBuilderAdvancedVisibility();
 
     const builderImage = document.getElementById("builderIconImage");
     applyImageCandidates(builderImage, getBuilderImageCandidates(), pendingItem.name);
@@ -1871,6 +2447,54 @@ function renderBuilder() {
     document.getElementById("iconSourceUpload").checked = state.builder.iconSource === "upload";
     toggleIconUploadArea(state.builder.iconSource === "upload");
     syncUploadPreviewState();
+}
+
+function syncBuilderExperienceControls() {
+    const modeSelect = document.getElementById("builderExperienceModeSelect");
+    const presetSelect = document.getElementById("builderPresetSelect");
+    const advancedToggle = document.getElementById("builderAdvancedToggle");
+    const hint = document.getElementById("builderExperienceHint");
+    const isManualMode = state.builder.experienceMode === "manual";
+
+    if (modeSelect) modeSelect.value = isManualMode ? "manual" : "guided";
+    if (presetSelect) presetSelect.value = state.builder.presetKey || "";
+    if (advancedToggle) {
+        advancedToggle.checked = isManualMode || state.builder.showAdvanced;
+        advancedToggle.disabled = isManualMode;
+    }
+
+    if (hint) {
+        hint.textContent = isManualMode
+            ? "Modo manual ativo: todos os campos ficam visiveis, sem preset obrigatorio."
+            : state.builder.showAdvanced
+                ? "Modo guiado com opcoes avancadas abertas."
+                : "Modo guiado ativo: os campos tecnicos ficam escondidos ate voce marcar Opcoes avancadas.";
+    }
+}
+
+function getBuilderAdvancedElements() {
+    return Array.from(new Set([
+        document.getElementById("itemDecayInput")?.closest(".field-grid"),
+        document.getElementById("itemAllowArmedSelect")?.closest(".field"),
+        document.getElementById("itemAllowInBackpackSelect")?.closest(".field"),
+        document.getElementById("itemWeaponAliasInput")?.closest(".builder-subsection"),
+        document.getElementById("itemPropInput")?.closest(".builder-subsection"),
+        document.getElementById("itemCombineRewardInput")?.closest(".builder-subsection"),
+        document.getElementById("itemExtraLuaInput")?.closest(".field"),
+    ].filter(Boolean)));
+}
+
+function syncBuilderAdvancedVisibility() {
+    const shouldShowAdvanced = state.builder.experienceMode === "manual" || state.builder.showAdvanced;
+    for (const element of getBuilderAdvancedElements()) {
+        element.classList.toggle("hidden", !shouldShowAdvanced);
+    }
+
+    const collapsedNote = document.getElementById("builderAdvancedCollapsedNote");
+    if (collapsedNote) {
+        const shouldShowNote = Boolean(state.builder.form) && !shouldShowAdvanced;
+        collapsedNote.classList.toggle("hidden", !shouldShowNote);
+    }
 }
 
 function getBuilderImageCandidates() {
@@ -1938,22 +2562,47 @@ function syncUploadPreviewState() {
 function syncBuilderInputs() {
     const form = state.builder.form;
     if (!form) return;
-    document.getElementById("itemNameInput").value = form.name;
-    document.getElementById("itemLabelInput").value = form.label;
-    document.getElementById("itemDescriptionInput").value = form.description;
-    document.getElementById("itemWeightInput").value = form.weight;
-    document.getElementById("itemTypeSelect").value = form.type;
-    document.getElementById("itemRaritySelect").value = form.rarity;
-    document.getElementById("itemUniqueInput").checked = form.unique;
+    setInputValue("itemNameInput", form.name);
+    setInputValue("itemLabelInput", form.label);
+    setInputValue("itemDescriptionInput", form.description);
+    setInputValue("itemWeightInput", form.weight);
+    setInputValue("itemTypeSelect", form.type);
+    setInputValue("itemRaritySelect", form.rarity);
+    setCheckboxValue("itemUniqueInput", form.unique);
     syncStackingControls("unique");
-    document.getElementById("itemUseableInput").checked = form.useable;
-    document.getElementById("itemShouldCloseInput").checked = form.shouldClose;
-    document.getElementById("itemDecayInput").value = form.decay;
-    document.getElementById("itemAmmoTypeInput").value = form.ammotype;
-    document.getElementById("itemConsumeInput").value = form.consume;
-    document.getElementById("itemAllowArmedSelect").value = form.allowArmed;
-    document.getElementById("itemAllowInBackpackSelect").value = form.allowInBackpack;
-    document.getElementById("itemExtraLuaInput").value = form.extraLua;
+    setCheckboxValue("itemUseableInput", form.useable);
+    setCheckboxValue("itemShouldCloseInput", form.shouldClose);
+    setInputValue("itemDecayInput", form.decay);
+    setInputValue("itemAmmoTypeInput", form.ammotype);
+    setInputValue("itemConsumeInput", form.consume);
+    setInputValue("itemWeaponAliasInput", form.weaponAlias);
+    setInputValue("itemWeaponTypeInput", form.weapontype);
+    setInputValue("itemCompatibilityAliasInput", form.compatibilityAliasFor);
+    setCheckboxValue("itemHiddenCompatInput", form.hiddenCompat);
+    setInputValue("itemAllowArmedSelect", form.allowArmed);
+    setInputValue("itemAllowInBackpackSelect", form.allowInBackpack);
+    setInputValue("itemJobListInput", form.jobList);
+    setCheckboxValue("itemClientRemoveAfterUseInput", form.clientRemoveAfterUse);
+    setInputValue("itemPropInput", form.prop);
+    setInputValue("itemObjectInput", form.object);
+    setCheckboxValue("itemCarryInHandInput", form.carryInHand);
+    setInputValue("itemCarryBoneInput", form.carryAttachmentBone);
+    setInputValue("itemCarryPosXInput", form.carryPosX);
+    setInputValue("itemCarryPosYInput", form.carryPosY);
+    setInputValue("itemCarryPosZInput", form.carryPosZ);
+    setInputValue("itemCarryRotXInput", form.carryRotX);
+    setInputValue("itemCarryRotYInput", form.carryRotY);
+    setInputValue("itemCarryRotZInput", form.carryRotZ);
+    setInputValue("itemCarryAnimDictInput", form.carryAnimDict);
+    setInputValue("itemCarryAnimClipInput", form.carryAnimClip);
+    setInputValue("itemCarryAnimFlagInput", form.carryAnimFlag);
+    setInputValue("itemCombineRewardInput", form.combineReward);
+    setInputValue("itemCombineAcceptInput", form.combineAccept);
+    setInputValue("itemCombineAnimDictInput", form.combineAnimDict);
+    setInputValue("itemCombineAnimLibInput", form.combineAnimLib);
+    setInputValue("itemCombineAnimTextInput", form.combineAnimText);
+    setInputValue("itemCombineAnimTimeoutInput", form.combineAnimTimeout);
+    setInputValue("itemExtraLuaInput", form.extraLua);
     const imageInput = document.getElementById("itemImageInput");
     imageInput.value = form.image;
     imageInput.readOnly = Boolean(state.builder.activePendingName);
@@ -1994,19 +2643,44 @@ function syncBuilderFormFromInputs() {
     state.builder.form = {
         ...currentForm,
         name: normalizedName,
-        label: document.getElementById("itemLabelInput").value.trim(),
-        description: document.getElementById("itemDescriptionInput").value.trim(),
-        weight: document.getElementById("itemWeightInput").value.trim(),
+        label: readTrimmedInputValue("itemLabelInput"),
+        description: readTrimmedInputValue("itemDescriptionInput"),
+        weight: readTrimmedInputValue("itemWeightInput"),
         type: document.getElementById("itemTypeSelect").value,
         rarity: document.getElementById("itemRaritySelect").value,
         unique: uniqueValue,
-        useable: document.getElementById("itemUseableInput").checked,
-        shouldClose: document.getElementById("itemShouldCloseInput").checked,
-        decay: document.getElementById("itemDecayInput").value.trim(),
-        ammotype: document.getElementById("itemAmmoTypeInput").value.trim(),
-        consume: document.getElementById("itemConsumeInput").value.trim(),
+        useable: readCheckboxValue("itemUseableInput"),
+        shouldClose: readCheckboxValue("itemShouldCloseInput"),
+        decay: readTrimmedInputValue("itemDecayInput"),
+        ammotype: readTrimmedInputValue("itemAmmoTypeInput"),
+        consume: readTrimmedInputValue("itemConsumeInput"),
+        weaponAlias: readTrimmedInputValue("itemWeaponAliasInput"),
+        weapontype: readTrimmedInputValue("itemWeaponTypeInput"),
+        compatibilityAliasFor: readTrimmedInputValue("itemCompatibilityAliasInput"),
+        hiddenCompat: readCheckboxValue("itemHiddenCompatInput"),
         allowArmed: document.getElementById("itemAllowArmedSelect").value,
         allowInBackpack: document.getElementById("itemAllowInBackpackSelect").value,
+        jobList: readTrimmedInputValue("itemJobListInput"),
+        clientRemoveAfterUse: readCheckboxValue("itemClientRemoveAfterUseInput"),
+        prop: readTrimmedInputValue("itemPropInput"),
+        object: readTrimmedInputValue("itemObjectInput"),
+        carryInHand: readCheckboxValue("itemCarryInHandInput"),
+        carryAttachmentBone: readTrimmedInputValue("itemCarryBoneInput"),
+        carryPosX: readTrimmedInputValue("itemCarryPosXInput"),
+        carryPosY: readTrimmedInputValue("itemCarryPosYInput"),
+        carryPosZ: readTrimmedInputValue("itemCarryPosZInput"),
+        carryRotX: readTrimmedInputValue("itemCarryRotXInput"),
+        carryRotY: readTrimmedInputValue("itemCarryRotYInput"),
+        carryRotZ: readTrimmedInputValue("itemCarryRotZInput"),
+        carryAnimDict: readTrimmedInputValue("itemCarryAnimDictInput"),
+        carryAnimClip: readTrimmedInputValue("itemCarryAnimClipInput"),
+        carryAnimFlag: readTrimmedInputValue("itemCarryAnimFlagInput"),
+        combineReward: readTrimmedInputValue("itemCombineRewardInput"),
+        combineAccept: readTrimmedInputValue("itemCombineAcceptInput"),
+        combineAnimDict: readTrimmedInputValue("itemCombineAnimDictInput"),
+        combineAnimLib: readTrimmedInputValue("itemCombineAnimLibInput"),
+        combineAnimText: readTrimmedInputValue("itemCombineAnimTextInput"),
+        combineAnimTimeout: readTrimmedInputValue("itemCombineAnimTimeoutInput"),
         extraLua: document.getElementById("itemExtraLuaInput").value,
         image: imageValue,
         siteCategory: readCategoryFromInputs(),
@@ -2014,6 +2688,68 @@ function syncBuilderFormFromInputs() {
     document.getElementById("itemNameInput").value = normalizedName;
     setText("builderImageValue", state.builder.form.image);
     setText("luaExportPreview", buildLuaEntry(buildBuilderItemPreview()));
+}
+
+function handleBuilderExperienceModeChange(event) {
+    state.builder.experienceMode = event.target.value === "manual" ? "manual" : "guided";
+    state.builder.showAdvanced = state.builder.experienceMode === "manual";
+    renderBuilder();
+}
+
+function handleBuilderAdvancedToggleChange(event) {
+    if (state.builder.experienceMode === "manual") {
+        event.target.checked = true;
+        return;
+    }
+    state.builder.showAdvanced = Boolean(event.target.checked);
+    syncBuilderAdvancedVisibility();
+    syncBuilderExperienceControls();
+}
+
+function applySelectedBuilderPreset() {
+    if (!state.builder.form) {
+        showToast("Abra o builder antes de aplicar um preset.");
+        return;
+    }
+
+    const presetKey = document.getElementById("builderPresetSelect")?.value || "";
+    if (!presetKey || !BUILDER_PRESETS[presetKey]) {
+        showToast("Selecione um preset antes de aplicar.");
+        return;
+    }
+
+    const preset = BUILDER_PRESETS[presetKey];
+    state.builder.presetKey = presetKey;
+    state.builder.form = {
+        ...state.builder.form,
+        ...preset.form,
+    };
+    if (preset.revealAdvanced) {
+        state.builder.showAdvanced = true;
+    }
+    renderBuilder();
+    showToast(`Preset ${preset.label} aplicado.`);
+}
+
+function itemHasAdvancedConfig(item) {
+    const hydratedItem = hydrateItemForBuilder(item || {});
+    const advancedKeys = [
+        "decay", "ammotype", "consume", "weapon", "weapontype",
+        "allowArmed", "allowInBackpack", "job",
+        "hiddenCompat", "compatibilityAliasFor",
+        "prop", "object", "carryInHand", "carryAttachment", "carryAnim",
+        "combinable", "client",
+    ];
+
+    const hasAdvancedKey = advancedKeys.some((key) => {
+        if (!(key in hydratedItem)) return false;
+        const value = hydratedItem[key];
+        if (value === undefined || value === null) return false;
+        if (typeof value === "string" && !value.trim()) return false;
+        return true;
+    });
+
+    return hasAdvancedKey || Boolean(String(hydratedItem.extraLua || "").trim());
 }
 
 // ============================================================
@@ -2033,6 +2769,9 @@ function openBuilderFromPending(name) {
     state.builder.uploadedIconBase64 = null;
     state.builder.uploadedIconMime = "image/png";
     state.builder.uploadedIconFileName = null;
+    state.builder.experienceMode = "guided";
+    state.builder.showAdvanced = false;
+    state.builder.presetKey = "";
     renderBuilder();
     scrollToBuilder();
     showToast(`Builder carregado para ${item.name}.`);
@@ -2051,6 +2790,9 @@ function openBuilderForLocal(name) {
     state.builder.uploadedIconBase64 = item.uploadedIconBase64 || null;
     state.builder.uploadedIconMime = item.uploadedIconMime || "image/png";
     state.builder.uploadedIconFileName = item.uploadedIconFileName || null;
+    state.builder.experienceMode = item.pendingIconName ? "guided" : "manual";
+    state.builder.showAdvanced = state.builder.experienceMode === "manual" || itemHasAdvancedConfig(item);
+    state.builder.presetKey = "";
     renderBuilder();
     scrollToBuilder();
     showToast(`Editando rascunho ${item.name}.`);
@@ -2070,6 +2812,9 @@ function openBuilderForReady(name) {
     state.builder.uploadedIconBase64 = item.uploadedIconBase64 || null;
     state.builder.uploadedIconMime = item.uploadedIconMime || "image/png";
     state.builder.uploadedIconFileName = item.uploadedIconFileName || null;
+    state.builder.experienceMode = item.pendingIconName ? "guided" : "manual";
+    state.builder.showAdvanced = state.builder.experienceMode === "manual" || itemHasAdvancedConfig(item);
+    state.builder.presetKey = "";
     renderBuilder();
     scrollToBuilder();
     showToast(`Editando item pronto ${name}.`);
@@ -2086,6 +2831,9 @@ function openBuilderManual() {
     state.builder.uploadedIconBase64 = null;
     state.builder.uploadedIconMime = "image/png";
     state.builder.uploadedIconFileName = null;
+    state.builder.experienceMode = "manual";
+    state.builder.showAdvanced = true;
+    state.builder.presetKey = "";
     renderBuilder();
     scrollToBuilder();
     showToast("Builder manual aberto.");
@@ -2097,25 +2845,7 @@ function scrollToBuilder() {
 }
 
 function createDefaultFormFromScratch() {
-    return {
-        name: "",
-        label: "",
-        description: "",
-        weight: "0",
-        type: "item",
-        rarity: "common",
-        unique: false,
-        useable: false,
-        shouldClose: true,
-        decay: "",
-        ammotype: "",
-        consume: "",
-        allowArmed: "",
-        allowInBackpack: "",
-        extraLua: "",
-        image: "novo-item.png",
-        siteCategory: "",
-    };
+    return cloneDefaultBuilderForm();
 }
 
 function readCategoryFromInputs() {
@@ -2153,14 +2883,16 @@ function applyTemplate(item, source = "implemented") {
     const template = createFormFromImplementedItem(item, currentIconName);
     state.builder.templateName = item.name;
     state.builder.templateSource = source;
-    state.builder.form = {
-        ...current,
-        type: template.type, rarity: template.rarity, weight: template.weight,
-        unique: template.unique, useable: template.useable, shouldClose: template.shouldClose,
-        decay: template.decay, ammotype: template.ammotype, consume: template.consume,
-        allowArmed: template.allowArmed, allowInBackpack: template.allowInBackpack, extraLua: template.extraLua,
-        description: current.description || template.description,
-    };
+    const nextForm = { ...current };
+    for (const key of BUILDER_TEMPLATE_COPY_KEYS) {
+        nextForm[key] = template[key];
+    }
+    nextForm.description = current.description || template.description;
+    state.builder.form = nextForm;
+    state.builder.presetKey = "";
+    if (state.builder.experienceMode !== "manual" && itemHasAdvancedConfig(item)) {
+        state.builder.showAdvanced = true;
+    }
     renderBuilder();
     showToast(`Template ${item.name} aplicado.`);
 }
@@ -2244,7 +2976,7 @@ async function copyAllReadyExports() {
             showToast("Nao ha itens prontos para exportar.");
             return;
         }
-        copyToClipboard(buildCompactLuaEntries(state.readyItems), "Todos os itens prontos foram copiados.");
+        copyToClipboard(buildCategorizedLuaEntries(state.readyItems), "Todos os itens prontos foram copiados.");
     } catch (err) {
         showToast(`Falha ao exportar prontos: ${err.message}`);
     }
@@ -2544,6 +3276,27 @@ function validateBuilder() {
     const weight = Number(form.weight);
     if (!Number.isFinite(weight) || weight < 0) return { ok: false, message: "Informe um peso válido." };
 
+    const optionalNumericFields = [
+        ["decay", form.decay],
+        ["consume", form.consume],
+        ["carryAttachment.bone", form.carryAttachmentBone],
+        ["carryAttachment.pos.x", form.carryPosX],
+        ["carryAttachment.pos.y", form.carryPosY],
+        ["carryAttachment.pos.z", form.carryPosZ],
+        ["carryAttachment.rot.x", form.carryRotX],
+        ["carryAttachment.rot.y", form.carryRotY],
+        ["carryAttachment.rot.z", form.carryRotZ],
+        ["carryAnim.flag", form.carryAnimFlag],
+        ["combinable.anim.timeOut", form.combineAnimTimeout],
+    ];
+    const invalidNumericField = optionalNumericFields.find(([, value]) => {
+        const raw = String(value ?? "").trim();
+        return raw !== "" && !Number.isFinite(Number(raw));
+    });
+    if (invalidNumericField) {
+        return { ok: false, message: `Informe um numero valido para ${invalidNumericField[0]}.` };
+    }
+
     const existingLocalDraft = state.customImplemented[form.name];
     const isEditingSameLocal = state.builder.editingLocalName && state.builder.editingLocalName === form.name;
     if (existingLocalDraft && !isEditingSameLocal) {
@@ -2579,48 +3332,96 @@ function buildBuilderItemPreview() {
     if (form.decay !== "") item.decay = Number(form.decay);
     if (form.ammotype) item.ammotype = form.ammotype;
     if (form.consume !== "") item.consume = Number(form.consume);
+    if (form.weaponAlias) item.weapon = form.weaponAlias;
+    if (form.weapontype) item.weapontype = form.weapontype;
+    if (form.compatibilityAliasFor) item.compatibilityAliasFor = form.compatibilityAliasFor;
+    if (form.hiddenCompat) item.hiddenCompat = true;
     if (form.allowArmed === "true") item.allowArmed = true;
     else if (form.allowArmed === "false") item.allowArmed = false;
     if (form.allowInBackpack === "true") item.allowInBackpack = true;
     else if (form.allowInBackpack === "false") item.allowInBackpack = false;
+    if (form.jobList) item.job = parseCommaSeparatedList(form.jobList);
+    if (form.prop) item.prop = form.prop;
+    if (form.object) item.object = form.object;
+    if (form.carryInHand) item.carryInHand = true;
+    const carryAttachment = buildCarryAttachmentFromForm(form);
+    if (carryAttachment) item.carryAttachment = carryAttachment;
+    const carryAnim = buildCarryAnimFromForm(form);
+    if (carryAnim) item.carryAnim = carryAnim;
+    const combinable = buildCombinableFromForm(form);
+    if (combinable) item.combinable = combinable;
+    const clientConfig = buildClientConfigFromForm(form);
+    if (clientConfig) item.client = clientConfig;
     return item;
 }
 
 function createDefaultFormFromPending(item) {
-    return {
-        name: item.name, label: toDisplayLabel(item.name), description: "",
-        weight: "0", type: "item", rarity: "common",
-        unique: false, useable: false, shouldClose: true,
-        decay: "", ammotype: "", consume: "", allowArmed: "", allowInBackpack: "", extraLua: "",
+    return cloneDefaultBuilderForm({
+        name: item.name,
+        label: toDisplayLabel(item.name),
         image: item.image,
         siteCategory: item.category || "",
-    };
+    });
 }
 
 function createFormFromImplementedItem(item, pendingIconName) {
+    const sourceItem = hydrateItemForBuilder(item);
     const lockedPendingImage = pendingIconName || item.pendingIconName;
     const resolvedImage = lockedPendingImage
         ? `${lockedPendingImage}.${CONFIG.ICON_EXTENSION}`
-        : (item.image || `${item.name}.png`);
-    return {
-        name: item.name || pendingIconName,
-        label: item.label || toDisplayLabel(pendingIconName || item.name),
-        description: item.description || "",
-        weight: String(item.weight ?? 0),
-        type: item.type || "item",
-        rarity: item.rarity || "common",
-        unique: readItemUniqueValue(item),
-        useable: Boolean(item.useable),
-        shouldClose: item.shouldClose !== false,
-        decay: item.decay !== undefined && item.decay !== null ? String(item.decay) : "",
-        ammotype: item.ammotype || "",
-        consume: item.consume !== undefined && item.consume !== null ? String(item.consume) : "",
-        allowArmed: item.allowArmed === true ? "true" : item.allowArmed === false ? "false" : "",
-        allowInBackpack: item.allowInBackpack === true ? "true" : item.allowInBackpack === false ? "false" : "",
-        extraLua: item.extraLua || buildExtraLuaFromItem(item),
+        : (sourceItem.image || `${sourceItem.name}.png`);
+    const carryAttachment = sourceItem.carryAttachment && typeof sourceItem.carryAttachment === "object"
+        ? normalizeLuaStructuredValue(sourceItem.carryAttachment)
+        : {};
+    const carryPos = readVectorParts(carryAttachment?.pos);
+    const carryRot = readVectorParts(carryAttachment?.rot);
+
+    return cloneDefaultBuilderForm({
+        name: sourceItem.name || pendingIconName,
+        label: sourceItem.label || toDisplayLabel(pendingIconName || sourceItem.name),
+        description: sourceItem.description || "",
+        weight: String(sourceItem.weight ?? 0),
+        type: sourceItem.type || "item",
+        rarity: sourceItem.rarity || "common",
+        unique: readItemUniqueValue(sourceItem),
+        useable: Boolean(sourceItem.useable),
+        shouldClose: sourceItem.shouldClose !== false,
+        decay: sourceItem.decay !== undefined && sourceItem.decay !== null ? String(sourceItem.decay) : "",
+        ammotype: sourceItem.ammotype || "",
+        consume: sourceItem.consume !== undefined && sourceItem.consume !== null ? String(sourceItem.consume) : "",
+        weaponAlias: sourceItem.weapon || "",
+        weapontype: sourceItem.weapontype || "",
+        compatibilityAliasFor: sourceItem.compatibilityAliasFor || "",
+        hiddenCompat: Boolean(sourceItem.hiddenCompat),
+        allowArmed: sourceItem.allowArmed === true ? "true" : sourceItem.allowArmed === false ? "false" : "",
+        allowInBackpack: sourceItem.allowInBackpack === true ? "true" : sourceItem.allowInBackpack === false ? "false" : "",
+        jobList: readListFromValue(sourceItem.job),
+        clientRemoveAfterUse: Boolean(sourceItem.client?.removeAfterUse),
+        prop: sourceItem.prop || "",
+        object: sourceItem.object || "",
+        carryInHand: Boolean(sourceItem.carryInHand),
+        carryAttachmentBone: carryAttachment?.bone !== undefined && carryAttachment?.bone !== null ? String(carryAttachment.bone) : "",
+        carryPosX: carryPos.x,
+        carryPosY: carryPos.y,
+        carryPosZ: carryPos.z,
+        carryRotX: carryRot.x,
+        carryRotY: carryRot.y,
+        carryRotZ: carryRot.z,
+        carryAnimDict: sourceItem.carryAnim?.dict || "",
+        carryAnimClip: sourceItem.carryAnim?.clip || "",
+        carryAnimFlag: sourceItem.carryAnim?.flag !== undefined && sourceItem.carryAnim?.flag !== null ? String(sourceItem.carryAnim.flag) : "",
+        combineReward: sourceItem.combinable?.reward || "",
+        combineAccept: readListFromValue(sourceItem.combinable?.accept),
+        combineAnimDict: sourceItem.combinable?.anim?.dict || "",
+        combineAnimLib: sourceItem.combinable?.anim?.lib || "",
+        combineAnimText: sourceItem.combinable?.anim?.text || "",
+        combineAnimTimeout: sourceItem.combinable?.anim?.timeOut !== undefined && sourceItem.combinable?.anim?.timeOut !== null
+            ? String(sourceItem.combinable.anim.timeOut)
+            : "",
+        extraLua: sourceItem.extraLua || buildExtraLuaFromItem(sourceItem),
         image: resolvedImage,
-        siteCategory: item.siteCategory || item.pendingCategory || "",
-    };
+        siteCategory: sourceItem.siteCategory || sourceItem.pendingCategory || "",
+    });
 }
 
 function createFormFromReadyItem(item, pendingIconName) {
@@ -2640,6 +3441,36 @@ function buildExtraLuaFromItem(item) {
     return Object.entries(extraFields)
         .map(([k, v]) => `['${k}'] = ${serializeLuaValue(v, 1)},`)
         .join("\n");
+}
+
+function parseExtraLuaFields(raw) {
+    const source = String(raw || "").trim();
+    if (!source) return null;
+
+    try {
+        const parsed = parseLuaItemBlock(`{\n${source}\n}`);
+        return parsed && !Array.isArray(parsed) && typeof parsed === "object"
+            ? normalizeLuaStructuredValue(parsed)
+            : null;
+    } catch (err) {
+        console.warn("Nao foi possivel interpretar extraLua salvo:", err);
+        return null;
+    }
+}
+
+function hydrateItemForBuilder(item) {
+    const normalized = normalizeLuaStructuredValue(item);
+    const parsedExtra = parseExtraLuaFields(normalized.extraLua);
+    if (!parsedExtra) return normalized;
+
+    const merged = {
+        ...parsedExtra,
+        ...normalized,
+    };
+    return {
+        ...merged,
+        extraLua: buildExtraLuaFromItem(merged),
+    };
 }
 
 function buildLuaEntry(item) {
@@ -2672,6 +3503,42 @@ function buildCompactLuaEntries(items) {
     return items.map((item) => buildCompactLuaEntry(item)).join("\n");
 }
 
+function buildCategorizedLuaEntries(items) {
+    const groups = new Map();
+
+    for (const item of items || []) {
+        const category = resolveItemExportCategory(item);
+        if (!groups.has(category)) groups.set(category, []);
+        groups.get(category).push(item);
+    }
+
+    return Array.from(groups.entries())
+        .sort(([categoryA], [categoryB]) => categoryA.localeCompare(categoryB, "pt-BR"))
+        .map(([category, categoryItems]) => {
+            const sortedItems = [...categoryItems].sort((itemA, itemB) => {
+                const nameA = String(itemA?.name || itemA?.label || "").toLowerCase();
+                const nameB = String(itemB?.name || itemB?.label || "").toLowerCase();
+                return nameA.localeCompare(nameB, "pt-BR");
+            });
+            const entryBlock = sortedItems.map((item) => buildLuaEntry(item)).join("\n\n");
+            return `-- ${category}\n${entryBlock}`;
+        })
+        .join("\n\n");
+}
+
+function resolveItemExportCategory(item) {
+    const preferredCategory = String(item?.siteCategory || "").trim();
+    if (preferredCategory) return preferredCategory;
+
+    const pendingCategory = String(item?.pendingCategory || "").trim();
+    if (pendingCategory && pendingCategory.toLowerCase() !== "manual") return pendingCategory;
+
+    const fallbackCategory = String(item?.category || "").trim();
+    if (fallbackCategory) return fallbackCategory;
+
+    return "Sem categoria";
+}
+
 function buildCompactLuaEntry(item) {
     const parts = [];
     for (const key of ITEM_EXPORT_ORDER) {
@@ -2699,6 +3566,10 @@ function buildCompactLuaEntry(item) {
 }
 
 function serializeLuaValue(value, depth = 0) {
+    const luaCall = getLuaCallInfo(value);
+    if (luaCall) {
+        return `${luaCall.name}(${luaCall.args.map((entry) => serializeLuaValueCompact(entry)).join(", ")})`;
+    }
     if (typeof value === "string") return `'${escapeLuaString(value)}'`;
     if (typeof value === "number") return String(value);
     if (typeof value === "boolean") return value ? "true" : "false";
@@ -2719,6 +3590,10 @@ function serializeLuaValue(value, depth = 0) {
 }
 
 function serializeLuaValueCompact(value) {
+    const luaCall = getLuaCallInfo(value);
+    if (luaCall) {
+        return `${luaCall.name}(${luaCall.args.map((entry) => serializeLuaValueCompact(entry)).join(", ")})`;
+    }
     if (typeof value === "string") return `'${escapeLuaString(value)}'`;
     if (typeof value === "number") return String(value);
     if (typeof value === "boolean") return value ? "true" : "false";
@@ -2773,32 +3648,67 @@ function unwrapImportedLuaItem(value) {
 
 function applyImportedItemToBuilder(importedItem) {
     const current = state.builder.form;
+    const normalizedImportedItem = normalizeLuaStructuredValue(importedItem);
     const keepIdentity = Boolean(state.builder.activePendingName || state.builder.editingLocalName || state.builder.editingReadyName);
-    const importedName = normalizeImportedItemName(importedItem.name);
-    const importedImage = typeof importedItem.image === "string" ? importedItem.image.trim() : "";
+    const importedName = normalizeImportedItemName(normalizedImportedItem.name);
+    const importedImage = typeof normalizedImportedItem.image === "string" ? normalizedImportedItem.image.trim() : "";
     const currentImageIsDefault = !current.image || current.image === "novo-item.png";
+    const importedCarryAttachment = normalizedImportedItem.carryAttachment && typeof normalizedImportedItem.carryAttachment === "object"
+        ? normalizedImportedItem.carryAttachment
+        : {};
+    const importedCarryPos = readVectorParts(importedCarryAttachment?.pos);
+    const importedCarryRot = readVectorParts(importedCarryAttachment?.rot);
 
     state.builder.templateName = null;
     state.builder.templateSource = null;
     state.builder.form = {
         ...current,
         name: keepIdentity ? current.name : (importedName || current.name),
-        label: readImportedString(importedItem.label, current.label),
-        description: readImportedString(importedItem.description, current.description),
-        weight: readImportedNumberString(importedItem.weight, current.weight),
-        type: readImportedEnum(importedItem.type, ["item", "weapon"], current.type),
-        rarity: readImportedEnum(importedItem.rarity, RARITY_ORDER, current.rarity),
-        unique: readImportedUniqueValue(importedItem, current.unique),
-        useable: readImportedBoolean(importedItem.useable, current.useable),
-        shouldClose: readImportedBoolean(importedItem.shouldClose, current.shouldClose),
-        decay: readImportedOptionalNumberString(importedItem.decay, current.decay),
-        ammotype: readImportedOptionalString(importedItem.ammotype, current.ammotype),
-        consume: readImportedOptionalNumberString(importedItem.consume, current.consume),
-        allowArmed: normalizeBooleanSelectValue(importedItem.allowArmed, current.allowArmed),
-        allowInBackpack: normalizeBooleanSelectValue(importedItem.allowInBackpack, current.allowInBackpack),
-        extraLua: buildExtraLuaFromItem(importedItem),
+        label: readImportedString(normalizedImportedItem.label, current.label),
+        description: readImportedString(normalizedImportedItem.description, current.description),
+        weight: readImportedNumberString(normalizedImportedItem.weight, current.weight),
+        type: readImportedEnum(normalizedImportedItem.type, ["item", "weapon"], current.type),
+        rarity: readImportedEnum(normalizedImportedItem.rarity, RARITY_ORDER, current.rarity),
+        unique: readImportedUniqueValue(normalizedImportedItem, current.unique),
+        useable: readImportedBoolean(normalizedImportedItem.useable, current.useable),
+        shouldClose: readImportedBoolean(normalizedImportedItem.shouldClose, current.shouldClose),
+        decay: readImportedOptionalNumberString(normalizedImportedItem.decay, current.decay),
+        ammotype: readImportedOptionalString(normalizedImportedItem.ammotype, current.ammotype),
+        consume: readImportedOptionalNumberString(normalizedImportedItem.consume, current.consume),
+        weaponAlias: readImportedOptionalString(normalizedImportedItem.weapon, current.weaponAlias),
+        weapontype: readImportedOptionalString(normalizedImportedItem.weapontype, current.weapontype),
+        compatibilityAliasFor: readImportedOptionalString(normalizedImportedItem.compatibilityAliasFor, current.compatibilityAliasFor),
+        hiddenCompat: readImportedBoolean(normalizedImportedItem.hiddenCompat, current.hiddenCompat),
+        allowArmed: normalizeBooleanSelectValue(normalizedImportedItem.allowArmed, current.allowArmed),
+        allowInBackpack: normalizeBooleanSelectValue(normalizedImportedItem.allowInBackpack, current.allowInBackpack),
+        jobList: readImportedListString(normalizedImportedItem.job, current.jobList),
+        clientRemoveAfterUse: readImportedBoolean(normalizedImportedItem.client?.removeAfterUse, current.clientRemoveAfterUse),
+        prop: readImportedOptionalString(normalizedImportedItem.prop, current.prop),
+        object: readImportedOptionalString(normalizedImportedItem.object, current.object),
+        carryInHand: readImportedBoolean(normalizedImportedItem.carryInHand, current.carryInHand),
+        carryAttachmentBone: readImportedOptionalNumberString(importedCarryAttachment?.bone, current.carryAttachmentBone),
+        carryPosX: readImportedOptionalNumberString(importedCarryPos.x === "" ? null : Number(importedCarryPos.x), current.carryPosX),
+        carryPosY: readImportedOptionalNumberString(importedCarryPos.y === "" ? null : Number(importedCarryPos.y), current.carryPosY),
+        carryPosZ: readImportedOptionalNumberString(importedCarryPos.z === "" ? null : Number(importedCarryPos.z), current.carryPosZ),
+        carryRotX: readImportedOptionalNumberString(importedCarryRot.x === "" ? null : Number(importedCarryRot.x), current.carryRotX),
+        carryRotY: readImportedOptionalNumberString(importedCarryRot.y === "" ? null : Number(importedCarryRot.y), current.carryRotY),
+        carryRotZ: readImportedOptionalNumberString(importedCarryRot.z === "" ? null : Number(importedCarryRot.z), current.carryRotZ),
+        carryAnimDict: readImportedOptionalString(normalizedImportedItem.carryAnim?.dict, current.carryAnimDict),
+        carryAnimClip: readImportedOptionalString(normalizedImportedItem.carryAnim?.clip, current.carryAnimClip),
+        carryAnimFlag: readImportedOptionalNumberString(normalizedImportedItem.carryAnim?.flag, current.carryAnimFlag),
+        combineReward: readImportedOptionalString(normalizedImportedItem.combinable?.reward, current.combineReward),
+        combineAccept: readImportedListString(normalizedImportedItem.combinable?.accept, current.combineAccept),
+        combineAnimDict: readImportedOptionalString(normalizedImportedItem.combinable?.anim?.dict, current.combineAnimDict),
+        combineAnimLib: readImportedOptionalString(normalizedImportedItem.combinable?.anim?.lib, current.combineAnimLib),
+        combineAnimText: readImportedOptionalString(normalizedImportedItem.combinable?.anim?.text, current.combineAnimText),
+        combineAnimTimeout: readImportedOptionalNumberString(normalizedImportedItem.combinable?.anim?.timeOut, current.combineAnimTimeout),
+        extraLua: buildExtraLuaFromItem(normalizedImportedItem),
         image: keepIdentity || !currentImageIsDefault ? current.image : (importedImage || current.image),
     };
+    state.builder.presetKey = "";
+    if (state.builder.experienceMode !== "manual" && itemHasAdvancedConfig(normalizedImportedItem)) {
+        state.builder.showAdvanced = true;
+    }
     renderBuilder();
 }
 
@@ -2812,6 +3722,12 @@ function readImportedString(value, fallback) {
 
 function readImportedOptionalString(value, fallback) {
     return typeof value === "string" ? value : (value === null ? "" : fallback);
+}
+
+function readImportedListString(value, fallback) {
+    if (value === null) return "";
+    const listValue = readListFromValue(value);
+    return listValue || fallback;
 }
 
 function readImportedNumberString(value, fallback) {
@@ -2903,6 +3819,10 @@ function createLuaTableParser(input) {
         if (!token) throw new Error("Fim inesperado do bloco Lua.");
         if (token.type === "string" || token.type === "number") return token.value;
         if (token.type === "identifier") {
+            if (peek()?.value === "(") {
+                index--;
+                return parseCall();
+            }
             if (token.value === "true") return true;
             if (token.value === "false") return false;
             if (token.value === "nil") return null;
@@ -2910,6 +3830,30 @@ function createLuaTableParser(input) {
         }
         if (token.value === "{") return parseTable();
         throw new Error(`Valor Lua nao suportado perto de ${describeLuaToken(token)}.`);
+    }
+
+    function parseCall() {
+        const nameToken = next();
+        if (!nameToken || nameToken.type !== "identifier") {
+            throw new Error(`Funcao Lua invalida perto de ${describeLuaToken(nameToken)}.`);
+        }
+        expectValueToken("(");
+        const args = [];
+        while (true) {
+            const token = peek();
+            if (!token) throw new Error("Chamada Lua nao foi fechada com ).");
+            if (token.value === ")") {
+                next();
+                break;
+            }
+            if (token.value === ",") {
+                next();
+                continue;
+            }
+            args.push(parseValue());
+            if (peek()?.value === ",") next();
+        }
+        return { __luaCall: nameToken.value, args };
     }
 
     function parseTable() {
@@ -3004,7 +3948,7 @@ function tokenizeLuaTable(input) {
             continue;
         }
 
-        if ("{}[]=,".includes(char)) {
+        if ("{}[]=,()".includes(char)) {
             tokens.push({ type: "punct", value: char });
             index++;
             continue;
