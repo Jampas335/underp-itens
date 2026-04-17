@@ -2370,6 +2370,27 @@
     "status": "ready"
   },
   {
+    "name": "lockpick_avancada",
+    "label": "Lockpick Avançada",
+    "description": "",
+    "weight": 220,
+    "type": "item",
+    "image": "lockpick_avancada.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "decay": 0.1,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-17T10:34:39.810Z",
+    "status": "ready"
+  },
+  {
     "name": "lockpick_improvisada",
     "label": "Lockpick Improvisada",
     "description": "Uma lockpick montada de forma improvisada. Funciona, mas exige cuidado.",
