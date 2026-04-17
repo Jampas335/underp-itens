@@ -2999,6 +2999,26 @@
     "status": "ready"
   },
   {
+    "name": "pele_cervo",
+    "label": "Pele de Cervo",
+    "description": "",
+    "weight": 410,
+    "type": "item",
+    "image": "pele_cervo.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Caça",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-17T09:14:04.506Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_pesticide_spray",
     "label": "Pesticida",
     "description": "",
