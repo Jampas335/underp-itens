@@ -791,8 +791,39 @@ function getBuilderAmmoTypeSuggestions() {
 }
 
 function enhanceBuilderFormExperience() {
+    normalizeBuilderAuxiliaryPlacement();
     reorderBuilderAdvancedSections();
     applyBuilderFieldHelp();
+}
+
+function normalizeBuilderAuxiliaryPlacement() {
+    const form = document.getElementById("itemForm");
+    if (!form) return;
+
+    const firstField = form.firstElementChild;
+    const setupPanel = document.getElementById("builderSetupPanel");
+    const helperActions = document.querySelector(".builder-helper-actions");
+    const luaImportPanel = document.getElementById("luaImportPanel");
+
+    if (setupPanel && setupPanel.parentElement !== form) {
+        form.insertBefore(setupPanel, firstField || null);
+    }
+
+    const setupAnchor = setupPanel && setupPanel.parentElement === form
+        ? setupPanel.nextSibling
+        : (form.firstElementChild || null);
+
+    if (helperActions && helperActions.parentElement !== form) {
+        form.insertBefore(helperActions, setupAnchor);
+    }
+
+    const helperAnchor = helperActions && helperActions.parentElement === form
+        ? helperActions.nextSibling
+        : (setupPanel?.nextSibling || form.firstElementChild || null);
+
+    if (luaImportPanel && luaImportPanel.parentElement !== form) {
+        form.insertBefore(luaImportPanel, helperAnchor);
+    }
 }
 
 function reorderBuilderAdvancedSections() {
@@ -2724,32 +2755,27 @@ function applySelectedBuilderPreset() {
         ...state.builder.form,
         ...preset.form,
     };
-    if (preset.revealAdvanced) {
+    if (preset.revealAdvanced && state.builder.experienceMode === "manual") {
         state.builder.showAdvanced = true;
     }
     renderBuilder();
     showToast(`Preset ${preset.label} aplicado.`);
 }
 
-function itemHasAdvancedConfig(item) {
-    const hydratedItem = hydrateItemForBuilder(item || {});
-    const advancedKeys = [
-        "decay", "ammotype", "consume", "weapon", "weapontype",
-        "allowArmed", "allowInBackpack", "job",
-        "hiddenCompat", "compatibilityAliasFor",
-        "prop", "object", "carryInHand", "carryAttachment", "carryAnim",
-        "combinable", "client",
-    ];
+function getBuilderExperienceState(options = {}) {
+    const preserveExperience = Boolean(options.preserveExperience);
+    if (preserveExperience) {
+        const isManualMode = state.builder.experienceMode === "manual";
+        return {
+            experienceMode: isManualMode ? "manual" : "guided",
+            showAdvanced: isManualMode ? true : Boolean(state.builder.showAdvanced),
+        };
+    }
 
-    const hasAdvancedKey = advancedKeys.some((key) => {
-        if (!(key in hydratedItem)) return false;
-        const value = hydratedItem[key];
-        if (value === undefined || value === null) return false;
-        if (typeof value === "string" && !value.trim()) return false;
-        return true;
-    });
-
-    return hasAdvancedKey || Boolean(String(hydratedItem.extraLua || "").trim());
+    return {
+        experienceMode: "guided",
+        showAdvanced: false,
+    };
 }
 
 // ============================================================
@@ -2777,9 +2803,10 @@ function openBuilderFromPending(name) {
     showToast(`Builder carregado para ${item.name}.`);
 }
 
-function openBuilderForLocal(name) {
+function openBuilderForLocal(name, options = {}) {
     const item = state.customImplemented[name];
     if (!item) return;
+    const experienceState = getBuilderExperienceState(options);
     state.builder.activePendingName = item.pendingIconName || null;
     state.builder.editingLocalName = name;
     state.builder.editingReadyName = null;
@@ -2790,17 +2817,18 @@ function openBuilderForLocal(name) {
     state.builder.uploadedIconBase64 = item.uploadedIconBase64 || null;
     state.builder.uploadedIconMime = item.uploadedIconMime || "image/png";
     state.builder.uploadedIconFileName = item.uploadedIconFileName || null;
-    state.builder.experienceMode = item.pendingIconName ? "guided" : "manual";
-    state.builder.showAdvanced = state.builder.experienceMode === "manual" || itemHasAdvancedConfig(item);
+    state.builder.experienceMode = experienceState.experienceMode;
+    state.builder.showAdvanced = experienceState.showAdvanced;
     state.builder.presetKey = "";
     renderBuilder();
     scrollToBuilder();
     showToast(`Editando rascunho ${item.name}.`);
 }
 
-function openBuilderForReady(name) {
+function openBuilderForReady(name, options = {}) {
     const item = state.readyItems.find((r) => r.name === name);
     if (!item) return;
+    const experienceState = getBuilderExperienceState(options);
     const pendingIconName = item.pendingIconName || stripExtension(item.image || name);
     state.builder.activePendingName = item.pendingIconName || null;
     state.builder.editingLocalName = null;
@@ -2812,8 +2840,8 @@ function openBuilderForReady(name) {
     state.builder.uploadedIconBase64 = item.uploadedIconBase64 || null;
     state.builder.uploadedIconMime = item.uploadedIconMime || "image/png";
     state.builder.uploadedIconFileName = item.uploadedIconFileName || null;
-    state.builder.experienceMode = item.pendingIconName ? "guided" : "manual";
-    state.builder.showAdvanced = state.builder.experienceMode === "manual" || itemHasAdvancedConfig(item);
+    state.builder.experienceMode = experienceState.experienceMode;
+    state.builder.showAdvanced = experienceState.showAdvanced;
     state.builder.presetKey = "";
     renderBuilder();
     scrollToBuilder();
@@ -2890,16 +2918,13 @@ function applyTemplate(item, source = "implemented") {
     nextForm.description = current.description || template.description;
     state.builder.form = nextForm;
     state.builder.presetKey = "";
-    if (state.builder.experienceMode !== "manual" && itemHasAdvancedConfig(item)) {
-        state.builder.showAdvanced = true;
-    }
     renderBuilder();
     showToast(`Template ${item.name} aplicado.`);
 }
 
 function clearBuilderTemplate() {
-    if (state.builder.editingReadyName) { openBuilderForReady(state.builder.editingReadyName); return; }
-    if (state.builder.editingLocalName) { openBuilderForLocal(state.builder.editingLocalName); return; }
+    if (state.builder.editingReadyName) { openBuilderForReady(state.builder.editingReadyName, { preserveExperience: true }); return; }
+    if (state.builder.editingLocalName) { openBuilderForLocal(state.builder.editingLocalName, { preserveExperience: true }); return; }
     if (state.builder.form && !state.builder.activePendingName) { openBuilderManual(); return; }
     if (!state.builder.activePendingName) { showToast("Nenhum builder ativo."); return; }
     openBuilderFromPending(state.builder.activePendingName);
@@ -3021,7 +3046,7 @@ function saveBuilderItem() {
 
     saveWorkspaceState();
     state.activeView = "implemented";
-    openBuilderForLocal(previewItem.name);
+    openBuilderForLocal(previewItem.name, { preserveExperience: true });
     renderAll();
     showToast(`Rascunho ${previewItem.name} salvo.`);
 }
@@ -3706,9 +3731,6 @@ function applyImportedItemToBuilder(importedItem) {
         image: keepIdentity || !currentImageIsDefault ? current.image : (importedImage || current.image),
     };
     state.builder.presetKey = "";
-    if (state.builder.experienceMode !== "manual" && itemHasAdvancedConfig(normalizedImportedItem)) {
-        state.builder.showAdvanced = true;
-    }
     renderBuilder();
 }
 
