@@ -3019,6 +3019,26 @@
     "status": "ready"
   },
   {
+    "name": "pele_pumapreta",
+    "label": "Pele de Puma Preta",
+    "description": "",
+    "weight": 780,
+    "type": "item",
+    "image": "pele_pumapreta.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-17T09:21:05.885Z",
+    "status": "ready"
+  },
+  {
     "name": "pele_tubarao",
     "label": "Pele de Tubarão",
     "description": "",
