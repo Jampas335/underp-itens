@@ -1421,6 +1421,27 @@
     "status": "ready"
   },
   {
+    "name": "e-cola",
+    "label": "E-Cola",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "e-cola.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Bebidas",
+    "decay": 0.1,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-17T09:51:21.790Z",
+    "status": "ready"
+  },
+  {
     "name": "ecg",
     "label": "ECG",
     "description": "",
