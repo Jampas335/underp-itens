@@ -2717,6 +2717,26 @@
     "status": "ready"
   },
   {
+    "name": "laptop",
+    "label": "Notebook",
+    "description": "",
+    "weight": 750,
+    "type": "item",
+    "image": "laptop.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Eletrônica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-17T10:15:46.696Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_bud_og_kush",
     "label": "OG Kush",
     "description": "",
