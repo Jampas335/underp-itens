@@ -2778,7 +2778,7 @@
     "name": "maco_dinheiro",
     "label": "Maço de Dinheiro",
     "description": "",
-    "weight": 210,
+    "weight": 200,
     "type": "item",
     "image": "maco_dinheiro.png",
     "unique": false,
@@ -2790,8 +2790,8 @@
     "extraLua": "",
     "siteCategory": "Dinheiro",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-18T10:07:15.353Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-18T10:15:44.058Z",
     "status": "ready"
   },
   {
