@@ -1280,6 +1280,26 @@
     "status": "ready"
   },
   {
+    "name": "comprovante_residencial_raro",
+    "label": "Comprovante Residencial",
+    "description": "",
+    "weight": 18,
+    "type": "item",
+    "image": "comprovante_residencial_raro.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Comprovantes e Contratos",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T07:14:31.870Z",
+    "status": "ready"
+  },
+  {
     "name": "rope",
     "label": "Corda",
     "description": "",
