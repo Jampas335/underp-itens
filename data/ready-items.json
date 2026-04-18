@@ -2656,6 +2656,27 @@
     "status": "ready"
   },
   {
+    "name": "mochila",
+    "label": "Mochila",
+    "description": "",
+    "weight": 500,
+    "type": "item",
+    "image": "mochila.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Armazenamento",
+    "allowInBackpack": false,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T05:21:20.408Z",
+    "status": "ready"
+  },
+  {
     "name": "mojarra_fish",
     "label": "Mojarra",
     "description": "",
