@@ -1300,6 +1300,26 @@
     "status": "ready"
   },
   {
+    "name": "comprovante_residencial_lendario",
+    "label": "Comprovante Residencial",
+    "description": "",
+    "weight": 22,
+    "type": "item",
+    "image": "comprovante_residencial_lendario.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Comprovantes e Contratos",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T07:15:18.590Z",
+    "status": "ready"
+  },
+  {
     "name": "rope",
     "label": "Corda",
     "description": "",
