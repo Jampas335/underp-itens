@@ -1320,6 +1320,26 @@
     "status": "ready"
   },
   {
+    "name": "contract_cte_comum",
+    "label": "Contrato CTe",
+    "description": "",
+    "weight": 12,
+    "type": "item",
+    "image": "contract_cte_comum.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T08:09:04.039Z",
+    "status": "ready"
+  },
+  {
     "name": "rope",
     "label": "Corda",
     "description": "",
