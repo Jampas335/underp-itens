@@ -2677,6 +2677,27 @@
     "status": "ready"
   },
   {
+    "name": "mochila_reforcada",
+    "label": "Mochila Reforçada",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "mochila_reforcada.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Armazenamento",
+    "allowInBackpack": false,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T05:22:07.087Z",
+    "status": "ready"
+  },
+  {
     "name": "mojarra_fish",
     "label": "Mojarra",
     "description": "",
