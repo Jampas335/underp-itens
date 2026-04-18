@@ -586,6 +586,26 @@
     "status": "ready"
   },
   {
+    "name": "bolo_dinheiro",
+    "label": "Bolo de Dinheiro",
+    "description": "",
+    "weight": 20,
+    "type": "item",
+    "image": "bolo_dinheiro.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Dinheiro",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T10:06:18.750Z",
+    "status": "ready"
+  },
+  {
     "name": "strawberry_shortcake",
     "label": "Bolo de Morango",
     "description": "",
