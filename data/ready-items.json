@@ -225,6 +225,26 @@
     "status": "ready"
   },
   {
+    "name": "anel_ouro",
+    "label": "Anel de Ouro",
+    "description": "",
+    "weight": 7,
+    "type": "item",
+    "image": "anel_ouro.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Jóias & Valores",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T09:53:37.908Z",
+    "status": "ready"
+  },
+  {
     "name": "arame",
     "label": "Arame",
     "description": "",
