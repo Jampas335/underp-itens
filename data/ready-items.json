@@ -3713,6 +3713,26 @@
     "status": "ready"
   },
   {
+    "name": "pulseira",
+    "label": "Pulseira de Prata",
+    "description": "",
+    "weight": 35,
+    "type": "item",
+    "image": "pulseira.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Jóias & Valores",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T09:44:59.022Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_bud_purple_haze",
     "label": "Purple Haze",
     "description": "",
