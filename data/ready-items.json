@@ -2686,15 +2686,15 @@
     "unique": true,
     "useable": false,
     "shouldClose": false,
-    "rarity": "common",
+    "rarity": "rare",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Armazenamento",
     "allowInBackpack": false,
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-18T05:22:07.087Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-18T05:24:11.085Z",
     "status": "ready"
   },
   {
