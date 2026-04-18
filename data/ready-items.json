@@ -3452,6 +3452,26 @@
     "status": "ready"
   },
   {
+    "name": "plastico",
+    "label": "Plastico",
+    "description": "",
+    "weight": 21,
+    "type": "item",
+    "image": "plastico.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T08:32:33.573Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_press",
     "label": "Prensa",
     "description": "",
