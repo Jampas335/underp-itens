@@ -3207,6 +3207,26 @@
     "status": "ready"
   },
   {
+    "name": "parafuso",
+    "label": "Parafuso",
+    "description": "",
+    "weight": 4,
+    "type": "item",
+    "image": "parafuso.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T09:26:07.311Z",
+    "status": "ready"
+  },
+  {
     "name": "snapper",
     "label": "Pargo",
     "description": "",
