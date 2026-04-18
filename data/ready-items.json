@@ -910,6 +910,26 @@
     "status": "ready"
   },
   {
+    "name": "carteira",
+    "label": "Carteira",
+    "description": "",
+    "weight": 45,
+    "type": "item",
+    "image": "carteira.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Armazenamento",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T04:54:02.518Z",
+    "status": "ready"
+  },
+  {
     "name": "ore_coal",
     "label": "Carvão",
     "description": "",
