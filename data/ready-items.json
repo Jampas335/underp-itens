@@ -2755,6 +2755,26 @@
     "status": "ready"
   },
   {
+    "name": "maco_dinheiro",
+    "label": "Maço de Dinheiro",
+    "description": "",
+    "weight": 210,
+    "type": "item",
+    "image": "maco_dinheiro.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Dinheiro",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T10:02:31.444Z",
+    "status": "ready"
+  },
+  {
     "name": "fish4",
     "label": "Maingano",
     "description": "",
