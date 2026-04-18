@@ -1620,6 +1620,26 @@
     "status": "ready"
   },
   {
+    "name": "dinheiro",
+    "label": "Dinheiro",
+    "description": "",
+    "weight": 1,
+    "type": "item",
+    "image": "dinheiro.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T10:14:25.859Z",
+    "status": "ready"
+  },
+  {
     "name": "discus",
     "label": "Discus",
     "description": "",
