@@ -1340,6 +1340,26 @@
     "status": "ready"
   },
   {
+    "name": "contract_cte_medio",
+    "label": "Contrato CTe",
+    "description": "",
+    "weight": 17,
+    "type": "item",
+    "image": "contract_cte_medio.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Comprovantes e Contratos",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T08:09:41.239Z",
+    "status": "ready"
+  },
+  {
     "name": "rope",
     "label": "Corda",
     "description": "",
