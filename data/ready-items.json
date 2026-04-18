@@ -3107,6 +3107,26 @@
     "status": "ready"
   },
   {
+    "name": "pano_sujo",
+    "label": "Pano Sujo",
+    "description": "",
+    "weight": 14,
+    "type": "item",
+    "image": "pano_sujo.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T08:38:49.911Z",
+    "status": "ready"
+  },
+  {
     "name": "snapper",
     "label": "Pargo",
     "description": "",
