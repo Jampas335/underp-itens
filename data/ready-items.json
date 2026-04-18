@@ -607,6 +607,26 @@
     "status": "ready"
   },
   {
+    "name": "borracha",
+    "label": "Borracha",
+    "description": "",
+    "weight": 10,
+    "type": "item",
+    "image": "borracha.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T09:18:32.226Z",
+    "status": "ready"
+  },
+  {
     "name": "shoe_shit",
     "label": "Bota velha",
     "description": "",
