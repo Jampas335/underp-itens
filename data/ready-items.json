@@ -3475,7 +3475,7 @@
     "name": "plastico",
     "label": "Plastico",
     "description": "",
-    "weight": 21,
+    "weight": 12,
     "type": "item",
     "image": "plastico.png",
     "unique": false,
@@ -3487,8 +3487,8 @@
     "extraLua": "",
     "siteCategory": "Materiais",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-18T08:32:33.573Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-18T08:39:06.804Z",
     "status": "ready"
   },
   {
