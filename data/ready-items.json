@@ -3976,6 +3976,26 @@
     "status": "ready"
   },
   {
+    "name": "remedio_vencido",
+    "label": "Remédio Vencido",
+    "description": "",
+    "weight": 15,
+    "type": "item",
+    "image": "remedio_vencido.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T09:56:23.927Z",
+    "status": "ready"
+  },
+  {
     "name": "fish5",
     "label": "Rocio Octofasciata",
     "description": "",
