@@ -971,6 +971,26 @@
     "status": "ready"
   },
   {
+    "name": "celular_antigo",
+    "label": "Celular Antigo",
+    "description": "",
+    "weight": 365,
+    "type": "item",
+    "image": "celular_antigo.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Eletrônica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T05:48:01.763Z",
+    "status": "ready"
+  },
+  {
     "name": "fish3",
     "label": "Certa",
     "description": "",
