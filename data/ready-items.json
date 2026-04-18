@@ -924,9 +924,10 @@
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Armazenamento",
+    "allowInBackpack": false,
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-18T04:54:02.518Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-18T05:20:03.264Z",
     "status": "ready"
   },
   {
