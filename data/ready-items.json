@@ -1924,6 +1924,26 @@
     "status": "ready"
   },
   {
+    "name": "fio_cobre",
+    "label": "Fio de Cobre",
+    "description": "",
+    "weight": 8,
+    "type": "item",
+    "image": "fio_cobre.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T09:09:34.391Z",
+    "status": "ready"
+  },
+  {
     "name": "coca_leaf",
     "label": "Folha de Coca",
     "description": "",
