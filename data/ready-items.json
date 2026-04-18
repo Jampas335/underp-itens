@@ -2067,6 +2067,27 @@
     "status": "ready"
   },
   {
+    "name": "weapon_bottle",
+    "label": "Garrafa",
+    "description": "",
+    "weight": 350,
+    "type": "weapon",
+    "image": "weapon_bottle.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "decay": 0.1,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T09:31:09.106Z",
+    "status": "ready"
+  },
+  {
     "name": "gasoline",
     "label": "Gasolina",
     "description": "",
