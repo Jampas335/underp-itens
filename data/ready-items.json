@@ -2698,6 +2698,27 @@
     "status": "ready"
   },
   {
+    "name": "mochila_tatica",
+    "label": "Mochila Tática",
+    "description": "",
+    "weight": 1100,
+    "type": "item",
+    "image": "mochila_tatica.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Armazenamento",
+    "allowInBackpack": false,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T05:23:42.206Z",
+    "status": "ready"
+  },
+  {
     "name": "mojarra_fish",
     "label": "Mojarra",
     "description": "",
