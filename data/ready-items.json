@@ -3512,6 +3512,26 @@
     "status": "ready"
   },
   {
+    "name": "polvora",
+    "label": "Pólvora",
+    "description": "",
+    "weight": 52,
+    "type": "item",
+    "image": "polvora.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T09:00:56.777Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_press",
     "label": "Prensa",
     "description": "",
