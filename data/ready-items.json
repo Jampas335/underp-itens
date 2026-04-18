@@ -235,13 +235,13 @@
     "useable": false,
     "shouldClose": true,
     "rarity": "common",
-    "pendingIconName": "",
+    "pendingIconName": "arame",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "Materiais",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-18T09:19:27.880Z",
+    "iconSource": "pending",
+    "createdAt": "2026-04-18T09:19:57.620Z",
     "status": "ready"
   },
   {
