@@ -3916,6 +3916,26 @@
     "status": "ready"
   },
   {
+    "name": "relogio",
+    "label": "Rélogio",
+    "description": "",
+    "weight": 85,
+    "type": "item",
+    "image": "relogio.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Jóias & Valores",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T09:45:39.592Z",
+    "status": "ready"
+  },
+  {
     "name": "relogio_ouro",
     "label": "Relógio de Ouro",
     "description": "",
