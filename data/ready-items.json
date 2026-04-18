@@ -2491,6 +2491,26 @@
     "status": "ready"
   },
   {
+    "name": "latinha",
+    "label": "Latinha",
+    "description": "",
+    "weight": 27,
+    "type": "item",
+    "image": "latinha.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T09:04:08.601Z",
+    "status": "ready"
+  },
+  {
     "name": "wipers",
     "label": "Limpadores de Parabrisa",
     "description": "",
