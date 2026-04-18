@@ -225,26 +225,6 @@
     "status": "ready"
   },
   {
-    "name": "arame",
-    "label": "Arame",
-    "description": "",
-    "weight": 0,
-    "type": "item",
-    "image": "arame.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": true,
-    "rarity": "common",
-    "pendingIconName": "arame",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Materiais",
-    "source": "ready",
-    "iconSource": "pending",
-    "createdAt": "2026-04-18T09:19:57.620Z",
-    "status": "ready"
-  },
-  {
     "name": "hd_aresosadmin",
     "label": "AresOS Admin HD",
     "description": "",
