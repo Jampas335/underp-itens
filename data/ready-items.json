@@ -3147,6 +3147,26 @@
     "status": "ready"
   },
   {
+    "name": "partes_eletronicas",
+    "label": "Partes Eletrônicas",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "partes_eletronicas.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-18T08:48:29.649Z",
+    "status": "ready"
+  },
+  {
     "name": "coca_paste",
     "label": "Pasta Base",
     "description": "",
