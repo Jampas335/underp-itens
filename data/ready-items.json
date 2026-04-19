@@ -4324,6 +4324,28 @@
     "status": "ready"
   },
   {
+    "name": "sns-pistol",
+    "label": "SNS",
+    "description": "",
+    "weight": 465,
+    "type": "weapon",
+    "image": "sns-pistol.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "sns-pistol",
+    "pendingCategory": "Pistolas",
+    "extraLua": "",
+    "siteCategory": "Pistolas",
+    "decay": 0.1,
+    "ammotype": "ammo-45",
+    "source": "ready",
+    "iconSource": "pending",
+    "createdAt": "2026-04-19T06:25:36.291Z",
+    "status": "ready"
+  },
+  {
     "name": "saline250ml",
     "label": "Soro 250ml",
     "description": "Também ajuda recuperar o volume sanguíneo, porém em caso de grandes perdas, recomenda-se a transfusão uma bolsa de sangue puro. É vital quando os paramédicos estão ficando sem sangue no estoque.",
