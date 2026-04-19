@@ -2108,7 +2108,7 @@
   },
   {
     "name": "weapon_bottle",
-    "label": "Garrafa",
+    "label": "Garrafa Quebrada",
     "description": "",
     "weight": 350,
     "type": "weapon",
@@ -2123,8 +2123,8 @@
     "siteCategory": "Materiais",
     "decay": 0.1,
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-18T09:31:59.217Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-19T05:53:06.015Z",
     "status": "ready"
   },
   {
