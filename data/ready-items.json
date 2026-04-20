@@ -749,6 +749,26 @@
     "status": "ready"
   },
   {
+    "name": "cabo_de_aco",
+    "label": "Cabo de Aço",
+    "description": "",
+    "weight": 450,
+    "type": "item",
+    "image": "cabo_de_aco.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Ferramentas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-20T18:26:55.352Z",
+    "status": "ready"
+  },
+  {
     "name": "wheelchair",
     "label": "Cadeira de Rodas",
     "description": "Entegue ao paciente no pós-alta para que possam realizar o repouso.",
