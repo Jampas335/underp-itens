@@ -3122,6 +3122,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_chainsaw",
+    "label": "Motossera",
+    "description": "",
+    "weight": 5500,
+    "type": "weapon",
+    "image": "weapon_chainsaw.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Madereira",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-26T04:44:48.468Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_smg",
     "label": "MP5",
     "description": "",
