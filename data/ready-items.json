@@ -4551,6 +4551,26 @@
     "status": "ready"
   },
   {
+    "name": "cedar_plank",
+    "label": "Tábua de Cedro",
+    "description": "",
+    "weight": 1200,
+    "type": "item",
+    "image": "cedar_plank.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Madereira",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-26T04:32:09.127Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_bat",
     "label": "Taco de Baseball",
     "description": "",
