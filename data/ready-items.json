@@ -4998,6 +4998,26 @@
     "status": "ready"
   },
   {
+    "name": "forest_tree_log",
+    "label": "Tronco de Oliveira Dura",
+    "description": "",
+    "weight": 20000,
+    "type": "item",
+    "image": "forest_tree_log.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Madereira",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-26T04:39:11.581Z",
+    "status": "ready"
+  },
+  {
     "name": "fish1",
     "label": "Truta",
     "description": "",
