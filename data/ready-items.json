@@ -4941,7 +4941,7 @@
     "name": "oak_log",
     "label": "Tronco de Carvalho",
     "description": "",
-    "weight": 0,
+    "weight": 20000,
     "type": "item",
     "image": "oak_log.png",
     "unique": true,
@@ -4953,8 +4953,8 @@
     "extraLua": "",
     "siteCategory": "Madereira",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-26T04:30:12.240Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-26T04:32:43.091Z",
     "status": "ready"
   },
   {
