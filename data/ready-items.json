@@ -4611,6 +4611,26 @@
     "status": "ready"
   },
   {
+    "name": "pine_plank",
+    "label": "Tábua de Pinho",
+    "description": "",
+    "weight": 1200,
+    "type": "item",
+    "image": "pine_plank.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Madereira",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-26T04:43:03.338Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_bat",
     "label": "Taco de Baseball",
     "description": "",
