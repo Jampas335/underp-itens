@@ -4531,6 +4531,26 @@
     "status": "ready"
   },
   {
+    "name": "oak_plank",
+    "label": "Tabua de Carvalho",
+    "description": "",
+    "weight": 1200,
+    "type": "item",
+    "image": "oak_plank.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Madereira",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-26T04:24:21.224Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_bat",
     "label": "Taco de Baseball",
     "description": "",
