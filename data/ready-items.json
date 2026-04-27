@@ -525,6 +525,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_eggplant",
+    "label": "Beringela",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "farm_eggplant.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:18:41.460Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_bud_blue_dream",
     "label": "Blue Dream",
     "description": "",
