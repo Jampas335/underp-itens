@@ -3668,6 +3668,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_cucumber",
+    "label": "Pepino",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "farm_cucumber.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:17:00.565Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_pesticide_spray",
     "label": "Pesticida",
     "description": "",
