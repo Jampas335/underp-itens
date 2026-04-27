@@ -3200,6 +3200,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_strawberry",
+    "label": "Morango",
+    "description": "",
+    "weight": 10,
+    "type": "item",
+    "image": "farm_strawberry.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:25:53.796Z",
+    "status": "ready"
+  },
+  {
     "name": "morphine",
     "label": "Morfina",
     "description": "Potente analgésico. Reduz drasticamente a dor, mas como efeito colateral diminui pesadamente a frequência cardíaca. Pode causar Overdose se aplicada várias vezes no mesmo paciente em uma janela curta.",
