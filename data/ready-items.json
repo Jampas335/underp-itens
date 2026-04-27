@@ -3035,6 +3035,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_watermelon",
+    "label": "Melancia",
+    "description": "",
+    "weight": 5000,
+    "type": "item",
+    "image": "farm_watermelon.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:27:49.667Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_table",
     "label": "Mesa de Empacotamento",
     "description": "",
