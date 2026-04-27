@@ -4564,6 +4564,26 @@
     "status": "ready"
   },
   {
+    "name": "seeds_cucumber",
+    "label": "Semente de Pepino",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "seeds_cucumber.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:37:25.398Z",
+    "status": "ready"
+  },
+  {
     "name": "castsaw",
     "label": "Serra de Gesso",
     "description": "Usado para remover Gessos.",
