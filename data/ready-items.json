@@ -4704,6 +4704,26 @@
     "status": "ready"
   },
   {
+    "name": "seeds_tomato",
+    "label": "Semente de Tomate",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "seeds_tomato.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:42:50.798Z",
+    "status": "ready"
+  },
+  {
     "name": "seeds_grape",
     "label": "Semente de Uva",
     "description": "",
