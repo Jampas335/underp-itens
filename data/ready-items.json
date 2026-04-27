@@ -505,6 +505,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_potato",
+    "label": "Batata",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "farm_potato.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:24:54.987Z",
+    "status": "ready"
+  },
+  {
     "name": "bs_fries",
     "label": "Batata Frita",
     "description": "",
