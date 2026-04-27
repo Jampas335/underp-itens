@@ -5320,6 +5320,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_pot_large",
+    "label": "Vaso Grande",
+    "description": "",
+    "weight": 1000,
+    "type": "item",
+    "image": "farm_pot_large.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:11:31.365Z",
+    "status": "ready"
+  },
+  {
     "name": "farm_pot_medium",
     "label": "Vaso Médio",
     "description": "",
