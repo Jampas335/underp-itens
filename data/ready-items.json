@@ -4544,6 +4544,26 @@
     "status": "ready"
   },
   {
+    "name": "seeds_eggplant",
+    "label": "Semente de Beringela",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "seeds_eggplant.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:38:08.588Z",
+    "status": "ready"
+  },
+  {
     "name": "seeds_apple",
     "label": "Semente de Maça",
     "description": "",
