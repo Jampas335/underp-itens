@@ -5116,6 +5116,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_tomato",
+    "label": "Tomate",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "farm_tomato.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:26:42.116Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_gusenberg",
     "label": "Tommy Gun",
     "description": "",
