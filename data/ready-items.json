@@ -4637,10 +4637,10 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "Fazenda",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-27T15:38:08.588Z",
+    "iconSource": "ready",
+    "createdAt": "2026-04-27T15:55:40.313Z",
     "status": "ready"
   },
   {
