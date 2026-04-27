@@ -4664,6 +4664,26 @@
     "status": "ready"
   },
   {
+    "name": "seeds_soy",
+    "label": "Semente de Soja",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "seeds_soy.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:41:53.875Z",
+    "status": "ready"
+  },
+  {
     "name": "seeds_grape",
     "label": "Semente de Uva",
     "description": "",
