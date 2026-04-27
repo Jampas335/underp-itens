@@ -5320,6 +5320,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_pot_small",
+    "label": "Vaso Pequeno",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "farm_pot_small.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:10:11.127Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_specialcarbine",
     "label": "Vector",
     "description": "",
