@@ -4524,6 +4524,26 @@
     "status": "ready"
   },
   {
+    "name": "seeds_lettuce",
+    "label": "Semente de Alface",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "seeds_lettuce.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:39:23.396Z",
+    "status": "ready"
+  },
+  {
     "name": "seeds_banana",
     "label": "Semente de Banana",
     "description": "",
