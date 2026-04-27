@@ -5278,6 +5278,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_grape",
+    "label": "Uva",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "farm_grape.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:19:34.809Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_microsmg",
     "label": "UZI",
     "description": "",
