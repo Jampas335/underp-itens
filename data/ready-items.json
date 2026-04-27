@@ -5320,6 +5320,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_pot_medium",
+    "label": "Vaso Médio",
+    "description": "",
+    "weight": 600,
+    "type": "item",
+    "image": "farm_pot_medium.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:10:50.185Z",
+    "status": "ready"
+  },
+  {
     "name": "farm_pot_small",
     "label": "Vaso Pequeno",
     "description": "",
