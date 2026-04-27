@@ -4644,6 +4644,26 @@
     "status": "ready"
   },
   {
+    "name": "seeds_strawberry",
+    "label": "Semente de Morango",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "seeds_strawberry.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:42:22.544Z",
+    "status": "ready"
+  },
+  {
     "name": "seeds_cucumber",
     "label": "Semente de Pepino",
     "description": "",
