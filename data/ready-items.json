@@ -1944,6 +1944,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_fertilizer",
+    "label": "Fertilizante",
+    "description": "",
+    "weight": 1000,
+    "type": "item",
+    "image": "farm_fertilizer.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:08:57.899Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_fertilizer_resistance",
     "label": "Fertilizante Resistance",
     "description": "",
