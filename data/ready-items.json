@@ -4482,6 +4482,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_scanner",
+    "label": "Scanner",
+    "description": "",
+    "weight": 500,
+    "type": "weapon",
+    "image": "weapon_scanner.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:47:20.820Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_minismg",
     "label": "Scorpion",
     "description": "",
