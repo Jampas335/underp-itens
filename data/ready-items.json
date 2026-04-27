@@ -4584,6 +4584,26 @@
     "status": "ready"
   },
   {
+    "name": "seeds_onion",
+    "label": "Semente de Cebola",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "seeds_onion.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:40:07.811Z",
+    "status": "ready"
+  },
+  {
     "name": "seeds_apple",
     "label": "Semente de Maça",
     "description": "",
