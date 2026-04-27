@@ -1151,6 +1151,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_onion",
+    "label": "Cebola",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "farm_onion.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "ready",
+    "createdAt": "2026-04-27T15:49:52.733Z",
+    "status": "ready"
+  },
+  {
     "name": "phone",
     "label": "Celular",
     "description": "",
