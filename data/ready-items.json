@@ -88,7 +88,7 @@
     "name": "farm_lettuce",
     "label": "Alface",
     "description": "",
-    "weight": 299,
+    "weight": 300,
     "type": "item",
     "image": "farm_lettuce.png",
     "unique": false,
@@ -101,7 +101,7 @@
     "siteCategory": "Fazenda",
     "source": "ready",
     "iconSource": "ready",
-    "createdAt": "2026-04-27T15:22:12.198Z",
+    "createdAt": "2026-04-27T15:22:21.409Z",
     "status": "ready"
   },
   {
