@@ -4604,6 +4604,26 @@
     "status": "ready"
   },
   {
+    "name": "seeds_grape",
+    "label": "Semente de Uva",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "seeds_grape.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:38:46.639Z",
+    "status": "ready"
+  },
+  {
     "name": "castsaw",
     "label": "Serra de Gesso",
     "description": "Usado para remover Gessos.",
