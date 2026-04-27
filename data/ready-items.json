@@ -85,6 +85,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_lettuce",
+    "label": "Alface",
+    "description": "",
+    "weight": 0,
+    "type": "item",
+    "image": "farm_lettuce.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:20:36.216Z",
+    "status": "ready"
+  },
+  {
     "name": "handcuffs",
     "label": "Algemas",
     "description": "",
