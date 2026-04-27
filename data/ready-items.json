@@ -365,6 +365,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_banana",
+    "label": "Banana",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "farm_banana.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:14:19.768Z",
+    "status": "ready"
+  },
+  {
     "name": "bandage",
     "label": "Bandage",
     "description": "",
