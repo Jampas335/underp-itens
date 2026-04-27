@@ -1111,6 +1111,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_orion",
+    "label": "Cebola",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "farm_orion.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:21:53.838Z",
+    "status": "ready"
+  },
+  {
     "name": "phone",
     "label": "Celular",
     "description": "",
