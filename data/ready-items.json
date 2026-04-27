@@ -4016,6 +4016,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_water_can",
+    "label": "Regador",
+    "description": "",
+    "weight": 500,
+    "type": "item",
+    "image": "farm_water_can.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-04-27T15:07:36.742Z",
+    "status": "ready"
+  },
+  {
     "name": "relogio",
     "label": "Rélogio",
     "description": "",
