@@ -125,6 +125,26 @@
     "status": "ready"
   },
   {
+    "name": "algemas",
+    "label": "Algemas",
+    "description": "",
+    "weight": 350,
+    "type": "item",
+    "image": "handcuffs.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "handcuffs",
+    "pendingCategory": "Policial",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "ready",
+    "createdAt": "2026-05-01T20:49:22.064Z",
+    "status": "ready"
+  },
+  {
     "name": "cotton_candy",
     "label": "Algodão Doce",
     "description": "",
