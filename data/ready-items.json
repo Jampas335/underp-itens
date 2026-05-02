@@ -2468,6 +2468,26 @@
     "status": "ready"
   },
   {
+    "name": "police_grappler",
+    "label": "Grappler",
+    "description": "",
+    "weight": 4000,
+    "type": "item",
+    "image": "police_grappler.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-02T12:41:48.929Z",
+    "status": "ready"
+  },
+  {
     "name": "weiner",
     "label": "Hotdog",
     "description": "",
