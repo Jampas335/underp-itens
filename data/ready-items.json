@@ -767,26 +767,6 @@
     "status": "ready"
   },
   {
-    "name": "rubber",
-    "label": "Borracha",
-    "description": "",
-    "weight": 10,
-    "type": "item",
-    "image": "rubber.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": false,
-    "rarity": "common",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Materiais",
-    "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-05-04T01:52:18.626Z",
-    "status": "ready"
-  },
-  {
     "name": "shoe_shit",
     "label": "Bota velha",
     "description": "",
