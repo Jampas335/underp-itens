@@ -3993,26 +3993,6 @@
     "status": "ready"
   },
   {
-    "name": "plastic",
-    "label": "Plastico",
-    "description": "",
-    "weight": 12,
-    "type": "item",
-    "image": "plastic.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": false,
-    "rarity": "common",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Materiais",
-    "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-05-04T01:52:59.309Z",
-    "status": "ready"
-  },
-  {
     "name": "polvora",
     "label": "Pólvora",
     "description": "",
