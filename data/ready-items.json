@@ -1860,6 +1860,26 @@
     "status": "ready"
   },
   {
+    "name": "diamond",
+    "label": "Diamante",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "diamond.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:39:30.941Z",
+    "status": "ready"
+  },
+  {
     "name": "dynamite",
     "label": "Dinamite",
     "description": "",
