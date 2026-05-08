@@ -525,6 +525,26 @@
     "status": "ready"
   },
   {
+    "name": "gold_bar",
+    "label": "Barra de Ouro",
+    "description": "",
+    "weight": 400,
+    "type": "item",
+    "image": "gold_bar.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:33:30.111Z",
+    "status": "ready"
+  },
+  {
     "name": "barracuda",
     "label": "Barracuda",
     "description": "",
