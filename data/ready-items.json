@@ -2244,6 +2244,26 @@
     "status": "ready"
   },
   {
+    "name": "lithium_fragment",
+    "label": "Fragmento de Lítio",
+    "description": "",
+    "weight": 800,
+    "type": "item",
+    "image": "lithium_fragment.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:29:23.019Z",
+    "status": "ready"
+  },
+  {
     "name": "niobium_fragment",
     "label": "Fragmento de Nióbio",
     "description": "",
