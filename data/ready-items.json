@@ -3257,6 +3257,26 @@
     "status": "ready"
   },
   {
+    "name": "gold_ore",
+    "label": "Minerio de Ouro",
+    "description": "",
+    "weight": 20000,
+    "type": "item",
+    "image": "gold_ore.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:13:31.042Z",
+    "status": "ready"
+  },
+  {
     "name": "mochila",
     "label": "Mochila",
     "description": "",
