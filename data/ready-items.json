@@ -3337,6 +3337,26 @@
     "status": "ready"
   },
   {
+    "name": "zinc_ore",
+    "label": "Minério de Zinco",
+    "description": "",
+    "weight": 20000,
+    "type": "item",
+    "image": "zinc_ore.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:19:05.504Z",
+    "status": "ready"
+  },
+  {
     "name": "mochila",
     "label": "Mochila",
     "description": "",
