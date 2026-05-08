@@ -545,6 +545,26 @@
     "status": "ready"
   },
   {
+    "name": "lithium_bar",
+    "label": "Barra de Lítio",
+    "description": "",
+    "weight": 400,
+    "type": "item",
+    "image": "lithium_bar.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:36:02.581Z",
+    "status": "ready"
+  },
+  {
     "name": "niobium_bar",
     "label": "Barra de Nióbio",
     "description": "",
