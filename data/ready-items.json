@@ -3237,6 +3237,26 @@
     "status": "ready"
   },
   {
+    "name": "diamond_ore",
+    "label": "Minério de Diamante",
+    "description": "",
+    "weight": 20000,
+    "type": "item",
+    "image": "diamond_ore.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:12:45.160Z",
+    "status": "ready"
+  },
+  {
     "name": "mochila",
     "label": "Mochila",
     "description": "",
