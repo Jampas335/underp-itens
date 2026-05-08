@@ -3286,14 +3286,14 @@
     "unique": true,
     "useable": false,
     "shouldClose": false,
-    "rarity": "common",
+    "rarity": "rare",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Mineração",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-05-08T05:17:03.581Z",
+    "iconSource": "ready",
+    "createdAt": "2026-05-08T05:18:10.275Z",
     "status": "ready"
   },
   {
