@@ -485,6 +485,26 @@
     "status": "ready"
   },
   {
+    "name": "aluminum_bar",
+    "label": "Barra de Alumínio",
+    "description": "",
+    "weight": 400,
+    "type": "item",
+    "image": "aluminum_bar.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:32:23.165Z",
+    "status": "ready"
+  },
+  {
     "name": "barracuda",
     "label": "Barracuda",
     "description": "",
