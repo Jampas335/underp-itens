@@ -3257,6 +3257,26 @@
     "status": "ready"
   },
   {
+    "name": "niobium_ore",
+    "label": "Minério de Nióbio",
+    "description": "",
+    "weight": 20000,
+    "type": "item",
+    "image": "niobium_ore.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:16:06.330Z",
+    "status": "ready"
+  },
+  {
     "name": "gold_ore",
     "label": "Minério de Ouro",
     "description": "",
