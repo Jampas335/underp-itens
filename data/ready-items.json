@@ -3197,6 +3197,26 @@
     "status": "ready"
   },
   {
+    "name": "aluminum_ore",
+    "label": "Minério de Alumínio",
+    "description": "",
+    "weight": 20000,
+    "type": "item",
+    "image": "aluminum_ore.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:10:35.805Z",
+    "status": "ready"
+  },
+  {
     "name": "mochila",
     "label": "Mochila",
     "description": "",
