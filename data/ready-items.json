@@ -2224,6 +2224,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_drill",
+    "label": "Furadeira Industrial",
+    "description": "",
+    "weight": 3500,
+    "type": "weapon",
+    "image": "weapon_drill.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:08:52.046Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_g17",
     "label": "G17",
     "description": "",
