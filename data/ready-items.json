@@ -545,6 +545,26 @@
     "status": "ready"
   },
   {
+    "name": "niobium_bar",
+    "label": "Barra de Nióbio",
+    "description": "",
+    "weight": 400,
+    "type": "item",
+    "image": "niobium_bar.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:34:55.505Z",
+    "status": "ready"
+  },
+  {
     "name": "gold_bar",
     "label": "Barra de Ouro",
     "description": "",
