@@ -525,6 +525,26 @@
     "status": "ready"
   },
   {
+    "name": "iron_bar",
+    "label": "Barra de Ferro",
+    "description": "",
+    "weight": 400,
+    "type": "item",
+    "image": "iron_bar.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:34:17.336Z",
+    "status": "ready"
+  },
+  {
     "name": "gold_bar",
     "label": "Barra de Ouro",
     "description": "",
