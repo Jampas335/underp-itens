@@ -3257,6 +3257,26 @@
     "status": "ready"
   },
   {
+    "name": "iron_ore",
+    "label": "Minério de Ferro",
+    "description": "",
+    "weight": 20000,
+    "type": "item",
+    "image": "iron_ore.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:14:15.774Z",
+    "status": "ready"
+  },
+  {
     "name": "gold_ore",
     "label": "Minerio de Ouro",
     "description": "",
