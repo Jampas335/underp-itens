@@ -3197,6 +3197,26 @@
     "status": "ready"
   },
   {
+    "name": "limestone_ore",
+    "label": "Minério de Calcário",
+    "description": "",
+    "weight": 20000,
+    "type": "item",
+    "image": "limestone_ore.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:17:48.859Z",
+    "status": "ready"
+  },
+  {
     "name": "copper_ore",
     "label": "Minério de Cobre",
     "description": "",
