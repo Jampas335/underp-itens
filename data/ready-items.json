@@ -2224,6 +2224,26 @@
     "status": "ready"
   },
   {
+    "name": "iron_fragment",
+    "label": "Fragmento de Ferro",
+    "description": "",
+    "weight": 800,
+    "type": "item",
+    "image": "iron_fragment.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:27:22.751Z",
+    "status": "ready"
+  },
+  {
     "name": "gold_fragment",
     "label": "Fragmento de Ouro",
     "description": "",
