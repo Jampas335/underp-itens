@@ -2244,6 +2244,26 @@
     "status": "ready"
   },
   {
+    "name": "niobium_fragment",
+    "label": "Fragmento de Nióbio",
+    "description": "",
+    "weight": 800,
+    "type": "item",
+    "image": "niobium_fragment.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:28:25.473Z",
+    "status": "ready"
+  },
+  {
     "name": "gold_fragment",
     "label": "Fragmento de Ouro",
     "description": "",
