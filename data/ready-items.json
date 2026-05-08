@@ -3257,6 +3257,26 @@
     "status": "ready"
   },
   {
+    "name": "lithium_ore",
+    "label": "Minério de Lítio",
+    "description": "",
+    "weight": 20000,
+    "type": "item",
+    "image": "lithium_ore.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:17:03.581Z",
+    "status": "ready"
+  },
+  {
     "name": "niobium_ore",
     "label": "Minério de Nióbio",
     "description": "",
