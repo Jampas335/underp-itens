@@ -2324,6 +2324,26 @@
     "status": "ready"
   },
   {
+    "name": "zinc_fragment",
+    "label": "Fragmento de Zinco",
+    "description": "",
+    "weight": 800,
+    "type": "item",
+    "image": "zinc_fragment.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:31:37.748Z",
+    "status": "ready"
+  },
+  {
     "name": "brakes",
     "label": "Freios",
     "description": "",
