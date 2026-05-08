@@ -605,6 +605,26 @@
     "status": "ready"
   },
   {
+    "name": "zinc_bar",
+    "label": "Barra de Zinco",
+    "description": "",
+    "weight": 400,
+    "type": "item",
+    "image": "zinc_bar.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:36:50.463Z",
+    "status": "ready"
+  },
+  {
     "name": "barracuda",
     "label": "Barracuda",
     "description": "",
