@@ -2204,6 +2204,26 @@
     "status": "ready"
   },
   {
+    "name": "limestone_fragment",
+    "label": "Fragmento de Calcário",
+    "description": "",
+    "weight": 800,
+    "type": "item",
+    "image": "limestone_fragment.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:30:44.770Z",
+    "status": "ready"
+  },
+  {
     "name": "copper_fragment",
     "label": "Fragmento de Cobre",
     "description": "",
