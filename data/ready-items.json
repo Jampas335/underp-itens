@@ -3258,7 +3258,7 @@
   },
   {
     "name": "gold_ore",
-    "label": "Minerio de Ouro",
+    "label": "Minério de Ouro",
     "description": "",
     "weight": 20000,
     "type": "item",
@@ -3266,14 +3266,14 @@
     "unique": true,
     "useable": false,
     "shouldClose": false,
-    "rarity": "common",
+    "rarity": "legendary",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Mineração",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-05-08T05:13:31.042Z",
+    "iconSource": "ready",
+    "createdAt": "2026-05-08T05:15:05.748Z",
     "status": "ready"
   },
   {
