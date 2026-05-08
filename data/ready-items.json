@@ -2184,6 +2184,26 @@
     "status": "ready"
   },
   {
+    "name": "aluminum_fragment",
+    "label": "Fragmento de Alumínio",
+    "description": "",
+    "weight": 800,
+    "type": "item",
+    "image": "aluminum_fragment.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-08T05:24:10.034Z",
+    "status": "ready"
+  },
+  {
     "name": "brakes",
     "label": "Freios",
     "description": "",
