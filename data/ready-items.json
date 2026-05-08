@@ -1131,6 +1131,26 @@
     "status": "ready"
   },
   {
+    "name": "coal",
+    "label": "Carvão",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "ore_coal.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "ore_coal",
+    "pendingCategory": "Mineração",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "ready",
+    "createdAt": "2026-05-08T05:21:01.303Z",
+    "status": "ready"
+  },
+  {
     "name": "farm_orion",
     "label": "Cebola",
     "description": "",
