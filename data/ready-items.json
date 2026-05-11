@@ -4304,6 +4304,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_revolver_mk2",
+    "label": "PD Python",
+    "description": "",
+    "weight": 1300,
+    "type": "weapon",
+    "image": "weapon_revolver_mk2.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-11T07:21:58.997Z",
+    "status": "ready"
+  },
+  {
     "name": "rock",
     "label": "Pedra",
     "description": "",
