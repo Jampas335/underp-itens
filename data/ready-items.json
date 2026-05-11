@@ -85,6 +85,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_assaultrifle",
+    "label": "AK-47",
+    "description": "",
+    "weight": 3500,
+    "type": "weapon",
+    "image": "weapon_assaultrifle.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Rifles & SMGs",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-11T06:41:37.084Z",
+    "status": "ready"
+  },
+  {
     "name": "farm_lettuce",
     "label": "Alface",
     "description": "",
