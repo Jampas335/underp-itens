@@ -4284,6 +4284,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_carbinerifle_mk2",
+    "label": "PD MK18",
+    "description": "",
+    "weight": 2400,
+    "type": "weapon",
+    "image": "weapon_carbinerifle_mk2.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-11T07:18:45.135Z",
+    "status": "ready"
+  },
+  {
     "name": "rock",
     "label": "Pedra",
     "description": "",
