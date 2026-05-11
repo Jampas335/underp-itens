@@ -2204,6 +2204,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_knife",
+    "label": "Faca de Caça",
+    "description": "",
+    "weight": 300,
+    "type": "weapon",
+    "image": "weapon_knife.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-11T07:03:32.473Z",
+    "status": "ready"
+  },
+  {
     "name": "headlight",
     "label": "Farol",
     "description": "",
