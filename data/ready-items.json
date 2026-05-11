@@ -3393,6 +3393,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_hammer",
+    "label": "Marreta",
+    "description": "",
+    "weight": 2000,
+    "type": "weapon",
+    "image": "weapon_hammer.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-11T07:08:35.198Z",
+    "status": "ready"
+  },
+  {
     "name": "water_meter",
     "label": "medidor de profundidade",
     "description": "",
