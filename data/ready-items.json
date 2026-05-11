@@ -4168,6 +4168,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_fn509mrdle",
+    "label": "PD FN509",
+    "description": "",
+    "weight": 765,
+    "type": "weapon",
+    "image": "weapon_fn509mrdle.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-11T06:56:21.264Z",
+    "status": "ready"
+  },
+  {
     "name": "rock",
     "label": "Pedra",
     "description": "",
