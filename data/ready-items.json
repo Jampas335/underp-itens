@@ -3920,26 +3920,6 @@
     "status": "ready"
   },
   {
-    "name": "weapon_smg",
-    "label": "MP5",
-    "description": "",
-    "weight": 2500,
-    "type": "weapon",
-    "image": "weapon_smg.png",
-    "unique": true,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "epic",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Policial",
-    "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-05-11T07:11:30.944Z",
-    "status": "ready"
-  },
-  {
     "name": "weapon_microsmg",
     "label": "MP9",
     "description": "",
@@ -4301,6 +4281,26 @@
     "source": "ready",
     "iconSource": "upload",
     "createdAt": "2026-05-11T07:18:45.135Z",
+    "status": "ready"
+  },
+  {
+    "name": "weapon_smg",
+    "label": "PD MP5",
+    "description": "",
+    "weight": 2500,
+    "type": "weapon",
+    "image": "weapon_smg.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "ready",
+    "createdAt": "2026-05-11T07:19:18.718Z",
     "status": "ready"
   },
   {
