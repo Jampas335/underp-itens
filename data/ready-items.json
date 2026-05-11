@@ -4188,6 +4188,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_glock19gen4",
+    "label": "PD G19",
+    "description": "",
+    "weight": 600,
+    "type": "weapon",
+    "image": "weapon_glock19gen4.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-11T06:59:22.567Z",
+    "status": "ready"
+  },
+  {
     "name": "rock",
     "label": "Pedra",
     "description": "",
