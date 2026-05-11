@@ -2104,6 +2104,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_beanbag",
+    "label": "Espingarda de Elastômero",
+    "description": "",
+    "weight": 2500,
+    "type": "weapon",
+    "image": "weapon_beanbag.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-11T06:47:58.754Z",
+    "status": "ready"
+  },
+  {
     "name": "dry_station",
     "label": "Estacao de secagem",
     "description": "",
