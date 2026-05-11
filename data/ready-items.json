@@ -4208,6 +4208,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_km2000",
+    "label": "PD KM2000",
+    "description": "",
+    "weight": 330,
+    "type": "weapon",
+    "image": "weapon_km2000.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-11T07:01:13.622Z",
+    "status": "ready"
+  },
+  {
     "name": "rock",
     "label": "Pedra",
     "description": "",
