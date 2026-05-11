@@ -3921,9 +3921,9 @@
   },
   {
     "name": "weapon_smg",
-    "label": "MP9",
+    "label": "MP5",
     "description": "",
-    "weight": 790,
+    "weight": 2500,
     "type": "weapon",
     "image": "weapon_smg.png",
     "unique": true,
@@ -3933,10 +3933,10 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "Rifles & SMGs",
+    "siteCategory": "Policial",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-05-11T07:10:23.292Z",
+    "iconSource": "ready",
+    "createdAt": "2026-05-11T07:11:30.944Z",
     "status": "ready"
   },
   {
