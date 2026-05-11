@@ -5947,6 +5947,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_golfclub",
+    "label": "Taco de Hockey",
+    "description": "",
+    "weight": 300,
+    "type": "weapon",
+    "image": "weapon_golfclub.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-11T07:27:06.225Z",
+    "status": "ready"
+  },
+  {
     "name": "taiyaki",
     "label": "Taiyaki",
     "description": "",
