@@ -4344,6 +4344,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_specialcarbine",
+    "label": "PD Vector",
+    "description": "",
+    "weight": 2500,
+    "type": "weapon",
+    "image": "weapon_specialcarbine.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "ready",
+    "createdAt": "2026-05-11T07:32:04.987Z",
+    "status": "ready"
+  },
+  {
     "name": "rock",
     "label": "Pedra",
     "description": "",
@@ -6668,26 +6688,6 @@
     "source": "ready",
     "iconSource": "upload",
     "createdAt": "2026-04-27T15:10:11.127Z",
-    "status": "ready"
-  },
-  {
-    "name": "weapon_specialcarbine",
-    "label": "Vector",
-    "description": "",
-    "weight": 2500,
-    "type": "weapon",
-    "image": "weapon_specialcarbine.png",
-    "unique": true,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "rare",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Policial",
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-05-11T07:30:48.085Z",
     "status": "ready"
   },
   {
