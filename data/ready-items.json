@@ -6251,6 +6251,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_brick_og_kush",
+    "label": "Tijolo de OG Kush",
+    "description": "",
+    "weight": 500,
+    "type": "item",
+    "image": "kq_weed_brick_og_kush.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-12T02:15:30.546Z",
+    "status": "ready"
+  },
+  {
     "name": "bs-tomato",
     "label": "Tomate",
     "description": "",
