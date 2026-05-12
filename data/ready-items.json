@@ -745,6 +745,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_joint_white_widow",
+    "label": "Baseado de White Widow",
+    "description": "",
+    "weight": 10,
+    "type": "item",
+    "image": "kq_weed_joint_white_widow.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-12T02:21:32.524Z",
+    "status": "ready"
+  },
+  {
     "name": "farm_potato",
     "label": "Batata",
     "description": "",
