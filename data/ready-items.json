@@ -6231,6 +6231,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_brick_blue_dream",
+    "label": "Tijolo de Blue Dream",
+    "description": "",
+    "weight": 500,
+    "type": "item",
+    "image": "kq_weed_brick_blue_dream.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-12T02:14:22.360Z",
+    "status": "ready"
+  },
+  {
     "name": "bs-tomato",
     "label": "Tomate",
     "description": "",
