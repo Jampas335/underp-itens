@@ -5740,6 +5740,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_seed_white_widow",
+    "label": "Semente de White Widow",
+    "description": "",
+    "weight": 5,
+    "type": "item",
+    "image": "kq_weed_seed_white_widow.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-12T02:25:34.770Z",
+    "status": "ready"
+  },
+  {
     "name": "castsaw",
     "label": "Serra de Gesso",
     "description": "Usado para remover Gessos.",
