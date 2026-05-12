@@ -4224,6 +4224,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_bag_white_widow",
+    "label": "Pacote de White Widow",
+    "description": "",
+    "weight": 25,
+    "type": "item",
+    "image": "kq_weed_bag_white_widow.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-12T02:29:06.989Z",
+    "status": "ready"
+  },
+  {
     "name": "pager",
     "label": "Pager",
     "description": "Usado para informar o hospital sobre possível entrada de paciente e o seu estado físico.",
