@@ -4164,6 +4164,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_bag_blue_dream",
+    "label": "Pacote de Blue Dream",
+    "description": "",
+    "weight": 25,
+    "type": "item",
+    "image": "kq_weed_bag_blue_dream.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-12T02:27:43.569Z",
+    "status": "ready"
+  },
+  {
     "name": "pager",
     "label": "Pager",
     "description": "Usado para informar o hospital sobre possível entrada de paciente e o seu estado físico.",
