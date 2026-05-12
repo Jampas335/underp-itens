@@ -5500,6 +5500,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_seed_blue_dream",
+    "label": "Semente de Blue Dream",
+    "description": "",
+    "weight": 5,
+    "type": "item",
+    "image": "kq_weed_seed_blue_dream.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-12T02:23:17.624Z",
+    "status": "ready"
+  },
+  {
     "name": "seeds_onion",
     "label": "Semente de Cebola",
     "description": "",
