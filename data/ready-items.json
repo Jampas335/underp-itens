@@ -6271,6 +6271,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_brick_purple_haze",
+    "label": "Tijolo de Purple Haze",
+    "description": "",
+    "weight": 500,
+    "type": "item",
+    "image": "kq_weed_brick_purple_haze.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-12T02:16:45.899Z",
+    "status": "ready"
+  },
+  {
     "name": "bs-tomato",
     "label": "Tomate",
     "description": "",
