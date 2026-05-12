@@ -705,6 +705,26 @@
     "status": "ready"
   },
   {
+    "name": "kq_weed_joint_og_kush",
+    "label": "Baseado de OG Kush",
+    "description": "",
+    "weight": 10,
+    "type": "item",
+    "image": "kq_weed_joint_og_kush.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Drogas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-12T02:20:08.135Z",
+    "status": "ready"
+  },
+  {
     "name": "farm_potato",
     "label": "Batata",
     "description": "",
