@@ -6227,6 +6227,26 @@
     "status": "ready"
   },
   {
+    "name": "taco_rato",
+    "label": "Taco de Rato",
+    "description": "Um taco crocante generosamente recheado com uma salada mofada, queijo podre e tomates murchos. O grande destaque do prato é um saboroso rato, frito na hora.",
+    "weight": 250,
+    "type": "item",
+    "image": "taco_rato.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Comida",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-15T23:02:56.556Z",
+    "status": "ready"
+  },
+  {
     "name": "taiyaki",
     "label": "Taiyaki",
     "description": "",
