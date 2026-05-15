@@ -4060,6 +4060,26 @@
     "status": "ready"
   },
   {
+    "name": "nacho_urubu",
+    "label": "Nachos Pata de Urubu",
+    "description": "Uma tortilha de milho crocante moldada no exótico formato de uma pata de urubu, servida com pitadas frescas de avocado cremoso e finalizada com um toque leve de vinagrete cítrico.",
+    "weight": 250,
+    "type": "item",
+    "image": "nacho_urubu.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Comida",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-15T23:23:07.458Z",
+    "status": "ready"
+  },
+  {
     "name": "laptop",
     "label": "Notebook",
     "description": "",
