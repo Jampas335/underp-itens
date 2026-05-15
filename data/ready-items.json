@@ -1551,6 +1551,26 @@
     "status": "ready"
   },
   {
+    "name": "chuca_shake",
+    "label": "Chuca Shake",
+    "description": "Milk-shake de chocolate misturado com suco de chuca, com Chantilly e uma saborosa cereja no topo.",
+    "weight": 200,
+    "type": "item",
+    "image": "chuca_shake.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-15T23:54:57.199Z",
+    "status": "ready"
+  },
+  {
     "name": "churros",
     "label": "Churros",
     "description": "",
