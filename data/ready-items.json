@@ -1960,26 +1960,6 @@
     "status": "ready"
   },
   {
-    "name": "coucacoula",
-    "label": "Couca Coula",
-    "description": "Uma bebida de água de esgoto sabor cola.",
-    "weight": 200,
-    "type": "item",
-    "image": "coucacoula.png",
-    "unique": false,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "uncommon",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Bebidas",
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-05-16T01:42:59.458Z",
-    "status": "ready"
-  },
-  {
     "name": "field_dressing",
     "label": "Curativo de Campo",
     "description": "Bom para feridas rotineiras (contusões, pequenos cortes, abrasões), mas ineficiente no caso de lacerações profundas ou ferimentos graves de tiro.",
