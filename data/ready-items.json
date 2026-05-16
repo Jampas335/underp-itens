@@ -1592,6 +1592,26 @@
     "status": "ready"
   },
   {
+    "name": "churros_barata",
+    "label": "Churros de Barata",
+    "description": "Um churros super saboroso e crocante, frito na hora e polvilhado com aquela mistura clássica de açúcar e canela com formato de uma barata.",
+    "weight": 200,
+    "type": "item",
+    "image": "churros_barata.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Comida",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-16T01:25:50.436Z",
+    "status": "ready"
+  },
+  {
     "name": "cigarro",
     "label": "Cigarro",
     "description": "",
