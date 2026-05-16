@@ -5231,6 +5231,26 @@
     "status": "ready"
   },
   {
+    "name": "fresco_esgoto",
+    "label": "Refresco de Esgoto",
+    "description": "Um refresco sabor de água de esgoto.",
+    "weight": 200,
+    "type": "item",
+    "image": "fresco_esgoto.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-16T02:09:17.263Z",
+    "status": "ready"
+  },
+  {
     "name": "bs_soda",
     "label": "Refrigerante BS",
     "description": "",
