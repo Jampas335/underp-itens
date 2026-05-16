@@ -3291,6 +3291,26 @@
     "status": "ready"
   },
   {
+    "name": "lapassion",
+    "label": "La Passion",
+    "description": "Uma bebida de líquidos desconhecidos, mas que sempre atrai o amor.",
+    "weight": 200,
+    "type": "item",
+    "image": "lapassion.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Bebidas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-16T02:25:10.843Z",
+    "status": "ready"
+  },
+  {
     "name": "miso_ramen",
     "label": "Lámen",
     "description": "",
