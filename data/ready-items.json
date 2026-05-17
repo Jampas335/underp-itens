@@ -3653,6 +3653,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_megaphone",
+    "label": "Megafone",
+    "description": "",
+    "weight": 600,
+    "type": "weapon",
+    "image": "weapon_megaphone.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "ready",
+    "createdAt": "2026-05-17T21:17:09.897Z",
+    "status": "ready"
+  },
+  {
     "name": "farm_watermelon",
     "label": "Melancia",
     "description": "",
