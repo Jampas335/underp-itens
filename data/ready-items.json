@@ -4624,26 +4624,6 @@
     "status": "ready"
   },
   {
-    "name": "weapon_specialcarbine",
-    "label": "PD Vector",
-    "description": "",
-    "weight": 2500,
-    "type": "weapon",
-    "image": "weapon_specialcarbine.png",
-    "unique": true,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "rare",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Policial",
-    "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-05-11T07:32:04.987Z",
-    "status": "ready"
-  },
-  {
     "name": "weapon_kvector",
     "label": "PD Vector",
     "description": "",
