@@ -5049,6 +5049,26 @@
     "status": "ready"
   },
   {
+    "name": "portamalas_carro",
+    "label": "Porta Malas de Carro",
+    "description": "Um porta malas desmanchado de um carro.",
+    "weight": 1300,
+    "type": "item",
+    "image": "portamalas_carro.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mecânica",
+    "source": "ready",
+    "iconSource": "ready",
+    "createdAt": "2026-05-17T07:38:14.951Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_press",
     "label": "Prensa",
     "description": "",
