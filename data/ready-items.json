@@ -5412,6 +5412,26 @@
     "status": "ready"
   },
   {
+    "name": "roda_carro",
+    "label": "Roda de Carro",
+    "description": "Uma roda desmanchada de um carro.",
+    "weight": 900,
+    "type": "item",
+    "image": "roda_carro.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mecânica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-17T07:13:19.928Z",
+    "status": "ready"
+  },
+  {
     "name": "wheels",
     "label": "Rodas",
     "description": "",
