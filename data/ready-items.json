@@ -1310,6 +1310,26 @@
     "status": "ready"
   },
   {
+    "name": "capo_carro",
+    "label": "Capô de Carro",
+    "description": "Um capô desmanchado de um carro.",
+    "weight": 1300,
+    "type": "item",
+    "image": "capo_carro.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mecânica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-17T07:33:01.879Z",
+    "status": "ready"
+  },
+  {
     "name": "crab",
     "label": "Caranguejo",
     "description": "",
