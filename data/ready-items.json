@@ -4644,6 +4644,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_kvector",
+    "label": "PD Vector",
+    "description": "",
+    "weight": 2500,
+    "type": "weapon",
+    "image": "weapon_kvector.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "ready",
+    "createdAt": "2026-05-17T21:07:19.935Z",
+    "status": "ready"
+  },
+  {
     "name": "rock",
     "label": "Pedra",
     "description": "",
