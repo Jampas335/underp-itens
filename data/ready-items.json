@@ -1088,7 +1088,7 @@
   },
   {
     "name": "burrito_podre",
-    "label": "Burrito de Feijão podre",
+    "label": "Burrito de Feijão Podre",
     "description": "Uma tortilha de trigo generosamente recheada com feijão podre e arroz mofado, combinados com uma generosa porção de carne passada e uma cobertura de creme azedo estragado.",
     "weight": 250,
     "type": "item",
@@ -1102,8 +1102,8 @@
     "extraLua": "",
     "siteCategory": "Comida",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-05-15T23:36:40.841Z",
+    "iconSource": "ready",
+    "createdAt": "2026-05-20T02:38:34.916Z",
     "status": "ready"
   },
   {
