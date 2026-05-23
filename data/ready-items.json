@@ -3289,6 +3289,26 @@
     "status": "ready"
   },
   {
+    "name": "drift_kit",
+    "label": "Kit Drift",
+    "description": "",
+    "weight": 3000,
+    "type": "item",
+    "image": "drift_kit.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mecânica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-23T10:01:31.884Z",
+    "status": "ready"
+  },
+  {
     "name": "lapassion",
     "label": "La Passion",
     "description": "Uma bebida de líquidos desconhecidos, mas que sempre atrai o amor.",
