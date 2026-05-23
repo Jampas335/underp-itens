@@ -3309,6 +3309,26 @@
     "status": "ready"
   },
   {
+    "name": "nitro_kit",
+    "label": "Kit Nitro",
+    "description": "",
+    "weight": 1250,
+    "type": "item",
+    "image": "nitro_kit.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-05-23T10:17:41.644Z",
+    "status": "ready"
+  },
+  {
     "name": "lapassion",
     "label": "La Passion",
     "description": "Uma bebida de líquidos desconhecidos, mas que sempre atrai o amor.",
