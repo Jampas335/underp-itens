@@ -856,10 +856,12 @@ function ProgressionMap() {
                         fitView=${true}
                         minZoom=${0.16}
                         maxZoom=${1.8}
-                        panOnScroll=${true}
+                        panOnDrag=${[0]}
+                        panOnScroll=${false}
+                        zoomOnScroll=${true}
                         nodesDraggable=${canEdit}
                         nodesConnectable=${canEdit}
-                        selectionOnDrag=${canEdit}
+                        selectionOnDrag=${false}
                         deleteKeyCode=${canEdit ? "Backspace" : null}
                     >
                         <${Background} gap=${24} size=${1.2} color="#334155" />
