@@ -1,0 +1,182 @@
+{
+  "schema": "underrp.progression-map.v1",
+  "updatedAt": "2026-06-05T00:00:00.000Z",
+  "source": {
+    "repository": "Jampas335/underp-itens",
+    "path": "data/progression-map.json",
+    "publicUrl": "https://jampas335.github.io/underp-itens/data/progression-map.json",
+    "itemCatalogUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json"
+  },
+  "nodes": [
+    {
+      "id": "activity-boosting-c",
+      "type": "economicNode",
+      "position": { "x": 20, "y": 90 },
+      "data": {
+        "kind": "activity",
+        "title": "Boosting Classe C",
+        "subtitle": "Roubos / carros",
+        "value": 0,
+        "rate": 40,
+        "note": "",
+        "item": null
+      }
+    },
+    {
+      "id": "item-laptop",
+      "type": "economicNode",
+      "position": { "x": 300, "y": 50 },
+      "data": {
+        "kind": "item",
+        "title": "Laptop",
+        "subtitle": "laptop",
+        "value": 2500,
+        "rate": 0,
+        "note": "",
+        "item": {
+          "name": "laptop",
+          "label": "Laptop",
+          "rarity": "rare",
+          "weight": 1000,
+          "category": "Eletronica",
+          "imageUrl": "https://jampas335.github.io/underp-itens/icons/laptop.png"
+        }
+      }
+    },
+    {
+      "id": "item-chip",
+      "type": "economicNode",
+      "position": { "x": 300, "y": 230 },
+      "data": {
+        "kind": "item",
+        "title": "Chip",
+        "subtitle": "chip",
+        "value": 900,
+        "rate": 0,
+        "note": "",
+        "item": {
+          "name": "chip",
+          "label": "Chip",
+          "rarity": "uncommon",
+          "weight": 120,
+          "category": "Eletronica",
+          "imageUrl": "https://jampas335.github.io/underp-itens/icons/chip.png"
+        }
+      }
+    },
+    {
+      "id": "craft-crypto-notebook",
+      "type": "economicNode",
+      "position": { "x": 590, "y": 140 },
+      "data": {
+        "kind": "craft",
+        "title": "Notebook Criptografado",
+        "subtitle": "Laptop + Chip",
+        "value": 6500,
+        "rate": 0,
+        "note": "",
+        "item": null
+      }
+    },
+    {
+      "id": "activity-fleeca",
+      "type": "economicNode",
+      "position": { "x": 875, "y": 140 },
+      "data": {
+        "kind": "activity",
+        "title": "Banco Fleeca",
+        "subtitle": "Progressao criminal",
+        "value": 0,
+        "rate": 16,
+        "note": "",
+        "item": null
+      }
+    },
+    {
+      "id": "item-gold",
+      "type": "economicNode",
+      "position": { "x": 1160, "y": 55 },
+      "data": {
+        "kind": "item",
+        "title": "Ouro",
+        "subtitle": "gold_bar",
+        "value": 4200,
+        "rate": 0,
+        "note": "",
+        "item": {
+          "name": "gold_bar",
+          "label": "Ouro",
+          "rarity": "legendary",
+          "weight": 400,
+          "category": "Mineracao",
+          "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/gold_bar.png"
+        }
+      }
+    },
+    {
+      "id": "market-black",
+      "type": "economicNode",
+      "position": { "x": 1450, "y": 130 },
+      "data": {
+        "kind": "market",
+        "title": "Mercado Negro",
+        "subtitle": "Venda ilegal",
+        "value": 0,
+        "rate": 22,
+        "note": "",
+        "item": null
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-boosting-laptop",
+      "source": "activity-boosting-c",
+      "target": "item-laptop",
+      "type": "smoothstep",
+      "data": { "relation": "drop", "chance": 15, "amountPerHour": 20, "note": "" }
+    },
+    {
+      "id": "edge-boosting-chip",
+      "source": "activity-boosting-c",
+      "target": "item-chip",
+      "type": "smoothstep",
+      "data": { "relation": "drop", "chance": 25, "amountPerHour": 32, "note": "" }
+    },
+    {
+      "id": "edge-laptop-craft",
+      "source": "item-laptop",
+      "target": "craft-crypto-notebook",
+      "type": "smoothstep",
+      "data": { "relation": "craft", "chance": 0, "amountPerHour": 10, "note": "" }
+    },
+    {
+      "id": "edge-chip-craft",
+      "source": "item-chip",
+      "target": "craft-crypto-notebook",
+      "type": "smoothstep",
+      "data": { "relation": "craft", "chance": 0, "amountPerHour": 10, "note": "" }
+    },
+    {
+      "id": "edge-craft-fleeca",
+      "source": "craft-crypto-notebook",
+      "target": "activity-fleeca",
+      "type": "smoothstep",
+      "data": { "relation": "requirement", "chance": 0, "amountPerHour": 8, "note": "" }
+    },
+    {
+      "id": "edge-fleeca-gold",
+      "source": "activity-fleeca",
+      "target": "item-gold",
+      "type": "smoothstep",
+      "data": { "relation": "reward", "chance": 0, "amountPerHour": 16, "note": "" }
+    },
+    {
+      "id": "edge-gold-market",
+      "source": "item-gold",
+      "target": "market-black",
+      "type": "smoothstep",
+      "data": { "relation": "sell", "chance": 0, "amountPerHour": 18, "note": "" }
+    }
+  ]
+}

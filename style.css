@@ -1,24 +1,7 @@
 /* ============================================================
-   underRP Item Workbench — Design System
+   underRP Item Workbench - Design System
    Identidade Visual: Night (Roxo/Azul) + Day (Laranja/Amarelo)
    ============================================================ */
-
-/* === FONT FACES === */
-@font-face {
-    font-family: 'TacticSans';
-    src: url('TacticSansExd-Ult.otf') format('opentype');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'TacticSans';
-    src: url('TacticSans-Bld.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
 
 /* === THEME: NIGHT (Default) === */
 :root {
@@ -29,16 +12,16 @@
     --accent-glow: rgba(139, 92, 246, 0.25);
     --accent-glow-2: rgba(54, 192, 255, 0.18);
 
-    --bg: #07070a;
-    --bg-soft: #0e0f14;
-    --panel: rgba(14, 16, 22, 0.92);
-    --panel-strong: rgba(18, 20, 28, 0.96);
+    --bg: #070912;
+    --bg-soft: #05070e;
+    --panel: rgba(11, 13, 20, 0.82);
+    --panel-strong: rgba(20, 22, 32, 0.88);
     --panel-muted: rgba(255, 255, 255, 0.025);
-    --line: rgba(255, 255, 255, 0.07);
-    --line-strong: rgba(255, 255, 255, 0.14);
-    --text: #f9fafb;
-    --text-soft: #a3aec0;
-    --text-muted: #5f6b80;
+    --line: rgba(255, 255, 255, 0.06);
+    --line-strong: rgba(255, 255, 255, 0.18);
+    --text: #ffffff;
+    --text-soft: rgba(255, 255, 255, 0.78);
+    --text-muted: rgba(255, 255, 255, 0.56);
     --success: #34d399;
     --danger: #f87171;
     --warning: #fbbf24;
@@ -51,6 +34,10 @@
     --radius-xl: 32px;
     --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-display: 'Barlow Condensed', 'Inter', sans-serif;
+    --font-ui: 'Inter', 'Segoe UI', Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --cut-poly: polygon(11.56px 0.44px, 11.79px 0.25px, 12.05px 0.11px, 12.33px 0.03px, 12.62px 0, calc(100% - 1.50px) 0, calc(100% - 0.93px) 0.11px, calc(100% - 0.44px) 0.44px, calc(100% - 0.11px) 0.93px, 100% 1.50px, 100% calc(100% - 12.62px), calc(100% - 0.03px) calc(100% - 12.33px), calc(100% - 0.11px) calc(100% - 12.05px), calc(100% - 0.25px) calc(100% - 11.79px), calc(100% - 0.44px) calc(100% - 11.56px), calc(100% - 11.56px) calc(100% - 0.44px), calc(100% - 11.79px) calc(100% - 0.25px), calc(100% - 12.05px) calc(100% - 0.11px), calc(100% - 12.33px) calc(100% - 0.03px), calc(100% - 12.62px) 100%, 1.50px 100%, 0.93px calc(100% - 0.11px), 0.44px calc(100% - 0.44px), 0.11px calc(100% - 0.93px), 0 calc(100% - 1.50px), 0 12.62px, 0.03px 12.33px, 0.11px 12.05px, 0.25px 11.79px, 0.44px 11.56px);
 }
 
 /* === THEME: DAY === */
@@ -75,8 +62,11 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
+    font-family: var(--font-ui);
+    background:
+        radial-gradient(ellipse 80% 50% at 20% 0%, rgba(var(--accent-1-rgb), 0.08), transparent 60%),
+        radial-gradient(ellipse 80% 50% at 80% 100%, rgba(var(--accent-2-rgb), 0.06), transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg-soft));
     color: var(--text);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -97,7 +87,7 @@ img {
 }
 
 code, pre {
-    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-family: var(--font-mono);
 }
 
 .hidden {
@@ -119,12 +109,10 @@ code, pre {
 
 .page-glow {
     position: fixed;
-    border-radius: 50%;
-    filter: blur(140px);
+    display: none;
     pointer-events: none;
-    opacity: 0.35;
+    opacity: 0;
     z-index: 0;
-    animation: glowPulse 8s ease-in-out infinite alternate;
 }
 
 .glow-a {
@@ -171,7 +159,6 @@ code, pre {
 .brand-logo {
     width: 46px;
     height: 46px;
-    border-radius: 14px;
     object-fit: contain;
     filter: drop-shadow(0 4px 16px rgba(var(--accent-1-rgb), 0.3));
     transition: transform var(--transition);
@@ -187,10 +174,10 @@ code, pre {
 }
 
 .brand-title {
-    font-family: 'TacticSans', sans-serif;
+    font-family: var(--font-display);
     font-weight: 900;
     font-size: 24px;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -266,10 +253,9 @@ code, pre {
 /* === PANEL === */
 .panel {
     border: 1px solid var(--line);
-    background: linear-gradient(180deg, rgba(18, 20, 30, 0.90), rgba(12, 14, 22, 0.96));
-    border-radius: var(--radius-lg);
+    background: linear-gradient(180deg, rgba(7, 9, 18, 0.94), rgba(5, 7, 14, 0.90));
+    clip-path: var(--cut-poly);
     box-shadow: var(--shadow);
-    backdrop-filter: blur(16px);
     position: relative;
     overflow: hidden;
 }
@@ -297,7 +283,7 @@ code, pre {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-family: 'TacticSans', sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
@@ -311,7 +297,7 @@ code, pre {
 
 .hero-copy h1 {
     margin: 0 0 16px;
-    font-family: 'TacticSans', sans-serif;
+    font-family: var(--font-display);
     font-weight: 900;
     font-size: clamp(30px, 4.5vw, 48px);
     line-height: 1.05;
@@ -320,7 +306,7 @@ code, pre {
 }
 
 .hero-copy h1 code {
-    font-family: 'TacticSans', sans-serif;
+    font-family: var(--font-display);
     background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -346,8 +332,8 @@ code, pre {
 .workflow-step,
 .stat-card,
 .hint-card {
-    border-radius: 18px;
     border: 1px solid var(--line);
+    clip-path: var(--cut-poly);
     background: var(--panel-muted);
 }
 
@@ -372,7 +358,7 @@ code, pre {
 
 .sync-card strong {
     font-size: 17px;
-    font-family: 'TacticSans', sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
 }
 
@@ -409,7 +395,7 @@ code, pre {
     border-radius: 12px;
     background: linear-gradient(135deg, rgba(var(--accent-1-rgb), 0.15), rgba(var(--accent-2-rgb), 0.10));
     color: var(--accent-1);
-    font-family: 'TacticSans', sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: 15px;
 }
@@ -443,7 +429,7 @@ code, pre {
     margin-top: 10px;
     font-size: clamp(30px, 3.5vw, 42px);
     line-height: 1;
-    font-family: 'TacticSans', sans-serif;
+    font-family: var(--font-display);
     font-weight: 900;
     background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
     -webkit-background-clip: text;
@@ -514,7 +500,7 @@ code, pre {
 .primary-btn,
 .card-action {
     border: 0;
-    border-radius: 14px;
+    clip-path: var(--cut-poly);
     transition: all var(--transition);
 }
 
@@ -615,9 +601,9 @@ code, pre {
     display: grid;
     gap: 12px;
     padding: 18px;
-    border-radius: 22px;
     border: 1px solid var(--line);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    clip-path: var(--cut-poly);
+    background: linear-gradient(180deg, rgba(20, 22, 32, 0.85), rgba(11, 13, 20, 0.82));
     min-height: 260px;
     transition: all var(--transition);
 }
@@ -667,8 +653,8 @@ code, pre {
     gap: 14px;
     margin: 0 0 18px;
     padding: 14px 16px;
-    border-radius: 18px;
     border: 1px solid var(--line);
+    clip-path: var(--cut-poly);
     background: rgba(255, 255, 255, 0.03);
 }
 
@@ -953,7 +939,7 @@ code, pre {
 .builder-header h2,
 .export-header h3 {
     margin: 6px 0 0;
-    font-family: 'TacticSans', sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: 18px;
 }
@@ -1029,7 +1015,7 @@ code, pre {
 
 .builder-item-copy strong {
     font-size: 17px;
-    font-family: 'TacticSans', sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
 }
 
@@ -1067,7 +1053,7 @@ code, pre {
 
 .lua-import-panel textarea {
     min-height: 220px;
-    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-family: var(--font-mono);
     resize: vertical;
 }
 
@@ -1300,7 +1286,7 @@ code, pre {
 }
 
 .checklist strong {
-    font-family: 'TacticSans', sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: 14px;
 }
@@ -1338,12 +1324,11 @@ code, pre {
     opacity: 0;
     pointer-events: none;
     padding: 12px 20px;
-    border-radius: 999px;
+    clip-path: var(--cut-poly);
     background: rgba(10, 12, 20, 0.95);
     border: 1px solid rgba(var(--accent-1-rgb), 0.2);
     color: var(--text);
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(16px);
     transition: opacity var(--transition), transform var(--transition);
     z-index: 50;
     font-size: 14px;
@@ -1367,7 +1352,7 @@ code, pre {
 }
 
 .site-footer .footer-brand {
-    font-family: 'TacticSans', sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
     background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
     -webkit-background-clip: text;
@@ -1407,7 +1392,7 @@ code, pre {
 }
 
 /* ============================================================
-   NOVAS FEATURES — Prontos, GitHub, Upload
+   NOVAS FEATURES - Prontos, GitHub, Upload
    ============================================================ */
 
 /* === STATS: 4 colunas === */
@@ -1556,8 +1541,8 @@ code, pre {
     align-items: center;
     margin: 12px 0;
     padding: 14px;
-    border-radius: 16px;
     border: 1px solid rgba(52, 211, 153, 0.18);
+    clip-path: var(--cut-poly);
     background: rgba(52, 211, 153, 0.045);
 }
 
@@ -1568,7 +1553,7 @@ code, pre {
 }
 
 .ready-public-copy strong {
-    font-family: 'TacticSans', sans-serif;
+    font-family: var(--font-display);
     font-size: 15px;
 }
 
@@ -1595,8 +1580,8 @@ code, pre {
     align-items: center;
     gap: 7px;
     padding: 10px 16px;
-    border-radius: 14px;
     border: none;
+    clip-path: var(--cut-poly);
     background: linear-gradient(135deg, #059669, #34d399);
     color: #07070a;
     font-weight: 700;
@@ -1622,8 +1607,8 @@ code, pre {
     display: grid;
     gap: 10px;
     padding: 14px;
-    border-radius: 16px;
     border: 1px solid var(--line);
+    clip-path: var(--cut-poly);
     background: rgba(255, 255, 255, 0.015);
 }
 
@@ -1671,8 +1656,8 @@ code, pre {
     align-items: center;
     gap: 8px;
     padding: 22px 16px;
-    border-radius: 16px;
     border: 2px dashed rgba(var(--accent-1-rgb), 0.25);
+    clip-path: var(--cut-poly);
     background: rgba(var(--accent-1-rgb), 0.03);
     cursor: pointer;
     transition: all var(--transition);
@@ -1757,7 +1742,6 @@ code, pre {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1768,7 +1752,7 @@ code, pre {
 .modal-panel {
     width: min(520px, 100%);
     padding: 0;
-    border-radius: var(--radius-lg);
+    clip-path: var(--cut-poly);
     display: flex;
     flex-direction: column;
     animation: modalIn 0.2s ease;
@@ -1789,7 +1773,7 @@ code, pre {
 
 .modal-header h3 {
     margin: 6px 0 0;
-    font-family: 'TacticSans', sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
