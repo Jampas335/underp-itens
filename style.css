@@ -271,6 +271,57 @@ code, pre {
     pointer-events: none;
 }
 
+.panel,
+.tab-btn,
+.chip-btn,
+.ghost-btn,
+.primary-btn,
+.card-action,
+.sync-card,
+.workflow-step,
+.stat-card,
+.hint-card,
+.item-card,
+.implemented-bulk-bar,
+.toast,
+.ready-public-export,
+.success-btn,
+.icon-source-section,
+.upload-dropzone,
+.modal-panel {
+    position: relative;
+    isolation: isolate;
+    --cut-border-color: var(--line);
+    border-color: transparent !important;
+}
+
+.panel::after,
+.tab-btn::after,
+.chip-btn::after,
+.ghost-btn::after,
+.primary-btn::after,
+.card-action::after,
+.sync-card::after,
+.workflow-step::after,
+.stat-card::after,
+.hint-card::after,
+.item-card::after,
+.implemented-bulk-bar::after,
+.toast::after,
+.ready-public-export::after,
+.success-btn::after,
+.icon-source-section::after,
+.upload-dropzone::after,
+.modal-panel::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+    clip-path: var(--cut-poly);
+    box-shadow: inset 0 0 0 1px var(--cut-border-color);
+}
+
 /* === HERO === */
 .hero-panel {
     display: grid;
@@ -384,6 +435,7 @@ code, pre {
 }
 
 .workflow-step:hover {
+    --cut-border-color: rgba(var(--accent-1-rgb), 0.24);
     border-color: rgba(var(--accent-1-rgb), 0.2);
 }
 
@@ -420,6 +472,7 @@ code, pre {
 }
 
 .stat-card:hover {
+    --cut-border-color: rgba(var(--accent-1-rgb), 0.24);
     border-color: rgba(var(--accent-1-rgb), 0.2);
     transform: translateY(-2px);
 }
@@ -513,6 +566,7 @@ code, pre {
 }
 
 .tab-btn.active {
+    --cut-border-color: rgba(var(--accent-1-rgb), 0.28);
     background: linear-gradient(135deg, rgba(var(--accent-1-rgb), 0.18), rgba(var(--accent-2-rgb), 0.10));
     color: var(--text);
     border: 1px solid rgba(var(--accent-1-rgb), 0.22);
@@ -583,6 +637,7 @@ code, pre {
 
 .chip-btn.active,
 .chip-btn:hover {
+    --cut-border-color: rgba(var(--accent-1-rgb), 0.28);
     background: rgba(var(--accent-1-rgb), 0.12);
     border-color: rgba(var(--accent-1-rgb), 0.22);
     color: var(--text);
@@ -609,19 +664,7 @@ code, pre {
 }
 
 .item-card::before {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: 23px;
-    padding: 1px;
-    background: linear-gradient(135deg, transparent 40%, rgba(var(--accent-1-rgb), 0.15), rgba(var(--accent-2-rgb), 0.10));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity var(--transition);
+    display: none;
 }
 
 .item-card:hover::before {
@@ -629,19 +672,23 @@ code, pre {
 }
 
 .item-card.pending-card {
+    --cut-border-color: rgba(var(--accent-1-rgb), 0.18);
     border-color: rgba(var(--accent-1-rgb), 0.14);
 }
 
 .item-card.implemented-card.local-item {
+    --cut-border-color: rgba(52, 211, 153, 0.24);
     border-color: rgba(52, 211, 153, 0.20);
 }
 
 .item-card.implemented-card.selected-card {
+    --cut-border-color: rgba(248, 113, 113, 0.40);
     border-color: rgba(248, 113, 113, 0.34);
     box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28), 0 0 24px rgba(248, 113, 113, 0.10);
 }
 
 .item-card:hover {
+    --cut-border-color: rgba(var(--accent-1-rgb), 0.30);
     transform: translateY(-3px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 30px rgba(var(--accent-1-rgb), 0.06);
 }
@@ -884,12 +931,14 @@ code, pre {
 
 .card-action:hover,
 .ghost-btn:hover {
+    --cut-border-color: rgba(255, 255, 255, 0.16);
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.12);
 }
 
 .card-action.primary,
 .primary-btn {
+    --cut-border-color: rgba(var(--accent-2-rgb), 0.34);
     background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
     color: #07070a;
     border: none;
@@ -904,10 +953,12 @@ code, pre {
 }
 
 .card-action.select-toggle {
+    --cut-border-color: rgba(248, 113, 113, 0.22);
     border-color: rgba(248, 113, 113, 0.18);
 }
 
 .card-action.select-toggle.active {
+    --cut-border-color: rgba(248, 113, 113, 0.34);
     background: rgba(248, 113, 113, 0.12);
     border-color: rgba(248, 113, 113, 0.30);
     color: #fecaca;
@@ -1401,10 +1452,12 @@ code, pre {
 }
 
 .stat-card-ready {
+    --cut-border-color: rgba(52, 211, 153, 0.22);
     border-color: rgba(52, 211, 153, 0.18);
 }
 
 .stat-card-ready:hover {
+    --cut-border-color: rgba(52, 211, 153, 0.36);
     border-color: rgba(52, 211, 153, 0.32);
 }
 
@@ -1541,6 +1594,7 @@ code, pre {
     align-items: center;
     margin: 12px 0;
     padding: 14px;
+    --cut-border-color: rgba(52, 211, 153, 0.24);
     border: 1px solid rgba(52, 211, 153, 0.18);
     clip-path: var(--cut-poly);
     background: rgba(52, 211, 153, 0.045);
@@ -1576,6 +1630,7 @@ code, pre {
 
 /* === SUCCESS BUTTON (Publicar como Pronto) === */
 .success-btn {
+    --cut-border-color: rgba(52, 211, 153, 0.36);
     display: inline-flex;
     align-items: center;
     gap: 7px;
@@ -1656,6 +1711,7 @@ code, pre {
     align-items: center;
     gap: 8px;
     padding: 22px 16px;
+    --cut-border-color: rgba(var(--accent-1-rgb), 0.28);
     border: 2px dashed rgba(var(--accent-1-rgb), 0.25);
     clip-path: var(--cut-poly);
     background: rgba(var(--accent-1-rgb), 0.03);
@@ -1666,6 +1722,7 @@ code, pre {
 
 .upload-dropzone:hover,
 .upload-dropzone.drag-over {
+    --cut-border-color: rgba(var(--accent-1-rgb), 0.54);
     border-color: rgba(var(--accent-1-rgb), 0.5);
     background: rgba(var(--accent-1-rgb), 0.07);
 }

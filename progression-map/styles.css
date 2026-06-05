@@ -104,6 +104,7 @@ button {
 }
 
 button:hover {
+    --cut-border-color: var(--line-strong);
     border-color: var(--line-strong);
     background: rgba(255, 255, 255, 0.075);
     transform: translateY(-1px);
@@ -125,9 +126,41 @@ button:disabled:hover {
 
 button.danger,
 .danger {
+    --cut-border-color: rgba(251, 113, 133, 0.28);
     color: #fecdd3;
     border-color: rgba(251, 113, 133, 0.28);
     background: rgba(251, 113, 133, 0.08);
+}
+
+button,
+.sidebar-stats div,
+.cloud-state,
+.econ-node,
+.slot-lane,
+.token-modal,
+.modal-status,
+.read-only-note {
+    position: relative;
+    isolation: isolate;
+    --cut-border-color: var(--line);
+    border-color: transparent !important;
+}
+
+button::after,
+.sidebar-stats div::after,
+.cloud-state::after,
+.econ-node::after,
+.slot-lane::after,
+.token-modal::after,
+.modal-status::after,
+.read-only-note::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+    clip-path: var(--cut-poly);
+    box-shadow: inset 0 0 0 1px var(--cut-border-color);
 }
 
 input,
@@ -304,6 +337,7 @@ code {
 }
 
 .cloud-state.token-on {
+    --cut-border-color: rgba(54, 192, 255, 0.26);
     border-color: rgba(54, 192, 255, 0.22);
 }
 
@@ -313,6 +347,7 @@ code {
 
 .github-ready,
 .primary-action {
+    --cut-border-color: rgba(139, 92, 246, 0.44);
     border-color: rgba(139, 92, 246, 0.4);
     background: var(--accent-grad);
     color: #fff;
@@ -508,6 +543,7 @@ code {
 .econ-node {
     width: 342px;
     padding: 12px;
+    --cut-border-color: color-mix(in srgb, var(--node-color) 44%, transparent);
     border: 1px solid color-mix(in srgb, var(--node-color) 44%, transparent);
     clip-path: var(--cut-poly);
     background:
@@ -519,6 +555,7 @@ code {
 
 .econ-node.selected,
 .econ-node.focused {
+    --cut-border-color: var(--node-color);
     border-color: var(--node-color);
     box-shadow: 0 18px 48px rgba(0, 0, 0, 0.32), 0 0 0 2px color-mix(in srgb, var(--node-color) 18%, transparent);
 }
@@ -603,12 +640,14 @@ code {
     grid-template-rows: auto minmax(0, 1fr);
     gap: 7px;
     padding: 8px;
+    --cut-border-color: rgba(255, 255, 255, 0.14);
     border: 1px dashed rgba(255, 255, 255, 0.12);
     background: rgba(0, 0, 0, 0.18);
     clip-path: var(--cut-poly);
 }
 
 .slot-lane.filled {
+    --cut-border-color: color-mix(in srgb, var(--node-color) 34%, rgba(255, 255, 255, 0.1));
     border-style: solid;
     border-color: color-mix(in srgb, var(--node-color) 30%, rgba(255, 255, 255, 0.1));
 }
@@ -736,6 +775,7 @@ code {
     display: grid;
     gap: 16px;
     padding: 22px;
+    --cut-border-color: var(--line-strong);
     border: 1px solid var(--line-strong);
     background: linear-gradient(180deg, rgba(7, 9, 18, 0.98), rgba(5, 7, 14, 0.96));
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
@@ -779,16 +819,19 @@ code {
 }
 
 .modal-status.ok {
+    --cut-border-color: rgba(34, 197, 94, 0.32);
     border-color: rgba(34, 197, 94, 0.28);
     color: #86efac;
 }
 
 .modal-status.warn {
+    --cut-border-color: rgba(245, 158, 11, 0.32);
     border-color: rgba(245, 158, 11, 0.28);
     color: #fbbf24;
 }
 
 .modal-status.error {
+    --cut-border-color: rgba(239, 68, 68, 0.36);
     border-color: rgba(239, 68, 68, 0.32);
     color: #fca5a5;
 }
@@ -802,6 +845,7 @@ code {
 }
 
 .panel-tabs button.active {
+    --cut-border-color: rgba(52, 211, 153, 0.34);
     border-color: rgba(52, 211, 153, 0.28);
     background: rgba(52, 211, 153, 0.1);
     color: var(--green);
@@ -845,6 +889,7 @@ code {
 .read-only-note {
     margin: 0;
     padding: 10px 12px;
+    --cut-border-color: rgba(54, 192, 255, 0.24);
     border: 1px solid rgba(54, 192, 255, 0.18);
     background: rgba(54, 192, 255, 0.055);
     color: var(--soft);
