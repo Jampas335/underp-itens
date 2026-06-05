@@ -61,53 +61,100 @@ const EMPTY_CATALOG = {
 };
 
 const seededNodes = [
-    makeNode("activity-boosting-c", "activity", "Boosting Classe C", "Roubos / carros", { x: 20, y: 90 }, { rate: 40 }),
-    makeNode("item-laptop", "item", "Laptop", "laptop", { x: 300, y: 50 }, {
-        item: {
-            name: "laptop",
-            label: "Laptop",
-            rarity: "rare",
-            weight: 1000,
-            category: "Eletronica",
-            imageUrl: "https://jampas335.github.io/underp-itens/icons/laptop.png",
-        },
-        value: 2500,
+    makeNode("activity-boosting-c", "activity", "Boosting Classe C", "Roubos / carros", { x: 40, y: 120 }, {
+        rate: 40,
+        rewards: [
+            createSlotItem({
+                name: "laptop",
+                label: "Laptop",
+                rarity: "rare",
+                weight: 1000,
+                category: "Eletronica",
+                imageUrl: "https://jampas335.github.io/underp-itens/icons/laptop.png",
+            }, { id: "reward-laptop", chance: 15, amountPerHour: 20, value: 2500 }),
+            createSlotItem({
+                name: "chip",
+                label: "Chip",
+                rarity: "uncommon",
+                weight: 120,
+                category: "Eletronica",
+                imageUrl: "https://jampas335.github.io/underp-itens/icons/chip.png",
+            }, { id: "reward-chip", chance: 25, amountPerHour: 32, value: 900 }),
+        ],
     }),
-    makeNode("item-chip", "item", "Chip", "chip", { x: 300, y: 230 }, {
-        item: {
-            name: "chip",
-            label: "Chip",
-            rarity: "uncommon",
-            weight: 120,
-            category: "Eletronica",
-            imageUrl: "https://jampas335.github.io/underp-itens/icons/chip.png",
-        },
-        value: 900,
+    makeNode("craft-crypto-notebook", "craft", "Notebook Criptografado", "Laptop + Chip", { x: 460, y: 120 }, {
+        value: 6500,
+        requirements: [
+            createSlotItem({
+                name: "laptop",
+                label: "Laptop",
+                rarity: "rare",
+                weight: 1000,
+                category: "Eletronica",
+                imageUrl: "https://jampas335.github.io/underp-itens/icons/laptop.png",
+            }, { id: "requirement-laptop", amountPerHour: 10, value: 2500 }),
+            createSlotItem({
+                name: "chip",
+                label: "Chip",
+                rarity: "uncommon",
+                weight: 120,
+                category: "Eletronica",
+                imageUrl: "https://jampas335.github.io/underp-itens/icons/chip.png",
+            }, { id: "requirement-chip", amountPerHour: 10, value: 900 }),
+        ],
+        rewards: [
+            createSlotItem({
+                name: "notebook_crypto",
+                label: "Notebook Criptografado",
+                rarity: "epic",
+                weight: 1200,
+                category: "Craft",
+                imageUrl: "",
+            }, { id: "reward-notebook-crypto", amountPerHour: 10, value: 6500 }),
+        ],
     }),
-    makeNode("craft-crypto-notebook", "craft", "Notebook Criptografado", "Laptop + Chip", { x: 590, y: 140 }, { value: 6500 }),
-    makeNode("activity-fleeca", "activity", "Banco Fleeca", "Progressao criminal", { x: 875, y: 140 }, { rate: 16 }),
-    makeNode("item-gold", "item", "Ouro", "gold_bar", { x: 1160, y: 55 }, {
-        item: {
-            name: "gold_bar",
-            label: "Ouro",
-            rarity: "legendary",
-            weight: 400,
-            category: "Mineracao",
-            imageUrl: "https://jampas335.github.io/underp-itens/ready-items/icons/gold_bar.png",
-        },
-        value: 4200,
+    makeNode("activity-fleeca", "activity", "Banco Fleeca", "Progressao criminal", { x: 880, y: 120 }, {
+        rate: 16,
+        requirements: [
+            createSlotItem({
+                name: "notebook_crypto",
+                label: "Notebook Criptografado",
+                rarity: "epic",
+                weight: 1200,
+                category: "Craft",
+                imageUrl: "",
+            }, { id: "requirement-notebook-crypto", amountPerHour: 8, value: 6500 }),
+        ],
+        rewards: [
+            createSlotItem({
+                name: "gold_bar",
+                label: "Ouro",
+                rarity: "legendary",
+                weight: 400,
+                category: "Mineracao",
+                imageUrl: "https://jampas335.github.io/underp-itens/ready-items/icons/gold_bar.png",
+            }, { id: "reward-gold", amountPerHour: 16, value: 4200 }),
+        ],
     }),
-    makeNode("market-black", "market", "Mercado Negro", "Venda ilegal", { x: 1450, y: 130 }, { rate: 22 }),
+    makeNode("market-black", "market", "Mercado Negro", "Venda ilegal", { x: 1300, y: 120 }, {
+        rate: 22,
+        requirements: [
+            createSlotItem({
+                name: "gold_bar",
+                label: "Ouro",
+                rarity: "legendary",
+                weight: 400,
+                category: "Mineracao",
+                imageUrl: "https://jampas335.github.io/underp-itens/ready-items/icons/gold_bar.png",
+            }, { id: "requirement-gold-market", amountPerHour: 18, value: 4200 }),
+        ],
+    }),
 ];
 
 const seededEdges = [
-    makeEdge("edge-boosting-laptop", "activity-boosting-c", "item-laptop", "drop", { chance: 15, amountPerHour: 20 }),
-    makeEdge("edge-boosting-chip", "activity-boosting-c", "item-chip", "drop", { chance: 25, amountPerHour: 32 }),
-    makeEdge("edge-laptop-craft", "item-laptop", "craft-crypto-notebook", "craft", { amountPerHour: 10 }),
-    makeEdge("edge-chip-craft", "item-chip", "craft-crypto-notebook", "craft", { amountPerHour: 10 }),
+    makeEdge("edge-boosting-craft", "activity-boosting-c", "craft-crypto-notebook", "unlock", { amountPerHour: 10 }),
     makeEdge("edge-craft-fleeca", "craft-crypto-notebook", "activity-fleeca", "requirement", { amountPerHour: 8 }),
-    makeEdge("edge-fleeca-gold", "activity-fleeca", "item-gold", "reward", { amountPerHour: 16 }),
-    makeEdge("edge-gold-market", "item-gold", "market-black", "sell", { amountPerHour: 18 }),
+    makeEdge("edge-fleeca-market", "activity-fleeca", "market-black", "sell", { amountPerHour: 18 }),
 ];
 
 function makeNode(id, kind, title, subtitle, position, extra = {}) {
@@ -123,6 +170,8 @@ function makeNode(id, kind, title, subtitle, position, extra = {}) {
             rate: extra.rate || 0,
             note: extra.note || "",
             item: extra.item || null,
+            requirements: Array.isArray(extra.requirements) ? extra.requirements : [],
+            rewards: Array.isArray(extra.rewards) ? extra.rewards : [],
         },
     };
 }
@@ -272,12 +321,14 @@ function buildGraphDocument(nodes, edges) {
 }
 
 function stripRuntimeNodeState(node) {
+    const data = { ...(node.data || {}) };
+    delete data.focusState;
+    delete data.canEdit;
+    delete data.onSlotDrop;
+    delete data.onSlotRemove;
     return {
         ...node,
-        data: {
-            ...(node.data || {}),
-            focusState: undefined,
-        },
+        data,
     };
 }
 
@@ -300,24 +351,35 @@ function parseGraphDocument(document) {
     };
 }
 
-function createItemNode(item, position) {
-    const id = `item-${item.name || item.id}-${Date.now()}-${Math.random().toString(16).slice(2)}`;
-    const rarity = item.rarity || item.inventory?.rarity || "common";
-    const weight = Number(item.weight || item.inventory?.weight || 0);
-    return makeNode(id, "item", item.label || item.name, item.name, position, {
-        value: Number(item.value || 0),
+function createSlotItem(item, extra = {}) {
+    const source = item?.item || item || {};
+    const name = source.name || source.id || "item";
+    return {
+        id: extra.id || `${name}-${Date.now()}-${Math.random().toString(16).slice(2)}`,
         item: {
-            name: item.name,
-            label: item.label || item.name,
-            rarity,
-            weight,
-            category: item.category || "",
-            imageUrl: item.imageUrl || "",
-            imageCandidates: item.imageCandidates || [],
-            inventory: item.inventory || null,
-            lua: item.lua || "",
+            name,
+            label: source.label || source.name || name,
+            rarity: source.rarity || source.inventory?.rarity || "common",
+            weight: Number(source.weight || source.inventory?.weight || 0),
+            category: source.category || "",
+            imageUrl: source.imageUrl || "",
+            imageCandidates: source.imageCandidates || [],
+            inventory: source.inventory || null,
+            lua: source.lua || "",
         },
-    });
+        chance: Number(extra.chance || source.chance || 0),
+        amountPerHour: Number(extra.amountPerHour || source.amountPerHour || 0),
+        value: Number(extra.value || source.value || 0),
+        note: extra.note || source.note || "",
+    };
+}
+
+function getSlotItems(data, key) {
+    return Array.isArray(data?.[key]) ? data[key] : [];
+}
+
+function getSlotEntryItem(entry) {
+    return entry?.item || entry || {};
 }
 
 function createBlankNode(kind, position) {
@@ -364,11 +426,14 @@ function normalizeEdge(edge) {
     };
 }
 
-function EconomicNode({ data, selected }) {
+function EconomicNode({ id, data, selected }) {
     const meta = NODE_KINDS[data.kind] || NODE_KINDS.activity;
     const item = data.item || {};
     const imageUrl = item.imageUrl || "";
     const focus = data.focusState || "normal";
+    const requirements = getSlotItems(data, "requirements");
+    const rewards = getSlotItems(data, "rewards");
+    const isItemNode = data.kind === "item";
     const className = [
         "econ-node",
         `node-${meta.tone}`,
@@ -399,9 +464,92 @@ function EconomicNode({ data, selected }) {
                 ${data.value ? html`<span>$${formatNumber(data.value)}</span>` : null}
                 ${data.rate ? html`<span>${formatNumber(data.rate)}/h</span>` : null}
             </div>
+            ${!isItemNode ? html`
+                <div className="node-slot-grid">
+                    <${SlotLane}
+                        nodeId=${id}
+                        slotKey="requirements"
+                        title="Requisitos"
+                        items=${requirements}
+                        canEdit=${data.canEdit}
+                        onDropItem=${data.onSlotDrop}
+                        onRemoveItem=${data.onSlotRemove}
+                    />
+                    <${SlotLane}
+                        nodeId=${id}
+                        slotKey="rewards"
+                        title="Recompensas"
+                        items=${rewards}
+                        canEdit=${data.canEdit}
+                        onDropItem=${data.onSlotDrop}
+                        onRemoveItem=${data.onSlotRemove}
+                    />
+                </div>
+            ` : null}
             <${Handle} className="node-handle" type="source" position=${Position.Right} />
             <${Handle} className="node-handle" type="source" position=${Position.Bottom} />
         </div>
+    `;
+}
+
+function SlotLane({ nodeId, slotKey, title, items, canEdit, onDropItem, onRemoveItem }) {
+    const handleDragOver = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        event.dataTransfer.dropEffect = canEdit ? "copy" : "none";
+    };
+    const handleDrop = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        if (!canEdit) return;
+        const raw = event.dataTransfer.getData("application/x-underrp-item");
+        if (!raw) return;
+        try {
+            onDropItem?.(nodeId, slotKey, JSON.parse(raw));
+        } catch (err) {
+            console.error("Item invalido no drop:", err);
+        }
+    };
+
+    return html`
+        <section
+            className=${`slot-lane ${items.length ? "filled" : "empty"}`}
+            onDragOver=${handleDragOver}
+            onDrop=${handleDrop}
+        >
+            <header>
+                <span>${title}</span>
+                <b>${items.length}</b>
+            </header>
+            <div className="slot-items">
+                ${items.length
+                    ? items.map((entry) => {
+                        const slotItem = getSlotEntryItem(entry);
+                        return html`
+                            <article className="slot-item" key=${entry.id || slotItem.name}>
+                                <img src=${slotItem.imageUrl || ""} alt=${slotItem.label || slotItem.name} loading="lazy" />
+                                <div>
+                                    <strong>${slotItem.label || slotItem.name}</strong>
+                                    <span>${entry.chance ? `${entry.chance}%` : ""}${entry.amountPerHour ? ` ${formatNumber(entry.amountPerHour)}/h` : ""}</span>
+                                </div>
+                                ${canEdit ? html`
+                                    <button
+                                        type="button"
+                                        title="Remover"
+                                        onMouseDown=${(event) => event.stopPropagation()}
+                                        onClick=${(event) => {
+                                            event.stopPropagation();
+                                            onRemoveItem?.(nodeId, slotKey, entry.id || slotItem.name);
+                                        }}
+                                    >x</button>
+                                ` : null}
+                            </article>
+                        `;
+                    })
+                    : html`<p>${canEdit ? "Arraste um item aqui" : "Sem itens"}</p>`
+                }
+            </div>
+        </section>
     `;
 }
 
@@ -567,14 +715,65 @@ function ProgressionMap() {
             .slice(0, 140);
     }, [catalog.items, category, rarity, search]);
 
+    const addItemToNodeSlot = useCallback((nodeId, slotKey, item) => {
+        if (!canEdit) {
+            setCloudStatus("Conecte o GitHub para adicionar itens aos slots.");
+            return;
+        }
+        const normalizedSlot = slotKey === "requirements" ? "requirements" : "rewards";
+        let changed = false;
+        setNodes((current) => current.map((node) => {
+            if (node.id !== nodeId || node.data.kind === "item") return node;
+            const existing = getSlotItems(node.data, normalizedSlot);
+            const nextEntry = createSlotItem(item);
+            const itemName = nextEntry.item.name;
+            if (existing.some((entry) => getSlotEntryItem(entry).name === itemName)) return node;
+            changed = true;
+            return {
+                ...node,
+                data: {
+                    ...node.data,
+                    [normalizedSlot]: existing.concat(nextEntry),
+                },
+            };
+        }));
+        setCloudStatus(changed
+            ? `Item adicionado em ${normalizedSlot === "requirements" ? "Requisitos" : "Recompensas"}.`
+            : "Esse item ja existe nesse slot."
+        );
+    }, [canEdit, setNodes]);
+
+    const removeItemFromNodeSlot = useCallback((nodeId, slotKey, itemId) => {
+        if (!canEdit) {
+            setCloudStatus("Conecte o GitHub para remover itens dos slots.");
+            return;
+        }
+        const normalizedSlot = slotKey === "requirements" ? "requirements" : "rewards";
+        setNodes((current) => current.map((node) => {
+            if (node.id !== nodeId) return node;
+            return {
+                ...node,
+                data: {
+                    ...node.data,
+                    [normalizedSlot]: getSlotItems(node.data, normalizedSlot)
+                        .filter((entry) => (entry.id || getSlotEntryItem(entry).name) !== itemId),
+                },
+            };
+        }));
+        setCloudStatus("Item removido do slot.");
+    }, [canEdit, setNodes]);
+
     const focusSet = useMemo(() => buildFocusSet(focusId, nodes, edges), [focusId, nodes, edges]);
     const renderedNodes = useMemo(() => nodes.map((node) => ({
         ...node,
         data: {
             ...node.data,
             focusState: !focusId ? "normal" : focusSet.nodes.has(node.id) ? "focus" : "dim",
+            canEdit,
+            onSlotDrop: addItemToNodeSlot,
+            onSlotRemove: removeItemFromNodeSlot,
         },
-    })), [nodes, focusId, focusSet]);
+    })), [nodes, focusId, focusSet, canEdit, addItemToNodeSlot, removeItemFromNodeSlot]);
 
     const renderedEdges = useMemo(() => edges.map((edge) => {
         if (!focusId) return edge;
@@ -625,15 +824,13 @@ function ProgressionMap() {
     const onDrop = useCallback((event) => {
         event.preventDefault();
         if (!canEdit) {
-            setCloudStatus("Conecte o GitHub para adicionar itens ao mapa.");
+            setCloudStatus("Conecte o GitHub para adicionar itens aos slots.");
             return;
         }
         const raw = event.dataTransfer.getData("application/x-underrp-item");
         if (!raw) return;
-        const item = JSON.parse(raw);
-        const position = screenToFlowPosition({ x: event.clientX, y: event.clientY });
-        setNodes((current) => current.concat(createItemNode(item, position)));
-    }, [canEdit, screenToFlowPosition, setNodes]);
+        setCloudStatus("Arraste o item para Requisitos ou Recompensas dentro de um bloco.");
+    }, [canEdit]);
 
     const addNode = useCallback((kind) => {
         if (!canEdit) {
@@ -649,32 +846,33 @@ function ProgressionMap() {
 
     const addItemToCanvas = useCallback((item) => {
         if (!canEdit) {
-            setCloudStatus("Conecte o GitHub para adicionar itens ao mapa.");
+            setCloudStatus("Conecte o GitHub para adicionar itens aos slots.");
             return;
         }
-        const position = screenToFlowPosition({
-            x: Math.round(window.innerWidth * 0.48),
-            y: Math.round(window.innerHeight * 0.48),
-        });
-        setNodes((current) => current.concat(createItemNode(item, position)));
-    }, [canEdit, screenToFlowPosition, setNodes]);
+        const target = selected?.type === "node"
+            ? nodes.find((node) => node.id === selected.id && node.data.kind !== "item")
+            : null;
+        if (!target) {
+            setCloudStatus("Selecione um bloco e use +, ou arraste o item para um slot.");
+            return;
+        }
+        addItemToNodeSlot(target.id, "rewards", item);
+    }, [canEdit, selected, nodes, addItemToNodeSlot]);
 
     const focusExistingItem = useCallback((item) => {
-        const found = nodes.find((node) =>
-            node.data.kind === "item" && node.data.item?.name === item.name
-        );
+        const found = nodes.find((node) => {
+            const requirements = getSlotItems(node.data, "requirements");
+            const rewards = getSlotItems(node.data, "rewards");
+            return requirements.concat(rewards).some((entry) => getSlotEntryItem(entry).name === item.name);
+        });
         if (found) {
             setFocusId(found.id);
             setSelected({ type: "node", id: found.id });
             setPanelTab("inspector");
             return;
         }
-        if (!canEdit) {
-            setCloudStatus("Item ainda nao esta no mapa. Conecte o GitHub para adiciona-lo.");
-            return;
-        }
-        addItemToCanvas(item);
-    }, [canEdit, nodes, addItemToCanvas]);
+        setCloudStatus("Esse item ainda nao esta em nenhum bloco.");
+    }, [nodes]);
 
     const updateNodeData = useCallback((id, patch) => {
         if (!canEdit) {
@@ -1195,40 +1393,49 @@ function buildFocusSet(focusId, nodes, edges) {
 }
 
 function buildEconomyMetrics(nodes, edges) {
-    const nodeMap = new Map(nodes.map((node) => [node.id, node]));
-    return nodes
-        .filter((node) => node.data.kind === "item")
-        .map((node) => {
-            let entries = 0;
-            let exits = 0;
-            const value = Number(node.data.value || 0);
+    const rows = new Map();
 
-            for (const edge of edges) {
-                const relation = edge.data?.relation || "requirement";
-                const amount = Number(edge.data?.amountPerHour || 0);
-                const source = nodeMap.get(edge.source);
-                const target = nodeMap.get(edge.target);
-                const sourceIsItem = source?.data.kind === "item";
-                const targetIsItem = target?.data.kind === "item";
-
-                if (edge.target === node.id && (RELATIONS[relation]?.source || !sourceIsItem)) entries += amount;
-                if (edge.source === node.id && (RELATIONS[relation]?.sink || !targetIsItem)) exits += amount;
-            }
-
-            const delta = entries - exits;
-            const status = delta > 20 ? "excesso" : delta < -20 ? "escassez" : "ok";
-            return {
+    const getRow = (entry, node) => {
+        const item = getSlotEntryItem(entry);
+        const name = item.name || item.id || "item";
+        if (!rows.has(name)) {
+            rows.set(name, {
                 nodeId: node.id,
-                name: node.data.item?.name || node.data.subtitle || node.id,
-                label: node.data.title,
-                entries,
-                exits,
-                delta,
-                status,
-                netValue: delta * value,
-            };
-        })
-        .sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta));
+                name,
+                label: item.label || name,
+                entries: 0,
+                exits: 0,
+                value: Number(entry.value || item.value || 0),
+                sources: [],
+                sinks: [],
+            });
+        }
+        return rows.get(name);
+    };
+
+    for (const node of nodes) {
+        for (const entry of getSlotItems(node.data, "rewards")) {
+            const row = getRow(entry, node);
+            row.entries += Number(entry.amountPerHour || 0);
+            row.sources.push(node.data.title);
+        }
+        for (const entry of getSlotItems(node.data, "requirements")) {
+            const row = getRow(entry, node);
+            row.exits += Number(entry.amountPerHour || 0);
+            row.sinks.push(node.data.title);
+        }
+    }
+
+    return Array.from(rows.values()).map((row) => {
+        const delta = row.entries - row.exits;
+        const status = delta > 20 ? "excesso" : delta < -20 ? "escassez" : "ok";
+        return {
+            ...row,
+            delta,
+            status,
+            netValue: delta * row.value,
+        };
+    }).sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta));
 }
 
 function formatNumber(value) {

@@ -35,3 +35,12 @@ https://jampas335.github.io/underp-itens/data/progression-map.json
 Para salvar alteracoes de qualquer maquina, conecte um GitHub PAT no painel. A escrita usa a GitHub Contents API no arquivo `data/progression-map.json` do repositorio `Jampas335/underp-itens`.
 
 Sem token, o app abre em modo leitura e ainda mantem uma copia local em `localStorage`.
+
+## Modelo visual
+
+Os itens nao sao nodes soltos por padrao. Cada bloco de atividade, trabalho, craft ou mercado possui slots internos:
+
+- `Requisitos`: itens consumidos ou necessarios para executar o bloco.
+- `Recompensas`: itens gerados pelo bloco.
+
+Arraste um item da lateral diretamente para um desses slots.
