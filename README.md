@@ -92,6 +92,23 @@ git push
 - Para refletir no servidor de verdade, ainda e preciso colar o export no `prea-inventory`.
 - Para refletir no catalogo publicado para todos, gere novo snapshot e publique no GitHub Pages.
 
+## Export publico dos itens prontos
+
+Os itens da aba `Prontos` tambem ficam disponiveis em um JSON estavel para outros sites:
+
+`https://jampas335.github.io/underp-itens/data/ready-items-export.json`
+
+Exemplo de consumo:
+
+```js
+const response = await fetch("https://jampas335.github.io/underp-itens/data/ready-items-export.json", { cache: "no-store" });
+const catalog = await response.json();
+const readyItems = catalog.items;
+```
+
+Cada item traz `name`, `label`, `category`, `type`, `rarity`, `weight`, `imageUrl`, `imageCandidates`, `inventory` e `lua`.
+Use `imageUrl` como imagem principal e `imageCandidates` como fallback se quiser evitar icones quebrados.
+
 ## Observacoes
 
 - A imagem do item criado fica presa ao icone pendente escolhido.

@@ -41,6 +41,7 @@ const CONFIG = {
 
     // Caminho do JSON de itens prontos no repositório
     READY_ITEMS_PATH: "data/ready-items.json",
+    READY_EXPORT_PATH: "data/ready-items-export.json",
 
     // Pasta dos ícones uploadados para itens prontos
     READY_ICONS_FOLDER: "ready-items/icons",

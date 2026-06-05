@@ -1549,6 +1549,46 @@ code, pre {
     white-space: nowrap;
 }
 
+.ready-public-export {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    align-items: center;
+    margin: 12px 0;
+    padding: 14px;
+    border-radius: 16px;
+    border: 1px solid rgba(52, 211, 153, 0.18);
+    background: rgba(52, 211, 153, 0.045);
+}
+
+.ready-public-copy {
+    min-width: 0;
+    display: grid;
+    gap: 5px;
+}
+
+.ready-public-copy strong {
+    font-family: 'TacticSans', sans-serif;
+    font-size: 15px;
+}
+
+.ready-public-copy code {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--text-soft);
+}
+
+.ready-public-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
 /* === SUCCESS BUTTON (Publicar como Pronto) === */
 .success-btn {
     display: inline-flex;
@@ -1893,9 +1933,18 @@ code, pre {
 
     .workspace-header,
     .export-header,
+    .ready-public-export,
     .topbar {
         flex-direction: column;
         align-items: stretch;
+    }
+
+    .ready-public-actions {
+        justify-content: stretch;
+    }
+
+    .ready-public-actions > * {
+        flex: 1 1 auto;
     }
 
     .topbar-actions {

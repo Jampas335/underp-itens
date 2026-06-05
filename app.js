@@ -10,6 +10,7 @@ const DEFAULT_VIEW = "pending";
 const RARITY_ORDER = ["common", "uncommon", "rare", "epic", "legendary"];
 const TYPE_ORDER = ["all", "item", "weapon"];
 const IMPLEMENTED_PAGE_SIZE = 48;
+const PUBLIC_READY_EXPORT_SCHEMA = "underrp.ready-items.v1";
 const DEFAULT_CATEGORY_HINTS = [];
 const DEFAULT_JOB_SUGGESTIONS = ["police", "ambulance", "mechanic", "taxi", "realestate", "burgershot", "beanmachine", "cardealer", "judge"];
 const WEAPON_TYPE_SUGGESTIONS = ["Pistol", "Submachine Gun", "Light Machine Gun", "Assault Rifle", "Sniper Rifle", "Shotgun", "Heavy Weapons", "Melee", "Weapon"];
@@ -528,6 +529,7 @@ document.addEventListener("DOMContentLoaded", () => {
     enhanceBuilderFormExperience();
     ensureLuaImportPanel();
     ensureReadyBatchExportButton();
+    ensureReadyPublicExportPanel();
     ensureImplementedCategoryFilter();
     ensureReadyCategoryFilter();
     bindEvents();
@@ -996,6 +998,31 @@ function ensureReadyBatchExportButton() {
     refreshBtn.insertAdjacentElement("afterend", button);
 }
 
+function ensureReadyPublicExportPanel() {
+    if (document.getElementById("readyPublicExportPanel")) return;
+    const readyView = document.getElementById("readyView");
+    const filterBar = readyView?.querySelector(".filter-bar");
+    if (!readyView || !filterBar) return;
+
+    const exportUrl = getReadyPublicExportUrl();
+    const panel = document.createElement("div");
+    panel.id = "readyPublicExportPanel";
+    panel.className = "ready-public-export";
+    panel.innerHTML = `
+        <div class="ready-public-copy">
+            <span class="eyebrow">Export publico</span>
+            <strong>JSON para outros sites</strong>
+            <code id="readyPublicExportUrl">${escapeHtml(exportUrl)}</code>
+        </div>
+        <div class="ready-public-actions">
+            <button class="ghost-btn" id="copyReadyPublicExportUrlBtn" type="button">Copiar URL</button>
+            <button class="ghost-btn" id="copyReadyPublicExportFetchBtn" type="button">Copiar fetch</button>
+            <a class="ghost-btn" id="openReadyPublicExportLink" href="${escapeHtmlAttribute(exportUrl)}" target="_blank" rel="noreferrer">Ver JSON</a>
+        </div>
+    `;
+    filterBar.insertAdjacentElement("afterend", panel);
+}
+
 function flattenPendingItems() {
     const items = [];
     for (const [category, names] of Object.entries(ICONS)) {
@@ -1314,6 +1341,10 @@ async function publishReadyItem(item, iconBase64) {
         currentSha,
         `feat: ${existingIdx >= 0 ? "update" : "add"} ready item ${item.name}`
     );
+    const exportSynced = await publishReadyItemsPublicExportSafely(
+        currentItems,
+        `chore: update public ready items export`
+    );
 
     state.readyItems = currentItems.map((entry) => {
         if (entry.name !== item.name || !iconBase64) return entry;
@@ -1328,6 +1359,7 @@ async function publishReadyItem(item, iconBase64) {
     state.readyLoaded = true;
     state.readyLoading = false;
     syncBuilderSuggestionLists();
+    return { exportSynced };
 }
 
 async function deleteReadyItemFromGitHub(name) {
@@ -1367,10 +1399,176 @@ async function deleteReadyItemFromGitHub(name) {
         currentSha,
         `feat: remove ready item ${name}`
     );
+    const exportSynced = await publishReadyItemsPublicExportSafely(
+        currentItems,
+        `chore: update public ready items export`
+    );
 
     state.readyItems = currentItems;
     state.readyItemsSha = result.content.sha;
     syncBuilderSuggestionLists();
+    return { exportSynced };
+}
+
+async function publishReadyItemsPublicExport(items, message) {
+    const exportPath = getReadyPublicExportPath();
+    const latestExport = await githubGetFile(exportPath);
+    const publicExport = buildReadyItemsPublicExport(items);
+    const encoded = base64Encode(JSON.stringify(publicExport, null, 2));
+    await githubPutFile(
+        exportPath,
+        encoded,
+        latestExport ? latestExport.sha : null,
+        message || "chore: update public ready items export"
+    );
+}
+
+async function publishReadyItemsPublicExportSafely(items, message) {
+    try {
+        await publishReadyItemsPublicExport(items, message);
+        return true;
+    } catch (err) {
+        console.error("Falha ao atualizar export publico de prontos:", err);
+        return false;
+    }
+}
+
+function getReadyPublicExportPath() {
+    return CONFIG.READY_EXPORT_PATH || "data/ready-items-export.json";
+}
+
+function getConfiguredBaseUrl() {
+    return String(CONFIG.BASE_URL || "").replace(/\/+$/, "");
+}
+
+function getPublicAssetUrl(path) {
+    const raw = String(path || "").trim();
+    if (!raw) return "";
+    if (/^https?:\/\//i.test(raw) || raw.startsWith("data:")) return raw;
+    const base = getConfiguredBaseUrl();
+    const cleanPath = raw.replace(/^\/+/, "");
+    return base ? `${base}/${cleanPath}` : cleanPath;
+}
+
+function getReadyPublicExportUrl() {
+    return getPublicAssetUrl(getReadyPublicExportPath());
+}
+
+function buildReadyItemsPublicExport(items, generatedAt = new Date().toISOString()) {
+    const publicItems = (items || [])
+        .filter((item) => item && item.name)
+        .map(normalizePublicReadyItem)
+        .sort((a, b) => (a.label || a.name).localeCompare(b.label || b.name, "pt-BR"));
+
+    return {
+        schema: PUBLIC_READY_EXPORT_SCHEMA,
+        generatedAt,
+        source: {
+            site: getConfiguredBaseUrl(),
+            repository: `${CONFIG.GITHUB_OWNER}/${CONFIG.GITHUB_REPO}`,
+            itemsUrl: getPublicAssetUrl(CONFIG.READY_ITEMS_PATH),
+            exportUrl: getReadyPublicExportUrl(),
+            iconsBaseUrl: getPublicAssetUrl(CONFIG.READY_ICONS_FOLDER),
+        },
+        count: publicItems.length,
+        categories: buildPublicReadyCategories(publicItems),
+        items: publicItems,
+    };
+}
+
+function normalizePublicReadyItem(item) {
+    const hydratedItem = hydrateItemForBuilder(item);
+    const imageCandidates = buildReadyPublicImageCandidates(item);
+    const category = item.siteCategory || item.pendingCategory || "";
+    const image = item.image || `${item.name}.png`;
+
+    return {
+        id: item.name,
+        name: item.name,
+        label: item.label || item.name,
+        description: item.description || "",
+        category,
+        type: item.type || "item",
+        rarity: item.rarity || "common",
+        weight: Number(item.weight || 0),
+        image,
+        imageUrl: imageCandidates[0] || "",
+        imageCandidates,
+        iconSource: item.iconSource || "",
+        status: item.status || "ready",
+        createdAt: item.createdAt || "",
+        updatedAt: item.updatedAt || item.savedAt || "",
+        inventory: buildPublicInventoryPayload(hydratedItem),
+        lua: buildLuaEntry(hydratedItem),
+    };
+}
+
+function buildPublicReadyCategories(items) {
+    const counts = new Map();
+    for (const item of items || []) {
+        const category = item.category || "Sem categoria";
+        counts.set(category, (counts.get(category) || 0) + 1);
+    }
+    return Array.from(counts.entries())
+        .sort((a, b) => a[0].localeCompare(b[0], "pt-BR"))
+        .map(([name, count]) => ({ name, count }));
+}
+
+function buildReadyPublicImageCandidates(item) {
+    const candidates = [];
+    if (!item || !item.name) return candidates;
+
+    if (item.iconSource === "upload" || item.iconSource === "ready") {
+        candidates.push(`${CONFIG.READY_ICONS_FOLDER}/${item.name}.png`);
+    }
+    if (item.iconSource === "pending" && item.pendingIconName) {
+        candidates.push(`${CONFIG.ICONS_FOLDER}/${item.pendingIconName}.${CONFIG.ICON_EXTENSION}`);
+    }
+    if (item.image) {
+        candidates.push(`server-icons/${item.image}`);
+        candidates.push(`${CONFIG.ICONS_FOLDER}/${stripExtension(item.image)}.${CONFIG.ICON_EXTENSION}`);
+    }
+    if (item.pendingIconName) {
+        candidates.push(`${CONFIG.ICONS_FOLDER}/${item.pendingIconName}.${CONFIG.ICON_EXTENSION}`);
+    }
+    candidates.push(`${CONFIG.ICONS_FOLDER}/${item.name}.${CONFIG.ICON_EXTENSION}`);
+
+    return Array.from(new Set(candidates.filter(Boolean)))
+        .filter((path) => !String(path).startsWith("data:"))
+        .map(getPublicAssetUrl);
+}
+
+function buildPublicInventoryPayload(item) {
+    const payload = {};
+    for (const key of ITEM_EXPORT_ORDER) {
+        if (!(key in item)) continue;
+        const value = item[key];
+        if (!shouldIncludePublicExportValue(value)) continue;
+        payload[key] = clonePublicExportValue(value);
+    }
+    for (const [key, value] of Object.entries(item)) {
+        if (ITEM_EXPORT_ORDER.includes(key) || ITEM_META_KEYS.has(key)) continue;
+        if (!shouldIncludePublicExportValue(value)) continue;
+        payload[key] = clonePublicExportValue(value);
+    }
+    return payload;
+}
+
+function shouldIncludePublicExportValue(value) {
+    return value !== undefined && value !== null && value !== "";
+}
+
+function clonePublicExportValue(value) {
+    if (Array.isArray(value)) return value.map(clonePublicExportValue);
+    if (value && typeof value === "object") {
+        const cloned = {};
+        for (const [key, nestedValue] of Object.entries(value)) {
+            if (!shouldIncludePublicExportValue(nestedValue)) continue;
+            cloned[key] = clonePublicExportValue(nestedValue);
+        }
+        return cloned;
+    }
+    return value;
 }
 
 function parseImplementedSnapshotSource(source) {
@@ -1630,6 +1828,8 @@ function bindEvents() {
         loadReadyItems();
     });
     document.getElementById("copyAllReadyExportsBtn").addEventListener("click", copyAllReadyExports);
+    document.getElementById("copyReadyPublicExportUrlBtn")?.addEventListener("click", copyReadyPublicExportUrl);
+    document.getElementById("copyReadyPublicExportFetchBtn")?.addEventListener("click", copyReadyPublicExportFetchSnippet);
 
     // Debounced search
     document.getElementById("pendingSearchInput").addEventListener("input",
@@ -1904,7 +2104,14 @@ function handleReadyGridClick(e) {
     } else if (action === "delete-ready") {
         if (!window.confirm(`Deletar o item pronto "${name}" do GitHub? Isso não pode ser desfeito.`)) return;
         deleteReadyItemFromGitHub(name)
-            .then(() => { renderReadySection(); renderStats(); showToast(`Item ${name} deletado.`); })
+            .then((result) => {
+                renderReadySection();
+                renderStats();
+                showToast(result?.exportSynced === false
+                    ? `Item ${name} deletado. Export publico nao atualizou.`
+                    : `Item ${name} deletado.`
+                );
+            })
             .catch((err) => showToast(`Erro ao deletar: ${err.message}`));
     }
 }
@@ -3007,6 +3214,18 @@ async function copyAllReadyExports() {
     }
 }
 
+function copyReadyPublicExportUrl() {
+    copyToClipboard(getReadyPublicExportUrl(), "URL do export publico copiada.");
+}
+
+function copyReadyPublicExportFetchSnippet() {
+    const url = getReadyPublicExportUrl();
+    const snippet = `const response = await fetch("${url}", { cache: "no-store" });
+const catalog = await response.json();
+const readyItems = catalog.items;`;
+    copyToClipboard(snippet, "Snippet fetch copiado.");
+}
+
 function saveBuilderItem() {
     const pending = getBuilderPendingItem();
     const hasRealPending = pending && !pending.isManual;
@@ -3086,7 +3305,7 @@ async function handlePublishAsReady() {
 
     try {
         const iconBase64 = state.builder.iconSource === "upload" ? state.builder.uploadedIconBase64 : null;
-        await publishReadyItem(readyItem, iconBase64);
+        const publishResult = await publishReadyItem(readyItem, iconBase64);
 
         // Archive pending locally too
         if (hasRealPending && !state.archivedPending.includes(pending.name)) {
@@ -3109,10 +3328,12 @@ async function handlePublishAsReady() {
             revealName: previewItem.name,
             statusPrefix: `Atualizado agora. `,
         });
-        showToast(
-            isUpdatingReady
-                ? `Item ${previewItem.name} atualizado nos Prontos.`
-                : `Item ${previewItem.name} publicado como Pronto.`
+        const successMessage = isUpdatingReady
+            ? `Item ${previewItem.name} atualizado nos Prontos.`
+            : `Item ${previewItem.name} publicado como Pronto.`;
+        showToast(publishResult?.exportSynced === false
+            ? `${successMessage} Export publico nao atualizou.`
+            : successMessage
         );
     } catch (err) {
         const message = err.message || "Falha ao publicar no GitHub.";
