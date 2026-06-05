@@ -487,11 +487,7 @@ code {
 }
 
 .react-flow {
-    background:
-        linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-        #05070e;
-    background-size: 64px 64px;
+    background: #05070e;
 }
 
 .react-flow__controls,
