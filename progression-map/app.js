@@ -13,7 +13,6 @@ import {
     Controls,
     Handle,
     MarkerType,
-    MiniMap,
     Position,
     ReactFlowProvider,
     addEdge,
@@ -367,6 +366,7 @@ function createSlotItem(item, extra = {}) {
             inventory: source.inventory || null,
             lua: source.lua || "",
         },
+        quantity: Number(extra.quantity || source.quantity || 1),
         chance: Number(extra.chance || source.chance || 0),
         amountPerHour: Number(extra.amountPerHour || source.amountPerHour || 0),
         value: Number(extra.value || source.value || 0),
@@ -473,6 +473,7 @@ function EconomicNode({ id, data, selected }) {
                         items=${requirements}
                         canEdit=${data.canEdit}
                         onDropItem=${data.onSlotDrop}
+                        onSlotUpdate=${data.onSlotUpdate}
                         onRemoveItem=${data.onSlotRemove}
                     />
                     <${SlotLane}
@@ -482,6 +483,7 @@ function EconomicNode({ id, data, selected }) {
                         items=${rewards}
                         canEdit=${data.canEdit}
                         onDropItem=${data.onSlotDrop}
+                        onSlotUpdate=${data.onSlotUpdate}
                         onRemoveItem=${data.onSlotRemove}
                     />
                 </div>
@@ -492,7 +494,7 @@ function EconomicNode({ id, data, selected }) {
     `;
 }
 
-function SlotLane({ nodeId, slotKey, title, items, canEdit, onDropItem, onRemoveItem }) {
+function SlotLane({ nodeId, slotKey, title, items, canEdit, onDropItem, onSlotUpdate, onRemoveItem }) {
     const handleDragOver = (event) => {
         event.preventDefault();
         event.stopPropagation();
@@ -532,6 +534,22 @@ function SlotLane({ nodeId, slotKey, title, items, canEdit, onDropItem, onRemove
                                     <strong>${slotItem.label || slotItem.name}</strong>
                                     <span>${entry.chance ? `${entry.chance}%` : ""}${entry.amountPerHour ? ` ${formatNumber(entry.amountPerHour)}/h` : ""}</span>
                                 </div>
+                                <label className="slot-qty" onMouseDown=${(event) => event.stopPropagation()}>
+                                    <span>Qtd</span>
+                                    <input
+                                        type="number"
+                                        min="1"
+                                        step="1"
+                                        disabled=${!canEdit}
+                                        value=${Number(entry.quantity || 1)}
+                                        onInput=${(event) => {
+                                            event.stopPropagation();
+                                            onSlotUpdate?.(nodeId, slotKey, entry.id || slotItem.name, {
+                                                quantity: Math.max(1, Number(event.currentTarget.value || 1)),
+                                            });
+                                        }}
+                                    />
+                                </label>
                                 ${canEdit ? html`
                                     <button
                                         type="button"
@@ -607,7 +625,6 @@ function ProgressionMap() {
     const [relationType, setRelationType] = useState("requirement");
     const [selected, setSelected] = useState(null);
     const [focusId, setFocusId] = useState(null);
-    const [panelTab, setPanelTab] = useState("inspector");
     const [savedAt, setSavedAt] = useState(saved?.savedAt || "");
     const [cloudStatus, setCloudStatus] = useState("Carregando mapa do GitHub...");
     const [cloudSha, setCloudSha] = useState(null);
@@ -763,6 +780,27 @@ function ProgressionMap() {
         setCloudStatus("Item removido do slot.");
     }, [canEdit, setNodes]);
 
+    const updateItemInNodeSlot = useCallback((nodeId, slotKey, itemId, patch) => {
+        if (!canEdit) {
+            setCloudStatus("Conecte o GitHub para editar itens dos slots.");
+            return;
+        }
+        const normalizedSlot = slotKey === "requirements" ? "requirements" : "rewards";
+        setNodes((current) => current.map((node) => {
+            if (node.id !== nodeId) return node;
+            return {
+                ...node,
+                data: {
+                    ...node.data,
+                    [normalizedSlot]: getSlotItems(node.data, normalizedSlot).map((entry) => {
+                        const entryId = entry.id || getSlotEntryItem(entry).name;
+                        return entryId === itemId ? { ...entry, ...patch } : entry;
+                    }),
+                },
+            };
+        }));
+    }, [canEdit, setNodes]);
+
     const focusSet = useMemo(() => buildFocusSet(focusId, nodes, edges), [focusId, nodes, edges]);
     const renderedNodes = useMemo(() => nodes.map((node) => ({
         ...node,
@@ -771,9 +809,10 @@ function ProgressionMap() {
             focusState: !focusId ? "normal" : focusSet.nodes.has(node.id) ? "focus" : "dim",
             canEdit,
             onSlotDrop: addItemToNodeSlot,
+            onSlotUpdate: updateItemInNodeSlot,
             onSlotRemove: removeItemFromNodeSlot,
         },
-    })), [nodes, focusId, focusSet, canEdit, addItemToNodeSlot, removeItemFromNodeSlot]);
+    })), [nodes, focusId, focusSet, canEdit, addItemToNodeSlot, updateItemInNodeSlot, removeItemFromNodeSlot]);
 
     const renderedEdges = useMemo(() => edges.map((edge) => {
         if (!focusId) return edge;
@@ -794,8 +833,6 @@ function ProgressionMap() {
     const selectedEdge = selected?.type === "edge"
         ? edges.find((edge) => edge.id === selected.id) || null
         : null;
-
-    const metrics = useMemo(() => buildEconomyMetrics(nodes, edges), [nodes, edges]);
 
     const guardedNodesChange = useCallback((changes) => {
         const readOnlySafe = changes.every((change) => change.type === "select" || change.type === "dimensions");
@@ -868,7 +905,6 @@ function ProgressionMap() {
         if (found) {
             setFocusId(found.id);
             setSelected({ type: "node", id: found.id });
-            setPanelTab("inspector");
             return;
         }
         setCloudStatus("Esse item ainda nao esta em nenhum bloco.");
@@ -1051,8 +1087,8 @@ function ProgressionMap() {
                         onConnect=${onConnect}
                         onDragOver=${onDragOver}
                         onDrop=${onDrop}
-                        onNodeClick=${(_, node) => { setSelected({ type: "node", id: node.id }); setPanelTab("inspector"); }}
-                        onEdgeClick=${(_, edge) => { setSelected({ type: "edge", id: edge.id }); setPanelTab("inspector"); }}
+                        onNodeClick=${(_, node) => setSelected({ type: "node", id: node.id })}
+                        onEdgeClick=${(_, edge) => setSelected({ type: "edge", id: edge.id })}
                         onPaneClick=${() => setSelected(null)}
                         fitView=${true}
                         minZoom=${0.16}
@@ -1067,12 +1103,6 @@ function ProgressionMap() {
                     >
                         <${Background} gap=${24} size=${1.2} color="#334155" />
                         <${Controls} position="bottom-left" />
-                        <${MiniMap}
-                            position="bottom-right"
-                            nodeStrokeWidth=${3}
-                            nodeColor=${(node) => NODE_KINDS[node.data?.kind]?.color || "#94a3b8"}
-                            maskColor="rgba(5, 8, 16, 0.72)"
-                        />
                     <//>
                 </section>
 
@@ -1092,22 +1122,18 @@ function ProgressionMap() {
             </main>
 
             <aside className="right-panel">
-                <div className="panel-tabs">
-                    <button className=${panelTab === "inspector" ? "active" : ""} onClick=${() => setPanelTab("inspector")}>Inspector</button>
-                    <button className=${panelTab === "dashboard" ? "active" : ""} onClick=${() => setPanelTab("dashboard")}>Economia</button>
+                <div className="panel-heading">
+                    <span className="eyebrow">Inspector</span>
                 </div>
-                ${panelTab === "inspector"
-                    ? html`<${Inspector}
-                        node=${selectedNode}
-                        edge=${selectedEdge}
-                        onNodeChange=${updateNodeData}
-                        onEdgeChange=${updateEdgeData}
-                        onDelete=${deleteSelection}
-                        onFocus=${setFocusId}
-                        canEdit=${canEdit}
-                    />`
-                    : html`<${EconomyDashboard} metrics=${metrics} onFocus=${setFocusId} />`
-                }
+                <${Inspector}
+                    node=${selectedNode}
+                    edge=${selectedEdge}
+                    onNodeChange=${updateNodeData}
+                    onEdgeChange=${updateEdgeData}
+                    onDelete=${deleteSelection}
+                    onFocus=${setFocusId}
+                    canEdit=${canEdit}
+                />
             </aside>
             ${isTokenOpen ? html`
                 <${GitHubTokenModal}
@@ -1331,46 +1357,6 @@ function Inspector({ node, edge, onNodeChange, onEdgeChange, onDelete, onFocus, 
     `;
 }
 
-function EconomyDashboard({ metrics, onFocus }) {
-    const totals = metrics.reduce((acc, row) => {
-        acc.entries += row.entries;
-        acc.exits += row.exits;
-        acc.value += row.netValue;
-        if (row.status === "excesso") acc.excess += 1;
-        if (row.status === "escassez") acc.shortage += 1;
-        return acc;
-    }, { entries: 0, exits: 0, value: 0, excess: 0, shortage: 0 });
-
-    return html`
-        <div className="dashboard">
-            <span className="eyebrow">Heatmap economico</span>
-            <div className="dash-grid">
-                <div><span>Entradas/h</span><strong>${formatNumber(totals.entries)}</strong></div>
-                <div><span>Saidas/h</span><strong>${formatNumber(totals.exits)}</strong></div>
-                <div><span>Excesso</span><strong>${totals.excess}</strong></div>
-                <div><span>Escassez</span><strong>${totals.shortage}</strong></div>
-            </div>
-            <div className="metric-list">
-                ${metrics.length === 0
-                    ? html`<div className="empty-panel compact">Sem itens no mapa.</div>`
-                    : metrics.map((row) => html`
-                        <article className=${`metric-row ${row.status}`}>
-                            <button onClick=${() => onFocus(row.nodeId)}>
-                                <strong>${row.label}</strong>
-                                <code>${row.name}</code>
-                            </button>
-                            <div className="metric-values">
-                                <span>+${formatNumber(row.entries)}</span>
-                                <span>-${formatNumber(row.exits)}</span>
-                                <b>${row.status}</b>
-                            </div>
-                        </article>
-                    `)}
-            </div>
-        </div>
-    `;
-}
-
 function buildFocusSet(focusId, nodes, edges) {
     if (!focusId) return { nodes: new Set(), edges: new Set() };
     const nodeSet = new Set([focusId]);
@@ -1393,52 +1379,6 @@ function buildFocusSet(focusId, nodes, edges) {
     }
 
     return { nodes: nodeSet, edges: edgeSet };
-}
-
-function buildEconomyMetrics(nodes, edges) {
-    const rows = new Map();
-
-    const getRow = (entry, node) => {
-        const item = getSlotEntryItem(entry);
-        const name = item.name || item.id || "item";
-        if (!rows.has(name)) {
-            rows.set(name, {
-                nodeId: node.id,
-                name,
-                label: item.label || name,
-                entries: 0,
-                exits: 0,
-                value: Number(entry.value || item.value || 0),
-                sources: [],
-                sinks: [],
-            });
-        }
-        return rows.get(name);
-    };
-
-    for (const node of nodes) {
-        for (const entry of getSlotItems(node.data, "rewards")) {
-            const row = getRow(entry, node);
-            row.entries += Number(entry.amountPerHour || 0);
-            row.sources.push(node.data.title);
-        }
-        for (const entry of getSlotItems(node.data, "requirements")) {
-            const row = getRow(entry, node);
-            row.exits += Number(entry.amountPerHour || 0);
-            row.sinks.push(node.data.title);
-        }
-    }
-
-    return Array.from(rows.values()).map((row) => {
-        const delta = row.entries - row.exits;
-        const status = delta > 20 ? "excesso" : delta < -20 ? "escassez" : "ok";
-        return {
-            ...row,
-            delta,
-            status,
-            netValue: delta * row.value,
-        };
-    }).sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta));
 }
 
 function formatNumber(value) {

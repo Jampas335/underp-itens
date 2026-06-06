@@ -38,7 +38,8 @@
             "chance": 15,
             "amountPerHour": 20,
             "value": 2500,
-            "note": ""
+            "note": "",
+            "quantity": 1
           },
           {
             "id": "reward-chip",
@@ -56,7 +57,8 @@
             "chance": 25,
             "amountPerHour": 32,
             "value": 900,
-            "note": ""
+            "note": "",
+            "quantity": 1
           }
         ]
       }
@@ -90,7 +92,8 @@
             "chance": 0,
             "amountPerHour": 10,
             "value": 2500,
-            "note": ""
+            "note": "",
+            "quantity": 1
           },
           {
             "id": "requirement-chip",
@@ -108,7 +111,8 @@
             "chance": 0,
             "amountPerHour": 10,
             "value": 900,
-            "note": ""
+            "note": "",
+            "quantity": 1
           }
         ],
         "rewards": [
@@ -128,7 +132,8 @@
             "chance": 0,
             "amountPerHour": 10,
             "value": 6500,
-            "note": ""
+            "note": "",
+            "quantity": 1
           }
         ]
       }
@@ -162,7 +167,8 @@
             "chance": 0,
             "amountPerHour": 8,
             "value": 6500,
-            "note": ""
+            "note": "",
+            "quantity": 1
           }
         ],
         "rewards": [
@@ -182,7 +188,8 @@
             "chance": 0,
             "amountPerHour": 16,
             "value": 4200,
-            "note": ""
+            "note": "",
+            "quantity": 1
           }
         ]
       }
@@ -216,7 +223,8 @@
             "chance": 0,
             "amountPerHour": 18,
             "value": 4200,
-            "note": ""
+            "note": "",
+            "quantity": 1
           }
         ],
         "rewards": []
