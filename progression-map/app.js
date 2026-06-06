@@ -964,9 +964,12 @@ function ProgressionMap() {
             <aside className="item-sidebar">
                 <div className="brand">
                     <img src="./under-icon.png" alt="" />
-                    <div>
-                        <span>underRP</span>
-                        <strong>Progression Map</strong>
+                    <div className="brand-copy">
+                        <span className="brand-kicker">UNDER RP</span>
+                        <strong className="brand-title">
+                            <span>Progression</span>
+                            <span>Map</span>
+                        </strong>
                     </div>
                 </div>
                 <div className="sidebar-stats">

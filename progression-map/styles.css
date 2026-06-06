@@ -222,7 +222,7 @@ code {
 .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .brand img {
@@ -234,26 +234,40 @@ code {
     clip-path: var(--cut-poly);
 }
 
-.brand span,
+.brand-copy {
+    min-width: 0;
+    display: grid;
+    gap: 2px;
+}
+
+.brand-kicker,
 .eyebrow {
     color: var(--accent-2);
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 9px;
     font-weight: 900;
     font-family: var(--font-mono);
-    letter-spacing: 0.14em;
+    letter-spacing: 0.18em;
+    line-height: 1;
 }
 
-.brand strong {
+.brand-title {
+    display: grid;
+    gap: 0;
     font-family: var(--font-display);
-    font-size: 29px;
-    line-height: 0.92;
+    font-size: 26px;
+    line-height: 0.88;
     text-transform: uppercase;
     letter-spacing: 0;
     background: var(--accent-grad);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+.brand-title span {
+    display: block;
+    white-space: nowrap;
 }
 
 .sidebar-stats,
