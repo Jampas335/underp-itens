@@ -244,29 +244,48 @@ async function parseGitHubApiError(resp) {
     if (acceptedPermissions) message += ` | Permissoes exigidas: ${acceptedPermissions}`;
     if (oauthScopes) message += ` | Escopos/token atual: ${oauthScopes}`;
     if (/Resource not accessible by personal access token/i.test(message)) {
-        message += ` | Revise o PAT: Resource owner = ${GITHUB_OWNER}, repositorio ${GITHUB_REPO}, Contents: Read and write.`;
+        message += ` | ${getGitHubWriteAccessHelp()}`;
     }
     return message;
 }
 
+function getGitHubWriteAccessHelp() {
+    return `Crie ou edite um Fine-grained PAT com Resource owner ${GITHUB_OWNER}, Repository access: ${GITHUB_REPO}, Repository permissions > Contents: Read and write. O usuario do token tambem precisa ter Write/Admin nesse repositorio.`;
+}
+
+function getGitHubWriteAccessError(result = {}) {
+    const login = result.login ? ` de ${result.login}` : "";
+    const repo = result.fullName || `${GITHUB_OWNER}/${GITHUB_REPO}`;
+    return `Token${login} consegue acessar ${repo}, mas nao tem permissao de escrita. ${getGitHubWriteAccessHelp()}`;
+}
+
 async function validateGitHubToken(token) {
-    const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}`;
-    const resp = await fetch(url, { headers: getGitHubHeaders(token), cache: "no-store" });
-    if (!resp.ok) throw new Error(await parseGitHubApiError(resp));
-    const data = await resp.json();
+    const userResp = await fetch("https://api.github.com/user", { headers: getGitHubHeaders(token), cache: "no-store" });
+    if (!userResp.ok) throw new Error(await parseGitHubApiError(userResp));
+    const user = await userResp.json();
+
+    const repoUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}`;
+    const repoResp = await fetch(repoUrl, { headers: getGitHubHeaders(token), cache: "no-store" });
+    if (!repoResp.ok) throw new Error(await parseGitHubApiError(repoResp));
+    const data = await repoResp.json();
+    const permissions = data.permissions || null;
     return {
+        login: user.login || "",
         fullName: data.full_name || `${GITHUB_OWNER}/${GITHUB_REPO}`,
-        hasPushPermission: data.permissions ? data.permissions.push !== false : null,
+        hasPushPermission: permissions
+            ? permissions.push === true || permissions.admin === true || permissions.maintain === true
+            : null,
     };
 }
 
 async function githubGetFile(path, options = {}) {
     const bustCache = options.bustCache === true;
+    const allowPublicFallback = options.allowPublicFallback !== false;
     const cacheParam = bustCache ? `${path.includes("?") ? "&" : "?"}t=${Date.now()}` : "";
     const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}${cacheParam}`;
     const token = getGitHubToken();
     let resp = await fetch(url, { headers: getGitHubHeaders(token), cache: "no-store" });
-    if ((resp.status === 401 || resp.status === 403) && token) {
+    if (allowPublicFallback && (resp.status === 401 || resp.status === 403) && token) {
         resp = await fetch(url, { headers: getGitHubHeaders(""), cache: "no-store" });
     }
     if (resp.status === 404) return null;
@@ -325,6 +344,7 @@ function stripRuntimeNodeState(node) {
     delete data.canEdit;
     delete data.onSlotDrop;
     delete data.onSlotRemove;
+    delete data.onSlotUpdate;
     return {
         ...node,
         data,
@@ -692,16 +712,22 @@ function ProgressionMap() {
     }, [loadCloudGraph]);
 
     const saveCloudGraph = useCallback(async () => {
-        if (!getGitHubToken()) {
+        const token = getGitHubToken();
+        if (!token) {
             setIsTokenOpen(true);
             setCloudStatus("Configure o token para salvar no GitHub.");
             return;
         }
 
         setIsCloudSaving(true);
-        setCloudStatus("Salvando mapa no GitHub...");
+        setCloudStatus("Validando acesso de escrita no GitHub...");
         try {
-            const latestFile = await githubGetFile(GITHUB_GRAPH_PATH, { bustCache: true });
+            const access = await validateGitHubToken(token);
+            if (access.hasPushPermission === false) {
+                throw new Error(getGitHubWriteAccessError(access));
+            }
+            setCloudStatus("Salvando mapa no GitHub...");
+            const latestFile = await githubGetFile(GITHUB_GRAPH_PATH, { bustCache: true, allowPublicFallback: false });
             const document = buildGraphDocument(nodes, edges);
             const result = await githubPutFile(
                 GITHUB_GRAPH_PATH,
@@ -1184,22 +1210,21 @@ function GitHubTokenModal({ hasToken, onClose, onSaved, onCleared }) {
     const [visible, setVisible] = useState(false);
     const [status, setStatus] = useState(hasToken
         ? "Token ja salvo nesta maquina. Cole outro token somente se quiser substituir."
-        : "Cole um token Fine-grained com acesso ao repositorio e Contents: Read and write."
+        : getGitHubWriteAccessHelp()
     );
     const [statusType, setStatusType] = useState(hasToken ? "warn" : "ok");
     const [busy, setBusy] = useState(false);
 
     const saveToken = async () => {
-        const token = value.trim();
+        let token = value.trim();
         if (!token) {
             setStatus("Digite um token antes de salvar.");
             setStatusType("error");
             return;
         }
-        if (isMaskedGitHubTokenValue(token) && getGitHubToken()) {
-            setStatus("Token ja esta salvo nesta maquina.");
-            setStatusType("warn");
-            return;
+        const savedToken = getGitHubToken();
+        if (isMaskedGitHubTokenValue(token) && savedToken) {
+            token = savedToken;
         }
 
         setBusy(true);
@@ -1208,7 +1233,7 @@ function GitHubTokenModal({ hasToken, onClose, onSaved, onCleared }) {
         try {
             const result = await validateGitHubToken(token);
             if (result.hasPushPermission === false) {
-                setStatus(`Token valido para ${result.fullName}, mas sem permissao de escrita. Verifique Contents: Read and write.`);
+                setStatus(getGitHubWriteAccessError(result));
                 setStatusType("error");
                 return;
             }
@@ -1242,7 +1267,7 @@ function GitHubTokenModal({ hasToken, onClose, onSaved, onCleared }) {
                     </div>
                     <button onClick=${onClose}>Fechar</button>
                 </header>
-                <p>Sem token, o mapa carrega do GitHub em modo leitura. Para salvar alteracoes de qualquer maquina, use um PAT com acesso a <strong>${GITHUB_OWNER}/${GITHUB_REPO}</strong>.</p>
+                <p>Sem token, o mapa carrega do GitHub em modo leitura. Para salvar alteracoes de qualquer maquina, use um PAT da conta correta com escrita em <strong>${GITHUB_OWNER}/${GITHUB_REPO}</strong>.</p>
                 <label>
                     <span>Token</span>
                     <div className="token-input-row">

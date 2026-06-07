@@ -34,6 +34,14 @@ https://jampas335.github.io/underp-itens/data/progression-map.json
 
 Para salvar alteracoes de qualquer maquina, conecte um GitHub PAT no painel. A escrita usa a GitHub Contents API no arquivo `data/progression-map.json` do repositorio `Jampas335/underp-itens`.
 
+O token precisa ser Fine-grained com:
+
+- Resource owner: `Jampas335`
+- Repository access: `underp-itens`
+- Repository permissions: `Contents` como `Read and write`
+
+O usuario dono do token tambem precisa ter acesso `Write` ou `Admin` no repositorio.
+
 Sem token, o app abre em modo leitura e ainda mantem uma copia local em `localStorage`.
 
 ## Modelo visual
