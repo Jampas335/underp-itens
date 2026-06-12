@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-12T23:35:04.268Z",
+  "generatedAt": "2026-06-12T23:35:20.302Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -6304,9 +6304,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/marfim.png",
         "https://jampas335.github.io/underp-itens/icons/marfim.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-06-12T23:30:46.371Z",
+      "createdAt": "2026-06-12T23:35:17.742Z",
       "updatedAt": "",
       "inventory": {
         "name": "marfim",
@@ -6314,12 +6314,12 @@
         "weight": 7000,
         "type": "item",
         "image": "marfim.png",
-        "unique": false,
+        "unique": true,
         "useable": false,
         "shouldClose": false,
         "rarity": "legendary"
       },
-      "lua": "['marfim'] = {\n    ['name'] = 'marfim',\n    ['label'] = 'Marfim',\n    ['weight'] = 7000,\n    ['type'] = 'item',\n    ['image'] = 'marfim.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'legendary',\n},"
+      "lua": "['marfim'] = {\n    ['name'] = 'marfim',\n    ['label'] = 'Marfim',\n    ['weight'] = 7000,\n    ['type'] = 'item',\n    ['image'] = 'marfim.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'legendary',\n},"
     },
     {
       "id": "weapon_hammer",
