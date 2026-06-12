@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-12T23:30:49.165Z",
+  "generatedAt": "2026-06-12T23:32:21.967Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 366,
+  "count": 367,
   "categories": [
     {
       "name": "Armas",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Caça",
-      "count": 6
+      "count": 7
     },
     {
       "name": "Comida",
@@ -3392,6 +3392,39 @@
         "rarity": "uncommon"
       },
       "lua": "['algemas_rope'] = {\n    ['name'] = 'algemas_rope',\n    ['label'] = 'Corda de Algemar',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'algemas_rope.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "couro_elefante",
+      "name": "couro_elefante",
+      "label": "Couro de Elefante",
+      "description": "",
+      "category": "Caça",
+      "type": "item",
+      "rarity": "legendary",
+      "weight": 5000,
+      "image": "couro_elefante.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/couro_elefante.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/couro_elefante.png",
+        "https://jampas335.github.io/underp-itens/server-icons/couro_elefante.png",
+        "https://jampas335.github.io/underp-itens/icons/couro_elefante.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-06-12T23:32:18.821Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "couro_elefante",
+        "label": "Couro de Elefante",
+        "weight": 5000,
+        "type": "item",
+        "image": "couro_elefante.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "legendary"
+      },
+      "lua": "['couro_elefante'] = {\n    ['name'] = 'couro_elefante',\n    ['label'] = 'Couro de Elefante',\n    ['weight'] = 5000,\n    ['type'] = 'item',\n    ['image'] = 'couro_elefante.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'legendary',\n},"
     },
     {
       "id": "field_dressing",
