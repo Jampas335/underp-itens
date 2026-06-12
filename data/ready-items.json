@@ -1978,6 +1978,26 @@
     "status": "ready"
   },
   {
+    "name": "couro_gamba",
+    "label": "Couro de Gamba",
+    "description": "",
+    "weight": 3000,
+    "type": "item",
+    "image": "couro_gamba.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-06-12T23:33:49.783Z",
+    "status": "ready"
+  },
+  {
     "name": "field_dressing",
     "label": "Curativo de Campo",
     "description": "Bom para feridas rotineiras (contusões, pequenos cortes, abrasões), mas ineficiente no caso de lacerações profundas ou ferimentos graves de tiro.",
