@@ -1998,6 +1998,26 @@
     "status": "ready"
   },
   {
+    "name": "couro_urso",
+    "label": "Couro de Urso",
+    "description": "",
+    "weight": 5000,
+    "type": "item",
+    "image": "couro_urso.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Caça",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-06-12T23:34:28.939Z",
+    "status": "ready"
+  },
+  {
     "name": "field_dressing",
     "label": "Curativo de Campo",
     "description": "Bom para feridas rotineiras (contusões, pequenos cortes, abrasões), mas ineficiente no caso de lacerações profundas ou ferimentos graves de tiro.",
