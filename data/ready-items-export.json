@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-12T23:34:31.539Z",
+  "generatedAt": "2026-06-12T23:35:04.268Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Caça",
-      "count": 8
+      "count": 9
     },
     {
       "name": "Comida",
@@ -97,10 +97,6 @@
     {
       "name": "Madereira",
       "count": 11
-    },
-    {
-      "name": "Manual",
-      "count": 1
     },
     {
       "name": "Materiais",
@@ -3435,7 +3431,7 @@
       "name": "couro_gamba",
       "label": "Couro de Gamba",
       "description": "",
-      "category": "Manual",
+      "category": "Caça",
       "type": "item",
       "rarity": "rare",
       "weight": 3000,
@@ -3446,9 +3442,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/couro_gamba.png",
         "https://jampas335.github.io/underp-itens/icons/couro_gamba.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-06-12T23:33:49.783Z",
+      "createdAt": "2026-06-12T23:35:01.577Z",
       "updatedAt": "",
       "inventory": {
         "name": "couro_gamba",
