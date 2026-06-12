@@ -3651,6 +3651,26 @@
     "status": "ready"
   },
   {
+    "name": "marfim",
+    "label": "Marfim",
+    "description": "",
+    "weight": 7000,
+    "type": "item",
+    "image": "marfim.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Caça",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-06-12T23:30:46.371Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_hammer",
     "label": "Marreta",
     "description": "",
