@@ -3717,7 +3717,7 @@
     "weight": 7000,
     "type": "item",
     "image": "marfim.png",
-    "unique": false,
+    "unique": true,
     "useable": false,
     "shouldClose": false,
     "rarity": "legendary",
@@ -3726,8 +3726,8 @@
     "extraLua": "",
     "siteCategory": "Caça",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-06-12T23:30:46.371Z",
+    "iconSource": "ready",
+    "createdAt": "2026-06-12T23:35:17.742Z",
     "status": "ready"
   },
   {
