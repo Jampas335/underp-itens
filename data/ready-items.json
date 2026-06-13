@@ -4982,26 +4982,6 @@
     "status": "ready"
   },
   {
-    "name": "pele_pumapreta",
-    "label": "Pele de Puma Preta",
-    "description": "",
-    "weight": 780,
-    "type": "item",
-    "image": "pele_pumapreta.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": true,
-    "rarity": "legendary",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Caça",
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-17T09:21:37.828Z",
-    "status": "ready"
-  },
-  {
     "name": "pele_tubarao_martelo_lendario",
     "label": "Pele de Tubarão Martelo Lendário",
     "description": "",
