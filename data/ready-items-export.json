@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:31:37.742Z",
+  "generatedAt": "2026-06-13T02:31:59.999Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8446,7 +8446,7 @@
       "description": "",
       "category": "Caça",
       "type": "item",
-      "rarity": "rare",
+      "rarity": "legendary",
       "weight": 980,
       "image": "pele_tubarao.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pele_tubarao.png",
@@ -8457,7 +8457,7 @@
       ],
       "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-06-13T02:27:31.824Z",
+      "createdAt": "2026-06-13T02:31:57.576Z",
       "updatedAt": "",
       "inventory": {
         "name": "pele_tubarao",
@@ -8468,9 +8468,9 @@
         "unique": false,
         "useable": false,
         "shouldClose": true,
-        "rarity": "rare"
+        "rarity": "legendary"
       },
-      "lua": "['pele_tubarao'] = {\n    ['name'] = 'pele_tubarao',\n    ['label'] = 'Pele de Tubarão Tigre Lendário',\n    ['weight'] = 980,\n    ['type'] = 'item',\n    ['image'] = 'pele_tubarao.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
+      "lua": "['pele_tubarao'] = {\n    ['name'] = 'pele_tubarao',\n    ['label'] = 'Pele de Tubarão Tigre Lendário',\n    ['weight'] = 980,\n    ['type'] = 'item',\n    ['image'] = 'pele_tubarao.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'legendary',\n},"
     },
     {
       "id": "farm_cucumber",
