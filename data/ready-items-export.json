@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:34:24.196Z",
+  "generatedAt": "2026-06-13T02:40:33.157Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -3541,9 +3541,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/couro_pantera_lendario.png",
         "https://jampas335.github.io/underp-itens/icons/couro_pantera_lendario.png"
       ],
-      "iconSource": "ready",
+      "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-06-13T02:34:21.471Z",
+      "createdAt": "2026-06-13T02:40:29.193Z",
       "updatedAt": "",
       "inventory": {
         "name": "couro_pantera_lendario",
