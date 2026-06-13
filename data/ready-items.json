@@ -1978,6 +1978,26 @@
     "status": "ready"
   },
   {
+    "name": "couro_de_caca",
+    "label": "Couro de Caça",
+    "description": "",
+    "weight": 500,
+    "type": "item",
+    "image": "couro_de_caca.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-06-13T02:19:53.648Z",
+    "status": "ready"
+  },
+  {
     "name": "couro_elefante",
     "label": "Couro de Elefante",
     "description": "",
