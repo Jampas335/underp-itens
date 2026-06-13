@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:10:50.468Z",
+  "generatedAt": "2026-06-13T02:15:37.875Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 369,
+  "count": 370,
   "categories": [
     {
       "name": "Armas",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Caça",
-      "count": 9
+      "count": 10
     },
     {
       "name": "Comida",
@@ -2385,6 +2385,39 @@
         "rarity": "common"
       },
       "lua": "['raw_patty'] = {\n    ['name'] = 'raw_patty',\n    ['label'] = 'Carne Crua',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'bs-raw-patty.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "carne_de_caca",
+      "name": "carne_de_caca",
+      "label": "Carne de Caça",
+      "description": "",
+      "category": "Caça",
+      "type": "item",
+      "rarity": "uncommon",
+      "weight": 300,
+      "image": "carne_de_caca.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/carne_de_caca.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/carne_de_caca.png",
+        "https://jampas335.github.io/underp-itens/server-icons/carne_de_caca.png",
+        "https://jampas335.github.io/underp-itens/icons/carne_de_caca.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-06-13T02:15:33.646Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "carne_de_caca",
+        "label": "Carne de Caça",
+        "weight": 300,
+        "type": "item",
+        "image": "carne_de_caca.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "uncommon"
+      },
+      "lua": "['carne_de_caca'] = {\n    ['name'] = 'carne_de_caca',\n    ['label'] = 'Carne de Caça',\n    ['weight'] = 300,\n    ['type'] = 'item',\n    ['image'] = 'carne_de_caca.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "patty",
