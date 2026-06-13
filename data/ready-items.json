@@ -2038,6 +2038,26 @@
     "status": "ready"
   },
   {
+    "name": "couro_javali_lendario",
+    "label": "Couro de Javali Lendário",
+    "description": "",
+    "weight": 4000,
+    "type": "item",
+    "image": "couro_javali_lendario.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Caça",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-06-13T02:47:07.665Z",
+    "status": "ready"
+  },
+  {
     "name": "couro_pantera_lendario",
     "label": "Couro de Pantera Lendária",
     "description": "",
