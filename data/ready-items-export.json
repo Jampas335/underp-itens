@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:47:11.522Z",
+  "generatedAt": "2026-06-13T03:00:11.470Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -6436,9 +6436,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/marfim.png",
         "https://jampas335.github.io/underp-itens/icons/marfim.png"
       ],
-      "iconSource": "ready",
+      "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-06-12T23:35:17.742Z",
+      "createdAt": "2026-06-13T03:00:06.933Z",
       "updatedAt": "",
       "inventory": {
         "name": "marfim",
