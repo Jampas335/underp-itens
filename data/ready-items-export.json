@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:40:33.157Z",
+  "generatedAt": "2026-06-13T02:40:53.214Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 372,
+  "count": 371,
   "categories": [
     {
       "name": "Armas",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Caça",
-      "count": 12
+      "count": 11
     },
     {
       "name": "Comida",
@@ -8405,39 +8405,6 @@
         "rarity": "uncommon"
       },
       "lua": "['pele_cervo'] = {\n    ['name'] = 'pele_cervo',\n    ['label'] = 'Pele de Cervo',\n    ['weight'] = 410,\n    ['type'] = 'item',\n    ['image'] = 'pele_cervo.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
-    },
-    {
-      "id": "pele_pumapreta",
-      "name": "pele_pumapreta",
-      "label": "Pele de Puma Preta",
-      "description": "",
-      "category": "Caça",
-      "type": "item",
-      "rarity": "legendary",
-      "weight": 780,
-      "image": "pele_pumapreta.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pele_pumapreta.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/pele_pumapreta.png",
-        "https://jampas335.github.io/underp-itens/server-icons/pele_pumapreta.png",
-        "https://jampas335.github.io/underp-itens/icons/pele_pumapreta.png"
-      ],
-      "iconSource": "upload",
-      "status": "ready",
-      "createdAt": "2026-04-17T09:21:37.828Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "pele_pumapreta",
-        "label": "Pele de Puma Preta",
-        "weight": 780,
-        "type": "item",
-        "image": "pele_pumapreta.png",
-        "unique": false,
-        "useable": false,
-        "shouldClose": true,
-        "rarity": "legendary"
-      },
-      "lua": "['pele_pumapreta'] = {\n    ['name'] = 'pele_pumapreta',\n    ['label'] = 'Pele de Puma Preta',\n    ['weight'] = 780,\n    ['type'] = 'item',\n    ['image'] = 'pele_pumapreta.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'legendary',\n},"
     },
     {
       "id": "pele_tubarao_martelo_lendario",
