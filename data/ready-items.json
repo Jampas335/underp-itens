@@ -2019,7 +2019,7 @@
   },
   {
     "name": "couro_gamba",
-    "label": "Couro de Gamba",
+    "label": "Couro de Gambá",
     "description": "",
     "weight": 3000,
     "type": "item",
@@ -2033,8 +2033,8 @@
     "extraLua": "",
     "siteCategory": "Caça",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-06-13T02:09:34.205Z",
+    "iconSource": "ready",
+    "createdAt": "2026-06-13T02:22:09.144Z",
     "status": "ready"
   },
   {
