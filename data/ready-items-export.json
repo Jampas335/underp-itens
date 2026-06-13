@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:09:38.632Z",
+  "generatedAt": "2026-06-13T02:10:50.468Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -3477,7 +3477,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-06-12T23:34:28.939Z",
+      "createdAt": "2026-06-13T02:10:46.247Z",
       "updatedAt": "",
       "inventory": {
         "name": "couro_urso",
