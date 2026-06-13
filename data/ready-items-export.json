@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:31:59.999Z",
+  "generatedAt": "2026-06-13T02:32:21.164Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -3532,7 +3532,7 @@
       "description": "",
       "category": "Caça",
       "type": "item",
-      "rarity": "legendary",
+      "rarity": "epic",
       "weight": 5000,
       "image": "couro_urso.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/couro_urso.png",
@@ -3541,9 +3541,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/couro_urso.png",
         "https://jampas335.github.io/underp-itens/icons/couro_urso.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-06-13T02:10:46.247Z",
+      "createdAt": "2026-06-13T02:32:18.046Z",
       "updatedAt": "",
       "inventory": {
         "name": "couro_urso",
@@ -3554,9 +3554,9 @@
         "unique": false,
         "useable": false,
         "shouldClose": false,
-        "rarity": "legendary"
+        "rarity": "epic"
       },
-      "lua": "['couro_urso'] = {\n    ['name'] = 'couro_urso',\n    ['label'] = 'Couro de Urso',\n    ['weight'] = 5000,\n    ['type'] = 'item',\n    ['image'] = 'couro_urso.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'legendary',\n},"
+      "lua": "['couro_urso'] = {\n    ['name'] = 'couro_urso',\n    ['label'] = 'Couro de Urso',\n    ['weight'] = 5000,\n    ['type'] = 'item',\n    ['image'] = 'couro_urso.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'epic',\n},"
     },
     {
       "id": "field_dressing",
