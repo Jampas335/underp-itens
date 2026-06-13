@@ -1991,10 +1991,10 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "Caça",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-06-13T02:19:53.648Z",
+    "iconSource": "ready",
+    "createdAt": "2026-06-13T02:20:25.758Z",
     "status": "ready"
   },
   {
