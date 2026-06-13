@@ -4991,14 +4991,14 @@
     "unique": false,
     "useable": false,
     "shouldClose": false,
-    "rarity": "epic",
+    "rarity": "legendary",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Caça",
     "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-06-13T02:30:55.973Z",
+    "iconSource": "upload",
+    "createdAt": "2026-06-13T02:31:33.137Z",
     "status": "ready"
   },
   {
