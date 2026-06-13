@@ -1348,6 +1348,26 @@
     "status": "ready"
   },
   {
+    "name": "carne_de_caca",
+    "label": "Carne de Caça",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "carne_de_caca.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Caça",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-06-13T02:15:33.646Z",
+    "status": "ready"
+  },
+  {
     "name": "patty",
     "label": "Carne de Hamburguer",
     "description": "",
