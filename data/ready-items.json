@@ -4982,26 +4982,6 @@
     "status": "ready"
   },
   {
-    "name": "pele_tubarao",
-    "label": "Pele de Tubarão",
-    "description": "",
-    "weight": 980,
-    "type": "item",
-    "image": "pele_tubarao.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": true,
-    "rarity": "rare",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Caça",
-    "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-04-17T09:20:23.819Z",
-    "status": "ready"
-  },
-  {
     "name": "pele_martelo",
     "label": "Pele de Tubarão Martelo",
     "description": "",
@@ -5019,6 +4999,26 @@
     "source": "ready",
     "iconSource": "ready",
     "createdAt": "2026-04-17T09:19:24.692Z",
+    "status": "ready"
+  },
+  {
+    "name": "pele_tubarao",
+    "label": "Pele de Tubarão Tigre",
+    "description": "",
+    "weight": 980,
+    "type": "item",
+    "image": "pele_tubarao.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Caça",
+    "source": "ready",
+    "iconSource": "ready",
+    "createdAt": "2026-06-13T02:27:08.088Z",
     "status": "ready"
   },
   {
