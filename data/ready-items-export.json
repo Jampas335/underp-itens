@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:40:53.214Z",
+  "generatedAt": "2026-06-13T02:45:42.662Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 371,
+  "count": 370,
   "categories": [
     {
       "name": "Armas",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Caça",
-      "count": 11
+      "count": 10
     },
     {
       "name": "Comida",
@@ -8339,39 +8339,6 @@
         "rarity": "epic"
       },
       "lua": "['flying_fish'] = {\n    ['name'] = 'flying_fish',\n    ['label'] = 'Peixe Voador',\n    ['weight'] = 0,\n    ['type'] = 'item',\n    ['image'] = 'flying_fish.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'epic',\n},"
-    },
-    {
-      "id": "pele_bisao",
-      "name": "pele_bisao",
-      "label": "Pele de Bisão",
-      "description": "",
-      "category": "Caça",
-      "type": "item",
-      "rarity": "common",
-      "weight": 450,
-      "image": "pele_bisao.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pele_bisao.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/pele_bisao.png",
-        "https://jampas335.github.io/underp-itens/server-icons/pele_bisao.png",
-        "https://jampas335.github.io/underp-itens/icons/pele_bisao.png"
-      ],
-      "iconSource": "upload",
-      "status": "ready",
-      "createdAt": "2026-04-17T09:13:27.616Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "pele_bisao",
-        "label": "Pele de Bisão",
-        "weight": 450,
-        "type": "item",
-        "image": "pele_bisao.png",
-        "unique": false,
-        "useable": false,
-        "shouldClose": true,
-        "rarity": "common"
-      },
-      "lua": "['pele_bisao'] = {\n    ['name'] = 'pele_bisao',\n    ['label'] = 'Pele de Bisão',\n    ['weight'] = 450,\n    ['type'] = 'item',\n    ['image'] = 'pele_bisao.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "pele_cervo",
