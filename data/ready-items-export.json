@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:09:11.524Z",
+  "generatedAt": "2026-06-13T02:09:38.632Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -3442,9 +3442,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/couro_gamba.png",
         "https://jampas335.github.io/underp-itens/icons/couro_gamba.png"
       ],
-      "iconSource": "ready",
+      "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-06-12T23:35:01.577Z",
+      "createdAt": "2026-06-13T02:09:34.205Z",
       "updatedAt": "",
       "inventory": {
         "name": "couro_gamba",
