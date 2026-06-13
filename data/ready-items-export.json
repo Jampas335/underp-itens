@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:32:21.164Z",
+  "generatedAt": "2026-06-13T02:32:34.059Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -3466,7 +3466,7 @@
       "description": "",
       "category": "Caça",
       "type": "item",
-      "rarity": "legendary",
+      "rarity": "epic",
       "weight": 5000,
       "image": "couro_elefante.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/couro_elefante.png",
@@ -3475,9 +3475,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/couro_elefante.png",
         "https://jampas335.github.io/underp-itens/icons/couro_elefante.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-06-13T02:09:07.110Z",
+      "createdAt": "2026-06-13T02:32:31.396Z",
       "updatedAt": "",
       "inventory": {
         "name": "couro_elefante",
@@ -3488,9 +3488,9 @@
         "unique": false,
         "useable": false,
         "shouldClose": false,
-        "rarity": "legendary"
+        "rarity": "epic"
       },
-      "lua": "['couro_elefante'] = {\n    ['name'] = 'couro_elefante',\n    ['label'] = 'Couro de Elefante',\n    ['weight'] = 5000,\n    ['type'] = 'item',\n    ['image'] = 'couro_elefante.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'legendary',\n},"
+      "lua": "['couro_elefante'] = {\n    ['name'] = 'couro_elefante',\n    ['label'] = 'Couro de Elefante',\n    ['weight'] = 5000,\n    ['type'] = 'item',\n    ['image'] = 'couro_elefante.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'epic',\n},"
     },
     {
       "id": "couro_gamba",
