@@ -2047,14 +2047,14 @@
     "unique": false,
     "useable": false,
     "shouldClose": false,
-    "rarity": "legendary",
+    "rarity": "epic",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Caça",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-06-13T02:10:46.247Z",
+    "iconSource": "ready",
+    "createdAt": "2026-06-13T02:32:18.046Z",
     "status": "ready"
   },
   {
