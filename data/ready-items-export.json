@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:29:03.394Z",
+  "generatedAt": "2026-06-13T02:30:31.165Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8455,9 +8455,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/pele_tubarao_martelo_lendario.png",
         "https://jampas335.github.io/underp-itens/icons/pele_tubarao_martelo_lendario.png"
       ],
-      "iconSource": "ready",
+      "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-06-13T02:29:00.611Z",
+      "createdAt": "2026-06-13T02:30:26.785Z",
       "updatedAt": "",
       "inventory": {
         "name": "pele_tubarao_martelo_lendario",
