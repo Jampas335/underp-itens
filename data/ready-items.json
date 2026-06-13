@@ -5003,7 +5003,7 @@
   },
   {
     "name": "pele_tubarao",
-    "label": "Pele de Tubarão Tigre",
+    "label": "Pele de Tubarão Tigre Lendário",
     "description": "",
     "weight": 980,
     "type": "item",
@@ -5018,7 +5018,7 @@
     "siteCategory": "Caça",
     "source": "ready",
     "iconSource": "ready",
-    "createdAt": "2026-06-13T02:27:08.088Z",
+    "createdAt": "2026-06-13T02:27:31.824Z",
     "status": "ready"
   },
   {
