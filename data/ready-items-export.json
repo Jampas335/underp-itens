@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:20:58.143Z",
+  "generatedAt": "2026-06-13T02:22:12.267Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -3495,7 +3495,7 @@
     {
       "id": "couro_gamba",
       "name": "couro_gamba",
-      "label": "Couro de Gamba",
+      "label": "Couro de Gambá",
       "description": "",
       "category": "Caça",
       "type": "item",
@@ -3508,13 +3508,13 @@
         "https://jampas335.github.io/underp-itens/server-icons/couro_gamba.png",
         "https://jampas335.github.io/underp-itens/icons/couro_gamba.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-06-13T02:09:34.205Z",
+      "createdAt": "2026-06-13T02:22:09.144Z",
       "updatedAt": "",
       "inventory": {
         "name": "couro_gamba",
-        "label": "Couro de Gamba",
+        "label": "Couro de Gambá",
         "weight": 3000,
         "type": "item",
         "image": "couro_gamba.png",
@@ -3523,7 +3523,7 @@
         "shouldClose": false,
         "rarity": "rare"
       },
-      "lua": "['couro_gamba'] = {\n    ['name'] = 'couro_gamba',\n    ['label'] = 'Couro de Gamba',\n    ['weight'] = 3000,\n    ['type'] = 'item',\n    ['image'] = 'couro_gamba.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'rare',\n},"
+      "lua": "['couro_gamba'] = {\n    ['name'] = 'couro_gamba',\n    ['label'] = 'Couro de Gambá',\n    ['weight'] = 3000,\n    ['type'] = 'item',\n    ['image'] = 'couro_gamba.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "couro_urso",
