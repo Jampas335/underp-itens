@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:01:33.771Z",
+  "generatedAt": "2026-06-13T02:09:11.524Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -3411,7 +3411,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-06-13T02:01:29.333Z",
+      "createdAt": "2026-06-13T02:09:07.110Z",
       "updatedAt": "",
       "inventory": {
         "name": "couro_elefante",
