@@ -2007,14 +2007,14 @@
     "unique": false,
     "useable": false,
     "shouldClose": false,
-    "rarity": "legendary",
+    "rarity": "epic",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Caça",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-06-13T02:09:07.110Z",
+    "iconSource": "ready",
+    "createdAt": "2026-06-13T02:32:31.396Z",
     "status": "ready"
   },
   {
