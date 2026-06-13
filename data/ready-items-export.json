@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:22:12.267Z",
+  "generatedAt": "2026-06-13T02:27:10.857Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8407,39 +8407,6 @@
       "lua": "['pele_pumapreta'] = {\n    ['name'] = 'pele_pumapreta',\n    ['label'] = 'Pele de Puma Preta',\n    ['weight'] = 780,\n    ['type'] = 'item',\n    ['image'] = 'pele_pumapreta.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'legendary',\n},"
     },
     {
-      "id": "pele_tubarao",
-      "name": "pele_tubarao",
-      "label": "Pele de Tubarão",
-      "description": "",
-      "category": "Caça",
-      "type": "item",
-      "rarity": "rare",
-      "weight": 980,
-      "image": "pele_tubarao.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pele_tubarao.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/pele_tubarao.png",
-        "https://jampas335.github.io/underp-itens/server-icons/pele_tubarao.png",
-        "https://jampas335.github.io/underp-itens/icons/pele_tubarao.png"
-      ],
-      "iconSource": "ready",
-      "status": "ready",
-      "createdAt": "2026-04-17T09:20:23.819Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "pele_tubarao",
-        "label": "Pele de Tubarão",
-        "weight": 980,
-        "type": "item",
-        "image": "pele_tubarao.png",
-        "unique": false,
-        "useable": false,
-        "shouldClose": true,
-        "rarity": "rare"
-      },
-      "lua": "['pele_tubarao'] = {\n    ['name'] = 'pele_tubarao',\n    ['label'] = 'Pele de Tubarão',\n    ['weight'] = 980,\n    ['type'] = 'item',\n    ['image'] = 'pele_tubarao.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
-    },
-    {
       "id": "pele_martelo",
       "name": "pele_martelo",
       "label": "Pele de Tubarão Martelo",
@@ -8471,6 +8438,39 @@
         "rarity": "epic"
       },
       "lua": "['pele_martelo'] = {\n    ['name'] = 'pele_martelo',\n    ['label'] = 'Pele de Tubarão Martelo',\n    ['weight'] = 1200,\n    ['type'] = 'item',\n    ['image'] = 'pele_martelo.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'epic',\n},"
+    },
+    {
+      "id": "pele_tubarao",
+      "name": "pele_tubarao",
+      "label": "Pele de Tubarão Tigre",
+      "description": "",
+      "category": "Caça",
+      "type": "item",
+      "rarity": "rare",
+      "weight": 980,
+      "image": "pele_tubarao.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pele_tubarao.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/pele_tubarao.png",
+        "https://jampas335.github.io/underp-itens/server-icons/pele_tubarao.png",
+        "https://jampas335.github.io/underp-itens/icons/pele_tubarao.png"
+      ],
+      "iconSource": "ready",
+      "status": "ready",
+      "createdAt": "2026-06-13T02:27:08.088Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "pele_tubarao",
+        "label": "Pele de Tubarão Tigre",
+        "weight": 980,
+        "type": "item",
+        "image": "pele_tubarao.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": true,
+        "rarity": "rare"
+      },
+      "lua": "['pele_tubarao'] = {\n    ['name'] = 'pele_tubarao',\n    ['label'] = 'Pele de Tubarão Tigre',\n    ['weight'] = 980,\n    ['type'] = 'item',\n    ['image'] = 'pele_tubarao.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "farm_cucumber",
