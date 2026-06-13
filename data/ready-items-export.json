@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:31:15.004Z",
+  "generatedAt": "2026-06-13T02:31:37.742Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8413,7 +8413,7 @@
       "description": "",
       "category": "Caça",
       "type": "item",
-      "rarity": "epic",
+      "rarity": "legendary",
       "weight": 1200,
       "image": "pele_tubarao_martelo_lendario.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pele_tubarao_martelo_lendario.png",
@@ -8422,9 +8422,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/pele_tubarao_martelo_lendario.png",
         "https://jampas335.github.io/underp-itens/icons/pele_tubarao_martelo_lendario.png"
       ],
-      "iconSource": "ready",
+      "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-06-13T02:30:55.973Z",
+      "createdAt": "2026-06-13T02:31:33.137Z",
       "updatedAt": "",
       "inventory": {
         "name": "pele_tubarao_martelo_lendario",
@@ -8435,9 +8435,9 @@
         "unique": false,
         "useable": false,
         "shouldClose": false,
-        "rarity": "epic"
+        "rarity": "legendary"
       },
-      "lua": "['pele_tubarao_martelo_lendario'] = {\n    ['name'] = 'pele_tubarao_martelo_lendario',\n    ['label'] = 'Pele de Tubarão Martelo Lendário',\n    ['weight'] = 1200,\n    ['type'] = 'item',\n    ['image'] = 'pele_tubarao_martelo_lendario.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'epic',\n},"
+      "lua": "['pele_tubarao_martelo_lendario'] = {\n    ['name'] = 'pele_tubarao_martelo_lendario',\n    ['label'] = 'Pele de Tubarão Martelo Lendário',\n    ['weight'] = 1200,\n    ['type'] = 'item',\n    ['image'] = 'pele_tubarao_martelo_lendario.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'legendary',\n},"
     },
     {
       "id": "pele_tubarao",
