@@ -4982,26 +4982,6 @@
     "status": "ready"
   },
   {
-    "name": "pele_martelo",
-    "label": "Pele de Tubarão Martelo",
-    "description": "",
-    "weight": 1200,
-    "type": "item",
-    "image": "pele_martelo.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": true,
-    "rarity": "epic",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Caça",
-    "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-04-17T09:19:24.692Z",
-    "status": "ready"
-  },
-  {
     "name": "pele_tubarao_martelo_lendario",
     "label": "Pele de Tubarão Martelo Lendário",
     "description": "",
