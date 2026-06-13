@@ -5011,14 +5011,14 @@
     "unique": false,
     "useable": false,
     "shouldClose": true,
-    "rarity": "rare",
+    "rarity": "legendary",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Caça",
     "source": "ready",
     "iconSource": "ready",
-    "createdAt": "2026-06-13T02:27:31.824Z",
+    "createdAt": "2026-06-13T02:31:57.576Z",
     "status": "ready"
   },
   {
