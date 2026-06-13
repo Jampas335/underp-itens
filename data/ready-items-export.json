@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-13T02:28:42.452Z",
+  "generatedAt": "2026-06-13T02:29:03.394Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 371,
+  "count": 372,
   "categories": [
     {
       "name": "Armas",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Caça",
-      "count": 11
+      "count": 12
     },
     {
       "name": "Comida",
@@ -8438,6 +8438,39 @@
         "rarity": "epic"
       },
       "lua": "['pele_martelo'] = {\n    ['name'] = 'pele_martelo',\n    ['label'] = 'Pele de Tubarão Martelo',\n    ['weight'] = 1200,\n    ['type'] = 'item',\n    ['image'] = 'pele_martelo.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'epic',\n},"
+    },
+    {
+      "id": "pele_tubarao_martelo_lendario",
+      "name": "pele_tubarao_martelo_lendario",
+      "label": "Pele de Tubarão Martelo",
+      "description": "",
+      "category": "Caça",
+      "type": "item",
+      "rarity": "epic",
+      "weight": 1200,
+      "image": "pele_tubarao_martelo_lendario.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pele_tubarao_martelo_lendario.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/pele_tubarao_martelo_lendario.png",
+        "https://jampas335.github.io/underp-itens/server-icons/pele_tubarao_martelo_lendario.png",
+        "https://jampas335.github.io/underp-itens/icons/pele_tubarao_martelo_lendario.png"
+      ],
+      "iconSource": "ready",
+      "status": "ready",
+      "createdAt": "2026-06-13T02:29:00.611Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "pele_tubarao_martelo_lendario",
+        "label": "Pele de Tubarão Martelo",
+        "weight": 1200,
+        "type": "item",
+        "image": "pele_tubarao_martelo_lendario.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": true,
+        "rarity": "epic"
+      },
+      "lua": "['pele_tubarao_martelo_lendario'] = {\n    ['name'] = 'pele_tubarao_martelo_lendario',\n    ['label'] = 'Pele de Tubarão Martelo',\n    ['weight'] = 1200,\n    ['type'] = 'item',\n    ['image'] = 'pele_tubarao_martelo_lendario.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'epic',\n},"
     },
     {
       "id": "pele_tubarao",
