@@ -4582,6 +4582,26 @@
     "status": "ready"
   },
   {
+    "name": "pacote_suspeito",
+    "label": "Pacote Suspeito",
+    "description": "Um pacote sem identificacao. Melhor entregar isso no lugar certo.",
+    "weight": 1200,
+    "type": "item",
+    "image": "pacote_suspeito.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Ilegal",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-06-15T01:33:15.633Z",
+    "status": "ready"
+  },
+  {
     "name": "pager",
     "label": "Pager",
     "description": "Usado para informar o hospital sobre possível entrada de paciente e o seu estado físico.",
