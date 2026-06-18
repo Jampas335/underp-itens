@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-15T01:33:20.157Z",
+  "generatedAt": "2026-06-18T07:59:58.014Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -4893,14 +4893,15 @@
       "rarity": "common",
       "weight": 6000,
       "image": "brakes.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/icons/brakes.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/brakes.png",
       "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/icons/brakes.png",
-        "https://jampas335.github.io/underp-itens/server-icons/brakes.png"
+        "https://jampas335.github.io/underp-itens/ready-items/icons/brakes.png",
+        "https://jampas335.github.io/underp-itens/server-icons/brakes.png",
+        "https://jampas335.github.io/underp-itens/icons/brakes.png"
       ],
-      "iconSource": "pending",
+      "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-04-07T07:32:10.139Z",
+      "createdAt": "2026-06-18T07:59:53.265Z",
       "updatedAt": "",
       "inventory": {
         "name": "brakes",
