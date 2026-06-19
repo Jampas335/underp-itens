@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-19T07:30:56.038Z",
+  "generatedAt": "2026-06-19T07:32:53.077Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 374,
+  "count": 375,
   "categories": [
     {
       "name": "Armas",
@@ -97,6 +97,10 @@
     {
       "name": "Madereira",
       "count": 11
+    },
+    {
+      "name": "Manual",
+      "count": 1
     },
     {
       "name": "Materiais",
@@ -4586,6 +4590,40 @@
         "rarity": "rare"
       },
       "lua": "['kq_weed_fertilizer_yield'] = {\n    ['name'] = 'kq_weed_fertilizer_yield',\n    ['label'] = 'Fertilizante Yield',\n    ['weight'] = 100,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_fertilizer_yield.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
+    },
+    {
+      "id": "air_filter",
+      "name": "air_filter",
+      "label": "Filtro de Ar",
+      "description": "Caixa e filtro de ar retirados do cofre do motor.",
+      "category": "Manual",
+      "type": "item",
+      "rarity": "common",
+      "weight": 720,
+      "image": "air_filter.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/air_filter.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/air_filter.png",
+        "https://jampas335.github.io/underp-itens/server-icons/air_filter.png",
+        "https://jampas335.github.io/underp-itens/icons/air_filter.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-06-19T07:32:49.203Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "air_filter",
+        "label": "Filtro de Ar",
+        "weight": 720,
+        "type": "item",
+        "image": "air_filter.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "description": "Caixa e filtro de ar retirados do cofre do motor.",
+        "rarity": "common"
+      },
+      "lua": "['air_filter'] = {\n    ['name'] = 'air_filter',\n    ['label'] = 'Filtro de Ar',\n    ['weight'] = 720,\n    ['type'] = 'item',\n    ['image'] = 'air_filter.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['description'] = 'Caixa e filtro de ar retirados do cofre do motor.',\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "fio_cobre",
