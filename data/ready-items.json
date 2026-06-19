@@ -2682,6 +2682,26 @@
     "status": "ready"
   },
   {
+    "name": "air_filter",
+    "label": "Filtro de Ar",
+    "description": "Caixa e filtro de ar retirados do cofre do motor.",
+    "weight": 720,
+    "type": "item",
+    "image": "air_filter.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-06-19T07:32:49.203Z",
+    "status": "ready"
+  },
+  {
     "name": "fio_cobre",
     "label": "Fio de Cobre",
     "description": "",
