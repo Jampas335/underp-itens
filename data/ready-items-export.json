@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-19T07:32:53.077Z",
+  "generatedAt": "2026-06-19T07:33:14.572Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -99,10 +99,6 @@
       "count": 11
     },
     {
-      "name": "Manual",
-      "count": 1
-    },
-    {
       "name": "Materiais",
       "count": 11
     },
@@ -128,7 +124,7 @@
     },
     {
       "name": "Peças de Veículo",
-      "count": 14
+      "count": 15
     },
     {
       "name": "Pesca",
@@ -4596,7 +4592,7 @@
       "name": "air_filter",
       "label": "Filtro de Ar",
       "description": "Caixa e filtro de ar retirados do cofre do motor.",
-      "category": "Manual",
+      "category": "Peças de Veículo",
       "type": "item",
       "rarity": "common",
       "weight": 720,
@@ -4607,9 +4603,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/air_filter.png",
         "https://jampas335.github.io/underp-itens/icons/air_filter.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-06-19T07:32:49.203Z",
+      "createdAt": "2026-06-19T07:33:11.410Z",
       "updatedAt": "",
       "inventory": {
         "name": "air_filter",
