@@ -803,6 +803,26 @@
     "status": "ready"
   },
   {
+    "name": "impact_driver_battery",
+    "label": "Bateria da Parafusadeira",
+    "description": "Bateria removivel usada em parafusadeiras de impacto.",
+    "weight": 350,
+    "type": "item",
+    "image": "impact_driver_battery.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mecânica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-06-19T07:22:11.460Z",
+    "status": "ready"
+  },
+  {
     "name": "farm_eggplant",
     "label": "Beringela",
     "description": "",
