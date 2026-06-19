@@ -3731,6 +3731,26 @@
     "status": "ready"
   },
   {
+    "name": "hydraulic_jack",
+    "label": "Macaco Hidraulico",
+    "description": "Ferramenta pesada usada para levantar um veiculo durante o desmanche.",
+    "weight": 8150,
+    "type": "item",
+    "image": "hydraulic_jack.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mecânica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-06-19T07:30:51.825Z",
+    "status": "ready"
+  },
+  {
     "name": "maco_cigarro",
     "label": "Maço de Cigarro",
     "description": "Um maÃ§o de cigarros.",
