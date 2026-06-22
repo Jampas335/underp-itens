@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-19T07:33:37.898Z",
+  "generatedAt": "2026-06-22T17:38:36.745Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -9194,14 +9194,15 @@
       "rarity": "common",
       "weight": 4000,
       "image": "radiator.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/icons/radiator.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/radiator.png",
       "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/icons/radiator.png",
-        "https://jampas335.github.io/underp-itens/server-icons/radiator.png"
+        "https://jampas335.github.io/underp-itens/ready-items/icons/radiator.png",
+        "https://jampas335.github.io/underp-itens/server-icons/radiator.png",
+        "https://jampas335.github.io/underp-itens/icons/radiator.png"
       ],
-      "iconSource": "pending",
+      "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-04-07T07:26:47.735Z",
+      "createdAt": "2026-06-22T17:38:31.535Z",
       "updatedAt": "",
       "inventory": {
         "name": "radiator",
@@ -9209,12 +9210,12 @@
         "weight": 4000,
         "type": "item",
         "image": "radiator.png",
-        "unique": false,
+        "unique": true,
         "useable": false,
         "shouldClose": true,
         "rarity": "common"
       },
-      "lua": "['radiator'] = {\n    ['name'] = 'radiator',\n    ['label'] = 'Radiador',\n    ['weight'] = 4000,\n    ['type'] = 'item',\n    ['image'] = 'radiator.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+      "lua": "['radiator'] = {\n    ['name'] = 'radiator',\n    ['label'] = 'Radiador',\n    ['weight'] = 4000,\n    ['type'] = 'item',\n    ['image'] = 'radiator.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "radio",
