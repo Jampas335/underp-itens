@@ -5458,7 +5458,7 @@
     "weight": 4000,
     "type": "item",
     "image": "radiator.png",
-    "unique": false,
+    "unique": true,
     "useable": false,
     "shouldClose": true,
     "rarity": "common",
@@ -5467,8 +5467,8 @@
     "extraLua": "",
     "siteCategory": "Peças de Veículo",
     "source": "ready",
-    "iconSource": "pending",
-    "createdAt": "2026-04-07T07:26:47.735Z",
+    "iconSource": "upload",
+    "createdAt": "2026-06-22T17:38:31.535Z",
     "status": "ready"
   },
   {
