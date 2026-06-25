@@ -3006,26 +3006,6 @@
     "status": "ready"
   },
   {
-    "name": "gasoline",
-    "label": "Gasolina",
-    "description": "",
-    "weight": 5000,
-    "type": "item",
-    "image": "gasoline.png",
-    "unique": false,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "uncommon",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Drogas",
-    "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-04-17T09:42:29.689Z",
-    "status": "ready"
-  },
-  {
     "name": "weapon_petrolcan",
     "label": "Gasolina",
     "description": "",
