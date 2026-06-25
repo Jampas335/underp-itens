@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-06-25T04:09:55.545Z",
+  "generatedAt": "2026-06-25T04:10:20.740Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 376,
+  "count": 375,
   "categories": [
     {
       "name": "Armas",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Drogas",
-      "count": 39
+      "count": 38
     },
     {
       "name": "Eletrônica",
@@ -5119,39 +5119,6 @@
         "decay": 0.1
       },
       "lua": "['weapon_bottle'] = {\n    ['name'] = 'weapon_bottle',\n    ['label'] = 'Garrafa Quebrada',\n    ['weight'] = 350,\n    ['type'] = 'weapon',\n    ['image'] = 'weapon_bottle.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n    ['decay'] = 0.1,\n},"
-    },
-    {
-      "id": "gasoline",
-      "name": "gasoline",
-      "label": "Gasolina",
-      "description": "",
-      "category": "Drogas",
-      "type": "item",
-      "rarity": "uncommon",
-      "weight": 5000,
-      "image": "gasoline.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/gasoline.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/gasoline.png",
-        "https://jampas335.github.io/underp-itens/server-icons/gasoline.png",
-        "https://jampas335.github.io/underp-itens/icons/gasoline.png"
-      ],
-      "iconSource": "ready",
-      "status": "ready",
-      "createdAt": "2026-04-17T09:42:29.689Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "gasoline",
-        "label": "Gasolina",
-        "weight": 5000,
-        "type": "item",
-        "image": "gasoline.png",
-        "unique": false,
-        "useable": true,
-        "shouldClose": true,
-        "rarity": "uncommon"
-      },
-      "lua": "['gasoline'] = {\n    ['name'] = 'gasoline',\n    ['label'] = 'Gasolina',\n    ['weight'] = 5000,\n    ['type'] = 'item',\n    ['image'] = 'gasoline.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "weapon_petrolcan",
