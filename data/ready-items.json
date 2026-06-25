@@ -3026,6 +3026,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_petrolcan",
+    "label": "Gasolina",
+    "description": "",
+    "weight": 4000,
+    "type": "item",
+    "image": "weapon_petrolcan.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mecânica",
+    "source": "ready",
+    "iconSource": "ready",
+    "createdAt": "2026-06-25T04:08:23.128Z",
+    "status": "ready"
+  },
+  {
     "name": "gauze",
     "label": "Gaze",
     "description": "",
