@@ -7495,6 +7495,48 @@
     "status": "ready"
   },
   {
+    "name": "ventilador",
+    "label": "Ventilador",
+    "description": "",
+    "weight": 3500,
+    "type": "item",
+    "image": "ventilador.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "['dropProp'] = 'm23_2_int4_m232_fan_1',\n['carryProp'] = 'm23_2_int4_m232_fan_1',",
+    "siteCategory": "Roubo casa",
+    "allowInBackpack": false,
+    "prop": "m23_2_int4_m232_fan_1",
+    "object": "m23_2_int4_m232_fan_1",
+    "carryInHand": true,
+    "carryAttachment": {
+      "bone": 60309,
+      "pos": {
+        "x": 0.1,
+        "y": 0.02,
+        "z": 0.28
+      },
+      "rot": {
+        "x": -128,
+        "y": 103,
+        "z": 2
+      }
+    },
+    "carryAnim": {
+      "dict": "anim@heists@box_carry@",
+      "clip": "idle",
+      "flag": 49
+    },
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-02T01:46:56.616Z",
+    "status": "ready"
+  },
+  {
     "name": "steering-wheel",
     "label": "Volante",
     "description": "",
