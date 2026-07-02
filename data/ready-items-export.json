@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-02T02:37:18.797Z",
+  "generatedAt": "2026-07-02T02:37:44.303Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Manual",
-      "count": 3
+      "count": 2
     },
     {
       "name": "Materiais",
@@ -156,7 +156,7 @@
     },
     {
       "name": "Roubo casa",
-      "count": 11
+      "count": 12
     }
   ],
   "items": [
@@ -6099,7 +6099,7 @@
       "name": "joia_valiosa",
       "label": "Joia Valiosa",
       "description": "",
-      "category": "Manual",
+      "category": "Roubo casa",
       "type": "item",
       "rarity": "epic",
       "weight": 750,
@@ -6112,7 +6112,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-02T02:37:13.892Z",
+      "createdAt": "2026-07-02T02:37:40.118Z",
       "updatedAt": "",
       "inventory": {
         "name": "joia_valiosa",
