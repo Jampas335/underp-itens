@@ -7621,6 +7621,48 @@
     "status": "ready"
   },
   {
+    "name": "videogame",
+    "label": "Videogame",
+    "description": "",
+    "weight": 1500,
+    "type": "item",
+    "image": "videogame.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "['dropProp'] = 'prop_console_01',\n['carryProp'] = 'prop_console_01',",
+    "siteCategory": "",
+    "allowInBackpack": true,
+    "prop": "prop_console_01",
+    "object": "prop_console_01",
+    "carryInHand": true,
+    "carryAttachment": {
+      "bone": 57005,
+      "pos": {
+        "x": 0.15,
+        "y": 0.04,
+        "z": -0.1
+      },
+      "rot": {
+        "x": -94,
+        "y": 68,
+        "z": -6
+      }
+    },
+    "carryAnim": {
+      "dict": "anim@heists@box_carry@",
+      "clip": "idle",
+      "flag": 49
+    },
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-02T01:57:43.366Z",
+    "status": "ready"
+  },
+  {
     "name": "steering-wheel",
     "label": "Volante",
     "description": "",
