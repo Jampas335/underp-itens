@@ -783,6 +783,48 @@
     "status": "ready"
   },
   {
+    "name": "batedeira",
+    "label": "Batedeira",
+    "description": "",
+    "weight": 1800,
+    "type": "item",
+    "image": "batedeira.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "['dropProp'] = 'v_res_tre_mixer',\n['carryProp'] = 'v_res_tre_mixer',",
+    "siteCategory": "Roubo casa",
+    "allowInBackpack": true,
+    "prop": "v_res_tre_mixer",
+    "object": "v_res_tre_mixer",
+    "carryInHand": true,
+    "carryAttachment": {
+      "bone": 57005,
+      "pos": {
+        "x": 0.12,
+        "y": -0.025,
+        "z": -0.14
+      },
+      "rot": {
+        "x": -92,
+        "y": 72,
+        "z": 0
+      }
+    },
+    "carryAnim": {
+      "dict": "anim@heists@box_carry@",
+      "clip": "idle",
+      "flag": 49
+    },
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-02T01:51:19.897Z",
+    "status": "ready"
+  },
+  {
     "name": "battery",
     "label": "Bateria",
     "description": "",
