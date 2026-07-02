@@ -6028,6 +6028,48 @@
     "status": "ready"
   },
   {
+    "name": "secador",
+    "label": "Secador",
+    "description": "",
+    "weight": 800,
+    "type": "item",
+    "image": "secador.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "['dropProp'] = 'v_serv_bs_hairdryer',\n['carryProp'] = 'v_serv_bs_hairdryer',",
+    "siteCategory": "",
+    "allowInBackpack": true,
+    "prop": "v_serv_bs_hairdryer",
+    "object": "v_serv_bs_hairdryer",
+    "carryInHand": true,
+    "carryAttachment": {
+      "bone": 57005,
+      "pos": {
+        "x": 0.12,
+        "y": 0.03,
+        "z": -0.03
+      },
+      "rot": {
+        "x": -96,
+        "y": 12,
+        "z": -12
+      }
+    },
+    "carryAnim": {
+      "dict": "anim@heists@box_carry@",
+      "clip": "idle",
+      "flag": 49
+    },
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-02T01:58:14.134Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_paper",
     "label": "Seda",
     "description": "",
