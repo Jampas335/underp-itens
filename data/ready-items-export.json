@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-02T02:29:07.549Z",
+  "generatedAt": "2026-07-02T02:29:31.692Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Manual",
-      "count": 3
+      "count": 2
     },
     {
       "name": "Materiais",
@@ -156,7 +156,7 @@
     },
     {
       "name": "Roubo casa",
-      "count": 10
+      "count": 11
     }
   ],
   "items": [
@@ -1884,7 +1884,7 @@
       "name": "bong",
       "label": "Bong",
       "description": "",
-      "category": "Manual",
+      "category": "Roubo casa",
       "type": "item",
       "rarity": "epic",
       "weight": 1200,
@@ -1897,7 +1897,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-02T02:29:02.985Z",
+      "createdAt": "2026-07-02T02:29:27.087Z",
       "updatedAt": "",
       "inventory": {
         "name": "bong",
