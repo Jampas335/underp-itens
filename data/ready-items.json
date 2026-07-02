@@ -3636,7 +3636,7 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "['dropProp'] = 'prop_j_neck_disp_02',\n['carryProp'] = 'prop_j_neck_disp_02',",
-    "siteCategory": "",
+    "siteCategory": "Roubo casa",
     "allowInBackpack": true,
     "prop": "prop_j_neck_disp_02",
     "object": "prop_j_neck_disp_02",
@@ -3661,7 +3661,7 @@
     },
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-07-02T02:37:13.892Z",
+    "createdAt": "2026-07-02T02:37:40.118Z",
     "status": "ready"
   },
   {
