@@ -1047,6 +1047,48 @@
     "status": "ready"
   },
   {
+    "name": "bong",
+    "label": "Bong",
+    "description": "",
+    "weight": 1200,
+    "type": "item",
+    "image": "bong.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "['dropProp'] = 'prop_sh_bong_01',\n['carryProp'] = 'prop_sh_bong_01',",
+    "siteCategory": "",
+    "allowInBackpack": true,
+    "prop": "prop_sh_bong_01",
+    "object": "prop_sh_bong_01",
+    "carryInHand": true,
+    "carryAttachment": {
+      "bone": 57005,
+      "pos": {
+        "x": 0.11,
+        "y": 0.02,
+        "z": -0.14
+      },
+      "rot": {
+        "x": -96,
+        "y": 10,
+        "z": -8
+      }
+    },
+    "carryAnim": {
+      "dict": "anim@heists@box_carry@",
+      "clip": "idle",
+      "flag": 49
+    },
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-02T02:29:02.985Z",
+    "status": "ready"
+  },
+  {
     "name": "borracha",
     "label": "Borracha",
     "description": "",
