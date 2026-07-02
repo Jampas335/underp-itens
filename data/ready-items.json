@@ -1329,6 +1329,48 @@
     "status": "ready"
   },
   {
+    "name": "camera",
+    "label": "Câmera",
+    "description": "",
+    "weight": 900,
+    "type": "item",
+    "image": "camera.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "['dropProp'] = 'prop_ing_camera_01',\n['carryProp'] = 'prop_ing_camera_01',",
+    "siteCategory": "Roubo casa",
+    "allowInBackpack": true,
+    "prop": "prop_ing_camera_01",
+    "object": "prop_ing_camera_01",
+    "carryInHand": true,
+    "carryAttachment": {
+      "bone": 57005,
+      "pos": {
+        "x": 0.12,
+        "y": 0.03,
+        "z": -0.06
+      },
+      "rot": {
+        "x": -92,
+        "y": 22,
+        "z": -8
+      }
+    },
+    "carryAnim": {
+      "dict": "anim@heists@box_carry@",
+      "clip": "idle",
+      "flag": 49
+    },
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-02T01:55:43.132Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_switchblade",
     "label": "Canivete Stiletto",
     "description": "",
