@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-02T01:58:18.366Z",
+  "generatedAt": "2026-07-02T01:58:41.830Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Manual",
-      "count": 3
+      "count": 2
     },
     {
       "name": "Materiais",
@@ -156,7 +156,7 @@
     },
     {
       "name": "Roubo casa",
-      "count": 7
+      "count": 8
     }
   ],
   "items": [
@@ -10118,7 +10118,7 @@
       "name": "secador",
       "label": "Secador",
       "description": "",
-      "category": "Manual",
+      "category": "Roubo casa",
       "type": "item",
       "rarity": "common",
       "weight": 800,
@@ -10129,9 +10129,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/secador.png",
         "https://jampas335.github.io/underp-itens/icons/secador.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-07-02T01:58:14.134Z",
+      "createdAt": "2026-07-02T01:58:39.300Z",
       "updatedAt": "",
       "inventory": {
         "name": "secador",
