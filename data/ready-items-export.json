@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-02T01:47:01.374Z",
+  "generatedAt": "2026-07-02T01:51:24.191Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 376,
+  "count": 377,
   "categories": [
     {
       "name": "Armas",
@@ -156,7 +156,7 @@
     },
     {
       "name": "Roubo casa",
-      "count": 5
+      "count": 6
     }
   ],
   "items": [
@@ -1453,6 +1453,63 @@
         "rarity": "uncommon"
       },
       "lua": "['bs_fries'] = {\n    ['name'] = 'bs_fries',\n    ['label'] = 'Batata Frita',\n    ['weight'] = 210,\n    ['type'] = 'item',\n    ['image'] = 'bs-fries.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "batedeira",
+      "name": "batedeira",
+      "label": "Batedeira",
+      "description": "",
+      "category": "Roubo casa",
+      "type": "item",
+      "rarity": "common",
+      "weight": 1800,
+      "image": "batedeira.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/batedeira.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/batedeira.png",
+        "https://jampas335.github.io/underp-itens/server-icons/batedeira.png",
+        "https://jampas335.github.io/underp-itens/icons/batedeira.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-02T01:51:19.897Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "batedeira",
+        "label": "Batedeira",
+        "weight": 1800,
+        "type": "item",
+        "image": "batedeira.png",
+        "unique": true,
+        "useable": false,
+        "shouldClose": true,
+        "rarity": "common",
+        "allowInBackpack": true,
+        "prop": "v_res_tre_mixer",
+        "object": "v_res_tre_mixer",
+        "carryInHand": true,
+        "carryAttachment": {
+          "bone": 57005,
+          "pos": {
+            "x": 0.12,
+            "y": -0.025,
+            "z": -0.14
+          },
+          "rot": {
+            "x": -92,
+            "y": 72,
+            "z": 0
+          }
+        },
+        "carryAnim": {
+          "dict": "anim@heists@box_carry@",
+          "clip": "idle",
+          "flag": 49
+        },
+        "dropProp": "v_res_tre_mixer",
+        "carryProp": "v_res_tre_mixer"
+      },
+      "lua": "['batedeira'] = {\n    ['name'] = 'batedeira',\n    ['label'] = 'Batedeira',\n    ['weight'] = 1800,\n    ['type'] = 'item',\n    ['image'] = 'batedeira.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n    ['allowInBackpack'] = true,\n    ['prop'] = 'v_res_tre_mixer',\n    ['object'] = 'v_res_tre_mixer',\n    ['carryInHand'] = true,\n    ['carryAttachment'] = {\n        ['bone'] = 57005,\n        ['pos'] = {\n            ['x'] = 0.12,\n            ['y'] = -0.025,\n            ['z'] = -0.14,\n        },\n        ['rot'] = {\n            ['x'] = -92,\n            ['y'] = 72,\n            ['z'] = 0,\n        },\n    },\n    ['carryAnim'] = {\n        ['dict'] = 'anim@heists@box_carry@',\n        ['clip'] = 'idle',\n        ['flag'] = 49,\n    },\n    ['dropProp'] = 'v_res_tre_mixer',\n    ['carryProp'] = 'v_res_tre_mixer',\n},"
     },
     {
       "id": "battery",
