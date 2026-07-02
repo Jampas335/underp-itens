@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-02T02:20:49.946Z",
+  "generatedAt": "2026-07-02T02:27:34.902Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 381,
+  "count": 382,
   "categories": [
     {
       "name": "Armas",
@@ -156,7 +156,7 @@
     },
     {
       "name": "Roubo casa",
-      "count": 9
+      "count": 10
     }
   ],
   "items": [
@@ -3104,6 +3104,43 @@
         "rarity": "epic"
       },
       "lua": "['cement'] = {\n    ['name'] = 'cement',\n    ['label'] = 'Cimento',\n    ['weight'] = 15000,\n    ['type'] = 'item',\n    ['image'] = 'cement.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'epic',\n},"
+    },
+    {
+      "id": "cinzeiro_dourado",
+      "name": "cinzeiro_dourado",
+      "label": "Cinzeiro Dourado",
+      "description": "",
+      "category": "Roubo casa",
+      "type": "item",
+      "rarity": "epic",
+      "weight": 900,
+      "image": "cinzeiro_dourado.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/cinzeiro_dourado.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/cinzeiro_dourado.png",
+        "https://jampas335.github.io/underp-itens/server-icons/cinzeiro_dourado.png",
+        "https://jampas335.github.io/underp-itens/icons/cinzeiro_dourado.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-02T02:27:30.552Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "cinzeiro_dourado",
+        "label": "Cinzeiro Dourado",
+        "weight": 900,
+        "type": "item",
+        "image": "cinzeiro_dourado.png",
+        "unique": true,
+        "useable": false,
+        "shouldClose": true,
+        "rarity": "epic",
+        "allowInBackpack": true,
+        "prop": "m25_2_prop_m52_ashtray_01a",
+        "object": "m25_2_prop_m52_ashtray_01a",
+        "dropProp": "m25_2_prop_m52_ashtray_01a"
+      },
+      "lua": "['cinzeiro_dourado'] = {\n    ['name'] = 'cinzeiro_dourado',\n    ['label'] = 'Cinzeiro Dourado',\n    ['weight'] = 900,\n    ['type'] = 'item',\n    ['image'] = 'cinzeiro_dourado.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'epic',\n    ['allowInBackpack'] = true,\n    ['prop'] = 'm25_2_prop_m52_ashtray_01a',\n    ['object'] = 'm25_2_prop_m52_ashtray_01a',\n    ['dropProp'] = 'm25_2_prop_m52_ashtray_01a',\n},"
     },
     {
       "id": "quick_clot",
