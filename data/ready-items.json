@@ -6041,7 +6041,7 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "['dropProp'] = 'v_serv_bs_hairdryer',\n['carryProp'] = 'v_serv_bs_hairdryer',",
-    "siteCategory": "",
+    "siteCategory": "Roubo casa",
     "allowInBackpack": true,
     "prop": "v_serv_bs_hairdryer",
     "object": "v_serv_bs_hairdryer",
@@ -6065,8 +6065,8 @@
       "flag": 49
     },
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-07-02T01:58:14.134Z",
+    "iconSource": "ready",
+    "createdAt": "2026-07-02T01:58:39.300Z",
     "status": "ready"
   },
   {
