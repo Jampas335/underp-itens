@@ -3623,6 +3623,48 @@
     "status": "ready"
   },
   {
+    "name": "joia_valiosa",
+    "label": "Joia Valiosa",
+    "description": "",
+    "weight": 750,
+    "type": "item",
+    "image": "joia_valiosa.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "['dropProp'] = 'prop_j_neck_disp_02',\n['carryProp'] = 'prop_j_neck_disp_02',",
+    "siteCategory": "",
+    "allowInBackpack": true,
+    "prop": "prop_j_neck_disp_02",
+    "object": "prop_j_neck_disp_02",
+    "carryInHand": true,
+    "carryAttachment": {
+      "bone": 57005,
+      "pos": {
+        "x": 0.12,
+        "y": 0.04,
+        "z": -0.12
+      },
+      "rot": {
+        "x": -92,
+        "y": 66,
+        "z": -6
+      }
+    },
+    "carryAnim": {
+      "dict": "anim@heists@box_carry@",
+      "clip": "idle",
+      "flag": 49
+    },
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-02T02:37:13.892Z",
+    "status": "ready"
+  },
+  {
     "name": "antilag_kit",
     "label": "Kit Antilag",
     "description": "",
