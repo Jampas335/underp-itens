@@ -959,7 +959,7 @@ function ensureLuaImportPanel() {
     toggleBtn.type = "button";
     toggleBtn.id = "pasteLuaBtn";
     toggleBtn.className = "ghost-btn";
-    toggleBtn.textContent = "Colar Lua";
+    toggleBtn.textContent = "Colar texto";
     actions.appendChild(toggleBtn);
 
     const panel = document.createElement("section");
@@ -967,13 +967,13 @@ function ensureLuaImportPanel() {
     panel.className = "lua-import-panel hidden";
     panel.innerHTML = `
         <label class="field">
-            <span>Importar bloco Lua <i class="info-tip" data-tip="Cole um item do shared/items.lua para aplicar os parametros no builder atual.">i</i></span>
-            <textarea id="luaImportTextarea" rows="10" placeholder="['item_exemplo'] = {
-    ['name'] = 'item_exemplo',
-    ['label'] = 'Item Exemplo',
-    ['weight'] = 1000,
-    ['type'] = 'item',
-    ['carryInHand'] = true,
+            <span>Importar Lua ou JSON <i class="info-tip" data-tip="Cole um item do shared/items.lua ou um objeto JSON para preencher o builder automaticamente.">i</i></span>
+            <textarea id="luaImportTextarea" rows="10" placeholder="['weapon_petrolcan'] = {
+    ['name'] = 'weapon_petrolcan',
+    ['label'] = 'Galao de Gasolina',
+    ['weight'] = 4000,
+    ['type'] = 'weapon',
+    ['image'] = 'jerry-can.png'
 },"></textarea>
         </label>
         <div class="lua-import-actions">
@@ -1874,6 +1874,7 @@ function bindEvents() {
     document.getElementById("applyLuaImportBtn").addEventListener("click", applyLuaImportFromTextarea);
     document.getElementById("clearLuaImportBtn").addEventListener("click", clearLuaImportTextarea);
     document.getElementById("newManualItemBtn").addEventListener("click", openBuilderManual);
+    document.getElementById("importItemTextBtn").addEventListener("click", openBuilderForTextImport);
     document.getElementById("builderExperienceModeSelect")?.addEventListener("change", handleBuilderExperienceModeChange);
     document.getElementById("builderAdvancedToggle")?.addEventListener("change", handleBuilderAdvancedToggleChange);
     document.getElementById("builderPresetSelect")?.addEventListener("change", (event) => {
@@ -3055,7 +3056,7 @@ function openBuilderForReady(name, options = {}) {
     showToast(`Editando item pronto ${name}.`);
 }
 
-function openBuilderManual() {
+function openBuilderManual(options = {}) {
     state.builder.activePendingName = null;
     state.builder.editingLocalName = null;
     state.builder.editingReadyName = null;
@@ -3071,7 +3072,18 @@ function openBuilderManual() {
     state.builder.presetKey = "";
     renderBuilder();
     scrollToBuilder();
-    showToast("Builder do zero aberto.");
+    if (!options.silent) showToast("Builder do zero aberto.");
+}
+
+function openBuilderForTextImport() {
+    if (!state.builder.form || state.builder.activePendingName || state.builder.editingLocalName || state.builder.editingReadyName) {
+        openBuilderManual({ silent: true });
+    } else {
+        renderBuilder();
+        scrollToBuilder();
+    }
+    toggleLuaImportPanel(true);
+    showToast("Cole um bloco Lua ou JSON para preencher o item.");
 }
 
 function scrollToBuilder() {
@@ -3158,25 +3170,24 @@ function clearLuaImportTextarea() {
 
 function applyLuaImportFromTextarea() {
     if (!state.builder.form) {
-        showToast("Abra o builder antes de importar um bloco Lua.");
-        return;
+        openBuilderManual({ silent: true });
     }
 
     const textarea = document.getElementById("luaImportTextarea");
     const raw = textarea?.value.trim() || "";
     if (!raw) {
-        showToast("Cole um bloco Lua antes de aplicar.");
+        showToast("Cole um bloco Lua ou JSON antes de aplicar.");
         return;
     }
 
     try {
-        const importedItem = parseLuaItemBlock(raw);
+        const importedItem = parseItemDefinitionBlock(raw);
         applyImportedItemToBuilder(importedItem);
         textarea.value = "";
         toggleLuaImportPanel(false);
-        showToast("Bloco Lua aplicado no builder.");
+        showToast("Item importado no builder.");
     } catch (err) {
-        showToast(`Falha ao importar Lua: ${err.message}`);
+        showToast(`Falha ao importar texto: ${err.message}`);
     }
 }
 
@@ -3876,6 +3887,21 @@ function parseLuaItemBlock(input) {
     return item;
 }
 
+function parseItemDefinitionBlock(input) {
+    const source = String(input || "").trim();
+    if (!source) throw new Error("Texto vazio.");
+
+    try {
+        return unwrapImportedLuaItem(JSON.parse(source));
+    } catch (jsonErr) {
+        try {
+            return parseLuaItemBlock(source);
+        } catch (luaErr) {
+            throw new Error(`Nao reconheci como JSON nem Lua. JSON: ${jsonErr.message}. Lua: ${luaErr.message}`);
+        }
+    }
+}
+
 function unwrapImportedLuaItem(value) {
     if (!value || Array.isArray(value) || typeof value !== "object") return value;
     const itemKeys = ["name", "label", "weight", "type", "image", "description", "rarity"];
@@ -3899,6 +3925,7 @@ function applyImportedItemToBuilder(importedItem) {
     const importedName = normalizeImportedItemName(normalizedImportedItem.name);
     const importedImage = typeof normalizedImportedItem.image === "string" ? normalizedImportedItem.image.trim() : "";
     const currentImageIsDefault = !current.image || current.image === "novo-item.png";
+    const shouldApplyImportedImage = !keepIdentity && (currentImageIsDefault || !state.builder.activePendingName);
     const importedCarryAttachment = normalizedImportedItem.carryAttachment && typeof normalizedImportedItem.carryAttachment === "object"
         ? normalizedImportedItem.carryAttachment
         : {};
@@ -3949,7 +3976,7 @@ function applyImportedItemToBuilder(importedItem) {
         combineAnimText: readImportedOptionalString(normalizedImportedItem.combinable?.anim?.text, current.combineAnimText),
         combineAnimTimeout: readImportedOptionalNumberString(normalizedImportedItem.combinable?.anim?.timeOut, current.combineAnimTimeout),
         extraLua: buildExtraLuaFromItem(normalizedImportedItem),
-        image: keepIdentity || !currentImageIsDefault ? current.image : (importedImage || current.image),
+        image: shouldApplyImportedImage ? (importedImage || current.image) : current.image,
     };
     state.builder.presetKey = "";
     renderBuilder();
