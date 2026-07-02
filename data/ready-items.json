@@ -2486,6 +2486,48 @@
     "status": "ready"
   },
   {
+    "name": "escultura",
+    "label": "Escultura",
+    "description": "",
+    "weight": 4200,
+    "type": "item",
+    "image": "escultura.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "['dropProp'] = 'm25_1_prop_m51_sculpt_01a',\n['carryProp'] = 'm25_1_prop_m51_sculpt_01a',",
+    "siteCategory": "Roubo casa",
+    "allowInBackpack": false,
+    "prop": "m25_1_prop_m51_sculpt_01a",
+    "object": "m25_1_prop_m51_sculpt_01a",
+    "carryInHand": true,
+    "carryAttachment": {
+      "bone": 60309,
+      "pos": {
+        "x": 0.08,
+        "y": 0.03,
+        "z": 0.25
+      },
+      "rot": {
+        "x": -126,
+        "y": 104,
+        "z": 4
+      }
+    },
+    "carryAnim": {
+      "dict": "anim@heists@box_carry@",
+      "clip": "idle",
+      "flag": 49
+    },
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-02T02:20:45.448Z",
+    "status": "ready"
+  },
+  {
     "name": "angle_grinder",
     "label": "Esmerilhadeira",
     "description": "",
