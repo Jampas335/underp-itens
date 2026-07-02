@@ -1060,7 +1060,7 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "['dropProp'] = 'prop_sh_bong_01',\n['carryProp'] = 'prop_sh_bong_01',",
-    "siteCategory": "",
+    "siteCategory": "Roubo casa",
     "allowInBackpack": true,
     "prop": "prop_sh_bong_01",
     "object": "prop_sh_bong_01",
@@ -1085,7 +1085,7 @@
     },
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-07-02T02:29:02.985Z",
+    "createdAt": "2026-07-02T02:29:27.087Z",
     "status": "ready"
   },
   {
