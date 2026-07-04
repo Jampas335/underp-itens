@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-02T02:37:44.303Z",
+  "generatedAt": "2026-07-04T20:53:40.720Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -4411,9 +4411,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/angle_grinder.png",
         "https://jampas335.github.io/underp-itens/icons/angle_grinder.png"
       ],
-      "iconSource": "ready",
+      "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-04-07T21:05:05.997Z",
+      "createdAt": "2026-07-04T20:53:32.121Z",
       "updatedAt": "",
       "inventory": {
         "name": "angle_grinder",
