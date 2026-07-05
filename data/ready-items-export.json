@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-04T20:53:40.720Z",
+  "generatedAt": "2026-07-05T19:37:51.955Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -4413,7 +4413,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-04T20:53:32.121Z",
+      "createdAt": "2026-07-05T19:37:46.824Z",
       "updatedAt": "",
       "inventory": {
         "name": "angle_grinder",
