@@ -4674,6 +4674,26 @@
     "status": "ready"
   },
   {
+    "name": "ammo_caca",
+    "label": "Munição de Caça",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "ammo_caca.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-10T19:54:14.512Z",
+    "status": "ready"
+  },
+  {
     "name": "nacho_urubu",
     "label": "Nachos Pata de Urubu",
     "description": "Uma tortilha de milho crocante moldada no exótico formato de uma pata de urubu, servida com pitadas frescas de avocado cremoso e finalizada com um toque leve de vinagrete cítrico.",
