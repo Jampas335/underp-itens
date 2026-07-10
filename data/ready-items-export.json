@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-10T19:54:19.794Z",
+  "generatedAt": "2026-07-10T19:54:49.837Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Manual",
-      "count": 3
+      "count": 2
     },
     {
       "name": "Materiais",
@@ -120,7 +120,7 @@
     },
     {
       "name": "Munição",
-      "count": 4
+      "count": 5
     },
     {
       "name": "Outros",
@@ -7848,7 +7848,7 @@
       "name": "ammo_caca",
       "label": "Munição de Caça",
       "description": "",
-      "category": "Manual",
+      "category": "Munição",
       "type": "item",
       "rarity": "rare",
       "weight": 250,
@@ -7859,9 +7859,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/ammo_caca.png",
         "https://jampas335.github.io/underp-itens/icons/ammo_caca.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-07-10T19:54:14.512Z",
+      "createdAt": "2026-07-10T19:54:47.076Z",
       "updatedAt": "",
       "inventory": {
         "name": "ammo_caca",
