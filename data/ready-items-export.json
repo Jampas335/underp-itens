@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-10T19:54:49.837Z",
+  "generatedAt": "2026-07-10T19:55:09.087Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -7859,9 +7859,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/ammo_caca.png",
         "https://jampas335.github.io/underp-itens/icons/ammo_caca.png"
       ],
-      "iconSource": "ready",
+      "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-10T19:54:47.076Z",
+      "createdAt": "2026-07-10T19:55:04.086Z",
       "updatedAt": "",
       "inventory": {
         "name": "ammo_caca",
