@@ -1129,6 +1129,26 @@
     "status": "ready"
   },
   {
+    "name": "broca_basica",
+    "label": "Broca Básica",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "broca_basica.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mineração",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-11T01:45:53.481Z",
+    "status": "ready"
+  },
+  {
     "name": "chocolate_brownie",
     "label": "Brownie",
     "description": "",
