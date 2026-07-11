@@ -1129,6 +1129,26 @@
     "status": "ready"
   },
   {
+    "name": "broca_avancada",
+    "label": "Broca Avançada",
+    "description": "",
+    "weight": 500,
+    "type": "item",
+    "image": "broca_avancada.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-11T01:47:40.887Z",
+    "status": "ready"
+  },
+  {
     "name": "broca_basica",
     "label": "Broca Básica",
     "description": "",
