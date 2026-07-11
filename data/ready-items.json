@@ -1149,6 +1149,26 @@
     "status": "ready"
   },
   {
+    "name": "broca_intermediaria",
+    "label": "Broca Intermediária",
+    "description": "",
+    "weight": 400,
+    "type": "item",
+    "image": "broca_intermediaria.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-11T01:46:42.328Z",
+    "status": "ready"
+  },
+  {
     "name": "chocolate_brownie",
     "label": "Brownie",
     "description": "",
