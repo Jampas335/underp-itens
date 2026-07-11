@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-11T01:47:45.679Z",
+  "generatedAt": "2026-07-11T01:51:20.891Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Manual",
-      "count": 3
+      "count": 2
     },
     {
       "name": "Materiais",
@@ -116,7 +116,7 @@
     },
     {
       "name": "Mineração",
-      "count": 33
+      "count": 34
     },
     {
       "name": "Munição",
@@ -2007,7 +2007,7 @@
       "name": "broca_avancada",
       "label": "Broca Avançada",
       "description": "",
-      "category": "Manual",
+      "category": "Mineração",
       "type": "item",
       "rarity": "rare",
       "weight": 500,
@@ -2020,7 +2020,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-11T01:47:40.887Z",
+      "createdAt": "2026-07-11T01:51:15.934Z",
       "updatedAt": "",
       "inventory": {
         "name": "broca_avancada",
