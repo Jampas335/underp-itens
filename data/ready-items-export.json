@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-11T01:46:46.973Z",
+  "generatedAt": "2026-07-11T01:47:14.020Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Manual",
-      "count": 3
+      "count": 2
     },
     {
       "name": "Materiais",
@@ -116,7 +116,7 @@
     },
     {
       "name": "Mineração",
-      "count": 32
+      "count": 33
     },
     {
       "name": "Munição",
@@ -2040,7 +2040,7 @@
       "name": "broca_intermediaria",
       "label": "Broca Intermediária",
       "description": "",
-      "category": "Manual",
+      "category": "Mineração",
       "type": "item",
       "rarity": "uncommon",
       "weight": 400,
@@ -2053,7 +2053,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-11T01:46:42.328Z",
+      "createdAt": "2026-07-11T01:47:09.653Z",
       "updatedAt": "",
       "inventory": {
         "name": "broca_intermediaria",
