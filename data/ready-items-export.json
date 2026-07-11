@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-11T01:45:57.857Z",
+  "generatedAt": "2026-07-11T01:46:46.973Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 386,
+  "count": 387,
   "categories": [
     {
       "name": "Armas",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Manual",
-      "count": 2
+      "count": 3
     },
     {
       "name": "Materiais",
@@ -2034,6 +2034,39 @@
         "rarity": "common"
       },
       "lua": "['broca_basica'] = {\n    ['name'] = 'broca_basica',\n    ['label'] = 'Broca Básica',\n    ['weight'] = 300,\n    ['type'] = 'item',\n    ['image'] = 'broca_basica.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "broca_intermediaria",
+      "name": "broca_intermediaria",
+      "label": "Broca Intermediária",
+      "description": "",
+      "category": "Manual",
+      "type": "item",
+      "rarity": "uncommon",
+      "weight": 400,
+      "image": "broca_intermediaria.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/broca_intermediaria.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/broca_intermediaria.png",
+        "https://jampas335.github.io/underp-itens/server-icons/broca_intermediaria.png",
+        "https://jampas335.github.io/underp-itens/icons/broca_intermediaria.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-11T01:46:42.328Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "broca_intermediaria",
+        "label": "Broca Intermediária",
+        "weight": 400,
+        "type": "item",
+        "image": "broca_intermediaria.png",
+        "unique": true,
+        "useable": false,
+        "shouldClose": true,
+        "rarity": "uncommon"
+      },
+      "lua": "['broca_intermediaria'] = {\n    ['name'] = 'broca_intermediaria',\n    ['label'] = 'Broca Intermediária',\n    ['weight'] = 400,\n    ['type'] = 'item',\n    ['image'] = 'broca_intermediaria.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "chocolate_brownie",
