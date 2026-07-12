@@ -1795,6 +1795,43 @@
     "status": "ready"
   },
   {
+    "name": "large_grill",
+    "label": "Churrasqueira Grande",
+    "description": "Uma churrasqueira grande.",
+    "weight": 10000,
+    "type": "item",
+    "image": "large_grill.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Roubo casa",
+    "allowInBackpack": false,
+    "prop": "prop_bbq_4_l1",
+    "object": "prop_bbq_4_l1",
+    "carryInHand": true,
+    "carryAttachment": {
+      "bone": 60309,
+      "pos": {
+        "x": -0.015,
+        "y": 0.21,
+        "z": 0.325
+      },
+      "rot": {
+        "x": -126,
+        "y": 107,
+        "z": 6
+      }
+    },
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-12T03:40:55.300Z",
+    "status": "ready"
+  },
+  {
     "name": "churros",
     "label": "Churros",
     "description": "",
