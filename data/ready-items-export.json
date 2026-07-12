@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-12T03:59:51.150Z",
+  "generatedAt": "2026-07-12T04:01:36.096Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -12402,24 +12402,23 @@
       "type": "item",
       "rarity": "uncommon",
       "weight": 26000,
-      "image": "television.png",
+      "image": "retro_television.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/retro_television.png",
       "imageCandidates": [
         "https://jampas335.github.io/underp-itens/ready-items/icons/retro_television.png",
-        "https://jampas335.github.io/underp-itens/server-icons/television.png",
-        "https://jampas335.github.io/underp-itens/icons/television.png",
+        "https://jampas335.github.io/underp-itens/server-icons/retro_television.png",
         "https://jampas335.github.io/underp-itens/icons/retro_television.png"
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-12T03:56:01.750Z",
+      "createdAt": "2026-07-12T04:01:30.522Z",
       "updatedAt": "",
       "inventory": {
         "name": "retro_television",
         "label": "Televisão Retrô",
         "weight": 26000,
         "type": "item",
-        "image": "television.png",
+        "image": "retro_television.png",
         "unique": true,
         "useable": false,
         "shouldClose": true,
@@ -12443,7 +12442,7 @@
           }
         }
       },
-      "lua": "['retro_television'] = {\n    ['name'] = 'retro_television',\n    ['label'] = 'Televisão Retrô',\n    ['weight'] = 26000,\n    ['type'] = 'item',\n    ['image'] = 'television.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['description'] = 'Uma televisão antiga.',\n    ['rarity'] = 'uncommon',\n    ['allowInBackpack'] = false,\n    ['prop'] = 'prop_tv_04',\n    ['object'] = 'prop_tv_04',\n    ['carryInHand'] = true,\n    ['carryAttachment'] = {\n        ['bone'] = 60309,\n        ['pos'] = {\n            ['x'] = -0.015,\n            ['y'] = 0.21,\n            ['z'] = 0.325,\n        },\n        ['rot'] = {\n            ['x'] = -126,\n            ['y'] = 107,\n            ['z'] = 6,\n        },\n    },\n},"
+      "lua": "['retro_television'] = {\n    ['name'] = 'retro_television',\n    ['label'] = 'Televisão Retrô',\n    ['weight'] = 26000,\n    ['type'] = 'item',\n    ['image'] = 'retro_television.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['description'] = 'Uma televisão antiga.',\n    ['rarity'] = 'uncommon',\n    ['allowInBackpack'] = false,\n    ['prop'] = 'prop_tv_04',\n    ['object'] = 'prop_tv_04',\n    ['carryInHand'] = true,\n    ['carryAttachment'] = {\n        ['bone'] = 60309,\n        ['pos'] = {\n            ['x'] = -0.015,\n            ['y'] = 0.21,\n            ['z'] = 0.325,\n        },\n        ['rot'] = {\n            ['x'] = -126,\n            ['y'] = 107,\n            ['z'] = 6,\n        },\n    },\n},"
     },
     {
       "id": "scissors",
