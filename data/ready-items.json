@@ -7455,7 +7455,7 @@
     "description": "Uma televisão antiga.",
     "weight": 26000,
     "type": "item",
-    "image": "television.png",
+    "image": "retro_television.png",
     "unique": true,
     "useable": false,
     "shouldClose": true,
@@ -7483,7 +7483,7 @@
     },
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-07-12T03:56:01.750Z",
+    "createdAt": "2026-07-12T04:01:30.522Z",
     "status": "ready"
   },
   {
