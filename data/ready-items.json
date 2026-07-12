@@ -1906,6 +1906,43 @@
     "status": "ready"
   },
   {
+    "name": "portable_grill",
+    "label": "Churrasqueira Portátil",
+    "description": "Uma churrasqueira portátil.",
+    "weight": 5200,
+    "type": "item",
+    "image": "portable_grill.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Roubo casa",
+    "allowInBackpack": false,
+    "prop": "prop_bbq_2",
+    "object": "prop_bbq_2",
+    "carryInHand": true,
+    "carryAttachment": {
+      "bone": 60309,
+      "pos": {
+        "x": 0.025,
+        "y": 0.08,
+        "z": 0.255
+      },
+      "rot": {
+        "x": -55,
+        "y": 290,
+        "z": 0
+      }
+    },
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-12T03:55:00.124Z",
+    "status": "ready"
+  },
+  {
     "name": "churros",
     "label": "Churros",
     "description": "",
