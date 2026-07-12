@@ -7413,6 +7413,43 @@
     "status": "ready"
   },
   {
+    "name": "retro_television",
+    "label": "Televisão Retrô",
+    "description": "Uma televisão antiga.",
+    "weight": 26000,
+    "type": "item",
+    "image": "television.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Roubo casa",
+    "allowInBackpack": false,
+    "prop": "prop_tv_04",
+    "object": "prop_tv_04",
+    "carryInHand": true,
+    "carryAttachment": {
+      "bone": 60309,
+      "pos": {
+        "x": -0.015,
+        "y": 0.21,
+        "z": 0.325
+      },
+      "rot": {
+        "x": -126,
+        "y": 107,
+        "z": 6
+      }
+    },
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-12T03:56:01.750Z",
+    "status": "ready"
+  },
+  {
     "name": "scissors",
     "label": "Tesoura",
     "description": "",
