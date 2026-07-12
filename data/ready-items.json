@@ -3645,6 +3645,43 @@
     "status": "ready"
   },
   {
+    "name": "beach_parasol",
+    "label": "Guarda-sol de Praia",
+    "description": "Um guarda-sol de praia.",
+    "weight": 7000,
+    "type": "item",
+    "image": "beach_parasol.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "allowInBackpack": false,
+    "prop": "prop_beach_parasol_04",
+    "object": "prop_beach_parasol_04",
+    "carryInHand": true,
+    "carryAttachment": {
+      "bone": 60309,
+      "pos": {
+        "x": 0.08,
+        "y": 0.03,
+        "z": 0.25
+      },
+      "rot": {
+        "x": -126,
+        "y": 104,
+        "z": 4
+      }
+    },
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-12T04:02:52.738Z",
+    "status": "ready"
+  },
+  {
     "name": "weiner",
     "label": "Hotdog",
     "description": "",
