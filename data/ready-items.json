@@ -2750,6 +2750,43 @@
     "status": "ready"
   },
   {
+    "name": "guitar_case",
+    "label": "Estojo de Guitarra",
+    "description": "Um estojo de guitarra.",
+    "weight": 8000,
+    "type": "item",
+    "image": "guitar_case.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Roubo casa",
+    "allowInBackpack": false,
+    "prop": "sf_prop_sf_guitar_case_01a",
+    "object": "sf_prop_sf_guitar_case_01a",
+    "carryInHand": true,
+    "carryAttachment": {
+      "bone": 60309,
+      "pos": {
+        "x": 0.08,
+        "y": 0.03,
+        "z": 0.25
+      },
+      "rot": {
+        "x": -126,
+        "y": 104,
+        "z": 4
+      }
+    },
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-12T03:42:36.590Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_tent",
     "label": "Estufa",
     "description": "",
