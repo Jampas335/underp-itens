@@ -83,26 +83,6 @@
     "status": "ready"
   },
   {
-    "name": "farm_lettuce",
-    "label": "Alface",
-    "description": "",
-    "weight": 300,
-    "type": "item",
-    "image": "farm_lettuce.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": false,
-    "rarity": "common",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Fazenda",
-    "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-04-27T15:22:21.409Z",
-    "status": "ready"
-  },
-  {
     "name": "algemas",
     "label": "Algemas",
     "description": "",
