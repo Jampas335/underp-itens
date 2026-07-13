@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-13T21:27:05.416Z",
+  "generatedAt": "2026-07-13T21:27:09.577Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 376,
+  "count": 375,
   "categories": [
     {
       "name": "Armas",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 10
+      "count": 9
     },
     {
       "name": "Ferramentas",
@@ -10785,39 +10785,6 @@
         "rarity": "epic"
       },
       "lua": "['kq_weed_seed_purple_haze'] = {\n    ['name'] = 'kq_weed_seed_purple_haze',\n    ['label'] = 'Semente de Purple Haze',\n    ['weight'] = 5,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_seed_purple_haze.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'epic',\n},"
-    },
-    {
-      "id": "seeds_tomato",
-      "name": "seeds_tomato",
-      "label": "Semente de Tomate",
-      "description": "",
-      "category": "Fazenda",
-      "type": "item",
-      "rarity": "common",
-      "weight": 50,
-      "image": "seeds_tomato.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_tomato.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_tomato.png",
-        "https://jampas335.github.io/underp-itens/server-icons/seeds_tomato.png",
-        "https://jampas335.github.io/underp-itens/icons/seeds_tomato.png"
-      ],
-      "iconSource": "upload",
-      "status": "ready",
-      "createdAt": "2026-04-27T15:42:50.798Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "seeds_tomato",
-        "label": "Semente de Tomate",
-        "weight": 50,
-        "type": "item",
-        "image": "seeds_tomato.png",
-        "unique": false,
-        "useable": true,
-        "shouldClose": true,
-        "rarity": "common"
-      },
-      "lua": "['seeds_tomato'] = {\n    ['name'] = 'seeds_tomato',\n    ['label'] = 'Semente de Tomate',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'seeds_tomato.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "kq_weed_seed_white_widow",
