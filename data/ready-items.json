@@ -6339,26 +6339,6 @@
     "status": "ready"
   },
   {
-    "name": "seeds_potato",
-    "label": "Semente de Batata",
-    "description": "",
-    "weight": 50,
-    "type": "item",
-    "image": "seeds_potato.png",
-    "unique": false,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "common",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Fazenda",
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-27T15:41:21.775Z",
-    "status": "ready"
-  },
-  {
     "name": "kq_weed_seed_blue_dream",
     "label": "Semente de Blue Dream",
     "description": "",
