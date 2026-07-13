@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-13T21:25:43.580Z",
+  "generatedAt": "2026-07-13T21:25:51.801Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 394,
+  "count": 393,
   "categories": [
     {
       "name": "Armas",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 28
+      "count": 27
     },
     {
       "name": "Ferramentas",
@@ -7329,39 +7329,6 @@
         "rarity": "rare"
       },
       "lua": "['weapon_megaphone'] = {\n    ['name'] = 'weapon_megaphone',\n    ['label'] = 'Megafone',\n    ['weight'] = 600,\n    ['type'] = 'weapon',\n    ['image'] = 'weapon_megaphone.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
-    },
-    {
-      "id": "farm_watermelon",
-      "name": "farm_watermelon",
-      "label": "Melancia",
-      "description": "",
-      "category": "Fazenda",
-      "type": "item",
-      "rarity": "common",
-      "weight": 5000,
-      "image": "farm_watermelon.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_watermelon.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/farm_watermelon.png",
-        "https://jampas335.github.io/underp-itens/server-icons/farm_watermelon.png",
-        "https://jampas335.github.io/underp-itens/icons/farm_watermelon.png"
-      ],
-      "iconSource": "upload",
-      "status": "ready",
-      "createdAt": "2026-04-27T15:28:54.801Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "farm_watermelon",
-        "label": "Melancia",
-        "weight": 5000,
-        "type": "item",
-        "image": "farm_watermelon.png",
-        "unique": false,
-        "useable": false,
-        "shouldClose": false,
-        "rarity": "common"
-      },
-      "lua": "['farm_watermelon'] = {\n    ['name'] = 'farm_watermelon',\n    ['label'] = 'Melancia',\n    ['weight'] = 5000,\n    ['type'] = 'item',\n    ['image'] = 'farm_watermelon.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "kq_weed_table",
