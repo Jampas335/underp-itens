@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-13T21:26:06.373Z",
+  "generatedAt": "2026-07-13T21:26:20.105Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 390,
+  "count": 387,
   "categories": [
     {
       "name": "Armas",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 24
+      "count": 21
     },
     {
       "name": "Ferramentas",
@@ -10622,39 +10622,6 @@
       "lua": "['kq_weed_paper'] = {\n    ['name'] = 'kq_weed_paper',\n    ['label'] = 'Seda',\n    ['weight'] = 20,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_paper.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
-      "id": "seeds_lettuce",
-      "name": "seeds_lettuce",
-      "label": "Semente de Alface",
-      "description": "",
-      "category": "Fazenda",
-      "type": "item",
-      "rarity": "common",
-      "weight": 50,
-      "image": "seeds_lettuce.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_lettuce.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_lettuce.png",
-        "https://jampas335.github.io/underp-itens/server-icons/seeds_lettuce.png",
-        "https://jampas335.github.io/underp-itens/icons/seeds_lettuce.png"
-      ],
-      "iconSource": "upload",
-      "status": "ready",
-      "createdAt": "2026-04-27T15:39:23.396Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "seeds_lettuce",
-        "label": "Semente de Alface",
-        "weight": 50,
-        "type": "item",
-        "image": "seeds_lettuce.png",
-        "unique": false,
-        "useable": true,
-        "shouldClose": true,
-        "rarity": "common"
-      },
-      "lua": "['seeds_lettuce'] = {\n    ['name'] = 'seeds_lettuce',\n    ['label'] = 'Semente de Alface',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'seeds_lettuce.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
-    },
-    {
       "id": "seeds_banana",
       "name": "seeds_banana",
       "label": "Semente de Banana",
@@ -10785,39 +10752,6 @@
         "rarity": "rare"
       },
       "lua": "['kq_weed_seed_blue_dream'] = {\n    ['name'] = 'kq_weed_seed_blue_dream',\n    ['label'] = 'Semente de Blue Dream',\n    ['weight'] = 5,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_seed_blue_dream.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
-    },
-    {
-      "id": "seeds_onion",
-      "name": "seeds_onion",
-      "label": "Semente de Cebola",
-      "description": "",
-      "category": "Fazenda",
-      "type": "item",
-      "rarity": "common",
-      "weight": 50,
-      "image": "seeds_onion.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_onion.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_onion.png",
-        "https://jampas335.github.io/underp-itens/server-icons/seeds_onion.png",
-        "https://jampas335.github.io/underp-itens/icons/seeds_onion.png"
-      ],
-      "iconSource": "upload",
-      "status": "ready",
-      "createdAt": "2026-04-27T15:40:07.811Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "seeds_onion",
-        "label": "Semente de Cebola",
-        "weight": 50,
-        "type": "item",
-        "image": "seeds_onion.png",
-        "unique": false,
-        "useable": true,
-        "shouldClose": true,
-        "rarity": "common"
-      },
-      "lua": "['seeds_onion'] = {\n    ['name'] = 'seeds_onion',\n    ['label'] = 'Semente de Cebola',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'seeds_onion.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "seeds_apple",
@@ -12751,39 +12685,6 @@
         "rarity": "common"
       },
       "lua": "['transmission'] = {\n    ['name'] = 'transmission',\n    ['label'] = 'Transmissão',\n    ['weight'] = 100000,\n    ['type'] = 'item',\n    ['image'] = 'transmission.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
-    },
-    {
-      "id": "farm_wheat",
-      "name": "farm_wheat",
-      "label": "Trigo",
-      "description": "",
-      "category": "Fazenda",
-      "type": "item",
-      "rarity": "common",
-      "weight": 500,
-      "image": "farm_wheat.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_wheat.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/farm_wheat.png",
-        "https://jampas335.github.io/underp-itens/server-icons/farm_wheat.png",
-        "https://jampas335.github.io/underp-itens/icons/farm_wheat.png"
-      ],
-      "iconSource": "upload",
-      "status": "ready",
-      "createdAt": "2026-04-27T15:30:31.904Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "farm_wheat",
-        "label": "Trigo",
-        "weight": 500,
-        "type": "item",
-        "image": "farm_wheat.png",
-        "unique": false,
-        "useable": false,
-        "shouldClose": false,
-        "rarity": "common"
-      },
-      "lua": "['farm_wheat'] = {\n    ['name'] = 'farm_wheat',\n    ['label'] = 'Trigo',\n    ['weight'] = 500,\n    ['type'] = 'item',\n    ['image'] = 'farm_wheat.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "oak_log",
