@@ -6439,26 +6439,6 @@
     "status": "ready"
   },
   {
-    "name": "seeds_apple",
-    "label": "Semente de Maça",
-    "description": "",
-    "weight": 50,
-    "type": "item",
-    "image": "seeds_apple.png",
-    "unique": false,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "common",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Fazenda",
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-27T15:35:54.681Z",
-    "status": "ready"
-  },
-  {
     "name": "kq_weed_seed_og_kush",
     "label": "Semente de OG Kush",
     "description": "",
