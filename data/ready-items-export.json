@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-13T21:27:28.889Z",
+  "generatedAt": "2026-07-13T21:27:32.816Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 371,
+  "count": 370,
   "categories": [
     {
       "name": "Armas",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 5
+      "count": 4
     },
     {
       "name": "Ferramentas",
@@ -10521,39 +10521,6 @@
         "rarity": "common"
       },
       "lua": "['seeds_banana'] = {\n    ['name'] = 'seeds_banana',\n    ['label'] = 'Semente de Banana',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'seeds_banana.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
-    },
-    {
-      "id": "seeds_potato",
-      "name": "seeds_potato",
-      "label": "Semente de Batata",
-      "description": "",
-      "category": "Fazenda",
-      "type": "item",
-      "rarity": "common",
-      "weight": 50,
-      "image": "seeds_potato.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_potato.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_potato.png",
-        "https://jampas335.github.io/underp-itens/server-icons/seeds_potato.png",
-        "https://jampas335.github.io/underp-itens/icons/seeds_potato.png"
-      ],
-      "iconSource": "upload",
-      "status": "ready",
-      "createdAt": "2026-04-27T15:41:21.775Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "seeds_potato",
-        "label": "Semente de Batata",
-        "weight": 50,
-        "type": "item",
-        "image": "seeds_potato.png",
-        "unique": false,
-        "useable": true,
-        "shouldClose": true,
-        "rarity": "common"
-      },
-      "lua": "['seeds_potato'] = {\n    ['name'] = 'seeds_potato',\n    ['label'] = 'Semente de Batata',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'seeds_potato.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "kq_weed_seed_blue_dream",
