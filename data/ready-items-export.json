@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-13T21:26:51.632Z",
+  "generatedAt": "2026-07-13T21:26:57.017Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 381,
+  "count": 379,
   "categories": [
     {
       "name": "Armas",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 15
+      "count": 13
     },
     {
       "name": "Ferramentas",
@@ -4949,39 +4949,6 @@
         "rarity": "common"
       },
       "lua": "['fog-light'] = {\n    ['name'] = 'fog-light',\n    ['label'] = 'Farol de Neblina',\n    ['weight'] = 400,\n    ['type'] = 'item',\n    ['image'] = 'fog-light.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
-    },
-    {
-      "id": "farm_fertilizer",
-      "name": "farm_fertilizer",
-      "label": "Fertilizante",
-      "description": "",
-      "category": "Fazenda",
-      "type": "item",
-      "rarity": "uncommon",
-      "weight": 1000,
-      "image": "farm_fertilizer.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_fertilizer.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/farm_fertilizer.png",
-        "https://jampas335.github.io/underp-itens/server-icons/farm_fertilizer.png",
-        "https://jampas335.github.io/underp-itens/icons/farm_fertilizer.png"
-      ],
-      "iconSource": "upload",
-      "status": "ready",
-      "createdAt": "2026-04-27T15:08:57.899Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "farm_fertilizer",
-        "label": "Fertilizante",
-        "weight": 1000,
-        "type": "item",
-        "image": "farm_fertilizer.png",
-        "unique": true,
-        "useable": true,
-        "shouldClose": true,
-        "rarity": "uncommon"
-      },
-      "lua": "['farm_fertilizer'] = {\n    ['name'] = 'farm_fertilizer',\n    ['label'] = 'Fertilizante',\n    ['weight'] = 1000,\n    ['type'] = 'item',\n    ['image'] = 'farm_fertilizer.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "kq_weed_fertilizer_resistance",
@@ -10917,39 +10884,6 @@
         "rarity": "epic"
       },
       "lua": "['kq_weed_seed_purple_haze'] = {\n    ['name'] = 'kq_weed_seed_purple_haze',\n    ['label'] = 'Semente de Purple Haze',\n    ['weight'] = 5,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_seed_purple_haze.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'epic',\n},"
-    },
-    {
-      "id": "seeds_soy",
-      "name": "seeds_soy",
-      "label": "Semente de Soja",
-      "description": "",
-      "category": "Fazenda",
-      "type": "item",
-      "rarity": "common",
-      "weight": 50,
-      "image": "seeds_soy.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_soy.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_soy.png",
-        "https://jampas335.github.io/underp-itens/server-icons/seeds_soy.png",
-        "https://jampas335.github.io/underp-itens/icons/seeds_soy.png"
-      ],
-      "iconSource": "upload",
-      "status": "ready",
-      "createdAt": "2026-04-27T15:41:53.875Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "seeds_soy",
-        "label": "Semente de Soja",
-        "weight": 50,
-        "type": "item",
-        "image": "seeds_soy.png",
-        "unique": false,
-        "useable": true,
-        "shouldClose": true,
-        "rarity": "common"
-      },
-      "lua": "['seeds_soy'] = {\n    ['name'] = 'seeds_soy',\n    ['label'] = 'Semente de Soja',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'seeds_soy.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "seeds_tomato",
