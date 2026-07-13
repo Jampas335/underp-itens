@@ -6639,26 +6639,6 @@
     "status": "ready"
   },
   {
-    "name": "seeds_wheat",
-    "label": "Semente de Trigo",
-    "description": "",
-    "weight": 50,
-    "type": "item",
-    "image": "seeds_wheat.png",
-    "unique": false,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "common",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Fazenda",
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-27T15:44:05.068Z",
-    "status": "ready"
-  },
-  {
     "name": "kq_weed_seed_white_widow",
     "label": "Semente de White Widow",
     "description": "",
