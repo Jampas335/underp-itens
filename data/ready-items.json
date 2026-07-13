@@ -6379,26 +6379,6 @@
     "status": "ready"
   },
   {
-    "name": "seeds_eggplant",
-    "label": "Semente de Beringela",
-    "description": "",
-    "weight": 50,
-    "type": "item",
-    "image": "seeds_eggplant.png",
-    "unique": false,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "common",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Fazenda",
-    "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-04-27T15:55:40.313Z",
-    "status": "ready"
-  },
-  {
     "name": "kq_weed_seed_blue_dream",
     "label": "Semente de Blue Dream",
     "description": "",
