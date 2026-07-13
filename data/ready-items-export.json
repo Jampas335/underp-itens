@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-13T21:30:24.525Z",
+  "generatedAt": "2026-07-13T21:31:40.827Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -10230,39 +10230,6 @@
       "lua": "['bag'] = {\n    ['name'] = 'bag',\n    ['label'] = 'Saco',\n    ['weight'] = 10,\n    ['type'] = 'item',\n    ['image'] = 'bs-bag.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n    ['allowInBackpack'] = false,\n},"
     },
     {
-      "id": "seeds_corn",
-      "name": "seeds_corn",
-      "label": "Saco de sementes de milho",
-      "description": "",
-      "category": "Fazenda",
-      "type": "item",
-      "rarity": "common",
-      "weight": 50,
-      "image": "seeds_corn.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_corn.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_corn.png",
-        "https://jampas335.github.io/underp-itens/server-icons/seeds_corn.png",
-        "https://jampas335.github.io/underp-itens/icons/seeds_corn.png"
-      ],
-      "iconSource": "upload",
-      "status": "ready",
-      "createdAt": "2026-07-13T21:30:19.763Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "seeds_corn",
-        "label": "Saco de sementes de milho",
-        "weight": 50,
-        "type": "item",
-        "image": "seeds_corn.png",
-        "unique": false,
-        "useable": false,
-        "shouldClose": false,
-        "rarity": "common"
-      },
-      "lua": "['seeds_corn'] = {\n    ['name'] = 'seeds_corn',\n    ['label'] = 'Saco de sementes de milho',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'seeds_corn.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
-    },
-    {
       "id": "bodybag",
       "name": "bodybag",
       "label": "Saco Mortuario",
@@ -10620,6 +10587,39 @@
         "rarity": "epic"
       },
       "lua": "['kq_weed_seed_white_widow'] = {\n    ['name'] = 'kq_weed_seed_white_widow',\n    ['label'] = 'Semente de White Widow',\n    ['weight'] = 5,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_seed_white_widow.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'epic',\n},"
+    },
+    {
+      "id": "seeds_corn",
+      "name": "seeds_corn",
+      "label": "Sementes de milho",
+      "description": "",
+      "category": "Fazenda",
+      "type": "item",
+      "rarity": "common",
+      "weight": 50,
+      "image": "seeds_corn.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_corn.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_corn.png",
+        "https://jampas335.github.io/underp-itens/server-icons/seeds_corn.png",
+        "https://jampas335.github.io/underp-itens/icons/seeds_corn.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-13T21:31:35.448Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "seeds_corn",
+        "label": "Sementes de milho",
+        "weight": 50,
+        "type": "item",
+        "image": "seeds_corn.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['seeds_corn'] = {\n    ['name'] = 'seeds_corn',\n    ['label'] = 'Sementes de milho',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'seeds_corn.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "castsaw",
