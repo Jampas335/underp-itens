@@ -6153,26 +6153,6 @@
     "status": "ready"
   },
   {
-    "name": "seeds_corn",
-    "label": "Saco de sementes de milho",
-    "description": "",
-    "weight": 50,
-    "type": "item",
-    "image": "seeds_corn.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": false,
-    "rarity": "common",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "",
-    "siteCategory": "Fazenda",
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-07-13T21:30:19.763Z",
-    "status": "ready"
-  },
-  {
     "name": "bodybag",
     "label": "Saco Mortuario",
     "description": "",
@@ -6396,6 +6376,26 @@
     "source": "ready",
     "iconSource": "upload",
     "createdAt": "2026-05-12T02:25:34.770Z",
+    "status": "ready"
+  },
+  {
+    "name": "seeds_corn",
+    "label": "Sementes de milho",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "seeds_corn.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-13T21:31:35.448Z",
     "status": "ready"
   },
   {
