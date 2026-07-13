@@ -5969,6 +5969,26 @@
     "status": "ready"
   },
   {
+    "name": "weapon_watering_can",
+    "label": "Regador",
+    "description": "Ferramenta de irrigação agrícola conectada à bomba do campo.",
+    "weight": 1000,
+    "type": "weapon",
+    "image": "WEAPON_WATERING_CAN.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-13T21:40:19.411Z",
+    "status": "ready"
+  },
+  {
     "name": "relogio",
     "label": "Rélogio",
     "description": "",
