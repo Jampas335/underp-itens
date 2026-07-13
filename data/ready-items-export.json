@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-13T21:26:30.246Z",
+  "generatedAt": "2026-07-13T21:26:35.745Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 385,
+  "count": 384,
   "categories": [
     {
       "name": "Armas",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 19
+      "count": 18
     },
     {
       "name": "Ferramentas",
@@ -13114,39 +13114,6 @@
         "rarity": "uncommon"
       },
       "lua": "['farm_pot_medium'] = {\n    ['name'] = 'farm_pot_medium',\n    ['label'] = 'Vaso Médio',\n    ['weight'] = 600,\n    ['type'] = 'item',\n    ['image'] = 'farm_pot_medium.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
-    },
-    {
-      "id": "farm_pot_small",
-      "name": "farm_pot_small",
-      "label": "Vaso Pequeno",
-      "description": "",
-      "category": "Fazenda",
-      "type": "item",
-      "rarity": "uncommon",
-      "weight": 300,
-      "image": "farm_pot_small.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_pot_small.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/farm_pot_small.png",
-        "https://jampas335.github.io/underp-itens/server-icons/farm_pot_small.png",
-        "https://jampas335.github.io/underp-itens/icons/farm_pot_small.png"
-      ],
-      "iconSource": "upload",
-      "status": "ready",
-      "createdAt": "2026-04-27T15:10:11.127Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "farm_pot_small",
-        "label": "Vaso Pequeno",
-        "weight": 300,
-        "type": "item",
-        "image": "farm_pot_small.png",
-        "unique": false,
-        "useable": true,
-        "shouldClose": true,
-        "rarity": "uncommon"
-      },
-      "lua": "['farm_pot_small'] = {\n    ['name'] = 'farm_pot_small',\n    ['label'] = 'Vaso Pequeno',\n    ['weight'] = 300,\n    ['type'] = 'item',\n    ['image'] = 'farm_pot_small.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "ventilador",
