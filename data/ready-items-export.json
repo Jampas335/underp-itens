@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-13T21:31:40.827Z",
+  "generatedAt": "2026-07-13T21:33:59.681Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 367,
+  "count": 368,
   "categories": [
     {
       "name": "Armas",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 1
+      "count": 2
     },
     {
       "name": "Ferramentas",
@@ -4569,6 +4569,39 @@
         "rarity": "uncommon"
       },
       "lua": "['angle_grinder'] = {\n    ['name'] = 'angle_grinder',\n    ['label'] = 'Esmerilhadeira',\n    ['weight'] = 2000,\n    ['type'] = 'item',\n    ['image'] = 'angle_grinder.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "farm_corn",
+      "name": "farm_corn",
+      "label": "Espiga de milho",
+      "description": "",
+      "category": "Fazenda",
+      "type": "item",
+      "rarity": "common",
+      "weight": 250,
+      "image": "farm_corn.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_corn.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/farm_corn.png",
+        "https://jampas335.github.io/underp-itens/server-icons/farm_corn.png",
+        "https://jampas335.github.io/underp-itens/icons/farm_corn.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-13T21:33:54.935Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "farm_corn",
+        "label": "Espiga de milho",
+        "weight": 250,
+        "type": "item",
+        "image": "farm_corn.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['farm_corn'] = {\n    ['name'] = 'farm_corn',\n    ['label'] = 'Espiga de milho',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'farm_corn.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "weapon_beanbag",
