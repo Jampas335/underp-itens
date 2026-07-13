@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-13T21:27:20.522Z",
+  "generatedAt": "2026-07-13T21:27:28.889Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 372,
+  "count": 371,
   "categories": [
     {
       "name": "Armas",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 6
+      "count": 5
     },
     {
       "name": "Ferramentas",
@@ -2868,39 +2868,6 @@
         "rarity": "uncommon"
       },
       "lua": "['coal'] = {\n    ['name'] = 'coal',\n    ['label'] = 'Carvão',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'ore_coal.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'uncommon',\n},"
-    },
-    {
-      "id": "farm_onion",
-      "name": "farm_onion",
-      "label": "Cebola",
-      "description": "",
-      "category": "Fazenda",
-      "type": "item",
-      "rarity": "common",
-      "weight": 150,
-      "image": "farm_onion.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_onion.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/farm_onion.png",
-        "https://jampas335.github.io/underp-itens/server-icons/farm_onion.png",
-        "https://jampas335.github.io/underp-itens/icons/farm_onion.png"
-      ],
-      "iconSource": "upload",
-      "status": "ready",
-      "createdAt": "2026-05-09T20:04:38.327Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "farm_onion",
-        "label": "Cebola",
-        "weight": 150,
-        "type": "item",
-        "image": "farm_onion.png",
-        "unique": false,
-        "useable": false,
-        "shouldClose": false,
-        "rarity": "common"
-      },
-      "lua": "['farm_onion'] = {\n    ['name'] = 'farm_onion',\n    ['label'] = 'Cebola',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'farm_onion.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "phone",
