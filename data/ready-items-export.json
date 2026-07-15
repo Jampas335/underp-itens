@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-15T09:58:06.897Z",
+  "generatedAt": "2026-07-15T09:59:27.425Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 371,
+  "count": 372,
   "categories": [
     {
       "name": "Armas",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 5
+      "count": 6
     },
     {
       "name": "Ferramentas",
@@ -10755,6 +10755,40 @@
         "rarity": "common"
       },
       "lua": "['seeds_corn'] = {\n    ['name'] = 'seeds_corn',\n    ['label'] = 'Sementes de milho',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'seeds_corn.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "seeds_cabbage",
+      "name": "seeds_cabbage",
+      "label": "Sementes de repolho",
+      "description": "",
+      "category": "Fazenda",
+      "type": "item",
+      "rarity": "common",
+      "weight": 50,
+      "image": "novo-item.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_cabbage.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_cabbage.png",
+        "https://jampas335.github.io/underp-itens/server-icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/seeds_cabbage.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-15T09:59:22.545Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "seeds_cabbage",
+        "label": "Sementes de repolho",
+        "weight": 50,
+        "type": "item",
+        "image": "novo-item.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['seeds_cabbage'] = {\n    ['name'] = 'seeds_cabbage',\n    ['label'] = 'Sementes de repolho',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "castsaw",
