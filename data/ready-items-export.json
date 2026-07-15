@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-13T21:52:15.154Z",
+  "generatedAt": "2026-07-15T09:58:06.897Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 370,
+  "count": 371,
   "categories": [
     {
       "name": "Armas",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 4
+      "count": 5
     },
     {
       "name": "Ferramentas",
@@ -10093,6 +10093,40 @@
         "rarity": "rare"
       },
       "lua": "['remedio_vencido'] = {\n    ['name'] = 'remedio_vencido',\n    ['label'] = 'Remédio Vencido',\n    ['weight'] = 15,\n    ['type'] = 'item',\n    ['image'] = 'remedio_vencido.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'rare',\n},"
+    },
+    {
+      "id": "farm_cabbage",
+      "name": "farm_cabbage",
+      "label": "Repolho",
+      "description": "",
+      "category": "Fazenda",
+      "type": "item",
+      "rarity": "common",
+      "weight": 500,
+      "image": "novo-item.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_cabbage.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/farm_cabbage.png",
+        "https://jampas335.github.io/underp-itens/server-icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/farm_cabbage.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-15T09:58:02.149Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "farm_cabbage",
+        "label": "Repolho",
+        "weight": 500,
+        "type": "item",
+        "image": "novo-item.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['farm_cabbage'] = {\n    ['name'] = 'farm_cabbage',\n    ['label'] = 'Repolho',\n    ['weight'] = 500,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "fish5",
