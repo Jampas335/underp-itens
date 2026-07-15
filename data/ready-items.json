@@ -6069,6 +6069,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_cabbage",
+    "label": "Repolho",
+    "description": "",
+    "weight": 500,
+    "type": "item",
+    "image": "novo-item.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-15T09:58:02.149Z",
+    "status": "ready"
+  },
+  {
     "name": "fish5",
     "label": "Rocio Octofasciata",
     "description": "",
