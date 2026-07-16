@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-15T09:59:27.425Z",
+  "generatedAt": "2026-07-16T04:17:16.223Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 372,
+  "count": 373,
   "categories": [
     {
       "name": "Armas",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 6
+      "count": 7
     },
     {
       "name": "Ferramentas",
@@ -10755,6 +10755,40 @@
         "rarity": "common"
       },
       "lua": "['seeds_corn'] = {\n    ['name'] = 'seeds_corn',\n    ['label'] = 'Sementes de milho',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'seeds_corn.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "seeds_strawberry",
+      "name": "seeds_strawberry",
+      "label": "Sementes de morango",
+      "description": "",
+      "category": "Fazenda",
+      "type": "item",
+      "rarity": "common",
+      "weight": 50,
+      "image": "novo-item.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_strawberry.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_strawberry.png",
+        "https://jampas335.github.io/underp-itens/server-icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/seeds_strawberry.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-16T04:17:08.592Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "seeds_strawberry",
+        "label": "Sementes de morango",
+        "weight": 50,
+        "type": "item",
+        "image": "novo-item.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['seeds_strawberry'] = {\n    ['name'] = 'seeds_strawberry',\n    ['label'] = 'Sementes de morango',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "seeds_cabbage",
