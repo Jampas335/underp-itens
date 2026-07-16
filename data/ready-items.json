@@ -6479,6 +6479,26 @@
     "status": "ready"
   },
   {
+    "name": "seeds_strawberry",
+    "label": "Sementes de morango",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "novo-item.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-16T04:17:08.592Z",
+    "status": "ready"
+  },
+  {
     "name": "seeds_cabbage",
     "label": "Sementes de repolho",
     "description": "",
