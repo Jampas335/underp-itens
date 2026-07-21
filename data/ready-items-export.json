@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-21T06:18:15.290Z",
+  "generatedAt": "2026-07-21T06:23:54.345Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 375,
+  "count": 376,
   "categories": [
     {
       "name": "Armas",
@@ -76,7 +76,7 @@
     },
     {
       "name": "Ferramentas",
-      "count": 7
+      "count": 8
     },
     {
       "name": "Ilegal",
@@ -2041,6 +2041,40 @@
         "decay": 0.8
       },
       "lua": "['bubble_tea'] = {\n    ['name'] = 'bubble_tea',\n    ['label'] = 'Bubble Tea',\n    ['weight'] = 300,\n    ['type'] = 'item',\n    ['image'] = 'bubble-tea.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n    ['decay'] = 0.8,\n},"
+    },
+    {
+      "id": "bucha_limpeza",
+      "name": "bucha_limpeza",
+      "label": "Bucha de Limpeza",
+      "description": "uma esponja para limpar coisas.",
+      "category": "Ferramentas",
+      "type": "item",
+      "rarity": "common",
+      "weight": 50,
+      "image": "bucha_limpeza.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/bucha_limpeza.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/bucha_limpeza.png",
+        "https://jampas335.github.io/underp-itens/server-icons/bucha_limpeza.png",
+        "https://jampas335.github.io/underp-itens/icons/bucha_limpeza.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-21T06:23:49.527Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "bucha_limpeza",
+        "label": "Bucha de Limpeza",
+        "weight": 50,
+        "type": "item",
+        "image": "bucha_limpeza.png",
+        "unique": true,
+        "useable": true,
+        "shouldClose": true,
+        "description": "uma esponja para limpar coisas.",
+        "rarity": "common"
+      },
+      "lua": "['bucha_limpeza'] = {\n    ['name'] = 'bucha_limpeza',\n    ['label'] = 'Bucha de Limpeza',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'bucha_limpeza.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['description'] = 'uma esponja para limpar coisas.',\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "weapon_doubleaction",
