@@ -1151,6 +1151,26 @@
     "status": "ready"
   },
   {
+    "name": "bucha_limpeza",
+    "label": "Bucha de Limpeza",
+    "description": "uma esponja para limpar coisas.",
+    "weight": 50,
+    "type": "item",
+    "image": "bucha_limpeza.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Ferramentas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-21T06:23:49.527Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_doubleaction",
     "label": "Budoguin",
     "description": "",
