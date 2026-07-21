@@ -4048,6 +4048,26 @@
     "status": "ready"
   },
   {
+    "name": "lata_spray",
+    "label": "Lata de Spray",
+    "description": "Uma lata de 500ml de tintas sortidas.",
+    "weight": 500,
+    "type": "item",
+    "image": "lata_spray.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Ferramentas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-21T06:18:11.179Z",
+    "status": "ready"
+  },
+  {
     "name": "latinha",
     "label": "Latinha",
     "description": "",
