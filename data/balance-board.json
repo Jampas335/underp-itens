@@ -1,6 +1,6 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-22T13:55:50.345Z",
+  "updatedAt": "2026-07-22T14:08:10.187Z",
   "nodes": [
     {
       "id": "act-1784722882820",
@@ -118,8 +118,8 @@
       "id": "act-1784723030526",
       "type": "activity",
       "position": {
-        "x": 1723.92056363715,
-        "y": 1555.175796988247
+        "x": 1810.386676944823,
+        "y": 1553.8455490912058
       },
       "data": {
         "kind": "activity",
@@ -815,7 +815,9 @@
         "qtyMax": 0,
         "chance": 100,
         "consumes": true,
-        "observation": ""
+        "observation": "",
+        "resaleMin": 20,
+        "resaleMax": 40
       }
     },
     {
@@ -831,7 +833,9 @@
         "qtyMax": 0,
         "chance": 100,
         "consumes": true,
-        "observation": ""
+        "observation": "",
+        "resaleMin": 30,
+        "resaleMax": 60
       }
     },
     {
@@ -847,7 +851,9 @@
         "qtyMax": 0,
         "chance": 100,
         "consumes": true,
-        "observation": ""
+        "observation": "",
+        "resaleMin": 40,
+        "resaleMax": 80
       }
     },
     {
@@ -863,7 +869,9 @@
         "qtyMax": 0,
         "chance": 100,
         "consumes": true,
-        "observation": ""
+        "observation": "",
+        "resaleMin": 50,
+        "resaleMax": 100
       }
     },
     {
@@ -879,7 +887,9 @@
         "qtyMax": 0,
         "chance": 100,
         "consumes": true,
-        "observation": ""
+        "observation": "",
+        "resaleMin": 60,
+        "resaleMax": 120
       }
     }
   ]
