@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-21T06:23:54.345Z",
+  "generatedAt": "2026-07-22T14:51:34.595Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Caça",
-      "count": 10
+      "count": 11
     },
     {
       "name": "Comida",
@@ -156,7 +156,7 @@
     },
     {
       "name": "Rifles & SMGs",
-      "count": 10
+      "count": 9
     },
     {
       "name": "Roubo casa",
@@ -13043,7 +13043,7 @@
       "name": "weapon_musket",
       "label": "Winchester",
       "description": "",
-      "category": "Rifles & SMGs",
+      "category": "Caça",
       "type": "weapon",
       "rarity": "uncommon",
       "weight": 4500,
@@ -13055,9 +13055,9 @@
         "https://jampas335.github.io/underp-itens/icons/musket.png",
         "https://jampas335.github.io/underp-itens/icons/weapon_musket.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-07-11T02:03:30.920Z",
+      "createdAt": "2026-07-22T14:51:31.338Z",
       "updatedAt": "",
       "inventory": {
         "name": "weapon_musket",
