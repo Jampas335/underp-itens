@@ -1,6 +1,6 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-22T15:13:14.881Z",
+  "updatedAt": "2026-07-22T16:22:52.660Z",
   "nodes": [
     {
       "id": "act-1784722882820",
@@ -93,8 +93,8 @@
       "id": "act-1784723004876",
       "type": "activity",
       "position": {
-        "x": 300.96119808178827,
-        "y": 813.5578249701738
+        "x": 350.42667466584385,
+        "y": 814.3429912651588
       },
       "data": {
         "kind": "activity",
@@ -113,7 +113,7 @@
       },
       "measured": {
         "width": 240,
-        "height": 172
+        "height": 124
       },
       "dragging": false,
       "selected": false
@@ -1334,7 +1334,7 @@
       "type": "item",
       "position": {
         "x": -296.8564320911944,
-        "y": 46.93863978248914
+        "y": -4.56136021751086
       },
       "data": {
         "kind": "item",
@@ -1614,6 +1614,162 @@
       },
       "selected": false,
       "dragging": false
+    },
+    {
+      "id": "item-1784737178785-ymt5",
+      "type": "item",
+      "position": {
+        "x": -251.02103959375597,
+        "y": 684.2505249261696
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "weapon_watering_can",
+        "name": "Regador",
+        "identifier": "weapon_watering_can",
+        "category": "Fazenda",
+        "icon": "Shield",
+        "color": "#f59e0b",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/weapon_watering_can.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784737182249-pwyy",
+      "type": "item",
+      "position": {
+        "x": -251.02103959375597,
+        "y": 761.5048410428913
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "farm_fertilizer",
+        "name": "Fertilizante",
+        "identifier": "farm_fertilizer",
+        "category": "Fazenda",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_fertilizer.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784737187915-blhn",
+      "type": "item",
+      "position": {
+        "x": -251.02103959375597,
+        "y": 839.5894198226853
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "seeds_corn",
+        "name": "Sementes de milho",
+        "identifier": "seeds_corn",
+        "category": "Fazenda",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_corn.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784737190719-wbjf",
+      "type": "item",
+      "position": {
+        "x": -251.02103959375597,
+        "y": 917.8373668143879
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "seeds_strawberry",
+        "name": "Sementes de morango",
+        "identifier": "seeds_strawberry",
+        "category": "Fazenda",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_strawberry.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784737191961-c0ee",
+      "type": "item",
+      "position": {
+        "x": -251.02103959375597,
+        "y": 998.1089676075999
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "seeds_cabbage",
+        "name": "Sementes de repolho",
+        "identifier": "seeds_cabbage",
+        "category": "Fazenda",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_cabbage.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784737337991-6yyl",
+      "type": "item",
+      "position": {
+        "x": -296.8564320911944,
+        "y": 79.52410770522528
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "weapon_precisionrifle",
+        "name": "Sauer 101",
+        "identifier": "weapon_precisionrifle",
+        "category": "Rifles & SMGs",
+        "icon": "Shield",
+        "color": "#f59e0b",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/weapon_precisionrifle.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
     }
   ],
   "edges": [
@@ -2770,6 +2926,114 @@
       "type": "under",
       "data": {
         "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784737214463-isuq",
+      "source": "item-1784737178785-ymt5",
+      "target": "act-1784723004876",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784737219501-7f5v",
+      "source": "item-1784737182249-pwyy",
+      "target": "act-1784723004876",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 5,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784737228208-4c3r",
+      "source": "item-1784737187915-blhn",
+      "target": "act-1784723004876",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 16,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784737237358-8f60",
+      "source": "item-1784737190719-wbjf",
+      "target": "act-1784723004876",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 16,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784737239836-tzww",
+      "source": "item-1784737191961-c0ee",
+      "target": "act-1784723004876",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 16,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784737344254-9bvc",
+      "source": "item-1784737337991-6yyl",
+      "target": "act-1784722959907",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
         "qtyMin": 1,
         "qtyMax": 1,
         "chance": 100,
