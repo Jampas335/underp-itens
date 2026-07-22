@@ -1,6 +1,6 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-22T14:11:07.163Z",
+  "updatedAt": "2026-07-22T14:21:21.440Z",
   "nodes": [
     {
       "id": "act-1784722882820",
@@ -63,7 +63,7 @@
       "type": "activity",
       "position": {
         "x": 310.63917248298696,
-        "y": 812.162786505066
+        "y": 673.8382919207444
       },
       "data": {
         "kind": "activity",
@@ -84,14 +84,15 @@
         "width": 240,
         "height": 172
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "act-1784723004876",
       "type": "activity",
       "position": {
         "x": 310.63917248298696,
-        "y": 1098.2802771341906
+        "y": 1001.3105283534292
       },
       "data": {
         "kind": "activity",
@@ -112,14 +113,15 @@
         "width": 240,
         "height": 172
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "act-1784723030526",
       "type": "activity",
       "position": {
-        "x": 1840.895570701193,
-        "y": 1571.7919571831883
+        "x": 2006.7044039410769,
+        "y": 1563.5553947049252
       },
       "data": {
         "kind": "activity",
@@ -148,7 +150,7 @@
       "type": "activity",
       "position": {
         "x": 310.63917248298696,
-        "y": 1401.7980673490442
+        "y": 1463.9404056011035
       },
       "data": {
         "kind": "activity",
@@ -169,7 +171,8 @@
         "width": 240,
         "height": 172
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "act-1784723086893",
@@ -204,7 +207,7 @@
       "type": "activity",
       "position": {
         "x": 310.63917248298696,
-        "y": 1847.7639913323715
+        "y": 1847.0894400652016
       },
       "data": {
         "kind": "activity",
@@ -232,8 +235,8 @@
       "id": "item-1784723191034-6ulr",
       "type": "item",
       "position": {
-        "x": 765.4111930787726,
-        "y": 1046.9352426770506
+        "x": 923.7890963038153,
+        "y": 921.7275731662428
       },
       "data": {
         "kind": "item",
@@ -258,8 +261,8 @@
       "id": "item-1784723205449-x6jy",
       "type": "item",
       "position": {
-        "x": 765.4111930787726,
-        "y": 1142.4024430073582
+        "x": 923.7890963038153,
+        "y": 1017.1947734965504
       },
       "data": {
         "kind": "item",
@@ -277,14 +280,15 @@
         "width": 210,
         "height": 77
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "item-1784723212008-15i6",
       "type": "item",
       "position": {
-        "x": 765.4111930787726,
-        "y": 1227.8036363848362
+        "x": 923.7890963038153,
+        "y": 1102.5959668740284
       },
       "data": {
         "kind": "item",
@@ -302,13 +306,14 @@
         "width": 210,
         "height": 77
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "item-1784723275724-okwt",
       "type": "item",
       "position": {
-        "x": 783.1890237366099,
+        "x": 860.5363718232588,
         "y": 1702.4419011845114
       },
       "data": {
@@ -334,7 +339,7 @@
       "id": "item-1784723278417-p9c0",
       "type": "item",
       "position": {
-        "x": 783.1890237366099,
+        "x": 860.5363718232588,
         "y": 1787.2641010563702
       },
       "data": {
@@ -360,7 +365,7 @@
       "id": "item-1784723281506-5yrv",
       "type": "item",
       "position": {
-        "x": 783.1890237366099,
+        "x": 860.5363718232588,
         "y": 1873.772639150142
       },
       "data": {
@@ -386,7 +391,7 @@
       "id": "item-1784723284038-my2m",
       "type": "item",
       "position": {
-        "x": 783.1890237366099,
+        "x": 860.5363718232588,
         "y": 1954.733149670966
       },
       "data": {
@@ -412,7 +417,7 @@
       "id": "item-1784723285696-s18h",
       "type": "item",
       "position": {
-        "x": 783.1890237366099,
+        "x": 860.5363718232588,
         "y": 2041.19918425734
       },
       "data": {
@@ -438,7 +443,7 @@
       "id": "item-1784723426992-iwap",
       "type": "item",
       "position": {
-        "x": 1228.1640967301532,
+        "x": 1305.5114448168022,
         "y": 1702.4419011845114
       },
       "data": {
@@ -464,7 +469,7 @@
       "id": "item-1784723429940-gx46",
       "type": "item",
       "position": {
-        "x": 1228.1640967301532,
+        "x": 1305.5114448168022,
         "y": 1787.2641010563702
       },
       "data": {
@@ -490,7 +495,7 @@
       "id": "item-1784723435083-4i7r",
       "type": "item",
       "position": {
-        "x": 1228.1640967301532,
+        "x": 1305.5114448168022,
         "y": 1873.772639150142
       },
       "data": {
@@ -516,7 +521,7 @@
       "id": "item-1784723438840-9t6k",
       "type": "item",
       "position": {
-        "x": 1228.1640967301532,
+        "x": 1305.5114448168022,
         "y": 1954.733149670966
       },
       "data": {
@@ -542,7 +547,7 @@
       "id": "item-1784723442762-7v9t",
       "type": "item",
       "position": {
-        "x": 1228.1640967301532,
+        "x": 1305.5114448168022,
         "y": 2041.19918425734
       },
       "data": {
@@ -811,7 +816,7 @@
       "type": "under",
       "data": {
         "edgeType": "ALIMENTA",
-        "qtyMin": 0,
+        "qtyMin": 1,
         "qtyMax": 0,
         "chance": 100,
         "consumes": true,
@@ -829,7 +834,7 @@
       "type": "under",
       "data": {
         "edgeType": "ALIMENTA",
-        "qtyMin": 0,
+        "qtyMin": 1,
         "qtyMax": 0,
         "chance": 100,
         "consumes": true,
@@ -848,7 +853,7 @@
       "data": {
         "edgeType": "ALIMENTA",
         "qtyMin": 1,
-        "qtyMax": 2,
+        "qtyMax": 0,
         "chance": 100,
         "consumes": true,
         "observation": "",
@@ -865,7 +870,7 @@
       "type": "under",
       "data": {
         "edgeType": "ALIMENTA",
-        "qtyMin": 0,
+        "qtyMin": 1,
         "qtyMax": 0,
         "chance": 100,
         "consumes": true,
@@ -883,7 +888,7 @@
       "type": "under",
       "data": {
         "edgeType": "ALIMENTA",
-        "qtyMin": 0,
+        "qtyMin": 1,
         "qtyMax": 0,
         "chance": 100,
         "consumes": true,
