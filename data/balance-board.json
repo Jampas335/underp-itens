@@ -1,13 +1,13 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-22T14:32:17.940Z",
+  "updatedAt": "2026-07-22T15:05:42.195Z",
   "nodes": [
     {
       "id": "act-1784722882820",
       "type": "activity",
       "position": {
-        "x": 765.4111930787726,
-        "y": 142.069310222536
+        "x": 276.33196680289166,
+        "y": -1606.2786715515492
       },
       "data": {
         "kind": "activity",
@@ -28,14 +28,15 @@
         "width": 240,
         "height": 172
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "act-1784722938157",
       "type": "activity",
       "position": {
-        "x": 886.9779203018492,
-        "y": 530.4548100489849
+        "x": 397.4404854051052,
+        "y": -1217.8931717251003
       },
       "data": {
         "kind": "activity",
@@ -56,14 +57,15 @@
         "width": 240,
         "height": 197
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "act-1784722959907",
       "type": "activity",
       "position": {
-        "x": 310.63917248298696,
-        "y": 673.8382919207444
+        "x": 257.8588560520712,
+        "y": -37.37647198584572
       },
       "data": {
         "kind": "activity",
@@ -120,8 +122,8 @@
       "id": "act-1784723030526",
       "type": "activity",
       "position": {
-        "x": 2001.0117286819961,
-        "y": 2101.513206688052
+        "x": 3735.304533103552,
+        "y": 1373.3986343857773
       },
       "data": {
         "kind": "activity",
@@ -140,7 +142,7 @@
       },
       "measured": {
         "width": 240,
-        "height": 172
+        "height": 87
       },
       "dragging": false,
       "selected": false
@@ -149,8 +151,8 @@
       "id": "act-1784723065495",
       "type": "activity",
       "position": {
-        "x": 375.4261190591683,
-        "y": 1636.6370041616685
+        "x": 369.2869487503624,
+        "y": 1555.1102121828378
       },
       "data": {
         "kind": "activity",
@@ -178,8 +180,8 @@
       "id": "act-1784723086893",
       "type": "activity",
       "position": {
-        "x": 833.4145733115965,
-        "y": 324.58954808378456
+        "x": 334.9797430702671,
+        "y": -1423.7584336903008
       },
       "data": {
         "kind": "activity",
@@ -200,7 +202,8 @@
         "width": 240,
         "height": 197
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "act-1784723163156",
@@ -573,8 +576,8 @@
       "id": "act-1784723604719",
       "type": "activity",
       "position": {
-        "x": 735.2571107290513,
-        "y": -41.07848578027327
+        "x": 238.06623739047774,
+        "y": -1789.4264675543586
       },
       "data": {
         "kind": "activity",
@@ -595,7 +598,8 @@
         "width": 240,
         "height": 172
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "item-1784730139734-ujdd",
@@ -627,7 +631,7 @@
       "id": "item-1784730185495-66n3",
       "type": "item",
       "position": {
-        "x": 716.4778998372839,
+        "x": 949.1957093847576,
         "y": 1231.2271739611388
       },
       "data": {
@@ -646,14 +650,15 @@
         "width": 210,
         "height": 75
       },
-      "selected": false
+      "selected": false,
+      "dragging": false
     },
     {
       "id": "item-1784730257336-4t6l",
       "type": "item",
       "position": {
-        "x": 716.4778998372839,
-        "y": 1349.5337720567743
+        "x": 949.1957093847576,
+        "y": 1317.7995253003007
       },
       "data": {
         "kind": "item",
@@ -678,8 +683,8 @@
       "id": "item-1784730272300-a6tw",
       "type": "item",
       "position": {
-        "x": 716.4778998372839,
-        "y": 1447.9098119614882
+        "x": 949.1957093847576,
+        "y": 1394.703669285171
       },
       "data": {
         "kind": "item",
@@ -704,8 +709,8 @@
       "id": "item-1784730305564-rtz8",
       "type": "item",
       "position": {
-        "x": 716.4778998372839,
-        "y": 1555.1102121828378
+        "x": 949.1957093847576,
+        "y": 1489.79782274115
       },
       "data": {
         "kind": "item",
@@ -730,8 +735,8 @@
       "id": "item-1784730321705-qk9g",
       "type": "item",
       "position": {
-        "x": 716.4778998372839,
-        "y": 1770.085317630698
+        "x": 949.1957093847576,
+        "y": 1659.3596310211897
       },
       "data": {
         "kind": "item",
@@ -756,8 +761,8 @@
       "id": "item-1784730349110-nsp0",
       "type": "item",
       "position": {
-        "x": 716.4778998372839,
-        "y": 1665.4586503404846
+        "x": 949.1957093847576,
+        "y": 1583.38242517207
       },
       "data": {
         "kind": "item",
@@ -782,8 +787,8 @@
       "id": "item-1784730380655-ggyh",
       "type": "item",
       "position": {
-        "x": 716.4778998372839,
-        "y": 1983.3191189976778
+        "x": 949.1957093847576,
+        "y": 1840.7537253945518
       },
       "data": {
         "kind": "item",
@@ -808,8 +813,8 @@
       "id": "item-1784730410784-c5tf",
       "type": "item",
       "position": {
-        "x": 716.4778998372839,
-        "y": 1874.4019334493155
+        "x": 949.1957093847576,
+        "y": 1754.80534107127
       },
       "data": {
         "kind": "item",
@@ -834,8 +839,8 @@
       "id": "item-1784730472100-deut",
       "type": "item",
       "position": {
-        "x": 716.4778998372839,
-        "y": 2088.480539527132
+        "x": 949.1957093847576,
+        "y": 1949.0571440193728
       },
       "data": {
         "kind": "item",
@@ -860,7 +865,7 @@
       "id": "item-1784730584326-7c7d",
       "type": "item",
       "position": {
-        "x": 1279.8426526736432,
+        "x": 1392.394108335084,
         "y": 1231.2271739611388
       },
       "data": {
@@ -886,8 +891,8 @@
       "id": "item-1784730611236-i50p",
       "type": "item",
       "position": {
-        "x": 1279.8426526736432,
-        "y": 1349.5337720567743
+        "x": 1392.394108335084,
+        "y": 1317.7995253003007
       },
       "data": {
         "kind": "item",
@@ -912,8 +917,8 @@
       "id": "item-1784730635989-mgqa",
       "type": "item",
       "position": {
-        "x": 1279.8426526736432,
-        "y": 1447.9098119614882
+        "x": 1392.394108335084,
+        "y": 1394.703669285171
       },
       "data": {
         "kind": "item",
@@ -938,8 +943,8 @@
       "id": "item-1784730704060-xry9",
       "type": "item",
       "position": {
-        "x": 1279.8426526736432,
-        "y": 1555.1102121828378
+        "x": 1392.394108335084,
+        "y": 1489.79782274115
       },
       "data": {
         "kind": "item",
@@ -951,6 +956,344 @@
         "color": "#36c0ff",
         "referenceValue": 0,
         "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/lithium_fragment.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784730919038-k0ye",
+      "type": "item",
+      "position": {
+        "x": 1392.394108335084,
+        "y": 1583.38242517207
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "zinc_fragment",
+        "name": "Fragmento de Zinco",
+        "identifier": "zinc_fragment",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/zinc_fragment.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784730933895-klk1",
+      "type": "item",
+      "position": {
+        "x": 1392.394108335084,
+        "y": 1659.3596310211897
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "niobium_fragment",
+        "name": "Fragmento de Nióbio",
+        "identifier": "niobium_fragment",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/niobium_fragment.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784730958017-n4pr",
+      "type": "item",
+      "position": {
+        "x": 1392.394108335084,
+        "y": 1754.80534107127
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "limestone_fragment",
+        "name": "Fragmento de Calcário",
+        "identifier": "limestone_fragment",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/limestone_fragment.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784730968121-19b7",
+      "type": "item",
+      "position": {
+        "x": 1392.394108335084,
+        "y": 1840.7537253945518
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "gold_fragment",
+        "name": "Fragmento de Ouro",
+        "identifier": "gold_fragment",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/gold_fragment.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784730993129-84ah",
+      "type": "item",
+      "position": {
+        "x": 1392.394108335084,
+        "y": 1949.0571440193728
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "diamond",
+        "name": "Diamante",
+        "identifier": "diamond",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/diamond.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784731089725-19tx",
+      "type": "item",
+      "position": {
+        "x": 1930.290435168286,
+        "y": 1231.2271739611388
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "copper_bar",
+        "name": "Barra de Cobre",
+        "identifier": "copper_bar",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/copper_bar.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784731098537-0ub3",
+      "type": "item",
+      "position": {
+        "x": 1930.290435168286,
+        "y": 1310.7386887343127
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "iron_bar",
+        "name": "Barra de Ferro",
+        "identifier": "iron_bar",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/iron_bar.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784731113951-0ew0",
+      "type": "item",
+      "position": {
+        "x": 1930.290435168286,
+        "y": 1395.7268643366385
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "aluminum_bar",
+        "name": "Barra de Alumínio",
+        "identifier": "aluminum_bar",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/aluminum_bar.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784731133343-8qo3",
+      "type": "item",
+      "position": {
+        "x": 1930.290435168286,
+        "y": 1484.681847483812
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "lithium_bar",
+        "name": "Barra de Lítio",
+        "identifier": "lithium_bar",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/lithium_bar.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784731158667-0ks3",
+      "type": "item",
+      "position": {
+        "x": 1930.290435168286,
+        "y": 1583.38242517207
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "zinc_bar",
+        "name": "Barra de Zinco",
+        "identifier": "zinc_bar",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/zinc_bar.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784731179582-aji8",
+      "type": "item",
+      "position": {
+        "x": 1930.290435168286,
+        "y": 1663.4524112270603
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "niobium_bar",
+        "name": "Barra de Nióbio",
+        "identifier": "niobium_bar",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/niobium_bar.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784731206166-pvr1",
+      "type": "item",
+      "position": {
+        "x": 1930.290435168286,
+        "y": 1750.3747111707278
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "limestone_powder",
+        "name": "Pó de Calcário",
+        "identifier": "limestone_powder",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/limestone_powder.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784731222250-7t9h",
+      "type": "item",
+      "position": {
+        "x": 1929.2672401168186,
+        "y": 1837.684140240149
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "gold_bar",
+        "name": "Barra de Ouro",
+        "identifier": "gold_bar",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/gold_bar.png",
         "observation": ""
       },
       "measured": {
@@ -1099,8 +1442,8 @@
       "type": "under",
       "data": {
         "edgeType": "CRAFTA",
-        "qtyMin": 1,
-        "qtyMax": 1,
+        "qtyMin": 5,
+        "qtyMax": 0,
         "chance": 100,
         "consumes": true,
         "observation": ""
@@ -1115,8 +1458,8 @@
       "type": "under",
       "data": {
         "edgeType": "CRAFTA",
-        "qtyMin": 1,
-        "qtyMax": 1,
+        "qtyMin": 5,
+        "qtyMax": 0,
         "chance": 100,
         "consumes": true,
         "observation": ""
@@ -1131,8 +1474,8 @@
       "type": "under",
       "data": {
         "edgeType": "CRAFTA",
-        "qtyMin": 1,
-        "qtyMax": 1,
+        "qtyMin": 5,
+        "qtyMax": 0,
         "chance": 100,
         "consumes": true,
         "observation": ""
@@ -1147,8 +1490,8 @@
       "type": "under",
       "data": {
         "edgeType": "CRAFTA",
-        "qtyMin": 1,
-        "qtyMax": 1,
+        "qtyMin": 5,
+        "qtyMax": 0,
         "chance": 100,
         "consumes": true,
         "observation": ""
@@ -1163,8 +1506,8 @@
       "type": "under",
       "data": {
         "edgeType": "CRAFTA",
-        "qtyMin": 1,
-        "qtyMax": 1,
+        "qtyMin": 5,
+        "qtyMax": 0,
         "chance": 100,
         "consumes": true,
         "observation": ""
@@ -1431,6 +1774,474 @@
       "type": "under",
       "data": {
         "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731012076-u60n",
+      "source": "item-1784730185495-66n3",
+      "target": "item-1784730584326-7c7d",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 3,
+        "qtyMax": 0,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731014883-qq6g",
+      "source": "item-1784730257336-4t6l",
+      "target": "item-1784730611236-i50p",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 3,
+        "qtyMax": 0,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731017640-v87l",
+      "source": "item-1784730272300-a6tw",
+      "target": "item-1784730635989-mgqa",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 3,
+        "qtyMax": 0,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731020738-cr5c",
+      "source": "item-1784730305564-rtz8",
+      "target": "item-1784730704060-xry9",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 3,
+        "qtyMax": 0,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731023625-nezy",
+      "source": "item-1784730349110-nsp0",
+      "target": "item-1784730919038-k0ye",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 3,
+        "qtyMax": 0,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731026909-rpa6",
+      "source": "item-1784730321705-qk9g",
+      "target": "item-1784730933895-klk1",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 3,
+        "qtyMax": 0,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731029707-t23o",
+      "source": "item-1784730410784-c5tf",
+      "target": "item-1784730958017-n4pr",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 3,
+        "qtyMax": 0,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731032038-dal0",
+      "source": "item-1784730380655-ggyh",
+      "target": "item-1784730968121-19b7",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 3,
+        "qtyMax": 0,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731034490-y960",
+      "source": "item-1784730472100-deut",
+      "target": "item-1784730993129-84ah",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 1,
+        "qtyMax": 0,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731237170-u06l",
+      "source": "item-1784730584326-7c7d",
+      "target": "item-1784731089725-19tx",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731240848-i4um",
+      "source": "item-1784730611236-i50p",
+      "target": "item-1784731098537-0ub3",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731243441-pj58",
+      "source": "item-1784730635989-mgqa",
+      "target": "item-1784731113951-0ew0",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731246231-z2mc",
+      "source": "item-1784730704060-xry9",
+      "target": "item-1784731133343-8qo3",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731249608-zeud",
+      "source": "item-1784730919038-k0ye",
+      "target": "item-1784731158667-0ks3",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731252488-79pb",
+      "source": "item-1784730933895-klk1",
+      "target": "item-1784731179582-aji8",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731255436-qc5n",
+      "source": "item-1784730958017-n4pr",
+      "target": "item-1784731206166-pvr1",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731257984-0ola",
+      "source": "item-1784730968121-19b7",
+      "target": "item-1784731222250-7t9h",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "CRAFTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731607965-3cb3",
+      "source": "item-1784731089725-19tx",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731612844-v0ig",
+      "source": "item-1784731098537-0ub3",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731616901-kc6z",
+      "source": "item-1784731113951-0ew0",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731621747-xxov",
+      "source": "item-1784731133343-8qo3",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731625839-mv9i",
+      "source": "item-1784731158667-0ks3",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731635119-zr7y",
+      "source": "item-1784731179582-aji8",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731638459-hdq7",
+      "source": "item-1784731206166-pvr1",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731643083-bl8v",
+      "source": "item-1784731222250-7t9h",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784731688341-sktx",
+      "source": "item-1784730993129-84ah",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
         "qtyMin": 1,
         "qtyMax": 1,
         "chance": 100,
