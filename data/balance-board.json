@@ -1,6 +1,6 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-22T13:36:11.824Z",
+  "updatedAt": "2026-07-22T13:55:50.345Z",
   "nodes": [
     {
       "id": "act-1784722882820",
@@ -62,7 +62,7 @@
       "id": "act-1784722959907",
       "type": "activity",
       "position": {
-        "x": 286.0016351346259,
+        "x": 310.63917248298696,
         "y": 812.162786505066
       },
       "data": {
@@ -90,7 +90,7 @@
       "id": "act-1784723004876",
       "type": "activity",
       "position": {
-        "x": 286.0016351346259,
+        "x": 310.63917248298696,
         "y": 1098.2802771341906
       },
       "data": {
@@ -147,7 +147,7 @@
       "id": "act-1784723065495",
       "type": "activity",
       "position": {
-        "x": 286.0016351346259,
+        "x": 310.63917248298696,
         "y": 1401.7980673490442
       },
       "data": {
@@ -203,8 +203,8 @@
       "id": "act-1784723163156",
       "type": "activity",
       "position": {
-        "x": 295.8182235314655,
-        "y": 1815.7819435948777
+        "x": 310.63917248298696,
+        "y": 1847.7639913323715
       },
       "data": {
         "kind": "activity",
@@ -244,7 +244,8 @@
         "icon": "Boxes",
         "color": "#36c0ff",
         "referenceValue": 0,
-        "observation": ""
+        "observation": "",
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_corn.png"
       },
       "measured": {
         "width": 210,
@@ -269,7 +270,8 @@
         "icon": "Boxes",
         "color": "#36c0ff",
         "referenceValue": 0,
-        "observation": ""
+        "observation": "",
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_strawberry.png"
       },
       "measured": {
         "width": 210,
@@ -293,7 +295,8 @@
         "icon": "Boxes",
         "color": "#36c0ff",
         "referenceValue": 0,
-        "observation": ""
+        "observation": "",
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_cabbage.png"
       },
       "measured": {
         "width": 210,
@@ -317,7 +320,8 @@
         "icon": "Boxes",
         "color": "#36c0ff",
         "referenceValue": 0,
-        "observation": ""
+        "observation": "",
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/oak_log.png"
       },
       "measured": {
         "width": 210,
@@ -342,7 +346,8 @@
         "icon": "Boxes",
         "color": "#36c0ff",
         "referenceValue": 0,
-        "observation": ""
+        "observation": "",
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/cedar_log.png"
       },
       "measured": {
         "width": 210,
@@ -367,7 +372,8 @@
         "icon": "Boxes",
         "color": "#36c0ff",
         "referenceValue": 0,
-        "observation": ""
+        "observation": "",
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/olive_log.png"
       },
       "measured": {
         "width": 210,
@@ -392,7 +398,8 @@
         "icon": "Boxes",
         "color": "#36c0ff",
         "referenceValue": 0,
-        "observation": ""
+        "observation": "",
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/forest_tree_log.png"
       },
       "measured": {
         "width": 210,
@@ -417,7 +424,8 @@
         "icon": "Boxes",
         "color": "#36c0ff",
         "referenceValue": 0,
-        "observation": ""
+        "observation": "",
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pine_log.png"
       },
       "measured": {
         "width": 210,
@@ -430,8 +438,8 @@
       "id": "item-1784723426992-iwap",
       "type": "item",
       "position": {
-        "x": 1253.1256949642946,
-        "y": 1688.074208703234
+        "x": 1228.1640967301532,
+        "y": 1702.4419011845114
       },
       "data": {
         "kind": "item",
@@ -442,7 +450,8 @@
         "icon": "Boxes",
         "color": "#36c0ff",
         "referenceValue": 0,
-        "observation": ""
+        "observation": "",
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/oak_plank.png"
       },
       "measured": {
         "width": 210,
@@ -455,8 +464,8 @@
       "id": "item-1784723429940-gx46",
       "type": "item",
       "position": {
-        "x": 1253.1256949642946,
-        "y": 1772.896408575093
+        "x": 1228.1640967301532,
+        "y": 1787.2641010563702
       },
       "data": {
         "kind": "item",
@@ -467,7 +476,8 @@
         "icon": "Boxes",
         "color": "#36c0ff",
         "referenceValue": 0,
-        "observation": ""
+        "observation": "",
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/cedar_plank.png"
       },
       "measured": {
         "width": 210,
@@ -480,8 +490,8 @@
       "id": "item-1784723435083-4i7r",
       "type": "item",
       "position": {
-        "x": 1253.1256949642946,
-        "y": 1858.1095237432037
+        "x": 1228.1640967301532,
+        "y": 1873.772639150142
       },
       "data": {
         "kind": "item",
@@ -492,7 +502,8 @@
         "icon": "Boxes",
         "color": "#36c0ff",
         "referenceValue": 0,
-        "observation": ""
+        "observation": "",
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/olive_plank.png"
       },
       "measured": {
         "width": 210,
@@ -505,8 +516,8 @@
       "id": "item-1784723438840-9t6k",
       "type": "item",
       "position": {
-        "x": 1253.1256949642946,
-        "y": 1940.3654571896886
+        "x": 1228.1640967301532,
+        "y": 1954.733149670966
       },
       "data": {
         "kind": "item",
@@ -517,7 +528,8 @@
         "icon": "Boxes",
         "color": "#36c0ff",
         "referenceValue": 0,
-        "observation": ""
+        "observation": "",
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/forest_tree_plank.png"
       },
       "measured": {
         "width": 210,
@@ -530,8 +542,8 @@
       "id": "item-1784723442762-7v9t",
       "type": "item",
       "position": {
-        "x": 1253.1256949642946,
-        "y": 2026.8314917760626
+        "x": 1228.1640967301532,
+        "y": 2041.19918425734
       },
       "data": {
         "kind": "item",
@@ -542,7 +554,8 @@
         "icon": "Boxes",
         "color": "#36c0ff",
         "referenceValue": 0,
-        "observation": ""
+        "observation": "",
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pine_plank.png"
       },
       "measured": {
         "width": 210,
@@ -721,7 +734,7 @@
         "qtyMin": 1,
         "qtyMax": 1,
         "chance": 100,
-        "consumes": false,
+        "consumes": true,
         "observation": ""
       }
     },
@@ -737,7 +750,7 @@
         "qtyMin": 1,
         "qtyMax": 1,
         "chance": 100,
-        "consumes": false,
+        "consumes": true,
         "observation": ""
       }
     },
@@ -753,7 +766,7 @@
         "qtyMin": 1,
         "qtyMax": 1,
         "chance": 100,
-        "consumes": false,
+        "consumes": true,
         "observation": ""
       }
     },
@@ -769,7 +782,7 @@
         "qtyMin": 1,
         "qtyMax": 1,
         "chance": 100,
-        "consumes": false,
+        "consumes": true,
         "observation": ""
       }
     },
@@ -785,7 +798,7 @@
         "qtyMin": 1,
         "qtyMax": 1,
         "chance": 100,
-        "consumes": false,
+        "consumes": true,
         "observation": ""
       }
     },
@@ -801,7 +814,7 @@
         "qtyMin": 0,
         "qtyMax": 0,
         "chance": 100,
-        "consumes": false,
+        "consumes": true,
         "observation": ""
       }
     },
@@ -817,7 +830,7 @@
         "qtyMin": 0,
         "qtyMax": 0,
         "chance": 100,
-        "consumes": false,
+        "consumes": true,
         "observation": ""
       }
     },
@@ -833,7 +846,7 @@
         "qtyMin": 0,
         "qtyMax": 0,
         "chance": 100,
-        "consumes": false,
+        "consumes": true,
         "observation": ""
       }
     },
@@ -849,7 +862,7 @@
         "qtyMin": 0,
         "qtyMax": 0,
         "chance": 100,
-        "consumes": false,
+        "consumes": true,
         "observation": ""
       }
     },
@@ -865,7 +878,7 @@
         "qtyMin": 0,
         "qtyMax": 0,
         "chance": 100,
-        "consumes": false,
+        "consumes": true,
         "observation": ""
       }
     }
