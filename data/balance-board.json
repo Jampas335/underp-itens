@@ -1,6 +1,6 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-22T12:29:15.792Z",
+  "updatedAt": "2026-07-22T12:39:00.583Z",
   "nodes": [
     {
       "id": "act-1784722882820",
@@ -34,7 +34,7 @@
       "id": "act-1784722938157",
       "type": "activity",
       "position": {
-        "x": 960.609130960575,
+        "x": 886.9779203018492,
         "y": 530.4548100489849
       },
       "data": {
@@ -62,8 +62,8 @@
       "id": "act-1784722959907",
       "type": "activity",
       "position": {
-        "x": 681.5496995973064,
-        "y": 792.1335156974446
+        "x": 323.69339450113563,
+        "y": 812.162786505066
       },
       "data": {
         "kind": "activity",
@@ -118,8 +118,8 @@
       "id": "act-1784723030526",
       "type": "activity",
       "position": {
-        "x": 1174.156393803415,
-        "y": 1151.2415938162394
+        "x": 1412.9341291312678,
+        "y": 1386.0508461347072
       },
       "data": {
         "kind": "activity",
@@ -174,8 +174,8 @@
       "id": "act-1784723086893",
       "type": "activity",
       "position": {
-        "x": 860.8433916788618,
-        "y": 325.5793058572081
+        "x": 833.4145733115965,
+        "y": 324.58954808378456
       },
       "data": {
         "kind": "activity",
@@ -414,6 +414,154 @@
       "measured": {
         "width": 210,
         "height": 77
+      },
+      "dragging": false
+    },
+    {
+      "id": "item-1784723426992-iwap",
+      "type": "item",
+      "position": {
+        "x": 926.0951896286833,
+        "y": 1730.6192968798143
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "oak_plank",
+        "name": "Tabua de Carvalho",
+        "identifier": "oak_plank",
+        "category": "Madereira",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 77
+      },
+      "dragging": false
+    },
+    {
+      "id": "item-1784723429940-gx46",
+      "type": "item",
+      "position": {
+        "x": 924.6661805688059,
+        "y": 1814.9802808962443
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "cedar_plank",
+        "name": "Tábua de Cedro",
+        "identifier": "cedar_plank",
+        "category": "Madereira",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 77
+      },
+      "dragging": false
+    },
+    {
+      "id": "item-1784723435083-4i7r",
+      "type": "item",
+      "position": {
+        "x": 922.686665021959,
+        "y": 1900.193396064355
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "olive_plank",
+        "name": "Tábua de Oliveira",
+        "identifier": "olive_plank",
+        "category": "Madereira",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 77
+      },
+      "dragging": false
+    },
+    {
+      "id": "item-1784723438840-9t6k",
+      "type": "item",
+      "position": {
+        "x": 920.9824027185967,
+        "y": 1983.7022489291037
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "forest_tree_plank",
+        "name": "Tábua de Oliveira Dura",
+        "identifier": "forest_tree_plank",
+        "category": "Madereira",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 77
+      },
+      "dragging": false
+    },
+    {
+      "id": "item-1784723442762-7v9t",
+      "type": "item",
+      "position": {
+        "x": 920.9824027185967,
+        "y": 2068.915364097214
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "pine_plank",
+        "name": "Tábua de Pinho",
+        "identifier": "pine_plank",
+        "category": "Madereira",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 77
+      },
+      "dragging": false
+    },
+    {
+      "id": "act-1784723604719",
+      "type": "activity",
+      "position": {
+        "x": 735.2571107290513,
+        "y": -41.07848578027327
+      },
+      "data": {
+        "kind": "activity",
+        "name": "Lixeiro (rtx_garbagejob)",
+        "category": "Legal",
+        "status": "Ativo",
+        "description": "",
+        "durationMin": 10,
+        "playersMin": 1,
+        "playersMax": 1,
+        "cooldownMin": 0,
+        "paymentMin": 0,
+        "paymentMax": 0,
+        "moneyType": "limpo",
+        "observation": ""
+      },
+      "measured": {
+        "width": 240,
+        "height": 172
       },
       "dragging": false
     }
