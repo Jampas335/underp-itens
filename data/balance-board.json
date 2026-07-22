@@ -1,6 +1,6 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-22T14:08:10.187Z",
+  "updatedAt": "2026-07-22T14:11:07.163Z",
   "nodes": [
     {
       "id": "act-1784722882820",
@@ -118,8 +118,8 @@
       "id": "act-1784723030526",
       "type": "activity",
       "position": {
-        "x": 1810.386676944823,
-        "y": 1553.8455490912058
+        "x": 1840.895570701193,
+        "y": 1571.7919571831883
       },
       "data": {
         "kind": "activity",
@@ -847,8 +847,8 @@
       "type": "under",
       "data": {
         "edgeType": "ALIMENTA",
-        "qtyMin": 0,
-        "qtyMax": 0,
+        "qtyMin": 1,
+        "qtyMax": 2,
         "chance": 100,
         "consumes": true,
         "observation": "",
