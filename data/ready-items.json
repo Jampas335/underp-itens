@@ -6356,7 +6356,7 @@
   },
   {
     "name": "weapon_precisionrifle",
-    "label": "Sauer101",
+    "label": "Sauer 101",
     "description": "",
     "weight": 4800,
     "type": "weapon",
@@ -6373,7 +6373,7 @@
     "ammotype": "ammo_caca",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-07-22T15:36:24.240Z",
+    "createdAt": "2026-07-22T15:37:44.703Z",
     "status": "ready"
   },
   {
