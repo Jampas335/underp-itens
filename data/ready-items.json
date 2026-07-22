@@ -1709,6 +1709,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_carrot",
+    "label": "Cenoura",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "novo-item.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-22T16:46:23.091Z",
+    "status": "ready"
+  },
+  {
     "name": "fish3",
     "label": "Certa",
     "description": "",
