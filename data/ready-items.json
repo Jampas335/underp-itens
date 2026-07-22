@@ -7861,12 +7861,12 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "Rifles & SMGs",
+    "siteCategory": "Caça",
     "decay": 0.1,
     "ammotype": "ammo_caca",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-07-11T02:03:30.920Z",
+    "iconSource": "ready",
+    "createdAt": "2026-07-22T14:51:31.338Z",
     "status": "ready"
   },
   {
