@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-22T16:44:52.368Z",
+  "generatedAt": "2026-07-22T16:46:28.487Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 378,
+  "count": 379,
   "categories": [
     {
       "name": "Armas",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 9
+      "count": 10
     },
     {
       "name": "Ferramentas",
@@ -2935,6 +2935,40 @@
         "rarity": "uncommon"
       },
       "lua": "['celular_antigo'] = {\n    ['name'] = 'celular_antigo',\n    ['label'] = 'Celular Antigo',\n    ['weight'] = 365,\n    ['type'] = 'item',\n    ['image'] = 'celular_antigo.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "farm_carrot",
+      "name": "farm_carrot",
+      "label": "Cenoura",
+      "description": "",
+      "category": "Fazenda",
+      "type": "item",
+      "rarity": "common",
+      "weight": 200,
+      "image": "novo-item.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_carrot.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/farm_carrot.png",
+        "https://jampas335.github.io/underp-itens/server-icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/farm_carrot.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-22T16:46:23.091Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "farm_carrot",
+        "label": "Cenoura",
+        "weight": 200,
+        "type": "item",
+        "image": "novo-item.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['farm_carrot'] = {\n    ['name'] = 'farm_carrot',\n    ['label'] = 'Cenoura',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "fish3",
