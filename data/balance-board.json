@@ -1,6 +1,6 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-22T14:21:21.440Z",
+  "updatedAt": "2026-07-22T14:32:17.940Z",
   "nodes": [
     {
       "id": "act-1784722882820",
@@ -120,8 +120,8 @@
       "id": "act-1784723030526",
       "type": "activity",
       "position": {
-        "x": 2006.7044039410769,
-        "y": 1563.5553947049252
+        "x": 2001.0117286819961,
+        "y": 2101.513206688052
       },
       "data": {
         "kind": "activity",
@@ -149,8 +149,8 @@
       "id": "act-1784723065495",
       "type": "activity",
       "position": {
-        "x": 310.63917248298696,
-        "y": 1463.9404056011035
+        "x": 375.4261190591683,
+        "y": 1636.6370041616685
       },
       "data": {
         "kind": "activity",
@@ -169,7 +169,7 @@
       },
       "measured": {
         "width": 240,
-        "height": 172
+        "height": 124
       },
       "dragging": false,
       "selected": false
@@ -207,7 +207,7 @@
       "type": "activity",
       "position": {
         "x": 310.63917248298696,
-        "y": 1847.0894400652016
+        "y": 2385.047252048328
       },
       "data": {
         "kind": "activity",
@@ -314,7 +314,7 @@
       "type": "item",
       "position": {
         "x": 860.5363718232588,
-        "y": 1702.4419011845114
+        "y": 2246.0923884267186
       },
       "data": {
         "kind": "item",
@@ -340,7 +340,7 @@
       "type": "item",
       "position": {
         "x": 860.5363718232588,
-        "y": 1787.2641010563702
+        "y": 2330.9145882985777
       },
       "data": {
         "kind": "item",
@@ -366,7 +366,7 @@
       "type": "item",
       "position": {
         "x": 860.5363718232588,
-        "y": 1873.772639150142
+        "y": 2417.4231263923493
       },
       "data": {
         "kind": "item",
@@ -392,7 +392,7 @@
       "type": "item",
       "position": {
         "x": 860.5363718232588,
-        "y": 1954.733149670966
+        "y": 2498.383636913173
       },
       "data": {
         "kind": "item",
@@ -418,7 +418,7 @@
       "type": "item",
       "position": {
         "x": 860.5363718232588,
-        "y": 2041.19918425734
+        "y": 2584.849671499547
       },
       "data": {
         "kind": "item",
@@ -444,7 +444,7 @@
       "type": "item",
       "position": {
         "x": 1305.5114448168022,
-        "y": 1702.4419011845114
+        "y": 2246.0923884267186
       },
       "data": {
         "kind": "item",
@@ -470,7 +470,7 @@
       "type": "item",
       "position": {
         "x": 1305.5114448168022,
-        "y": 1787.2641010563702
+        "y": 2330.9145882985777
       },
       "data": {
         "kind": "item",
@@ -496,7 +496,7 @@
       "type": "item",
       "position": {
         "x": 1305.5114448168022,
-        "y": 1873.772639150142
+        "y": 2417.4231263923493
       },
       "data": {
         "kind": "item",
@@ -522,7 +522,7 @@
       "type": "item",
       "position": {
         "x": 1305.5114448168022,
-        "y": 1954.733149670966
+        "y": 2498.383636913173
       },
       "data": {
         "kind": "item",
@@ -548,7 +548,7 @@
       "type": "item",
       "position": {
         "x": 1305.5114448168022,
-        "y": 2041.19918425734
+        "y": 2584.849671499547
       },
       "data": {
         "kind": "item",
@@ -595,6 +595,369 @@
         "width": 240,
         "height": 172
       },
+      "dragging": false
+    },
+    {
+      "id": "item-1784730139734-ujdd",
+      "type": "item",
+      "position": {
+        "x": -101.45358741069734,
+        "y": 1729.8771834797171
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "weapon_drill",
+        "name": "Furadeira Industrial",
+        "identifier": "weapon_drill",
+        "category": "Mineração",
+        "icon": "Shield",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/weapon_drill.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784730185495-66n3",
+      "type": "item",
+      "position": {
+        "x": 716.4778998372839,
+        "y": 1231.2271739611388
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "copper_ore",
+        "name": "Minério de Cobre",
+        "identifier": "copper_ore",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/copper_ore.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false
+    },
+    {
+      "id": "item-1784730257336-4t6l",
+      "type": "item",
+      "position": {
+        "x": 716.4778998372839,
+        "y": 1349.5337720567743
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "iron_ore",
+        "name": "Minério de Ferro",
+        "identifier": "iron_ore",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/iron_ore.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784730272300-a6tw",
+      "type": "item",
+      "position": {
+        "x": 716.4778998372839,
+        "y": 1447.9098119614882
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "aluminum_ore",
+        "name": "Minério de Alumínio",
+        "identifier": "aluminum_ore",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/aluminum_ore.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784730305564-rtz8",
+      "type": "item",
+      "position": {
+        "x": 716.4778998372839,
+        "y": 1555.1102121828378
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "lithium_ore",
+        "name": "Minério de Lítio",
+        "identifier": "lithium_ore",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/lithium_ore.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784730321705-qk9g",
+      "type": "item",
+      "position": {
+        "x": 716.4778998372839,
+        "y": 1770.085317630698
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "niobium_ore",
+        "name": "Minério de Nióbio",
+        "identifier": "niobium_ore",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/niobium_ore.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784730349110-nsp0",
+      "type": "item",
+      "position": {
+        "x": 716.4778998372839,
+        "y": 1665.4586503404846
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "zinc_ore",
+        "name": "Minério de Zinco",
+        "identifier": "zinc_ore",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/zinc_ore.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784730380655-ggyh",
+      "type": "item",
+      "position": {
+        "x": 716.4778998372839,
+        "y": 1983.3191189976778
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "gold_ore",
+        "name": "Minério de Ouro",
+        "identifier": "gold_ore",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/gold_ore.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784730410784-c5tf",
+      "type": "item",
+      "position": {
+        "x": 716.4778998372839,
+        "y": 1874.4019334493155
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "limestone_ore",
+        "name": "Minério de Calcário",
+        "identifier": "limestone_ore",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/limestone_ore.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784730472100-deut",
+      "type": "item",
+      "position": {
+        "x": 716.4778998372839,
+        "y": 2088.480539527132
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "diamond_ore",
+        "name": "Minério de Diamante",
+        "identifier": "diamond_ore",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/diamond_ore.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784730584326-7c7d",
+      "type": "item",
+      "position": {
+        "x": 1279.8426526736432,
+        "y": 1231.2271739611388
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "copper_fragment",
+        "name": "Fragmento de Cobre",
+        "identifier": "copper_fragment",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/copper_fragment.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784730611236-i50p",
+      "type": "item",
+      "position": {
+        "x": 1279.8426526736432,
+        "y": 1349.5337720567743
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "iron_fragment",
+        "name": "Fragmento de Ferro",
+        "identifier": "iron_fragment",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/iron_fragment.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784730635989-mgqa",
+      "type": "item",
+      "position": {
+        "x": 1279.8426526736432,
+        "y": 1447.9098119614882
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "aluminum_fragment",
+        "name": "Fragmento de Alumínio",
+        "identifier": "aluminum_fragment",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/aluminum_fragment.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784730704060-xry9",
+      "type": "item",
+      "position": {
+        "x": 1279.8426526736432,
+        "y": 1555.1102121828378
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "lithium_fragment",
+        "name": "Fragmento de Lítio",
+        "identifier": "lithium_fragment",
+        "category": "Mineração",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/lithium_fragment.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
       "dragging": false
     }
   ],
@@ -895,6 +1258,186 @@
         "observation": "",
         "resaleMin": 60,
         "resaleMax": 120
+      }
+    },
+    {
+      "id": "e-1784730148527-g2fy",
+      "source": "item-1784730139734-ujdd",
+      "target": "act-1784723065495",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784730514053-5rz8",
+      "source": "act-1784723065495",
+      "target": "item-1784730185495-66n3",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784730518408-7ohs",
+      "source": "act-1784723065495",
+      "target": "item-1784730257336-4t6l",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784730522463-e18q",
+      "source": "act-1784723065495",
+      "target": "item-1784730272300-a6tw",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784730524757-pbml",
+      "source": "act-1784723065495",
+      "target": "item-1784730305564-rtz8",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784730526706-owju",
+      "source": "act-1784723065495",
+      "target": "item-1784730349110-nsp0",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784730538386-gq56",
+      "source": "act-1784723065495",
+      "target": "item-1784730321705-qk9g",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784730541423-g8me",
+      "source": "act-1784723065495",
+      "target": "item-1784730410784-c5tf",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784730545313-m03e",
+      "source": "act-1784723065495",
+      "target": "item-1784730380655-ggyh",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784730548532-niu1",
+      "source": "act-1784723065495",
+      "target": "item-1784730472100-deut",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
       }
     }
   ]
