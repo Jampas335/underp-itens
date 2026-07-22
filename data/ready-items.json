@@ -6541,6 +6541,26 @@
     "status": "ready"
   },
   {
+    "name": "seeds_carrot",
+    "label": "Sementes de cenoura",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "novo-item.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-22T16:43:28.625Z",
+    "status": "ready"
+  },
+  {
     "name": "seeds_corn",
     "label": "Sementes de milho",
     "description": "",
