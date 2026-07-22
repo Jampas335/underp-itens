@@ -1,6 +1,6 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-22T12:39:00.583Z",
+  "updatedAt": "2026-07-22T13:21:15.481Z",
   "nodes": [
     {
       "id": "act-1784722882820",
@@ -202,8 +202,8 @@
       "id": "act-1784723163156",
       "type": "activity",
       "position": {
-        "x": 212.61401641053334,
-        "y": 1845.5188741963002
+        "x": 341.9561889966117,
+        "y": 1810.8736493964577
       },
       "data": {
         "kind": "activity",
@@ -224,7 +224,8 @@
         "width": 240,
         "height": 197
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "item-1784723191034-6ulr",
@@ -302,8 +303,8 @@
       "id": "item-1784723275724-okwt",
       "type": "item",
       "position": {
-        "x": 612.733531250064,
-        "y": 1733.8429724506009
+        "x": 787.6311054149494,
+        "y": 1702.4419011845114
       },
       "data": {
         "kind": "item",
@@ -319,14 +320,16 @@
       "measured": {
         "width": 210,
         "height": 77
-      }
+      },
+      "selected": false,
+      "dragging": false
     },
     {
       "id": "item-1784723278417-p9c0",
       "type": "item",
       "position": {
-        "x": 609.6504545784055,
-        "y": 1817.7092186116809
+        "x": 787.4959418842632,
+        "y": 1789.9930387718068
       },
       "data": {
         "kind": "item",
@@ -343,14 +346,15 @@
         "width": 210,
         "height": 77
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "item-1784723281506-5yrv",
       "type": "item",
       "position": {
-        "x": 607.7912193827423,
-        "y": 1901.488818990016
+        "x": 785.6367066886,
+        "y": 1873.772639150142
       },
       "data": {
         "kind": "item",
@@ -367,14 +371,15 @@
         "width": 210,
         "height": 77
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "item-1784723284038-my2m",
       "type": "item",
       "position": {
-        "x": 606.5282203592457,
-        "y": 1985.3231537475328
+        "x": 784.3737076651034,
+        "y": 1957.6069739076588
       },
       "data": {
         "kind": "item",
@@ -391,14 +396,15 @@
         "width": 210,
         "height": 77
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "item-1784723285696-s18h",
       "type": "item",
       "position": {
-        "x": 605.3435364307521,
-        "y": 2068.7407054985074
+        "x": 783.1890237366099,
+        "y": 2041.0245256586334
       },
       "data": {
         "kind": "item",
@@ -415,14 +421,15 @@
         "width": 210,
         "height": 77
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "item-1784723426992-iwap",
       "type": "item",
       "position": {
-        "x": 926.0951896286833,
-        "y": 1730.6192968798143
+        "x": 1103.940676934541,
+        "y": 1702.9031170399403
       },
       "data": {
         "kind": "item",
@@ -439,14 +446,15 @@
         "width": 210,
         "height": 77
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "item-1784723429940-gx46",
       "type": "item",
       "position": {
-        "x": 924.6661805688059,
-        "y": 1814.9802808962443
+        "x": 1102.5116678746635,
+        "y": 1787.2641010563702
       },
       "data": {
         "kind": "item",
@@ -463,14 +471,15 @@
         "width": 210,
         "height": 77
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "item-1784723435083-4i7r",
       "type": "item",
       "position": {
-        "x": 922.686665021959,
-        "y": 1900.193396064355
+        "x": 1100.5321523278167,
+        "y": 1872.477216224481
       },
       "data": {
         "kind": "item",
@@ -487,14 +496,15 @@
         "width": 210,
         "height": 77
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "item-1784723438840-9t6k",
       "type": "item",
       "position": {
-        "x": 920.9824027185967,
-        "y": 1983.7022489291037
+        "x": 1098.8278900244545,
+        "y": 1955.9860690892297
       },
       "data": {
         "kind": "item",
@@ -511,14 +521,15 @@
         "width": 210,
         "height": 77
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "item-1784723442762-7v9t",
       "type": "item",
       "position": {
-        "x": 920.9824027185967,
-        "y": 2068.915364097214
+        "x": 1098.8278900244545,
+        "y": 2041.19918425734
       },
       "data": {
         "kind": "item",
@@ -535,7 +546,8 @@
         "width": 210,
         "height": 77
       },
-      "dragging": false
+      "dragging": false,
+      "selected": false
     },
     {
       "id": "act-1784723604719",
