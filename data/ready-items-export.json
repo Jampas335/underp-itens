@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-22T14:51:34.595Z",
+  "generatedAt": "2026-07-22T14:57:21.405Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -12,7 +12,7 @@
   "categories": [
     {
       "name": "Armas",
-      "count": 4
+      "count": 3
     },
     {
       "name": "Armas Pesadas",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Caça",
-      "count": 11
+      "count": 12
     },
     {
       "name": "Comida",
@@ -4859,7 +4859,7 @@
       "name": "weapon_knife",
       "label": "Faca de Caça",
       "description": "",
-      "category": "Armas",
+      "category": "Caça",
       "type": "weapon",
       "rarity": "uncommon",
       "weight": 300,
@@ -4870,9 +4870,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/weapon_knife.png",
         "https://jampas335.github.io/underp-itens/icons/weapon_knife.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-05-12T01:39:05.385Z",
+      "createdAt": "2026-07-22T14:57:18.268Z",
       "updatedAt": "",
       "inventory": {
         "name": "weapon_knife",
