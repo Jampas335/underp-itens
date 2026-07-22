@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-22T15:36:29.395Z",
+  "generatedAt": "2026-07-22T15:37:49.571Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -10571,7 +10571,7 @@
     {
       "id": "weapon_precisionrifle",
       "name": "weapon_precisionrifle",
-      "label": "Sauer101",
+      "label": "Sauer 101",
       "description": "",
       "category": "Rifles & SMGs",
       "type": "weapon",
@@ -10587,11 +10587,11 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-22T15:36:24.240Z",
+      "createdAt": "2026-07-22T15:37:44.703Z",
       "updatedAt": "",
       "inventory": {
         "name": "weapon_precisionrifle",
-        "label": "Sauer101",
+        "label": "Sauer 101",
         "weight": 4800,
         "type": "weapon",
         "image": "WEAPON_PRECISIONRIFLE.png",
@@ -10602,7 +10602,7 @@
         "decay": 0.4,
         "ammotype": "ammo_caca"
       },
-      "lua": "['weapon_precisionrifle'] = {\n    ['name'] = 'weapon_precisionrifle',\n    ['label'] = 'Sauer101',\n    ['weight'] = 4800,\n    ['type'] = 'weapon',\n    ['image'] = 'WEAPON_PRECISIONRIFLE.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n    ['decay'] = 0.4,\n    ['ammotype'] = 'ammo_caca',\n},"
+      "lua": "['weapon_precisionrifle'] = {\n    ['name'] = 'weapon_precisionrifle',\n    ['label'] = 'Sauer 101',\n    ['weight'] = 4800,\n    ['type'] = 'weapon',\n    ['image'] = 'WEAPON_PRECISIONRIFLE.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n    ['decay'] = 0.4,\n    ['ammotype'] = 'ammo_caca',\n},"
     },
     {
       "id": "weapon_minismg",
