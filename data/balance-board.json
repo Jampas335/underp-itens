@@ -1,6 +1,6 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-22T15:05:42.195Z",
+  "updatedAt": "2026-07-22T15:13:14.881Z",
   "nodes": [
     {
       "id": "act-1784722882820",
@@ -84,7 +84,7 @@
       },
       "measured": {
         "width": 240,
-        "height": 172
+        "height": 124
       },
       "dragging": false,
       "selected": false
@@ -93,8 +93,8 @@
       "id": "act-1784723004876",
       "type": "activity",
       "position": {
-        "x": 310.63917248298696,
-        "y": 1001.3105283534292
+        "x": 300.96119808178827,
+        "y": 813.5578249701738
       },
       "data": {
         "kind": "activity",
@@ -238,8 +238,8 @@
       "id": "item-1784723191034-6ulr",
       "type": "item",
       "position": {
-        "x": 923.7890963038153,
-        "y": 921.7275731662428
+        "x": 914.1111219026166,
+        "y": 733.9748697829874
       },
       "data": {
         "kind": "item",
@@ -264,8 +264,8 @@
       "id": "item-1784723205449-x6jy",
       "type": "item",
       "position": {
-        "x": 923.7890963038153,
-        "y": 1017.1947734965504
+        "x": 914.1111219026166,
+        "y": 829.442070113295
       },
       "data": {
         "kind": "item",
@@ -290,8 +290,8 @@
       "id": "item-1784723212008-15i6",
       "type": "item",
       "position": {
-        "x": 923.7890963038153,
-        "y": 1102.5959668740284
+        "x": 914.1111219026166,
+        "y": 914.843263490773
       },
       "data": {
         "kind": "item",
@@ -1302,6 +1302,318 @@
       },
       "selected": false,
       "dragging": false
+    },
+    {
+      "id": "item-1784732758092-pkrs",
+      "type": "item",
+      "position": {
+        "x": -296.8564320911944,
+        "y": -88.68965416470772
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "weapon_musket",
+        "name": "Winchester",
+        "identifier": "weapon_musket",
+        "category": "Caça",
+        "icon": "Shield",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/weapon_musket.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784732762194-vhud",
+      "type": "item",
+      "position": {
+        "x": -296.8564320911944,
+        "y": 46.93863978248914
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "weapon_knife",
+        "name": "Faca de Caça",
+        "identifier": "weapon_knife",
+        "category": "Caça",
+        "icon": "Shield",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/weapon_knife.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784732802665-zz13",
+      "type": "item",
+      "position": {
+        "x": 901.5640668848565,
+        "y": -402.19112050167087
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "carne_de_caca",
+        "name": "Carne de Caça",
+        "identifier": "carne_de_caca",
+        "category": "Caça",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/carne_de_caca.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784732805910-i5xr",
+      "type": "item",
+      "position": {
+        "x": 901.5640668848565,
+        "y": -313.2545343067877
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "couro_de_caca",
+        "name": "Couro de Caça",
+        "identifier": "couro_de_caca",
+        "category": "Caça",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/couro_de_caca.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784732815660-xftq",
+      "type": "item",
+      "position": {
+        "x": 901.5640668848565,
+        "y": -225.42965543934062
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "couro_elefante",
+        "name": "Couro de Elefante",
+        "identifier": "couro_elefante",
+        "category": "Caça",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/couro_elefante.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784732824071-a539",
+      "type": "item",
+      "position": {
+        "x": 901.5640668848565,
+        "y": -50.891605031882364
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "couro_gamba",
+        "name": "Couro de Gambá",
+        "identifier": "couro_gamba",
+        "category": "Caça",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/couro_gamba.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784732834738-apvv",
+      "type": "item",
+      "position": {
+        "x": 901.5640668848565,
+        "y": 35.82156650812874
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "couro_urso",
+        "name": "Couro de Urso",
+        "identifier": "couro_urso",
+        "category": "Caça",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/couro_urso.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784732870329-nquo",
+      "type": "item",
+      "position": {
+        "x": 901.5640668848565,
+        "y": -135.2067168002172
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "marfim",
+        "name": "Marfim",
+        "identifier": "marfim",
+        "category": "Caça",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/marfim.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784732913905-v79p",
+      "type": "item",
+      "position": {
+        "x": 901.5640668848565,
+        "y": 123.64644537557587
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "couro_javali_lendario",
+        "name": "Couro de Javali Lendário",
+        "identifier": "couro_javali_lendario",
+        "category": "Caça",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/couro_javali_lendario.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784732921285-ppem",
+      "type": "item",
+      "position": {
+        "x": 901.5640668848565,
+        "y": 211.4713242430231
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "couro_pantera_lendario",
+        "name": "Couro de Pantera Lendária",
+        "identifier": "couro_pantera_lendario",
+        "category": "Caça",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/couro_pantera_lendario.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784732939977-9j24",
+      "type": "item",
+      "position": {
+        "x": 901.5640668848565,
+        "y": 300.40791043790625
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "pele_tubarao_martelo_lendario",
+        "name": "Pele de Tubarão Martelo Lendário",
+        "identifier": "pele_tubarao_martelo_lendario",
+        "category": "Caça",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pele_tubarao_martelo_lendario.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784732944854-knfg",
+      "type": "item",
+      "position": {
+        "x": 901.5640668848565,
+        "y": 390.4562039602255
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "pele_tubarao",
+        "name": "Pele de Tubarão Tigre Lendário",
+        "identifier": "pele_tubarao",
+        "category": "Caça",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pele_tubarao.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
     }
   ],
   "edges": [
@@ -2242,6 +2554,222 @@
       "type": "under",
       "data": {
         "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784732766743-y8e5",
+      "source": "item-1784732758092-pkrs",
+      "target": "act-1784722959907",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784732769994-kgwn",
+      "source": "item-1784732762194-vhud",
+      "target": "act-1784722959907",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784732967227-nsdp",
+      "source": "act-1784722959907",
+      "target": "item-1784732802665-zz13",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784732970805-szkj",
+      "source": "act-1784722959907",
+      "target": "item-1784732805910-i5xr",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784732973365-m8ur",
+      "source": "act-1784722959907",
+      "target": "item-1784732815660-xftq",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784732978245-um0a",
+      "source": "act-1784722959907",
+      "target": "item-1784732870329-nquo",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784732981369-7l7z",
+      "source": "act-1784722959907",
+      "target": "item-1784732824071-a539",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784732984397-vkul",
+      "source": "act-1784722959907",
+      "target": "item-1784732834738-apvv",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784732989907-leqr",
+      "source": "act-1784722959907",
+      "target": "item-1784732913905-v79p",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784732994328-klxr",
+      "source": "act-1784722959907",
+      "target": "item-1784732921285-ppem",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784732996957-r7lj",
+      "source": "act-1784722959907",
+      "target": "item-1784732939977-9j24",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784732999528-982f",
+      "source": "act-1784722959907",
+      "target": "item-1784732944854-knfg",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
         "qtyMin": 1,
         "qtyMax": 1,
         "chance": 100,
