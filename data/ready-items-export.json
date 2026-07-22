@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-22T16:43:34.467Z",
+  "generatedAt": "2026-07-22T16:44:52.368Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -10864,7 +10864,7 @@
     {
       "id": "seeds_carrot",
       "name": "seeds_carrot",
-      "label": "Sementes de cenoura",
+      "label": "Sementes de Cenoura",
       "description": "",
       "category": "Fazenda",
       "type": "item",
@@ -10880,11 +10880,11 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-22T16:43:28.625Z",
+      "createdAt": "2026-07-22T16:44:46.383Z",
       "updatedAt": "",
       "inventory": {
         "name": "seeds_carrot",
-        "label": "Sementes de cenoura",
+        "label": "Sementes de Cenoura",
         "weight": 50,
         "type": "item",
         "image": "novo-item.png",
@@ -10893,7 +10893,7 @@
         "shouldClose": false,
         "rarity": "common"
       },
-      "lua": "['seeds_carrot'] = {\n    ['name'] = 'seeds_carrot',\n    ['label'] = 'Sementes de cenoura',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
+      "lua": "['seeds_carrot'] = {\n    ['name'] = 'seeds_carrot',\n    ['label'] = 'Sementes de Cenoura',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "seeds_corn",
