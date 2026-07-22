@@ -6542,7 +6542,7 @@
   },
   {
     "name": "seeds_carrot",
-    "label": "Sementes de cenoura",
+    "label": "Sementes de Cenoura",
     "description": "",
     "weight": 50,
     "type": "item",
@@ -6557,7 +6557,7 @@
     "siteCategory": "Fazenda",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-07-22T16:43:28.625Z",
+    "createdAt": "2026-07-22T16:44:46.383Z",
     "status": "ready"
   },
   {
