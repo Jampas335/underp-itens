@@ -6355,6 +6355,28 @@
     "status": "ready"
   },
   {
+    "name": "weapon_precisionrifle",
+    "label": "Sauer101",
+    "description": "",
+    "weight": 4800,
+    "type": "weapon",
+    "image": "WEAPON_PRECISIONRIFLE.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Rifles & SMGs",
+    "decay": 0.4,
+    "ammotype": "ammo_caca",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-22T15:36:24.240Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_minismg",
     "label": "Scorpion",
     "description": "",
