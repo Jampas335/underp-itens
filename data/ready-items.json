@@ -2803,6 +2803,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_wheat",
+    "label": "Espiga de Trigo",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "novo-item.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-23T15:36:08.971Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_beanbag",
     "label": "Espingarda de Elastômero",
     "description": "",
