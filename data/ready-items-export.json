@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-23T15:33:59.295Z",
+  "generatedAt": "2026-07-23T15:36:14.809Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 382,
+  "count": 383,
   "categories": [
     {
       "name": "Armas",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Manual",
-      "count": 2
+      "count": 3
     },
     {
       "name": "Materiais",
@@ -4705,6 +4705,40 @@
         "rarity": "common"
       },
       "lua": "['farm_corn'] = {\n    ['name'] = 'farm_corn',\n    ['label'] = 'Espiga de milho',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'farm_corn.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "farm_wheat",
+      "name": "farm_wheat",
+      "label": "Espiga de Trigo",
+      "description": "",
+      "category": "Manual",
+      "type": "item",
+      "rarity": "common",
+      "weight": 150,
+      "image": "novo-item.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_wheat.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/farm_wheat.png",
+        "https://jampas335.github.io/underp-itens/server-icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/farm_wheat.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-23T15:36:08.971Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "farm_wheat",
+        "label": "Espiga de Trigo",
+        "weight": 150,
+        "type": "item",
+        "image": "novo-item.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['farm_wheat'] = {\n    ['name'] = 'farm_wheat',\n    ['label'] = 'Espiga de Trigo',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "weapon_beanbag",
