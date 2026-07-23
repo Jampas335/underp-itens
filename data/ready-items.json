@@ -6683,6 +6683,26 @@
     "status": "ready"
   },
   {
+    "name": "seeds_wheat",
+    "label": "Sementes de Trigo",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "novo-item.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-23T15:33:53.158Z",
+    "status": "ready"
+  },
+  {
     "name": "castsaw",
     "label": "Serra de Gesso",
     "description": "Usado para remover Gessos.",
