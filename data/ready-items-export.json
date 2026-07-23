@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-22T16:46:28.487Z",
+  "generatedAt": "2026-07-23T12:39:25.938Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 379,
+  "count": 380,
   "categories": [
     {
       "name": "Armas",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Caça",
-      "count": 12
+      "count": 13
     },
     {
       "name": "Comida",
@@ -4079,6 +4079,41 @@
         "rarity": "epic"
       },
       "lua": "['couro_urso'] = {\n    ['name'] = 'couro_urso',\n    ['label'] = 'Couro de Urso',\n    ['weight'] = 5000,\n    ['type'] = 'item',\n    ['image'] = 'couro_urso.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'epic',\n},"
+    },
+    {
+      "id": "weapon_autocross",
+      "name": "weapon_autocross",
+      "label": "Crossbow de Caça",
+      "description": "",
+      "category": "Caça",
+      "type": "weapon",
+      "rarity": "rare",
+      "weight": 4200,
+      "image": "weapon_autocross.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/weapon_autocross.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/weapon_autocross.png",
+        "https://jampas335.github.io/underp-itens/server-icons/weapon_autocross.png",
+        "https://jampas335.github.io/underp-itens/icons/weapon_autocross.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-23T12:39:18.994Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "weapon_autocross",
+        "label": "Crossbow de Caça",
+        "weight": 4200,
+        "type": "weapon",
+        "image": "weapon_autocross.png",
+        "unique": true,
+        "useable": false,
+        "shouldClose": true,
+        "rarity": "rare",
+        "decay": 0.2,
+        "ammotype": "AMMO_AUTOCROSS"
+      },
+      "lua": "['weapon_autocross'] = {\n    ['name'] = 'weapon_autocross',\n    ['label'] = 'Crossbow de Caça',\n    ['weight'] = 4200,\n    ['type'] = 'weapon',\n    ['image'] = 'weapon_autocross.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n    ['decay'] = 0.2,\n    ['ammotype'] = 'AMMO_AUTOCROSS',\n},"
     },
     {
       "id": "field_dressing",
