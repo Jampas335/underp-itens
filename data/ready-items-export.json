@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-23T12:41:34.434Z",
+  "generatedAt": "2026-07-23T15:33:59.295Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 381,
+  "count": 382,
   "categories": [
     {
       "name": "Armas",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 10
+      "count": 11
     },
     {
       "name": "Ferramentas",
@@ -11099,6 +11099,40 @@
         "rarity": "common"
       },
       "lua": "['seeds_cabbage'] = {\n    ['name'] = 'seeds_cabbage',\n    ['label'] = 'Sementes de repolho',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "seeds_wheat",
+      "name": "seeds_wheat",
+      "label": "Sementes de Trigo",
+      "description": "",
+      "category": "Fazenda",
+      "type": "item",
+      "rarity": "common",
+      "weight": 50,
+      "image": "novo-item.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_wheat.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_wheat.png",
+        "https://jampas335.github.io/underp-itens/server-icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/seeds_wheat.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-23T15:33:53.158Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "seeds_wheat",
+        "label": "Sementes de Trigo",
+        "weight": 50,
+        "type": "item",
+        "image": "novo-item.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['seeds_wheat'] = {\n    ['name'] = 'seeds_wheat',\n    ['label'] = 'Sementes de Trigo',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "castsaw",
