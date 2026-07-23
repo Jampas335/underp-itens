@@ -2415,6 +2415,28 @@
     "status": "ready"
   },
   {
+    "name": "weapon_autocross",
+    "label": "Crossbow de Caça",
+    "description": "",
+    "weight": 4200,
+    "type": "weapon",
+    "image": "weapon_autocross.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Caça",
+    "decay": 0.2,
+    "ammotype": "AMMO_AUTOCROSS",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-23T12:39:18.994Z",
+    "status": "ready"
+  },
+  {
     "name": "field_dressing",
     "label": "Curativo de Campo",
     "description": "Bom para feridas rotineiras (contusões, pequenos cortes, abrasões), mas ineficiente no caso de lacerações profundas ou ferimentos graves de tiro.",
