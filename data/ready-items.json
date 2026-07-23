@@ -3140,6 +3140,26 @@
     "status": "ready"
   },
   {
+    "name": "ammo_autocross",
+    "label": "Flechas de Crossbow",
+    "description": "Caixa com 20 flechas regulares para a crossbow.",
+    "weight": 250,
+    "type": "item",
+    "image": "ammo_autocross.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "['ammoCapacity'] = 20,",
+    "siteCategory": "Caça",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-23T12:41:27.805Z",
+    "status": "ready"
+  },
+  {
     "name": "coca_leaf",
     "label": "Folha de Coca",
     "description": "",
