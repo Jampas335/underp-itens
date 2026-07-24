@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-24T07:02:05.961Z",
+  "generatedAt": "2026-07-24T17:07:18.020Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Manual",
-      "count": 2
+      "count": 1
     },
     {
       "name": "Materiais",
@@ -160,7 +160,7 @@
     },
     {
       "name": "Roubo casa",
-      "count": 20
+      "count": 21
     }
   ],
   "items": [
@@ -13163,7 +13163,7 @@
       "name": "videogame",
       "label": "Videogame",
       "description": "",
-      "category": "Manual",
+      "category": "Roubo casa",
       "type": "item",
       "rarity": "uncommon",
       "weight": 1500,
@@ -13176,7 +13176,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-02T01:57:43.366Z",
+      "createdAt": "2026-07-24T17:07:12.525Z",
       "updatedAt": "",
       "inventory": {
         "name": "videogame",
