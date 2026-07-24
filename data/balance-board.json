@@ -1,6 +1,6 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-24T07:54:21.745Z",
+  "updatedAt": "2026-07-24T07:54:52.603Z",
   "nodes": [
     {
       "id": "act-1784722882820",
@@ -124,8 +124,8 @@
       "id": "act-1784723030526",
       "type": "activity",
       "position": {
-        "x": 3476.18869951405,
-        "y": 550.5307844731692
+        "x": 3725.0728094356955,
+        "y": 1029.1540727840265
       },
       "data": {
         "kind": "activity",
@@ -140,7 +140,8 @@
         "paymentMin": 0,
         "paymentMax": 0,
         "moneyType": "limpo",
-        "observation": ""
+        "observation": "",
+        "accentColor": "#ffff80"
       },
       "measured": {
         "width": 240,
