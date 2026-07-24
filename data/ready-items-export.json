@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-24T19:49:40.816Z",
+  "generatedAt": "2026-07-24T19:50:27.705Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 384,
+  "count": 385,
   "categories": [
     {
       "name": "Armas",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Manual",
-      "count": 1
+      "count": 2
     },
     {
       "name": "Materiais",
@@ -5252,6 +5252,41 @@
         "rarity": "common"
       },
       "lua": "['prea_fichas'] = {\n    ['name'] = 'prea_fichas',\n    ['label'] = 'Fichas de Jogo',\n    ['weight'] = 1,\n    ['type'] = 'item',\n    ['image'] = 'dinheiro.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "prea_fichas_recompensa",
+      "name": "prea_fichas_recompensa",
+      "label": "Fichas de Recompensa",
+      "description": "Ficha criada por uma vitória válida no cassino. Cada unidade vale $1 limpo no caixa autorizado.",
+      "category": "Manual",
+      "type": "item",
+      "rarity": "uncommon",
+      "weight": 1,
+      "image": "dinheiro.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/prea_fichas_recompensa.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/prea_fichas_recompensa.png",
+        "https://jampas335.github.io/underp-itens/server-icons/dinheiro.png",
+        "https://jampas335.github.io/underp-itens/icons/dinheiro.png",
+        "https://jampas335.github.io/underp-itens/icons/prea_fichas_recompensa.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-24T19:50:22.512Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "prea_fichas_recompensa",
+        "label": "Fichas de Recompensa",
+        "weight": 1,
+        "type": "item",
+        "image": "dinheiro.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "description": "Ficha criada por uma vitória válida no cassino. Cada unidade vale $1 limpo no caixa autorizado.",
+        "rarity": "uncommon"
+      },
+      "lua": "['prea_fichas_recompensa'] = {\n    ['name'] = 'prea_fichas_recompensa',\n    ['label'] = 'Fichas de Recompensa',\n    ['weight'] = 1,\n    ['type'] = 'item',\n    ['image'] = 'dinheiro.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['description'] = 'Ficha criada por uma vitória válida no cassino. Cada unidade vale $1 limpo no caixa autorizado.',\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "air_filter",
