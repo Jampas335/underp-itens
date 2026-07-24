@@ -2663,7 +2663,7 @@
     "name": "energetico",
     "label": "Energético",
     "description": "",
-    "weight": 0,
+    "weight": 150,
     "type": "item",
     "image": "energetico.png",
     "unique": true,
@@ -2677,7 +2677,7 @@
     "decay": 0.1,
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-04-17T10:02:24.168Z",
+    "createdAt": "2026-07-24T18:07:23.222Z",
     "status": "ready"
   },
   {
