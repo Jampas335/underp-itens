@@ -1,6 +1,6 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-24T16:38:55.762Z",
+  "updatedAt": "2026-07-24T19:00:43.728Z",
   "nodes": [
     {
       "id": "act-1784722882820",
@@ -85,7 +85,7 @@
       },
       "measured": {
         "width": 240,
-        "height": 124
+        "height": 125
       },
       "dragging": false,
       "selected": false
@@ -115,7 +115,7 @@
       },
       "measured": {
         "width": 240,
-        "height": 124
+        "height": 125
       },
       "dragging": false,
       "selected": false
@@ -175,7 +175,7 @@
       },
       "measured": {
         "width": 240,
-        "height": 124
+        "height": 125
       },
       "dragging": false,
       "selected": false
@@ -205,7 +205,7 @@
       },
       "measured": {
         "width": 240,
-        "height": 149
+        "height": 150
       },
       "dragging": false,
       "selected": false
@@ -235,7 +235,7 @@
       },
       "measured": {
         "width": 240,
-        "height": 149
+        "height": 150
       },
       "dragging": false,
       "selected": false
@@ -2167,6 +2167,192 @@
       "measured": {
         "width": 240,
         "height": 112
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "act-1784911252099",
+      "type": "activity",
+      "position": {
+        "x": 1051.0321818919779,
+        "y": -3218.9581220359973
+      },
+      "data": {
+        "kind": "activity",
+        "name": "Roubo de Casa (prea-houserob)",
+        "category": "Criminal",
+        "status": "Rascunho",
+        "description": "",
+        "durationMin": 10,
+        "playersMin": 1,
+        "playersMax": 1,
+        "cooldownMin": 0,
+        "paymentMin": 0,
+        "paymentMax": 0,
+        "moneyType": "limpo",
+        "observation": "",
+        "accentColor": "#ff0000"
+      },
+      "measured": {
+        "width": 240,
+        "height": 129
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784911273348-sv8p",
+      "type": "item",
+      "position": {
+        "x": 702.726720658765,
+        "y": -3308.071692564493
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "lockpick_improvisada",
+        "name": "Lockpick Improvisada",
+        "identifier": "lockpick_improvisada",
+        "category": "Lockpick",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/lockpick_improvisada.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784911274343-vm66",
+      "type": "item",
+      "position": {
+        "x": 702.726720658765,
+        "y": -3082.633010371672
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "lockpick_avancada",
+        "name": "Lockpick Avançada",
+        "identifier": "lockpick_avancada",
+        "category": "Lockpick",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/lockpick_avancada.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784911275544-qstu",
+      "type": "item",
+      "position": {
+        "x": 702.726720658765,
+        "y": -3196.3169032831506
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "lockpick",
+        "name": "Lockpick",
+        "identifier": "lockpick",
+        "category": "Lockpick",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/lockpick.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784911309641-mu0m",
+      "type": "item",
+      "position": {
+        "x": 1425.277933018407,
+        "y": -3313.0597132949806
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "comprovante_residencial_comum",
+        "name": "Comprovante Residencial",
+        "identifier": "comprovante_residencial_comum",
+        "category": "Comprovantes e Contratos",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/comprovante_residencial_comum.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 88
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784911310657-dtzv",
+      "type": "item",
+      "position": {
+        "x": 1425.277933018407,
+        "y": -3201.3049240136384
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "comprovante_residencial_raro",
+        "name": "Comprovante Residencial",
+        "identifier": "comprovante_residencial_raro",
+        "category": "Comprovantes e Contratos",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/comprovante_residencial_raro.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 88
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784911364338-2q13",
+      "type": "item",
+      "position": {
+        "x": 1425.277933018407,
+        "y": -3092.1490833202342
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "comprovante_residencial_lendario",
+        "name": "Comprovante Residencial",
+        "identifier": "comprovante_residencial_lendario",
+        "category": "Comprovantes e Contratos",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/comprovante_residencial_lendario.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 88
       },
       "selected": false,
       "dragging": false
@@ -4150,6 +4336,126 @@
       "type": "under",
       "data": {
         "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784911375142-yxiz",
+      "source": "act-1784911252099",
+      "target": "item-1784911309641-mu0m",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784911376754-4raj",
+      "source": "act-1784911252099",
+      "target": "item-1784911310657-dtzv",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784911378359-w39d",
+      "source": "act-1784911252099",
+      "target": "item-1784911364338-2q13",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784911497451-fj6l",
+      "source": "item-1784911275544-qstu",
+      "target": "act-1784911252099",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784911500433-j7e1",
+      "source": "item-1784911273348-sv8p",
+      "target": "act-1784911252099",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784911503159-gyr0",
+      "source": "item-1784911274343-vm66",
+      "target": "act-1784911252099",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
         "qtyMin": 1,
         "qtyMax": 1,
         "chance": 100,
