@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-24T19:50:27.705Z",
+  "generatedAt": "2026-07-24T19:50:49.219Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -52,7 +52,7 @@
     },
     {
       "name": "Dinheiro",
-      "count": 4
+      "count": 5
     },
     {
       "name": "Drogas",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Manual",
-      "count": 2
+      "count": 1
     },
     {
       "name": "Materiais",
@@ -5258,7 +5258,7 @@
       "name": "prea_fichas_recompensa",
       "label": "Fichas de Recompensa",
       "description": "Ficha criada por uma vitória válida no cassino. Cada unidade vale $1 limpo no caixa autorizado.",
-      "category": "Manual",
+      "category": "Dinheiro",
       "type": "item",
       "rarity": "uncommon",
       "weight": 1,
@@ -5272,7 +5272,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-24T19:50:22.512Z",
+      "createdAt": "2026-07-24T19:50:44.170Z",
       "updatedAt": "",
       "inventory": {
         "name": "prea_fichas_recompensa",
