@@ -1,13 +1,13 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-24T07:52:44.625Z",
+  "updatedAt": "2026-07-24T07:54:21.745Z",
   "nodes": [
     {
       "id": "act-1784722882820",
       "type": "activity",
       "position": {
-        "x": 276.33196680289166,
-        "y": -1606.2786715515492
+        "x": 174.56261931535684,
+        "y": -747.793284374602
       },
       "data": {
         "kind": "activity",
@@ -80,7 +80,8 @@
         "paymentMin": 0,
         "paymentMax": 0,
         "moneyType": "limpo",
-        "observation": ""
+        "observation": "",
+        "accentColor": "#ffff80"
       },
       "measured": {
         "width": 240,
@@ -109,7 +110,8 @@
         "paymentMin": 0,
         "paymentMax": 0,
         "moneyType": "limpo",
-        "observation": ""
+        "observation": "",
+        "accentColor": "#ffff80"
       },
       "measured": {
         "width": 240,
@@ -167,7 +169,8 @@
         "paymentMin": 0,
         "paymentMax": 0,
         "moneyType": "limpo",
-        "observation": ""
+        "observation": "",
+        "accentColor": "#ffff80"
       },
       "measured": {
         "width": 240,
@@ -225,11 +228,12 @@
         "paymentMin": 0,
         "paymentMax": 0,
         "moneyType": "limpo",
-        "observation": ""
+        "observation": "",
+        "accentColor": "#80ff80"
       },
       "measured": {
         "width": 240,
-        "height": 197
+        "height": 149
       },
       "dragging": false,
       "selected": false
@@ -1822,6 +1826,32 @@
       },
       "selected": false,
       "dragging": false
+    },
+    {
+      "id": "item-1784879618017-dkjc",
+      "type": "item",
+      "position": {
+        "x": -55.15183409963021,
+        "y": 2417.4231263923493
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "weapon_chainsaw",
+        "name": "Motossera",
+        "identifier": "weapon_chainsaw",
+        "category": "Madereira",
+        "icon": "Shield",
+        "color": "#f59e0b",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/weapon_chainsaw.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
     }
   ],
   "edges": [
@@ -3402,6 +3432,26 @@
       "type": "under",
       "data": {
         "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784879621038-t2pn",
+      "source": "item-1784879618017-dkjc",
+      "target": "act-1784723163156",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
         "qtyMin": 1,
         "qtyMax": 1,
         "chance": 100,
