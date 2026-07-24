@@ -1,6 +1,6 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-22T16:25:00.085Z",
+  "updatedAt": "2026-07-24T07:04:18.613Z",
   "nodes": [
     {
       "id": "act-1784722882820",
@@ -1770,6 +1770,32 @@
       },
       "dragging": false,
       "selected": false
+    },
+    {
+      "id": "item-1784876564040-0juh",
+      "type": "item",
+      "position": {
+        "x": -268.52886618764126,
+        "y": 1001.6874745556502
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "seeds_wheat",
+        "name": "Sementes de Trigo",
+        "identifier": "seeds_wheat",
+        "category": "Fazenda",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_wheat.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
     }
   ],
   "edges": [
@@ -3036,6 +3062,24 @@
         "edgeType": "REQUER",
         "qtyMin": 1,
         "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784876569386-ksft",
+      "source": "item-1784876564040-0juh",
+      "target": "act-1784723004876",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 16,
         "chance": 100,
         "consumes": true,
         "observation": "",
