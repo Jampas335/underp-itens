@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-24T18:07:28.550Z",
+  "generatedAt": "2026-07-24T19:49:40.816Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 383,
+  "count": 384,
   "categories": [
     {
       "name": "Armas",
@@ -52,7 +52,7 @@
     },
     {
       "name": "Dinheiro",
-      "count": 3
+      "count": 4
     },
     {
       "name": "Drogas",
@@ -5218,6 +5218,40 @@
         "rarity": "rare"
       },
       "lua": "['kq_weed_fertilizer_yield'] = {\n    ['name'] = 'kq_weed_fertilizer_yield',\n    ['label'] = 'Fertilizante Yield',\n    ['weight'] = 100,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_fertilizer_yield.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
+    },
+    {
+      "id": "prea_fichas",
+      "name": "prea_fichas",
+      "label": "Fichas de Jogo",
+      "description": "",
+      "category": "Dinheiro",
+      "type": "item",
+      "rarity": "common",
+      "weight": 1,
+      "image": "dinheiro.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/prea_fichas.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/prea_fichas.png",
+        "https://jampas335.github.io/underp-itens/server-icons/dinheiro.png",
+        "https://jampas335.github.io/underp-itens/icons/dinheiro.png",
+        "https://jampas335.github.io/underp-itens/icons/prea_fichas.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-24T19:49:35.937Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "prea_fichas",
+        "label": "Fichas de Jogo",
+        "weight": 1,
+        "type": "item",
+        "image": "dinheiro.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['prea_fichas'] = {\n    ['name'] = 'prea_fichas',\n    ['label'] = 'Fichas de Jogo',\n    ['weight'] = 1,\n    ['type'] = 'item',\n    ['image'] = 'dinheiro.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "air_filter",
