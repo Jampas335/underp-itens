@@ -2813,13 +2813,13 @@
     "useable": false,
     "shouldClose": false,
     "rarity": "common",
-    "pendingIconName": "",
+    "pendingIconName": "novo-item",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "Fazenda",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-07-23T15:36:08.971Z",
+    "createdAt": "2026-07-24T07:02:00.363Z",
     "status": "ready"
   },
   {
