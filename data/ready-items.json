@@ -3120,6 +3120,26 @@
     "status": "ready"
   },
   {
+    "name": "prea_fichas",
+    "label": "Fichas de Jogo",
+    "description": "",
+    "weight": 1,
+    "type": "item",
+    "image": "dinheiro.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Dinheiro",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-24T19:49:35.937Z",
+    "status": "ready"
+  },
+  {
     "name": "air_filter",
     "label": "Filtro de Ar",
     "description": "Caixa e filtro de ar retirados do cofre do motor.",
