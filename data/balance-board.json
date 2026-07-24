@@ -1,6 +1,6 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-24T07:04:18.613Z",
+  "updatedAt": "2026-07-24T07:49:34.182Z",
   "nodes": [
     {
       "id": "act-1784722882820",
@@ -142,7 +142,7 @@
       },
       "measured": {
         "width": 240,
-        "height": 87
+        "height": 104
       },
       "dragging": false,
       "selected": false
@@ -605,8 +605,8 @@
       "id": "item-1784730139734-ujdd",
       "type": "item",
       "position": {
-        "x": -129.46610996091374,
-        "y": 1628.3317892351827
+        "x": -11.105975419690111,
+        "y": 1481.8370309275356
       },
       "data": {
         "kind": "item",
@@ -1619,8 +1619,8 @@
       "id": "item-1784737178785-ymt5",
       "type": "item",
       "position": {
-        "x": -268.52886618764126,
-        "y": 614.2192185506285
+        "x": -276.67394181834345,
+        "y": 575.5301093047933
       },
       "data": {
         "kind": "item",
@@ -1645,8 +1645,8 @@
       "id": "item-1784737182249-pwyy",
       "type": "item",
       "position": {
-        "x": -268.52886618764126,
-        "y": 691.4735346673501
+        "x": -276.67394181834345,
+        "y": 652.7844254215149
       },
       "data": {
         "kind": "item",
@@ -1671,8 +1671,8 @@
       "id": "item-1784737187915-blhn",
       "type": "item",
       "position": {
-        "x": -268.52886618764126,
-        "y": 769.5581134471441
+        "x": -276.67394181834345,
+        "y": 730.8690042013089
       },
       "data": {
         "kind": "item",
@@ -1697,8 +1697,8 @@
       "id": "item-1784737190719-wbjf",
       "type": "item",
       "position": {
-        "x": -268.52886618764126,
-        "y": 847.8060604388468
+        "x": -276.67394181834345,
+        "y": 809.1169511930116
       },
       "data": {
         "kind": "item",
@@ -1723,8 +1723,8 @@
       "id": "item-1784737191961-c0ee",
       "type": "item",
       "position": {
-        "x": -268.52886618764126,
-        "y": 925.5776612320587
+        "x": -276.67394181834345,
+        "y": 886.8885519862235
       },
       "data": {
         "kind": "item",
@@ -1775,8 +1775,8 @@
       "id": "item-1784876564040-0juh",
       "type": "item",
       "position": {
-        "x": -268.52886618764126,
-        "y": 1001.6874745556502
+        "x": -276.67394181834345,
+        "y": 962.998365309815
       },
       "data": {
         "kind": "item",
@@ -1796,6 +1796,32 @@
       },
       "dragging": false,
       "selected": false
+    },
+    {
+      "id": "item-1784879259660-qgg3",
+      "type": "item",
+      "position": {
+        "x": 896.6032953087313,
+        "y": 930.4781379533445
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "farm_wheat",
+        "name": "Espiga de Trigo",
+        "identifier": "farm_wheat",
+        "category": "Fazenda",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_wheat.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
     }
   ],
   "edges": [
@@ -3085,6 +3111,146 @@
         "observation": "",
         "resaleMin": 0,
         "resaleMax": 0
+      }
+    },
+    {
+      "id": "e-1784879268128-vnax",
+      "source": "act-1784723004876",
+      "target": "item-1784879259660-qgg3",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784879307379-9rdq",
+      "source": "item-1784723191034-6ulr",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784879312406-kdgu",
+      "source": "item-1784723205449-x6jy",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784879316699-e1yr",
+      "source": "item-1784723212008-15i6",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784879326465-4jak",
+      "source": "item-1784879259660-qgg3",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784879362541-ungu",
+      "source": "item-1784732944854-knfg",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784879369673-ecpg",
+      "source": "item-1784732939977-9j24",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
       }
     }
   ]
