@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-23T15:36:14.809Z",
+  "generatedAt": "2026-07-24T07:02:05.961Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 11
+      "count": 12
     },
     {
       "name": "Ferramentas",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Manual",
-      "count": 3
+      "count": 2
     },
     {
       "name": "Materiais",
@@ -4711,7 +4711,7 @@
       "name": "farm_wheat",
       "label": "Espiga de Trigo",
       "description": "",
-      "category": "Manual",
+      "category": "Fazenda",
       "type": "item",
       "rarity": "common",
       "weight": 150,
@@ -4725,7 +4725,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-23T15:36:08.971Z",
+      "createdAt": "2026-07-24T07:02:00.363Z",
       "updatedAt": "",
       "inventory": {
         "name": "farm_wheat",
