@@ -1,5 +1,25 @@
 [
   {
+    "name": "farm_pineapple",
+    "label": "Abacaxi",
+    "description": "",
+    "weight": 500,
+    "type": "item",
+    "image": "novo-item.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-25T11:05:32.124Z",
+    "status": "ready"
+  },
+  {
     "name": "ziptie",
     "label": "Abraçadeira",
     "description": "",
