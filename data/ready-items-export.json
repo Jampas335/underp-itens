@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-25T12:13:18.452Z",
+  "generatedAt": "2026-07-25T12:14:13.949Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 391,
+  "count": 392,
   "categories": [
     {
       "name": "Armas",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 17
+      "count": 18
     },
     {
       "name": "Ferramentas",
@@ -11374,6 +11374,40 @@
         "rarity": "common"
       },
       "lua": "['seeds_cabbage'] = {\n    ['name'] = 'seeds_cabbage',\n    ['label'] = 'Sementes de repolho',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "seeds_tomato",
+      "name": "seeds_tomato",
+      "label": "Sementes de Tomate",
+      "description": "",
+      "category": "Fazenda",
+      "type": "item",
+      "rarity": "common",
+      "weight": 50,
+      "image": "novo-item.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_tomato.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_tomato.png",
+        "https://jampas335.github.io/underp-itens/server-icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/seeds_tomato.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-25T12:14:08.618Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "seeds_tomato",
+        "label": "Sementes de Tomate",
+        "weight": 50,
+        "type": "item",
+        "image": "novo-item.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['seeds_tomato'] = {\n    ['name'] = 'seeds_tomato',\n    ['label'] = 'Sementes de Tomate',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "seeds_wheat",
