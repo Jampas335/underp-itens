@@ -62,6 +62,26 @@
     "status": "ready"
   },
   {
+    "name": "farm_sugar",
+    "label": "Açúcar",
+    "description": "",
+    "weight": 5000,
+    "type": "item",
+    "image": "novo-item.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-25T12:07:50.591Z",
+    "status": "ready"
+  },
+  {
     "name": "water",
     "label": "Água",
     "description": "",
