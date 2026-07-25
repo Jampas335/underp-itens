@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-25T12:14:13.949Z",
+  "generatedAt": "2026-07-25T12:15:10.111Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -183,7 +183,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-25T11:07:40.353Z",
+      "createdAt": "2026-07-25T12:15:03.235Z",
       "updatedAt": "",
       "inventory": {
         "name": "farm_pineapple",
