@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-25T10:49:55.165Z",
+  "generatedAt": "2026-07-25T10:50:46.742Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Corpo a Corpo",
-      "count": 1
+      "count": 2
     },
     {
       "name": "Dinheiro",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Manual",
-      "count": 2
+      "count": 1
     },
     {
       "name": "Materiais",
@@ -7279,7 +7279,7 @@
       "name": "weapon_machete",
       "label": "Machete",
       "description": "",
-      "category": "Manual",
+      "category": "Corpo a Corpo",
       "type": "weapon",
       "rarity": "uncommon",
       "weight": 1000,
@@ -7293,7 +7293,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-25T10:49:50.301Z",
+      "createdAt": "2026-07-25T10:50:22.989Z",
       "updatedAt": "",
       "inventory": {
         "name": "weapon_machete",
