@@ -6846,6 +6846,26 @@
     "status": "ready"
   },
   {
+    "name": "seeds_tomato",
+    "label": "Sementes de Tomate",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "novo-item.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-25T12:14:08.618Z",
+    "status": "ready"
+  },
+  {
     "name": "seeds_wheat",
     "label": "Sementes de Trigo",
     "description": "",
