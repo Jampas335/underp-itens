@@ -1507,6 +1507,28 @@
     "status": "ready"
   },
   {
+    "name": "farm_sugarcane",
+    "label": "Cana-de-açúcar",
+    "description": "",
+    "weight": 250,
+    "type": "weapon",
+    "image": "farm_sugarcane.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "decay": 0,
+    "weapon": "weapon_farm_sugarcane",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-25T11:06:47.189Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_switchblade",
     "label": "Canivete Stiletto",
     "description": "",
