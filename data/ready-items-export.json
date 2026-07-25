@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-25T11:08:36.678Z",
+  "generatedAt": "2026-07-25T12:07:55.576Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 389,
+  "count": 390,
   "categories": [
     {
       "name": "Armas",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fazenda",
-      "count": 15
+      "count": 16
     },
     {
       "name": "Ferramentas",
@@ -265,6 +265,40 @@
         "rarity": "epic"
       },
       "lua": "['hydrochloric_acid'] = {\n    ['name'] = 'hydrochloric_acid',\n    ['label'] = 'Ácido  Clorídrico',\n    ['weight'] = 5000,\n    ['type'] = 'item',\n    ['image'] = 'hydrochloric_acid.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'epic',\n},"
+    },
+    {
+      "id": "farm_sugar",
+      "name": "farm_sugar",
+      "label": "Açúcar",
+      "description": "",
+      "category": "Fazenda",
+      "type": "item",
+      "rarity": "common",
+      "weight": 5000,
+      "image": "novo-item.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_sugar.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/farm_sugar.png",
+        "https://jampas335.github.io/underp-itens/server-icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/icons/farm_sugar.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-25T12:07:50.591Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "farm_sugar",
+        "label": "Açúcar",
+        "weight": 5000,
+        "type": "item",
+        "image": "novo-item.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['farm_sugar'] = {\n    ['name'] = 'farm_sugar',\n    ['label'] = 'Açúcar',\n    ['weight'] = 5000,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "water",
