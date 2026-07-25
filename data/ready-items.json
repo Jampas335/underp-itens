@@ -4371,6 +4371,27 @@
     "status": "ready"
   },
   {
+    "name": "weapon_machete",
+    "label": "Machete",
+    "description": "",
+    "weight": 1000,
+    "type": "weapon",
+    "image": "machete.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "decay": 0.1,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-25T10:49:50.301Z",
+    "status": "ready"
+  },
+  {
     "name": "maco_cigarro",
     "label": "Maço de Cigarro",
     "description": "Um maÃ§o de cigarros.",
