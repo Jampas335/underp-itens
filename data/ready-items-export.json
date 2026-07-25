@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-24T19:50:49.219Z",
+  "generatedAt": "2026-07-25T10:49:55.165Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 385,
+  "count": 386,
   "categories": [
     {
       "name": "Armas",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Manual",
-      "count": 1
+      "count": 2
     },
     {
       "name": "Materiais",
@@ -7273,6 +7273,41 @@
         "rarity": "common"
       },
       "lua": "['hydraulic_jack'] = {\n    ['name'] = 'hydraulic_jack',\n    ['label'] = 'Macaco Hidraulico',\n    ['weight'] = 8150,\n    ['type'] = 'item',\n    ['image'] = 'hydraulic_jack.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['description'] = 'Ferramenta pesada usada para levantar um veiculo durante o desmanche.',\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "weapon_machete",
+      "name": "weapon_machete",
+      "label": "Machete",
+      "description": "",
+      "category": "Manual",
+      "type": "weapon",
+      "rarity": "uncommon",
+      "weight": 1000,
+      "image": "machete.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/weapon_machete.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/weapon_machete.png",
+        "https://jampas335.github.io/underp-itens/server-icons/machete.png",
+        "https://jampas335.github.io/underp-itens/icons/machete.png",
+        "https://jampas335.github.io/underp-itens/icons/weapon_machete.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-07-25T10:49:50.301Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "weapon_machete",
+        "label": "Machete",
+        "weight": 1000,
+        "type": "weapon",
+        "image": "machete.png",
+        "unique": true,
+        "useable": false,
+        "shouldClose": true,
+        "rarity": "uncommon",
+        "decay": 0.1
+      },
+      "lua": "['weapon_machete'] = {\n    ['name'] = 'weapon_machete',\n    ['label'] = 'Machete',\n    ['weight'] = 1000,\n    ['type'] = 'weapon',\n    ['image'] = 'machete.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n    ['decay'] = 0.1,\n},"
     },
     {
       "id": "maco_cigarro",
