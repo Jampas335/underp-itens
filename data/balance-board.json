@@ -1,13 +1,13 @@
 {
   "schema": "underrp.balance-board.v1",
-  "updatedAt": "2026-07-24T19:51:56.317Z",
+  "updatedAt": "2026-07-25T02:38:29.615Z",
   "nodes": [
     {
       "id": "act-1784722882820",
       "type": "activity",
       "position": {
-        "x": -219.82199507809918,
-        "y": -1029.9007960576266
+        "x": -19.66383176417719,
+        "y": -932.7693853698219
       },
       "data": {
         "kind": "activity",
@@ -26,7 +26,7 @@
       },
       "measured": {
         "width": 240,
-        "height": 172
+        "height": 124
       },
       "dragging": false,
       "selected": false
@@ -35,8 +35,8 @@
       "id": "act-1784722938157",
       "type": "activity",
       "position": {
-        "x": 44.13855098501435,
-        "y": -1601.1928928076707
+        "x": 31.638550985014263,
+        "y": -2261.192892807669
       },
       "data": {
         "kind": "activity",
@@ -64,8 +64,8 @@
       "id": "act-1784722959907",
       "type": "activity",
       "position": {
-        "x": 334.8932930651664,
-        "y": -30.373341348291603
+        "x": -216.50796008891587,
+        "y": 497.18632960037587
       },
       "data": {
         "kind": "activity",
@@ -94,8 +94,8 @@
       "id": "act-1784723004876",
       "type": "activity",
       "position": {
-        "x": 417.91884807195856,
-        "y": 774.3116848896177
+        "x": -133.48240508212382,
+        "y": 1301.8713558382851
       },
       "data": {
         "kind": "activity",
@@ -115,7 +115,7 @@
       },
       "measured": {
         "width": 240,
-        "height": 125
+        "height": 124
       },
       "dragging": false,
       "selected": false
@@ -124,8 +124,8 @@
       "id": "act-1784723030526",
       "type": "activity",
       "position": {
-        "x": 3725.0728094356955,
-        "y": 1029.1540727840265
+        "x": 3751.6789543822106,
+        "y": -1056.585874532293
       },
       "data": {
         "kind": "activity",
@@ -154,8 +154,8 @@
       "id": "act-1784723065495",
       "type": "activity",
       "position": {
-        "x": 281.2744262001461,
-        "y": 1693.5648179383033
+        "x": -392.1813087004289,
+        "y": 2079.277388478885
       },
       "data": {
         "kind": "activity",
@@ -184,8 +184,8 @@
       "id": "act-1784723086893",
       "type": "activity",
       "position": {
-        "x": 727.4875497729121,
-        "y": -1975.6139974596326
+        "x": 714.9875497729121,
+        "y": -2635.613997459631
       },
       "data": {
         "kind": "activity",
@@ -205,7 +205,7 @@
       },
       "measured": {
         "width": 240,
-        "height": 150
+        "height": 149
       },
       "dragging": false,
       "selected": false
@@ -214,8 +214,8 @@
       "id": "act-1784723163156",
       "type": "activity",
       "position": {
-        "x": 310.63917248298696,
-        "y": 2385.047252048328
+        "x": -362.8165624175879,
+        "y": 2770.7598225889096
       },
       "data": {
         "kind": "activity",
@@ -235,7 +235,7 @@
       },
       "measured": {
         "width": 240,
-        "height": 150
+        "height": 149
       },
       "dragging": false,
       "selected": false
@@ -244,8 +244,8 @@
       "id": "item-1784723191034-6ulr",
       "type": "item",
       "position": {
-        "x": 971.2075009569785,
-        "y": 573.0924540683201
+        "x": 647.4213624112199,
+        "y": 1130.3410530093777
       },
       "data": {
         "kind": "item",
@@ -270,8 +270,8 @@
       "id": "item-1784723205449-x6jy",
       "type": "item",
       "position": {
-        "x": 971.2075009569785,
-        "y": 668.5596543986277
+        "x": 647.4213624112199,
+        "y": 1225.8082533396853
       },
       "data": {
         "kind": "item",
@@ -296,8 +296,8 @@
       "id": "item-1784723212008-15i6",
       "type": "item",
       "position": {
-        "x": 971.2075009569785,
-        "y": 753.9608477761057
+        "x": 647.4213624112199,
+        "y": 1311.2094467171635
       },
       "data": {
         "kind": "item",
@@ -322,8 +322,8 @@
       "id": "item-1784723275724-okwt",
       "type": "item",
       "position": {
-        "x": 860.5363718232588,
-        "y": 2246.0923884267186
+        "x": 639.0120963623992,
+        "y": 2618.609879859571
       },
       "data": {
         "kind": "item",
@@ -348,8 +348,8 @@
       "id": "item-1784723278417-p9c0",
       "type": "item",
       "position": {
-        "x": 860.5363718232588,
-        "y": 2330.9145882985777
+        "x": 639.0120963623992,
+        "y": 2703.43207973143
       },
       "data": {
         "kind": "item",
@@ -374,8 +374,8 @@
       "id": "item-1784723281506-5yrv",
       "type": "item",
       "position": {
-        "x": 860.5363718232588,
-        "y": 2417.4231263923493
+        "x": 639.0120963623992,
+        "y": 2789.9406178252016
       },
       "data": {
         "kind": "item",
@@ -400,8 +400,8 @@
       "id": "item-1784723284038-my2m",
       "type": "item",
       "position": {
-        "x": 860.5363718232588,
-        "y": 2498.383636913173
+        "x": 639.0120963623992,
+        "y": 2870.9011283460254
       },
       "data": {
         "kind": "item",
@@ -426,8 +426,8 @@
       "id": "item-1784723285696-s18h",
       "type": "item",
       "position": {
-        "x": 860.5363718232588,
-        "y": 2584.849671499547
+        "x": 639.0120963623992,
+        "y": 2957.3671629323994
       },
       "data": {
         "kind": "item",
@@ -452,8 +452,8 @@
       "id": "item-1784723426992-iwap",
       "type": "item",
       "position": {
-        "x": 1305.5114448168022,
-        "y": 2246.0923884267186
+        "x": 1083.9871693559426,
+        "y": 2618.609879859571
       },
       "data": {
         "kind": "item",
@@ -478,8 +478,8 @@
       "id": "item-1784723429940-gx46",
       "type": "item",
       "position": {
-        "x": 1305.5114448168022,
-        "y": 2330.9145882985777
+        "x": 1083.9871693559426,
+        "y": 2703.43207973143
       },
       "data": {
         "kind": "item",
@@ -504,8 +504,8 @@
       "id": "item-1784723435083-4i7r",
       "type": "item",
       "position": {
-        "x": 1305.5114448168022,
-        "y": 2417.4231263923493
+        "x": 1083.9871693559426,
+        "y": 2789.9406178252016
       },
       "data": {
         "kind": "item",
@@ -530,8 +530,8 @@
       "id": "item-1784723438840-9t6k",
       "type": "item",
       "position": {
-        "x": 1305.5114448168022,
-        "y": 2498.383636913173
+        "x": 1083.9871693559426,
+        "y": 2870.9011283460254
       },
       "data": {
         "kind": "item",
@@ -556,8 +556,8 @@
       "id": "item-1784723442762-7v9t",
       "type": "item",
       "position": {
-        "x": 1305.5114448168022,
-        "y": 2584.849671499547
+        "x": 1083.9871693559426,
+        "y": 2957.3671629323994
       },
       "data": {
         "kind": "item",
@@ -582,8 +582,8 @@
       "id": "act-1784723604719",
       "type": "activity",
       "position": {
-        "x": -281.5023194848965,
-        "y": -1601.1928928076707
+        "x": -294.0023194848966,
+        "y": -2261.192892807669
       },
       "data": {
         "kind": "activity",
@@ -611,8 +611,8 @@
       "id": "item-1784730139734-ujdd",
       "type": "item",
       "position": {
-        "x": -71.10597541969014,
-        "y": 1721.8370309275356
+        "x": -744.5617103202651,
+        "y": 2107.549601468117
       },
       "data": {
         "kind": "item",
@@ -637,8 +637,8 @@
       "id": "item-1784730185495-66n3",
       "type": "item",
       "position": {
-        "x": 861.1831868345412,
-        "y": 1369.6817797166043
+        "x": 639.6589113736816,
+        "y": 1742.1992711494565
       },
       "data": {
         "kind": "item",
@@ -663,8 +663,8 @@
       "id": "item-1784730257336-4t6l",
       "type": "item",
       "position": {
-        "x": 861.1831868345412,
-        "y": 1456.2541310557663
+        "x": 639.6589113736816,
+        "y": 1828.7716224886185
       },
       "data": {
         "kind": "item",
@@ -689,8 +689,8 @@
       "id": "item-1784730272300-a6tw",
       "type": "item",
       "position": {
-        "x": 861.1831868345412,
-        "y": 1533.1582750406365
+        "x": 639.6589113736816,
+        "y": 1905.6757664734887
       },
       "data": {
         "kind": "item",
@@ -715,8 +715,8 @@
       "id": "item-1784730305564-rtz8",
       "type": "item",
       "position": {
-        "x": 861.1831868345412,
-        "y": 1628.2524284966155
+        "x": 639.6589113736816,
+        "y": 2000.7699199294675
       },
       "data": {
         "kind": "item",
@@ -741,8 +741,8 @@
       "id": "item-1784730321705-qk9g",
       "type": "item",
       "position": {
-        "x": 861.1831868345412,
-        "y": 1797.8142367766552
+        "x": 639.6589113736816,
+        "y": 2170.3317282095077
       },
       "data": {
         "kind": "item",
@@ -767,8 +767,8 @@
       "id": "item-1784730349110-nsp0",
       "type": "item",
       "position": {
-        "x": 861.1831868345412,
-        "y": 1721.8370309275356
+        "x": 639.6589113736816,
+        "y": 2094.354522360388
       },
       "data": {
         "kind": "item",
@@ -793,8 +793,8 @@
       "id": "item-1784730380655-ggyh",
       "type": "item",
       "position": {
-        "x": 861.1831868345412,
-        "y": 1979.2083311500173
+        "x": 639.6589113736816,
+        "y": 2351.7258225828696
       },
       "data": {
         "kind": "item",
@@ -819,8 +819,8 @@
       "id": "item-1784730410784-c5tf",
       "type": "item",
       "position": {
-        "x": 861.1831868345412,
-        "y": 1893.2599468267356
+        "x": 639.6589113736816,
+        "y": 2265.777438259588
       },
       "data": {
         "kind": "item",
@@ -845,8 +845,8 @@
       "id": "item-1784730472100-deut",
       "type": "item",
       "position": {
-        "x": 861.1831868345412,
-        "y": 2087.5117497748383
+        "x": 639.6589113736816,
+        "y": 2460.0292412076906
       },
       "data": {
         "kind": "item",
@@ -871,8 +871,8 @@
       "id": "item-1784730584326-7c7d",
       "type": "item",
       "position": {
-        "x": 1304.3815857848674,
-        "y": 1369.6817797166043
+        "x": 1082.8573103240078,
+        "y": 1742.1992711494565
       },
       "data": {
         "kind": "item",
@@ -897,8 +897,8 @@
       "id": "item-1784730611236-i50p",
       "type": "item",
       "position": {
-        "x": 1304.3815857848674,
-        "y": 1456.2541310557663
+        "x": 1082.8573103240078,
+        "y": 1828.7716224886185
       },
       "data": {
         "kind": "item",
@@ -923,8 +923,8 @@
       "id": "item-1784730635989-mgqa",
       "type": "item",
       "position": {
-        "x": 1304.3815857848674,
-        "y": 1533.1582750406365
+        "x": 1082.8573103240078,
+        "y": 1905.6757664734887
       },
       "data": {
         "kind": "item",
@@ -949,8 +949,8 @@
       "id": "item-1784730704060-xry9",
       "type": "item",
       "position": {
-        "x": 1304.3815857848674,
-        "y": 1628.2524284966155
+        "x": 1082.8573103240078,
+        "y": 2000.7699199294675
       },
       "data": {
         "kind": "item",
@@ -975,8 +975,8 @@
       "id": "item-1784730919038-k0ye",
       "type": "item",
       "position": {
-        "x": 1304.3815857848674,
-        "y": 1721.8370309275356
+        "x": 1082.8573103240078,
+        "y": 2094.354522360388
       },
       "data": {
         "kind": "item",
@@ -1001,8 +1001,8 @@
       "id": "item-1784730933895-klk1",
       "type": "item",
       "position": {
-        "x": 1304.3815857848674,
-        "y": 1797.8142367766552
+        "x": 1082.8573103240078,
+        "y": 2170.3317282095077
       },
       "data": {
         "kind": "item",
@@ -1027,8 +1027,8 @@
       "id": "item-1784730958017-n4pr",
       "type": "item",
       "position": {
-        "x": 1304.3815857848674,
-        "y": 1893.2599468267356
+        "x": 1082.8573103240078,
+        "y": 2265.777438259588
       },
       "data": {
         "kind": "item",
@@ -1053,8 +1053,8 @@
       "id": "item-1784730968121-19b7",
       "type": "item",
       "position": {
-        "x": 1304.3815857848674,
-        "y": 1979.2083311500173
+        "x": 1082.8573103240078,
+        "y": 2351.7258225828696
       },
       "data": {
         "kind": "item",
@@ -1079,8 +1079,8 @@
       "id": "item-1784730993129-84ah",
       "type": "item",
       "position": {
-        "x": 1304.3815857848674,
-        "y": 2087.5117497748383
+        "x": 1082.8573103240078,
+        "y": 2460.0292412076906
       },
       "data": {
         "kind": "item",
@@ -1105,8 +1105,8 @@
       "id": "item-1784731089725-19tx",
       "type": "item",
       "position": {
-        "x": 1846.3504504334205,
-        "y": 1369.6817797166043
+        "x": 1624.8261749725611,
+        "y": 1742.1992711494565
       },
       "data": {
         "kind": "item",
@@ -1131,8 +1131,8 @@
       "id": "item-1784731098537-0ub3",
       "type": "item",
       "position": {
-        "x": 1846.3504504334205,
-        "y": 1449.1932944897783
+        "x": 1624.8261749725611,
+        "y": 1821.7107859226307
       },
       "data": {
         "kind": "item",
@@ -1157,8 +1157,8 @@
       "id": "item-1784731113951-0ew0",
       "type": "item",
       "position": {
-        "x": 1846.3504504334205,
-        "y": 1534.181470092104
+        "x": 1624.8261749725611,
+        "y": 1906.6989615249563
       },
       "data": {
         "kind": "item",
@@ -1183,8 +1183,8 @@
       "id": "item-1784731133343-8qo3",
       "type": "item",
       "position": {
-        "x": 1846.3504504334205,
-        "y": 1623.1364532392774
+        "x": 1624.8261749725611,
+        "y": 1995.65394467213
       },
       "data": {
         "kind": "item",
@@ -1209,8 +1209,8 @@
       "id": "item-1784731158667-0ks3",
       "type": "item",
       "position": {
-        "x": 1846.3504504334205,
-        "y": 1721.8370309275356
+        "x": 1624.8261749725611,
+        "y": 2094.354522360388
       },
       "data": {
         "kind": "item",
@@ -1235,8 +1235,8 @@
       "id": "item-1784731179582-aji8",
       "type": "item",
       "position": {
-        "x": 1846.3504504334205,
-        "y": 1801.9070169825259
+        "x": 1624.8261749725611,
+        "y": 2174.424508415378
       },
       "data": {
         "kind": "item",
@@ -1261,8 +1261,8 @@
       "id": "item-1784731206166-pvr1",
       "type": "item",
       "position": {
-        "x": 1846.3504504334205,
-        "y": 1888.8293169261933
+        "x": 1624.8261749725611,
+        "y": 2261.3468083590456
       },
       "data": {
         "kind": "item",
@@ -1287,8 +1287,8 @@
       "id": "item-1784731222250-7t9h",
       "type": "item",
       "position": {
-        "x": 1845.3272553819534,
-        "y": 1976.1387459956145
+        "x": 1623.802979921094,
+        "y": 2348.6562374284667
       },
       "data": {
         "kind": "item",
@@ -1313,8 +1313,8 @@
       "id": "item-1784732758092-pkrs",
       "type": "item",
       "position": {
-        "x": -219.82199507809918,
-        "y": -81.68652352715361
+        "x": -771.2232482321816,
+        "y": 445.87314742151386
       },
       "data": {
         "kind": "item",
@@ -1339,8 +1339,8 @@
       "id": "item-1784732762194-vhud",
       "type": "item",
       "position": {
-        "x": -219.82199507809918,
-        "y": 2.441770420043241
+        "x": -771.2232482321816,
+        "y": 530.0014413687107
       },
       "data": {
         "kind": "item",
@@ -1365,8 +1365,8 @@
       "id": "item-1784732802665-zz13",
       "type": "item",
       "position": {
-        "x": 978.5985038979518,
-        "y": -395.1879898641168
+        "x": 654.8123653521932,
+        "y": 162.06060907694075
       },
       "data": {
         "kind": "item",
@@ -1391,8 +1391,8 @@
       "id": "item-1784732805910-i5xr",
       "type": "item",
       "position": {
-        "x": 978.5985038979518,
-        "y": -306.25140366923364
+        "x": 654.8123653521932,
+        "y": 250.9971952718239
       },
       "data": {
         "kind": "item",
@@ -1417,8 +1417,8 @@
       "id": "item-1784732815660-xftq",
       "type": "item",
       "position": {
-        "x": 978.5985038979518,
-        "y": -218.4265248017865
+        "x": 654.8123653521932,
+        "y": 338.8220741392712
       },
       "data": {
         "kind": "item",
@@ -1443,8 +1443,8 @@
       "id": "item-1784732824071-a539",
       "type": "item",
       "position": {
-        "x": 978.5985038979518,
-        "y": -43.888474394328256
+        "x": 654.8123653521932,
+        "y": 513.3601245467293
       },
       "data": {
         "kind": "item",
@@ -1469,8 +1469,8 @@
       "id": "item-1784732834738-apvv",
       "type": "item",
       "position": {
-        "x": 978.5985038979518,
-        "y": 42.82469714568285
+        "x": 654.8123653521932,
+        "y": 600.0732960867405
       },
       "data": {
         "kind": "item",
@@ -1495,8 +1495,8 @@
       "id": "item-1784732870329-nquo",
       "type": "item",
       "position": {
-        "x": 978.5985038979518,
-        "y": -128.2035861626631
+        "x": 654.8123653521932,
+        "y": 429.0450127783944
       },
       "data": {
         "kind": "item",
@@ -1521,8 +1521,8 @@
       "id": "item-1784732913905-v79p",
       "type": "item",
       "position": {
-        "x": 978.5985038979518,
-        "y": 130.64957601312997
+        "x": 654.8123653521932,
+        "y": 687.8981749541875
       },
       "data": {
         "kind": "item",
@@ -1547,8 +1547,8 @@
       "id": "item-1784732921285-ppem",
       "type": "item",
       "position": {
-        "x": 978.5985038979518,
-        "y": 218.4744548805772
+        "x": 654.8123653521932,
+        "y": 775.7230538216348
       },
       "data": {
         "kind": "item",
@@ -1573,8 +1573,8 @@
       "id": "item-1784732939977-9j24",
       "type": "item",
       "position": {
-        "x": 978.5985038979518,
-        "y": 307.4110410754604
+        "x": 654.8123653521932,
+        "y": 864.659640016518
       },
       "data": {
         "kind": "item",
@@ -1599,8 +1599,8 @@
       "id": "item-1784732944854-knfg",
       "type": "item",
       "position": {
-        "x": 978.5985038979518,
-        "y": 397.45933459777956
+        "x": 654.8123653521932,
+        "y": 954.7079335388373
       },
       "data": {
         "kind": "item",
@@ -1625,8 +1625,8 @@
       "id": "item-1784737178785-ymt5",
       "type": "item",
       "position": {
-        "x": -191.67394181834334,
-        "y": 605.5301093047933
+        "x": -743.0751949724257,
+        "y": 1133.089780253461
       },
       "data": {
         "kind": "item",
@@ -1651,8 +1651,8 @@
       "id": "item-1784737182249-pwyy",
       "type": "item",
       "position": {
-        "x": -191.67394181834334,
-        "y": 682.7844254215149
+        "x": -743.0751949724257,
+        "y": 1210.3440963701823
       },
       "data": {
         "kind": "item",
@@ -1677,8 +1677,8 @@
       "id": "item-1784737187915-blhn",
       "type": "item",
       "position": {
-        "x": -191.67394181834334,
-        "y": 760.8690042013089
+        "x": -743.0751949724257,
+        "y": 1288.4286751499767
       },
       "data": {
         "kind": "item",
@@ -1703,8 +1703,8 @@
       "id": "item-1784737190719-wbjf",
       "type": "item",
       "position": {
-        "x": -191.67394181834334,
-        "y": 839.1169511930116
+        "x": -743.0751949724257,
+        "y": 1366.6766221416792
       },
       "data": {
         "kind": "item",
@@ -1729,8 +1729,8 @@
       "id": "item-1784737191961-c0ee",
       "type": "item",
       "position": {
-        "x": -191.67394181834334,
-        "y": 916.8885519862235
+        "x": -743.0751949724257,
+        "y": 1444.448222934891
       },
       "data": {
         "kind": "item",
@@ -1755,8 +1755,8 @@
       "id": "item-1784737337991-6yyl",
       "type": "item",
       "position": {
-        "x": -219.82199507809918,
-        "y": 86.52723834277938
+        "x": -771.2232482321816,
+        "y": 614.0869092914469
       },
       "data": {
         "kind": "item",
@@ -1781,8 +1781,8 @@
       "id": "item-1784876564040-0juh",
       "type": "item",
       "position": {
-        "x": -191.67394181834334,
-        "y": 992.998365309815
+        "x": -743.0751949724257,
+        "y": 1520.5580362584824
       },
       "data": {
         "kind": "item",
@@ -1807,8 +1807,8 @@
       "id": "item-1784879259660-qgg3",
       "type": "item",
       "position": {
-        "x": 971.2075009569785,
-        "y": 839.6270286142183
+        "x": 647.4213624112199,
+        "y": 1396.8756275552757
       },
       "data": {
         "kind": "item",
@@ -1833,8 +1833,8 @@
       "id": "item-1784879618017-dkjc",
       "type": "item",
       "position": {
-        "x": -55.15183409963021,
-        "y": 2417.4231263923493
+        "x": -728.6075690002051,
+        "y": 2803.135696932931
       },
       "data": {
         "kind": "item",
@@ -1859,8 +1859,8 @@
       "id": "item-1784909862449-w8m8",
       "type": "item",
       "position": {
-        "x": 173.46196150809251,
-        "y": -2043.029537226313
+        "x": 160.9619615080926,
+        "y": -2703.0295372263117
       },
       "data": {
         "kind": "item",
@@ -1885,8 +1885,8 @@
       "id": "item-1784909876898-npea",
       "type": "item",
       "position": {
-        "x": 120.71827711475149,
-        "y": -1937.622843743928
+        "x": 108.21827711475157,
+        "y": -2597.6228437439263
       },
       "data": {
         "kind": "item",
@@ -1911,8 +1911,8 @@
       "id": "item-1784909886885-ig2r",
       "type": "item",
       "position": {
-        "x": 173.46196150809251,
-        "y": -1833.86089492238
+        "x": 160.9619615080926,
+        "y": -2493.8608949223785
       },
       "data": {
         "kind": "item",
@@ -1937,8 +1937,8 @@
       "id": "item-1784909933602-rx4k",
       "type": "item",
       "position": {
-        "x": 1441.1930675930817,
-        "y": -2213.1657845030395
+        "x": 1428.6930675930817,
+        "y": -2873.1657845030377
       },
       "data": {
         "kind": "item",
@@ -1963,8 +1963,8 @@
       "id": "item-1784909936898-qay7",
       "type": "item",
       "position": {
-        "x": 1441.1930675930817,
-        "y": -2135.1609941396705
+        "x": 1428.6930675930817,
+        "y": -2795.160994139669
       },
       "data": {
         "kind": "item",
@@ -1989,8 +1989,8 @@
       "id": "item-1784909939397-4c6z",
       "type": "item",
       "position": {
-        "x": 1441.1930675930817,
-        "y": -2056.5915534471715
+        "x": 1428.6930675930817,
+        "y": -2716.5915534471696
       },
       "data": {
         "kind": "item",
@@ -2015,8 +2015,8 @@
       "id": "item-1784909941141-kczc",
       "type": "item",
       "position": {
-        "x": 1441.1930675930817,
-        "y": -1977.0937302545813
+        "x": 1428.6930675930817,
+        "y": -2637.09373025458
       },
       "data": {
         "kind": "item",
@@ -2041,8 +2041,8 @@
       "id": "item-1784909946385-twzf",
       "type": "item",
       "position": {
-        "x": 1441.1930675930817,
-        "y": -1898.9081952730937
+        "x": 1428.6930675930817,
+        "y": -2558.908195273092
       },
       "data": {
         "kind": "item",
@@ -2067,8 +2067,8 @@
       "id": "item-1784909947813-j20i",
       "type": "item",
       "position": {
-        "x": 1441.1930675930817,
-        "y": -1739.8103554329064
+        "x": 1428.6930675930817,
+        "y": -2399.8103554329045
       },
       "data": {
         "kind": "item",
@@ -2093,8 +2093,8 @@
       "id": "item-1784909953674-cqog",
       "type": "item",
       "position": {
-        "x": 1441.1930675930817,
-        "y": -1819.9191155522913
+        "x": 1428.6930675930817,
+        "y": -2479.9191155522894
       },
       "data": {
         "kind": "item",
@@ -2119,8 +2119,8 @@
       "id": "item-1784910743244-nct3",
       "type": "item",
       "position": {
-        "x": 1441.1930675930817,
-        "y": -1659.4602460349638
+        "x": 1428.6930675930817,
+        "y": -2319.4602460349624
       },
       "data": {
         "kind": "item",
@@ -2145,8 +2145,8 @@
       "id": "act-1784910818334",
       "type": "activity",
       "position": {
-        "x": 2568.919896283339,
-        "y": -1405.1837795406889
+        "x": 2556.419896283339,
+        "y": -2065.1837795406873
       },
       "data": {
         "kind": "activity",
@@ -2356,6 +2356,1202 @@
       },
       "selected": false,
       "dragging": false
+    },
+    {
+      "id": "item-1784945404397-lrns",
+      "type": "item",
+      "position": {
+        "x": -768.1358046114717,
+        "y": -1678.0296668015553
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "fishing_rod_normal",
+        "name": "Vara de Pesca Normal",
+        "identifier": "fishing_rod_normal",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/fishing_rod_normal.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945417062-pcg5",
+      "type": "item",
+      "position": {
+        "x": -768.1358046114717,
+        "y": -1599.4018699138287
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "fishing_rod_sport",
+        "name": "Vara de Pesca Esportiva",
+        "identifier": "fishing_rod_sport",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/fishing_rod_sport.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945423056-tp2i",
+      "type": "item",
+      "position": {
+        "x": -768.1358046114717,
+        "y": -1518.8794273179637
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "fishing_rod_advanced",
+        "name": "Vara de Pesca Avançada",
+        "identifier": "fishing_rod_advanced",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/fishing_rod_advanced.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945433405-ytdh",
+      "type": "item",
+      "position": {
+        "x": -768.1358046114717,
+        "y": -1437.6887120815727
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "fishing_rod_super",
+        "name": "Vara de Pesca Super",
+        "identifier": "fishing_rod_super",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/fishing_rod_super.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945461670-yqah",
+      "type": "item",
+      "position": {
+        "x": -768.1358046114717,
+        "y": -1356.8872192721653
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "fishing_net",
+        "name": "Rede de pesca",
+        "identifier": "fishing_net",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/fishing_net.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945472048-98xu",
+      "type": "item",
+      "position": {
+        "x": -768.1358046114717,
+        "y": -1275.4174538222314
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "fishing_net_plus",
+        "name": "Rede de pesca++",
+        "identifier": "fishing_net_plus",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/fishing_net_plus.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945487076-78pu",
+      "type": "item",
+      "position": {
+        "x": -771.9250960277477,
+        "y": -1117.214537192709
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "redline_bait",
+        "name": "Redline",
+        "identifier": "redline_bait",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/redline_bait.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945507002-k6tw",
+      "type": "item",
+      "position": {
+        "x": -771.9250960277477,
+        "y": -1037.6394174509132
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "dot_bait",
+        "name": "Isca Dot Dot",
+        "identifier": "dot_bait",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/dot_bait.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945511988-xjr7",
+      "type": "item",
+      "position": {
+        "x": -771.9250960277477,
+        "y": -957.1169748550483
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "golden_fish_bait",
+        "name": "Isca de peixe dourado",
+        "identifier": "golden_fish_bait",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/golden_fish_bait.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945516876-pf2d",
+      "type": "item",
+      "position": {
+        "x": -771.9250960277477,
+        "y": -878.4891779673216
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "corn_bait",
+        "name": "Isca de milho",
+        "identifier": "corn_bait",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/corn_bait.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945526956-3mkc",
+      "type": "item",
+      "position": {
+        "x": -771.9250960277477,
+        "y": -797.9667353714567
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "crab_bait",
+        "name": "Isca de carangueijo",
+        "identifier": "crab_bait",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/crab_bait.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945533304-8bls",
+      "type": "item",
+      "position": {
+        "x": -771.9250960277477,
+        "y": -723.4007861462671
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "shrimp_bait",
+        "name": "Isca de camarão",
+        "identifier": "shrimp_bait",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/shrimp_bait.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945558648-ir44",
+      "type": "item",
+      "position": {
+        "x": -771.9250960277477,
+        "y": -648.674042762419
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "black_mamba",
+        "name": "Isca Black Mamba",
+        "identifier": "black_mamba",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/black_mamba.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945587923-bci9",
+      "type": "item",
+      "position": {
+        "x": -773.8197417358856,
+        "y": -1197.7369797885735
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "crab_cage",
+        "name": "Gaiola de Carangueijo",
+        "identifier": "crab_cage",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/crab_cage.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784945665113-ap4v",
+      "type": "item",
+      "position": {
+        "x": -773.8197417358856,
+        "y": -569.7788764199474
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "anchor",
+        "name": "Ancora",
+        "identifier": "anchor",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/anchor.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945678207-5vxg",
+      "type": "item",
+      "position": {
+        "x": -773.8197417358856,
+        "y": -491.15107953222076
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "diving_tube",
+        "name": "Cilindro de oxigênio",
+        "identifier": "diving_tube",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/diving_tube.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945688599-fv2j",
+      "type": "item",
+      "position": {
+        "x": -773.8197417358856,
+        "y": -333.89548575676724
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "weapon_metaldetector",
+        "name": "Detector de metais",
+        "identifier": "weapon_metaldetector",
+        "category": "Pesca",
+        "icon": "Shield",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/weapon_metaldetector.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945697163-c7to",
+      "type": "item",
+      "position": {
+        "x": -773.8197417358856,
+        "y": -413.47060549856303
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "diving_gear",
+        "name": "Equipamento de mergulho",
+        "identifier": "diving_gear",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/diving_gear.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "item-1784945734012-khrd",
+      "type": "item",
+      "position": {
+        "x": -773.8197417358856,
+        "y": -254.81346223965
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "treasure_shovel",
+        "name": "Pá de tesouro",
+        "identifier": "treasure_shovel",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/treasure_shovel.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945739317-9gjl",
+      "type": "item",
+      "position": {
+        "x": -773.8197417358856,
+        "y": -176.46391154299909
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "water_meter",
+        "name": "medidor de profundidade",
+        "identifier": "water_meter",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/water_meter.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945874140-wzjz",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -1823.6556351628649
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "catfish",
+        "name": "Bagre",
+        "identifier": "catfish",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/catfish.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945882803-wh8q",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -1745.0278382751378
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "crab",
+        "name": "Caranguejo",
+        "identifier": "crab",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/crab.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945892386-jvki",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -1664.5053956792733
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "carp",
+        "name": "Carpa",
+        "identifier": "carp",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/carp.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945898525-19da",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -1583.3146804428823
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "fish3",
+        "name": "Certa",
+        "identifier": "fish3",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/fish3.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945915074-m3uo",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -1502.513187633475
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "tarpon",
+        "name": "Tarpon",
+        "identifier": "tarpon",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/tarpon.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945920153-w2ns",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -1421.0434221835412
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "fish1",
+        "name": "Truta",
+        "identifier": "fish1",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/fish1.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945934712-1dve",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -1343.362948149883
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "barracuda",
+        "name": "Barracuda",
+        "identifier": "barracuda",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/barracuda.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945948741-djna",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -1262.8405055540184
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "fish6",
+        "name": "Danio",
+        "identifier": "fish6",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/fish6.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945955847-5gt8",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -1183.2653858122226
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "discus",
+        "name": "Discus",
+        "identifier": "discus",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/discus.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945961772-4stu",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -1102.7429432163576
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "fish2",
+        "name": "Dorada",
+        "identifier": "fish2",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/fish2.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945969752-4n59",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -1024.115146328631
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "sturgeon",
+        "name": "Esturjao",
+        "identifier": "sturgeon",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/sturgeon.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945978073-q295",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -943.5927037327662
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "mojarra_fish",
+        "name": "Mojarra",
+        "identifier": "mojarra_fish",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/mojarra_fish.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945987080-u3ih",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -869.0267545075766
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "snapper",
+        "name": "Pargo",
+        "identifier": "snapper",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/snapper.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784945995593-8v6z",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -794.3000111237285
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "fish5",
+        "name": "Rocio Octofasciata",
+        "identifier": "fish5",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/fish5.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784946013904-72gc",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -715.4048447812569
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "bocachico_fish",
+        "name": "Bocachico",
+        "identifier": "bocachico_fish",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/bocachico_fish.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784946020427-bzo7",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -635.7511862687024
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "shoe_shit",
+        "name": "Bota velha",
+        "identifier": "shoe_shit",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/shoe_shit.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784946033331-ets6",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -559.0965738598724
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "fish4",
+        "name": "Maingano",
+        "identifier": "fish4",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/fish4.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784946039072-9t65",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -479.5214541180767
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "disco_fish",
+        "name": "Peixe Disco",
+        "identifier": "disco_fish",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/disco_fish.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784946048160-cwv2",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -400.43943060095944
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "koi_fish",
+        "name": "Peixe Koi",
+        "identifier": "koi_fish",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/koi_fish.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784946069057-vge9",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -323.57735228467914
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "crystal_catfish",
+        "name": "Bagre de Cristal",
+        "identifier": "crystal_catfish",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/crystal_catfish.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784946078529-lfon",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -244.40687763830556
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "flying_fish",
+        "name": "Peixe Voador",
+        "identifier": "flying_fish",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/flying_fish.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784946099494-vvx2",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -161.9909603960013
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "pinkdolpin",
+        "name": "Golfinho Rosa",
+        "identifier": "pinkdolpin",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pinkdolpin.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784946146782-wz9v",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -83.36316350827455
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "briefcase_with_money",
+        "name": "Maleta com Dinheiro",
+        "identifier": "briefcase_with_money",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/briefcase_with_money.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784946153568-26l0",
+      "type": "item",
+      "position": {
+        "x": 650.3341761678294,
+        "y": -5.682689474616804
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "hammerhead",
+        "name": "Tubarao Martelo",
+        "identifier": "hammerhead",
+        "category": "Pesca",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/hammerhead.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784946634928-ybvb",
+      "type": "item",
+      "position": {
+        "x": -743.0751949724257,
+        "y": 1598.890587595718
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "seeds_carrot",
+        "name": "Sementes de Cenoura",
+        "identifier": "seeds_carrot",
+        "category": "Fazenda",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/seeds_carrot.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "item-1784946642551-2fb0",
+      "type": "item",
+      "position": {
+        "x": 647.4213624112199,
+        "y": 1486.4280941572258
+      },
+      "data": {
+        "kind": "item",
+        "itemId": "farm_carrot",
+        "name": "Cenoura",
+        "identifier": "farm_carrot",
+        "category": "Fazenda",
+        "icon": "Boxes",
+        "color": "#36c0ff",
+        "referenceValue": 0,
+        "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_carrot.png",
+        "observation": ""
+      },
+      "measured": {
+        "width": 210,
+        "height": 75
+      },
+      "dragging": false,
+      "selected": false
     }
   ],
   "edges": [
@@ -2384,8 +3580,8 @@
       "type": "under",
       "data": {
         "edgeType": "ENTREGA",
-        "qtyMin": 1,
-        "qtyMax": 1,
+        "qtyMin": 3,
+        "qtyMax": 0,
         "chance": 100,
         "consumes": false,
         "observation": ""
@@ -3656,8 +4852,8 @@
       "type": "under",
       "data": {
         "edgeType": "ENTREGA",
-        "qtyMin": 1,
-        "qtyMax": 1,
+        "qtyMin": 3,
+        "qtyMax": 0,
         "chance": 100,
         "consumes": true,
         "observation": "",
@@ -3676,8 +4872,8 @@
       "type": "under",
       "data": {
         "edgeType": "ALIMENTA",
-        "qtyMin": 1,
-        "qtyMax": 1,
+        "qtyMin": 6,
+        "qtyMax": 0,
         "chance": 100,
         "consumes": true,
         "observation": "",
@@ -3696,8 +4892,8 @@
       "type": "under",
       "data": {
         "edgeType": "ALIMENTA",
-        "qtyMin": 1,
-        "qtyMax": 1,
+        "qtyMin": 3,
+        "qtyMax": 0,
         "chance": 100,
         "consumes": true,
         "observation": "",
@@ -3736,8 +4932,8 @@
       "type": "under",
       "data": {
         "edgeType": "ALIMENTA",
-        "qtyMin": 1,
-        "qtyMax": 1,
+        "qtyMin": 3,
+        "qtyMax": 0,
         "chance": 100,
         "consumes": true,
         "observation": "",
@@ -4456,6 +5652,1386 @@
       "type": "under",
       "data": {
         "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945767136-r6g9",
+      "source": "item-1784945511988-xjr7",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945770557-2cly",
+      "source": "item-1784945516876-pf2d",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945780652-hohm",
+      "source": "item-1784945404397-lrns",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945783591-674s",
+      "source": "item-1784945417062-pcg5",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945786481-3kj1",
+      "source": "item-1784945423056-tp2i",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945789398-b1sx",
+      "source": "item-1784945433405-ytdh",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945791602-wffw",
+      "source": "item-1784945461670-yqah",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945793825-37wq",
+      "source": "item-1784945472048-98xu",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945796373-yf1v",
+      "source": "item-1784945587923-bci9",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945798561-j4iw",
+      "source": "item-1784945487076-78pu",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945801510-xbe1",
+      "source": "item-1784945507002-k6tw",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945806647-h4mi",
+      "source": "item-1784945526956-3mkc",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945810271-pn18",
+      "source": "item-1784945533304-8bls",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945813888-81qp",
+      "source": "item-1784945558648-ir44",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945816335-9rev",
+      "source": "item-1784945665113-ap4v",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945820760-08e4",
+      "source": "item-1784945678207-5vxg",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945825211-5auv",
+      "source": "item-1784945697163-c7to",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945827719-5110",
+      "source": "item-1784945688599-fv2j",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945830501-ke80",
+      "source": "item-1784945734012-khrd",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784945833211-1fz6",
+      "source": "item-1784945739317-9gjl",
+      "target": "act-1784722882820",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946192246-eogk",
+      "source": "act-1784722882820",
+      "target": "item-1784945987080-u3ih",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946195010-ejoj",
+      "source": "act-1784722882820",
+      "target": "item-1784945978073-q295",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946213983-70y5",
+      "source": "act-1784722882820",
+      "target": "item-1784945874140-wzjz",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946220938-s6t8",
+      "source": "act-1784722882820",
+      "target": "item-1784945882803-wh8q",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946273004-9hup",
+      "source": "act-1784722882820",
+      "target": "item-1784945892386-jvki",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946276126-3hk6",
+      "source": "act-1784722882820",
+      "target": "item-1784945898525-19da",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946279080-lfbo",
+      "source": "act-1784722882820",
+      "target": "item-1784945915074-m3uo",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946282137-dn0d",
+      "source": "act-1784722882820",
+      "target": "item-1784945920153-w2ns",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946284127-9vvb",
+      "source": "act-1784722882820",
+      "target": "item-1784945934712-1dve",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946286268-96e5",
+      "source": "act-1784722882820",
+      "target": "item-1784945948741-djna",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946302853-6kci",
+      "source": "act-1784722882820",
+      "target": "item-1784945955847-5gt8",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946305789-sih3",
+      "source": "act-1784722882820",
+      "target": "item-1784945961772-4stu",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946308305-cjnh",
+      "source": "act-1784722882820",
+      "target": "item-1784945969752-4n59",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946313878-u4zo",
+      "source": "act-1784722882820",
+      "target": "item-1784945995593-8v6z",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946315789-y5f4",
+      "source": "act-1784722882820",
+      "target": "item-1784946013904-72gc",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946320082-6xss",
+      "source": "act-1784722882820",
+      "target": "item-1784946020427-bzo7",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946322419-me3e",
+      "source": "act-1784722882820",
+      "target": "item-1784946033331-ets6",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946324821-zyd6",
+      "source": "act-1784722882820",
+      "target": "item-1784946039072-9t65",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946327847-nc3v",
+      "source": "act-1784722882820",
+      "target": "item-1784946048160-cwv2",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946330681-cnkc",
+      "source": "act-1784722882820",
+      "target": "item-1784946069057-vge9",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946333504-56zq",
+      "source": "act-1784722882820",
+      "target": "item-1784946078529-lfon",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946336633-53dr",
+      "source": "act-1784722882820",
+      "target": "item-1784946099494-vvx2",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946346263-b6dy",
+      "source": "act-1784722882820",
+      "target": "item-1784946146782-wz9v",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946349473-utjq",
+      "source": "act-1784722882820",
+      "target": "item-1784946153568-26l0",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946400330-dzpi",
+      "source": "item-1784945874140-wzjz",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946408257-91zj",
+      "source": "item-1784945882803-wh8q",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946418638-33ht",
+      "source": "item-1784945892386-jvki",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946429019-uwdk",
+      "source": "item-1784945898525-19da",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946435771-v9e4",
+      "source": "item-1784945915074-m3uo",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946446530-zlgj",
+      "source": "item-1784945920153-w2ns",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946464755-l8sr",
+      "source": "item-1784945934712-1dve",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946470835-lst6",
+      "source": "item-1784945948741-djna",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946481873-bzpo",
+      "source": "item-1784945955847-5gt8",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946487864-brjd",
+      "source": "item-1784945961772-4stu",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946493825-cgb4",
+      "source": "item-1784945969752-4n59",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946501449-n29x",
+      "source": "item-1784945978073-q295",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946508619-ys1i",
+      "source": "item-1784945987080-u3ih",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946515136-jnq4",
+      "source": "item-1784945995593-8v6z",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946521724-arvc",
+      "source": "item-1784946013904-72gc",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946542125-xj7m",
+      "source": "item-1784946033331-ets6",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946549762-xfzj",
+      "source": "item-1784946039072-9t65",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946555589-naan",
+      "source": "item-1784946048160-cwv2",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946561634-iyj3",
+      "source": "item-1784946069057-vge9",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946567502-n1ls",
+      "source": "item-1784946078529-lfon",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946573744-cxmo",
+      "source": "item-1784946099494-vvx2",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946588196-fr5w",
+      "source": "item-1784946153568-26l0",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
+        "qtyMin": 1,
+        "qtyMax": 1,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946652276-21a7",
+      "source": "act-1784723004876",
+      "target": "item-1784946642551-2fb0",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ENTREGA",
+        "qtyMin": 1,
+        "qtyMax": 0,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946687186-a4xg",
+      "source": "item-1784946634928-ybvb",
+      "target": "act-1784723004876",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "REQUER",
+        "qtyMin": 1,
+        "qtyMax": 16,
+        "chance": 100,
+        "consumes": true,
+        "observation": "",
+        "resaleMin": 0,
+        "resaleMax": 0,
+        "moneyCostMin": 0,
+        "moneyCostMax": 0
+      }
+    },
+    {
+      "id": "e-1784946793265-wvs3",
+      "source": "item-1784946642551-2fb0",
+      "target": "act-1784723030526",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "type": "under",
+      "data": {
+        "edgeType": "ALIMENTA",
         "qtyMin": 1,
         "qtyMax": 1,
         "chance": 100,
