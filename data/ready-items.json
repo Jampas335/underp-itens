@@ -6746,6 +6746,26 @@
     "status": "ready"
   },
   {
+    "name": "seeds_pineapple",
+    "label": "Sementes de Abacaxi",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "novo-item.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Fazenda",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-07-27T21:09:58.908Z",
+    "status": "ready"
+  },
+  {
     "name": "seeds_sugarcane",
     "label": "Sementes de Cana-de-açúcar",
     "description": "",
