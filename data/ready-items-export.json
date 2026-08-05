@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-07-27T21:10:04.969Z",
+  "generatedAt": "2026-08-05T04:12:12.640Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 393,
+  "count": 394,
   "categories": [
     {
       "name": "Armas",
@@ -53,6 +53,10 @@
     {
       "name": "Dinheiro",
       "count": 5
+    },
+    {
+      "name": "Documentos",
+      "count": 1
     },
     {
       "name": "Drogas",
@@ -4449,6 +4453,39 @@
         "rarity": "uncommon"
       },
       "lua": "['discus'] = {\n    ['name'] = 'discus',\n    ['label'] = 'Discus',\n    ['weight'] = 0,\n    ['type'] = 'item',\n    ['image'] = 'discus.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "id_card",
+      "name": "id_card",
+      "label": "Documento de Identidade",
+      "description": "",
+      "category": "Documentos",
+      "type": "item",
+      "rarity": "rare",
+      "weight": 0,
+      "image": "id_card.webp",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/id_card.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/id_card.png",
+        "https://jampas335.github.io/underp-itens/server-icons/id_card.webp",
+        "https://jampas335.github.io/underp-itens/icons/id_card.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-08-05T04:12:07.905Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "id_card",
+        "label": "Documento de Identidade",
+        "weight": 0,
+        "type": "item",
+        "image": "id_card.webp",
+        "unique": true,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "rare"
+      },
+      "lua": "['id_card'] = {\n    ['name'] = 'id_card',\n    ['label'] = 'Documento de Identidade',\n    ['weight'] = 0,\n    ['type'] = 'item',\n    ['image'] = 'id_card.webp',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "fish2",
