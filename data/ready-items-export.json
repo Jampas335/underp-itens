@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-08-05T04:12:12.640Z",
+  "generatedAt": "2026-08-05T05:00:54.519Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -2993,9 +2993,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/phone.png",
         "https://jampas335.github.io/underp-itens/icons/phone.png"
       ],
-      "iconSource": "ready",
+      "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-04-17T10:17:59.570Z",
+      "createdAt": "2026-08-05T05:00:50.588Z",
       "updatedAt": "",
       "inventory": {
         "name": "phone",
