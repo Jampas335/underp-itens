@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-08-16T02:48:37.896Z",
+  "generatedAt": "2026-08-16T08:12:10.208Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 395,
+  "count": 396,
   "categories": [
     {
       "name": "Armas",
@@ -44,7 +44,7 @@
     },
     {
       "name": "Comprovantes e Contratos",
-      "count": 6
+      "count": 7
     },
     {
       "name": "Corpo a Corpo",
@@ -3758,6 +3758,39 @@
         "allowInBackpack": false
       },
       "lua": "['police_armour'] = {\n    ['name'] = 'police_armour',\n    ['label'] = 'Colete Tático',\n    ['weight'] = 2200,\n    ['type'] = 'item',\n    ['image'] = 'police_armour.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n    ['decay'] = 0.1,\n    ['allowInBackpack'] = false,\n},"
+    },
+    {
+      "id": "rental_receipt",
+      "name": "rental_receipt",
+      "label": "Comprovante de Aluguel",
+      "description": "",
+      "category": "Comprovantes e Contratos",
+      "type": "item",
+      "rarity": "common",
+      "weight": 25,
+      "image": "rental_receipt.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/rental_receipt.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/rental_receipt.png",
+        "https://jampas335.github.io/underp-itens/server-icons/rental_receipt.png",
+        "https://jampas335.github.io/underp-itens/icons/rental_receipt.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-08-16T08:12:05.274Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "rental_receipt",
+        "label": "Comprovante de Aluguel",
+        "weight": 25,
+        "type": "item",
+        "image": "rental_receipt.png",
+        "unique": true,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['rental_receipt'] = {\n    ['name'] = 'rental_receipt',\n    ['label'] = 'Comprovante de Aluguel',\n    ['weight'] = 25,\n    ['type'] = 'item',\n    ['image'] = 'rental_receipt.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "comprovante_residencial_comum",
