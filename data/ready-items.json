@@ -2218,6 +2218,26 @@
     "status": "ready"
   },
   {
+    "name": "rental_receipt",
+    "label": "Comprovante de Aluguel",
+    "description": "",
+    "weight": 25,
+    "type": "item",
+    "image": "rental_receipt.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Comprovantes e Contratos",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-08-16T08:12:05.274Z",
+    "status": "ready"
+  },
+  {
     "name": "comprovante_residencial_comum",
     "label": "Comprovante Residencial",
     "description": "",
