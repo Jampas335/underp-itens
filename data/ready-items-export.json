@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-08-16T08:12:10.208Z",
+  "generatedAt": "2026-08-22T11:02:51.364Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -177,30 +177,29 @@
       "type": "item",
       "rarity": "common",
       "weight": 500,
-      "image": "novo-item.png",
+      "image": "farm_pineapple.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_pineapple.png",
       "imageCandidates": [
         "https://jampas335.github.io/underp-itens/ready-items/icons/farm_pineapple.png",
-        "https://jampas335.github.io/underp-itens/server-icons/novo-item.png",
-        "https://jampas335.github.io/underp-itens/icons/novo-item.png",
+        "https://jampas335.github.io/underp-itens/server-icons/farm_pineapple.png",
         "https://jampas335.github.io/underp-itens/icons/farm_pineapple.png"
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-25T12:15:03.235Z",
+      "createdAt": "2026-08-22T11:02:46.479Z",
       "updatedAt": "",
       "inventory": {
         "name": "farm_pineapple",
         "label": "Abacaxi",
         "weight": 500,
         "type": "item",
-        "image": "novo-item.png",
+        "image": "farm_pineapple.png",
         "unique": false,
         "useable": false,
         "shouldClose": false,
         "rarity": "common"
       },
-      "lua": "['farm_pineapple'] = {\n    ['name'] = 'farm_pineapple',\n    ['label'] = 'Abacaxi',\n    ['weight'] = 500,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
+      "lua": "['farm_pineapple'] = {\n    ['name'] = 'farm_pineapple',\n    ['label'] = 'Abacaxi',\n    ['weight'] = 500,\n    ['type'] = 'item',\n    ['image'] = 'farm_pineapple.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "ziptie",
