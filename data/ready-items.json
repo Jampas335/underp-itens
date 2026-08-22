@@ -5,7 +5,7 @@
     "description": "",
     "weight": 500,
     "type": "item",
-    "image": "novo-item.png",
+    "image": "farm_pineapple.png",
     "unique": false,
     "useable": false,
     "shouldClose": false,
@@ -16,7 +16,7 @@
     "siteCategory": "Fazenda",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-07-25T12:15:03.235Z",
+    "createdAt": "2026-08-22T11:02:46.479Z",
     "status": "ready"
   },
   {
