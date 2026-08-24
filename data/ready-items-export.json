@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-08-22T11:02:51.364Z",
+  "generatedAt": "2026-08-24T10:53:47.480Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 396,
+  "count": 397,
   "categories": [
     {
       "name": "Armas",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Corpo a Corpo",
-      "count": 2
+      "count": 3
     },
     {
       "name": "Dinheiro",
@@ -7713,6 +7713,44 @@
         "rarity": "uncommon"
       },
       "lua": "['weapon_hammer'] = {\n    ['name'] = 'weapon_hammer',\n    ['label'] = 'Marreta',\n    ['weight'] = 2000,\n    ['type'] = 'weapon',\n    ['image'] = 'weapon_hammer.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "weapon_marreta",
+      "name": "weapon_marreta",
+      "label": "Marreta de Sucata",
+      "description": "Marreta reforçada usada para desmontar carcaças e componentes automotivos.",
+      "category": "Corpo a Corpo",
+      "type": "weapon",
+      "rarity": "uncommon",
+      "weight": 2800,
+      "image": "weapon_hammer.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/weapon_marreta.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/weapon_marreta.png",
+        "https://jampas335.github.io/underp-itens/server-icons/weapon_hammer.png",
+        "https://jampas335.github.io/underp-itens/icons/weapon_hammer.png",
+        "https://jampas335.github.io/underp-itens/icons/weapon_marreta.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-08-24T10:53:43.228Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "weapon_marreta",
+        "label": "Marreta de Sucata",
+        "weight": 2800,
+        "type": "weapon",
+        "image": "weapon_hammer.png",
+        "unique": true,
+        "useable": true,
+        "shouldClose": true,
+        "description": "Marreta reforçada usada para desmontar carcaças e componentes automotivos.",
+        "rarity": "uncommon",
+        "decay": 0.1,
+        "weapon": "weapon_marreta",
+        "weapontype": "Melee"
+      },
+      "lua": "['weapon_marreta'] = {\n    ['name'] = 'weapon_marreta',\n    ['label'] = 'Marreta de Sucata',\n    ['weight'] = 2800,\n    ['type'] = 'weapon',\n    ['image'] = 'weapon_hammer.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['description'] = 'Marreta reforçada usada para desmontar carcaças e componentes automotivos.',\n    ['rarity'] = 'uncommon',\n    ['decay'] = 0.1,\n    ['weapon'] = 'weapon_marreta',\n    ['weapontype'] = 'Melee',\n},"
     },
     {
       "id": "water_meter",
