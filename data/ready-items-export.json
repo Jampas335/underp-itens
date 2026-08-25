@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-08-25T15:36:04.855Z",
+  "generatedAt": "2026-08-25T15:36:47.192Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -100,11 +100,11 @@
     },
     {
       "name": "Madereira",
-      "count": 11
+      "count": 10
     },
     {
       "name": "Manual",
-      "count": 1
+      "count": 2
     },
     {
       "name": "Materiais",
@@ -13359,7 +13359,7 @@
       "name": "pine_log",
       "label": "Tronco de Pinho",
       "description": "",
-      "category": "Madereira",
+      "category": "Manual",
       "type": "item",
       "rarity": "common",
       "weight": 20000,
@@ -13372,7 +13372,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-04-26T04:42:29.250Z",
+      "createdAt": "2026-08-25T15:36:41.410Z",
       "updatedAt": "",
       "inventory": {
         "name": "pine_log",
