@@ -7346,14 +7346,14 @@
     "unique": false,
     "useable": false,
     "shouldClose": false,
-    "rarity": "common",
+    "rarity": "rare",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Madereira",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-04-26T04:43:03.338Z",
+    "createdAt": "2026-08-25T15:36:00.459Z",
     "status": "ready"
   },
   {
