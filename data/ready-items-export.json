@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-08-24T16:10:05.575Z",
+  "generatedAt": "2026-08-25T15:36:04.855Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -12196,7 +12196,7 @@
       "description": "",
       "category": "Madereira",
       "type": "item",
-      "rarity": "common",
+      "rarity": "rare",
       "weight": 1200,
       "image": "pine_plank.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pine_plank.png",
@@ -12207,7 +12207,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-04-26T04:43:03.338Z",
+      "createdAt": "2026-08-25T15:36:00.459Z",
       "updatedAt": "",
       "inventory": {
         "name": "pine_plank",
@@ -12218,9 +12218,9 @@
         "unique": false,
         "useable": false,
         "shouldClose": false,
-        "rarity": "common"
+        "rarity": "rare"
       },
-      "lua": "['pine_plank'] = {\n    ['name'] = 'pine_plank',\n    ['label'] = 'Tábua de Pinho',\n    ['weight'] = 1200,\n    ['type'] = 'item',\n    ['image'] = 'pine_plank.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
+      "lua": "['pine_plank'] = {\n    ['name'] = 'pine_plank',\n    ['label'] = 'Tábua de Pinho',\n    ['weight'] = 1200,\n    ['type'] = 'item',\n    ['image'] = 'pine_plank.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "weapon_bat",
