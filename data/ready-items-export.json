@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-08-26T19:00:29.962Z",
+  "generatedAt": "2026-08-26T19:00:46.331Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -104,7 +104,7 @@
     },
     {
       "name": "Manual",
-      "count": 2
+      "count": 1
     },
     {
       "name": "Materiais",
@@ -152,7 +152,7 @@
     },
     {
       "name": "Policial",
-      "count": 22
+      "count": 23
     },
     {
       "name": "Proteção",
@@ -2677,7 +2677,7 @@
       "name": "cctv_default",
       "label": "Câmera de Segurança",
       "description": "",
-      "category": "Manual",
+      "category": "Policial",
       "type": "item",
       "rarity": "rare",
       "weight": 2200,
@@ -2688,9 +2688,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/cctv_default.png",
         "https://jampas335.github.io/underp-itens/icons/cctv_default.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-08-26T19:00:25.163Z",
+      "createdAt": "2026-08-26T19:00:42.904Z",
       "updatedAt": "",
       "inventory": {
         "name": "cctv_default",
