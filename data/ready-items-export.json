@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-08-26T18:53:55.866Z",
+  "generatedAt": "2026-08-26T19:00:29.962Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 399,
+  "count": 400,
   "categories": [
     {
       "name": "Armas",
@@ -104,7 +104,7 @@
     },
     {
       "name": "Manual",
-      "count": 1
+      "count": 2
     },
     {
       "name": "Materiais",
@@ -2671,6 +2671,39 @@
         "carryProp": "prop_ing_camera_01"
       },
       "lua": "['camera'] = {\n    ['name'] = 'camera',\n    ['label'] = 'Câmera',\n    ['weight'] = 900,\n    ['type'] = 'item',\n    ['image'] = 'camera.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n    ['allowInBackpack'] = true,\n    ['prop'] = 'prop_ing_camera_01',\n    ['object'] = 'prop_ing_camera_01',\n    ['carryInHand'] = true,\n    ['carryAttachment'] = {\n        ['bone'] = 57005,\n        ['pos'] = {\n            ['x'] = 0.12,\n            ['y'] = 0.03,\n            ['z'] = -0.06,\n        },\n        ['rot'] = {\n            ['x'] = -92,\n            ['y'] = 22,\n            ['z'] = -8,\n        },\n    },\n    ['carryAnim'] = {\n        ['dict'] = 'anim@heists@box_carry@',\n        ['clip'] = 'idle',\n        ['flag'] = 49,\n    },\n    ['dropProp'] = 'prop_ing_camera_01',\n    ['carryProp'] = 'prop_ing_camera_01',\n},"
+    },
+    {
+      "id": "cctv_default",
+      "name": "cctv_default",
+      "label": "Câmera de Segurança",
+      "description": "",
+      "category": "Manual",
+      "type": "item",
+      "rarity": "rare",
+      "weight": 2200,
+      "image": "cctv_default.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/cctv_default.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/cctv_default.png",
+        "https://jampas335.github.io/underp-itens/server-icons/cctv_default.png",
+        "https://jampas335.github.io/underp-itens/icons/cctv_default.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-08-26T19:00:25.163Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "cctv_default",
+        "label": "Câmera de Segurança",
+        "weight": 2200,
+        "type": "item",
+        "image": "cctv_default.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "rare"
+      },
+      "lua": "['cctv_default'] = {\n    ['name'] = 'cctv_default',\n    ['label'] = 'Câmera de Segurança',\n    ['weight'] = 2200,\n    ['type'] = 'item',\n    ['image'] = 'cctv_default.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "cctv_faulty",
