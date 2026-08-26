@@ -1548,6 +1548,26 @@
     "status": "ready"
   },
   {
+    "name": "cctv_default",
+    "label": "Câmera de Segurança",
+    "description": "",
+    "weight": 2200,
+    "type": "item",
+    "image": "cctv_default.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-08-26T19:00:25.163Z",
+    "status": "ready"
+  },
+  {
     "name": "cctv_faulty",
     "label": "Câmera de Segurança Usada",
     "description": "",
