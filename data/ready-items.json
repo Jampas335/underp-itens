@@ -1561,10 +1561,10 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "Policial",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-08-26T19:00:25.163Z",
+    "iconSource": "ready",
+    "createdAt": "2026-08-26T19:00:42.904Z",
     "status": "ready"
   },
   {
