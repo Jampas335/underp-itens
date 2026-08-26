@@ -1568,6 +1568,26 @@
     "status": "ready"
   },
   {
+    "name": "cctv_advanced",
+    "label": "Câmera de Segurança Avançada",
+    "description": "",
+    "weight": 2600,
+    "type": "item",
+    "image": "cctv_advanced.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-08-26T19:05:10.672Z",
+    "status": "ready"
+  },
+  {
     "name": "cctv_faulty",
     "label": "Câmera de Segurança Usada",
     "description": "",
