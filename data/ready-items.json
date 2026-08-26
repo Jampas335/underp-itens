@@ -1548,6 +1548,26 @@
     "status": "ready"
   },
   {
+    "name": "cctv_faulty",
+    "label": "Câmera de Segurança Usada",
+    "description": "",
+    "weight": 1800,
+    "type": "item",
+    "image": "cctv_faulty.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-08-26T18:53:51.472Z",
+    "status": "ready"
+  },
+  {
     "name": "farm_sugarcane",
     "label": "Cana-de-açúcar",
     "description": "",
