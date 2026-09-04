@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T05:17:25.797Z",
+  "generatedAt": "2026-09-04T05:17:34.252Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 412,
+  "count": 411,
   "categories": [
     {
       "name": "Armas",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Burger Shot",
-      "count": 4
+      "count": 3
     },
     {
       "name": "Caça",
@@ -10748,39 +10748,6 @@
         "rarity": "common"
       },
       "lua": "['redline_bait'] = {\n    ['name'] = 'redline_bait',\n    ['label'] = 'Redline',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'redline_bait.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
-    },
-    {
-      "id": "bs-murder-meal",
-      "name": "bs-murder-meal",
-      "label": "Refeição da Morte",
-      "description": "",
-      "category": "Burger Shot",
-      "type": "item",
-      "rarity": "common",
-      "weight": 1000,
-      "image": "bs-murder-meal.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/bs-murder-meal.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/bs-murder-meal.png",
-        "https://jampas335.github.io/underp-itens/server-icons/bs-murder-meal.png",
-        "https://jampas335.github.io/underp-itens/icons/bs-murder-meal.png"
-      ],
-      "iconSource": "ready",
-      "status": "ready",
-      "createdAt": "2026-04-07T09:10:52.568Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "bs-murder-meal",
-        "label": "Refeição da Morte",
-        "weight": 1000,
-        "type": "item",
-        "image": "bs-murder-meal.png",
-        "unique": false,
-        "useable": false,
-        "shouldClose": true,
-        "rarity": "common"
-      },
-      "lua": "['bs-murder-meal'] = {\n    ['name'] = 'bs-murder-meal',\n    ['label'] = 'Refeição da Morte',\n    ['weight'] = 1000,\n    ['type'] = 'item',\n    ['image'] = 'bs-murder-meal.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "fresco_esgoto",
