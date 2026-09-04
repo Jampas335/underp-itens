@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T21:05:08.013Z",
+  "generatedAt": "2026-09-04T21:05:38.170Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -5066,9 +5066,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/energetico.png",
         "https://jampas335.github.io/underp-itens/icons/energetico.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-09-04T16:19:47.185Z",
+      "createdAt": "2026-09-04T21:05:35.881Z",
       "updatedAt": "",
       "inventory": {
         "name": "energetico",
@@ -5076,13 +5076,13 @@
         "weight": 150,
         "type": "item",
         "image": "energetico.png",
-        "unique": true,
+        "unique": false,
         "useable": true,
         "shouldClose": true,
         "rarity": "common",
         "decay": 0.1
       },
-      "lua": "['energetico'] = {\n    ['name'] = 'energetico',\n    ['label'] = 'Energético',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'energetico.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n    ['decay'] = 0.1,\n},"
+      "lua": "['energetico'] = {\n    ['name'] = 'energetico',\n    ['label'] = 'Energético',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'energetico.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n    ['decay'] = 0.1,\n},"
     },
     {
       "id": "epinephrine",
