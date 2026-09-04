@@ -5667,6 +5667,26 @@
     "status": "ready"
   },
   {
+    "name": "cat_pancakes",
+    "label": "Pancat",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "cat_pancakes.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Cat Café",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T05:35:37.177Z",
+    "status": "ready"
+  },
+  {
     "name": "pano_sujo",
     "label": "Pano Sujo",
     "description": "",
