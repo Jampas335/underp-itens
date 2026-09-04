@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T16:02:35.210Z",
+  "generatedAt": "2026-09-04T16:16:56.115Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 452,
+  "count": 453,
   "categories": [
     {
       "name": "Armas",
@@ -104,7 +104,7 @@
     },
     {
       "name": "Ingredientes",
-      "count": 4
+      "count": 5
     },
     {
       "name": "Jóias & Valores",
@@ -6488,6 +6488,39 @@
         "rarity": "uncommon"
       },
       "lua": "['zinc_fragment'] = {\n    ['name'] = 'zinc_fragment',\n    ['label'] = 'Fragmento de Zinco',\n    ['weight'] = 800,\n    ['type'] = 'item',\n    ['image'] = 'zinc_fragment.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "frango",
+      "name": "frango",
+      "label": "Frango",
+      "description": "",
+      "category": "Ingredientes",
+      "type": "item",
+      "rarity": "common",
+      "weight": 250,
+      "image": "frango.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/frango.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/frango.png",
+        "https://jampas335.github.io/underp-itens/server-icons/frango.png",
+        "https://jampas335.github.io/underp-itens/icons/frango.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T16:16:51.914Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "frango",
+        "label": "Frango",
+        "weight": 250,
+        "type": "item",
+        "image": "frango.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['frango'] = {\n    ['name'] = 'frango',\n    ['label'] = 'Frango',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'frango.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "fish_chips",
