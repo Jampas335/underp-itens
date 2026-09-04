@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T20:51:25.515Z",
+  "generatedAt": "2026-09-04T20:52:01.575Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Bebidas",
-      "count": 12
+      "count": 11
     },
     {
       "name": "Burger Shot",
@@ -196,7 +196,7 @@
     },
     {
       "name": "The Taco Farmer",
-      "count": 1
+      "count": 2
     },
     {
       "name": "up-n-atom",
@@ -11941,10 +11941,10 @@
       "name": "fresco_esgoto",
       "label": "Refresco de Esgoto",
       "description": "Um refresco sabor de água de esgoto.",
-      "category": "Bebidas",
+      "category": "The Taco Farmer",
       "type": "item",
       "rarity": "uncommon",
-      "weight": 200,
+      "weight": 150,
       "image": "fresco_esgoto.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/fresco_esgoto.png",
       "imageCandidates": [
@@ -11954,12 +11954,12 @@
       ],
       "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-05-16T02:26:12.059Z",
+      "createdAt": "2026-09-04T20:51:58.426Z",
       "updatedAt": "",
       "inventory": {
         "name": "fresco_esgoto",
         "label": "Refresco de Esgoto",
-        "weight": 200,
+        "weight": 150,
         "type": "item",
         "image": "fresco_esgoto.png",
         "unique": false,
@@ -11968,7 +11968,7 @@
         "description": "Um refresco sabor de água de esgoto.",
         "rarity": "uncommon"
       },
-      "lua": "['fresco_esgoto'] = {\n    ['name'] = 'fresco_esgoto',\n    ['label'] = 'Refresco de Esgoto',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'fresco_esgoto.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['description'] = 'Um refresco sabor de água de esgoto.',\n    ['rarity'] = 'uncommon',\n},"
+      "lua": "['fresco_esgoto'] = {\n    ['name'] = 'fresco_esgoto',\n    ['label'] = 'Refresco de Esgoto',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'fresco_esgoto.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['description'] = 'Um refresco sabor de água de esgoto.',\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "weapon_watering_can",
