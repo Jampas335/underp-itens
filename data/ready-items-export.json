@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T22:25:33.089Z",
+  "generatedAt": "2026-09-04T22:25:52.618Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Comida",
-      "count": 7
+      "count": 6
     },
     {
       "name": "Comida Japonesa",
@@ -192,7 +192,7 @@
     },
     {
       "name": "Taco Farmer",
-      "count": 6
+      "count": 7
     },
     {
       "name": "The Boat House",
@@ -6860,7 +6860,7 @@
       "name": "corndog",
       "label": "Hotdog no Palito",
       "description": "",
-      "category": "Comida",
+      "category": "Taco Farmer",
       "type": "item",
       "rarity": "uncommon",
       "weight": 150,
@@ -6871,7 +6871,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-04-07T06:59:41.367Z",
+      "createdAt": "2026-09-04T22:25:49.927Z",
       "updatedAt": "",
       "inventory": {
         "name": "corndog",
