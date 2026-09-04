@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T16:24:45.581Z",
+  "generatedAt": "2026-09-04T16:26:05.756Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 457,
+  "count": 458,
   "categories": [
     {
       "name": "Armas",
@@ -104,7 +104,7 @@
     },
     {
       "name": "Ingredientes",
-      "count": 7
+      "count": 8
     },
     {
       "name": "Jóias & Valores",
@@ -8335,6 +8335,39 @@
         "rarity": "common"
       },
       "lua": "['strawberry_coffee'] = {\n    ['name'] = 'strawberry_coffee',\n    ['label'] = 'Latte de Morango com Café',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'strawberry_coffee.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "leite",
+      "name": "leite",
+      "label": "Leite",
+      "description": "",
+      "category": "Ingredientes",
+      "type": "item",
+      "rarity": "common",
+      "weight": 300,
+      "image": "leite.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/leite.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/leite.png",
+        "https://jampas335.github.io/underp-itens/server-icons/leite.png",
+        "https://jampas335.github.io/underp-itens/icons/leite.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T16:26:01.251Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "leite",
+        "label": "Leite",
+        "weight": 300,
+        "type": "item",
+        "image": "leite.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['leite'] = {\n    ['name'] = 'leite',\n    ['label'] = 'Leite',\n    ['weight'] = 300,\n    ['type'] = 'item',\n    ['image'] = 'leite.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "wipers",
