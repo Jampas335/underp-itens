@@ -9237,6 +9237,26 @@
     "status": "ready"
   },
   {
+    "name": "caribbean_whiskey",
+    "label": "Whisky Caribeño",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "caribbean_whiskey.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Bahama Drinks",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T15:09:03.348Z",
+    "status": "ready"
+  },
+  {
     "name": "tropical_whiskey",
     "label": "Whisky Tropical",
     "description": "",
