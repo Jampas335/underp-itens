@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T22:22:17.794Z",
+  "generatedAt": "2026-09-04T22:22:59.578Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Bebidas",
-      "count": 9
+      "count": 8
     },
     {
       "name": "Burger Shot",
@@ -192,7 +192,7 @@
     },
     {
       "name": "Taco Farmer",
-      "count": 1
+      "count": 2
     },
     {
       "name": "The Boat House",
@@ -7384,7 +7384,7 @@
       "name": "lapassion",
       "label": "La Passion",
       "description": "Uma bebida de líquidos desconhecidos, mas que sempre atrai o amor.",
-      "category": "Bebidas",
+      "category": "Taco Farmer",
       "type": "item",
       "rarity": "uncommon",
       "weight": 200,
@@ -7395,7 +7395,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-05-16T02:25:10.843Z",
+      "createdAt": "2026-09-04T22:22:56.796Z",
       "updatedAt": "",
       "inventory": {
         "name": "lapassion",
