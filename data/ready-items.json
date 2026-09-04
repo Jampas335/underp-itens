@@ -6457,26 +6457,6 @@
     "status": "ready"
   },
   {
-    "name": "bs-murder-meal",
-    "label": "Refeição da Morte",
-    "description": "",
-    "weight": 1000,
-    "type": "item",
-    "image": "bs-murder-meal.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": true,
-    "rarity": "common",
-    "pendingIconName": "bs-murder-meal",
-    "pendingCategory": "Burger Shot",
-    "extraLua": "",
-    "siteCategory": "Burger Shot",
-    "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-04-07T09:10:52.568Z",
-    "status": "ready"
-  },
-  {
     "name": "fresco_esgoto",
     "label": "Refresco de Esgoto",
     "description": "Um refresco sabor de água de esgoto.",
