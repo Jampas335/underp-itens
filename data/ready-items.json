@@ -7705,11 +7705,13 @@
     "useable": true,
     "shouldClose": true,
     "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Rifles & SMGs",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-05-11T07:28:44.906Z",
+    "createdAt": "2026-09-04T22:11:51.679Z",
     "status": "ready"
   },
   {
