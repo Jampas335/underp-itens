@@ -7476,6 +7476,26 @@
     "status": "ready"
   },
   {
+    "name": "tropical_energy",
+    "label": "Suco Tropical",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "tropical_energy.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "The Boat House",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T05:10:36.598Z",
+    "status": "ready"
+  },
+  {
     "name": "sushimi",
     "label": "Sushimi",
     "description": "",
