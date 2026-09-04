@@ -383,6 +383,26 @@
     "status": "ready"
   },
   {
+    "name": "bahama_mama_drink",
+    "label": "Bahama's Drink",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "bahama_mama_drink.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Bahama Drinks",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T15:07:15.838Z",
+    "status": "ready"
+  },
+  {
     "name": "banana",
     "label": "Banana",
     "description": "",
