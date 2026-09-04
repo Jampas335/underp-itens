@@ -1546,6 +1546,26 @@
     "status": "ready"
   },
   {
+    "name": "shrimp_tempura",
+    "label": "Camarão Empanado",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "shrimp_tempura.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "KOI",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T06:06:36.487Z",
+    "status": "ready"
+  },
+  {
     "name": "camera",
     "label": "Câmera",
     "description": "",
