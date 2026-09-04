@@ -1728,26 +1728,6 @@
     "status": "ready"
   },
   {
-    "name": "raw_patty",
-    "label": "Carne Crua",
-    "description": "",
-    "weight": 250,
-    "type": "item",
-    "image": "bs-raw-patty.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": true,
-    "rarity": "common",
-    "pendingIconName": "bs-raw-patty",
-    "pendingCategory": "Burger Shot",
-    "extraLua": "",
-    "siteCategory": "Comida",
-    "source": "ready",
-    "iconSource": "pending",
-    "createdAt": "2026-04-07T06:56:52.566Z",
-    "status": "ready"
-  },
-  {
     "name": "carne_de_caca",
     "label": "Carne de Caça",
     "description": "",
