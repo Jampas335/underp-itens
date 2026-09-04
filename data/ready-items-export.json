@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T20:54:33.289Z",
+  "generatedAt": "2026-09-04T20:55:34.636Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Comida",
-      "count": 15
+      "count": 14
     },
     {
       "name": "Comida Japonesa",
@@ -196,7 +196,7 @@
     },
     {
       "name": "The Taco Farmer",
-      "count": 6
+      "count": 7
     },
     {
       "name": "up-n-atom",
@@ -3918,7 +3918,7 @@
       "name": "churros_barata",
       "label": "Churros de Barata",
       "description": "Um churros super saboroso e crocante, frito na hora e polvilhado com aquela mistura clássica de açúcar e canela com formato de uma barata.",
-      "category": "Comida",
+      "category": "The Taco Farmer",
       "type": "item",
       "rarity": "uncommon",
       "weight": 200,
@@ -3929,9 +3929,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/churros_barata.png",
         "https://jampas335.github.io/underp-itens/icons/churros_barata.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-05-16T01:25:50.436Z",
+      "createdAt": "2026-09-04T20:55:31.944Z",
       "updatedAt": "",
       "inventory": {
         "name": "churros_barata",
