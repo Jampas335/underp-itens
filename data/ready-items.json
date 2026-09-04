@@ -9397,6 +9397,26 @@
     "status": "ready"
   },
   {
+    "name": "whisky",
+    "label": "Whisky",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "whisky.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Bebidas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T16:24:40.822Z",
+    "status": "ready"
+  },
+  {
     "name": "caribbean_whiskey",
     "label": "Whisky Caribeño",
     "description": "",
