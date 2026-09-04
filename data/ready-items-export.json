@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T05:35:42.876Z",
+  "generatedAt": "2026-09-04T05:36:24.121Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -9470,7 +9470,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-09-04T05:35:37.177Z",
+      "createdAt": "2026-09-04T05:36:18.384Z",
       "updatedAt": "",
       "inventory": {
         "name": "cat_pancakes",
