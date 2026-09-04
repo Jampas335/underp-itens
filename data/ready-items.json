@@ -7749,6 +7749,26 @@
     "status": "ready"
   },
   {
+    "name": "tropical_shot",
+    "label": "Shot Tropical",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "tropical_shot.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Bahama Drinks",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T15:10:30.929Z",
+    "status": "ready"
+  },
+  {
     "name": "flare",
     "label": "Sinalizador",
     "description": "",
