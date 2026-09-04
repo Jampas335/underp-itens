@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T05:42:27.384Z",
+  "generatedAt": "2026-09-04T05:45:02.213Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 418,
+  "count": 419,
   "categories": [
     {
       "name": "Armas",
@@ -40,7 +40,7 @@
     },
     {
       "name": "Cat Café",
-      "count": 4
+      "count": 5
     },
     {
       "name": "Comida",
@@ -3318,6 +3318,39 @@
         "rarity": "common"
       },
       "lua": "['shrimp_basket'] = {\n    ['name'] = 'shrimp_basket',\n    ['label'] = 'Cesta de Camarão',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'shrimp_basket.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "pineapple_milk_tea",
+      "name": "pineapple_milk_tea",
+      "label": "Chá de Abacaxi",
+      "description": "",
+      "category": "Cat Café",
+      "type": "item",
+      "rarity": "common",
+      "weight": 150,
+      "image": "pineapple_milk_tea.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pineapple_milk_tea.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/pineapple_milk_tea.png",
+        "https://jampas335.github.io/underp-itens/server-icons/pineapple_milk_tea.png",
+        "https://jampas335.github.io/underp-itens/icons/pineapple_milk_tea.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T05:44:56.443Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "pineapple_milk_tea",
+        "label": "Chá de Abacaxi",
+        "weight": 150,
+        "type": "item",
+        "image": "pineapple_milk_tea.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['pineapple_milk_tea'] = {\n    ['name'] = 'pineapple_milk_tea',\n    ['label'] = 'Chá de Abacaxi',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'pineapple_milk_tea.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "lucky_hat",
