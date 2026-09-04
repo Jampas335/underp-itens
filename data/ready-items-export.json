@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T22:06:24.382Z",
+  "generatedAt": "2026-09-04T22:07:10.459Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8856,7 +8856,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-05-11T07:13:00.058Z",
+      "createdAt": "2026-09-04T22:07:05.190Z",
       "updatedAt": "",
       "inventory": {
         "name": "weapon_microsmg",
