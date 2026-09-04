@@ -2632,13 +2632,15 @@
     "useable": false,
     "shouldClose": true,
     "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Rifles & SMGs",
     "decay": 0.1,
     "ammotype": "ammo_rifle",
     "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-04-07T04:35:00.801Z",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T22:06:19.732Z",
     "status": "ready"
   },
   {
