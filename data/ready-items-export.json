@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T22:23:26.361Z",
+  "generatedAt": "2026-09-04T22:24:02.537Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Bebidas",
-      "count": 7
+      "count": 6
     },
     {
       "name": "Burger Shot",
@@ -192,7 +192,7 @@
     },
     {
       "name": "Taco Farmer",
-      "count": 3
+      "count": 4
     },
     {
       "name": "The Boat House",
@@ -12447,7 +12447,7 @@
       "name": "orange-juice",
       "label": "Suco de Laranja",
       "description": "",
-      "category": "Bebidas",
+      "category": "Taco Farmer",
       "type": "item",
       "rarity": "uncommon",
       "weight": 250,
@@ -12458,7 +12458,7 @@
       ],
       "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-04-07T21:10:21.587Z",
+      "createdAt": "2026-09-04T22:23:59.942Z",
       "updatedAt": "",
       "inventory": {
         "name": "orange-juice",
