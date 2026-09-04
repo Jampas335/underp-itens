@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T16:27:20.292Z",
+  "generatedAt": "2026-09-04T20:51:25.515Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Bebidas",
-      "count": 13
+      "count": 12
     },
     {
       "name": "Burger Shot",
@@ -193,6 +193,10 @@
     {
       "name": "The Boat House",
       "count": 6
+    },
+    {
+      "name": "The Taco Farmer",
+      "count": 1
     },
     {
       "name": "up-n-atom",
@@ -3744,7 +3748,7 @@
       "name": "chuca_shake",
       "label": "Chuca Shake",
       "description": "Milk-shake de chocolate misturado com suco de chuca, com Chantilly e uma saborosa cereja no topo.",
-      "category": "Bebidas",
+      "category": "The Taco Farmer",
       "type": "item",
       "rarity": "uncommon",
       "weight": 200,
@@ -3757,7 +3761,7 @@
       ],
       "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-05-16T02:33:02.300Z",
+      "createdAt": "2026-09-04T20:51:22.158Z",
       "updatedAt": "",
       "inventory": {
         "name": "chuca_shake",
