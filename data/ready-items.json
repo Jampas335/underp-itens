@@ -7948,10 +7948,10 @@
     "name": "orange-juice",
     "label": "Suco de Laranja",
     "description": "",
-    "weight": 250,
+    "weight": 150,
     "type": "item",
     "image": "orange-juice.png",
-    "unique": true,
+    "unique": false,
     "useable": true,
     "shouldClose": true,
     "rarity": "uncommon",
@@ -7962,7 +7962,7 @@
     "decay": 0.8,
     "source": "ready",
     "iconSource": "ready",
-    "createdAt": "2026-04-07T21:10:21.587Z",
+    "createdAt": "2026-09-04T21:06:00.888Z",
     "status": "ready"
   },
   {
