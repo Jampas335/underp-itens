@@ -4170,6 +4170,26 @@
     "status": "ready"
   },
   {
+    "name": "gin",
+    "label": "Gin",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "gin.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Bebidas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T16:23:18.693Z",
+    "status": "ready"
+  },
+  {
     "name": "gin_strawberry",
     "label": "Gin de Morango",
     "description": "",
