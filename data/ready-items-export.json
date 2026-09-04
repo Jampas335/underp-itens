@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T22:46:08.821Z",
+  "generatedAt": "2026-09-04T23:20:18.082Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -2820,7 +2820,7 @@
       "category": "Caça",
       "type": "item",
       "rarity": "uncommon",
-      "weight": 300,
+      "weight": 250,
       "image": "carne_de_caca.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/carne_de_caca.png",
       "imageCandidates": [
@@ -2828,12 +2828,12 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-06-13T02:15:33.646Z",
+      "createdAt": "2026-09-04T23:20:15.382Z",
       "updatedAt": "",
       "inventory": {
         "name": "carne_de_caca",
         "label": "Carne de Caça",
-        "weight": 300,
+        "weight": 250,
         "type": "item",
         "image": "carne_de_caca.png",
         "unique": false,
@@ -2841,7 +2841,7 @@
         "shouldClose": false,
         "rarity": "uncommon"
       },
-      "lua": "['carne_de_caca'] = {\n    ['name'] = 'carne_de_caca',\n    ['label'] = 'Carne de Caça',\n    ['weight'] = 300,\n    ['type'] = 'item',\n    ['image'] = 'carne_de_caca.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'uncommon',\n},"
+      "lua": "['carne_de_caca'] = {\n    ['name'] = 'carne_de_caca',\n    ['label'] = 'Carne de Caça',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'carne_de_caca.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "carne_embalada",
