@@ -4187,6 +4187,26 @@
     "status": "ready"
   },
   {
+    "name": "hornys_classic",
+    "label": "Hony's Classico",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "hornys_classic.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Hornys",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T05:59:24.620Z",
+    "status": "ready"
+  },
+  {
     "name": "weiner",
     "label": "Hotdog",
     "description": "",
