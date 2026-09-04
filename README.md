@@ -1,116 +1,38 @@
 # UnderCity Item Workbench
 
-Ferramenta estatica para GitHub Pages usada para organizar icones pendentes, visualizar os itens ja existentes do `prea-inventory` e gerar exports Lua prontos para colar no servidor.
+Ferramenta estática usada para consultar, editar e publicar itens prontos para o `prea-inventory`.
 
-## O que o site faz
+## Fluxo atual
 
-- `Icones/itens para implementar`: usa os icones registrados em `icons.js` e os PNGs da pasta `icons/`.
-- `Icones/itens implementados`: usa um snapshot gerado a partir do `prea-inventory`.
-- `Criador de item`: permite pegar um item pendente, travar a imagem dele e montar a estrutura completa do item.
-- `Copiar export`: gera a entrada Lua no formato usado em `shared/items.lua`.
-- `Salvar como implementado`: move o item do fluxo pendente para o fluxo implementado localmente no navegador.
-
-## Estrutura do prea-inventory
-
-O servidor atual usa `ItemList` no arquivo:
-
-`C:\Users\noobg\Desktop\UnderCity\txData\Qbox_A4EC90.base\resources\[essenciais]\prea-inventory\shared\items.lua`
-
-Os itens seguem este formato base:
-
-```lua
-['nome_do_item'] = {
-    ['name'] = 'nome_do_item',
-    ['label'] = 'Nome visivel',
-    ['weight'] = 100,
-    ['type'] = 'item',
-    ['image'] = 'nome_do_item.png',
-    ['unique'] = false,
-    ['useable'] = false,
-    ['shouldClose'] = true,
-    ['description'] = 'Descricao opcional',
-    ['rarity'] = 'common',
-},
-```
-
-Campos extras usados no recurso tambem aparecem no builder, por exemplo:
-
-- `ammotype`
-- `decay`
-- `consume`
-- `allowArmed`
-- blocos extras em Lua como `prop`, `object`, `carryInHand`, `carryAttachment`, `carryAnim`, `allowInBackpack`
+- A aba `Prontos` é o catálogo oficial dos itens finalizados.
+- Cada item pronto usa um ícone próprio em `ready-items/icons/`.
+- O builder permite editar os dados, usar outro item pronto como template e gerar o export Lua.
+- Itens prontos ficam sincronizados no GitHub em `data/ready-items.json`.
+- O export público fica em `data/ready-items-export.json`.
 
 ## Arquivos principais
 
-- `icons.js`: catalogo dos itens pendentes
-- `icons/`: imagens pendentes
-- `implemented-items.js`: snapshot gerado dos itens do servidor
-- `server-icons/`: imagens copiadas do `prea-inventory` quando existirem
-- `sync-implemented-items.js`: script que le o recurso do servidor e gera o snapshot do site
-- `app.js`: interface, filtros, builder, export e estado local
+- `app.js`: interface, filtros, builder, export e integração com GitHub
+- `config.js`: configuração do repositório e da pasta de ícones próprios
+- `data/ready-items.json`: catálogo compartilhado de itens prontos
+- `data/ready-items-export.json`: catálogo público para outros sites
+- `ready-items/icons/`: imagens dos itens prontos
 
-## Como atualizar os itens implementados do servidor
+## Publicação
 
-Sempre que o `prea-inventory` mudar, gere um novo snapshot:
+1. Configure um Personal Access Token do GitHub com `Contents: Read and write`.
+2. Edite ou crie o item no builder.
+3. Selecione um ícone próprio ou mantenha o ícone atual do pronto.
+4. Copie o export Lua para `prea-inventory/shared/items.lua`.
+5. Clique em `Publicar como Pronto`.
 
-```bash
-node sync-implemented-items.js
-```
-
-Esse comando:
-
-1. Le `shared/items.lua`
-2. Mescla `shared/v_compat_items.lua`
-3. Le `shared/generated_qbx_items.lua`
-4. Aplica `shared/z_runtime_overrides.lua`
-5. Gera `implemented-items.js`
-6. Copia para `server-icons/` as imagens encontradas no inventario
-
-Depois disso, publique normalmente:
-
-```bash
-git add .
-git commit -m "feat: update item workbench snapshot"
-git push
-```
-
-## Fluxo de uso
-
-1. Abra um item em `Icones/itens para implementar`.
-2. Use um item ja implementado como template, se quiser reaproveitar parametros.
-3. Ajuste nome, label, peso, raridade e campos avancados.
-4. Copie o export Lua.
-5. Cole no `shared/items.lua` do `prea-inventory`.
-6. Garanta que a imagem exista em `prea-inventory/html/images`.
-7. Salve como implementado no site para tirar o item da fila pendente local.
-
-## Estado local
-
-- Os itens marcados como implementados no site ficam salvos em `localStorage`.
-- Isso organiza seu fluxo nesta maquina e neste navegador.
-- Para refletir no servidor de verdade, ainda e preciso colar o export no `prea-inventory`.
-- Para refletir no catalogo publicado para todos, gere novo snapshot e publique no GitHub Pages.
-
-## Export publico dos itens prontos
-
-Os itens da aba `Prontos` tambem ficam disponiveis em um JSON estavel para outros sites:
-
-`https://jampas335.github.io/underp-itens/data/ready-items-export.json`
-
-Exemplo de consumo:
+O site usa a API de conteúdo do GitHub para salvar o catálogo e os ícones próprios. O export público pode ser consumido assim:
 
 ```js
-const response = await fetch("https://jampas335.github.io/underp-itens/data/ready-items-export.json", { cache: "no-store" });
+const response = await fetch(
+    "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
+    { cache: "no-store" }
+);
 const catalog = await response.json();
 const readyItems = catalog.items;
 ```
-
-Cada item traz `name`, `label`, `category`, `type`, `rarity`, `weight`, `imageUrl`, `imageCandidates`, `inventory` e `lua`.
-Use `imageUrl` como imagem principal e `imageCandidates` como fallback se quiser evitar icones quebrados.
-
-## Observacoes
-
-- A imagem do item criado fica presa ao icone pendente escolhido.
-- O builder permite alterar todos os parametros, exceto a foto.
-- Nem todo item do servidor tem imagem sincronizada para o site. Quando a imagem nao existir, a interface usa fallback visual.

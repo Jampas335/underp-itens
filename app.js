@@ -6,7 +6,7 @@ const STORAGE_KEY = "underrp-item-workbench-v1";
 const GITHUB_TOKEN_KEY = "underrp-github-token";
 const GITHUB_TOKEN_MASK = "••••••••••••••••••••";
 const GITHUB_API_VERSION = "2022-11-28";
-const DEFAULT_VIEW = "pending";
+const DEFAULT_VIEW = "ready";
 const RARITY_ORDER = ["common", "uncommon", "rare", "epic", "legendary"];
 const TYPE_ORDER = ["all", "item", "weapon"];
 const IMPLEMENTED_PAGE_SIZE = 48;
@@ -152,7 +152,7 @@ const ITEM_META_KEYS = new Set([
     "savedAt", "extraLua", "imageSource", "iconSource",
     "createdAt", "status", "uploadedIconBase64",
     "uploadedIconMime", "uploadedIconFileName",
-    "siteCategory", "stack",
+    "siteCategory", "stack", "readyIconName",
 ]);
 
 const DEFAULT_BUILDER_FORM = Object.freeze({
@@ -252,7 +252,7 @@ const state = {
         templateName: null,
         templateSource: null,
         form: null,
-        iconSource: "pending",
+        iconSource: "upload",
         uploadedIconBase64: null,
         uploadedIconMime: "image/png",
         uploadedIconFileName: null,
@@ -518,8 +518,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initTheme();
     bootstrapData();
     loadWorkspaceState();
-    ensureImplementedBulkBar();
-    ensureCurrentReadyIconOption();
     ensureAllowInBackpackField();
     ensureWeaponTypeField();
     ensureStackableField();
@@ -530,19 +528,19 @@ document.addEventListener("DOMContentLoaded", () => {
     ensureLuaImportPanel();
     ensureReadyBatchExportButton();
     ensureReadyPublicExportPanel();
-    ensureImplementedCategoryFilter();
     ensureReadyCategoryFilter();
     bindEvents();
     renderAll();
+    loadReadyItems();
     initFadeInObserver();
     updateTokenIndicator();
 });
 
 function bootstrapData() {
     applyBranding();
-    state.basePendingItems = flattenPendingItems();
-    state.baseImplementedItems = (IMPLEMENTED_ITEMS || []).map(normalizeImplementedItem);
-    state.implementedMeta = IMPLEMENTED_ITEMS_META ? { ...IMPLEMENTED_ITEMS_META } : null;
+    state.basePendingItems = [];
+    state.baseImplementedItems = [];
+    state.implementedMeta = null;
     refreshCategoryRegistry();
 }
 
@@ -578,23 +576,6 @@ function ensureAllowInBackpackField() {
         </select>
     `;
     grid.insertBefore(wrapper, templateField);
-}
-
-function ensureCurrentReadyIconOption() {
-    if (document.getElementById("iconSourceReady")) return;
-
-    const pendingOption = document.getElementById("iconSourcePending")?.closest(".icon-source-opt");
-    const options = pendingOption?.parentElement;
-    if (!pendingOption || !options) return;
-
-    const wrapper = document.createElement("label");
-    wrapper.className = "icon-source-opt hidden";
-    wrapper.id = "iconSourceReadyWrap";
-    wrapper.innerHTML = `
-        <input type="radio" name="iconSource" id="iconSourceReady" value="ready">
-        <span>Usar icone atual do pronto</span>
-    `;
-    options.insertBefore(wrapper, pendingOption);
 }
 
 function ensureStackableField() {
@@ -769,8 +750,6 @@ function syncBuilderDatalist(id, values) {
 
 function getBuilderSuggestionSourceItems() {
     return [
-        ...(state.baseImplementedItems || []),
-        ...Object.values(state.customImplemented || {}),
         ...(state.readyItems || []),
     ];
 }
@@ -943,7 +922,12 @@ function ensureReadyCategoryFilter() {
     const block = document.createElement("div");
     block.className = "filter-block";
     block.innerHTML = `
-        <span class="filter-title">Categoria</span>
+        <div class="ready-category-heading">
+            <span class="filter-title">Categoria</span>
+            <button class="ghost-btn ready-category-copy-btn" id="copyReadyCategoryExportsBtn" type="button" disabled>
+                Copiar export da categoria
+            </button>
+        </div>
         <div class="chip-group" id="readyCategoryFilter"></div>
     `;
     filterStack.appendChild(block);
@@ -1290,7 +1274,6 @@ async function loadReadyItems(options = {}) {
     } finally {
         state.readyLoading = false;
         renderReadySection();
-        renderStats();
     }
 }
 
@@ -1306,30 +1289,48 @@ async function publishReadyItem(item, iconBase64) {
         currentSha = latestFile.sha;
     }
 
+    const originalName = state.builder.editingReadyName || item.name;
+    const existingIdx = currentItems.findIndex((r) => r.name === originalName);
+    const existingItem = existingIdx >= 0 ? currentItems[existingIdx] : null;
+
+    // When editing a ready item without selecting a new upload, keep the
+    // existing icon source and its physical filename. This is important when
+    // the item name changes: ready icons are stored by item name on GitHub.
+    const shouldPreserveExistingIcon = !iconBase64
+        && existingItem
+        && item.iconSource === "ready";
+    const itemToSave = shouldPreserveExistingIcon
+        ? {
+            ...item,
+            image: item.image || existingItem.image,
+            iconSource: existingItem.iconSource || "ready",
+            readyIconName: existingItem.readyIconName || existingItem.name,
+        }
+        : item;
+
     // Upload icon if provided
     if (iconBase64) {
-        const iconPath = `${CONFIG.READY_ICONS_FOLDER}/${item.name}.png`;
+        const iconPath = `${CONFIG.READY_ICONS_FOLDER}/${itemToSave.name}.png`;
         const existingIcon = await githubGetFile(iconPath);
         await githubPutFile(
             iconPath,
             iconBase64,
             existingIcon ? existingIcon.sha : null,
-            `feat: add icon for ready item ${item.name}`
+            `feat: add icon for ready item ${itemToSave.name}`
         );
-        state.readyIconOverrides[item.name] = {
+        state.readyIconOverrides[itemToSave.name] = {
             src: buildUploadedImageSrc(iconBase64, state.builder.uploadedIconMime || "image/png"),
-            version: item.createdAt || String(Date.now()),
+            version: itemToSave.createdAt || String(Date.now()),
         };
     } else {
-        delete state.readyIconOverrides[item.name];
+        delete state.readyIconOverrides[itemToSave.name];
     }
 
     // Update items array
-    const existingIdx = currentItems.findIndex((r) => r.name === item.name);
     if (existingIdx >= 0) {
-        currentItems[existingIdx] = item;
+        currentItems[existingIdx] = itemToSave;
     } else {
-        currentItems.push(item);
+        currentItems.push(itemToSave);
     }
     currentItems.sort((a, b) => (a.label || a.name).localeCompare(b.label || b.name, "pt-BR"));
 
@@ -1339,7 +1340,7 @@ async function publishReadyItem(item, iconBase64) {
         CONFIG.READY_ITEMS_PATH,
         encoded,
         currentSha,
-        `feat: ${existingIdx >= 0 ? "update" : "add"} ready item ${item.name}`
+        `feat: ${existingIdx >= 0 ? "update" : "add"} ready item ${itemToSave.name}`
     );
     const exportSynced = await publishReadyItemsPublicExportSafely(
         currentItems,
@@ -1347,7 +1348,7 @@ async function publishReadyItem(item, iconBase64) {
     );
 
     state.readyItems = currentItems.map((entry) => {
-        if (entry.name !== item.name || !iconBase64) return entry;
+        if (entry.name !== itemToSave.name || !iconBase64) return entry;
         return {
             ...entry,
             uploadedIconBase64: iconBase64,
@@ -1370,7 +1371,7 @@ async function deleteReadyItemFromGitHub(name) {
     // Try to delete uploaded icon
     if (item.iconSource === "upload") {
         try {
-            const iconPath = `${CONFIG.READY_ICONS_FOLDER}/${name}.png`;
+            const iconPath = `${CONFIG.READY_ICONS_FOLDER}/${item.readyIconName || name}.png`;
             const iconFile = await githubGetFile(iconPath);
             if (iconFile) {
                 await githubDeleteFile(iconPath, iconFile.sha, `feat: remove icon for ${name}`);
@@ -1479,7 +1480,7 @@ function buildReadyItemsPublicExport(items, generatedAt = new Date().toISOString
 function normalizePublicReadyItem(item) {
     const hydratedItem = hydrateItemForBuilder(item);
     const imageCandidates = buildReadyPublicImageCandidates(item);
-    const category = item.siteCategory || item.pendingCategory || "";
+    const category = item.siteCategory || "";
     const image = item.image || `${item.name}.png`;
 
     return {
@@ -1519,19 +1520,8 @@ function buildReadyPublicImageCandidates(item) {
     if (!item || !item.name) return candidates;
 
     if (item.iconSource === "upload" || item.iconSource === "ready") {
-        candidates.push(`${CONFIG.READY_ICONS_FOLDER}/${item.name}.png`);
+        candidates.push(`${CONFIG.READY_ICONS_FOLDER}/${item.readyIconName || item.name}.png`);
     }
-    if (item.iconSource === "pending" && item.pendingIconName) {
-        candidates.push(`${CONFIG.ICONS_FOLDER}/${item.pendingIconName}.${CONFIG.ICON_EXTENSION}`);
-    }
-    if (item.image) {
-        candidates.push(`server-icons/${item.image}`);
-        candidates.push(`${CONFIG.ICONS_FOLDER}/${stripExtension(item.image)}.${CONFIG.ICON_EXTENSION}`);
-    }
-    if (item.pendingIconName) {
-        candidates.push(`${CONFIG.ICONS_FOLDER}/${item.pendingIconName}.${CONFIG.ICON_EXTENSION}`);
-    }
-    candidates.push(`${CONFIG.ICONS_FOLDER}/${item.name}.${CONFIG.ICON_EXTENSION}`);
 
     return Array.from(new Set(candidates.filter(Boolean)))
         .filter((path) => !String(path).startsWith("data:"))
@@ -1804,72 +1794,35 @@ async function deleteImplementedItemsFromGitHub(names) {
 // ============================================================
 
 function bindEvents() {
-    // Tab navigation
-    document.getElementById("viewPendingBtn").addEventListener("click", () => {
-        state.activeView = "pending";
-        renderAll();
-    });
-    document.getElementById("viewImplementedBtn").addEventListener("click", () => {
-        state.implementedPage = 0;
-        state.activeView = "implemented";
-        renderAll();
-    });
-    document.getElementById("viewReadyBtn").addEventListener("click", () => {
-        state.activeView = "ready";
-        renderAll();
-        if (!state.readyLoaded && !state.readyLoading) {
-            loadReadyItems();
-        }
-    });
-
     // Refresh ready
     document.getElementById("refreshReadyBtn").addEventListener("click", () => {
         state.readyLoaded = false;
         loadReadyItems();
     });
     document.getElementById("copyAllReadyExportsBtn").addEventListener("click", copyAllReadyExports);
+    document.getElementById("copyReadyCategoryExportsBtn")?.addEventListener("click", copyReadyCategoryExports);
     document.getElementById("copyReadyPublicExportUrlBtn")?.addEventListener("click", copyReadyPublicExportUrl);
     document.getElementById("copyReadyPublicExportFetchBtn")?.addEventListener("click", copyReadyPublicExportFetchSnippet);
 
     // Debounced search
-    document.getElementById("pendingSearchInput").addEventListener("input",
-        debounce((e) => { state.pendingSearch = e.target.value.toLowerCase().trim(); renderPendingSection(); }, 250)
-    );
-    document.getElementById("implementedSearchInput").addEventListener("input",
-        debounce((e) => { state.implementedSearch = e.target.value.toLowerCase().trim(); state.implementedPage = 0; renderImplementedSection(); }, 250)
-    );
     document.getElementById("readySearchInput").addEventListener("input",
         debounce((e) => { state.readySearch = e.target.value.toLowerCase().trim(); renderReadySection(); }, 250)
     );
 
     // Filters
-    document.getElementById("pendingCategoryFilter").addEventListener("click", handlePendingChipClick);
-    document.getElementById("implementedTypeFilter").addEventListener("click", handleImplementedTypeClick);
-    document.getElementById("implementedRarityFilter").addEventListener("click", handleImplementedRarityClick);
-    const implCatFilter = document.getElementById("implementedCategoryFilter");
-    if (implCatFilter) implCatFilter.addEventListener("click", handleImplementedCategoryClick);
     document.getElementById("readyTypeFilter").addEventListener("click", handleReadyTypeClick);
     document.getElementById("readyRarityFilter").addEventListener("click", handleReadyRarityClick);
     const readyCatFilter = document.getElementById("readyCategoryFilter");
     if (readyCatFilter) readyCatFilter.addEventListener("click", handleReadyCategoryClick);
 
-    // Grids
-    document.getElementById("pendingGrid").addEventListener("click", handlePendingGridClick);
-    document.getElementById("implementedGrid").addEventListener("click", handleImplementedGridClick);
-    document.getElementById("implementedGrid").addEventListener("change", handleImplementedGridChange);
+    // Grid
     document.getElementById("readyGrid").addEventListener("click", handleReadyGridClick);
-
-    document.getElementById("selectVisibleImplementedBtn")?.addEventListener("click", toggleSelectVisibleImplemented);
-    document.getElementById("clearImplementedSelectionBtn")?.addEventListener("click", () => clearImplementedSelection());
-    document.getElementById("deleteSelectedImplementedBtn")?.addEventListener("click", deleteSelectedImplementedItems);
 
     // Builder actions
     document.getElementById("copyExportBtn").addEventListener("click", copyBuilderExport);
-    document.getElementById("saveImplementedBtn").addEventListener("click", saveBuilderItem);
     document.getElementById("publishReadyBtn").addEventListener("click", handlePublishAsReady);
     document.getElementById("resetBuilderBtn").addEventListener("click", resetBuilder);
     document.getElementById("clearTemplateBtn").addEventListener("click", clearBuilderTemplate);
-    document.getElementById("copyIconNameBtn").addEventListener("click", copySelectedIconName);
     document.getElementById("pasteLuaBtn").addEventListener("click", toggleLuaImportPanel);
     document.getElementById("applyLuaImportBtn").addEventListener("click", applyLuaImportFromTextarea);
     document.getElementById("clearLuaImportBtn").addEventListener("click", clearLuaImportTextarea);
@@ -1881,10 +1834,6 @@ function bindEvents() {
         state.builder.presetKey = event.target.value || "";
     });
     document.getElementById("applyBuilderPresetBtn")?.addEventListener("click", applySelectedBuilderPreset);
-
-    // Workspace actions
-    document.getElementById("exportWorkspaceBtn").addEventListener("click", exportLocalWorkspace);
-    document.getElementById("resetWorkspaceBtn").addEventListener("click", resetLocalWorkspace);
 
     // Theme
     document.getElementById("themeToggleBtn").addEventListener("click", toggleTheme);
@@ -1903,10 +1852,6 @@ function bindEvents() {
     form.addEventListener("change", syncBuilderFormFromInputs);
 
     // Icon source toggle
-    document.getElementById("iconSourcePending").addEventListener("change", () => {
-        state.builder.iconSource = "pending";
-        renderBuilder();
-    });
     document.getElementById("iconSourceReady")?.addEventListener("change", () => {
         state.builder.iconSource = "ready";
         renderBuilder();
@@ -2107,7 +2052,6 @@ function handleReadyGridClick(e) {
         deleteReadyItemFromGitHub(name)
             .then((result) => {
                 renderReadySection();
-                renderStats();
                 showToast(result?.exportSynced === false
                     ? `Item ${name} deletado. Export publico nao atualizou.`
                     : `Item ${name} deletado.`
@@ -2123,49 +2067,31 @@ function handleReadyGridClick(e) {
 
 function renderAll() {
     renderHeroMeta();
-    renderStats();
     renderView();
-    renderPendingSection();
-    renderImplementedSection();
     renderReadySection();
     renderBuilder();
 }
 
 function renderHeroMeta() {
-    const meta = state.implementedMeta || IMPLEMENTED_ITEMS_META;
-    const generatedAt = meta && meta.generatedAt
-        ? new Date(meta.generatedAt)
-        : null;
+    const latestReady = state.readyItems
+        .map((item) => item.updatedAt || item.createdAt)
+        .filter(Boolean)
+        .sort()
+        .pop();
+    const generatedAt = latestReady ? new Date(latestReady) : null;
     setText("syncTimestamp", generatedAt
         ? generatedAt.toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" })
-        : "Snapshot indisponível");
-    const summary = meta
-        ? `${IMPLEMENTED_ITEMS_META.totalItems} itens · ${IMPLEMENTED_ITEMS_META.copiedImages} imagens sincronizadas`
-        : "Sem metadados do snapshot";
+        : state.readyLoaded ? "Catálogo carregado" : "Carregando...");
+    const summary = state.readyLoaded
+        ? `${state.readyItems.length} itens prontos publicados no GitHub`
+        : "Lendo o catálogo de prontos...";
     setText("syncSummary", summary);
 }
 
-function renderStats() {
-    const pendingCount = getPendingItems().length;
-    const allImpl = getAllImplementedItems();
-    const localCount = Object.keys(state.customImplemented).length;
-    const readyCount = state.readyLoaded ? state.readyItems.length : null;
-
-    setText("pendingCount", String(pendingCount));
-    setText("serverImplementedCount", String(allImpl.filter((i) => i.source !== "local").length));
-    setText("localImplementedCount", String(localCount));
-    setText("readyCount", readyCount !== null ? String(readyCount) : "—");
-}
-
 function renderView() {
-    const views = { pending: "pendingView", implemented: "implementedView", ready: "readyView" };
-    const btns = { pending: "viewPendingBtn", implemented: "viewImplementedBtn", ready: "viewReadyBtn" };
-
+    const views = { ready: "readyView" };
     for (const [view, id] of Object.entries(views)) {
         document.getElementById(id).classList.toggle("hidden", state.activeView !== view);
-    }
-    for (const [view, id] of Object.entries(btns)) {
-        document.getElementById(id).classList.toggle("active", state.activeView === view);
     }
 
     // Workspace note
@@ -2374,7 +2300,7 @@ function renderImplementedFilters() {
         const catCounts = new Map();
         let withCat = 0;
         for (const item of items) {
-            const cat = item.siteCategory || "";
+            const cat = String(item.siteCategory || "").trim();
             if (cat) {
                 withCat++;
                 catCounts.set(cat, (catCounts.get(cat) || 0) + 1);
@@ -2551,6 +2477,19 @@ function renderReadyFilters() {
             chips.push(`<button class="chip-btn ${state.readyCategory === "__none__" ? "active" : ""}" data-category="__none__" type="button">Sem categoria (${noCatCount})</button>`);
         }
         categoryContainer.innerHTML = chips.join("");
+
+        const categoryCopyButton = document.getElementById("copyReadyCategoryExportsBtn");
+        const selectedCategoryItems = getReadyCategoryItems();
+        const hasCategorySelected = state.readyCategory !== "all" && selectedCategoryItems.length > 0;
+        if (categoryCopyButton) {
+            categoryCopyButton.disabled = !state.readyLoaded || !hasCategorySelected;
+            categoryCopyButton.textContent = hasCategorySelected
+                ? `Copiar exports (${selectedCategoryItems.length})`
+                : "Copiar export da categoria";
+            categoryCopyButton.title = hasCategorySelected
+                ? `Copiar os ${selectedCategoryItems.length} exports de ${state.readyCategory === "__none__" ? "Sem categoria" : state.readyCategory}`
+                : "Selecione uma categoria para copiar seus exports";
+        }
     }
 }
 
@@ -2565,7 +2504,7 @@ function renderReadyGrid() {
     }
 
     if (!state.readyLoaded) {
-        grid.innerHTML = `<div class="ready-loading-placeholder">Acesse a aba para carregar os itens prontos do GitHub.</div>`;
+        grid.innerHTML = `<div class="ready-loading-placeholder">Carregando o catálogo de prontos do GitHub...</div>`;
         emptyState.classList.add("hidden");
         return;
     }
@@ -2632,7 +2571,7 @@ function renderBuilder() {
     idle.classList.add("hidden");
     content.classList.remove("hidden");
 
-    let badgeText = "Novo implementado";
+    let badgeText = "Novo item";
     if (state.builder.editingLocalName) badgeText = "Editando rascunho";
     if (state.builder.editingReadyName) badgeText = "Editando item pronto";
     if (pendingItem.isManual && !state.builder.editingLocalName && !state.builder.editingReadyName) badgeText = "Novo item do zero";
@@ -2642,7 +2581,7 @@ function renderBuilder() {
     setText("builderIconCategory", pendingItem.category);
     setText("builderImageValue", state.builder.form.image || pendingItem.image);
 
-    let sourceBadge = "Pendente";
+    let sourceBadge = "Pronto";
     if (state.builder.editingLocalName) sourceBadge = "Local";
     if (state.builder.editingReadyName) sourceBadge = "Pronto";
     if (pendingItem.isManual && !state.builder.editingLocalName && !state.builder.editingReadyName) sourceBadge = "Do zero";
@@ -2667,11 +2606,7 @@ function renderBuilder() {
 
     // Sync icon source radio
     const canUseReadyIcon = Boolean(state.builder.editingReadyName);
-    const canUsePendingIcon = !pendingItem.isManual;
     if (!canUseReadyIcon && state.builder.iconSource === "ready") {
-        state.builder.iconSource = canUsePendingIcon ? "pending" : "upload";
-    }
-    if (!canUsePendingIcon && state.builder.iconSource === "pending") {
         state.builder.iconSource = "upload";
     }
     const readyRadioWrap = document.getElementById("iconSourceReadyWrap");
@@ -2681,8 +2616,6 @@ function renderBuilder() {
         readyRadio.disabled = !canUseReadyIcon;
         readyRadio.checked = canUseReadyIcon && state.builder.iconSource === "ready";
     }
-    document.getElementById("iconSourcePending").disabled = !canUsePendingIcon;
-    document.getElementById("iconSourcePending").checked = canUsePendingIcon && state.builder.iconSource === "pending";
     document.getElementById("iconSourceUpload").checked = state.builder.iconSource === "upload";
     toggleIconUploadArea(state.builder.iconSource === "upload");
     syncUploadPreviewState();
@@ -2737,34 +2670,18 @@ function syncBuilderAdvancedVisibility() {
 }
 
 function getBuilderImageCandidates() {
-    const pendingItem = getBuilderPendingItem();
     const candidates = [];
-    const editingLocalItem = state.builder.editingLocalName
-        ? state.customImplemented[state.builder.editingLocalName]
-        : null;
     const editingReadyItem = state.builder.editingReadyName
         ? state.readyItems.find((item) => item.name === state.builder.editingReadyName)
         : null;
 
     if (state.builder.iconSource === "ready" && editingReadyItem) {
         candidates.push(...getStoredReadyImageCandidates(editingReadyItem));
-    } else if (state.builder.iconSource === "pending" && pendingItem) {
-        candidates.push(...getPendingImageCandidates(pendingItem));
     } else if (state.builder.iconSource === "upload" && state.builder.uploadedIconBase64) {
         candidates.push(buildUploadedImageSrc(state.builder.uploadedIconBase64, state.builder.uploadedIconMime));
     }
-    if (editingLocalItem) {
-        candidates.push(...getImplementedImageCandidates(editingLocalItem));
-    }
     if (editingReadyItem && state.builder.iconSource !== "ready") {
-        candidates.push(
-            ...(state.builder.iconSource === "upload"
-                ? getStoredReadyImageCandidates(editingReadyItem)
-                : getReadyImageCandidates(editingReadyItem))
-        );
-    }
-    if (state.builder.iconSource !== "pending" && pendingItem) {
-        candidates.push(...getPendingImageCandidates(pendingItem));
+        candidates.push(...getStoredReadyImageCandidates(editingReadyItem));
     }
     return Array.from(new Set(candidates.filter(Boolean)));
 }
@@ -2875,7 +2792,8 @@ function syncBuilderFormFromInputs() {
     let imageValue = document.getElementById("itemImageInput").value.trim();
     const isManualBuilder = !state.builder.activePendingName;
     const previousAutoImage = `${currentForm.name || "novo-item"}.png`;
-    if (isManualBuilder && (!imageValue || imageValue === previousAutoImage)) {
+    const isEditingReady = Boolean(state.builder.editingReadyName);
+    if (isManualBuilder && !isEditingReady && (!imageValue || imageValue === previousAutoImage)) {
         imageValue = `${normalizedName || "novo-item"}.png`;
         document.getElementById("itemImageInput").value = imageValue;
     }
@@ -3037,13 +2955,12 @@ function openBuilderForReady(name, options = {}) {
     const item = state.readyItems.find((r) => r.name === name);
     if (!item) return;
     const experienceState = getBuilderExperienceState(options);
-    const pendingIconName = item.pendingIconName || stripExtension(item.image || name);
-    state.builder.activePendingName = item.pendingIconName || null;
+    state.builder.activePendingName = null;
     state.builder.editingLocalName = null;
     state.builder.editingReadyName = name;
     state.builder.templateName = null;
     state.builder.templateSource = null;
-    state.builder.form = createFormFromReadyItem(item, pendingIconName);
+    state.builder.form = createFormFromReadyItem(item, null);
     state.builder.iconSource = "ready";
     state.builder.uploadedIconBase64 = item.uploadedIconBase64 || null;
     state.builder.uploadedIconMime = item.uploadedIconMime || "image/png";
@@ -3222,6 +3139,44 @@ async function copyAllReadyExports() {
         copyToClipboard(buildCategorizedLuaEntries(state.readyItems), "Todos os itens prontos foram copiados.");
     } catch (err) {
         showToast(`Falha ao exportar prontos: ${err.message}`);
+    }
+}
+
+function getReadyCategoryItems(category = state.readyCategory) {
+    const selectedCategory = String(category || "all");
+    if (selectedCategory === "all") return [];
+
+    return state.readyItems.filter((item) => {
+        const itemCategory = String(item?.siteCategory || "").trim();
+        return selectedCategory === "__none__"
+            ? !itemCategory
+            : itemCategory === selectedCategory;
+    });
+}
+
+async function copyReadyCategoryExports() {
+    try {
+        if (state.readyLoading) {
+            showToast("Aguarde o carregamento dos itens prontos.");
+            return;
+        }
+        if (!state.readyLoaded) {
+            await loadReadyItems({ bustCache: true, preserveSearch: true, statusPrefix: "" });
+        }
+
+        const categoryItems = getReadyCategoryItems();
+        if (state.readyCategory === "all" || categoryItems.length === 0) {
+            showToast("Selecione uma categoria com itens para exportar.");
+            return;
+        }
+
+        const categoryLabel = state.readyCategory === "__none__" ? "Sem categoria" : state.readyCategory;
+        copyToClipboard(
+            buildCategorizedLuaEntries(categoryItems),
+            `Exports de ${categoryLabel} copiados.`
+        );
+    } catch (err) {
+        showToast(`Falha ao exportar categoria: ${err.message}`);
     }
 }
 
@@ -4360,32 +4315,11 @@ function getImplementedItemByName(name) {
 }
 
 function getBuilderPendingItem() {
-    if (state.builder.activePendingName) {
-        const fromBase = getPendingItemByName(state.builder.activePendingName);
-        if (fromBase) return fromBase;
-    }
-
-    const editingItem = state.builder.editingLocalName
-        ? state.customImplemented[state.builder.editingLocalName]
-        : state.builder.editingReadyName
-            ? state.readyItems.find((r) => r.name === state.builder.editingReadyName)
-            : null;
-
-    if (editingItem && editingItem.pendingIconName) {
-        const pendingName = editingItem.pendingIconName;
-        return {
-            name: pendingName,
-            category: editingItem.pendingCategory || "Local",
-            image: `${pendingName}.${CONFIG.ICON_EXTENSION}`,
-            displayPath: `${CONFIG.ICONS_FOLDER}/${pendingName}.${CONFIG.ICON_EXTENSION}`,
-        };
-    }
-
     if (!state.builder.form) return null;
 
     return {
-        name: stripExtension(state.builder.form.image || state.builder.form.name || "manual"),
-        category: "Manual",
+        name: state.builder.form.name || stripExtension(state.builder.form.image || "manual"),
+        category: state.builder.editingReadyName ? "Prontos" : "Novo item",
         image: state.builder.form.image || "icon neutro.png",
         displayPath: "icon neutro.png",
         isManual: true,
@@ -4422,7 +4356,10 @@ function pushReadyIconCandidates(candidates, item) {
     if (!item || !item.name) return;
     const override = state.readyIconOverrides[item.name];
     if (override?.src) candidates.push(override.src);
-    candidates.push(appendCacheVersion(`${CONFIG.READY_ICONS_FOLDER}/${item.name}.png`, getReadyIconVersion(item)));
+    candidates.push(appendCacheVersion(
+        `${CONFIG.READY_ICONS_FOLDER}/${item.readyIconName || item.name}.png`,
+        getReadyIconVersion(item)
+    ));
 }
 
 function getImplementedImageCandidates(item) {
@@ -4453,14 +4390,6 @@ function getStoredReadyImageCandidates(item) {
         candidates.push(buildUploadedImageSrc(item.uploadedIconBase64, item.uploadedIconMime));
     }
     pushReadyIconCandidates(candidates, item);
-    if (item.image) {
-        candidates.push(`server-icons/${item.image}`);
-        candidates.push(`${CONFIG.ICONS_FOLDER}/${stripExtension(item.image)}.${CONFIG.ICON_EXTENSION}`);
-    }
-    if (item.pendingIconName) {
-        candidates.push(`${CONFIG.ICONS_FOLDER}/${item.pendingIconName}.${CONFIG.ICON_EXTENSION}`);
-    }
-    candidates.push(`${CONFIG.ICONS_FOLDER}/${item.name}.${CONFIG.ICON_EXTENSION}`);
     return Array.from(new Set(candidates.filter(Boolean)));
 }
 
@@ -4470,17 +4399,9 @@ function getReadyImageCandidates(item) {
     }
 
     const candidates = [];
-    if (item.iconSource === "upload" && item.uploadedIconBase64) {
+    if (item.uploadedIconBase64) {
         candidates.push(buildUploadedImageSrc(item.uploadedIconBase64, item.uploadedIconMime));
     }
-    if (item.pendingIconName) {
-        candidates.push(`${CONFIG.ICONS_FOLDER}/${item.pendingIconName}.${CONFIG.ICON_EXTENSION}`);
-    }
-    if (item.image) {
-        candidates.push(`server-icons/${item.image}`);
-        candidates.push(`${CONFIG.ICONS_FOLDER}/${stripExtension(item.image)}.${CONFIG.ICON_EXTENSION}`);
-    }
-    candidates.push(`${CONFIG.ICONS_FOLDER}/${item.name}.${CONFIG.ICON_EXTENSION}`);
     return Array.from(new Set(candidates.filter(Boolean)));
 }
 

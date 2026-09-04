@@ -16,7 +16,7 @@ const CONFIG = {
     BASE_URL: "https://jampas335.github.io/underp-itens",
 
     // ===========================================
-    // PASTA DOS ÍCONES PENDENTES
+    // PASTA DOS ÍCONES PRÓPRIOS DOS ITENS PRONTOS
     // ===========================================
     ICONS_FOLDER: "icons",
 
@@ -43,10 +43,6 @@ const CONFIG = {
     READY_ITEMS_PATH: "data/ready-items.json",
     READY_EXPORT_PATH: "data/ready-items-export.json",
 
-    // Pasta dos ícones uploadados para itens prontos
+    // Pasta dos ícones próprios dos itens prontos
     READY_ICONS_FOLDER: "ready-items/icons",
-
-    IMPLEMENTED_ITEMS_PATH: "implemented-items.js",
-    IMPLEMENTED_ICONS_FOLDER: "server-icons",
-    IMPLEMENTED_REMOVALS_PATH: "data/implemented-removed.json",
 };

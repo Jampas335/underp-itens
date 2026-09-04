@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="underRP Item Workbench — Organize ícones, implemente e publique itens prontos para o prea-inventory.">
+    <meta name="description" content="underRP Item Workbench — Catálogo de itens prontos para o prea-inventory.">
     <title>underRP | Item Workbench</title>
     <link rel="icon" href="icon neutro.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,10 +12,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="page-noise"></div>
-    <div class="page-glow glow-a"></div>
-    <div class="page-glow glow-b"></div>
-
     <!-- ===== HEADER ===== -->
     <header class="topbar">
         <div class="brand">
@@ -35,8 +31,6 @@
                 <span class="toggle-icon">🌙</span>
                 <span class="toggle-label">Night</span>
             </button>
-            <button class="ghost-btn" id="exportWorkspaceBtn" type="button">Exportar locais</button>
-            <button class="ghost-btn ghost-danger" id="resetWorkspaceBtn" type="button">Limpar locais</button>
         </div>
     </header>
 
@@ -45,26 +39,24 @@
         <section class="hero-panel panel fade-in">
             <div class="hero-copy">
                 <span class="eyebrow">Ferramenta de implementação</span>
-                <h1>Do ícone pendente ao item <code>pronto</code> no servidor.</h1>
+                <h1>Itens <code>prontos</code> para o prea-inventory.</h1>
                 <p>
-                    Ícones aguardando implementação ficam em <strong>Pendentes</strong>.
-                    Itens já registrados no servidor estão em <strong>Implementados</strong>.
-                    Itens 100% finalizados e aprovados são publicados em <strong>Prontos</strong> —
+                    O catálogo reúne itens finalizados, com configurações revisadas e ícones próprios,
                     visíveis para toda a equipe via GitHub.
                 </p>
             </div>
 
             <div class="hero-side">
                 <div class="sync-card">
-                    <span class="sync-label">Snapshot do servidor</span>
+                    <span class="sync-label">Catálogo de prontos</span>
                     <strong id="syncTimestamp">Carregando...</strong>
-                    <span id="syncSummary">Lendo itens implementados...</span>
+                    <span id="syncSummary">Lendo o catálogo de prontos...</span>
                 </div>
 
                 <div class="workflow-steps">
                     <div class="workflow-step">
                         <span>1</span>
-                        <p>Selecione um ícone em <strong>Pendentes</strong> e preencha os campos no builder.</p>
+                        <p>Abra um item em <strong>Prontos</strong> para editar ou crie um item do zero.</p>
                     </div>
                     <div class="workflow-step">
                         <span>2</span>
@@ -78,91 +70,23 @@
             </div>
         </section>
 
-        <!-- ===== STATS ===== -->
-        <section class="stats-grid fade-in">
-            <article class="stat-card panel">
-                <span class="stat-label">Para implementar</span>
-                <strong class="stat-value" id="pendingCount">0</strong>
-                <span class="stat-foot">ícones pendentes no catálogo</span>
-            </article>
-            <article class="stat-card panel">
-                <span class="stat-label">No servidor</span>
-                <strong class="stat-value" id="serverImplementedCount">0</strong>
-                <span class="stat-foot">itens do snapshot atual do prea-inventory</span>
-            </article>
-            <article class="stat-card panel stat-card-ready">
-                <span class="stat-label">Prontos</span>
-                <strong class="stat-value stat-value-ready" id="readyCount">—</strong>
-                <span class="stat-foot">itens finalizados e publicados no GitHub</span>
-            </article>
-        </section>
-
         <!-- ===== WORKSPACE ===== -->
         <section class="workspace-grid">
 
             <!-- LEFT: CATALOGS -->
             <div class="workspace-main panel fade-in">
                 <div class="workspace-header">
-                    <div class="workspace-tabs" role="tablist" aria-label="Catálogos">
-                        <button class="tab-btn active" id="viewPendingBtn" data-view="pending" type="button">Pendentes</button>
-                        <button class="tab-btn" id="viewImplementedBtn" data-view="implemented" type="button">Implementados</button>
-                        <button class="tab-btn tab-ready" id="viewReadyBtn" data-view="ready" type="button">
-                            <span class="tab-ready-dot"></span>
-                            Prontos
-                        </button>
-                    </div>
                     <div class="workspace-header-side">
                         <button class="ghost-btn" id="newManualItemBtn" type="button">Criar do zero</button>
                         <button class="ghost-btn" id="importItemTextBtn" type="button">Importar texto</button>
                         <div class="workspace-note" id="workspaceNote">
-                            Estado local salvo no navegador.
+                            Catálogo sincronizado com GitHub.
                         </div>
                     </div>
                 </div>
 
-                <!-- PENDING VIEW -->
-                <section class="catalog-view" id="pendingView">
-                    <div class="filter-bar">
-                        <label class="search-field">
-                            <span>Buscar pendente <i class="info-tip" data-tip="Nome do ícone ou categoria. A busca é instantânea.">i</i></span>
-                            <input type="search" id="pendingSearchInput" placeholder="Nome do ícone ou categoria...">
-                        </label>
-                        <div class="chip-group" id="pendingCategoryFilter"></div>
-                    </div>
-                    <div class="catalog-grid" id="pendingGrid"></div>
-                    <div class="empty-state hidden" id="pendingEmptyState">
-                        <strong>Nenhum item pendente encontrado.</strong>
-                        <p>Tente outro termo ou mude a categoria.</p>
-                    </div>
-                </section>
-
-                <!-- IMPLEMENTED VIEW -->
-                <section class="catalog-view hidden" id="implementedView">
-                    <div class="filter-bar">
-                        <label class="search-field">
-                            <span>Buscar implementado <i class="info-tip" data-tip="Busca por nome, label, descrição, tipo ou raridade.">i</i></span>
-                            <input type="search" id="implementedSearchInput" placeholder="Nome, label, descrição...">
-                        </label>
-                        <div class="filter-stack">
-                            <div class="filter-block">
-                                <span class="filter-title">Tipo</span>
-                                <div class="chip-group" id="implementedTypeFilter"></div>
-                            </div>
-                            <div class="filter-block">
-                                <span class="filter-title">Raridade</span>
-                                <div class="chip-group" id="implementedRarityFilter"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog-grid" id="implementedGrid"></div>
-                    <div class="empty-state hidden" id="implementedEmptyState">
-                        <strong>Nenhum item implementado encontrado.</strong>
-                        <p>Ajuste os filtros ou limpe a busca.</p>
-                    </div>
-                </section>
-
                 <!-- READY VIEW (Itens Prontos) -->
-                <section class="catalog-view hidden" id="readyView">
+                <section class="catalog-view" id="readyView">
                     <div class="filter-bar">
                         <div class="ready-search-row">
                             <label class="search-field" style="flex:1">
@@ -202,11 +126,10 @@
                 </div>
 
                 <div class="builder-empty" id="builderIdle">
-                    <strong>Selecione um ícone em "Pendentes"</strong>
+                    <strong>Selecione um item em "Prontos"</strong>
                     <p>
-                        O ícone fica vinculado ao item. Você pode usar um item implementado como
-                        template para copiar raridade, peso, tipo e campos avançados.
-                        Ao finalizar, publique como <strong>Pronto</strong> para compartilhar com a equipe.
+                        Edite um item existente ou monte um novo item do zero. Você também pode usar
+                        outro item pronto como template para copiar raridade, peso, tipo e campos avançados.
                     </p>
                 </div>
 
@@ -218,7 +141,7 @@
                         </div>
                         <div class="builder-item-copy">
                             <div class="inline-badges">
-                                <span class="mini-badge" id="builderSourceBadge">Pendente</span>
+                                <span class="mini-badge" id="builderSourceBadge">Pronto</span>
                                 <span class="mini-badge muted" id="builderTemplateChip">Sem template</span>
                             </div>
                             <strong id="builderIconName">ícone</strong>
@@ -231,9 +154,9 @@
                     <div class="icon-source-section">
                         <span class="filter-title">Ícone para o item pronto</span>
                         <div class="icon-source-options">
-                            <label class="icon-source-opt">
-                                <input type="radio" name="iconSource" id="iconSourcePending" value="pending" checked>
-                                <span>Usar ícone pendente</span>
+                            <label class="icon-source-opt hidden" id="iconSourceReadyWrap">
+                                <input type="radio" name="iconSource" id="iconSourceReady" value="ready">
+                                <span>Usar ícone atual do pronto</span>
                             </label>
                             <label class="icon-source-opt">
                                 <input type="radio" name="iconSource" id="iconSourceUpload" value="upload">
@@ -259,7 +182,6 @@
                     </div>
 
                     <div class="builder-helper-actions">
-                        <button class="ghost-btn" id="copyIconNameBtn" type="button">Copiar nome do ícone</button>
                         <button class="ghost-btn" id="clearTemplateBtn" type="button">Limpar template</button>
                     </div>
 
@@ -484,7 +406,7 @@
                                 </select>
                             </label>
                             <div class="field hint-field">
-                                <span>Template atual <i class="info-tip" data-tip="Item implementado sendo usado como base para os campos.">i</i></span>
+                                <span>Template atual <i class="info-tip" data-tip="Item pronto sendo usado como base para os campos.">i</i></span>
                                 <div class="hint-card" id="templateSummary">Nenhum template aplicado.</div>
                             </div>
                         </div>
@@ -509,7 +431,6 @@
                         <pre class="code-preview"><code id="luaExportPreview"></code></pre>
 
                         <div class="builder-footer-actions">
-                            <button class="primary-btn" id="saveImplementedBtn" type="button">Salvar rascunho local</button>
                             <button class="success-btn" id="publishReadyBtn" type="button">
                                 <span>✓</span> Publicar como Pronto
                             </button>
@@ -581,8 +502,6 @@
     </div>
 
     <script src="config.js"></script>
-    <script src="icons.js"></script>
-    <script src="implemented-items.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
