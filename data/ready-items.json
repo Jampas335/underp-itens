@@ -3663,6 +3663,26 @@
     "status": "ready"
   },
   {
+    "name": "fish_chips",
+    "label": "Frango com Fritas",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "fish_chips.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "The Boat House",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T05:00:09.225Z",
+    "status": "ready"
+  },
+  {
     "name": "brakes",
     "label": "Freios",
     "description": "",
