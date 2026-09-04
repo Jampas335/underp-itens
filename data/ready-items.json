@@ -2982,24 +2982,6 @@
     "status": "ready"
   },
   {
-    "name": "farinha_trigo",
-    "label": "Farinha de Trigo",
-    "description": "",
-    "weight": 200,
-    "type": "item",
-    "image": "farinha_trigo.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": true,
-    "rarity": "common",
-    "extraLua": "",
-    "siteCategory": "Ingredientes",
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-09-04T16:21:23.260Z",
-    "status": "ready"
-  },
-  {
     "name": "headlight",
     "label": "Farol",
     "description": "",
@@ -6456,6 +6438,26 @@
     "source": "ready",
     "iconSource": "ready",
     "createdAt": "2026-04-07T21:10:01.395Z",
+    "status": "ready"
+  },
+  {
+    "name": "farm_wheat_flour",
+    "label": "Saco de Farinha de Trigo",
+    "description": "Farinha de trigo processada na bancada agrícola.",
+    "weight": 500,
+    "type": "item",
+    "image": "farm_wheat_flour.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Ingredientes",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T22:46:04.622Z",
     "status": "ready"
   },
   {
