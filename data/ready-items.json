@@ -9217,6 +9217,26 @@
     "status": "ready"
   },
   {
+    "name": "tropical_whiskey",
+    "label": "Whisky Tropical",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "tropical_whiskey.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Vanilla",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T15:05:23.435Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_bud_white_widow",
     "label": "White Widow",
     "description": "",
