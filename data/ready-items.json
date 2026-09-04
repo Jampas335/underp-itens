@@ -6763,6 +6763,26 @@
     "status": "ready"
   },
   {
+    "name": "crab_sandwich",
+    "label": "Sanduíche de Carangueijo",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "crab_sandwich.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "The Boat House",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T04:58:19.631Z",
+    "status": "ready"
+  },
+  {
     "name": "sanduiche_frango",
     "label": "Sanduíche de Frango",
     "description": "",
