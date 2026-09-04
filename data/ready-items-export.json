@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T05:28:47.800Z",
+  "generatedAt": "2026-09-04T05:29:20.527Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Burger Shot",
-      "count": 5
+      "count": 6
     },
     {
       "name": "Caça",
@@ -108,7 +108,7 @@
     },
     {
       "name": "Manual",
-      "count": 2
+      "count": 1
     },
     {
       "name": "Materiais",
@@ -6794,7 +6794,7 @@
       "name": "chicken_shot",
       "label": "Hambúrguer de Frango",
       "description": "",
-      "category": "Manual",
+      "category": "Burger Shot",
       "type": "item",
       "rarity": "common",
       "weight": 250,
@@ -6805,9 +6805,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/chicken_shot.png",
         "https://jampas335.github.io/underp-itens/icons/chicken_shot.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-09-04T05:22:33.429Z",
+      "createdAt": "2026-09-04T05:29:18.218Z",
       "updatedAt": "",
       "inventory": {
         "name": "chicken_shot",
