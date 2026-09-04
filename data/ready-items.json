@@ -1369,6 +1369,26 @@
     "status": "ready"
   },
   {
+    "name": "atomic_coffee",
+    "label": "Café Atômico",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "atomic_coffee.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "up-n-atom",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T14:58:19.361Z",
+    "status": "ready"
+  },
+  {
     "name": "cafe_com_leite",
     "label": "Café com Leite",
     "description": "",
