@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T05:29:20.527Z",
+  "generatedAt": "2026-09-04T05:30:35.506Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -11362,7 +11362,7 @@
       "category": "Bean Machine",
       "type": "item",
       "rarity": "common",
-      "weight": 150,
+      "weight": 250,
       "image": "sanduiche_frango.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/sanduiche_frango.png",
       "imageCandidates": [
@@ -11370,14 +11370,14 @@
         "https://jampas335.github.io/underp-itens/server-icons/sanduiche_frango.png",
         "https://jampas335.github.io/underp-itens/icons/sanduiche_frango.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-09-04T04:51:47.871Z",
+      "createdAt": "2026-09-04T05:30:31.196Z",
       "updatedAt": "",
       "inventory": {
         "name": "sanduiche_frango",
         "label": "Sanduíche de Frango",
-        "weight": 150,
+        "weight": 250,
         "type": "item",
         "image": "sanduiche_frango.png",
         "unique": false,
@@ -11385,7 +11385,7 @@
         "shouldClose": true,
         "rarity": "common"
       },
-      "lua": "['sanduiche_frango'] = {\n    ['name'] = 'sanduiche_frango',\n    ['label'] = 'Sanduíche de Frango',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'sanduiche_frango.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+      "lua": "['sanduiche_frango'] = {\n    ['name'] = 'sanduiche_frango',\n    ['label'] = 'Sanduíche de Frango',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'sanduiche_frango.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "katsu_sandwich",
