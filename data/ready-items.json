@@ -1748,26 +1748,6 @@
     "status": "ready"
   },
   {
-    "name": "patty",
-    "label": "Carne de Hamburguer",
-    "description": "",
-    "weight": 120,
-    "type": "item",
-    "image": "bs-patty.png",
-    "unique": false,
-    "useable": false,
-    "shouldClose": true,
-    "rarity": "common",
-    "pendingIconName": "bs-patty",
-    "pendingCategory": "Burger Shot",
-    "extraLua": "",
-    "siteCategory": "Comida",
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-07T06:56:34.469Z",
-    "status": "ready"
-  },
-  {
     "name": "carne_embalada",
     "label": "Carne Embalada",
     "description": "",
