@@ -6435,6 +6435,26 @@
     "status": "ready"
   },
   {
+    "name": "chicken_pineapple_piza",
+    "label": "Pizza de Frango ao Abacaxi",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "chicken_pineapple_piza.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pizza This",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T14:38:05.033Z",
+    "status": "ready"
+  },
+  {
     "name": "plastico",
     "label": "Plastico",
     "description": "",
