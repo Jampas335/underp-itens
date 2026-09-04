@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T06:06:42.147Z",
+  "generatedAt": "2026-09-04T06:09:26.834Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 426,
+  "count": 427,
   "categories": [
     {
       "name": "Armas",
@@ -108,7 +108,7 @@
     },
     {
       "name": "KOI",
-      "count": 1
+      "count": 2
     },
     {
       "name": "Lockpick",
@@ -11761,6 +11761,39 @@
         "rarity": "common"
       },
       "lua": "['crab_sandwich'] = {\n    ['name'] = 'crab_sandwich',\n    ['label'] = 'Sanduíche de Carangueijo',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'crab_sandwich.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "crab_roll",
+      "name": "crab_roll",
+      "label": "Sanduíche de Carangueijo",
+      "description": "",
+      "category": "KOI",
+      "type": "item",
+      "rarity": "common",
+      "weight": 250,
+      "image": "crab_roll.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/crab_roll.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/crab_roll.png",
+        "https://jampas335.github.io/underp-itens/server-icons/crab_roll.png",
+        "https://jampas335.github.io/underp-itens/icons/crab_roll.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T06:09:21.161Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "crab_roll",
+        "label": "Sanduíche de Carangueijo",
+        "weight": 250,
+        "type": "item",
+        "image": "crab_roll.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['crab_roll'] = {\n    ['name'] = 'crab_roll',\n    ['label'] = 'Sanduíche de Carangueijo',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'crab_roll.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "sanduiche_frango",
