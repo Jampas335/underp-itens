@@ -5237,13 +5237,15 @@
     "useable": false,
     "shouldClose": true,
     "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Rifles & SMGs",
     "decay": 0.05,
     "ammotype": "ammo_lsmg",
     "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-04-07T04:21:05.074Z",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T22:05:09.730Z",
     "status": "ready"
   },
   {
