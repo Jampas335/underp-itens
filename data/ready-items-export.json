@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T15:58:15.570Z",
+  "generatedAt": "2026-09-04T16:00:40.741Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 450,
+  "count": 451,
   "categories": [
     {
       "name": "Armas",
@@ -104,7 +104,7 @@
     },
     {
       "name": "Ingredientes",
-      "count": 2
+      "count": 3
     },
     {
       "name": "Jóias & Valores",
@@ -3240,6 +3240,39 @@
         "rarity": "common"
       },
       "lua": "['patty'] = {\n    ['name'] = 'patty',\n    ['label'] = 'Carne de Hamburguer',\n    ['weight'] = 120,\n    ['type'] = 'item',\n    ['image'] = 'bs-patty.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "carne_embalada",
+      "name": "carne_embalada",
+      "label": "Carne Embalada",
+      "description": "",
+      "category": "Ingredientes",
+      "type": "item",
+      "rarity": "common",
+      "weight": 250,
+      "image": "carne_embalada.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/carne_embalada.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/carne_embalada.png",
+        "https://jampas335.github.io/underp-itens/server-icons/carne_embalada.png",
+        "https://jampas335.github.io/underp-itens/icons/carne_embalada.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T16:00:36.029Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "carne_embalada",
+        "label": "Carne Embalada",
+        "weight": 250,
+        "type": "item",
+        "image": "carne_embalada.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['carne_embalada'] = {\n    ['name'] = 'carne_embalada',\n    ['label'] = 'Carne Embalada',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'carne_embalada.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "carp",
