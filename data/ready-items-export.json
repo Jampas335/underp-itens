@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T16:18:40.962Z",
+  "generatedAt": "2026-09-04T16:19:51.739Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -5335,7 +5335,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-24T18:07:23.222Z",
+      "createdAt": "2026-09-04T16:19:47.185Z",
       "updatedAt": "",
       "inventory": {
         "name": "energetico",
