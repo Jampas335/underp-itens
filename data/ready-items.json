@@ -3763,6 +3763,26 @@
     "status": "ready"
   },
   {
+    "name": "crispy_chicken",
+    "label": "Frango Empanado",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "crispy_chicken.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Hornys",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T06:03:22.275Z",
+    "status": "ready"
+  },
+  {
     "name": "brakes",
     "label": "Freios",
     "description": "",
