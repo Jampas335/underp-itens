@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T21:01:26.929Z",
+  "generatedAt": "2026-09-04T21:01:35.476Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 445,
+  "count": 444,
   "categories": [
     {
       "name": "Armas",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Comida",
-      "count": 5
+      "count": 4
     },
     {
       "name": "Comida Japonesa",
@@ -11196,38 +11196,6 @@
         "rarity": "rare"
       },
       "lua": "['kq_weed_press'] = {\n    ['name'] = 'kq_weed_press',\n    ['label'] = 'Prensa',\n    ['weight'] = 10000,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_press.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
-    },
-    {
-      "id": "fair-pretzel",
-      "name": "fair-pretzel",
-      "label": "Pretzel",
-      "description": "",
-      "category": "Comida",
-      "type": "item",
-      "rarity": "common",
-      "weight": 80,
-      "image": "fair-pretzel.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/icons/fair-pretzel.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/icons/fair-pretzel.png",
-        "https://jampas335.github.io/underp-itens/server-icons/fair-pretzel.png"
-      ],
-      "iconSource": "pending",
-      "status": "ready",
-      "createdAt": "2026-04-07T05:30:58.262Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "fair-pretzel",
-        "label": "Pretzel",
-        "weight": 80,
-        "type": "item",
-        "image": "fair-pretzel.png",
-        "unique": false,
-        "useable": false,
-        "shouldClose": true,
-        "rarity": "common"
-      },
-      "lua": "['fair-pretzel'] = {\n    ['name'] = 'fair-pretzel',\n    ['label'] = 'Pretzel',\n    ['weight'] = 80,\n    ['type'] = 'item',\n    ['image'] = 'fair-pretzel.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "propofol",
