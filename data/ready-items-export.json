@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T22:05:13.982Z",
+  "generatedAt": "2026-09-04T22:06:24.382Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -4644,9 +4644,9 @@
       "imageCandidates": [
         "https://jampas335.github.io/underp-itens/ready-items/icons/weapon_compactrifle.png"
       ],
-      "iconSource": "ready",
+      "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-04-07T04:35:00.801Z",
+      "createdAt": "2026-09-04T22:06:19.732Z",
       "updatedAt": "",
       "inventory": {
         "name": "weapon_compactrifle",
