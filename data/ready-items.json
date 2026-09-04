@@ -7136,10 +7136,10 @@
     "name": "sandwich",
     "label": "Sanduíche",
     "description": "",
-    "weight": 125,
+    "weight": 250,
     "type": "item",
     "image": "sandwich.png",
-    "unique": true,
+    "unique": false,
     "useable": true,
     "shouldClose": true,
     "rarity": "common",
@@ -7149,8 +7149,8 @@
     "siteCategory": "Comida",
     "decay": 0.8,
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-14T07:10:01.961Z",
+    "iconSource": "ready",
+    "createdAt": "2026-09-04T21:02:57.786Z",
     "status": "ready"
   },
   {
