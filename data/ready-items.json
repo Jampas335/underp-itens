@@ -2578,6 +2578,26 @@
     "status": "ready"
   },
   {
+    "name": "croissant_morango",
+    "label": "Croissant de Morango",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "croissant_morango.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Bean Machine",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T04:49:49.111Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_autocross",
     "label": "Crossbow de Caça",
     "description": "",
