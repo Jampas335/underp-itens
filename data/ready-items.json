@@ -1066,12 +1066,15 @@
     "useable": true,
     "shouldClose": true,
     "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "Comida",
+    "siteCategory": "Taco Farmer",
     "source": "ready",
     "iconSource": "ready",
-    "createdAt": "2026-05-20T02:38:34.916Z",
-    "status": "ready"
+    "createdAt": "2026-09-04T22:24:48.295Z",
+    "status": "ready",
+    "readyIconName": "burrito_podre"
   },
   {
     "name": "cabo_de_aco",
