@@ -7160,7 +7160,7 @@
     "name": "fresco_esgoto",
     "label": "Refresco de Esgoto",
     "description": "Um refresco sabor de água de esgoto.",
-    "weight": 200,
+    "weight": 150,
     "type": "item",
     "image": "fresco_esgoto.png",
     "unique": false,
@@ -7170,10 +7170,10 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "Bebidas",
+    "siteCategory": "The Taco Farmer",
     "source": "ready",
     "iconSource": "ready",
-    "createdAt": "2026-05-16T02:26:12.059Z",
+    "createdAt": "2026-09-04T20:51:58.426Z",
     "status": "ready"
   },
   {
