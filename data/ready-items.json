@@ -7711,6 +7711,26 @@
     "status": "ready"
   },
   {
+    "name": "classic_soda",
+    "label": "Soda Clássica",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "classic_soda.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "up-n-atom",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T14:56:52.176Z",
+    "status": "ready"
+  },
+  {
     "name": "pineapple_soda",
     "label": "Soda de Abacaxi",
     "description": "",
