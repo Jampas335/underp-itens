@@ -1210,27 +1210,6 @@
     "status": "ready"
   },
   {
-    "name": "bubble_tea",
-    "label": "Bubble Tea",
-    "description": "",
-    "weight": 300,
-    "type": "item",
-    "image": "bubble-tea.png",
-    "unique": true,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "uncommon",
-    "pendingIconName": "bubble-tea",
-    "pendingCategory": "Bebidas",
-    "extraLua": "",
-    "siteCategory": "Bebidas",
-    "decay": 0.8,
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-07T06:54:11.356Z",
-    "status": "ready"
-  },
-  {
     "name": "bucha_limpeza",
     "label": "Bucha de Limpeza",
     "description": "uma esponja para limpar coisas.",
