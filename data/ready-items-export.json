@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T21:42:14.278Z",
+  "generatedAt": "2026-09-04T22:05:13.982Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -123,10 +123,6 @@
       "count": 11
     },
     {
-      "name": "Manual",
-      "count": 1
-    },
-    {
       "name": "Materiais",
       "count": 12
     },
@@ -189,6 +185,10 @@
     {
       "name": "Roubo casa",
       "count": 21
+    },
+    {
+      "name": "Sem categoria",
+      "count": 1
     },
     {
       "name": "The Boat House",
@@ -6115,7 +6115,7 @@
       "name": "weapon_petrolcan",
       "label": "Galão de Gasolina",
       "description": "",
-      "category": "Manual",
+      "category": "",
       "type": "weapon",
       "rarity": "common",
       "weight": 4000,
@@ -9106,9 +9106,9 @@
       "imageCandidates": [
         "https://jampas335.github.io/underp-itens/ready-items/icons/weapon_assaultsmg.png"
       ],
-      "iconSource": "ready",
+      "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-04-07T04:21:05.074Z",
+      "createdAt": "2026-09-04T22:05:09.730Z",
       "updatedAt": "",
       "inventory": {
         "name": "weapon_assaultsmg",
