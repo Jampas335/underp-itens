@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T05:05:40.517Z",
+  "generatedAt": "2026-09-04T05:08:44.022Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 411,
+  "count": 412,
   "categories": [
     {
       "name": "Armas",
@@ -172,7 +172,7 @@
     },
     {
       "name": "The Boat House",
-      "count": 4
+      "count": 5
     }
   ],
   "items": [
@@ -12360,6 +12360,39 @@
         "rarity": "common"
       },
       "lua": "['pineapple_energy'] = {\n    ['name'] = 'pineapple_energy',\n    ['label'] = 'Suco de Abacaxi',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'pineapple_energy.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "pineapple_splash",
+      "name": "pineapple_splash",
+      "label": "Suco de Abacaxi",
+      "description": "",
+      "category": "The Boat House",
+      "type": "item",
+      "rarity": "common",
+      "weight": 150,
+      "image": "pineapple_splash.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pineapple_splash.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/pineapple_splash.png",
+        "https://jampas335.github.io/underp-itens/server-icons/pineapple_splash.png",
+        "https://jampas335.github.io/underp-itens/icons/pineapple_splash.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T05:08:38.501Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "pineapple_splash",
+        "label": "Suco de Abacaxi",
+        "weight": 150,
+        "type": "item",
+        "image": "pineapple_splash.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['pineapple_splash'] = {\n    ['name'] = 'pineapple_splash',\n    ['label'] = 'Suco de Abacaxi',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'pineapple_splash.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "orange-juice",
