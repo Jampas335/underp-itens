@@ -4259,12 +4259,15 @@
     "useable": true,
     "shouldClose": true,
     "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "Bebidas",
+    "siteCategory": "Taco Farmer",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-05-16T02:25:10.843Z",
-    "status": "ready"
+    "createdAt": "2026-09-04T22:22:56.796Z",
+    "status": "ready",
+    "readyIconName": "lapassion"
   },
   {
     "name": "miso_ramen",
