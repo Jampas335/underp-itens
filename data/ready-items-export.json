@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T05:48:18.155Z",
+  "generatedAt": "2026-09-04T05:53:35.754Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 420,
+  "count": 421,
   "categories": [
     {
       "name": "Armas",
@@ -89,6 +89,10 @@
     {
       "name": "Ferramentas",
       "count": 8
+    },
+    {
+      "name": "Hornys",
+      "count": 1
     },
     {
       "name": "Ilegal",
@@ -7717,6 +7721,39 @@
         "rarity": "uncommon"
       },
       "lua": "['latinha'] = {\n    ['name'] = 'latinha',\n    ['label'] = 'Latinha',\n    ['weight'] = 27,\n    ['type'] = 'item',\n    ['image'] = 'latinha.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "strawberry_coffee",
+      "name": "strawberry_coffee",
+      "label": "Latte de Morango com Café",
+      "description": "",
+      "category": "Hornys",
+      "type": "item",
+      "rarity": "common",
+      "weight": 150,
+      "image": "strawberry_coffee.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/strawberry_coffee.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/strawberry_coffee.png",
+        "https://jampas335.github.io/underp-itens/server-icons/strawberry_coffee.png",
+        "https://jampas335.github.io/underp-itens/icons/strawberry_coffee.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T05:53:29.570Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "strawberry_coffee",
+        "label": "Latte de Morango com Café",
+        "weight": 150,
+        "type": "item",
+        "image": "strawberry_coffee.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['strawberry_coffee'] = {\n    ['name'] = 'strawberry_coffee',\n    ['label'] = 'Latte de Morango com Café',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'strawberry_coffee.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "wipers",
