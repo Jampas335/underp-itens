@@ -6497,27 +6497,6 @@
     "status": "ready"
   },
   {
-    "name": "bs_soda",
-    "label": "Refrigerante BS",
-    "description": "",
-    "weight": 300,
-    "type": "item",
-    "image": "bs-soda.png",
-    "unique": true,
-    "useable": false,
-    "shouldClose": true,
-    "rarity": "uncommon",
-    "pendingIconName": "bs-soda",
-    "pendingCategory": "Burger Shot",
-    "extraLua": "",
-    "siteCategory": "Burger Shot",
-    "decay": 0.1,
-    "source": "ready",
-    "iconSource": "ready",
-    "createdAt": "2026-04-07T09:11:05.709Z",
-    "status": "ready"
-  },
-  {
     "name": "weapon_watering_can",
     "label": "Regador",
     "description": "Ferramenta de irrigação agrícola conectada à bomba do campo.",
