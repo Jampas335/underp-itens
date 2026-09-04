@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T14:44:02.616Z",
+  "generatedAt": "2026-09-04T14:45:23.419Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 435,
+  "count": 436,
   "categories": [
     {
       "name": "Armas",
@@ -168,7 +168,7 @@
     },
     {
       "name": "Pizza This",
-      "count": 4
+      "count": 5
     },
     {
       "name": "Policial",
@@ -12728,6 +12728,39 @@
         "ammotype": "ammo-45"
       },
       "lua": "['sns-pistol'] = {\n    ['name'] = 'sns-pistol',\n    ['label'] = 'SNS',\n    ['weight'] = 465,\n    ['type'] = 'weapon',\n    ['image'] = 'sns-pistol.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n    ['decay'] = 0.1,\n    ['ammotype'] = 'ammo-45',\n},"
+    },
+    {
+      "id": "pineapple_soda",
+      "name": "pineapple_soda",
+      "label": "Soda de Abacaxi",
+      "description": "",
+      "category": "Pizza This",
+      "type": "item",
+      "rarity": "common",
+      "weight": 150,
+      "image": "pineapple_soda.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pineapple_soda.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/pineapple_soda.png",
+        "https://jampas335.github.io/underp-itens/server-icons/pineapple_soda.png",
+        "https://jampas335.github.io/underp-itens/icons/pineapple_soda.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T14:45:17.320Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "pineapple_soda",
+        "label": "Soda de Abacaxi",
+        "weight": 150,
+        "type": "item",
+        "image": "pineapple_soda.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['pineapple_soda'] = {\n    ['name'] = 'pineapple_soda',\n    ['label'] = 'Soda de Abacaxi',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'pineapple_soda.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "saline250ml",
