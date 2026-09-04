@@ -5380,6 +5380,26 @@
     "status": "ready"
   },
   {
+    "name": "strawberry_mochi",
+    "label": "Mochi de Morango",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "strawberry_mochi.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "KOI",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T06:16:39.684Z",
+    "status": "ready"
+  },
+  {
     "name": "mochila",
     "label": "Mochila",
     "description": "",
