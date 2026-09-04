@@ -2680,6 +2680,26 @@
     "status": "ready"
   },
   {
+    "name": "cat_strawberry",
+    "label": "Cupcat",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "cat_strawberry.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Cat Café",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T05:42:21.792Z",
+    "status": "ready"
+  },
+  {
     "name": "field_dressing",
     "label": "Curativo de Campo",
     "description": "Bom para feridas rotineiras (contusões, pequenos cortes, abrasões), mas ineficiente no caso de lacerações profundas ou ferimentos graves de tiro.",
