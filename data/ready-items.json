@@ -2641,7 +2641,7 @@
     "name": "croissant_morango",
     "label": "Croissant de Morango",
     "description": "",
-    "weight": 200,
+    "weight": 250,
     "type": "item",
     "image": "croissant_morango.png",
     "unique": false,
@@ -2653,8 +2653,8 @@
     "extraLua": "",
     "siteCategory": "Bean Machine",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-09-04T04:49:49.111Z",
+    "iconSource": "ready",
+    "createdAt": "2026-09-04T05:30:50.004Z",
     "status": "ready"
   },
   {
