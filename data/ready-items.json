@@ -1148,27 +1148,6 @@
     "status": "ready"
   },
   {
-    "name": "chocolate_brownie",
-    "label": "Brownie",
-    "description": "",
-    "weight": 100,
-    "type": "item",
-    "image": "chocolate-brownie.png",
-    "unique": true,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "common",
-    "pendingIconName": "chocolate-brownie",
-    "pendingCategory": "Comida",
-    "extraLua": "",
-    "siteCategory": "Comida",
-    "decay": 0.8,
-    "source": "ready",
-    "iconSource": "pending",
-    "createdAt": "2026-04-07T06:53:11.364Z",
-    "status": "ready"
-  },
-  {
     "name": "bucha_limpeza",
     "label": "Bucha de Limpeza",
     "description": "uma esponja para limpar coisas.",
