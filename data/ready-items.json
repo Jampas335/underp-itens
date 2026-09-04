@@ -6825,7 +6825,7 @@
     "name": "sanduiche_frango",
     "label": "Sanduíche de Frango",
     "description": "",
-    "weight": 150,
+    "weight": 250,
     "type": "item",
     "image": "sanduiche_frango.png",
     "unique": false,
@@ -6837,8 +6837,8 @@
     "extraLua": "",
     "siteCategory": "Bean Machine",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-09-04T04:51:47.871Z",
+    "iconSource": "ready",
+    "createdAt": "2026-09-04T05:30:31.196Z",
     "status": "ready"
   },
   {
