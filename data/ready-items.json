@@ -2598,6 +2598,26 @@
     "status": "ready"
   },
   {
+    "name": "croissant_chicken",
+    "label": "Croissant de Frango",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "croissant_chicken.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Bean Machine",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T04:52:51.821Z",
+    "status": "ready"
+  },
+  {
     "name": "croissant_morango",
     "label": "Croissant de Morango",
     "description": "",
