@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T22:22:59.578Z",
+  "generatedAt": "2026-09-04T22:23:26.361Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Bebidas",
-      "count": 8
+      "count": 7
     },
     {
       "name": "Burger Shot",
@@ -192,7 +192,7 @@
     },
     {
       "name": "Taco Farmer",
-      "count": 2
+      "count": 3
     },
     {
       "name": "The Boat House",
@@ -10823,7 +10823,7 @@
       "name": "fresco_esgoto",
       "label": "Refresco de Esgoto",
       "description": "Um refresco sabor de água de esgoto.",
-      "category": "Bebidas",
+      "category": "Taco Farmer",
       "type": "item",
       "rarity": "uncommon",
       "weight": 200,
@@ -10834,7 +10834,7 @@
       ],
       "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-05-16T02:26:12.059Z",
+      "createdAt": "2026-09-04T22:23:23.556Z",
       "updatedAt": "",
       "inventory": {
         "name": "fresco_esgoto",
