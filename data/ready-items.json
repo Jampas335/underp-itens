@@ -6450,6 +6450,26 @@
     "status": "ready"
   },
   {
+    "name": "peixe_embalado",
+    "label": "Peixe Embalado",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "peixe_embalado.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Ingredientes",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T16:02:30.449Z",
+    "status": "ready"
+  },
+  {
     "name": "koi_fish",
     "label": "Peixe Koi",
     "description": "",
