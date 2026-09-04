@@ -3863,6 +3863,26 @@
     "status": "ready"
   },
   {
+    "name": "frango",
+    "label": "Frango",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "frango.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Ingredientes",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T16:16:51.914Z",
+    "status": "ready"
+  },
+  {
     "name": "fish_chips",
     "label": "Frango com Fritas",
     "description": "",
