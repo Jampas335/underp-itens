@@ -5239,6 +5239,26 @@
     "status": "ready"
   },
   {
+    "name": "strawberry_milkshake_atom",
+    "label": "Milkshake Atômico",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "strawberry_milkshake_atom.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "up-n-atom",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T14:59:57.262Z",
+    "status": "ready"
+  },
+  {
     "name": "strawberry_milkshake",
     "label": "Milkshake de Morango",
     "description": "",
