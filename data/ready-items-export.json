@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T04:49:54.883Z",
+  "generatedAt": "2026-09-04T04:50:47.160Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 402,
+  "count": 403,
   "categories": [
     {
       "name": "Armas",
@@ -24,7 +24,7 @@
     },
     {
       "name": "Bean Machine",
-      "count": 1
+      "count": 2
     },
     {
       "name": "Bebidas",
@@ -1758,6 +1758,39 @@
         "decay": 0.1
       },
       "lua": "['strawberry_shortcake'] = {\n    ['name'] = 'strawberry_shortcake',\n    ['label'] = 'Bolo de Morango',\n    ['weight'] = 300,\n    ['type'] = 'item',\n    ['image'] = 'strawberry-shortcake.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n    ['decay'] = 0.1,\n},"
+    },
+    {
+      "id": "strawberry_cake",
+      "name": "strawberry_cake",
+      "label": "Bolo de Morango",
+      "description": "",
+      "category": "Bean Machine",
+      "type": "item",
+      "rarity": "common",
+      "weight": 200,
+      "image": "strawberry_cake.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/strawberry_cake.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/strawberry_cake.png",
+        "https://jampas335.github.io/underp-itens/server-icons/strawberry_cake.png",
+        "https://jampas335.github.io/underp-itens/icons/strawberry_cake.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T04:50:41.203Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "strawberry_cake",
+        "label": "Bolo de Morango",
+        "weight": 200,
+        "type": "item",
+        "image": "strawberry_cake.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['strawberry_cake'] = {\n    ['name'] = 'strawberry_cake',\n    ['label'] = 'Bolo de Morango',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'strawberry_cake.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "blood250ml",
