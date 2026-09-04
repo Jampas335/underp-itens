@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T06:31:24.445Z",
+  "generatedAt": "2026-09-04T14:38:11.223Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 431,
+  "count": 432,
   "categories": [
     {
       "name": "Armas",
@@ -164,6 +164,10 @@
     },
     {
       "name": "Pizza",
+      "count": 1
+    },
+    {
+      "name": "Pizza This",
       "count": 1
     },
     {
@@ -10723,6 +10727,39 @@
         "ammotype": "ammo_50"
       },
       "lua": "['weapon_pistol50'] = {\n    ['name'] = 'weapon_pistol50',\n    ['label'] = 'Pistola .50',\n    ['weight'] = 2000,\n    ['type'] = 'weapon',\n    ['image'] = 'desert-eagle.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n    ['decay'] = 0.1,\n    ['ammotype'] = 'ammo_50',\n},"
+    },
+    {
+      "id": "chicken_pineapple_piza",
+      "name": "chicken_pineapple_piza",
+      "label": "Pizza de Frango ao Abacaxi",
+      "description": "",
+      "category": "Pizza This",
+      "type": "item",
+      "rarity": "common",
+      "weight": 250,
+      "image": "chicken_pineapple_piza.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/chicken_pineapple_piza.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/chicken_pineapple_piza.png",
+        "https://jampas335.github.io/underp-itens/server-icons/chicken_pineapple_piza.png",
+        "https://jampas335.github.io/underp-itens/icons/chicken_pineapple_piza.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T14:38:05.033Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "chicken_pineapple_piza",
+        "label": "Pizza de Frango ao Abacaxi",
+        "weight": 250,
+        "type": "item",
+        "image": "chicken_pineapple_piza.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['chicken_pineapple_piza'] = {\n    ['name'] = 'chicken_pineapple_piza',\n    ['label'] = 'Pizza de Frango ao Abacaxi',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'chicken_pineapple_piza.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "plastico",
