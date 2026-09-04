@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T22:26:22.596Z",
+  "generatedAt": "2026-09-04T22:36:24.956Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -2851,7 +2851,7 @@
       "category": "Ingredientes",
       "type": "item",
       "rarity": "common",
-      "weight": 250,
+      "weight": 1000,
       "image": "carne_embalada.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/carne_embalada.png",
       "imageCandidates": [
@@ -2859,12 +2859,12 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-09-04T16:00:36.029Z",
+      "createdAt": "2026-09-04T22:36:21.753Z",
       "updatedAt": "",
       "inventory": {
         "name": "carne_embalada",
         "label": "Carne Embalada",
-        "weight": 250,
+        "weight": 1000,
         "type": "item",
         "image": "carne_embalada.png",
         "unique": false,
@@ -2872,7 +2872,7 @@
         "shouldClose": true,
         "rarity": "common"
       },
-      "lua": "['carne_embalada'] = {\n    ['name'] = 'carne_embalada',\n    ['label'] = 'Carne Embalada',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'carne_embalada.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+      "lua": "['carne_embalada'] = {\n    ['name'] = 'carne_embalada',\n    ['label'] = 'Carne Embalada',\n    ['weight'] = 1000,\n    ['type'] = 'item',\n    ['image'] = 'carne_embalada.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "carp",
