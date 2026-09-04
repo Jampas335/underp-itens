@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T20:53:10.489Z",
+  "generatedAt": "2026-09-04T20:53:45.667Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Comida",
-      "count": 18
+      "count": 17
     },
     {
       "name": "Comida Japonesa",
@@ -196,7 +196,7 @@
     },
     {
       "name": "The Taco Farmer",
-      "count": 3
+      "count": 4
     },
     {
       "name": "up-n-atom",
@@ -14143,7 +14143,7 @@
       "name": "taco_rato",
       "label": "Taco de Rato",
       "description": "Um taco crocante generosamente recheado com uma salada mofada, queijo podre e tomates murchos. O grande destaque do prato é um saboroso rato, frito na hora.",
-      "category": "Comida",
+      "category": "The Taco Farmer",
       "type": "item",
       "rarity": "uncommon",
       "weight": 250,
@@ -14154,9 +14154,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/taco_rato.png",
         "https://jampas335.github.io/underp-itens/icons/taco_rato.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-05-15T23:02:56.556Z",
+      "createdAt": "2026-09-04T20:53:42.914Z",
       "updatedAt": "",
       "inventory": {
         "name": "taco_rato",
