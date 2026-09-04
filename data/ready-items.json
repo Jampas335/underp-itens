@@ -7651,6 +7651,26 @@
     "status": "ready"
   },
   {
+    "name": "pineapple_soda",
+    "label": "Soda de Abacaxi",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "pineapple_soda.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pizza This",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T14:45:17.320Z",
+    "status": "ready"
+  },
+  {
     "name": "saline250ml",
     "label": "Soro 250ml",
     "description": "Também ajuda recuperar o volume sanguíneo, porém em caso de grandes perdas, recomenda-se a transfusão uma bolsa de sangue puro. É vital quando os paramédicos estão ficando sem sangue no estoque.",
