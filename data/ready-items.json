@@ -7454,12 +7454,15 @@
     "useable": true,
     "shouldClose": true,
     "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "Comida",
+    "siteCategory": "Taco Farmer",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-05-15T23:02:56.556Z",
-    "status": "ready"
+    "createdAt": "2026-09-04T22:26:20.132Z",
+    "status": "ready",
+    "readyIconName": "taco_rato"
   },
   {
     "name": "taiyaki",
