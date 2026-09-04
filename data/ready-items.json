@@ -2175,7 +2175,7 @@
     "name": "chuca_shake",
     "label": "Chuca Shake",
     "description": "Milk-shake de chocolate misturado com suco de chuca, com Chantilly e uma saborosa cereja no topo.",
-    "weight": 200,
+    "weight": 150,
     "type": "item",
     "image": "chuca_shake.png",
     "unique": false,
@@ -2188,7 +2188,7 @@
     "siteCategory": "The Taco Farmer",
     "source": "ready",
     "iconSource": "ready",
-    "createdAt": "2026-09-04T20:51:22.158Z",
+    "createdAt": "2026-09-04T20:53:02.066Z",
     "status": "ready"
   },
   {
