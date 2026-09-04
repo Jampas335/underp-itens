@@ -5158,12 +5158,15 @@
     "useable": true,
     "shouldClose": true,
     "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "Comida",
+    "siteCategory": "Taco Farmer",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-05-15T23:23:07.458Z",
-    "status": "ready"
+    "createdAt": "2026-09-04T22:25:30.011Z",
+    "status": "ready",
+    "readyIconName": "nacho_urubu"
   },
   {
     "name": "laptop",
