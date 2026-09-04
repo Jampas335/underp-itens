@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T15:09:09.755Z",
+  "generatedAt": "2026-09-04T15:10:37.119Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 448,
+  "count": 449,
   "categories": [
     {
       "name": "Armas",
@@ -24,7 +24,7 @@
     },
     {
       "name": "Bahama Drinks",
-      "count": 2
+      "count": 3
     },
     {
       "name": "Bean Machine",
@@ -12905,6 +12905,39 @@
         "rarity": "epic"
       },
       "lua": "['castsaw'] = {\n    ['name'] = 'castsaw',\n    ['label'] = 'Serra de Gesso',\n    ['weight'] = 1000,\n    ['type'] = 'item',\n    ['image'] = 'castsaw.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['description'] = 'Usado para remover Gessos.',\n    ['rarity'] = 'epic',\n},"
+    },
+    {
+      "id": "tropical_shot",
+      "name": "tropical_shot",
+      "label": "Shot Tropical",
+      "description": "",
+      "category": "Bahama Drinks",
+      "type": "item",
+      "rarity": "common",
+      "weight": 150,
+      "image": "tropical_shot.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/tropical_shot.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/tropical_shot.png",
+        "https://jampas335.github.io/underp-itens/server-icons/tropical_shot.png",
+        "https://jampas335.github.io/underp-itens/icons/tropical_shot.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T15:10:30.929Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "tropical_shot",
+        "label": "Shot Tropical",
+        "weight": 150,
+        "type": "item",
+        "image": "tropical_shot.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['tropical_shot'] = {\n    ['name'] = 'tropical_shot',\n    ['label'] = 'Shot Tropical',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'tropical_shot.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "flare",
