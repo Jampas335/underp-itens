@@ -5459,27 +5459,6 @@
     "status": "ready"
   },
   {
-    "name": "strawberry_milkshake",
-    "label": "Milkshake de Morango",
-    "description": "",
-    "weight": 150,
-    "type": "item",
-    "image": "strawberry-milkshake.png",
-    "unique": true,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "uncommon",
-    "pendingIconName": "strawberry-milkshake",
-    "pendingCategory": "Bebidas",
-    "extraLua": "",
-    "siteCategory": "Bebidas",
-    "decay": 0.8,
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-07T07:07:38.416Z",
-    "status": "ready"
-  },
-  {
     "name": "milkshake_morango",
     "label": "Milkshake de Morango",
     "description": "",
