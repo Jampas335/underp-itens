@@ -3463,6 +3463,26 @@
     "status": "ready"
   },
   {
+    "name": "farinha_trigo",
+    "label": "Farinha de Trigo",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "farinha_trigo.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Ingredientes",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T16:21:23.260Z",
+    "status": "ready"
+  },
+  {
     "name": "headlight",
     "label": "Farol",
     "description": "",
