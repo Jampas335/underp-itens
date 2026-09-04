@@ -3950,13 +3950,16 @@
     "useable": true,
     "shouldClose": true,
     "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "Comida",
+    "siteCategory": "Taco Farmer",
     "decay": 0.8,
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-04-07T06:59:41.367Z",
-    "status": "ready"
+    "createdAt": "2026-09-04T22:25:49.927Z",
+    "status": "ready",
+    "readyIconName": "corndog"
   },
   {
     "name": "ifak",
