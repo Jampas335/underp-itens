@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T05:55:34.865Z",
+  "generatedAt": "2026-09-04T05:57:40.713Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 421,
+  "count": 422,
   "categories": [
     {
       "name": "Armas",
@@ -92,7 +92,7 @@
     },
     {
       "name": "Hornys",
-      "count": 2
+      "count": 3
     },
     {
       "name": "Ilegal",
@@ -1701,6 +1701,39 @@
         "rarity": "uncommon"
       },
       "lua": "['bolo_dinheiro'] = {\n    ['name'] = 'bolo_dinheiro',\n    ['label'] = 'Bolo de Dinheiro',\n    ['weight'] = 20,\n    ['type'] = 'item',\n    ['image'] = 'bolo_dinheiro.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "milk_cake",
+      "name": "milk_cake",
+      "label": "Bolo de Leite",
+      "description": "",
+      "category": "Hornys",
+      "type": "item",
+      "rarity": "common",
+      "weight": 200,
+      "image": "milk_cake.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/milk_cake.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/milk_cake.png",
+        "https://jampas335.github.io/underp-itens/server-icons/milk_cake.png",
+        "https://jampas335.github.io/underp-itens/icons/milk_cake.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T05:57:34.588Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "milk_cake",
+        "label": "Bolo de Leite",
+        "weight": 200,
+        "type": "item",
+        "image": "milk_cake.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['milk_cake'] = {\n    ['name'] = 'milk_cake',\n    ['label'] = 'Bolo de Leite',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'milk_cake.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "strawberry_shortcake",
