@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T20:52:38.884Z",
+  "generatedAt": "2026-09-04T20:53:10.489Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -3751,7 +3751,7 @@
       "category": "The Taco Farmer",
       "type": "item",
       "rarity": "uncommon",
-      "weight": 200,
+      "weight": 150,
       "image": "chuca_shake.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/chuca_shake.png",
       "imageCandidates": [
@@ -3761,12 +3761,12 @@
       ],
       "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-09-04T20:51:22.158Z",
+      "createdAt": "2026-09-04T20:53:02.066Z",
       "updatedAt": "",
       "inventory": {
         "name": "chuca_shake",
         "label": "Chuca Shake",
-        "weight": 200,
+        "weight": 150,
         "type": "item",
         "image": "chuca_shake.png",
         "unique": false,
@@ -3775,7 +3775,7 @@
         "description": "Milk-shake de chocolate misturado com suco de chuca, com Chantilly e uma saborosa cereja no topo.",
         "rarity": "uncommon"
       },
-      "lua": "['chuca_shake'] = {\n    ['name'] = 'chuca_shake',\n    ['label'] = 'Chuca Shake',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'chuca_shake.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['description'] = 'Milk-shake de chocolate misturado com suco de chuca, com Chantilly e uma saborosa cereja no topo.',\n    ['rarity'] = 'uncommon',\n},"
+      "lua": "['chuca_shake'] = {\n    ['name'] = 'chuca_shake',\n    ['label'] = 'Chuca Shake',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'chuca_shake.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['description'] = 'Milk-shake de chocolate misturado com suco de chuca, com Chantilly e uma saborosa cereja no topo.',\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "large_grill",
