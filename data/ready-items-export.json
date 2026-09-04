@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T05:45:02.213Z",
+  "generatedAt": "2026-09-04T05:48:18.155Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 419,
+  "count": 420,
   "categories": [
     {
       "name": "Armas",
@@ -40,7 +40,7 @@
     },
     {
       "name": "Cat Café",
-      "count": 5
+      "count": 6
     },
     {
       "name": "Comida",
@@ -3152,6 +3152,39 @@
         "rarity": "uncommon"
       },
       "lua": "['coal'] = {\n    ['name'] = 'coal',\n    ['label'] = 'Carvão',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'ore_coal.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "strawberry_meow_latte",
+      "name": "strawberry_meow_latte",
+      "label": "Catshake",
+      "description": "",
+      "category": "Cat Café",
+      "type": "item",
+      "rarity": "common",
+      "weight": 150,
+      "image": "strawberry_meow_latte.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/strawberry_meow_latte.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/strawberry_meow_latte.png",
+        "https://jampas335.github.io/underp-itens/server-icons/strawberry_meow_latte.png",
+        "https://jampas335.github.io/underp-itens/icons/strawberry_meow_latte.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T05:48:12.432Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "strawberry_meow_latte",
+        "label": "Catshake",
+        "weight": 150,
+        "type": "item",
+        "image": "strawberry_meow_latte.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['strawberry_meow_latte'] = {\n    ['name'] = 'strawberry_meow_latte',\n    ['label'] = 'Catshake',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'strawberry_meow_latte.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "phone",
