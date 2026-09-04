@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T14:39:43.479Z",
+  "generatedAt": "2026-09-04T14:41:14.192Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 433,
+  "count": 434,
   "categories": [
     {
       "name": "Armas",
@@ -168,7 +168,7 @@
     },
     {
       "name": "Pizza This",
-      "count": 2
+      "count": 3
     },
     {
       "name": "Policial",
@@ -10760,6 +10760,39 @@
         "rarity": "common"
       },
       "lua": "['chicken_pineapple_piza'] = {\n    ['name'] = 'chicken_pineapple_piza',\n    ['label'] = 'Pizza de Frango ao Abacaxi',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'chicken_pineapple_piza.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "pepperoni_pizza",
+      "name": "pepperoni_pizza",
+      "label": "Pizza de Pepperoni",
+      "description": "",
+      "category": "Pizza This",
+      "type": "item",
+      "rarity": "common",
+      "weight": 250,
+      "image": "pepperoni_pizza.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pepperoni_pizza.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/pepperoni_pizza.png",
+        "https://jampas335.github.io/underp-itens/server-icons/pepperoni_pizza.png",
+        "https://jampas335.github.io/underp-itens/icons/pepperoni_pizza.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T14:41:08.022Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "pepperoni_pizza",
+        "label": "Pizza de Pepperoni",
+        "weight": 250,
+        "type": "item",
+        "image": "pepperoni_pizza.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['pepperoni_pizza'] = {\n    ['name'] = 'pepperoni_pizza',\n    ['label'] = 'Pizza de Pepperoni',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'pepperoni_pizza.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "garden_pizza",
