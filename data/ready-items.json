@@ -6802,6 +6802,26 @@
     "status": "ready"
   },
   {
+    "name": "cat_cafe_toast",
+    "label": "Sanduíche Cat",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "cat_cafe_toast.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Cat Café",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T05:33:50.126Z",
+    "status": "ready"
+  },
+  {
     "name": "crab_sandwich",
     "label": "Sanduíche de Carangueijo",
     "description": "",
