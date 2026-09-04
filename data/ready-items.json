@@ -7206,13 +7206,16 @@
     "useable": true,
     "shouldClose": true,
     "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "Bebidas",
+    "siteCategory": "Taco Farmer",
     "decay": 0.8,
     "source": "ready",
     "iconSource": "ready",
-    "createdAt": "2026-04-07T21:10:21.587Z",
-    "status": "ready"
+    "createdAt": "2026-09-04T22:23:59.942Z",
+    "status": "ready",
+    "readyIconName": "orange-juice"
   },
   {
     "name": "energy_shot",
