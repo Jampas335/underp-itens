@@ -2052,6 +2052,26 @@
     "status": "ready"
   },
   {
+    "name": "atomic_chili_dog",
+    "label": "Chili Dog Atomic",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "atomic_chili_dog.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "up-n-atom",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T14:53:35.316Z",
+    "status": "ready"
+  },
+  {
     "name": "chuca_shake",
     "label": "Chuca Shake",
     "description": "Milk-shake de chocolate misturado com suco de chuca, com Chantilly e uma saborosa cereja no topo.",
