@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T22:36:38.133Z",
+  "generatedAt": "2026-09-04T22:46:08.821Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -5207,37 +5207,6 @@
         "rarity": "uncommon"
       },
       "lua": "['weapon_knife'] = {\n    ['name'] = 'weapon_knife',\n    ['label'] = 'Faca de Caça',\n    ['weight'] = 300,\n    ['type'] = 'weapon',\n    ['image'] = 'weapon_knife.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
-    },
-    {
-      "id": "farinha_trigo",
-      "name": "farinha_trigo",
-      "label": "Farinha de Trigo",
-      "description": "",
-      "category": "Ingredientes",
-      "type": "item",
-      "rarity": "common",
-      "weight": 200,
-      "image": "farinha_trigo.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farinha_trigo.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/farinha_trigo.png"
-      ],
-      "iconSource": "upload",
-      "status": "ready",
-      "createdAt": "2026-09-04T16:21:23.260Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "farinha_trigo",
-        "label": "Farinha de Trigo",
-        "weight": 200,
-        "type": "item",
-        "image": "farinha_trigo.png",
-        "unique": false,
-        "useable": false,
-        "shouldClose": true,
-        "rarity": "common"
-      },
-      "lua": "['farinha_trigo'] = {\n    ['name'] = 'farinha_trigo',\n    ['label'] = 'Farinha de Trigo',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'farinha_trigo.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "headlight",
@@ -11164,6 +11133,38 @@
         "allowInBackpack": false
       },
       "lua": "['bag'] = {\n    ['name'] = 'bag',\n    ['label'] = 'Saco',\n    ['weight'] = 10,\n    ['type'] = 'item',\n    ['image'] = 'bs-bag.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n    ['allowInBackpack'] = false,\n},"
+    },
+    {
+      "id": "farm_wheat_flour",
+      "name": "farm_wheat_flour",
+      "label": "Saco de Farinha de Trigo",
+      "description": "Farinha de trigo processada na bancada agrícola.",
+      "category": "Ingredientes",
+      "type": "item",
+      "rarity": "common",
+      "weight": 500,
+      "image": "farm_wheat_flour.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/farm_wheat_flour.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/farm_wheat_flour.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T22:46:04.622Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "farm_wheat_flour",
+        "label": "Saco de Farinha de Trigo",
+        "weight": 500,
+        "type": "item",
+        "image": "farm_wheat_flour.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "description": "Farinha de trigo processada na bancada agrícola.",
+        "rarity": "common"
+      },
+      "lua": "['farm_wheat_flour'] = {\n    ['name'] = 'farm_wheat_flour',\n    ['label'] = 'Saco de Farinha de Trigo',\n    ['weight'] = 500,\n    ['type'] = 'item',\n    ['image'] = 'farm_wheat_flour.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['description'] = 'Farinha de trigo processada na bancada agrícola.',\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "bodybag",
