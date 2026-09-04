@@ -1396,7 +1396,7 @@
     "type": "item",
     "image": "cafe.png",
     "unique": false,
-    "useable": true,
+    "useable": false,
     "shouldClose": true,
     "rarity": "common",
     "pendingIconName": "",
@@ -1404,8 +1404,8 @@
     "extraLua": "",
     "siteCategory": "Ingredientes",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-09-04T15:58:11.021Z",
+    "iconSource": "ready",
+    "createdAt": "2026-09-04T16:00:59.589Z",
     "status": "ready"
   },
   {
