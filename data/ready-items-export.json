@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T16:00:40.741Z",
+  "generatedAt": "2026-09-04T16:01:02.026Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -2483,9 +2483,9 @@
         "https://jampas335.github.io/underp-itens/server-icons/cafe.png",
         "https://jampas335.github.io/underp-itens/icons/cafe.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-09-04T15:58:11.021Z",
+      "createdAt": "2026-09-04T16:00:59.589Z",
       "updatedAt": "",
       "inventory": {
         "name": "cafe",
@@ -2494,11 +2494,11 @@
         "type": "item",
         "image": "cafe.png",
         "unique": false,
-        "useable": true,
+        "useable": false,
         "shouldClose": true,
         "rarity": "common"
       },
-      "lua": "['cafe'] = {\n    ['name'] = 'cafe',\n    ['label'] = 'Café',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'cafe.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+      "lua": "['cafe'] = {\n    ['name'] = 'cafe',\n    ['label'] = 'Café',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'cafe.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "atomic_coffee",
