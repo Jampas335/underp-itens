@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T20:55:34.636Z",
+  "generatedAt": "2026-09-04T20:57:17.617Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 457,
+  "count": 456,
   "categories": [
     {
       "name": "Armas",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Bebidas",
-      "count": 10
+      "count": 9
     },
     {
       "name": "Burger Shot",
@@ -9134,41 +9134,6 @@
         "rarity": "common"
       },
       "lua": "['strawberry_milkshake_atom'] = {\n    ['name'] = 'strawberry_milkshake_atom',\n    ['label'] = 'Milkshake Atômico',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'strawberry_milkshake_atom.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
-    },
-    {
-      "id": "strawberry_milkshake",
-      "name": "strawberry_milkshake",
-      "label": "Milkshake de Morango",
-      "description": "",
-      "category": "Bebidas",
-      "type": "item",
-      "rarity": "uncommon",
-      "weight": 150,
-      "image": "strawberry-milkshake.png",
-      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/strawberry_milkshake.png",
-      "imageCandidates": [
-        "https://jampas335.github.io/underp-itens/ready-items/icons/strawberry_milkshake.png",
-        "https://jampas335.github.io/underp-itens/server-icons/strawberry-milkshake.png",
-        "https://jampas335.github.io/underp-itens/icons/strawberry-milkshake.png",
-        "https://jampas335.github.io/underp-itens/icons/strawberry_milkshake.png"
-      ],
-      "iconSource": "upload",
-      "status": "ready",
-      "createdAt": "2026-04-07T07:07:38.416Z",
-      "updatedAt": "",
-      "inventory": {
-        "name": "strawberry_milkshake",
-        "label": "Milkshake de Morango",
-        "weight": 150,
-        "type": "item",
-        "image": "strawberry-milkshake.png",
-        "unique": true,
-        "useable": true,
-        "shouldClose": true,
-        "rarity": "uncommon",
-        "decay": 0.8
-      },
-      "lua": "['strawberry_milkshake'] = {\n    ['name'] = 'strawberry_milkshake',\n    ['label'] = 'Milkshake de Morango',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'strawberry-milkshake.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n    ['decay'] = 0.8,\n},"
     },
     {
       "id": "milkshake_morango",
