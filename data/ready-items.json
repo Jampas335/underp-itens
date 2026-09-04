@@ -4633,6 +4633,26 @@
     "status": "ready"
   },
   {
+    "name": "strawberry_coffee",
+    "label": "Latte de Morango com Café",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "strawberry_coffee.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Hornys",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T05:53:29.570Z",
+    "status": "ready"
+  },
+  {
     "name": "wipers",
     "label": "Limpadores de Parabrisa",
     "description": "",
