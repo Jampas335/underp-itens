@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T04:51:53.797Z",
+  "generatedAt": "2026-09-04T04:52:57.882Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 404,
+  "count": 405,
   "categories": [
     {
       "name": "Armas",
@@ -24,7 +24,7 @@
     },
     {
       "name": "Bean Machine",
-      "count": 3
+      "count": 4
     },
     {
       "name": "Bebidas",
@@ -4388,6 +4388,39 @@
         "rarity": "epic"
       },
       "lua": "['couro_urso'] = {\n    ['name'] = 'couro_urso',\n    ['label'] = 'Couro de Urso',\n    ['weight'] = 5000,\n    ['type'] = 'item',\n    ['image'] = 'couro_urso.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'epic',\n},"
+    },
+    {
+      "id": "croissant_chicken",
+      "name": "croissant_chicken",
+      "label": "Croissant de Frango",
+      "description": "",
+      "category": "Bean Machine",
+      "type": "item",
+      "rarity": "common",
+      "weight": 250,
+      "image": "croissant_chicken.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/croissant_chicken.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/croissant_chicken.png",
+        "https://jampas335.github.io/underp-itens/server-icons/croissant_chicken.png",
+        "https://jampas335.github.io/underp-itens/icons/croissant_chicken.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T04:52:51.821Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "croissant_chicken",
+        "label": "Croissant de Frango",
+        "weight": 250,
+        "type": "item",
+        "image": "croissant_chicken.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['croissant_chicken'] = {\n    ['name'] = 'croissant_chicken',\n    ['label'] = 'Croissant de Frango',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'croissant_chicken.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "croissant_morango",
