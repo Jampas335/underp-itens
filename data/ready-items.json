@@ -6455,6 +6455,26 @@
     "status": "ready"
   },
   {
+    "name": "strawberry_pizza_dessert",
+    "label": "Pizza de Morango e Chocolate",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "strawberry_pizza_dessert.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Pizza This",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T14:43:56.492Z",
+    "status": "ready"
+  },
+  {
     "name": "pepperoni_pizza",
     "label": "Pizza de Pepperoni",
     "description": "",
