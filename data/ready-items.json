@@ -1847,12 +1847,15 @@
     "useable": true,
     "shouldClose": true,
     "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "Bebidas",
+    "siteCategory": "Taco Farmer",
     "source": "ready",
     "iconSource": "ready",
-    "createdAt": "2026-05-16T02:33:02.300Z",
-    "status": "ready"
+    "createdAt": "2026-09-04T22:22:14.649Z",
+    "status": "ready",
+    "readyIconName": "chuca_shake"
   },
   {
     "name": "large_grill",
