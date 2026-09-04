@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T05:59:30.228Z",
+  "generatedAt": "2026-09-04T06:00:44.380Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 423,
+  "count": 424,
   "categories": [
     {
       "name": "Armas",
@@ -92,7 +92,7 @@
     },
     {
       "name": "Hornys",
-      "count": 4
+      "count": 5
     },
     {
       "name": "Ilegal",
@@ -7027,6 +7027,39 @@
         "rarity": "common"
       },
       "lua": "['hornys_classic'] = {\n    ['name'] = 'hornys_classic',\n    ['label'] = 'Hony\\'s Classico',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'hornys_classic.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "double_hornys",
+      "name": "double_hornys",
+      "label": "Horny's Duplo",
+      "description": "",
+      "category": "Hornys",
+      "type": "item",
+      "rarity": "common",
+      "weight": 250,
+      "image": "double_hornys.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/double_hornys.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/double_hornys.png",
+        "https://jampas335.github.io/underp-itens/server-icons/double_hornys.png",
+        "https://jampas335.github.io/underp-itens/icons/double_hornys.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T06:00:38.352Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "double_hornys",
+        "label": "Horny's Duplo",
+        "weight": 250,
+        "type": "item",
+        "image": "double_hornys.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['double_hornys'] = {\n    ['name'] = 'double_hornys',\n    ['label'] = 'Horny\\'s Duplo',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'double_hornys.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "weiner",
