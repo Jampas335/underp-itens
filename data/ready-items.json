@@ -2143,27 +2143,6 @@
     "status": "ready"
   },
   {
-    "name": "churros",
-    "label": "Churros",
-    "description": "",
-    "weight": 200,
-    "type": "item",
-    "image": "churros.png",
-    "unique": true,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "uncommon",
-    "pendingIconName": "churros",
-    "pendingCategory": "Comida",
-    "extraLua": "",
-    "siteCategory": "Comida",
-    "decay": 0.8,
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-07T06:57:53.820Z",
-    "status": "ready"
-  },
-  {
     "name": "churros_barata",
     "label": "Churros de Barata",
     "description": "Um churros super saboroso e crocante, frito na hora e polvilhado com aquela mistura clássica de açúcar e canela com formato de uma barata.",
