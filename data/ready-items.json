@@ -4207,6 +4207,26 @@
     "status": "ready"
   },
   {
+    "name": "double_hornys",
+    "label": "Horny's Duplo",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "double_hornys.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Hornys",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T06:00:38.352Z",
+    "status": "ready"
+  },
+  {
     "name": "weiner",
     "label": "Hotdog",
     "description": "",
