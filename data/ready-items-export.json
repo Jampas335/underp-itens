@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T14:53:41.432Z",
+  "generatedAt": "2026-09-04T14:55:10.823Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 439,
+  "count": 440,
   "categories": [
     {
       "name": "Armas",
@@ -192,7 +192,7 @@
     },
     {
       "name": "up-n-atom",
-      "count": 2
+      "count": 3
     }
   ],
   "items": [
@@ -7138,6 +7138,39 @@
         "rarity": "common"
       },
       "lua": "['double_shot_burguer'] = {\n    ['name'] = 'double_shot_burguer',\n    ['label'] = 'Hambúrguer Duplo',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'double_shot_burguer.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "triple_burger",
+      "name": "triple_burger",
+      "label": "Hambúrguer Triplo",
+      "description": "",
+      "category": "up-n-atom",
+      "type": "item",
+      "rarity": "common",
+      "weight": 250,
+      "image": "triple_burger.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/triple_burger.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/triple_burger.png",
+        "https://jampas335.github.io/underp-itens/server-icons/triple_burger.png",
+        "https://jampas335.github.io/underp-itens/icons/triple_burger.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-04T14:55:04.732Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "triple_burger",
+        "label": "Hambúrguer Triplo",
+        "weight": 250,
+        "type": "item",
+        "image": "triple_burger.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "common"
+      },
+      "lua": "['triple_burger'] = {\n    ['name'] = 'triple_burger',\n    ['label'] = 'Hambúrguer Triplo',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'triple_burger.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "hornys_classic",
