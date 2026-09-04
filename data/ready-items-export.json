@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T21:03:01.062Z",
+  "generatedAt": "2026-09-04T21:05:08.013Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -4991,7 +4991,7 @@
       "category": "Bebidas",
       "type": "item",
       "rarity": "common",
-      "weight": 250,
+      "weight": 150,
       "image": "e-cola.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/e-cola.png",
       "imageCandidates": [
@@ -4999,23 +4999,23 @@
         "https://jampas335.github.io/underp-itens/server-icons/e-cola.png",
         "https://jampas335.github.io/underp-itens/icons/e-cola.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-04-17T09:51:21.790Z",
+      "createdAt": "2026-09-04T21:05:05.352Z",
       "updatedAt": "",
       "inventory": {
         "name": "e-cola",
         "label": "E-Cola",
-        "weight": 250,
+        "weight": 150,
         "type": "item",
         "image": "e-cola.png",
-        "unique": true,
+        "unique": false,
         "useable": true,
         "shouldClose": true,
         "rarity": "common",
         "decay": 0.1
       },
-      "lua": "['e-cola'] = {\n    ['name'] = 'e-cola',\n    ['label'] = 'E-Cola',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'e-cola.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n    ['decay'] = 0.1,\n},"
+      "lua": "['e-cola'] = {\n    ['name'] = 'e-cola',\n    ['label'] = 'E-Cola',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'e-cola.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n    ['decay'] = 0.1,\n},"
     },
     {
       "id": "ecg",
