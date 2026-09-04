@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T22:36:24.956Z",
+  "generatedAt": "2026-09-04T22:36:38.133Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -9918,7 +9918,7 @@
       "category": "Ingredientes",
       "type": "item",
       "rarity": "common",
-      "weight": 250,
+      "weight": 1000,
       "image": "peixe_embalado.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/peixe_embalado.png",
       "imageCandidates": [
@@ -9926,12 +9926,12 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-09-04T16:02:30.449Z",
+      "createdAt": "2026-09-04T22:36:35.568Z",
       "updatedAt": "",
       "inventory": {
         "name": "peixe_embalado",
         "label": "Peixe Embalado",
-        "weight": 250,
+        "weight": 1000,
         "type": "item",
         "image": "peixe_embalado.png",
         "unique": false,
@@ -9939,7 +9939,7 @@
         "shouldClose": true,
         "rarity": "common"
       },
-      "lua": "['peixe_embalado'] = {\n    ['name'] = 'peixe_embalado',\n    ['label'] = 'Peixe Embalado',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'peixe_embalado.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+      "lua": "['peixe_embalado'] = {\n    ['name'] = 'peixe_embalado',\n    ['label'] = 'Peixe Embalado',\n    ['weight'] = 1000,\n    ['type'] = 'item',\n    ['image'] = 'peixe_embalado.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "koi_fish",
