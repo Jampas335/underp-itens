@@ -4875,7 +4875,7 @@
     "name": "lapassion",
     "label": "La Passion",
     "description": "Uma bebida de líquidos desconhecidos, mas que sempre atrai o amor.",
-    "weight": 200,
+    "weight": 150,
     "type": "item",
     "image": "lapassion.png",
     "unique": false,
@@ -4885,10 +4885,10 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "Bebidas",
+    "siteCategory": "The Taco Farmer",
     "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-05-16T02:25:10.843Z",
+    "iconSource": "ready",
+    "createdAt": "2026-09-04T20:52:29.036Z",
     "status": "ready"
   },
   {
