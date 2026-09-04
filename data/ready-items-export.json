@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T21:02:40.534Z",
+  "generatedAt": "2026-09-04T21:03:01.062Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -11910,7 +11910,7 @@
       "category": "Comida",
       "type": "item",
       "rarity": "common",
-      "weight": 125,
+      "weight": 250,
       "image": "sandwich.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/sandwich.png",
       "imageCandidates": [
@@ -11918,23 +11918,23 @@
         "https://jampas335.github.io/underp-itens/server-icons/sandwich.png",
         "https://jampas335.github.io/underp-itens/icons/sandwich.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-04-14T07:10:01.961Z",
+      "createdAt": "2026-09-04T21:02:57.786Z",
       "updatedAt": "",
       "inventory": {
         "name": "sandwich",
         "label": "Sanduíche",
-        "weight": 125,
+        "weight": 250,
         "type": "item",
         "image": "sandwich.png",
-        "unique": true,
+        "unique": false,
         "useable": true,
         "shouldClose": true,
         "rarity": "common",
         "decay": 0.8
       },
-      "lua": "['sandwich'] = {\n    ['name'] = 'sandwich',\n    ['label'] = 'Sanduíche',\n    ['weight'] = 125,\n    ['type'] = 'item',\n    ['image'] = 'sandwich.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n    ['decay'] = 0.8,\n},"
+      "lua": "['sandwich'] = {\n    ['name'] = 'sandwich',\n    ['label'] = 'Sanduíche',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'sandwich.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n    ['decay'] = 0.8,\n},"
     },
     {
       "id": "cat_cafe_toast",
