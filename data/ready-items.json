@@ -6723,6 +6723,26 @@
     "status": "ready"
   },
   {
+    "name": "sanduiche_frango",
+    "label": "Sanduíche de Frango",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "sanduiche_frango.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Bean Machine",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T04:51:47.871Z",
+    "status": "ready"
+  },
+  {
     "name": "katsu_sandwich",
     "label": "Sanduíche Katsu",
     "description": "",
