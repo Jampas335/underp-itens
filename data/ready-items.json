@@ -7733,6 +7733,26 @@
     "status": "ready"
   },
   {
+    "name": "pineapple_energy_bean_machine",
+    "label": "Suco de Abacaxi Energy",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "pineapple_energy_bean_machine.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Bean Machine",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T06:31:18.622Z",
+    "status": "ready"
+  },
+  {
     "name": "orange-juice",
     "label": "Suco de Laranja",
     "description": "",
