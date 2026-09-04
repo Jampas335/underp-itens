@@ -7476,6 +7476,26 @@
     "status": "ready"
   },
   {
+    "name": "energy_shot",
+    "label": "Suco de Morango",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "energy_shot.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Burger Shot",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T05:14:10.505Z",
+    "status": "ready"
+  },
+  {
     "name": "tropical_energy",
     "label": "Suco Tropical",
     "description": "",
