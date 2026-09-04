@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T05:30:35.506Z",
+  "generatedAt": "2026-09-04T05:30:52.344Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -4466,7 +4466,7 @@
       "category": "Bean Machine",
       "type": "item",
       "rarity": "common",
-      "weight": 200,
+      "weight": 250,
       "image": "croissant_morango.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/croissant_morango.png",
       "imageCandidates": [
@@ -4474,14 +4474,14 @@
         "https://jampas335.github.io/underp-itens/server-icons/croissant_morango.png",
         "https://jampas335.github.io/underp-itens/icons/croissant_morango.png"
       ],
-      "iconSource": "upload",
+      "iconSource": "ready",
       "status": "ready",
-      "createdAt": "2026-09-04T04:49:49.111Z",
+      "createdAt": "2026-09-04T05:30:50.004Z",
       "updatedAt": "",
       "inventory": {
         "name": "croissant_morango",
         "label": "Croissant de Morango",
-        "weight": 200,
+        "weight": 250,
         "type": "item",
         "image": "croissant_morango.png",
         "unique": false,
@@ -4489,7 +4489,7 @@
         "shouldClose": true,
         "rarity": "common"
       },
-      "lua": "['croissant_morango'] = {\n    ['name'] = 'croissant_morango',\n    ['label'] = 'Croissant de Morango',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'croissant_morango.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
+      "lua": "['croissant_morango'] = {\n    ['name'] = 'croissant_morango',\n    ['label'] = 'Croissant de Morango',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'croissant_morango.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "weapon_autocross",
