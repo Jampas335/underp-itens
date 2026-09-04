@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T05:53:35.754Z",
+  "generatedAt": "2026-09-04T05:55:34.865Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -24,7 +24,7 @@
     },
     {
       "name": "Bean Machine",
-      "count": 6
+      "count": 5
     },
     {
       "name": "Bebidas",
@@ -92,7 +92,7 @@
     },
     {
       "name": "Hornys",
-      "count": 1
+      "count": 2
     },
     {
       "name": "Ilegal",
@@ -12534,7 +12534,7 @@
       "name": "pineapple_energy",
       "label": "Suco de Abacaxi",
       "description": "",
-      "category": "Bean Machine",
+      "category": "Hornys",
       "type": "item",
       "rarity": "common",
       "weight": 150,
@@ -12547,7 +12547,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-09-04T04:53:37.145Z",
+      "createdAt": "2026-09-04T05:55:29.020Z",
       "updatedAt": "",
       "inventory": {
         "name": "pineapple_energy",
