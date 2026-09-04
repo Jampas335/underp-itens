@@ -7754,6 +7754,26 @@
     "status": "ready"
   },
   {
+    "name": "strawberry_energy",
+    "label": "Suco de Morango",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "strawberry_energy.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "KOI",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-04T06:14:10.088Z",
+    "status": "ready"
+  },
+  {
     "name": "tropical_energy",
     "label": "Suco Tropical",
     "description": "",
