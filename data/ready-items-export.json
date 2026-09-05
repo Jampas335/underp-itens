@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-04T23:20:18.082Z",
+  "generatedAt": "2026-09-05T19:29:36.252Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 443,
+  "count": 444,
   "categories": [
     {
       "name": "Armas",
@@ -36,7 +36,7 @@
     },
     {
       "name": "Burger Shot",
-      "count": 5
+      "count": 6
     },
     {
       "name": "Caça",
@@ -8250,6 +8250,37 @@
         "rarity": "uncommon"
       },
       "lua": "['strawberry_milkshake_atom'] = {\n    ['name'] = 'strawberry_milkshake_atom',\n    ['label'] = 'Milkshake Atômico',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'strawberry_milkshake_atom.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "milkshake_morango_bs",
+      "name": "milkshake_morango_bs",
+      "label": "Milkshake Morango",
+      "description": "",
+      "category": "Burger Shot",
+      "type": "item",
+      "rarity": "uncommon",
+      "weight": 150,
+      "image": "milkshake_morango_bs.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/milkshake_morango_bs.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/milkshake_morango_bs.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-05T19:29:31.987Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "milkshake_morango_bs",
+        "label": "Milkshake Morango",
+        "weight": 150,
+        "type": "item",
+        "image": "milkshake_morango_bs.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "uncommon"
+      },
+      "lua": "['milkshake_morango_bs'] = {\n    ['name'] = 'milkshake_morango_bs',\n    ['label'] = 'Milkshake Morango',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'milkshake_morango_bs.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "aluminum_ore",
