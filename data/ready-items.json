@@ -5489,6 +5489,27 @@
     "status": "ready"
   },
   {
+    "name": "pano_microfibra",
+    "label": "Pano de Microfibra",
+    "description": "Pano macio de microfibra para limpeza e acabamento.",
+    "weight": 50,
+    "type": "item",
+    "image": "pano_microfibra.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "['decayExactDuration'] = true,",
+    "siteCategory": "Ferramentas",
+    "decay": 1,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-09T19:03:33.703Z",
+    "status": "ready"
+  },
+  {
     "name": "pano_sujo",
     "label": "Pano Sujo",
     "description": "",
