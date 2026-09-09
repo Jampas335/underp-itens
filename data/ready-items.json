@@ -5293,11 +5293,12 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "Drogas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-09-09T06:11:13.155Z",
-    "status": "ready"
+    "createdAt": "2026-09-09T06:11:34.058Z",
+    "status": "ready",
+    "readyIconName": "oxy"
   },
   {
     "name": "weapon_combatpistol",
