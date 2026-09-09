@@ -5296,9 +5296,8 @@
     "siteCategory": "Drogas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-09-09T06:11:34.058Z",
-    "status": "ready",
-    "readyIconName": "oxy"
+    "createdAt": "2026-09-09T06:11:47.018Z",
+    "status": "ready"
   },
   {
     "name": "weapon_combatpistol",
