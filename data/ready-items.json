@@ -5280,6 +5280,26 @@
     "status": "ready"
   },
   {
+    "name": "oxy",
+    "label": "Oxy",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "oxy.png",
+    "unique": false,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-09T06:11:13.155Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_combatpistol",
     "label": "P250",
     "description": "",
