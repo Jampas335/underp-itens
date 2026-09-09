@@ -1020,6 +1020,26 @@
     "status": "ready"
   },
   {
+    "name": "bucha",
+    "label": "Bucha",
+    "description": "Bucha abrasiva para limpeza de paredes e veiculos. Desgaste por uso.",
+    "weight": 100,
+    "type": "item",
+    "image": "spray.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Ferramentas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-09T19:05:48.960Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_doubleaction",
     "label": "Budoguin",
     "description": "",
