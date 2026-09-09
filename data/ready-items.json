@@ -1020,27 +1020,6 @@
     "status": "ready"
   },
   {
-    "name": "bucha",
-    "label": "Bucha",
-    "description": "Bucha abrasiva usada para remover tinta de paredes. Validade aproximada de 5 horas.",
-    "weight": 100,
-    "type": "item",
-    "image": "spray.png",
-    "unique": true,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "uncommon",
-    "pendingIconName": "",
-    "pendingCategory": "Manual",
-    "extraLua": "['decayExactDuration'] = true,",
-    "siteCategory": "Ferramentas",
-    "decay": 0.2083333333,
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-09-09T16:52:04.801Z",
-    "status": "ready"
-  },
-  {
     "name": "weapon_doubleaction",
     "label": "Budoguin",
     "description": "",
