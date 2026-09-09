@@ -5489,6 +5489,26 @@
     "status": "ready"
   },
   {
+    "name": "pano_microfibra",
+    "label": "Pano de Microfibra",
+    "description": "Pano macio de microfibra para polimento e acabamento de veiculos. Desgaste por uso.",
+    "weight": 50,
+    "type": "item",
+    "image": "novo-item.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Ferramentas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-09T19:05:04.949Z",
+    "status": "ready"
+  },
+  {
     "name": "pano_sujo",
     "label": "Pano Sujo",
     "description": "",
