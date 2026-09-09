@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-09T16:52:09.763Z",
+  "generatedAt": "2026-09-09T19:03:38.764Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 447,
+  "count": 448,
   "categories": [
     {
       "name": "Armas",
@@ -92,7 +92,7 @@
     },
     {
       "name": "Ferramentas",
-      "count": 11
+      "count": 12
     },
     {
       "name": "Hornys",
@@ -9480,6 +9480,40 @@
         "rarity": "uncommon"
       },
       "lua": "['cat_pancakes'] = {\n    ['name'] = 'cat_pancakes',\n    ['label'] = 'Pancat',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'cat_pancakes.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "pano_microfibra",
+      "name": "pano_microfibra",
+      "label": "Pano de Microfibra",
+      "description": "Pano macio de microfibra para limpeza e acabamento.",
+      "category": "Ferramentas",
+      "type": "item",
+      "rarity": "common",
+      "weight": 50,
+      "image": "pano_microfibra.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/pano_microfibra.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/pano_microfibra.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-09T19:03:33.703Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "pano_microfibra",
+        "label": "Pano de Microfibra",
+        "weight": 50,
+        "type": "item",
+        "image": "pano_microfibra.png",
+        "unique": true,
+        "useable": false,
+        "shouldClose": true,
+        "description": "Pano macio de microfibra para limpeza e acabamento.",
+        "rarity": "common",
+        "decay": 1,
+        "decayExactDuration": true
+      },
+      "lua": "['pano_microfibra'] = {\n    ['name'] = 'pano_microfibra',\n    ['label'] = 'Pano de Microfibra',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'pano_microfibra.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['description'] = 'Pano macio de microfibra para limpeza e acabamento.',\n    ['rarity'] = 'common',\n    ['decay'] = 1,\n    ['decayExactDuration'] = true,\n},"
     },
     {
       "id": "pano_sujo",
