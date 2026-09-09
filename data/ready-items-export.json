@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-09T06:11:18.590Z",
+  "generatedAt": "2026-09-09T06:11:36.940Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Drogas",
-      "count": 38
+      "count": 39
     },
     {
       "name": "Eletrônica",
@@ -188,7 +188,7 @@
     },
     {
       "name": "Sem categoria",
-      "count": 2
+      "count": 1
     },
     {
       "name": "Taco Farmer",
@@ -9137,7 +9137,7 @@
       "name": "oxy",
       "label": "Oxy",
       "description": "",
-      "category": "",
+      "category": "Drogas",
       "type": "item",
       "rarity": "rare",
       "weight": 100,
@@ -9148,7 +9148,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-09-09T06:11:13.155Z",
+      "createdAt": "2026-09-09T06:11:34.058Z",
       "updatedAt": "",
       "inventory": {
         "name": "oxy",
