@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-09T02:28:24.016Z",
+  "generatedAt": "2026-09-09T06:11:18.590Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 446,
+  "count": 447,
   "categories": [
     {
       "name": "Armas",
@@ -188,7 +188,7 @@
     },
     {
       "name": "Sem categoria",
-      "count": 1
+      "count": 2
     },
     {
       "name": "Taco Farmer",
@@ -9131,6 +9131,37 @@
         "rarity": "uncommon"
       },
       "lua": "['chicken_onigiri'] = {\n    ['name'] = 'chicken_onigiri',\n    ['label'] = 'Onichick',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'chicken_onigiri.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "oxy",
+      "name": "oxy",
+      "label": "Oxy",
+      "description": "",
+      "category": "",
+      "type": "item",
+      "rarity": "rare",
+      "weight": 100,
+      "image": "oxy.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/oxy.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/oxy.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-09T06:11:13.155Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "oxy",
+        "label": "Oxy",
+        "weight": 100,
+        "type": "item",
+        "image": "oxy.png",
+        "unique": false,
+        "useable": true,
+        "shouldClose": true,
+        "rarity": "rare"
+      },
+      "lua": "['oxy'] = {\n    ['name'] = 'oxy',\n    ['label'] = 'Oxy',\n    ['weight'] = 100,\n    ['type'] = 'item',\n    ['image'] = 'oxy.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "weapon_combatpistol",
