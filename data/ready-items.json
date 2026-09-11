@@ -6710,13 +6710,15 @@
     "useable": false,
     "shouldClose": true,
     "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Rifles & SMGs",
     "decay": 0.4,
     "ammotype": "ammo_caca",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-07-22T15:37:44.703Z",
+    "createdAt": "2026-09-11T02:44:05.993Z",
     "status": "ready"
   },
   {
