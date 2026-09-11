@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-11T02:44:10.888Z",
+  "generatedAt": "2026-09-11T23:57:16.533Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 448,
+  "count": 449,
   "categories": [
     {
       "name": "Armas",
@@ -148,7 +148,7 @@
     },
     {
       "name": "Outros",
-      "count": 2
+      "count": 3
     },
     {
       "name": "Peças de Veículo",
@@ -2269,6 +2269,59 @@
         "rarity": "uncommon"
       },
       "lua": "['cafe_com_leite'] = {\n    ['name'] = 'cafe_com_leite',\n    ['label'] = 'Café com Leite',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'cafe_com_leite.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "caixa_gopostal",
+      "name": "caixa_gopostal",
+      "label": "Caixa de Entrega",
+      "description": "",
+      "category": "Outros",
+      "type": "item",
+      "rarity": "common",
+      "weight": 2500,
+      "image": "novo-item.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/caixa_gopostal.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/caixa_gopostal.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-11T23:57:11.957Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "caixa_gopostal",
+        "label": "Caixa de Entrega",
+        "weight": 2500,
+        "type": "item",
+        "image": "novo-item.png",
+        "unique": true,
+        "useable": false,
+        "shouldClose": true,
+        "rarity": "common",
+        "allowInBackpack": false,
+        "object": "prop_hat_box_06",
+        "carryInHand": true,
+        "carryAttachment": {
+          "bone": 60309,
+          "pos": {
+            "x": 0.1292,
+            "y": -0.0716,
+            "z": -0.2224
+          },
+          "rot": {
+            "x": 63.858,
+            "y": 146.4414,
+            "z": 64.1997
+          }
+        },
+        "carryAnim": {
+          "dict": "anim@heists@box_carry@",
+          "clip": "idle",
+          "flag": 49
+        },
+        "carryProp": "prop_hat_box_06"
+      },
+      "lua": "['caixa_gopostal'] = {\n    ['name'] = 'caixa_gopostal',\n    ['label'] = 'Caixa de Entrega',\n    ['weight'] = 2500,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n    ['allowInBackpack'] = false,\n    ['object'] = 'prop_hat_box_06',\n    ['carryInHand'] = true,\n    ['carryAttachment'] = {\n        ['bone'] = 60309,\n        ['pos'] = {\n            ['x'] = 0.1292,\n            ['y'] = -0.0716,\n            ['z'] = -0.2224,\n        },\n        ['rot'] = {\n            ['x'] = 63.858,\n            ['y'] = 146.4414,\n            ['z'] = 64.1997,\n        },\n    },\n    ['carryAnim'] = {\n        ['dict'] = 'anim@heists@box_carry@',\n        ['clip'] = 'idle',\n        ['flag'] = 49,\n    },\n    ['carryProp'] = 'prop_hat_box_06',\n},"
     },
     {
       "id": "mechanic-toolbox",
