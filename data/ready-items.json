@@ -1223,6 +1223,47 @@
     "status": "ready"
   },
   {
+    "name": "caixa_gopostal",
+    "label": "Caixa de Entrega",
+    "description": "",
+    "weight": 2500,
+    "type": "item",
+    "image": "novo-item.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "['carryProp'] = 'prop_hat_box_06',",
+    "siteCategory": "Outros",
+    "allowInBackpack": false,
+    "object": "prop_hat_box_06",
+    "carryInHand": true,
+    "carryAttachment": {
+      "bone": 60309,
+      "pos": {
+        "x": 0.1292,
+        "y": -0.0716,
+        "z": -0.2224
+      },
+      "rot": {
+        "x": 63.858,
+        "y": 146.4414,
+        "z": 64.1997
+      }
+    },
+    "carryAnim": {
+      "dict": "anim@heists@box_carry@",
+      "clip": "idle",
+      "flag": 49
+    },
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-11T23:57:11.957Z",
+    "status": "ready"
+  },
+  {
     "name": "mechanic-toolbox",
     "label": "Caixa de Ferramentas",
     "description": "",
