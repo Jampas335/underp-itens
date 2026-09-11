@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-09T19:05:53.221Z",
+  "generatedAt": "2026-09-11T02:44:10.888Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -11564,7 +11564,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-07-22T15:37:44.703Z",
+      "createdAt": "2026-09-11T02:44:05.993Z",
       "updatedAt": "",
       "inventory": {
         "name": "weapon_precisionrifle",
