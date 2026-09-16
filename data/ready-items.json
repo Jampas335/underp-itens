@@ -669,6 +669,26 @@
     "status": "ready"
   },
   {
+    "name": "batata",
+    "label": "Batata",
+    "description": "",
+    "weight": 70,
+    "type": "item",
+    "image": "batata.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Ingredientes",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-16T14:28:15.245Z",
+    "status": "ready"
+  },
+  {
     "name": "batedeira",
     "label": "Batedeira",
     "description": "",
