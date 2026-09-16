@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-16T06:42:29.708Z",
+  "generatedAt": "2026-09-16T06:43:23.043Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -76,7 +76,7 @@
     },
     {
       "name": "Eletrônica",
-      "count": 7
+      "count": 8
     },
     {
       "name": "EMS",
@@ -188,7 +188,7 @@
     },
     {
       "name": "Sem categoria",
-      "count": 2
+      "count": 1
     },
     {
       "name": "Taco Farmer",
@@ -10919,7 +10919,7 @@
       "name": "radio_advanced",
       "label": "Radio Avançado",
       "description": "Rádio avançado com cobertura ilimitada e sinal limpo.",
-      "category": "",
+      "category": "Eletrônica",
       "type": "item",
       "rarity": "rare",
       "weight": 200,
@@ -10930,7 +10930,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-09-16T06:42:24.397Z",
+      "createdAt": "2026-09-16T06:43:17.630Z",
       "updatedAt": "",
       "inventory": {
         "name": "radio_advanced",
