@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-12T00:01:09.594Z",
+  "generatedAt": "2026-09-16T05:05:21.246Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 450,
+  "count": 451,
   "categories": [
     {
       "name": "Armas",
@@ -188,7 +188,7 @@
     },
     {
       "name": "Sem categoria",
-      "count": 1
+      "count": 2
     },
     {
       "name": "Taco Farmer",
@@ -10944,6 +10944,38 @@
         "rarity": "uncommon"
       },
       "lua": "['radio'] = {\n    ['name'] = 'radio',\n    ['label'] = 'Rádio',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'radio.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "radio_advanced",
+      "name": "radio_advanced",
+      "label": "Radio Avançado",
+      "description": "Rádio avançado com cobertura ilimitada e sinal limpo.",
+      "category": "",
+      "type": "item",
+      "rarity": "rare",
+      "weight": 200,
+      "image": "radio.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/radio_advanced.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/radio_advanced.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-09-16T05:05:16.566Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "radio_advanced",
+        "label": "Radio Avançado",
+        "weight": 200,
+        "type": "item",
+        "image": "radio.png",
+        "unique": true,
+        "useable": true,
+        "shouldClose": true,
+        "description": "Rádio avançado com cobertura ilimitada e sinal limpo.",
+        "rarity": "rare"
+      },
+      "lua": "['radio_advanced'] = {\n    ['name'] = 'radio_advanced',\n    ['label'] = 'Radio Avançado',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'radio.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['description'] = 'Rádio avançado com cobertura ilimitada e sinal limpo.',\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "fishing_net",
