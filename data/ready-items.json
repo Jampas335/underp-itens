@@ -6340,6 +6340,27 @@
     "status": "ready"
   },
   {
+    "name": "radio_advanced",
+    "label": "Radio Avançado",
+    "description": "Rádio avançado com cobertura ilimitada e sinal limpo.",
+    "weight": 200,
+    "type": "item",
+    "image": "radio.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "['decayExactDuration'] = true,",
+    "siteCategory": "",
+    "decay": 30,
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-16T06:42:24.397Z",
+    "status": "ready"
+  },
+  {
     "name": "fishing_net",
     "label": "Rede de pesca",
     "description": "",
