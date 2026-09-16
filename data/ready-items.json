@@ -6353,11 +6353,11 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "['decayExactDuration'] = true,",
-    "siteCategory": "",
+    "siteCategory": "Eletrônica",
     "decay": 30,
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-09-16T06:42:24.397Z",
+    "createdAt": "2026-09-16T06:43:17.630Z",
     "status": "ready"
   },
   {
