@@ -1355,6 +1355,26 @@
     "status": "ready"
   },
   {
+    "name": "speaker",
+    "label": "Caixa de Som Pequena",
+    "description": "Uma caixa de som.",
+    "weight": 1500,
+    "type": "item",
+    "image": "speaker.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Eletrônica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-20T08:38:38.210Z",
+    "status": "ready"
+  },
+  {
     "name": "ammo_lsmg",
     "label": "Caixa Munição de LSMG",
     "description": "",
