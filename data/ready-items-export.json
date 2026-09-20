@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-09-20T08:42:20.000Z",
+  "generatedAt": "2026-09-20T08:42:49.963Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -76,7 +76,7 @@
     },
     {
       "name": "Eletrônica",
-      "count": 9
+      "count": 10
     },
     {
       "name": "EMS",
@@ -188,7 +188,7 @@
     },
     {
       "name": "Sem categoria",
-      "count": 2
+      "count": 1
     },
     {
       "name": "Taco Farmer",
@@ -2470,7 +2470,7 @@
       "name": "speaker_big",
       "label": "Caixa de Som Grande",
       "description": "Uma caixa de som grande de alta potencia.",
-      "category": "",
+      "category": "Eletrônica",
       "type": "item",
       "rarity": "epic",
       "weight": 4000,
@@ -2481,7 +2481,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-09-20T08:42:15.722Z",
+      "createdAt": "2026-09-20T08:42:45.728Z",
       "updatedAt": "",
       "inventory": {
         "name": "speaker_big",
