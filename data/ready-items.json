@@ -1355,6 +1355,26 @@
     "status": "ready"
   },
   {
+    "name": "speaker_big",
+    "label": "Caixa de Som Grande",
+    "description": "Uma caixa de som grande de alta potencia.",
+    "weight": 4000,
+    "type": "item",
+    "image": "speaker_big.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-20T08:42:15.722Z",
+    "status": "ready"
+  },
+  {
     "name": "speaker",
     "label": "Caixa de Som Pequena",
     "description": "Uma caixa de som.",
