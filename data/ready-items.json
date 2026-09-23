@@ -4740,6 +4740,26 @@
     "status": "ready"
   },
   {
+    "name": "mandado",
+    "label": "Mandado",
+    "description": "",
+    "weight": 30,
+    "type": "item",
+    "image": "mandado.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Policial",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-09-23T05:28:00.045Z",
+    "status": "ready"
+  },
+  {
     "name": "marfim",
     "label": "Marfim",
     "description": "",
