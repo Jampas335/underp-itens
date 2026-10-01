@@ -2393,6 +2393,26 @@
     "status": "ready"
   },
   {
+    "name": "corrente",
+    "label": "Corrente",
+    "description": "",
+    "weight": 45,
+    "type": "item",
+    "image": "corrente.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Jóias & Valores",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-01T23:05:52.623Z",
+    "status": "ready"
+  },
+  {
     "name": "couro_de_caca",
     "label": "Couro de Caça",
     "description": "",
