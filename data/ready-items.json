@@ -6085,11 +6085,12 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "Roubo casa",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-01T20:02:55.647Z",
-    "status": "ready"
+    "createdAt": "2026-10-01T20:04:04.745Z",
+    "status": "ready",
+    "readyIconName": "painting"
   },
   {
     "name": "lollipop",
