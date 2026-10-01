@@ -6072,6 +6072,26 @@
     "status": "ready"
   },
   {
+    "name": "painting",
+    "label": "Pintura Rara",
+    "description": "Uma obra de arte retirada de uma residência de alto padrão.",
+    "weight": 750,
+    "type": "item",
+    "image": "painting.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-01T20:02:55.647Z",
+    "status": "ready"
+  },
+  {
     "name": "lollipop",
     "label": "Pirulito",
     "description": "",
