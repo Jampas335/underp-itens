@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-01T20:03:01.581Z",
+  "generatedAt": "2026-10-01T20:04:08.943Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -184,11 +184,11 @@
     },
     {
       "name": "Roubo casa",
-      "count": 21
+      "count": 22
     },
     {
       "name": "Sem categoria",
-      "count": 2
+      "count": 1
     },
     {
       "name": "Taco Farmer",
@@ -10447,7 +10447,7 @@
       "name": "painting",
       "label": "Pintura Rara",
       "description": "Uma obra de arte retirada de uma residência de alto padrão.",
-      "category": "",
+      "category": "Roubo casa",
       "type": "item",
       "rarity": "legendary",
       "weight": 750,
@@ -10458,7 +10458,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-01T20:02:55.647Z",
+      "createdAt": "2026-10-01T20:04:04.745Z",
       "updatedAt": "",
       "inventory": {
         "name": "painting",
