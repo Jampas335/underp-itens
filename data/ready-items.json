@@ -561,6 +561,26 @@
     "status": "ready"
   },
   {
+    "name": "gold_bar_18k",
+    "label": "Barra de Ouro 18K",
+    "description": "",
+    "weight": 1000,
+    "type": "item",
+    "image": "gold_bar_18k.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Jóias & Valores",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-01T23:21:06.767Z",
+    "status": "ready"
+  },
+  {
     "name": "zinc_bar",
     "label": "Barra de Zinco",
     "description": "",
