@@ -2133,6 +2133,26 @@
     "status": "ready"
   },
   {
+    "name": "colar",
+    "label": "Colar",
+    "description": "",
+    "weight": 45,
+    "type": "item",
+    "image": "colar.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Jóias & Valores",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-01T23:08:41.179Z",
+    "status": "ready"
+  },
+  {
     "name": "neckbrace",
     "label": "Colar Cervical",
     "description": "Usado para ajudar na cura permanentemente de fraturas sofridas na cervical.",
