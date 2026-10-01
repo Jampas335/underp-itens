@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-01T23:05:57.199Z",
+  "generatedAt": "2026-10-01T23:08:46.064Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 456,
+  "count": 457,
   "categories": [
     {
       "name": "Armas",
@@ -108,7 +108,7 @@
     },
     {
       "name": "Jóias & Valores",
-      "count": 6
+      "count": 7
     },
     {
       "name": "KOI",
@@ -3746,6 +3746,37 @@
         "rarity": "uncommon"
       },
       "lua": "['quick_clot'] = {\n    ['name'] = 'quick_clot',\n    ['label'] = 'Coagulante Rapido',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'quick_clot.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['description'] = 'Acelera a coagulação e estanca o sangramento mais rápido em lesões de tiro e lacerações.',\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "colar",
+      "name": "colar",
+      "label": "Colar",
+      "description": "",
+      "category": "Jóias & Valores",
+      "type": "item",
+      "rarity": "common",
+      "weight": 45,
+      "image": "colar.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/colar.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/colar.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-01T23:08:41.179Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "colar",
+        "label": "Colar",
+        "weight": 45,
+        "type": "item",
+        "image": "colar.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['colar'] = {\n    ['name'] = 'colar',\n    ['label'] = 'Colar',\n    ['weight'] = 45,\n    ['type'] = 'item',\n    ['image'] = 'colar.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "neckbrace",
