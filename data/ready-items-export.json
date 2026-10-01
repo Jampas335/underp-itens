@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-01T23:08:46.064Z",
+  "generatedAt": "2026-10-01T23:21:11.645Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 457,
+  "count": 458,
   "categories": [
     {
       "name": "Armas",
@@ -108,7 +108,7 @@
     },
     {
       "name": "Jóias & Valores",
-      "count": 7
+      "count": 8
     },
     {
       "name": "KOI",
@@ -1173,6 +1173,37 @@
         "rarity": "legendary"
       },
       "lua": "['gold_bar'] = {\n    ['name'] = 'gold_bar',\n    ['label'] = 'Barra de Ouro',\n    ['weight'] = 400,\n    ['type'] = 'item',\n    ['image'] = 'gold_bar.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'legendary',\n},"
+    },
+    {
+      "id": "gold_bar_18k",
+      "name": "gold_bar_18k",
+      "label": "Barra de Ouro 18K",
+      "description": "",
+      "category": "Jóias & Valores",
+      "type": "item",
+      "rarity": "legendary",
+      "weight": 1000,
+      "image": "gold_bar_18k.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/gold_bar_18k.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/gold_bar_18k.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-01T23:21:06.767Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "gold_bar_18k",
+        "label": "Barra de Ouro 18K",
+        "weight": 1000,
+        "type": "item",
+        "image": "gold_bar_18k.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "legendary"
+      },
+      "lua": "['gold_bar_18k'] = {\n    ['name'] = 'gold_bar_18k',\n    ['label'] = 'Barra de Ouro 18K',\n    ['weight'] = 1000,\n    ['type'] = 'item',\n    ['image'] = 'gold_bar_18k.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'legendary',\n},"
     },
     {
       "id": "zinc_bar",
