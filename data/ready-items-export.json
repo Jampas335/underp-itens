@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-01T23:46:32.472Z",
+  "generatedAt": "2026-10-02T00:37:39.795Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8115,7 +8115,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-01T23:46:27.158Z",
+      "createdAt": "2026-10-02T00:37:35.423Z",
       "updatedAt": "",
       "inventory": {
         "name": "weapon_macarico",
