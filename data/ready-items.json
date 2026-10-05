@@ -3317,6 +3317,26 @@
     "status": "ready"
   },
   {
+    "name": "polyamide",
+    "label": "Fibra de Aramida",
+    "description": "",
+    "weight": 180,
+    "type": "item",
+    "image": "polyamide.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-05T23:49:49.484Z",
+    "status": "ready"
+  },
+  {
     "name": "kevlar",
     "label": "Fibra de Kevlar",
     "description": "",
