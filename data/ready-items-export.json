@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-05T23:46:27.978Z",
+  "generatedAt": "2026-10-05T23:46:53.232Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -124,7 +124,7 @@
     },
     {
       "name": "Materiais",
-      "count": 13
+      "count": 14
     },
     {
       "name": "Mecânica",
@@ -188,7 +188,7 @@
     },
     {
       "name": "Sem categoria",
-      "count": 2
+      "count": 1
     },
     {
       "name": "Taco Farmer",
@@ -3276,7 +3276,7 @@
       "name": "ceramic",
       "label": "Cerâmica Balística",
       "description": "",
-      "category": "",
+      "category": "Materiais",
       "type": "item",
       "rarity": "rare",
       "weight": 700,
@@ -3287,7 +3287,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-05T23:46:20.275Z",
+      "createdAt": "2026-10-05T23:46:45.148Z",
       "updatedAt": "",
       "inventory": {
         "name": "ceramic",
