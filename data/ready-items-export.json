@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-05T20:07:52.800Z",
+  "generatedAt": "2026-10-05T20:08:36.852Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 460,
+  "count": 461,
   "categories": [
     {
       "name": "Armas",
@@ -188,7 +188,7 @@
     },
     {
       "name": "Sem categoria",
-      "count": 1
+      "count": 2
     },
     {
       "name": "Taco Farmer",
@@ -10822,6 +10822,38 @@
         "rarity": "uncommon"
       },
       "lua": "['garden_pizza'] = {\n    ['name'] = 'garden_pizza',\n    ['label'] = 'Pizza Garden',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'garden_pizza.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "steel_plate",
+      "name": "steel_plate",
+      "label": "Placa de Aço",
+      "description": "Placa balística pesada, desenvolvida para uso prolongado.",
+      "category": "",
+      "type": "item",
+      "rarity": "uncommon",
+      "weight": 2500,
+      "image": "steel_plate.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/steel_plate.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/steel_plate.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-05T20:08:32.054Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "steel_plate",
+        "label": "Placa de Aço",
+        "weight": 2500,
+        "type": "item",
+        "image": "steel_plate.png",
+        "unique": true,
+        "useable": false,
+        "shouldClose": false,
+        "description": "Placa balística pesada, desenvolvida para uso prolongado.",
+        "rarity": "uncommon"
+      },
+      "lua": "['steel_plate'] = {\n    ['name'] = 'steel_plate',\n    ['label'] = 'Placa de Aço',\n    ['weight'] = 2500,\n    ['type'] = 'item',\n    ['image'] = 'steel_plate.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['description'] = 'Placa balística pesada, desenvolvida para uso prolongado.',\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "kevlar_plate",
