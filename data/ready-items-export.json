@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-02T00:37:39.795Z",
+  "generatedAt": "2026-10-05T20:07:52.800Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 459,
+  "count": 460,
   "categories": [
     {
       "name": "Armas",
@@ -176,7 +176,7 @@
     },
     {
       "name": "Proteção",
-      "count": 5
+      "count": 6
     },
     {
       "name": "Rifles & SMGs",
@@ -10822,6 +10822,38 @@
         "rarity": "uncommon"
       },
       "lua": "['garden_pizza'] = {\n    ['name'] = 'garden_pizza',\n    ['label'] = 'Pizza Garden',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'garden_pizza.png',\n    ['unique'] = false,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "kevlar_plate",
+      "name": "kevlar_plate",
+      "label": "Placa de Kevlar",
+      "description": "Inserto balístico muito leve, fabricado com fibras controladas.",
+      "category": "Proteção",
+      "type": "item",
+      "rarity": "rare",
+      "weight": 700,
+      "image": "kevlar_plate.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/kevlar_plate.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/kevlar_plate.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-05T20:07:42.903Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "kevlar_plate",
+        "label": "Placa de Kevlar",
+        "weight": 700,
+        "type": "item",
+        "image": "kevlar_plate.png",
+        "unique": true,
+        "useable": false,
+        "shouldClose": false,
+        "description": "Inserto balístico muito leve, fabricado com fibras controladas.",
+        "rarity": "rare"
+      },
+      "lua": "['kevlar_plate'] = {\n    ['name'] = 'kevlar_plate',\n    ['label'] = 'Placa de Kevlar',\n    ['weight'] = 700,\n    ['type'] = 'item',\n    ['image'] = 'kevlar_plate.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['description'] = 'Inserto balístico muito leve, fabricado com fibras controladas.',\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "plastico",
