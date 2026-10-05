@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-05T20:09:27.574Z",
+  "generatedAt": "2026-10-05T20:26:12.278Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 461,
+  "count": 462,
   "categories": [
     {
       "name": "Armas",
@@ -176,7 +176,7 @@
     },
     {
       "name": "Proteção",
-      "count": 7
+      "count": 8
     },
     {
       "name": "Rifles & SMGs",
@@ -10854,6 +10854,38 @@
         "rarity": "uncommon"
       },
       "lua": "['steel_plate'] = {\n    ['name'] = 'steel_plate',\n    ['label'] = 'Placa de Aço',\n    ['weight'] = 2500,\n    ['type'] = 'item',\n    ['image'] = 'steel_plate.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['description'] = 'Placa balística pesada, desenvolvida para uso prolongado.',\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "ceramic_plate",
+      "name": "ceramic_plate",
+      "label": "Placa de Cerâmica",
+      "description": "Placa balística leve, com boa proteção e vida útil moderada.",
+      "category": "Proteção",
+      "type": "item",
+      "rarity": "rare",
+      "weight": 1500,
+      "image": "ceramic_plate.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/ceramic_plate.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/ceramic_plate.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-05T20:26:07.107Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "ceramic_plate",
+        "label": "Placa de Cerâmica",
+        "weight": 1500,
+        "type": "item",
+        "image": "ceramic_plate.png",
+        "unique": true,
+        "useable": false,
+        "shouldClose": false,
+        "description": "Placa balística leve, com boa proteção e vida útil moderada.",
+        "rarity": "rare"
+      },
+      "lua": "['ceramic_plate'] = {\n    ['name'] = 'ceramic_plate',\n    ['label'] = 'Placa de Cerâmica',\n    ['weight'] = 1500,\n    ['type'] = 'item',\n    ['image'] = 'ceramic_plate.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['description'] = 'Placa balística leve, com boa proteção e vida útil moderada.',\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "kevlar_plate",
