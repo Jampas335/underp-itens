@@ -6306,6 +6306,26 @@
     "status": "ready"
   },
   {
+    "name": "kevlar_plate",
+    "label": "Placa de Kevlar",
+    "description": "Inserto balístico muito leve, fabricado com fibras controladas.",
+    "weight": 700,
+    "type": "item",
+    "image": "kevlar_plate.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Proteção",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-05T20:07:42.903Z",
+    "status": "ready"
+  },
+  {
     "name": "plastico",
     "label": "Plastico",
     "description": "",
