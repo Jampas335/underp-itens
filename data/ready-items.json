@@ -6326,6 +6326,26 @@
     "status": "ready"
   },
   {
+    "name": "ceramic_plate",
+    "label": "Placa de Cerâmica",
+    "description": "Placa balística leve, com boa proteção e vida útil moderada.",
+    "weight": 1500,
+    "type": "item",
+    "image": "ceramic_plate.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Proteção",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-05T20:26:07.107Z",
+    "status": "ready"
+  },
+  {
     "name": "kevlar_plate",
     "label": "Placa de Kevlar",
     "description": "Inserto balístico muito leve, fabricado com fibras controladas.",
