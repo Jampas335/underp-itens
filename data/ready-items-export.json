@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-05T20:08:36.852Z",
+  "generatedAt": "2026-10-05T20:09:27.574Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -176,7 +176,7 @@
     },
     {
       "name": "Proteção",
-      "count": 6
+      "count": 7
     },
     {
       "name": "Rifles & SMGs",
@@ -188,7 +188,7 @@
     },
     {
       "name": "Sem categoria",
-      "count": 2
+      "count": 1
     },
     {
       "name": "Taco Farmer",
@@ -10828,7 +10828,7 @@
       "name": "steel_plate",
       "label": "Placa de Aço",
       "description": "Placa balística pesada, desenvolvida para uso prolongado.",
-      "category": "",
+      "category": "Proteção",
       "type": "item",
       "rarity": "uncommon",
       "weight": 2500,
@@ -10839,7 +10839,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-05T20:08:32.054Z",
+      "createdAt": "2026-10-05T20:09:19.217Z",
       "updatedAt": "",
       "inventory": {
         "name": "steel_plate",
