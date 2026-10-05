@@ -1843,6 +1843,26 @@
     "status": "ready"
   },
   {
+    "name": "ceramic",
+    "label": "Cerâmica Balística",
+    "description": "",
+    "weight": 700,
+    "type": "item",
+    "image": "ceramic.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-05T23:46:20.275Z",
+    "status": "ready"
+  },
+  {
     "name": "fish3",
     "label": "Certa",
     "description": "",
