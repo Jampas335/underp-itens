@@ -6306,6 +6306,26 @@
     "status": "ready"
   },
   {
+    "name": "steel_plate",
+    "label": "Placa de Aço",
+    "description": "Placa balística pesada, desenvolvida para uso prolongado.",
+    "weight": 2500,
+    "type": "item",
+    "image": "steel_plate.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-05T20:08:32.054Z",
+    "status": "ready"
+  },
+  {
     "name": "kevlar_plate",
     "label": "Placa de Kevlar",
     "description": "Inserto balístico muito leve, fabricado com fibras controladas.",
