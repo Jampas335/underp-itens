@@ -1856,11 +1856,12 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "Materiais",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-05T23:46:20.275Z",
-    "status": "ready"
+    "createdAt": "2026-10-05T23:46:45.148Z",
+    "status": "ready",
+    "readyIconName": "ceramic"
   },
   {
     "name": "fish3",
