@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-05T23:46:53.232Z",
+  "generatedAt": "2026-10-05T23:47:30.191Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -3287,7 +3287,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-05T23:46:45.148Z",
+      "createdAt": "2026-10-05T23:47:25.644Z",
       "updatedAt": "",
       "inventory": {
         "name": "ceramic",
