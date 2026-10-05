@@ -3297,6 +3297,26 @@
     "status": "ready"
   },
   {
+    "name": "kevlar",
+    "label": "Fibra de Kevlar",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "kevlar.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-05T23:39:27.198Z",
+    "status": "ready"
+  },
+  {
     "name": "prea_fichas",
     "label": "Fichas de Jogo",
     "description": "",
