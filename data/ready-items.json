@@ -815,11 +815,13 @@
     "useable": false,
     "shouldClose": true,
     "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Drogas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-04-14T21:52:01.530Z",
+    "createdAt": "2026-10-06T03:45:35.339Z",
     "status": "ready"
   },
   {
