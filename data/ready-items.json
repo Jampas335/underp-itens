@@ -74,6 +74,26 @@
     "status": "ready"
   },
   {
+    "name": "glue",
+    "label": "Adesivo Industrial",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "glue.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-06T00:45:58.971Z",
+    "status": "ready"
+  },
+  {
     "name": "water",
     "label": "Água",
     "description": "",
