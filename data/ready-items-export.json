@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-06T03:44:10.875Z",
+  "generatedAt": "2026-10-06T03:45:39.627Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -1587,7 +1587,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-04-14T21:52:01.530Z",
+      "createdAt": "2026-10-06T03:45:35.339Z",
       "updatedAt": "",
       "inventory": {
         "name": "kq_weed_bud_blue_dream",
