@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-06T03:11:18.634Z",
+  "generatedAt": "2026-10-06T03:15:15.798Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -12344,7 +12344,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-05-12T02:24:01.142Z",
+      "createdAt": "2026-10-06T03:15:11.828Z",
       "updatedAt": "",
       "inventory": {
         "name": "kq_weed_seed_og_kush",
