@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-06T04:15:14.452Z",
+  "generatedAt": "2026-10-06T04:15:36.757Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -1376,7 +1376,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-05-12T02:20:39.076Z",
+      "createdAt": "2026-10-06T04:15:32.100Z",
       "updatedAt": "",
       "inventory": {
         "name": "kq_weed_joint_purple_haze",
