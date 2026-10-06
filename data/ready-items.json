@@ -5711,11 +5711,13 @@
     "useable": false,
     "shouldClose": true,
     "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Drogas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-05-12T02:28:15.988Z",
+    "createdAt": "2026-10-06T04:43:27.976Z",
     "status": "ready"
   },
   {
