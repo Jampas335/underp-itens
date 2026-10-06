@@ -7257,11 +7257,13 @@
     "useable": true,
     "shouldClose": true,
     "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Drogas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-05-12T02:25:34.770Z",
+    "createdAt": "2026-10-06T03:09:06.922Z",
     "status": "ready"
   },
   {
