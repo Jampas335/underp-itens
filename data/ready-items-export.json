@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-06T00:43:18.750Z",
+  "generatedAt": "2026-10-06T00:46:03.515Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 466,
+  "count": 467,
   "categories": [
     {
       "name": "Armas",
@@ -124,7 +124,7 @@
     },
     {
       "name": "Materiais",
-      "count": 16
+      "count": 17
     },
     {
       "name": "Mecânica",
@@ -333,6 +333,37 @@
         "rarity": "common"
       },
       "lua": "['farm_sugar'] = {\n    ['name'] = 'farm_sugar',\n    ['label'] = 'Açúcar',\n    ['weight'] = 5000,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "glue",
+      "name": "glue",
+      "label": "Adesivo Industrial",
+      "description": "",
+      "category": "Materiais",
+      "type": "item",
+      "rarity": "uncommon",
+      "weight": 200,
+      "image": "glue.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/glue.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/glue.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-06T00:45:58.971Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "glue",
+        "label": "Adesivo Industrial",
+        "weight": 200,
+        "type": "item",
+        "image": "glue.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": true,
+        "rarity": "uncommon"
+      },
+      "lua": "['glue'] = {\n    ['name'] = 'glue',\n    ['label'] = 'Adesivo Industrial',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'glue.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "water",
