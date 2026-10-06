@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-06T16:26:12.568Z",
+  "generatedAt": "2026-10-06T16:26:40.577Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -14302,7 +14302,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-05-12T02:17:36.829Z",
+      "createdAt": "2026-10-06T16:26:36.419Z",
       "updatedAt": "",
       "inventory": {
         "name": "kq_weed_brick_white_widow",
