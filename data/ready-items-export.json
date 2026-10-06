@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-06T03:42:19.624Z",
+  "generatedAt": "2026-10-06T03:44:10.875Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -15179,7 +15179,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-04-14T21:50:02.197Z",
+      "createdAt": "2026-10-06T03:44:06.022Z",
       "updatedAt": "",
       "inventory": {
         "name": "kq_weed_bud_white_widow",
