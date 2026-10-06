@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-06T04:42:25.837Z",
+  "generatedAt": "2026-10-06T04:42:49.769Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -9835,7 +9835,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-05-12T02:29:06.989Z",
+      "createdAt": "2026-10-06T04:42:45.578Z",
       "updatedAt": "",
       "inventory": {
         "name": "kq_weed_bag_white_widow",
