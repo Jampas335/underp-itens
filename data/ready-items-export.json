@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-06T04:43:11.746Z",
+  "generatedAt": "2026-10-06T04:43:31.986Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -9773,7 +9773,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-05-12T02:28:15.988Z",
+      "createdAt": "2026-10-06T04:43:27.976Z",
       "updatedAt": "",
       "inventory": {
         "name": "kq_weed_bag_og_kush",
