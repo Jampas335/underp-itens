@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-05T23:49:54.097Z",
+  "generatedAt": "2026-10-06T00:43:18.750Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 465,
+  "count": 466,
   "categories": [
     {
       "name": "Armas",
@@ -124,7 +124,7 @@
     },
     {
       "name": "Materiais",
-      "count": 15
+      "count": 16
     },
     {
       "name": "Mecânica",
@@ -13833,6 +13833,37 @@
         "ammotype": "ammo_smg"
       },
       "lua": "['weapon_machinepistol'] = {\n    ['name'] = 'weapon_machinepistol',\n    ['label'] = 'TEC-9',\n    ['weight'] = 1400,\n    ['type'] = 'weapon',\n    ['image'] = 'machine-pistol.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n    ['decay'] = 0.05,\n    ['ammotype'] = 'ammo_smg',\n},"
+    },
+    {
+      "id": "fabric",
+      "name": "fabric",
+      "label": "Tecido Balístico",
+      "description": "",
+      "category": "Materiais",
+      "type": "item",
+      "rarity": "uncommon",
+      "weight": 250,
+      "image": "fabric.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/fabric.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/fabric.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-06T00:43:14.358Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "fabric",
+        "label": "Tecido Balístico",
+        "weight": 250,
+        "type": "item",
+        "image": "fabric.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": true,
+        "rarity": "uncommon"
+      },
+      "lua": "['fabric'] = {\n    ['name'] = 'fabric',\n    ['label'] = 'Tecido Balístico',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'fabric.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "tv",
