@@ -5694,15 +5694,16 @@
     "unique": false,
     "useable": false,
     "shouldClose": true,
-    "rarity": "rare",
+    "rarity": "uncommon",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Drogas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-06T04:43:07.681Z",
-    "status": "ready"
+    "createdAt": "2026-10-07T01:55:15.413Z",
+    "status": "ready",
+    "readyIconName": "kq_weed_bag_blue_dream"
   },
   {
     "name": "kq_weed_bag_og_kush",
