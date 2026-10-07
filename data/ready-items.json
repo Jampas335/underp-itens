@@ -6638,15 +6638,16 @@
     "unique": false,
     "useable": false,
     "shouldClose": true,
-    "rarity": "rare",
+    "rarity": "epic",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Drogas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-06T03:42:14.904Z",
-    "status": "ready"
+    "createdAt": "2026-10-07T01:46:28.308Z",
+    "status": "ready",
+    "readyIconName": "kq_weed_bud_purple_haze"
   },
   {
     "name": "weapon_bullpuprifle",
