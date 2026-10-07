@@ -7231,15 +7231,16 @@
     "unique": false,
     "useable": true,
     "shouldClose": true,
-    "rarity": "rare",
+    "rarity": "uncommon",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Drogas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-06T03:11:14.828Z",
-    "status": "ready"
+    "createdAt": "2026-10-07T02:00:30.231Z",
+    "status": "ready",
+    "readyIconName": "kq_weed_seed_blue_dream"
   },
   {
     "name": "kq_weed_seed_og_kush",
