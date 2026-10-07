@@ -5576,15 +5576,16 @@
     "unique": false,
     "useable": false,
     "shouldClose": true,
-    "rarity": "uncommon",
+    "rarity": "common",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Drogas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-06T03:47:18.319Z",
-    "status": "ready"
+    "createdAt": "2026-10-07T01:58:01.635Z",
+    "status": "ready",
+    "readyIconName": "kq_weed_bud_og_kush"
   },
   {
     "name": "chicken_onigiri",
