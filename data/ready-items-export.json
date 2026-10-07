@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-07T01:58:32.295Z",
+  "generatedAt": "2026-10-07T01:58:58.114Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -11332,7 +11332,7 @@
       "description": "",
       "category": "Drogas",
       "type": "item",
-      "rarity": "epic",
+      "rarity": "rare",
       "weight": 5,
       "image": "kq_weed_bud_purple_haze.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/kq_weed_bud_purple_haze.png",
@@ -11341,7 +11341,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-07T01:46:28.308Z",
+      "createdAt": "2026-10-07T01:58:55.086Z",
       "updatedAt": "",
       "inventory": {
         "name": "kq_weed_bud_purple_haze",
@@ -11352,9 +11352,9 @@
         "unique": false,
         "useable": false,
         "shouldClose": true,
-        "rarity": "epic"
+        "rarity": "rare"
       },
-      "lua": "['kq_weed_bud_purple_haze'] = {\n    ['name'] = 'kq_weed_bud_purple_haze',\n    ['label'] = 'Purple Haze',\n    ['weight'] = 5,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_bud_purple_haze.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'epic',\n},"
+      "lua": "['kq_weed_bud_purple_haze'] = {\n    ['name'] = 'kq_weed_bud_purple_haze',\n    ['label'] = 'Purple Haze',\n    ['weight'] = 5,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_bud_purple_haze.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "weapon_bullpuprifle",
