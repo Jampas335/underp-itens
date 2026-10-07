@@ -822,15 +822,16 @@
     "unique": false,
     "useable": false,
     "shouldClose": true,
-    "rarity": "epic",
+    "rarity": "rare",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Drogas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-06T03:45:35.339Z",
-    "status": "ready"
+    "createdAt": "2026-10-07T01:45:59.671Z",
+    "status": "ready",
+    "readyIconName": "kq_weed_bud_blue_dream"
   },
   {
     "name": "bocachico_fish",
