@@ -688,15 +688,16 @@
     "unique": false,
     "useable": true,
     "shouldClose": true,
-    "rarity": "epic",
+    "rarity": "rare",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Drogas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-06T04:15:32.100Z",
-    "status": "ready"
+    "createdAt": "2026-10-07T01:54:03.525Z",
+    "status": "ready",
+    "readyIconName": "kq_weed_joint_purple_haze"
   },
   {
     "name": "kq_weed_joint_white_widow",
