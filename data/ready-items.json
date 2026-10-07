@@ -5714,15 +5714,16 @@
     "unique": false,
     "useable": false,
     "shouldClose": true,
-    "rarity": "rare",
+    "rarity": "common",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Drogas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-06T04:43:27.976Z",
-    "status": "ready"
+    "createdAt": "2026-10-07T01:54:45.963Z",
+    "status": "ready",
+    "readyIconName": "kq_weed_bag_og_kush"
   },
   {
     "name": "kq_weed_bag_purple_haze",
