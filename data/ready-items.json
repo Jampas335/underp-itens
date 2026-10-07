@@ -7273,15 +7273,16 @@
     "unique": false,
     "useable": true,
     "shouldClose": true,
-    "rarity": "epic",
+    "rarity": "rare",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Drogas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-06T03:06:10.889Z",
-    "status": "ready"
+    "createdAt": "2026-10-07T02:01:01.217Z",
+    "status": "ready",
+    "readyIconName": "kq_weed_seed_purple_haze"
   },
   {
     "name": "kq_weed_seed_white_widow",
