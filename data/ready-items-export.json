@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-06T16:26:40.577Z",
+  "generatedAt": "2026-10-07T01:46:02.793Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -1578,7 +1578,7 @@
       "description": "",
       "category": "Drogas",
       "type": "item",
-      "rarity": "epic",
+      "rarity": "rare",
       "weight": 5,
       "image": "kq_weed_bud_blue_dream.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/kq_weed_bud_blue_dream.png",
@@ -1587,7 +1587,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-06T03:45:35.339Z",
+      "createdAt": "2026-10-07T01:45:59.671Z",
       "updatedAt": "",
       "inventory": {
         "name": "kq_weed_bud_blue_dream",
@@ -1598,9 +1598,9 @@
         "unique": false,
         "useable": false,
         "shouldClose": true,
-        "rarity": "epic"
+        "rarity": "rare"
       },
-      "lua": "['kq_weed_bud_blue_dream'] = {\n    ['name'] = 'kq_weed_bud_blue_dream',\n    ['label'] = 'Blue Dream',\n    ['weight'] = 5,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_bud_blue_dream.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'epic',\n},"
+      "lua": "['kq_weed_bud_blue_dream'] = {\n    ['name'] = 'kq_weed_bud_blue_dream',\n    ['label'] = 'Blue Dream',\n    ['weight'] = 5,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_bud_blue_dream.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "bocachico_fish",
