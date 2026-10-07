@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-07T01:55:17.909Z",
+  "generatedAt": "2026-10-07T01:55:42.013Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -9795,7 +9795,7 @@
       "description": "",
       "category": "Drogas",
       "type": "item",
-      "rarity": "epic",
+      "rarity": "rare",
       "weight": 25,
       "image": "kq_weed_bag_purple_haze.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/kq_weed_bag_purple_haze.png",
@@ -9804,7 +9804,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-06T04:42:22.214Z",
+      "createdAt": "2026-10-07T01:55:39.542Z",
       "updatedAt": "",
       "inventory": {
         "name": "kq_weed_bag_purple_haze",
@@ -9815,9 +9815,9 @@
         "unique": false,
         "useable": false,
         "shouldClose": true,
-        "rarity": "epic"
+        "rarity": "rare"
       },
-      "lua": "['kq_weed_bag_purple_haze'] = {\n    ['name'] = 'kq_weed_bag_purple_haze',\n    ['label'] = 'Pacote de Purple Haze',\n    ['weight'] = 25,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_bag_purple_haze.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'epic',\n},"
+      "lua": "['kq_weed_bag_purple_haze'] = {\n    ['name'] = 'kq_weed_bag_purple_haze',\n    ['label'] = 'Pacote de Purple Haze',\n    ['weight'] = 25,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_bag_purple_haze.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "kq_weed_bag_white_widow",
