@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-07T01:54:48.523Z",
+  "generatedAt": "2026-10-07T01:55:17.909Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -9733,7 +9733,7 @@
       "description": "",
       "category": "Drogas",
       "type": "item",
-      "rarity": "rare",
+      "rarity": "uncommon",
       "weight": 25,
       "image": "kq_weed_bag_blue_dream.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/kq_weed_bag_blue_dream.png",
@@ -9742,7 +9742,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-06T04:43:07.681Z",
+      "createdAt": "2026-10-07T01:55:15.413Z",
       "updatedAt": "",
       "inventory": {
         "name": "kq_weed_bag_blue_dream",
@@ -9753,9 +9753,9 @@
         "unique": false,
         "useable": false,
         "shouldClose": true,
-        "rarity": "rare"
+        "rarity": "uncommon"
       },
-      "lua": "['kq_weed_bag_blue_dream'] = {\n    ['name'] = 'kq_weed_bag_blue_dream',\n    ['label'] = 'Pacote de Blue Dream',\n    ['weight'] = 25,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_bag_blue_dream.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
+      "lua": "['kq_weed_bag_blue_dream'] = {\n    ['name'] = 'kq_weed_bag_blue_dream',\n    ['label'] = 'Pacote de Blue Dream',\n    ['weight'] = 25,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_bag_blue_dream.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "kq_weed_bag_og_kush",
