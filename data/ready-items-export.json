@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-07T01:54:07.322Z",
+  "generatedAt": "2026-10-07T01:54:48.523Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -9764,7 +9764,7 @@
       "description": "",
       "category": "Drogas",
       "type": "item",
-      "rarity": "rare",
+      "rarity": "common",
       "weight": 25,
       "image": "kq_weed_bag_og_kush.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/kq_weed_bag_og_kush.png",
@@ -9773,7 +9773,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-06T04:43:27.976Z",
+      "createdAt": "2026-10-07T01:54:45.963Z",
       "updatedAt": "",
       "inventory": {
         "name": "kq_weed_bag_og_kush",
@@ -9784,9 +9784,9 @@
         "unique": false,
         "useable": false,
         "shouldClose": true,
-        "rarity": "rare"
+        "rarity": "common"
       },
-      "lua": "['kq_weed_bag_og_kush'] = {\n    ['name'] = 'kq_weed_bag_og_kush',\n    ['label'] = 'Pacote de OG Kush',\n    ['weight'] = 25,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_bag_og_kush.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
+      "lua": "['kq_weed_bag_og_kush'] = {\n    ['name'] = 'kq_weed_bag_og_kush',\n    ['label'] = 'Pacote de OG Kush',\n    ['weight'] = 25,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_bag_og_kush.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "kq_weed_bag_purple_haze",
