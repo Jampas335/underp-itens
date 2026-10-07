@@ -666,15 +666,16 @@
     "unique": false,
     "useable": true,
     "shouldClose": true,
-    "rarity": "rare",
+    "rarity": "common",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Drogas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-06T04:15:10.474Z",
-    "status": "ready"
+    "createdAt": "2026-10-07T01:52:35.580Z",
+    "status": "ready",
+    "readyIconName": "kq_weed_joint_og_kush"
   },
   {
     "name": "kq_weed_joint_purple_haze",
