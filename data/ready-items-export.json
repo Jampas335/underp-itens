@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-07T01:57:24.569Z",
+  "generatedAt": "2026-10-07T01:58:04.082Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -9543,7 +9543,7 @@
       "description": "",
       "category": "Drogas",
       "type": "item",
-      "rarity": "uncommon",
+      "rarity": "common",
       "weight": 5,
       "image": "kq_weed_bud_og_kush.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/kq_weed_bud_og_kush.png",
@@ -9552,7 +9552,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-06T03:47:18.319Z",
+      "createdAt": "2026-10-07T01:58:01.635Z",
       "updatedAt": "",
       "inventory": {
         "name": "kq_weed_bud_og_kush",
@@ -9563,9 +9563,9 @@
         "unique": false,
         "useable": false,
         "shouldClose": true,
-        "rarity": "uncommon"
+        "rarity": "common"
       },
-      "lua": "['kq_weed_bud_og_kush'] = {\n    ['name'] = 'kq_weed_bud_og_kush',\n    ['label'] = 'OG Kush',\n    ['weight'] = 5,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_bud_og_kush.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
+      "lua": "['kq_weed_bud_og_kush'] = {\n    ['name'] = 'kq_weed_bud_og_kush',\n    ['label'] = 'OG Kush',\n    ['weight'] = 5,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_bud_og_kush.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "chicken_onigiri",
