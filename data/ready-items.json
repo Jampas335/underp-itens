@@ -1134,6 +1134,26 @@
     "status": "ready"
   },
   {
+    "name": "bucha_metalica",
+    "label": "Bucha Metalica",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "bucha_metalica.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T23:20:16.295Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_doubleaction",
     "label": "Budoguin",
     "description": "",
