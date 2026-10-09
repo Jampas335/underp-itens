@@ -5194,6 +5194,26 @@
     "status": "ready"
   },
   {
+    "name": "mecanismo_interno_smg_reforcado",
+    "label": "Mecanismo Interno de SMG Reforçado",
+    "description": "",
+    "weight": 350,
+    "type": "item",
+    "image": "mecanismo_interno_smg_reforcado.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T05:18:37.787Z",
+    "status": "ready"
+  },
+  {
     "name": "water_meter",
     "label": "medidor de profundidade",
     "description": "",
