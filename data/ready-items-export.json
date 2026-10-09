@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T03:07:28.188Z",
+  "generatedAt": "2026-10-09T05:15:31.585Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 474,
+  "count": 475,
   "categories": [
     {
       "name": "Armas",
@@ -152,7 +152,7 @@
     },
     {
       "name": "Peças de Armas",
-      "count": 7
+      "count": 8
     },
     {
       "name": "Peças de Veículo",
@@ -4535,6 +4535,37 @@
         "rarity": "rare"
       },
       "lua": "['corpo_superior_pistola_reforcado'] = {\n    ['name'] = 'corpo_superior_pistola_reforcado',\n    ['label'] = 'Corpo Superior de Pistola Reforçado',\n    ['weight'] = 400,\n    ['type'] = 'item',\n    ['image'] = 'corpo_superior_pistola_reforcado.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'rare',\n},"
+    },
+    {
+      "id": "corpo_superior_smg_reforcado",
+      "name": "corpo_superior_smg_reforcado",
+      "label": "Corpo Superior de SMG Reforçado",
+      "description": "",
+      "category": "Peças de Armas",
+      "type": "item",
+      "rarity": "epic",
+      "weight": 400,
+      "image": "corpo_superior_smg_reforcado.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/corpo_superior_smg_reforcado.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/corpo_superior_smg_reforcado.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-09T05:15:26.225Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "corpo_superior_smg_reforcado",
+        "label": "Corpo Superior de SMG Reforçado",
+        "weight": 400,
+        "type": "item",
+        "image": "corpo_superior_smg_reforcado.png",
+        "unique": true,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "epic"
+      },
+      "lua": "['corpo_superior_smg_reforcado'] = {\n    ['name'] = 'corpo_superior_smg_reforcado',\n    ['label'] = 'Corpo Superior de SMG Reforçado',\n    ['weight'] = 400,\n    ['type'] = 'item',\n    ['image'] = 'corpo_superior_smg_reforcado.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'epic',\n},"
     },
     {
       "id": "corrente",
