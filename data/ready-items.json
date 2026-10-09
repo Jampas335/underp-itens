@@ -5905,6 +5905,26 @@
     "status": "ready"
   },
   {
+    "name": "molas",
+    "label": "Molas",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "molas.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T23:26:51.035Z",
+    "status": "ready"
+  },
+  {
     "name": "farm_strawberry",
     "label": "Morango",
     "description": "",
