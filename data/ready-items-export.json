@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T23:27:41.053Z",
+  "generatedAt": "2026-10-09T23:32:41.188Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 500,
+  "count": 501,
   "categories": [
     {
       "name": "Armas",
@@ -124,7 +124,7 @@
     },
     {
       "name": "Materiais",
-      "count": 28
+      "count": 29
     },
     {
       "name": "Mecânica",
@@ -12699,6 +12699,37 @@
         "rarity": "common"
       },
       "lua": "['farm_cabbage'] = {\n    ['name'] = 'farm_cabbage',\n    ['label'] = 'Repolho',\n    ['weight'] = 500,\n    ['type'] = 'item',\n    ['image'] = 'novo-item.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "retalhos_polimero",
+      "name": "retalhos_polimero",
+      "label": "Retalhos de Polímero",
+      "description": "",
+      "category": "Materiais",
+      "type": "item",
+      "rarity": "rare",
+      "weight": 50,
+      "image": "retalhos_polimero.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/retalhos_polimero.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/retalhos_polimero.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-09T23:32:36.409Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "retalhos_polimero",
+        "label": "Retalhos de Polímero",
+        "weight": 50,
+        "type": "item",
+        "image": "retalhos_polimero.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "rare"
+      },
+      "lua": "['retalhos_polimero'] = {\n    ['name'] = 'retalhos_polimero',\n    ['label'] = 'Retalhos de Polímero',\n    ['weight'] = 50,\n    ['type'] = 'item',\n    ['image'] = 'retalhos_polimero.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "fish5",
