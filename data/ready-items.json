@@ -1712,6 +1712,26 @@
     "status": "ready"
   },
   {
+    "name": "cano_pistola_reforcado",
+    "label": "Cano de Pistola Reforçado",
+    "description": "",
+    "weight": 350,
+    "type": "item",
+    "image": "cano_pistola_reforcado.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T03:00:24.802Z",
+    "status": "ready"
+  },
+  {
     "name": "capo_carro",
     "label": "Capô de Carro",
     "description": "Um capô desmanchado de um carro.",
