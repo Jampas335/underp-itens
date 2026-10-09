@@ -6768,6 +6768,26 @@
     "status": "ready"
   },
   {
+    "name": "pinos_metalicos",
+    "label": "Pinos Metalicos",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "pinos_metalicos.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T23:26:06.852Z",
+    "status": "ready"
+  },
+  {
     "name": "painting",
     "label": "Pintura Rara",
     "description": "Uma obra de arte retirada de uma residência de alto padrão.",
