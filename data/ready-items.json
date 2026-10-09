@@ -2602,11 +2602,12 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "Peças de Armas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-09T14:53:30.814Z",
-    "status": "ready"
+    "createdAt": "2026-10-09T14:53:46.660Z",
+    "status": "ready",
+    "readyIconName": "coronha_rifle"
   },
   {
     "name": "corpo_inferior_pistola",
