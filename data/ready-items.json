@@ -2644,9 +2644,8 @@
     "siteCategory": "Peças de Armas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-09T05:52:00.290Z",
-    "status": "ready",
-    "readyIconName": "corpo_inferior_smg"
+    "createdAt": "2026-10-09T05:52:18.114Z",
+    "status": "ready"
   },
   {
     "name": "corpo_inferior_smg_reforcado",
