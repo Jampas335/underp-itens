@@ -2587,6 +2587,26 @@
     "status": "ready"
   },
   {
+    "name": "corpo_superior_pistola_reforcado",
+    "label": "Corpo Superior de Pistola Reforçado",
+    "description": "",
+    "weight": 400,
+    "type": "item",
+    "image": "corpo_superior_pistola_reforcado.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T03:02:07.557Z",
+    "status": "ready"
+  },
+  {
     "name": "corrente",
     "label": "Corrente",
     "description": "",
