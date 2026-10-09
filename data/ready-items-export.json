@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T05:52:03.041Z",
+  "generatedAt": "2026-10-09T05:52:21.695Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -4552,7 +4552,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-09T05:52:00.290Z",
+      "createdAt": "2026-10-09T05:52:18.114Z",
       "updatedAt": "",
       "inventory": {
         "name": "corpo_inferior_smg",
