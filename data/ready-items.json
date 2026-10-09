@@ -2114,6 +2114,26 @@
     "status": "ready"
   },
   {
+    "name": "chapa_aco_reforcado",
+    "label": "Chapa de Aço Reforçado",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "chapa_aco_reforcado.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T23:25:24.548Z",
+    "status": "ready"
+  },
+  {
     "name": "lucky_hat",
     "label": "Chapeu da sorte",
     "description": "",
