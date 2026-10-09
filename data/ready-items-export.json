@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T03:02:30.514Z",
+  "generatedAt": "2026-10-09T03:02:54.998Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -4490,7 +4490,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-09T03:02:27.599Z",
+      "createdAt": "2026-10-09T03:02:51.004Z",
       "updatedAt": "",
       "inventory": {
         "name": "corpo_superior_pistola_reforcado",
