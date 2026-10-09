@@ -4394,25 +4394,6 @@
     "status": "ready"
   },
   {
-    "name": "jammer",
-    "label": "Jammer de Sinal",
-    "description": "",
-    "weight": 364,
-    "type": "item",
-    "image": "jammer.png",
-    "unique": true,
-    "useable": true,
-    "shouldClose": true,
-    "rarity": "rare",
-    "extraLua": "",
-    "siteCategory": "Eletrônica",
-    "decay": 0.1,
-    "source": "ready",
-    "iconSource": "upload",
-    "createdAt": "2026-04-17T10:28:16.220Z",
-    "status": "ready"
-  },
-  {
     "name": "weapon_jammer",
     "label": "Jammer de Sinal",
     "description": "Dispositivo portatil usado para interferir em sinais eletronicos.",
