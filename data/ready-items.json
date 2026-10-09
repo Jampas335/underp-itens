@@ -2628,6 +2628,26 @@
     "status": "ready"
   },
   {
+    "name": "corpo_superior_smg_reforcado",
+    "label": "Corpo Superior de SMG Reforçado",
+    "description": "",
+    "weight": 400,
+    "type": "item",
+    "image": "corpo_superior_smg_reforcado.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T05:15:26.225Z",
+    "status": "ready"
+  },
+  {
     "name": "corrente",
     "label": "Corrente",
     "description": "",
