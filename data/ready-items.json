@@ -2568,6 +2568,26 @@
     "status": "ready"
   },
   {
+    "name": "corpo_inferior_pistola_reforcado",
+    "label": "Corpo Inferior de Pistola Reforçado",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "corpo_inferior_pistola_reforcado.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T03:04:52.325Z",
+    "status": "ready"
+  },
+  {
     "name": "corpo_superior_pistola",
     "label": "Corpo Superior de Pistola",
     "description": "",
