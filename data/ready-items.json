@@ -7241,6 +7241,26 @@
     "status": "ready"
   },
   {
+    "name": "rebites",
+    "label": "Rebites",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "rebites.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T23:23:59.498Z",
+    "status": "ready"
+  },
+  {
     "name": "fishing_net",
     "label": "Rede de pesca",
     "description": "",
