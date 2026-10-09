@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T23:22:29.069Z",
+  "generatedAt": "2026-10-09T23:23:31.743Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 494,
+  "count": 495,
   "categories": [
     {
       "name": "Armas",
@@ -124,7 +124,7 @@
     },
     {
       "name": "Materiais",
-      "count": 22
+      "count": 23
     },
     {
       "name": "Mecânica",
@@ -11883,6 +11883,37 @@
         "rarity": "rare"
       },
       "lua": "['polvora'] = {\n    ['name'] = 'polvora',\n    ['label'] = 'Pólvora',\n    ['weight'] = 52,\n    ['type'] = 'item',\n    ['image'] = 'polvora.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'rare',\n},"
+    },
+    {
+      "id": "porcas_e_arroelas",
+      "name": "porcas_e_arroelas",
+      "label": "Porcas e Arroelas",
+      "description": "",
+      "category": "Materiais",
+      "type": "item",
+      "rarity": "uncommon",
+      "weight": 200,
+      "image": "porcas_e_arroelas.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/porcas_e_arroelas.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/porcas_e_arroelas.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-09T23:23:26.663Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "porcas_e_arroelas",
+        "label": "Porcas e Arroelas",
+        "weight": 200,
+        "type": "item",
+        "image": "porcas_e_arroelas.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "uncommon"
+      },
+      "lua": "['porcas_e_arroelas'] = {\n    ['name'] = 'porcas_e_arroelas',\n    ['label'] = 'Porcas e Arroelas',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'porcas_e_arroelas.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "porta_carro",
