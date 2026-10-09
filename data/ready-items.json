@@ -1692,6 +1692,26 @@
     "status": "ready"
   },
   {
+    "name": "cano_pistola",
+    "label": "Cano de Pistola",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "cano_pistola.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T02:54:48.217Z",
+    "status": "ready"
+  },
+  {
     "name": "capo_carro",
     "label": "Capô de Carro",
     "description": "Um capô desmanchado de um carro.",
