@@ -2709,6 +2709,26 @@
     "status": "ready"
   },
   {
+    "name": "corpo_superior_smg",
+    "label": "Corpo Superior de SMG",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "corpo_superior_smg.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T05:54:20.865Z",
+    "status": "ready"
+  },
+  {
     "name": "corpo_superior_smg_reforcado",
     "label": "Corpo Superior de SMG Reforçado",
     "description": "",
