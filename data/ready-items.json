@@ -837,6 +837,26 @@
     "readyIconName": "kq_weed_bud_blue_dream"
   },
   {
+    "name": "blueprint",
+    "label": "Blueprint",
+    "description": "Esquema para fabricação de itens.",
+    "weight": 30,
+    "type": "item",
+    "image": "blueprint.png",
+    "unique": true,
+    "useable": true,
+    "shouldClose": true,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Outros",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T02:22:16.262Z",
+    "status": "ready"
+  },
+  {
     "name": "bocachico_fish",
     "label": "Bocachico",
     "description": "",
