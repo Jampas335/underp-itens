@@ -1733,6 +1733,26 @@
     "readyIconName": "cano_pistola_reforcado"
   },
   {
+    "name": "cano_smg_reforcado",
+    "label": "Cano de SMG Reforçado",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "cano_smg_reforcado.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T05:20:25.068Z",
+    "status": "ready"
+  },
+  {
     "name": "capo_carro",
     "label": "Capô de Carro",
     "description": "Um capô desmanchado de um carro.",
