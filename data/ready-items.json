@@ -4351,6 +4351,26 @@
     "status": "ready"
   },
   {
+    "name": "guarda_mao_rifle",
+    "label": "Guarda Mão de Rifle",
+    "description": "",
+    "weight": 230,
+    "type": "item",
+    "image": "guarda_mao_rifle.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T14:55:01.728Z",
+    "status": "ready"
+  },
+  {
     "name": "beach_parasol",
     "label": "Guarda-sol de Praia",
     "description": "Um guarda-sol de praia.",
