@@ -1733,6 +1733,26 @@
     "readyIconName": "cano_pistola_reforcado"
   },
   {
+    "name": "cano_rifle",
+    "label": "Cano de Rifle",
+    "description": "",
+    "weight": 700,
+    "type": "item",
+    "image": "cano_rifle.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T14:56:06.781Z",
+    "status": "ready"
+  },
+  {
     "name": "cano_smg",
     "label": "Cano de SMG",
     "description": "",
