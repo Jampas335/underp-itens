@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T05:52:37.619Z",
+  "generatedAt": "2026-10-09T05:53:05.329Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8957,7 +8957,7 @@
       "description": "",
       "category": "Peças de Armas",
       "type": "item",
-      "rarity": "rare",
+      "rarity": "epic",
       "weight": 250,
       "image": "mecanismo_interno_smg.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/mecanismo_interno_smg.png",
@@ -8966,7 +8966,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-09T05:50:23.627Z",
+      "createdAt": "2026-10-09T05:53:02.606Z",
       "updatedAt": "",
       "inventory": {
         "name": "mecanismo_interno_smg",
@@ -8977,9 +8977,9 @@
         "unique": true,
         "useable": false,
         "shouldClose": false,
-        "rarity": "rare"
+        "rarity": "epic"
       },
-      "lua": "['mecanismo_interno_smg'] = {\n    ['name'] = 'mecanismo_interno_smg',\n    ['label'] = 'Mecanismo Interno de SMG',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'mecanismo_interno_smg.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'rare',\n},"
+      "lua": "['mecanismo_interno_smg'] = {\n    ['name'] = 'mecanismo_interno_smg',\n    ['label'] = 'Mecanismo Interno de SMG',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'mecanismo_interno_smg.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'epic',\n},"
     },
     {
       "id": "mecanismo_interno_smg_reforcado",
