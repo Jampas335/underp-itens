@@ -5275,6 +5275,26 @@
     "status": "ready"
   },
   {
+    "name": "mecanismo_interno_rifle",
+    "label": "Mecanismo Interno de Rifle",
+    "description": "",
+    "weight": 380,
+    "type": "item",
+    "image": "mecanismo_interno_rifle.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T14:48:46.288Z",
+    "status": "ready"
+  },
+  {
     "name": "mecanismo_interno_smg",
     "label": "Mecanismo Interno de SMG",
     "description": "",
