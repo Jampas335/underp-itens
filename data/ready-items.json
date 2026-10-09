@@ -2589,6 +2589,26 @@
     "status": "ready"
   },
   {
+    "name": "coronha_rifle",
+    "label": "Coronha de Rifle",
+    "description": "",
+    "weight": 160,
+    "type": "item",
+    "image": "coronha_rifle.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T14:53:30.814Z",
+    "status": "ready"
+  },
+  {
     "name": "corpo_inferior_pistola",
     "label": "Corpo Inferior de Pistola",
     "description": "",
