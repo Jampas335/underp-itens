@@ -2628,6 +2628,26 @@
     "status": "ready"
   },
   {
+    "name": "corpo_inferior_smg",
+    "label": "Corpo Inferior de SMG",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "corpo_inferior_smg.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T05:51:36.429Z",
+    "status": "ready"
+  },
+  {
     "name": "corpo_inferior_smg_reforcado",
     "label": "Corpo Inferior de SMG Reforçado",
     "description": "",
