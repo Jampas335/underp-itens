@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T05:54:26.475Z",
+  "generatedAt": "2026-10-09T14:48:50.806Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 482,
+  "count": 483,
   "categories": [
     {
       "name": "Armas",
@@ -152,7 +152,7 @@
     },
     {
       "name": "Peças de Armas",
-      "count": 15
+      "count": 16
     },
     {
       "name": "Peças de Veículo",
@@ -8980,6 +8980,37 @@
         "rarity": "rare"
       },
       "lua": "['mecanismo_interno_pistola_reforcado'] = {\n    ['name'] = 'mecanismo_interno_pistola_reforcado',\n    ['label'] = 'Mecanismo Interno de Pistola Reforçado',\n    ['weight'] = 100,\n    ['type'] = 'item',\n    ['image'] = 'mecanismo_interno_pistola_reforcado.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'rare',\n},"
+    },
+    {
+      "id": "mecanismo_interno_rifle",
+      "name": "mecanismo_interno_rifle",
+      "label": "Mecanismo Interno de Rifle",
+      "description": "",
+      "category": "Peças de Armas",
+      "type": "item",
+      "rarity": "legendary",
+      "weight": 380,
+      "image": "mecanismo_interno_rifle.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/mecanismo_interno_rifle.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/mecanismo_interno_rifle.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-09T14:48:46.288Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "mecanismo_interno_rifle",
+        "label": "Mecanismo Interno de Rifle",
+        "weight": 380,
+        "type": "item",
+        "image": "mecanismo_interno_rifle.png",
+        "unique": true,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "legendary"
+      },
+      "lua": "['mecanismo_interno_rifle'] = {\n    ['name'] = 'mecanismo_interno_rifle',\n    ['label'] = 'Mecanismo Interno de Rifle',\n    ['weight'] = 380,\n    ['type'] = 'item',\n    ['image'] = 'mecanismo_interno_rifle.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'legendary',\n},"
     },
     {
       "id": "mecanismo_interno_smg",
