@@ -5234,6 +5234,26 @@
     "status": "ready"
   },
   {
+    "name": "mecanismo_interno_smg",
+    "label": "Mecanismo Interno de SMG",
+    "description": "",
+    "weight": 250,
+    "type": "item",
+    "image": "mecanismo_interno_smg.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T05:50:23.627Z",
+    "status": "ready"
+  },
+  {
     "name": "mecanismo_interno_smg_reforcado",
     "label": "Mecanismo Interno de SMG Reforçado",
     "description": "",
