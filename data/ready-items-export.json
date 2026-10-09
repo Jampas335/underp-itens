@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T05:20:29.854Z",
+  "generatedAt": "2026-10-09T05:49:26.363Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 478,
+  "count": 479,
   "categories": [
     {
       "name": "Armas",
@@ -152,7 +152,7 @@
     },
     {
       "name": "Peças de Armas",
-      "count": 11
+      "count": 12
     },
     {
       "name": "Peças de Veículo",
@@ -3056,6 +3056,37 @@
         "rarity": "rare"
       },
       "lua": "['cano_pistola_reforcado'] = {\n    ['name'] = 'cano_pistola_reforcado',\n    ['label'] = 'Cano de Pistola Reforçado',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'cano_pistola_reforcado.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'rare',\n},"
+    },
+    {
+      "id": "cano_smg",
+      "name": "cano_smg",
+      "label": "Cano de SMG",
+      "description": "",
+      "category": "Peças de Armas",
+      "type": "item",
+      "rarity": "rare",
+      "weight": 200,
+      "image": "cano_smg.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/cano_smg.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/cano_smg.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-09T05:49:22.024Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "cano_smg",
+        "label": "Cano de SMG",
+        "weight": 200,
+        "type": "item",
+        "image": "cano_smg.png",
+        "unique": true,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "rare"
+      },
+      "lua": "['cano_smg'] = {\n    ['name'] = 'cano_smg',\n    ['label'] = 'Cano de SMG',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'cano_smg.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "cano_smg_reforcado",
