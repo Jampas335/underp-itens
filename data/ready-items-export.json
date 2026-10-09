@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T03:02:11.815Z",
+  "generatedAt": "2026-10-09T03:02:30.514Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -152,7 +152,7 @@
     },
     {
       "name": "Peças de Armas",
-      "count": 4
+      "count": 5
     },
     {
       "name": "Peças de Veículo",
@@ -192,7 +192,7 @@
     },
     {
       "name": "Sem categoria",
-      "count": 2
+      "count": 1
     },
     {
       "name": "Taco Farmer",
@@ -4479,7 +4479,7 @@
       "name": "corpo_superior_pistola_reforcado",
       "label": "Corpo Superior de Pistola Reforçado",
       "description": "",
-      "category": "",
+      "category": "Peças de Armas",
       "type": "item",
       "rarity": "rare",
       "weight": 400,
@@ -4490,7 +4490,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-09T03:02:07.557Z",
+      "createdAt": "2026-10-09T03:02:27.599Z",
       "updatedAt": "",
       "inventory": {
         "name": "corpo_superior_pistola_reforcado",
