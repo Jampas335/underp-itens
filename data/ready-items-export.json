@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T03:02:54.998Z",
+  "generatedAt": "2026-10-09T03:03:20.655Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -3034,7 +3034,7 @@
       "category": "Peças de Armas",
       "type": "item",
       "rarity": "rare",
-      "weight": 350,
+      "weight": 250,
       "image": "cano_pistola_reforcado.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/cano_pistola_reforcado.png",
       "imageCandidates": [
@@ -3042,12 +3042,12 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-09T03:00:24.802Z",
+      "createdAt": "2026-10-09T03:03:17.860Z",
       "updatedAt": "",
       "inventory": {
         "name": "cano_pistola_reforcado",
         "label": "Cano de Pistola Reforçado",
-        "weight": 350,
+        "weight": 250,
         "type": "item",
         "image": "cano_pistola_reforcado.png",
         "unique": true,
@@ -3055,7 +3055,7 @@
         "shouldClose": false,
         "rarity": "rare"
       },
-      "lua": "['cano_pistola_reforcado'] = {\n    ['name'] = 'cano_pistola_reforcado',\n    ['label'] = 'Cano de Pistola Reforçado',\n    ['weight'] = 350,\n    ['type'] = 'item',\n    ['image'] = 'cano_pistola_reforcado.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'rare',\n},"
+      "lua": "['cano_pistola_reforcado'] = {\n    ['name'] = 'cano_pistola_reforcado',\n    ['label'] = 'Cano de Pistola Reforçado',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'cano_pistola_reforcado.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "capo_carro",
