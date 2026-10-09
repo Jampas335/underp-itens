@@ -7506,6 +7506,26 @@
     "status": "ready"
   },
   {
+    "name": "retalhos_polimero",
+    "label": "Retalhos de Polímero",
+    "description": "",
+    "weight": 50,
+    "type": "item",
+    "image": "retalhos_polimero.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T23:32:36.409Z",
+    "status": "ready"
+  },
+  {
     "name": "fish5",
     "label": "Rocio Octofasciata",
     "description": "",
