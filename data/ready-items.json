@@ -1742,15 +1742,16 @@
     "unique": true,
     "useable": false,
     "shouldClose": false,
-    "rarity": "rare",
+    "rarity": "epic",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Peças de Armas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-09T05:49:22.024Z",
-    "status": "ready"
+    "createdAt": "2026-10-09T05:52:34.994Z",
+    "status": "ready",
+    "readyIconName": "cano_smg"
   },
   {
     "name": "cano_smg_reforcado",
