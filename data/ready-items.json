@@ -5134,6 +5134,26 @@
     "status": "ready"
   },
   {
+    "name": "mecanismo_interno_pistola_reforcado",
+    "label": "Mecanismo Interno de Pistola Reforçado",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "mecanismo_interno_pistola_reforcado.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T03:07:22.614Z",
+    "status": "ready"
+  },
+  {
     "name": "water_meter",
     "label": "medidor de profundidade",
     "description": "",
