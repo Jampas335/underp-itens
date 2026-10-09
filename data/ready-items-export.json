@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T05:52:21.695Z",
+  "generatedAt": "2026-10-09T05:52:37.619Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -3064,7 +3064,7 @@
       "description": "",
       "category": "Peças de Armas",
       "type": "item",
-      "rarity": "rare",
+      "rarity": "epic",
       "weight": 200,
       "image": "cano_smg.png",
       "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/cano_smg.png",
@@ -3073,7 +3073,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-09T05:49:22.024Z",
+      "createdAt": "2026-10-09T05:52:34.994Z",
       "updatedAt": "",
       "inventory": {
         "name": "cano_smg",
@@ -3084,9 +3084,9 @@
         "unique": true,
         "useable": false,
         "shouldClose": false,
-        "rarity": "rare"
+        "rarity": "epic"
       },
-      "lua": "['cano_smg'] = {\n    ['name'] = 'cano_smg',\n    ['label'] = 'Cano de SMG',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'cano_smg.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'rare',\n},"
+      "lua": "['cano_smg'] = {\n    ['name'] = 'cano_smg',\n    ['label'] = 'Cano de SMG',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'cano_smg.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'epic',\n},"
     },
     {
       "id": "cano_smg_reforcado",
