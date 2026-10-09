@@ -2637,15 +2637,16 @@
     "unique": true,
     "useable": false,
     "shouldClose": false,
-    "rarity": "rare",
+    "rarity": "epic",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Peças de Armas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-09T05:51:36.429Z",
-    "status": "ready"
+    "createdAt": "2026-10-09T05:52:00.290Z",
+    "status": "ready",
+    "readyIconName": "corpo_inferior_smg"
   },
   {
     "name": "corpo_inferior_smg_reforcado",
