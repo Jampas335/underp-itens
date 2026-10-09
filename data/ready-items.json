@@ -1733,6 +1733,26 @@
     "readyIconName": "cano_pistola_reforcado"
   },
   {
+    "name": "cano_smg",
+    "label": "Cano de SMG",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "cano_smg.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "rare",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T05:49:22.024Z",
+    "status": "ready"
+  },
+  {
     "name": "cano_smg_reforcado",
     "label": "Cano de SMG Reforçado",
     "description": "",
