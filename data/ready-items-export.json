@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T23:20:21.092Z",
+  "generatedAt": "2026-10-09T23:20:40.197Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -124,7 +124,7 @@
     },
     {
       "name": "Materiais",
-      "count": 19
+      "count": 20
     },
     {
       "name": "Mecânica",
@@ -192,7 +192,7 @@
     },
     {
       "name": "Sem categoria",
-      "count": 2
+      "count": 1
     },
     {
       "name": "Taco Farmer",
@@ -2104,7 +2104,7 @@
       "name": "bucha_metalica",
       "label": "Bucha Metalica",
       "description": "",
-      "category": "",
+      "category": "Materiais",
       "type": "item",
       "rarity": "uncommon",
       "weight": 100,
@@ -2115,7 +2115,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-09T23:20:16.295Z",
+      "createdAt": "2026-10-09T23:20:36.622Z",
       "updatedAt": "",
       "inventory": {
         "name": "bucha_metalica",
