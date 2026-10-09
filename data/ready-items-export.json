@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T23:20:40.197Z",
+  "generatedAt": "2026-10-09T23:21:33.451Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 492,
+  "count": 493,
   "categories": [
     {
       "name": "Armas",
@@ -124,7 +124,7 @@
     },
     {
       "name": "Materiais",
-      "count": 20
+      "count": 21
     },
     {
       "name": "Mecânica",
@@ -11947,6 +11947,37 @@
         "rarity": "rare"
       },
       "lua": "['kq_weed_press'] = {\n    ['name'] = 'kq_weed_press',\n    ['label'] = 'Prensa',\n    ['weight'] = 10000,\n    ['type'] = 'item',\n    ['image'] = 'kq_weed_press.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n},"
+    },
+    {
+      "id": "presilha_metalica",
+      "name": "presilha_metalica",
+      "label": "Presilha Metalica",
+      "description": "",
+      "category": "Materiais",
+      "type": "item",
+      "rarity": "uncommon",
+      "weight": 100,
+      "image": "presilha_metalica.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/presilha_metalica.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/presilha_metalica.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-09T23:21:29.378Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "presilha_metalica",
+        "label": "Presilha Metalica",
+        "weight": 100,
+        "type": "item",
+        "image": "presilha_metalica.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "uncommon"
+      },
+      "lua": "['presilha_metalica'] = {\n    ['name'] = 'presilha_metalica',\n    ['label'] = 'Presilha Metalica',\n    ['weight'] = 100,\n    ['type'] = 'item',\n    ['image'] = 'presilha_metalica.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'uncommon',\n},"
     },
     {
       "id": "fair-pretzel",
