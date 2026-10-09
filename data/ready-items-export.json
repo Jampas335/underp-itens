@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T23:24:04.800Z",
+  "generatedAt": "2026-10-09T23:25:29.655Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 496,
+  "count": 497,
   "categories": [
     {
       "name": "Armas",
@@ -124,7 +124,7 @@
     },
     {
       "name": "Materiais",
-      "count": 24
+      "count": 25
     },
     {
       "name": "Mecânica",
@@ -3678,6 +3678,37 @@
         "rarity": "uncommon"
       },
       "lua": "['chapa_aco'] = {\n    ['name'] = 'chapa_aco',\n    ['label'] = 'Chapa de Aço',\n    ['weight'] = 150,\n    ['type'] = 'item',\n    ['image'] = 'chapa_aco.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "chapa_aco_reforcado",
+      "name": "chapa_aco_reforcado",
+      "label": "Chapa de Aço Reforçado",
+      "description": "",
+      "category": "Materiais",
+      "type": "item",
+      "rarity": "rare",
+      "weight": 250,
+      "image": "chapa_aco_reforcado.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/chapa_aco_reforcado.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/chapa_aco_reforcado.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-09T23:25:24.548Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "chapa_aco_reforcado",
+        "label": "Chapa de Aço Reforçado",
+        "weight": 250,
+        "type": "item",
+        "image": "chapa_aco_reforcado.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "rare"
+      },
+      "lua": "['chapa_aco_reforcado'] = {\n    ['name'] = 'chapa_aco_reforcado',\n    ['label'] = 'Chapa de Aço Reforçado',\n    ['weight'] = 250,\n    ['type'] = 'item',\n    ['image'] = 'chapa_aco_reforcado.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'rare',\n},"
     },
     {
       "id": "lucky_hat",
