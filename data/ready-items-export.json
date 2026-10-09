@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T14:53:35.873Z",
+  "generatedAt": "2026-10-09T14:53:49.679Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -152,7 +152,7 @@
     },
     {
       "name": "Peças de Armas",
-      "count": 18
+      "count": 19
     },
     {
       "name": "Peças de Veículo",
@@ -192,7 +192,7 @@
     },
     {
       "name": "Sem categoria",
-      "count": 2
+      "count": 1
     },
     {
       "name": "Taco Farmer",
@@ -4479,7 +4479,7 @@
       "name": "coronha_rifle",
       "label": "Coronha de Rifle",
       "description": "",
-      "category": "",
+      "category": "Peças de Armas",
       "type": "item",
       "rarity": "legendary",
       "weight": 160,
@@ -4490,7 +4490,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-09T14:53:30.814Z",
+      "createdAt": "2026-10-09T14:53:46.660Z",
       "updatedAt": "",
       "inventory": {
         "name": "coronha_rifle",
