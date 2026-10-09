@@ -7013,6 +7013,26 @@
     "status": "ready"
   },
   {
+    "name": "porcas_e_arroelas",
+    "label": "Porcas e Arroelas",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "porcas_e_arroelas.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T23:23:26.663Z",
+    "status": "ready"
+  },
+  {
     "name": "porta_carro",
     "label": "Porta de Carro",
     "description": "Uma porta desmanchada de um veículo.",
