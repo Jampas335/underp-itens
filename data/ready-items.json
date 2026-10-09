@@ -2527,6 +2527,26 @@
     "status": "ready"
   },
   {
+    "name": "corpo_inferior_pistola",
+    "label": "Corpo Inferior de Pistola",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "corpo_inferior_pistola.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T02:57:59.633Z",
+    "status": "ready"
+  },
+  {
     "name": "corpo_superior_pistola",
     "label": "Corpo Superior de Pistola",
     "description": "",
