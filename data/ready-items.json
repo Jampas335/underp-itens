@@ -2729,6 +2729,26 @@
     "status": "ready"
   },
   {
+    "name": "corpo_superior_rifle",
+    "label": "Corpo Superior de Rifle",
+    "description": "",
+    "weight": 200,
+    "type": "item",
+    "image": "corpo_superior_rifle.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T14:51:39.864Z",
+    "status": "ready"
+  },
+  {
     "name": "corpo_superior_smg",
     "label": "Corpo Superior de SMG",
     "description": "",
