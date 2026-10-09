@@ -5271,9 +5271,8 @@
     "siteCategory": "Peças de Armas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-09T05:53:02.606Z",
-    "status": "ready",
-    "readyIconName": "mecanismo_interno_smg"
+    "createdAt": "2026-10-09T05:53:19.208Z",
+    "status": "ready"
   },
   {
     "name": "mecanismo_interno_smg_reforcado",
