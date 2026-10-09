@@ -8881,6 +8881,26 @@
     "status": "ready"
   },
   {
+    "name": "tiras_couro",
+    "label": "Tiras de Couro",
+    "description": "",
+    "weight": 80,
+    "type": "item",
+    "image": "tiras_couro.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T23:19:25.791Z",
+    "status": "ready"
+  },
+  {
     "name": "farm_tomato",
     "label": "Tomate",
     "description": "",
