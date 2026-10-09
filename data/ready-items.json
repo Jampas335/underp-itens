@@ -2588,6 +2588,26 @@
     "status": "ready"
   },
   {
+    "name": "corpo_inferior_smg_reforcado",
+    "label": "Corpo Inferior de SMG Reforçado",
+    "description": "",
+    "weight": 180,
+    "type": "item",
+    "image": "corpo_inferior_smg_reforcado.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "epic",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Peças de Armas",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T05:17:20.510Z",
+    "status": "ready"
+  },
+  {
     "name": "corpo_superior_pistola",
     "label": "Corpo Superior de Pistola",
     "description": "",
