@@ -2603,9 +2603,8 @@
     "siteCategory": "Peças de Armas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-09T03:02:27.599Z",
-    "status": "ready",
-    "readyIconName": "corpo_superior_pistola_reforcado"
+    "createdAt": "2026-10-09T03:02:51.004Z",
+    "status": "ready"
   },
   {
     "name": "corrente",
