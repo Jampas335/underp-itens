@@ -1715,7 +1715,7 @@
     "name": "cano_pistola_reforcado",
     "label": "Cano de Pistola Reforçado",
     "description": "",
-    "weight": 350,
+    "weight": 250,
     "type": "item",
     "image": "cano_pistola_reforcado.png",
     "unique": true,
@@ -1728,8 +1728,9 @@
     "siteCategory": "Peças de Armas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-09T03:00:24.802Z",
-    "status": "ready"
+    "createdAt": "2026-10-09T03:03:17.860Z",
+    "status": "ready",
+    "readyIconName": "cano_pistola_reforcado"
   },
   {
     "name": "capo_carro",
