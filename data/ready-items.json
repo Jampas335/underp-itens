@@ -5264,15 +5264,16 @@
     "unique": true,
     "useable": false,
     "shouldClose": false,
-    "rarity": "rare",
+    "rarity": "epic",
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
     "siteCategory": "Peças de Armas",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-09T05:50:23.627Z",
-    "status": "ready"
+    "createdAt": "2026-10-09T05:53:02.606Z",
+    "status": "ready",
+    "readyIconName": "mecanismo_interno_smg"
   },
   {
     "name": "mecanismo_interno_smg_reforcado",
