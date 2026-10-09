@@ -5174,6 +5174,26 @@
     "status": "ready"
   },
   {
+    "name": "lona_usada",
+    "label": "Lona Usada",
+    "description": "",
+    "weight": 300,
+    "type": "item",
+    "image": "lona_usada.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T23:27:36.544Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_tacticalrifle",
     "label": "M16",
     "description": "",
