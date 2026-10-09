@@ -2094,6 +2094,26 @@
     "status": "ready"
   },
   {
+    "name": "chapa_aco",
+    "label": "Chapa de Aço",
+    "description": "",
+    "weight": 150,
+    "type": "item",
+    "image": "chapa_aco.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T23:22:24.738Z",
+    "status": "ready"
+  },
+  {
     "name": "lucky_hat",
     "label": "Chapeu da sorte",
     "description": "",
