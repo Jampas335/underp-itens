@@ -1147,11 +1147,12 @@
     "pendingIconName": "",
     "pendingCategory": "Manual",
     "extraLua": "",
-    "siteCategory": "",
+    "siteCategory": "Materiais",
     "source": "ready",
     "iconSource": "upload",
-    "createdAt": "2026-10-09T23:20:16.295Z",
-    "status": "ready"
+    "createdAt": "2026-10-09T23:20:36.622Z",
+    "status": "ready",
+    "readyIconName": "bucha_metalica"
   },
   {
     "name": "weapon_doubleaction",
