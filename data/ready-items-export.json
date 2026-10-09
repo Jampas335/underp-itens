@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T23:26:55.945Z",
+  "generatedAt": "2026-10-09T23:27:41.053Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 499,
+  "count": 500,
   "categories": [
     {
       "name": "Armas",
@@ -124,7 +124,7 @@
     },
     {
       "name": "Materiais",
-      "count": 27
+      "count": 28
     },
     {
       "name": "Mecânica",
@@ -8782,6 +8782,37 @@
         "rarity": "common"
       },
       "lua": "['lockpick_improvisada'] = {\n    ['name'] = 'lockpick_improvisada',\n    ['label'] = 'Lockpick Improvisada',\n    ['weight'] = 110,\n    ['type'] = 'item',\n    ['image'] = 'lockpick_improvisada.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['description'] = 'Uma lockpick montada de forma improvisada. Funciona, mas exige cuidado.',\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "lona_usada",
+      "name": "lona_usada",
+      "label": "Lona Usada",
+      "description": "",
+      "category": "Materiais",
+      "type": "item",
+      "rarity": "common",
+      "weight": 300,
+      "image": "lona_usada.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/lona_usada.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/lona_usada.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-09T23:27:36.544Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "lona_usada",
+        "label": "Lona Usada",
+        "weight": 300,
+        "type": "item",
+        "image": "lona_usada.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['lona_usada'] = {\n    ['name'] = 'lona_usada',\n    ['label'] = 'Lona Usada',\n    ['weight'] = 300,\n    ['type'] = 'item',\n    ['image'] = 'lona_usada.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "weapon_tacticalrifle",
