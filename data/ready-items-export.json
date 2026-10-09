@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-09T05:53:05.329Z",
+  "generatedAt": "2026-10-09T05:53:22.983Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8966,7 +8966,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-09T05:53:02.606Z",
+      "createdAt": "2026-10-09T05:53:19.208Z",
       "updatedAt": "",
       "inventory": {
         "name": "mecanismo_interno_smg",
