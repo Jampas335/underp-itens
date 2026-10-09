@@ -7047,6 +7047,26 @@
     "status": "ready"
   },
   {
+    "name": "presilha_metalica",
+    "label": "Presilha Metalica",
+    "description": "",
+    "weight": 100,
+    "type": "item",
+    "image": "presilha_metalica.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "uncommon",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Materiais",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-09T23:21:29.378Z",
+    "status": "ready"
+  },
+  {
     "name": "fair-pretzel",
     "label": "Pretzel",
     "description": "",
