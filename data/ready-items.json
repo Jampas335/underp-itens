@@ -94,6 +94,26 @@
     "status": "ready"
   },
   {
+    "name": "admissao",
+    "label": "Admissão",
+    "description": "",
+    "weight": 5000,
+    "type": "item",
+    "image": "admissao.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mecânica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-10T04:45:14.300Z",
+    "status": "ready"
+  },
+  {
     "name": "water",
     "label": "Água",
     "description": "",
