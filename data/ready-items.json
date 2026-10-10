@@ -3492,6 +3492,26 @@
     "status": "ready"
   },
   {
+    "name": "escapamento",
+    "label": "Escapamento",
+    "description": "",
+    "weight": 1000,
+    "type": "item",
+    "image": "escapamento.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mecânica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-10T04:46:41.450Z",
+    "status": "ready"
+  },
+  {
     "name": "escultura",
     "label": "Escultura",
     "description": "",
