@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-10T04:41:21.370Z",
+  "generatedAt": "2026-10-10T04:42:50.153Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 507,
+  "count": 508,
   "categories": [
     {
       "name": "Armas",
@@ -128,7 +128,7 @@
     },
     {
       "name": "Mecânica",
-      "count": 14
+      "count": 15
     },
     {
       "name": "Médico",
@@ -4411,6 +4411,37 @@
         "allowInBackpack": false
       },
       "lua": "['police_armour'] = {\n    ['name'] = 'police_armour',\n    ['label'] = 'Colete Tático',\n    ['weight'] = 2200,\n    ['type'] = 'item',\n    ['image'] = 'police_armour.png',\n    ['unique'] = true,\n    ['useable'] = true,\n    ['shouldClose'] = true,\n    ['rarity'] = 'rare',\n    ['decay'] = 0.1,\n    ['allowInBackpack'] = false,\n},"
+    },
+    {
+      "id": "comando_valvula",
+      "name": "comando_valvula",
+      "label": "Comando de Valvula",
+      "description": "",
+      "category": "Mecânica",
+      "type": "item",
+      "rarity": "common",
+      "weight": 6000,
+      "image": "comando_valvula.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/comando_valvula.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/comando_valvula.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-10T04:42:46.112Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "comando_valvula",
+        "label": "Comando de Valvula",
+        "weight": 6000,
+        "type": "item",
+        "image": "comando_valvula.png",
+        "unique": true,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['comando_valvula'] = {\n    ['name'] = 'comando_valvula',\n    ['label'] = 'Comando de Valvula',\n    ['weight'] = 6000,\n    ['type'] = 'item',\n    ['image'] = 'comando_valvula.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "rental_receipt",
