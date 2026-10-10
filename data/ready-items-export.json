@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-10T04:44:00.106Z",
+  "generatedAt": "2026-10-10T04:45:18.403Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 509,
+  "count": 510,
   "categories": [
     {
       "name": "Armas",
@@ -128,7 +128,7 @@
     },
     {
       "name": "Mecânica",
-      "count": 16
+      "count": 17
     },
     {
       "name": "Médico",
@@ -368,6 +368,37 @@
         "rarity": "uncommon"
       },
       "lua": "['glue'] = {\n    ['name'] = 'glue',\n    ['label'] = 'Adesivo Industrial',\n    ['weight'] = 200,\n    ['type'] = 'item',\n    ['image'] = 'glue.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = true,\n    ['rarity'] = 'uncommon',\n},"
+    },
+    {
+      "id": "admissao",
+      "name": "admissao",
+      "label": "Admissão",
+      "description": "",
+      "category": "Mecânica",
+      "type": "item",
+      "rarity": "common",
+      "weight": 5000,
+      "image": "admissao.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/admissao.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/admissao.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-10T04:45:14.300Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "admissao",
+        "label": "Admissão",
+        "weight": 5000,
+        "type": "item",
+        "image": "admissao.png",
+        "unique": true,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['admissao'] = {\n    ['name'] = 'admissao',\n    ['label'] = 'Admissão',\n    ['weight'] = 5000,\n    ['type'] = 'item',\n    ['image'] = 'admissao.png',\n    ['unique'] = true,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "water",
