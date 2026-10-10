@@ -6887,6 +6887,26 @@
     "status": "ready"
   },
   {
+    "name": "pistoes",
+    "label": "Pistões",
+    "description": "",
+    "weight": 800,
+    "type": "item",
+    "image": "pistoes.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mecânica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-10T04:38:20.021Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_pistol",
     "label": "Pistola",
     "description": "",
