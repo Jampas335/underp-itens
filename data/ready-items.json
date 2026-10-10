@@ -1044,6 +1044,26 @@
     "status": "ready"
   },
   {
+    "name": "bomba_combustivel",
+    "label": "Bomba de Combustível",
+    "description": "",
+    "weight": 500,
+    "type": "item",
+    "image": "bomba_combustivel.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mecânica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-10T04:48:01.377Z",
+    "status": "ready"
+  },
+  {
     "name": "bong",
     "label": "Bong",
     "description": "",
