@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-10T04:48:05.742Z",
+  "generatedAt": "2026-10-10T05:00:36.477Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -8,7 +8,7 @@
     "exportUrl": "https://jampas335.github.io/underp-itens/data/ready-items-export.json",
     "iconsBaseUrl": "https://jampas335.github.io/underp-itens/ready-items/icons"
   },
-  "count": 512,
+  "count": 513,
   "categories": [
     {
       "name": "Armas",
@@ -108,7 +108,7 @@
     },
     {
       "name": "Jóias & Valores",
-      "count": 8
+      "count": 9
     },
     {
       "name": "KOI",
@@ -5155,6 +5155,37 @@
         "rarity": "common"
       },
       "lua": "['corrente'] = {\n    ['name'] = 'corrente',\n    ['label'] = 'Corrente',\n    ['weight'] = 45,\n    ['type'] = 'item',\n    ['image'] = 'corrente.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
+    },
+    {
+      "id": "goldchain",
+      "name": "goldchain",
+      "label": "Corrente de Ouro",
+      "description": "",
+      "category": "Jóias & Valores",
+      "type": "item",
+      "rarity": "common",
+      "weight": 1500,
+      "image": "goldchain.png",
+      "imageUrl": "https://jampas335.github.io/underp-itens/ready-items/icons/goldchain.png",
+      "imageCandidates": [
+        "https://jampas335.github.io/underp-itens/ready-items/icons/goldchain.png"
+      ],
+      "iconSource": "upload",
+      "status": "ready",
+      "createdAt": "2026-10-10T05:00:31.810Z",
+      "updatedAt": "",
+      "inventory": {
+        "name": "goldchain",
+        "label": "Corrente de Ouro",
+        "weight": 1500,
+        "type": "item",
+        "image": "goldchain.png",
+        "unique": false,
+        "useable": false,
+        "shouldClose": false,
+        "rarity": "common"
+      },
+      "lua": "['goldchain'] = {\n    ['name'] = 'goldchain',\n    ['label'] = 'Corrente de Ouro',\n    ['weight'] = 1500,\n    ['type'] = 'item',\n    ['image'] = 'goldchain.png',\n    ['unique'] = false,\n    ['useable'] = false,\n    ['shouldClose'] = false,\n    ['rarity'] = 'common',\n},"
     },
     {
       "id": "couro_de_caca",
