@@ -1234,6 +1234,26 @@
     "readyIconName": "burrito_podre"
   },
   {
+    "name": "cabecote",
+    "label": "Cabeçote",
+    "description": "",
+    "weight": 15000,
+    "type": "item",
+    "image": "cabecote.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mecânica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-10T04:41:16.807Z",
+    "status": "ready"
+  },
+  {
     "name": "cabo_de_aco",
     "label": "Cabo de Aço",
     "description": "",
