@@ -3031,6 +3031,26 @@
     "status": "ready"
   },
   {
+    "name": "goldchain",
+    "label": "Corrente de Ouro",
+    "description": "",
+    "weight": 1500,
+    "type": "item",
+    "image": "goldchain.png",
+    "unique": false,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Jóias & Valores",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-10T05:00:31.810Z",
+    "status": "ready"
+  },
+  {
     "name": "couro_de_caca",
     "label": "Couro de Caça",
     "description": "",
