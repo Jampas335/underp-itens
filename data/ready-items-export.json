@@ -1,6 +1,6 @@
 {
   "schema": "underrp.ready-items.v1",
-  "generatedAt": "2026-10-10T01:36:26.793Z",
+  "generatedAt": "2026-10-10T01:36:50.810Z",
   "source": {
     "site": "https://jampas335.github.io/underp-itens",
     "repository": "Jampas335/underp-itens",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Comprovantes e Contratos",
-      "count": 9
+      "count": 10
     },
     {
       "name": "Corpo a Corpo",
@@ -192,7 +192,7 @@
     },
     {
       "name": "Sem categoria",
-      "count": 2
+      "count": 1
     },
     {
       "name": "Taco Farmer",
@@ -12894,7 +12894,7 @@
       "name": "rotas_transporte_raro",
       "label": "Rota de Transporte",
       "description": "Uma rota de transporte blindado rara.",
-      "category": "",
+      "category": "Comprovantes e Contratos",
       "type": "item",
       "rarity": "epic",
       "weight": 50,
@@ -12905,7 +12905,7 @@
       ],
       "iconSource": "upload",
       "status": "ready",
-      "createdAt": "2026-10-10T01:36:21.711Z",
+      "createdAt": "2026-10-10T01:36:46.944Z",
       "updatedAt": "",
       "inventory": {
         "name": "rotas_transporte_raro",
