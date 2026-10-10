@@ -7600,6 +7600,26 @@
     "status": "ready"
   },
   {
+    "name": "rotas_transporte_lendario",
+    "label": "Rota de Transporte",
+    "description": "Uma rota de transporte blindado.",
+    "weight": 50,
+    "type": "item",
+    "image": "rotas_transporte_lendario.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": true,
+    "rarity": "legendary",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Comprovantes e Contratos",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-10T01:35:10.996Z",
+    "status": "ready"
+  },
+  {
     "name": "weapon_rpg",
     "label": "RPG",
     "description": "",
