@@ -2568,6 +2568,26 @@
     "status": "ready"
   },
   {
+    "name": "comando_valvula",
+    "label": "Comando de Valvula",
+    "description": "",
+    "weight": 6000,
+    "type": "item",
+    "image": "comando_valvula.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mecânica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-10T04:42:46.112Z",
+    "status": "ready"
+  },
+  {
     "name": "rental_receipt",
     "label": "Comprovante de Aluguel",
     "description": "",
