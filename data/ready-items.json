@@ -816,6 +816,26 @@
     "status": "ready"
   },
   {
+    "name": "bloco_motor",
+    "label": "Bloco do Motor",
+    "description": "",
+    "weight": 40000,
+    "type": "item",
+    "image": "bloco_motor.png",
+    "unique": true,
+    "useable": false,
+    "shouldClose": false,
+    "rarity": "common",
+    "pendingIconName": "",
+    "pendingCategory": "Manual",
+    "extraLua": "",
+    "siteCategory": "Mecânica",
+    "source": "ready",
+    "iconSource": "upload",
+    "createdAt": "2026-10-10T04:31:42.128Z",
+    "status": "ready"
+  },
+  {
     "name": "kq_weed_bud_blue_dream",
     "label": "Blue Dream",
     "description": "",
